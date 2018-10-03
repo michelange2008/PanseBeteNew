@@ -1,0 +1,155 @@
+
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+}
+a, a:link, a:hover  {
+  text-decoration: none;
+}
+
+
+.otoveil {
+  height: 40px;
+}
+
+.espece-item {
+  margin-bottom: 10px;
+  min-height: 50px;
+}
+
+.espece-item:first-of-type {
+  margin-top: 5px;
+}
+
+.espece-item > img {
+  height: 100%;
+}
+.espece-item > a > img {
+  height: 30px;
+}
+.espece-item > a {
+  margin: auto;
+  margin-right: inherit;
+  padding-right: 2%;
+}
+.theme-item {
+  height: 50px;
+}
+.alerte-item {
+  background: PaleGreen;
+  margin-bottom: 10px;
+  padding: 5px 1%;
+}
+.alerte-item > p {
+  margin-bottom: 5px;
+}
+.alerte-item:first-of-type {
+  margin-top: 5px;
+}
+.zone-saisie {
+  min-width: 100px;
+  width: 20%;
+  background: Wheat;
+}
+.grands-boutons {
+  max-width: 49%;
+}
+
+.titre {
+  background: lavender;
+  display: flex;
+  flex-direction: row;
+}
+
+.titre:hover {
+  background: Slateblue;
+  color: white;
+}
+
+.bg-orange {
+  background: LemonChiffon;
+}
+
+.bg-orange:hover {
+  background: DarkKhaki;
+  color: white;
+}
+.bg-coral {
+  background: Coral;
+}
+.bg-powderblue {
+  background: powderblue;
+}
+.titre > img {
+  width: 45px;
+}
+
+.titre > h5 {
+  margin: 0;
+  padding: 0 0 0 5%;
+  align-self: center;
+}
+.petit-espace-dessous {
+  margin-bottom: 1px;
+}
+
+.coupe {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.label-remember-modif {
+	margin-left: 50px;
+	margin-top: 3px;
+}
+.origine {
+  background: lavender;
+  margin-bottom: 5px;
+  padding: 5px 0 2px 0;
+}
+.case-a-cocher {
+  margin: auto;
+}
+.non-affiche {
+  display: none ;
+}
+.aide {
+  padding-top: 2px;
+  color: grey;
+  font-style: italic;
+  font-size: 0.95em;
+}
+.element-centre {
+  padding: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.curseur {
+  cursor: pointer;
+}
+.erreur {
+  margin: 20vh 10vw;
+}
+
+@media screen and (min-width: 800px) {
+
+  html {
+    background: Teal;
+    padding: 5px;
+  }
+  body {
+    min-height: calc(100vh - 10px);
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+
+  body {
+    max-width: 60%;
+  }
+}
