@@ -19,11 +19,11 @@ trait CreeAlerte
         {
             $sAlerte = new Salerte();
 
-            $sAlerte->saisie_id = session()->get('saisie_id'); // Acompléter avec l'authentification
+            $sAlerte->saisie_id = session()->get('saisie_id');
             $sAlerte->alerte_id = $alerte->id;
             $sAlerte->valeur = $datas['alerte_'.$alerte->id];
             $sAlerte->danger = 1;
-            
+
             if(Salerte::where('saisie_id', session()->get('saisie_id'))->where('alerte_id', $alerte->id)->count() === 0)
             {
                 $sAlerte->save();
@@ -34,9 +34,9 @@ trait CreeAlerte
     }
 
     return $resultats;
-    
+
   }
-  
+
   function enregistreAlertes($alertes)
   {
       $alertes->save();

@@ -13,7 +13,9 @@ $(function() {
 
   });
 
-  $('#supprime').on('click', function(e){
+  $('.supprime').on('click', function(e){
+    var id = '#' + $(this).attr('id');
+    console.log(id);
     e.preventDefault();
     $.confirm({
         title: "Suppression",
@@ -27,7 +29,7 @@ $(function() {
               btnClass: 'btn-red',
               keys : ['enter'],
               action: function () {
-                window.location.href = $('#supprime').attr('href');
+                window.location.href = $(id).attr('href');
               }
             },
             annuler: {

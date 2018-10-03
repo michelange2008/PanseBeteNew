@@ -9,7 +9,7 @@ class Salerte extends Model
 
     protected $table = 'salertes';
     public $timestamps = false;
-    protected $fillable = array('saisie_id', 'alerte_id', 'valeur', 'danger');
+    protected $guarded = [];
 
     public function saisie()
     {

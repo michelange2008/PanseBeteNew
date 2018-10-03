@@ -5,17 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Espece;
 use App\Models\Alerte;
+use App\Models\Saisie;
 use App\Traits\CreeSaisie;
 
 class AccueilController extends Controller
 {
     use CreeSaisie;
-    
+
     public function accueil()
     {
       $especes = Espece::all();
       session()->forget(['espece', 'theme']);
-      
+
       return view('accueil', [
         'especes' => $especes,
       ]);
@@ -26,16 +27,19 @@ class AccueilController extends Controller
       session()->forget(['saisie', 'alertes']);
 
       $espece = Espece::find($espece_id);
-      
+
       $alertes = Alerte::where('espece_id', $espece_id)->count();
-      
+
       session()->put('espece', $espece);
-      
+
       if($alertes > 0)
       {
-          return view('choix');
+          $nbSaisies = Saisie::where('user_id', auth()->user()->id)->where('espece_id', $espece_id)->count();
+          return view('choix', [
+            'nbSaisies' => $nbSaisies,
+          ]);
       }
-      else 
+      else
       {
           return view('travaux');
       }

@@ -1,4 +1,8 @@
-
+:root {
+  --otobleu : #125e6b;
+  --otojaune : #dadf21;
+  --otorange : #f58021;
+}
 
 body {
   font-family: "Raleway", sans-serif;
@@ -68,13 +72,22 @@ a, a:link, a:hover  {
   color: white;
 }
 
-.bg-orange {
-  background: LemonChiffon;
+.bg-otobleu {
+  background: var(--otobleu);
 }
 
-.bg-orange:hover {
-  background: DarkKhaki;
+.bg-otorange {
+  background: var(--otorange);
   color: white;
+}
+
+.bg-otojaune {
+  background: var(--otojaune);
+}
+
+.bg-otorange:hover {
+  background-color: #f5c197;
+  color: black;
 }
 .bg-coral {
   background: Coral;

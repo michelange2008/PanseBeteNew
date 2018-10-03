@@ -82,6 +82,8 @@
 
     @endif
   @endforeach
-
+  <div class="container-fluid d-flex flex-row justify-content-end">
+    <a href="{{route('lecture.liste')}}" class="btn btn-success btn-sm rounded-0">Voir toutes les saisies</a>
+  </div>
 </div>
 @endsection
