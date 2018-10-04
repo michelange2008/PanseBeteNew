@@ -8,7 +8,7 @@ class Salerte extends Model
 {
 
     protected $table = 'salertes';
-    public $timestamps = false;
+    public $timestamps = true;
     protected $guarded = [];
 
     public function saisie()

@@ -22,10 +22,10 @@
       @endif
     </div>
     <div class="d-flex flex-row justify-content-between">
+      <a id="supprime_{{$saisie->id}}" href="{{route('lecture.supprimer', $saisie->id)}}" class=" supprime justify-self-end btn btn-sm btn-danger rounded-0">Supprimer</a>
       @if($saisie->salertes->count() > 0)
       <a href="{{route('lecture.detail', $saisie->id)}}" class="btn btn-sm btn-success rounded-0">Voir</a>
       @endif
-      <a id="supprime_{{$saisie->id}}" href="{{route('lecture.supprimer', $saisie->id)}}" class=" supprime justify-self-end btn btn-sm btn-danger rounded-0">Supprimer</a>
     </div>
   </div>
 

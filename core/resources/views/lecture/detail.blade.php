@@ -20,15 +20,16 @@
 
     @endforeach
     @if($affiche)
-      <div class="alert alert-secondary">
+      <div class="alert alert-success d-flex flex-row justify-content-between">
         <h5>{{$theme->nom}}</h5>
+        <img class="otoveil" src="{{URL::asset('svg/saisie')}}/ok.svg" alt="ok" />
       </div>
     @elseif($i < 3)
       <div id="alert_{{$theme->id}}" class="deplie alert alert-warning d-flex flex-row justify-content-between">
         <h5>{{$theme->nom}}</h5>
         <img class="otoveil" src="{{URL::asset('svg/saisie')}}/deplie.svg" alt="deplie" />
       </div>
-      <div  id="origine_{{$theme->id}}" class="non-affiche">
+      <div  id="origine_{{$theme->id}}" class="non-afffiche">
         @foreach($saisie->salertes as $sAlerte)
         @if($sAlerte->alerte->theme->id === $theme->id)
         <div class="container-fluid d-flex flex-row">
@@ -39,11 +40,25 @@
             </div>
             <div class="col-4 d-flex flex-column align-items-end">
               <p>
+                @if($sAlerte->alerte->type === 'liste')
+                <span class="text-danger font-weight-bold">
+                  <?php
+                    foreach($sAlerte->alerte->critalertes as $crit)
+                    {
+                      if($crit->valeur == $sAlerte->valeur)
+                      echo $crit->nom;
+                    }
+                 ?>
+               </span>
+                @else
                 <span class="font-weight-bold">{{$sAlerte->valeur}} {{$sAlerte->alerte->unite}}</span>
+                @endif
               </p>
+              @if($sAlerte->alerte->type !== 'liste')
               <p>
               ( < {{$sAlerte->alerte->niveau}} {{$sAlerte->alerte->unite}})
               </p>
+              @endif
             </div>
           </div>
         </div>
@@ -60,7 +75,6 @@
       @if($sAlerte->alerte->theme->id === $theme->id)
       <div id="origine_{{$theme->id}}" class="container-fluid d-flew flex-row">
         <div class="col-1">
-
         </div>
         <div class="alert alert-dark bg-powderblue col-11 d-flex flex-row">
           <div class="col-8">
@@ -68,11 +82,25 @@
           </div>
           <div class="col-4 d-flex flex-column align-items-end">
             <p>
+              @if($sAlerte->alerte->type === 'liste')
+              <span class="text-danger font-weight-bold">
+                <?php
+                  foreach($sAlerte->alerte->critalertes as $crit)
+                  {
+                    if($crit->valeur == $sAlerte->valeur)
+                    echo $crit->nom;
+                  }
+               ?>
+             </span>
+              @else
               <span class="font-weight-bold">{{$sAlerte->valeur}} {{$sAlerte->alerte->unite}}</span>
+              @endif
             </p>
+            @if($sAlerte->alerte->type !== 'liste')
             <p>
             ( < {{$sAlerte->alerte->niveau}} {{$sAlerte->alerte->unite}})
             </p>
+            @endif
           </div>
         </div>
       </div>
