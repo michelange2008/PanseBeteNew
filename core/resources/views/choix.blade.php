@@ -8,7 +8,6 @@
 
 <div class="container-fluid">
 
-
   <div class="card">
     <div class="card-body d-flex flex-column">
       <p class="card-text">Vous êtes prêts pour l'utilisation de Panse-bête... </p>

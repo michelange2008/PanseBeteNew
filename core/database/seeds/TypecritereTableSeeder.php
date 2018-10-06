@@ -11,6 +11,13 @@ class TypecritereTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $liste [
+          ['num', 'pourcentage', '%' ],
+          ['numinverse', 'pourcentage', '%'],
+          ['num', 'montant', '€'],
+          ['num', 'nombre', ''],
+          ['liste', ]
+
+        ]
     }
 }

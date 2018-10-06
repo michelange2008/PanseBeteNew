@@ -18,8 +18,7 @@ trait CreeAlerte
         if($datas['alerte_'.$alerte->id] > $alerte->niveau)
         {
             $sAlerte = new Salerte();
-            // dd(session()->get('saisie_id')->id);
-            $sAlerte->saisie_id = session()->get('saisie_id')->id;
+            $sAlerte->saisie_id = session()->get('saisie_id');
             $sAlerte->alerte_id = $alerte->id;
             $sAlerte->valeur = $datas['alerte_'.$alerte->id];
             $sAlerte->danger = 1;
@@ -37,8 +36,4 @@ trait CreeAlerte
 
   }
 
-  function enregistreAlertes($alertes)
-  {
-      $alertes->save();
-  }
 }

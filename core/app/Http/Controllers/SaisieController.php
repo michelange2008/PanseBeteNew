@@ -21,18 +21,18 @@ class SaisieController extends Controller
     public function accueil()
     {
       $themes = Theme::all();
-      
+
       session()->forget('theme');
 
       return view('saisie.saisieAccueil',[
         'themes' => $themes,
       ]);
     }
-    
+
     public function nouvelle()
     {
         $this->nouvelleSaisie();
-        
+
         return Redirect()->action('SaisieController@accueil');
     }
 
@@ -42,15 +42,10 @@ class SaisieController extends Controller
 
       session()->put('theme', $theme);
 
-      if(!session()->has('espece'))
-      {
-          return Redirect()->action('AccueilController@accueil');
-      }
-
       $alertes = Alerte::where('theme_id', $theme_id)
       ->where('espece_id', session()->get('espece')->id)
       ->get();
-      
+
       if($alertes->count() > 0)
       {
           return view('saisie.alertes', [
@@ -65,17 +60,17 @@ class SaisieController extends Controller
     public function enregistre(Request $request)
     {
       session()->forget('alerte');
-        
+
       $datas = array_slice($request->all(),1);
-      
+
       if(!session()->has('theme'))
       {
           return Redirect()->action('AccueilController@accueil');
       }
-      
-      
+
+
       $resultats = $this->renvoieSalerte($datas);
-      
+
       if($resultats->count() === 0)
       {
           $message = "Ok, il n'y a pas de problème";
@@ -83,14 +78,14 @@ class SaisieController extends Controller
               'resultats' => $resultats,
           ])->with(['message' => $message]);
       }
-      else 
+      else
       {
           return view('saisie.resultats', [
               'resultats' => $resultats,
           ]);
-          
+
       }
-      
+
     }
 
     public function origines($alerte_id)
@@ -98,7 +93,7 @@ class SaisieController extends Controller
       $alerte = Alerte::find($alerte_id);
 
       session()->put('alerte', $alerte);
-      
+
       $origines = Origine::where('alerte_id', $alerte_id);
 
 
@@ -106,23 +101,14 @@ class SaisieController extends Controller
         'origines' => $origines,
       ]);
     }
-    
+
     public function storeOrigines(Request $request)
     {
-        session()->flashInput(array_slice($request->all(),1));
-        
+        // session()->flashInput(array_slice($request->all(),1));
+
         $this->creeOrigines(array_slice($request->all(),1));
-//         if(session()->has('origines'))
-//         {
-//             foreach(session()->get('origines') as $origine)
-//             {
-//                 if(!in_array(array_slice($request->all(),1), $origine))
-//                 {
-//                     session()->push('origines', array_slice($request->all(),1));
-//                 }
-//             }
-//         }
+
         return redirect()->action('SaisieController@accueil');
     }
-    
+
 }

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Saisie;
 use App\Models\Theme;
+use App\Models\Salerte;
+use App\Models\Sorigine;
 
 class LectureController extends Controller
 {
@@ -44,5 +46,17 @@ class LectureController extends Controller
       Saisie::destroy($saisie_id);
 
       return redirect()->back()->with('message', "Cette saisie a été supprimée");
+    }
+
+    public function observations($salerte_id)
+    {
+      $tableNomOrigines = [];
+
+      foreach(Sorigine::where('salerte_id', $salerte_id)->get() as $sorigine)
+      {
+          $tableNomOrigines[] = $sorigine->origine->question;
+      }
+
+      return response()->json($tableNomOrigines, 200);
     }
 }

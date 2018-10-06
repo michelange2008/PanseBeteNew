@@ -20,13 +20,13 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/infos', ['uses' => 'AccueilController@infos', 'as' => 'infos']);
 
-    Route::get('/saisie/nouvelle', ['uses' => 'SaisieController@nouvelle', 'as' => 'saisie.nouvelle']);
+    Route::get('/saisie/nouvelle', ['uses' => 'SaisieController@nouvelle', 'as' => 'saisie.nouvelle'])->middleware('hasEspece');
 
-    Route::get('/saisie', ['uses' => 'SaisieController@accueil', 'as' => 'saisie.accueil']);
+    Route::get('/saisie', ['uses' => 'SaisieController@accueil', 'as' => 'saisie.accueil'])->middleware('hasEspece');
 
-    Route::get('/saisie/{theme_id}', ['uses' => 'SaisieController@alertes', 'as' => 'saisie.alertes']);
+    Route::get('/saisie/{theme_id}', ['uses' => 'SaisieController@alertes', 'as' => 'saisie.alertes'])->middleware('hasEspece');
 
-    Route::post('/saisie/enregistre', ['uses' => 'SaisieController@enregistre', 'as' => 'saisie.enregistre']);
+    Route::post('/saisie/enregistre', ['uses' => 'SaisieController@enregistre', 'as' => 'saisie.enregistre'])->middleware('hasEspece');
 
     Route::get('/saisie/resultats', ['uses' => 'SaisieController@enregistre', 'as' => 'saisie.resultats']);
 
@@ -39,6 +39,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/lecture/detail/{saisie_id}', ['uses' => 'LectureController@detail', 'as' => 'lecture.detail']);
 
     Route::get('/lecture/supprimer/{saisie_id}', ['uses' => 'LectureController@supprimer', 'as' => 'lecture.supprimer']);
+
+    Route::get('/lecture/observations/{alerte_id}', ['uses' => 'LectureController@observations', 'as' => 'lecture.observations']);
 
     Route::get('/essai', ['uses' => 'EssaiController@index', 'as' => 'essai']);
 });
