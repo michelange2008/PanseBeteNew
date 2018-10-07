@@ -1,24 +1,24 @@
-nom;type;unite;niveau;theme;espece
-Poids des génisses à la reproduction;pourcentage;% du poids adulte;70;2;1
-Variation d'état corporel en phase de reproduction;liste;;1;2;1
-Taux de gestation (nb de vaches pleines / nb de vaches mises à la reproduction);pourcentage;%;10;2;1
-% d'avortements pendant les 3 derniers mois de gestation;valeur;nombre d'avortement;1;2;1
-Intervalle vêlage 1 - vêlage 2;valeur;jours;390;2;1
-% de vêlages difficiles des génisses (> 3 avec aide méca);pourcentage;%;20;2;1
-% de vaches avec un problème post-vélage (matrice non-délivrance ou métrite);pourcentage;%;10;2;1
-Poids de naissance des veaux mâles;liste;(par rapport à la moyenne raciale);0;2;1
-Engraissement : nombre d'animaux en acidose clinique;valeur;;2;3;1
-Engraissement : nombre de morts;valeur;;0;3;1
-Vaches : Diarrhées et aspect des bouses;liste;;0;3;1
-Vaches : cas cliniques de météorisation;valeur;;0;3;1
-Vaches : cas de tétanie d'herbage;valeur;;0;3;1
-Taux de mortalité 0 à 2 j;pourcentage;%;5;4;1
-Taux de mortalité 3 à 15 j;pourcentage;%;3;4;1
-Taux de mortalité 15 j à sevrage (avec détail par causes de mortalité);pourcentage;%;2;4;1
-GMQ 0-210 j;liste;grammes / jours;800;4;1
-% veaux avec gros nombril;pourcentage;%;10;4;1
-% de veaux avec problème digestif;pourcentage;%;10;4;1
-% problème respiratoire;pourcentage;%;5;4;1
-% problème fonctionnel (fractures écrasement etc.);pourcentage;%;3;4;1
-Prise de colostrum (% après 6 h);pourcentage;%;5;4;1
-% colostrum ne venant pas de la mère;pourcentage;%;5;4;1
+num;nom;type;unite;niveau;theme;espece
+11;Poids des génisses à la reproduction;pourcentage;% du poids adulte;70;2;1
+12;Variation d'état corporel en phase de reproduction;liste;;1;2;1
+13;Taux de gestation (nb de vaches pleines / nb de vaches mises à la reproduction);pourcentage;%;10;2;1
+14;% d'avortements pendant les 3 derniers mois de gestation;valeur;nombre d'avortement;1;2;1
+15;Intervalle vêlage 1 - vêlage 2;valeur;jours;390;2;1
+16;% de vêlages difficiles des génisses (> 3 avec aide méca);pourcentage;%;20;2;1
+17;% de vaches avec un problème post-vélage (matrice non-délivrance ou métrite);pourcentage;%;10;2;1
+18;Poids de naissance des veaux mâles;liste;(par rapport à la moyenne raciale);0;2;1
+19;Engraissement : nombre d'animaux en acidose clinique;valeur;;2;3;1
+20;Engraissement : nombre de morts;valeur;;0;3;1
+21;Vaches : Diarrhées et aspect des bouses;liste;;0;3;1
+22;Vaches : cas cliniques de météorisation;valeur;;0;3;1
+23;Vaches : cas de tétanie d'herbage;valeur;;0;3;1
+24;Taux de mortalité 0 à 2 j;pourcentage;%;5;4;1
+25;Taux de mortalité 3 à 15 j;pourcentage;%;3;4;1
+26;Taux de mortalité 15 j à sevrage (avec détail par causes de mortalité);pourcentage;%;2;4;1
+27;GMQ 0-210 j;liste;grammes / jours;800;4;1
+28;% veaux avec gros nombril;pourcentage;%;10;4;1
+29;% de veaux avec problème digestif;pourcentage;%;10;4;1
+30;% problème respiratoire;pourcentage;%;5;4;1
+31;% problème fonctionnel (fractures écrasement etc.);pourcentage;%;3;4;1
+32;Prise de colostrum (% après 6 h);pourcentage;%;5;4;1
+33;% colostrum ne venant pas de la mère;pourcentage;%;5;4;1

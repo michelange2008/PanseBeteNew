@@ -15,8 +15,17 @@ trait CreeAlerte
     $alertes = Alerte::where('theme_id', session()->get('theme')->id)->get(); // choix d'un nombre restreint d'alerte pour éviter un foreach trop long
 
     foreach ($alertes as $alerte) {
-        if($datas['alerte_'.$alerte->id] > $alerte->niveau)
-        {
+      $probleme = false;
+      if($alerte->modalites === "inverse" && $datas['alerte_'.$alerte->id] < $alerte->niveau) //cas d'une modalité inverse où la valeur observée doit être supérieure à un seuil (ex: % de vaches pleines)
+      {
+          $probleme = true;
+      }
+      elseif($alerte->modalites !== "inverse" && $datas['alerte_'.$alerte->id] > $alerte->niveau)  // cas d'une modalité où la valeur observée doit être inférieurs à un seuil (cas le plus fréquent: exemple: taux de mortalité)
+      {
+          $probleme = true;
+      }
+      if($probleme)
+      {
             $sAlerte = new Salerte();
             $sAlerte->saisie_id = session()->get('saisie_id');
             $sAlerte->alerte_id = $alerte->id;
@@ -29,7 +38,7 @@ trait CreeAlerte
             }
             $sAlerte = Salerte::where('saisie_id', session()->get('saisie_id'))->where('alerte_id', $alerte->id)->first();
             $resultats->push($sAlerte);
-        }
+      }
     }
 
     return $resultats;

@@ -42,7 +42,6 @@ a, a:link, a:hover  {
   height: 50px;
 }
 .alerte-item {
-  background: PaleGreen;
   margin-bottom: 10px;
   padding: 5px 1%;
 }
@@ -92,8 +91,8 @@ a, a:link, a:hover  {
 .bg-coral {
   background: Coral;
 }
-.bg-powderblue {
-  background: powderblue;
+.bg-darksalmon {
+  background: darksalmon;
 }
 .titre > img {
   width: 45px;
@@ -146,11 +145,27 @@ a, a:link, a:hover  {
   margin: 20vh 10vw;
 }
 
+.panneau-alerte {
+  margin-top: -17px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-bottom: solid darkslategrey;
+}
+.panneau-alerte:last-of-type {
+  border-bottom: none;
+}
+
+.element-alerte {
+  display: flex;
+  flex-direction: row;
+}
 
 @media screen and (min-width: 800px) {
 
   html {
-    background: Teal;
+    background: var(--otobleu);
     padding: 5px;
   }
   body {

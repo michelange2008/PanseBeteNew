@@ -16,6 +16,11 @@ class LectureController extends Controller
 
         $listeSaisies = Saisie::where('user_id', auth()->user()->id)->where('espece_id', session('espece')->id)->get();
 
+        if($listeSaisies->count() === 0)
+        {
+          return redirect()->action('AccueilController@choix', session()->get('espece'));
+        }
+
       }else{
         return redirect()->action('AccueilController@accueil');
       }

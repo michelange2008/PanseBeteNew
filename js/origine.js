@@ -1,14 +1,37 @@
-$(function() {
+$(function () {
 
-  $('.deplie').on('click', function() {
+    function deplie(id) {
 
-    var id = $(this).parent().parent().attr('id');
+      var alerte_id = id.split('_')[1];
 
-    var alerte_id = id.split('_')[1];
+      $('#origine_'+alerte_id).fadeToggle(); // déplie la liste des alertes
 
-    $('#origine_'+alerte_id).fadeToggle(); // déplie la liste des alertes
+      $.each($('.ouvert'), function() {
+            if($(this).attr('class') == "non-affiche ouvert" && $(this).attr('id') !== 'origine_'+alerte_id)
+                {
+                    $(this).fadeToggle(100);
+                    $(this).toggleClass('ouvert');
+                }
+        })
 
-  });
+          $('#origine_'+alerte_id).toggleClass('ouvert');
+    }
+
+    $('.afficher').on('click', function (){
+
+        var id = $(this).attr('id');
+
+        deplie(id);
+
+    });
+
+    $('.deplie').on('click', function() {
+
+        var id = $(this).parent().parent().attr('id');
+
+        deplie(id);
+
+    });
 
   $('.affiche-origine').on('click', function(){
 
@@ -26,6 +49,11 @@ $(function() {
     $.confirm({
       theme: 'dark',
       columnClass: 'xlarge',
+      buttons: {
+        fermer: function(){
+          //close
+        },
+      },
         content: function () {
             var self = this;
             return $.ajax({
@@ -44,18 +72,18 @@ $(function() {
                 self.setContent(ligne);
                 self.setContentAppend('</div>')
                 // self.setContentAppend('<br>Version: ' + response.version);
-                self.setTitle("Observations");
+                self.setTitle("Questions cochées");
                 // console.log(response);
             }).error(function(response){
               console.log(response.responseText);
                 self.setTitle('Désolé');
                 self.setContent('Il y a eu un problème');
             });
-        }
+        },
     });
   });
-console.log(  $('meta[name = "csrf-token"]').attr('content')
-);
+
+
   $('.supprime').on('click', function(e){
     var id = '#' + $(this).attr('id');
     console.log(id);

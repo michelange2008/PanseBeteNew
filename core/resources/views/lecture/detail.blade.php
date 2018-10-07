@@ -39,14 +39,14 @@
       <div  id="origine_{{$theme->id}}" class="non-affiche">
         @foreach($saisie->salertes as $sAlerte)
         @if($sAlerte->alerte->theme->id === $theme->id)
-          <div class="container-fluid d-flex flex-row">
             <input type="hidden" id="route_{{$sAlerte->id}}" action ="{{route('lecture.observations', $sAlerte->id)}}" />
-            <div class="col-1"></div>
-            <div class="alert alert-dark bg-powderblue col-11 d-flex flex-row">
-              <div class="col-7">
+            <div class="panneau-alerte alert alert-dark bg-darksalmon rounded-0">
+              <div class="intitule-alerte">
                 <p class="">{{$sAlerte->alerte->nom}}</p>
               </div>
-              <div class="col-4 d-flex flex-column align-items-end">
+              <div class="element-alerte justify-content-between">
+                <div class="d-flex">
+
                 <p>
                   @if($sAlerte->alerte->type === 'liste')
                   <span class="text-danger font-weight-bold">
@@ -64,16 +64,15 @@
                 </p>
                 @if($sAlerte->alerte->type !== 'liste')
                 <p>
-                ( < {{$sAlerte->alerte->niveau}} {{$sAlerte->alerte->unite}})
+                &nbsp&nbsp( < {{$sAlerte->alerte->niveau}} {{$sAlerte->alerte->unite}})
                 </p>
                 @endif
               </div>
-              <div class="col-1">
                 <img id = "icone-origine_{{$saisie->id}}_{{$sAlerte->id}}" src="{{URL::asset('svg/saisie')}}/oeil.svg" alt="origine" class="affiche-origine otoveil" />
-              </div>
+            </div>
 
             </div>
-          </div>
+
         @endif
         @endforeach
       </div>
