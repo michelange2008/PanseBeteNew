@@ -7,9 +7,7 @@
 
 <div class="container-fluid" >
 <h5>ACCUEIL</h5>
-<p>
-Hae duae provinciae bello quondam piratico catervis mixtae praedonum a Servilio pro consule missae sub iugum factae sunt vectigales. et hae quidem regiones velut in prominenti terrarum lingua positae ob orbe eoo monte Amano disparantur.
-</p>
+@include('divers.saisiePresentation')
 <div>
   @foreach($especes as $espece)
   <div class="espece-item bg-light">

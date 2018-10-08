@@ -5,7 +5,7 @@
 @extends('menus.sousmenu')
 
 @section('contenu')
-<div class="container-fluid toto">
+<div class="container-fluid">
 
   @foreach($themes as $theme)
 

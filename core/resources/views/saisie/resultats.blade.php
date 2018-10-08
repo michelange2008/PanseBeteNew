@@ -20,18 +20,12 @@
 {{ Form::open(['route' => 'saisie.origines.store'])}}
 <div class="container-fluid">
   @foreach($resultats as $resultat)
-      <div id="alerte_{{$resultat->alerte->id}}" class="alerte-item alert-warning afficher d-flex flex-row justify-content-between curseur">
+      <div id="alerte_{{$resultat->alerte->id}}" class="alerte-item bg-coral deplie d-flex flex-row justify-content-between curseur">
         <div>
           <p class="font-weight-bold ">{{$resultat->alerte->nom}}</p>
-          <p>
+          <p class=" text-light">
             @if($resultat->alerte->type !== 'liste')
-            <span class="text-danger font-weight-bold">{{$resultat->valeur}} {{$resultat->alerte->unite}}</span><span class="text-dark">  (
-              @if($resultat->alerte->modalites === "inverse")
-                >
-              @else
-                <
-              @endif
-                 {{$resultat->alerte->niveau}} {{$resultat->alerte->unite}})</span>
+            {{$resultat->valeur}} {{$resultat->alerte->unite}} (limite {{$resultat->alerte->niveau}} {{$resultat->alerte->unite}})
             @else
 
             @endif
