@@ -25,11 +25,11 @@ $(function() {
 
 <div class="demo">
 	<div id="accordion">
-		<h3><a href="#">Comment utiliser cet outil ? </a></h3>
+		<h3><a href="#">Un outil pour évaluer la situation de son troupeau</a></h3>
 		<div>
 			<p>Cet outil est conçu pour vous éleveur, technicien ou vétérinaire. Vous souhaitez favoriser l’équilibre de santé de votre troupeau, résoudre des problèmes de déséquilibre aboutissant à la pathologie ou bien identifier les sources potentielles du déséquilibre. Il pourra également être utilisé lors d’échanges dans les binômes éleveurs/conseiller ou éleveurs/vétérinaire.</p>
       <p>Sa forme vous permettra de l’utiliser en direct dans le bâtiment d’élevage ou bien au bureau au moment du bilan annuel.</p>
-      <p>Ce livret est organisé sous différents pôles d’indicateurs issus de votre observation et de vos analyses tout au long de l’année.</p>
+      <p>Les informations sont organisées sous différents pôles d’indicateurs issus de votre observation et de vos analyses tout au long de l’année.</p>
 		</div>
 		<h3><a href="#">7 pôles d’observations et d’analyse pour se situer : </a></h3>
 		<div>
@@ -51,9 +51,6 @@ $(function() {
         </p>
         <p>
         Les niveaux d’alerte indiqués dans ces tableaux sont issus des références issues de la recherche ou à dire d’experts. Ils peuvent différer selon les races, les situations particulières locales ou toutes autres causes influençant directement les performances zootechniques.
-        </p>
-        <p>
-        La colonne « modalités de suivi » propose un rythme d’enregistrement ou d’analyse des alertes conseillé maximum pour pouvoir réagir au plus vite. Avec les 3 colonnes disponibles suivantes, vous avez la possibilité d’enregistrer 3 campagnes pour vous permettre de noter votre évolution dans le temps
         </p>
       </div>
 

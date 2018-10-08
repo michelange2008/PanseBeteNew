@@ -18,6 +18,8 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/presentation', ['uses' => 'AccueilController@presentation', 'as' => 'presentation']);
 
+    Route::get('/instructions', ['uses' => 'AccueilController@instructions', 'as' => 'instructions']);
+
     Route::get('/infos', ['uses' => 'AccueilController@infos', 'as' => 'infos']);
 
     Route::get('/saisie/nouvelle', ['uses' => 'SaisieController@nouvelle', 'as' => 'saisie.nouvelle'])->middleware('hasEspece');

@@ -45,6 +45,11 @@ class AccueilController extends Controller
       }
     }
 
+    public function instructions()
+    {
+      return view('divers.instructions');
+    }
+
     public function presentation()
     {
       return view('divers.presentation');
