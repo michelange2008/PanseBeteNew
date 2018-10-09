@@ -55,8 +55,8 @@ class AccueilController extends Controller
       return view('divers.presentation');
     }
 
-    public function infos()
+    public function credits()
     {
-      return "infos";
+      return view('divers.credits');
     }
 }

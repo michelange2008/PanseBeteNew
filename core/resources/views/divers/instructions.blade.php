@@ -53,7 +53,7 @@
     </ol>
   </div>
   <div class="container d-flex justify-content-end" style="border:none;padding:0">
-    <a href="{{URL::previous()}}" class="btn btn-secondary text-light rounded-0">retour</a>
+    <a href="{{URL::route('accueil')}}" class="btn btn-secondary text-light rounded-0">retour</a>
   </div>
 
 </div>

@@ -20,7 +20,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/instructions', ['uses' => 'AccueilController@instructions', 'as' => 'instructions']);
 
-    Route::get('/infos', ['uses' => 'AccueilController@infos', 'as' => 'infos']);
+    Route::get('/credits', ['uses' => 'AccueilController@credits', 'as' => 'credits']);
 
     Route::get('/saisie/nouvelle', ['uses' => 'SaisieController@nouvelle', 'as' => 'saisie.nouvelle'])->middleware('hasEspece');
 

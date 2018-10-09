@@ -4,6 +4,10 @@
   --otorange : #f58021;
 }
 
+.decalage {
+  margin-left: 3px;
+}
+
 body {
   font-family: "Raleway", sans-serif;
   font-size: 14px;

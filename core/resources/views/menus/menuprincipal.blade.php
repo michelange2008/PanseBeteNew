@@ -5,11 +5,8 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuAver" aria-controls="menuAver" aria-expanded="false" aria-label="Toggle-navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse menu-on-right" id="menuAver">
+      <div class="decalage collapse navbar-collapse menu-on-right" id="menuAver">
       <ul class="nav navbar-nav navbar-left">
-            <li class="nav-item"><a class="nav-link" href="{{route('accueil')}}">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{route('presentation')}}">Présentation</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{route('infos')}}">infos</a></li>
               <!-- Authentication Links -->
               @if (Auth::guest())
                   <li class="nav-item"><a class="nav-link" href="{{route('login')}}">Se connecter</a></li>
@@ -29,8 +26,14 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}
                         </form>
+                        </div>
                     </li>
                 @endif
+                <div class="dropdown-divider"></div>
+                <li class="nav-item"><a class="nav-link" href="{{route('accueil')}}">Démarrer</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('presentation')}}">Otoveil&nbsp?</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('credits')}}">Qui a fait quoi&nbsp?</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('instructions')}}">Mode d'emploi</a></li>
 
       </ul>
     </div>
