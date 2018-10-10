@@ -1,12 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Traits\LitCsv;
-use App\Models\Participant;
 
-class ParticipantTableSeeder extends Seeder
+class EspeceParticipantTableSeeder extends Seeder
 {
-
   use LitCsv;
     /**
      * Run the database seeds.

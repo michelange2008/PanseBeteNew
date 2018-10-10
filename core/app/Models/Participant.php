@@ -6,9 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Participant extends Model
 {
-    $table = "participants";
-    $timestamps = false;
-    $guarded = [];
+    protected $table = "participants";
+    public $timestamps = false;
+    protected $guarded = [];
 
-    
+    public function especes()
+    {
+      return $this->belongsToMany(Espece::class);
+    }
+
 }

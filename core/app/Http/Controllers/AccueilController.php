@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Espece;
 use App\Models\Alerte;
 use App\Models\Saisie;
+use App\Models\Participant;
 use App\Traits\CreeSaisie;
 
 class AccueilController extends Controller
@@ -57,6 +58,12 @@ class AccueilController extends Controller
 
     public function credits()
     {
-      return view('divers.credits');
+      $especes = Espece::all();
+      $participants = Participant::all();
+
+      return view('divers.credits', [
+        'especes' => $especes,
+        'participants' => $participants,
+      ]);
     }
 }

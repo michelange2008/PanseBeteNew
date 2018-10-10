@@ -6,7 +6,8 @@ trait LitCsv
 {
   public static function litCsv($csv)
   {
-      $csvAvecChemin = base_path('public/csv')."/".$csv;
+    // dd(storage_path('csv'));
+      $csvAvecChemin = storage_path('app/public')."/".$csv;
     $ligne = 1;
 
     if(($fichier = fopen($csvAvecChemin, 'r')) !== FALSE)
@@ -15,13 +16,13 @@ trait LitCsv
 
       while(($data = fgetcsv($fichier,";")) !== FALSE)
       {
-        
+
           $table[] = explode(";" , $data[0]);
       }
       $tableSansTitre = array_slice($table, 1);
 
       return $tableSansTitre;
-      
+
     }
 
 

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Espece extends Model 
+class Espece extends Model
 {
 
     protected $table = 'especes';
@@ -14,6 +14,11 @@ class Espece extends Model
     public function alertes()
     {
         return $this->hasMany(Alerte::class);
+    }
+
+    public function participants()
+    {
+      return $this->belongsToMany(Participant::class);
     }
 
 }

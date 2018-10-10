@@ -15,10 +15,14 @@ class DatabaseSeeder extends Seeder {
 		// $this->call('EspeceTableSeeder');
 		// $this->command->info('Espece table seeded!');
 
-		$this->call('AlerteTableSeeder');
-		$this->command->info('Alerte table seeded!');
+		// $this->call('AlerteTableSeeder');
+		// $this->command->info('Alerte table seeded!');
 
 // 		$this->call('OrigineTableSeeder');
 // 		$this->command->info('Origine table seeded!');
+
+		$this->call('ParticipantTableSeeder');
+		$this->command->info('Participant table seeded!');
+
 	}
 }
