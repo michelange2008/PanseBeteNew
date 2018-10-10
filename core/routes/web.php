@@ -22,7 +22,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/credits', ['uses' => 'AccueilController@credits', 'as' => 'credits']);
 
-    Route::get('/saisie/nouvelle', ['uses' => 'SaisieController@nouvelle', 'as' => 'saisie.nouvelle'])->middleware('hasEspece');
+    Route::get('/saisie/nouvelle/{elevage}', ['uses' => 'SaisieController@nouvelle', 'as' => 'saisie.nouvelle'])->middleware('hasEspece');
 
     Route::get('/saisie', ['uses' => 'SaisieController@accueil', 'as' => 'saisie.accueil'])->middleware('hasEspece');
 

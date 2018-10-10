@@ -109,5 +109,50 @@ $(function () {
             }
         }
     });
+  });
+  $('#nouvelleSaisie').on('click', function(e) {
+
+    var user =  $("#user").attr('name');
+    // var route = $('#nouvelleSaisie').attr('href');
+
+    e.preventDefault();
+    $.confirm ({
+      title: 'Eventuellement',
+      content: '' +
+      '<form action="" class="formName">' +
+      '<div class="form-group">' +
+      '<label>Si l\'élevage est différent de l\'utilisateur, saisir son nom</label>' +
+      '<input type="text" placeholder='+user+' class="name form-control" required />' +
+      '</div>' +
+      '</form>',
+      buttons: {
+        formSubmit: {
+        text: 'Ok',
+        btnClass: 'btn-blue',
+        action: function () {
+            var name = this.$content.find('.name').val();
+            if(!name){
+                var name = user;
+            }
+
+            $('#nouvelleSaisie').attr('href', $('#nouvelleSaisie').attr('href')+'/'+name);
+            console.log($('#nouvelleSaisie').attr('href'));
+            window.location.href = $('#nouvelleSaisie').attr('href');
+        }
+    },
+    annuler: function () {
+        //close
+    },
+},
+onContentReady: function () {
+    // bind to events
+    var jc = this;
+    this.$content.find('form').on('submit', function (e) {
+        // if the user submits the form by pressing enter in the field.
+        e.preventDefault();
+        jc.$$formSubmit.trigger('click'); // reference the button and click it
+    });
+}
+    })
   })
 })

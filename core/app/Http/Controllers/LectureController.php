@@ -7,6 +7,7 @@ use App\Models\Saisie;
 use App\Models\Theme;
 use App\Models\Salerte;
 use App\Models\Sorigine;
+use App\Models\Elevage;
 
 class LectureController extends Controller
 {
@@ -48,7 +49,20 @@ class LectureController extends Controller
 
     public function supprimer($saisie_id)
     {
+      $elevage = Saisie::where('id', $saisie_id)->first()->elevage_id;
+
+      $effacerElevage = false;
+
+      if(Elevage::where('id', $elevage)->count() === 1)
+      {
+        $effacerElevage = true;
+
+
+      }
+
       Saisie::destroy($saisie_id);
+
+      if($effacerElevage) Elevage::destroy($elevage);
 
       return redirect()->back()->with('message', "Cette saisie a été supprimée");
     }

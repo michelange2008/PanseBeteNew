@@ -4,6 +4,7 @@
   --otorange : #f58021;
 }
 
+
 .decalage {
   margin-left: 3px;
 }
@@ -184,5 +185,11 @@ a, a:link, a:hover  {
 
   body {
     max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 0.5rem;
   }
 }

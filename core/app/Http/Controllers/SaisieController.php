@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Theme;
 use App\Models\Alerte;
 use App\Models\Origine;
+use App\Models\Elevage;
 use App\Traits\CreeAlerte;
 
 use Illuminate\Support\Facades\Redirect;
@@ -29,8 +30,14 @@ class SaisieController extends Controller
       ]);
     }
 
-    public function nouvelle()
+    public function nouvelle($elevage)
     {
+
+        Elevage::firstOrCreate(['nom' => $elevage]);
+
+        session()->put('elevage_id', Elevage::where('nom', $elevage)->first()->id);
+        // dd(session()->get('elevage'));
+
         $this->nouvelleSaisie();
 
         return Redirect()->action('SaisieController@accueil');

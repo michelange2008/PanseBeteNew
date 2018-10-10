@@ -8,14 +8,19 @@ use App\Models\Alerte;
 use App\Models\Saisie;
 use App\Models\Participant;
 use App\Traits\CreeSaisie;
+use App\Traits\EffaceElevages;
 
 class AccueilController extends Controller
 {
     use CreeSaisie;
+    use EffaceElevages;
 
     public function accueil()
     {
+      $this->effaceElevages();
+
       $especes = Espece::all();
+
       session()->forget(['espece', 'theme']);
 
       return view('accueil', [

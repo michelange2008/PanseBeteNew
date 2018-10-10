@@ -17,34 +17,29 @@
       <span class="font-weight-bold">Thierry MOUCHARD</span> - ITAB
     </p>
   </div>
-  <h6>Ont participé à la rédaction, aux relectures et aux tests de ce document:</h6>
-  @foreach($especes as $espece)
+  <h6 class="accordeon-intermediaire">Ont participé à la rédaction, aux relectures et aux tests de ce document:</h6>
+    @foreach($especes as $espece)
+      <h3>{{$espece->nom}}</h3>
+      <div>
+          @foreach($participants as $participant)
 
-    <h3>{{$espece->nom}}</h3>
-    <div>
-        @foreach($participants as $participant)
+            @foreach($participant->especes as $especeParticipant)
 
-          @foreach($participant->especes as $especeParticipant)
+              @if($especeParticipant->id == $espece->id)
 
-            @if($especeParticipant->id == $espece->id)
+              <p>
+                <span class="font-weight-bold">{{$participant->nom}}</span> ({{trim($participant->institution)}})
+              </p>
 
-            <p>
-              <span class="font-weight-bold">{{$participant->nom}}</span> ({{trim($participant->institution)}})
-            </p>
+              @endif
 
-            @endif
+            @endforeach
 
           @endforeach
+      </div>
+    @endforeach
 
-        @endforeach
-    </div>
-  @endforeach
-  <div>
-    <p>
-      Des méthodes pour la prévention et la surveillance des troupeaux, adaptées à l’AB et transposables en élevage conventionnel, étaient attendues à la fin du projet.
-    </p>
 
-  </div>
   <div class="container d-flex justify-content-end" style="border:none;padding:0">
     <a href="{{URL::route('accueil')}}" class="btn btn-secondary text-light rounded-0">retour</a>
   </div>

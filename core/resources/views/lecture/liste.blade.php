@@ -10,7 +10,10 @@
 @foreach($liste as $saisie)
   <div class="alert alert-dark">
     <div>
-      <h5>Saisie du {{$saisie->created_at->day}}/{{$saisie->created_at->month}}/{{$saisie->created_at->year}}</h5>
+      <h5>
+        {{ $saisie->elevage->nom }}
+        <span style="font-size:0.8rem">(saisie du {{$saisie->created_at->day}}/{{$saisie->created_at->month}}/{{$saisie->created_at->year}})</span>
+      </h5>
       @if($saisie->salertes->count() === 0)
         <p>
             Il n'y avait aucune alerte

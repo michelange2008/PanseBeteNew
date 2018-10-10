@@ -15,7 +15,12 @@ trait CreeSaisie
 
         $saisie->espece_id = session()->get('espece')->id;
 
-        $saisies = Saisie::where('user_id', auth()->guard()->user()->id)->where('espece_id', session()->get('espece')->id)->orderByDesc('created_at')->first();
+        $saisie->elevage_id = session()->get('elevage_id');
+
+        $saisies = Saisie::where('user_id', auth()->guard()->user()->id)
+                          ->where('espece_id', session()->get('espece')->id)
+                          ->where('elevage_id', session()->get('elevage_id'))
+                          ->orderByDesc('created_at')->first();
 
         if($saisies !== null) // S'il existe déjà une saisie avec cet utilisateur et cette espece
         {
