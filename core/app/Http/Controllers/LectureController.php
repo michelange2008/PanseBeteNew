@@ -56,8 +56,6 @@ class LectureController extends Controller
       if(Elevage::where('id', $elevage)->count() === 1)
       {
         $effacerElevage = true;
-
-
       }
 
       Saisie::destroy($saisie_id);

@@ -66,14 +66,40 @@ class SaisieController extends Controller
 
     public function enregistre(Request $request)
     {
+      if(!session()->has('theme'))
+      {
+        return Redirect()->action('AccueilController@accueil');
+      }
+
+
+      foreach ($request->input() as $key => $value) {
+          if (empty($value)) {
+              $request->request->set($key, 0);
+          }
+      }
+
       session()->forget('alerte');
+
+      $alertes = Alerte::where('theme_id', session()->get('theme')->id)->get();
+
+      foreach ($alertes as $alerte) {
+
+        if($alerte->type === "pourcentage")
+        {
+          $essai = request()->validate([
+            'alerte_'.$alerte->id => 'integer|between:0,100',
+          ]);
+        }
+        elseif($alerte->type === "valeur")
+        {
+          $essai = request()->validate([
+            'alerte_'.$alerte->id => 'integer|min:0',
+          ]);
+        }
+      }
 
       $datas = array_slice($request->all(),1);
 
-      if(!session()->has('theme'))
-      {
-          return Redirect()->action('AccueilController@accueil');
-      }
 
 
       $resultats = $this->renvoieSalerte($datas);

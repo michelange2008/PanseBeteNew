@@ -42,13 +42,14 @@ trait CreeSaisie
         else // s'il n'y avait aucune saisie on en crée une
         {
             $saisie->save();
-            $saisieNouvelle = Saisie::where('user_id', auth()->guard()->user()->id)
+            $saisieNouvelle = Saisie::where('elevage_id', session()->get('elevage_id'))
             ->where('espece_id', session()->get('espece')->id)
             ->first();
             $saisie_id = $saisieNouvelle->id;
         }
 
         session()->put('saisie_id', $saisie_id);
+
     }
 
 }

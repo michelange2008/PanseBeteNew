@@ -36,6 +36,7 @@ trait CreeAlerte
             {
                 $sAlerte->save();
             }
+            dump(session()->get('saisie_id'));
             $sAlerte = Salerte::where('saisie_id', session()->get('saisie_id'))->where('alerte_id', $alerte->id)->first();
             $resultats->push($sAlerte);
       }
