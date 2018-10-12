@@ -8,12 +8,14 @@ use App\Models\Theme;
 use App\Models\Salerte;
 use App\Models\Sorigine;
 use App\Models\Elevage;
+use App\Models\Espece;
 
 class LectureController extends Controller
 {
-    public function liste()
+    public function liste($espece_id)
     {
-      if(session()->has('espece')){
+      // if(session()->has('espece')){
+      session()->put('espece', Espece::findOrFail($espece_id));
 
         $listeSaisies = Saisie::where('user_id', auth()->user()->id)->where('espece_id', session('espece')->id)->get();
 
@@ -22,9 +24,9 @@ class LectureController extends Controller
           return redirect()->action('AccueilController@choix', session()->get('espece'));
         }
 
-      }else{
-        return redirect()->action('AccueilController@accueil');
-      }
+      // }else{
+      //   return redirect()->action('AccueilController@accueil');
+      // }
 
         return view('lecture.liste', [
             'liste' => $listeSaisies,
@@ -53,7 +55,7 @@ class LectureController extends Controller
 
       $effacerElevage = false;
 
-      if(Elevage::where('id', $elevage)->count() === 1)
+      if(Saisie::where('elevage_id', $elevage)->count() === 1)
       {
         $effacerElevage = true;
       }
@@ -62,7 +64,7 @@ class LectureController extends Controller
 
       if($effacerElevage) Elevage::destroy($elevage);
 
-      return redirect()->back()->with('message', "Cette saisie a été supprimée");
+      return redirect()->back();
     }
 
     public function observations($salerte_id)

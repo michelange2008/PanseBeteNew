@@ -61,6 +61,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'hasEspece' => \App\Http\Middleware\SessionEspeceExist::class,
+        'nullToZero' => \App\Http\Middleware\SanitizeMiddleware::class,
         ];
 
     /**

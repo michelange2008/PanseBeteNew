@@ -7,6 +7,13 @@
 @section('contenu')
 <div class="container-fluid">
 
+  <div class="alert" style="padding:0">
+    <div id="user" name="{{Auth()->user()->name}}"></div>
+    <a id="nouvelleSaisie" href="{{route('saisie.nouvelle', '')}}" class="btn btn-lg bg-otobleu rounded-0 text-light">
+          <h6>nouvelle saisie</h6>
+    </a>
+  </div>
+
 @foreach($liste as $saisie)
   <div class="alert alert-dark">
     <div>
@@ -30,8 +37,9 @@
       </div>
       @if($saisie->salertes->count() > 0)
       <div>
-        <a href="{{route('pdf', $saisie->id)}}" class="btn btn-sm rounded-0"><img src="{{URL::asset('/svg/saisie')}}/pdf.svg" alt="pdf" class="otoveil" /></a>
+        <a href="{{route('saisie.modifier', $saisie->id)}}" class="btn btn-sm btn-warning rounded-0">Modifier</a>
         <a href="{{route('lecture.detail', $saisie->id)}}" class="btn btn-sm btn-success rounded-0">Voir</a>
+        <a href="{{route('pdf', $saisie->id)}}" class="btn btn-sm rounded-0"><img src="{{URL::asset('/svg/saisie')}}/pdf.svg" alt="pdf" class="otoveil" /></a>
       </div>
       @endif
     </div>

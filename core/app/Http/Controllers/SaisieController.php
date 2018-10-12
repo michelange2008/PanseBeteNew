@@ -32,6 +32,7 @@ class SaisieController extends Controller
 
     public function nouvelle($elevage)
     {
+      dd(session()->get('saisie'));
 
         Elevage::firstOrCreate(['nom' => $elevage]);
 
@@ -41,6 +42,11 @@ class SaisieController extends Controller
         $this->nouvelleSaisie();
 
         return Redirect()->action('SaisieController@accueil');
+    }
+
+    public function modifier($saisie_id)
+    {
+      dd($saisie_id);
     }
 
     public function alertes($theme_id)
@@ -69,13 +75,6 @@ class SaisieController extends Controller
       if(!session()->has('theme'))
       {
         return Redirect()->action('AccueilController@accueil');
-      }
-
-
-      foreach ($request->input() as $key => $value) {
-          if (empty($value)) {
-              $request->request->set($key, 0);
-          }
       }
 
       session()->forget('alerte');
