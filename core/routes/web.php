@@ -22,6 +22,8 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/credits', ['uses' => 'AccueilController@credits', 'as' => 'credits']);
 
+    Route::get('entravaux/{espece_id}', ['uses' => 'AccueilController@entravaux', 'as' => 'entravaux']);
+
     Route::get('/saisie/nouvelle/{elevage}', ['uses' => 'SaisieController@nouvelle', 'as' => 'saisie.nouvelle'])->middleware('hasEspece');
 
     Route::get('/saisie/modifier/{saisie}', ['uses' => 'SaisieController@modifier', 'as' => 'saisie.modifier'])->middleware('hasEspece');
@@ -34,7 +36,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/saisie/resultats', ['uses' => 'SaisieController@enregistre', 'as' => 'saisie.resultats']);
 
-    Route::get('/saisie/origines/{alerte_id}', ['uses' => 'SaisieController@origines', 'as' => 'saisie.origines']);
+    // Route::get('/saisie/origines/{alerte_id}', ['uses' => 'SaisieController@origines', 'as' => 'saisie.origines']);
 
     Route::post('/saisie/origines/store', ['uses' => 'SaisieController@storeOrigines', 'as' => 'saisie.origines.store']);
 

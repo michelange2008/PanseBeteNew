@@ -3,7 +3,7 @@
 @extends('menus.sousmenu')
 
 @section('contenu')
-<div class="container-fluid bg-success titre">
+<div class="container-fluid bg-otobleu text-light titre">
   <img src="{{URL::asset('svg/saisie')."/".session()->get('theme')->icone}}" alt="{{session()->get('theme')->nom}}" class="">
   <h5>{{ucfirst(session()->get('theme')->nom)}}</h5>
 </div>
@@ -32,8 +32,20 @@
   {{Form::open(['route' => 'saisie.enregistre'])}}
   @foreach($alertes as $alerte)
 
+  <?php
+    $value ="";
+    $attention = "";
+    foreach ($sAlertes as $sAlerte ) {
+      if($sAlerte->alerte_id === $alerte->id)
+      {
+        $value = $sAlerte->valeur;
+        $attention = "attention";
+      }
+    }
+   ?>
+
   <div class="affiche alerte-item">
-    <p>({{$alerte->id}}) {{$alerte->nom}}</p>
+    <p class="{{$attention}}">{{$alerte->id}} - {{$alerte->nom}}</p>
     <div>
       @if($alerte->type = "liste" && $alerte->critalertes->count() > 0)
       <?php // construction du tableau pour la liste déroulante
@@ -42,9 +54,15 @@
           $liste[] = $crit->nom;
         }
        ?>
-        {{Form::select('alerte_'.$alerte->id, $liste)}}
+        {{Form::select('alerte_'.$alerte->id, $liste, $value)}}
       @else()
-      <input name="alerte_{{$alerte->id}}" type="number"  placeholder="{{ old('alerte_'.$alerte->id) }}" class="zone-saisie" />
+      <input
+        name="alerte_{{$alerte->id}}"
+        type="number"
+        placeholder="{{ old('alerte_'.$alerte->id) }}"
+        class="zone-saisie"
+        value = "{{$value}}"
+      />
         {{Form::label('alerte_'.$alerte->id, $alerte->unite)}}
 
       @endif()
@@ -55,7 +73,7 @@
   @endforeach()
 
   {{Form::submit('envoyer', ['class' => 'btn btn-success btn-sm'])}}
-
+  <a href="{{route('saisie.accueil')}}" class="btn btn-sm btn-secondary" title="revenir à la liste">retour</a>
   {{Form::close()}}
 </div>
 

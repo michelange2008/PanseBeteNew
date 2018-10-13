@@ -35,13 +35,13 @@
       <div class="d-flex flex-column justify-content-center">
         <a id="supprime_{{$saisie->id}}" href="{{route('lecture.supprimer', $saisie->id)}}" class=" supprime justify-self-end btn btn-sm btn-danger rounded-0">Supprimer</a>
       </div>
-      @if($saisie->salertes->count() > 0)
       <div>
-        <a href="{{route('saisie.modifier', $saisie->id)}}" class="btn btn-sm btn-warning rounded-0">Modifier</a>
-        <a href="{{route('lecture.detail', $saisie->id)}}" class="btn btn-sm btn-success rounded-0">Voir</a>
+        @if($saisie->salertes->count() > 0)
         <a href="{{route('pdf', $saisie->id)}}" class="btn btn-sm rounded-0"><img src="{{URL::asset('/svg/saisie')}}/pdf.svg" alt="pdf" class="otoveil" /></a>
+        <a href="{{route('lecture.detail', $saisie->id)}}" class="btn btn-sm btn-success rounded-0">Voir</a>
+        @endif
+        <a href="{{route('saisie.modifier', $saisie->id)}}" class="btn btn-sm btn-warning rounded-0">Modifier</a>
       </div>
-      @endif
     </div>
   </div>
 

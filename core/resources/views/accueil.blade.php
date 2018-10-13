@@ -17,7 +17,7 @@
   @foreach($especes as $espece)
   <div class="espece-item bg-light">
     <img src="{{URL::asset('svg/especes')."/".$espece->icone}}" alt="{{$espece->nom}}" />
-    <a href="{{route('lecture.liste', ['espece_id' => $espece->id])}}" class="btn btn-light">{{$espece->nom}}</a>
+    <a id="{{$espece->id}}" href="{{route('lecture.liste', ['espece_id' => $espece->id])}}" class="choix btn btn-light">{{$espece->nom}}</a>
   </div>
   @endforeach()
 

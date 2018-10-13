@@ -15,18 +15,16 @@ trait CreeSaisie
 
         $saisie->espece_id = session()->get('espece')->id;
 
-        $saisie->elevage_id = session()->get('elevage_id');
-
-        $saisies = Saisie::where('user_id', auth()->guard()->user()->id)
-                          ->where('espece_id', session()->get('espece')->id)
-                          ->where('elevage_id', session()->get('elevage_id'))
-                          ->orderByDesc('created_at')->first();
+        $saisie->elevage_id = session()->get('elevage')->id;
 
         $saisie->save();
 
-        session()->put('saisie_id', Saisie::where('elevage_id', session()->get('elevage_id'))
-                                      ->where('espece_id', session()->get('espece')->id)
-                                      ->first());
+        $saisies = Saisie::where('user_id', auth()->guard()->user()->id)
+                          ->where('espece_id', session()->get('espece')->id)
+                          ->where('elevage_id', session()->get('elevage')->id)
+                          ->orderByDesc('created_at')->first();
+
+        session()->put('saisie_id', $saisies->id);
 
     }
 

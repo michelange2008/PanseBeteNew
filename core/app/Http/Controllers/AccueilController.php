@@ -28,28 +28,28 @@ class AccueilController extends Controller
       ]);
     }
 
-    public function choix($espece_id)
-    {
-      session()->forget(['saisie', 'alertes']);
-
-      $espece = Espece::find($espece_id);
-
-      $alertes = Alerte::where('espece_id', $espece_id)->count();
-
-      session()->put('espece', $espece);
-
-      if($alertes > 0)
-      {
-          $nbSaisies = Saisie::where('user_id', auth()->user()->id)->where('espece_id', $espece_id)->count();
-          return view('choix', [
-            'nbSaisies' => $nbSaisies,
-          ]);
-      }
-      else
-      {
-          return view('travaux');
-      }
-    }
+    // public function choix($espece_id)
+    // {
+    //   session()->forget(['saisie', 'alertes']);
+    //
+    //   $espece = Espece::find($espece_id);
+    //
+    //   $nbAlertes = Alerte::where('espece_id', $espece_id)->count();
+    //
+    //   session()->put('espece', $espece);
+    //
+    //   if($nbAlertes > 0)
+    //   {
+    //       $nbSaisies = Saisie::where('user_id', auth()->user()->id)->where('espece_id', $espece_id)->count();
+    //       return view('choix', [
+    //         'nbSaisies' => $nbSaisies,
+    //       ]);
+    //   }
+    //   else
+    //   {
+    //       return view('travaux');
+    //   }
+    // }
 
     public function instructions()
     {
@@ -70,5 +70,16 @@ class AccueilController extends Controller
         'especes' => $especes,
         'participants' => $participants,
       ]);
+    }
+
+    public function entravaux($espece_id)
+    {
+      if(Espece::find($espece_id)->fini === 1)
+      {
+        return 1;
+      }
+      else {
+        return error;
+      }
     }
 }

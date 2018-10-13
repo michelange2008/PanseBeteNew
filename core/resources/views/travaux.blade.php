@@ -15,7 +15,7 @@
     <p>
       Merci de votre compréhension.
     </p>
-    <a href="{{URL::previous()}}" class="btn btn-warning">Retour</a>
+    <a href="{{route('accueil')}}" class="btn btn-warning">Retour</a>
   </div>
 </div>
 
