@@ -15,7 +15,7 @@
       <img src="{{URL::asset('svg/saisie')."/".$theme->icone}}" alt="{{$theme->nom}}" />
       <div class="coupe d-flex justify-content-between" style="flex:1">
         <div class="d-flex flex-column justify-content-center">
-          <a href="{{route('saisie.alertes', ['theme_id' => $theme->id])}}" class="btn btn-otobleu text-light">{{ucfirst($theme->nom)}}</a>
+          <a href="{{route('saisie.alertes', ['theme_id' => $theme->id])}}" class="btn btn-otobleu">{{ucfirst($theme->nom)}}</a>
         </div>
         @if($saisie->salertes->count() > 0)
         <?php $count = 0 ?>

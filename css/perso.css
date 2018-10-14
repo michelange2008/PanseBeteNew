@@ -1,7 +1,10 @@
 :root {
   --otobleu : #125e6b;
+  --otobleuclair: #21aac2;
   --otojaune : #dadf21;
+  --otojaunefonce : #6b6d10;
   --otorange : #f58021;
+  --otorangefonce: #904b13;
 }
 
 
@@ -38,7 +41,7 @@ a, a:link, a:hover  {
 }
 
 .attention {
-  color: red;
+  color: var(--otobleu);
 }
 
 .lien-nav {
@@ -88,23 +91,36 @@ a, a:link, a:hover  {
   color: white;
 }
 
-.bg-otobleu {
+.bg-otobleu, .btn-otobleu {
   background: var(--otobleu);
-}
-
-.bg-otorange {
-  background: var(--otorange);
   color: white;
 }
 
-.bg-otojaune {
-  background: var(--otojaune);
+.bg-otobleu:hover, .btn-otobleu:hover {
+  color: black;
+  background: var(--otobleuclair);
 }
 
-.bg-otorange:hover {
-  background-color: #f5c197;
+.btn-otorange, .bg-otorange {
+  background: var(--otorange);
   color: black;
 }
+
+.btn-otorange:hover, .bg-otorange:hover {
+  background: var(--otorangefonce);
+  color: white;
+}
+.btn-otojaune, .bg-otojaune  {
+  background: var(--otojaune);
+  color: black;
+}
+
+.btn-otojaune:hover, .bg-otorange:hover  {
+  background: var(--otojaunefonce);
+  color: white;
+}
+
+
 .bg-coral {
   background: Coral;
 }

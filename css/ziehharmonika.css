@@ -8,7 +8,7 @@ h3 {
 }
 
 .ziehharmonika h3 {
-	background: slategrey;
+	background: var(--otobleu);
 	color: #fff;
 	text-align: left;
 	padding: 14px 12px;
@@ -21,7 +21,7 @@ h3 {
 }
 .ziehharmonika h3.active {
 	margin-bottom: 21px;
-	background: #009640;
+	background: var(--otorange);
 }
 .ziehharmonika h3::before {
 	content: attr(data-prefix);
@@ -71,8 +71,9 @@ h3 {
 }
 .ziehharmonika .accordeon-intermediaire {
 	font-size: 0.8rem;
-	background: maroon;
-	color: #fff;
+	background: url("../svg/fleche-bas.svg") right no-repeat var(--otojaune);
+	background-size: contain;
+	color: black;
 	text-align: left;
 	padding: 14px 12px;
 	cursor: pointer;

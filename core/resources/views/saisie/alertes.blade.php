@@ -3,7 +3,7 @@
 @extends('menus.sousmenu')
 
 @section('contenu')
-<div class="container-fluid bg-otobleu text-light titre">
+<div class="container-fluid bg-otobleu titre">
   <img src="{{URL::asset('svg/saisie')."/".session()->get('theme')->icone}}" alt="{{session()->get('theme')->nom}}" class="">
   <h5>{{ucfirst(session()->get('theme')->nom)}}</h5>
 </div>
@@ -72,8 +72,8 @@
 
   @endforeach()
 
-  {{Form::submit('envoyer', ['class' => 'btn btn-success btn-sm'])}}
-  <a href="{{route('saisie.accueil')}}" class="btn btn-sm btn-secondary" title="revenir à la liste">retour</a>
+  {{Form::submit('envoyer', ['class' => 'btn btn-otobleu btn-sm'])}}
+  <a href="{{route('saisie.accueil')}}" class="btn btn-sm btn-otorange" title="revenir à la liste">retour</a>
   {{Form::close()}}
 </div>
 

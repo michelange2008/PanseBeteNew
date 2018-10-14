@@ -8,7 +8,7 @@ class Espece extends Model
 {
 
     protected $table = 'especes';
-    public $timestamps = true;
+    public $timestamps = false;
     protected $fillable = array('nom', 'icone');
 
     public function alertes()
