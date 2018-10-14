@@ -155,42 +155,22 @@ onContentReady: function () {
 
   $('.choix').on('click', function(e){
 
-    e.preventDefault();
+    var espece_nom = $(this).attr('id');
 
-    var espece_id = $(this).attr('id');
+    $.alert({
+      theme: "dark",
+      title: "Désolé !",
+      content: "Le travail pour les <strong>"+espece_nom+"</strong> est encore en cours",
+      buttons : {
+        fermer : {
+          text: "fermer",
+          keys : ['enter', 'esc'],
+          btnClass : 'btn-red',
 
-    var route = "entravaux/"+espece_id;
-
-
-    $.ajaxSetup({
-      headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-      }
-    });
-
-    $.confirm({
-      theme: 'dark',
-      columnClass: 'xlarge',
-      autoClose: 'fermer|4000',
-      buttons: {
-        fermer: function(){
-        },
+        }
       },
-        content: function () {
-            var self = this;
-            return $.ajax({
-                url: route,
-                data: espece_id,
-                dataType: 'text',
-                method: 'get'
-            }).done(function (response) {
-                window.location.href = $('.choix').attr('href');
-            }).error(function(response){
-                self.setTitle('Désolé');
-                self.setContent("le travail n'est pas fini pour cette production");
-            });
-        },
     });
+
   });
 
 
