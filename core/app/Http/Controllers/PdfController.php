@@ -13,11 +13,14 @@ class PdfController extends Controller
 
     public function index($saisie_id)
     {
+      $saisie = Saisie::findOrFail($saisie_id);
       $pdf = PDF::loadView('lecture.pdfSaisie', [
-        'saisie' => Saisie::findOrFail($saisie_id),
+        'saisie' => $saisie,
         'themes' => Theme::all(),
       ]);
-      return $pdf->stream('essai.pdf');
+      $nomFichier = $saisie->elevage->nom."_".$saisie->espece->nom."_".$saisie->updated_at.".pdf";
+
+      return $pdf->stream($nomFichier);
 
     }
 }

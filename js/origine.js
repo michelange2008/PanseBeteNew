@@ -71,11 +71,8 @@ $(function () {
                 self.setContentPrepend('<div class="bg-success">')
                 self.setContent(ligne);
                 self.setContentAppend('</div>')
-                // self.setContentAppend('<br>Version: ' + response.version);
                 self.setTitle("Questions cochées");
-                // console.log(response);
             }).error(function(response){
-              console.log(response.responseText);
                 self.setTitle('Désolé');
                 self.setContent('Il y a eu un problème');
             });
@@ -152,7 +149,29 @@ onContentReady: function () {
         e.preventDefault();
         jc.$$formSubmit.trigger('click'); // reference the button and click it
     });
-}
+    }
     })
   })
+
+  $('.choix').on('click', function(e){
+
+    var espece_nom = $(this).attr('id');
+
+    $.alert({
+      theme: "dark",
+      title: "Désolé !",
+      content: "Le travail pour les <strong>"+espece_nom+"</strong> est encore en cours",
+      buttons : {
+        fermer : {
+          text: "fermer",
+          keys : ['enter', 'esc'],
+          btnClass : 'btn-red',
+
+        }
+      },
+    });
+
+  });
+
+
 })

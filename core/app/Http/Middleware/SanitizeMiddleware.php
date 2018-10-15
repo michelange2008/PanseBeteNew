@@ -16,9 +16,9 @@ class SanitizeMiddleware
     public function handle($request, Closure $next)
     {
       foreach ($request->input() as $key => $value) {
-        if (empty($value)) {
-        $request->request->set($key, 0);
-        }
+        // if (empty($value)) {
+        $request->request->set($key, intval($value));
+        // }
       }
 
       return $next($request);

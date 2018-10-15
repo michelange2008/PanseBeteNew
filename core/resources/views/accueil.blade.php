@@ -17,7 +17,11 @@
   @foreach($especes as $espece)
   <div class="espece-item bg-light">
     <img src="{{URL::asset('svg/especes')."/".$espece->icone}}" alt="{{$espece->nom}}" />
-    <a href="{{route('lecture.liste', ['espece_id' => $espece->id])}}" class="btn btn-light">{{$espece->nom}}</a>
+    @if($espece->fini)
+      <a href="{{route('lecture.liste', ['espece_id' => $espece->id])}}" class="btn btn-light font-weight-bold">{{$espece->nom}}</a>
+    @else
+      <button id="{{$espece->nom}}" class="choix btn btn-light">{{$espece->nom}}</button>
+    @endif
   </div>
   @endforeach()
 

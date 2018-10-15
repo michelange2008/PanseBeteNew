@@ -14,19 +14,9 @@ class LectureController extends Controller
 {
     public function liste($espece_id)
     {
-      // if(session()->has('espece')){
-      session()->put('espece', Espece::findOrFail($espece_id));
+        session()->put('espece', Espece::findOrFail($espece_id));
 
         $listeSaisies = Saisie::where('user_id', auth()->user()->id)->where('espece_id', session('espece')->id)->get();
-
-        if($listeSaisies->count() === 0)
-        {
-          return redirect()->action('AccueilController@choix', session()->get('espece'));
-        }
-
-      // }else{
-      //   return redirect()->action('AccueilController@accueil');
-      // }
 
         return view('lecture.liste', [
             'liste' => $listeSaisies,

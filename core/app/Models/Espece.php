@@ -8,7 +8,7 @@ class Espece extends Model
 {
 
     protected $table = 'especes';
-    public $timestamps = true;
+    public $timestamps = false;
     protected $fillable = array('nom', 'icone');
 
     public function alertes()
@@ -19,6 +19,11 @@ class Espece extends Model
     public function participants()
     {
       return $this->belongsToMany(Participant::class);
+    }
+
+    public function saisies()
+    {
+      return $this->hasMany(Saisie::class);
     }
 
 }

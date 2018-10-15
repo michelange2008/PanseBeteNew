@@ -5,7 +5,6 @@
 @section('contenu')
 <div class="container">
   <h5>Le CASDAR OTOVEIL, fruit d'un projet collectif</h5>
-</div>
 <div class="ziehharmonika">
   <h3>Chef de projet</h3>
   <div>
@@ -18,6 +17,7 @@
     </p>
   </div>
   <h6 class="accordeon-intermediaire">Ont participé à la rédaction, aux relectures et aux tests de ce document:</h6>
+  
     @foreach($especes as $espece)
       <h3>{{$espece->nom}}</h3>
       <div>
@@ -41,7 +41,8 @@
 
 
   <div class="container d-flex justify-content-end" style="border:none;padding:0">
-    <a href="{{URL::route('accueil')}}" class="btn btn-secondary text-light rounded-0">retour</a>
+    <a href="{{URL::route('accueil')}}" class="btn btn-otobleu text-light rounded-0">retour</a>
+  </div>
   </div>
 </div>
 

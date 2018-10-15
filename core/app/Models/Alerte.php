@@ -8,7 +8,7 @@ class Alerte extends Model
 {
 
     protected $table = 'alertes';
-    public $timestamps = true;
+    public $timestamps = false;
     protected $fillable = array('nom', 'type', 'unite', 'niveau', 'modalite', 'theme_id', 'espece_id');
 
     public function theme()

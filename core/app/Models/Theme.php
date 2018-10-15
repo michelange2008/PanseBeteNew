@@ -8,7 +8,7 @@ class Theme extends Model
 {
 
     protected $table = 'themes';
-    public $timestamps = true;
+    public $timestamps = false;
     protected $fillable = array('nom', 'icone');
 
     public function alertes()
