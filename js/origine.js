@@ -27,7 +27,7 @@ $(function () {
 
     $('.deplie').on('click', function() {
 
-        var id = $(this).parent().parent().attr('id');
+        var id = $(this).attr('id');
 
         deplie(id);
 
@@ -48,7 +48,7 @@ $(function () {
 
     $.confirm({
       theme: 'dark',
-      columnClass: 'xlarge',
+
       buttons: {
         fermer: function(){
           //close
@@ -110,7 +110,7 @@ $(function () {
   $('#nouvelleSaisie').on('click', function(e) {
 
     var user =  $("#user").attr('name');
-    // var route = $('#nouvelleSaisie').attr('href');
+
 
     e.preventDefault();
     $.confirm ({
@@ -133,7 +133,7 @@ $(function () {
             }
 
             $('#nouvelleSaisie').attr('href', $('#nouvelleSaisie').attr('href')+'/'+name);
-            console.log($('#nouvelleSaisie').attr('href'));
+
             window.location.href = $('#nouvelleSaisie').attr('href');
         }
     },

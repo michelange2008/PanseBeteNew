@@ -3,7 +3,7 @@
 @extends('menus.sousmenu')
 
 @section('contenu')
-<div class="container-fluid bg-success titre">
+<div class="container-fluid bg-otobleu titre">
   <img src="{{URL::asset('svg/saisie')."/".session()->get('theme')->icone}}" alt="{{session()->get('theme')->nom}}" class="">
   <h5>{{ucfirst(session()->get('theme')->nom)}} (résultats)</h5>
 </div>
@@ -20,7 +20,7 @@
 {{ Form::open(['route' => 'saisie.origines.store'])}}
 <div class="container-fluid">
   @foreach($resultats as $resultat)
-      <div id="alerte_{{$resultat->alerte->id}}" class="alerte-item bg-coral deplie d-flex flex-row justify-content-between curseur">
+      <div id="alerte_{{$resultat->alerte->id}}" class="alerte-item bg-otorange deplie d-flex flex-row justify-content-between curseur">
         <div>
           <p class="font-weight-bold ">{{$resultat->alerte->nom}}</p>
           <p class=" text-light">
@@ -37,11 +37,11 @@
       </div>
       <div id = "origine_{{$resultat->alerte->id}}" class ="non-affiche" >
       @foreach($resultat->alerte->origines as $origine)
-      <div class="container-fluid origine d-flex flex-row " >
+      <div class="container-fluid origine bg-otojaune d-flex flex-row " >
         <div class="col-10">
           {{ Form::label($resultat->id."_".$origine->id, $origine->question)}}
         </div>
-        <div>
+        <div style="margin:auto">
           {{ Form::checkbox($resultat->id."_".$origine->id)}}
         </div>
       </div>
@@ -49,7 +49,7 @@
     </div>
   @endforeach
   {{Form::submit('Enregistrer et retour', ['class' => 'btn btn-otobleu btn-sm grands-boutons coupe'])}}
-  <a href="{{URL::previous()}}" class="btn btn-warning btn-sm grands-boutons coupe">Revenir aux observations</a>
+  <a href="{{URL::previous()}}" class="btn btn-otorange btn-sm grands-boutons coupe">Revenir aux observations</a>
 </div>
   {{Form::close()}}
 @endsection

@@ -14,8 +14,6 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/', ['uses' => 'AccueilController@accueil', 'as' => 'accueil']);
 
-    // Route::get('/choix/{espece_id}', ['uses' => 'AccueilController@choix', 'as' => 'choix']);
-
     Route::get('/presentation', ['uses' => 'AccueilController@presentation', 'as' => 'presentation']);
 
     Route::get('/instructions', ['uses' => 'AccueilController@instructions', 'as' => 'instructions']);
@@ -36,8 +34,6 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/saisie/resultats', ['uses' => 'SaisieController@enregistre', 'as' => 'saisie.resultats']);
 
-    // Route::get('/saisie/origines/{alerte_id}', ['uses' => 'SaisieController@origines', 'as' => 'saisie.origines']);
-
     Route::post('/saisie/origines/store', ['uses' => 'SaisieController@storeOrigines', 'as' => 'saisie.origines.store']);
 
     Route::get('/lecture/{espece_id}', ['uses' => 'LectureController@liste', 'as' => 'lecture.liste']);
@@ -54,5 +50,3 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

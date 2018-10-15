@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-@extends('menus.sousmenu')
 
 @section('contenu')
 

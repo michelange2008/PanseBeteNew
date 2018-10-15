@@ -19,28 +19,24 @@
       @endif
     @endforeach
     @if($affiche)
-      <div class="alert alert-success d-flex flex-row justify-content-between">
+      <div class="alert bg-otobleu d-flex flex-row justify-content-between">
         <h5>{{$theme->nom}}</h5>
         <img class="otoveil" src="{{URL::asset('svg/saisie')}}/ok.svg" alt="ok" />
       </div>
 
     @else
-      @if($i < 3)
-      <div id="alert_{{$theme->id}}" class="alert alert-warning d-flex flex-row justify-content-between">
-      @else
-      <div id="alert_{{$theme->id}}" class="alert alert-danger d-flex flex-row justify-content-between curseur">
-      @endif
-      <h5>{{$theme->nom}}</h5>
-      <div class="icones">
-        <img src="{{URL::asset('svg/saisie')}}/deplie.svg" alt="deplie" class="deplie icone otoveil" title="affiche les alertes" />
+      <div id="alert_{{$theme->id}}" class="deplie alert bg-otorange d-flex flex-row justify-content-between curseur">
+        <h5>{{$theme->nom}}</h5>
+        <div class="icones">
+          <img src="{{URL::asset('svg/saisie')}}/deplie.svg" alt="deplie" class="icone otoveil" title="affiche les alertes" />
+        </div>
       </div>
-    </div>
 
       <div  id="origine_{{$theme->id}}" class="non-affiche">
         @foreach($saisie->salertes as $sAlerte)
         @if($sAlerte->alerte->theme->id === $theme->id)
             <input type="hidden" id="route_{{$sAlerte->id}}" action ="{{route('lecture.observations', $sAlerte->id)}}" />
-            <div class="panneau-alerte alert alert-dark bg-darksalmon rounded-0">
+            <div class="panneau-alerte alert alert-dark bg-otojaune rounded-0">
               <div class="intitule-alerte">
                 <p class="">{{$sAlerte->alerte->nom}}</p>
               </div>
@@ -64,7 +60,15 @@
                 </p>
                 @if($sAlerte->alerte->type !== 'liste')
                 <p>
-                &nbsp&nbsp( < {{$sAlerte->alerte->niveau}} {{$sAlerte->alerte->unite}})
+                  @if($sAlerte->alerte->niveau === 0)
+                    &nbsp&nbsp({{$sAlerte->alerte->niveau}} {{$sAlerte->alerte->unite}})
+                  @else
+                    @if($sAlerte->alerte->modalites === 'inverse')
+                      &nbsp&nbsp( > {{$sAlerte->alerte->niveau}} {{$sAlerte->alerte->unite}})
+                    @else
+                      &nbsp&nbsp( < {{$sAlerte->alerte->niveau}} {{$sAlerte->alerte->unite}})
+                    @endif
+                  @endif
                 </p>
                 @endif
               </div>
