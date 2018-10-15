@@ -48,7 +48,7 @@
       @endforeach
     </div>
   @endforeach
-  {{Form::submit('Enregistrer et retour', ['class' => 'btn btn-success btn-sm grands-boutons coupe'])}}
+  {{Form::submit('Enregistrer et retour', ['class' => 'btn btn-otobleu btn-sm grands-boutons coupe'])}}
   <a href="{{URL::previous()}}" class="btn btn-warning btn-sm grands-boutons coupe">Revenir aux observations</a>
 </div>
   {{Form::close()}}

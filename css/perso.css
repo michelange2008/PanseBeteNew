@@ -86,17 +86,12 @@ a, a:link, a:hover  {
   flex-direction: row;
 }
 
-.titre:hover {
-  background: Slateblue;
-  color: white;
-}
-
 .bg-otobleu, .btn-otobleu {
   background: var(--otobleu);
   color: white;
 }
 
-.bg-otobleu:hover, .btn-otobleu:hover {
+.btn-otobleu:hover {
   color: black;
   background: var(--otobleuclair);
 }
@@ -106,7 +101,7 @@ a, a:link, a:hover  {
   color: black;
 }
 
-.btn-otorange:hover, .bg-otorange:hover {
+.btn-otorange:hover{
   background: var(--otorangefonce);
   color: white;
 }
@@ -115,7 +110,7 @@ a, a:link, a:hover  {
   color: black;
 }
 
-.btn-otojaune:hover, .bg-otorange:hover  {
+.btn-otojaune:hover  {
   background: var(--otojaunefonce);
   color: white;
 }

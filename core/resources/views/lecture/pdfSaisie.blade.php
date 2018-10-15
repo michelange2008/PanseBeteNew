@@ -9,7 +9,7 @@
 </div>
 
 <div>
-    <h1>{{session()->get('espece')->nom}}</h1>
+    <h1>{{$saisie->elevage->nom}} - {{$saisie->espece->nom}}</h1>
     <h2>Saisie du {{$saisie->created_at->day}}/{{$saisie->created_at->month}}/{{$saisie->created_at->year}}</h2>
 </div>
 @foreach($themes as $theme)

@@ -3,7 +3,7 @@
   <div class="espece-item bg-light d-flex flex-row justify-content-between">
 
       <a href="{{route('lecture.liste', session()->get('espece'))}}"><img src="{{URL::asset('svg/especes')."/".session()->get('espece')->icone}}" alt="{{session()->get('espece')->nom}}" title="revenir à la liste des saisies" /></a>
-      <div class="d-flex flex-column justify-content-center align-items-start">
+      <div class="d-flex flex-column justify-content-center align-items-start" style="flex:1">
         @if(session()->has('elevage'))
         <h5 class="btn -btn-light btn-inactiv">{{session()->get('elevage')->nom}}</h5>
         @endif

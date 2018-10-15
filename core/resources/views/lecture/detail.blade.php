@@ -68,7 +68,7 @@
                 </p>
                 @endif
               </div>
-                <img id = "icone-origine_{{$saisie->id}}_{{$sAlerte->id}}" src="{{URL::asset('svg/saisie')}}/oeil.svg" alt="origine" class="affiche-origine otoveil" />
+                <img id = "icone-origine_{{$saisie->id}}_{{$sAlerte->id}}" src="{{URL::asset('svg/saisie')}}/oeil.svg" alt="origine" class="affiche-origine otoveil curseur" />
             </div>
 
             </div>
@@ -80,6 +80,6 @@
       @endforeach
     </div>
   <div class="container-fluid d-flex flex-row justify-content-end">
-    <a href="{{route('lecture.liste', session()->get('espece'))}}" class="btn btn-success btn-sm rounded-0">Voir toutes les saisies</a>
+    <a href="{{route('lecture.liste', session()->get('espece'))}}" class="btn btn-otobleu btn-sm rounded-0">Voir toutes les saisies</a>
   </div>
 @endsection
