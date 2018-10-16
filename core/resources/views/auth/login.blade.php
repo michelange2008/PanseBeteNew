@@ -62,11 +62,11 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-otobleu">
                                     {{ __('Connection') }}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <a class="btn btn-link btn-otorange" href="{{ route('password.request') }}">
                                     {{ __('Mot de passe oublié ?') }}
                                 </a>
                             </div>

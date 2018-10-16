@@ -5,13 +5,16 @@
 @extends('menus.sousmenu')
 
 @section('contenu')
+<div id="user" name="{{Auth()->user()->name}}"></div>
 <div class="container-fluid">
 
-  <div class="alert" style="padding:0">
-    <div id="user" name="{{Auth()->user()->name}}"></div>
-    <a id="nouvelleSaisie" href="{{route('saisie.nouvelle', '')}}" class="btn btn-otobleu rounded-0">
-          <h6>nouvelle saisie</h6>
+  <div class="alert desktop-only" style="padding:0">
+    <a id="nouvelleSaisieCarre" href="{{route('saisie.nouvelle', '')}}" class="btn btn-otobleu rounded-0" role="button">
+      <h6>nouvelle saisie</h6>
     </a>
+  </div>
+  <div class="bouton-rond smartphone-only">
+    <a id="nouvelleSaisieRond" href="{{route('saisie.nouvelle', '')}}" role="button"></a>
   </div>
 
 @foreach($liste as $saisie)

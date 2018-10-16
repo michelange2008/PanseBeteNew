@@ -18,65 +18,52 @@ $(function () {
     }
 
     $('.afficher').on('click', function (){
-
         var id = $(this).attr('id');
-
         deplie(id);
-
     });
 
     $('.deplie').on('click', function() {
-
         var id = $(this).attr('id');
-
         deplie(id);
-
     });
 
   $('.affiche-origine').on('click', function(){
-
     var alerte_id = $(this).attr('id').split('_')[2];
-
     var route = $('#route_'+alerte_id).attr('action');
-
-
     $.ajaxSetup({
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
       }
     });
-
     $.confirm({
       theme: 'dark',
-
       buttons: {
         fermer: function(){
-          //close
         },
       },
-        content: function () {
-            var self = this;
-            return $.ajax({
-                url: route,
-                dataType: 'json',
-                method: 'get'
-            }).done(function (response) {
-              var ligne = new Array();
-              var i = 0
-              $.each(response, function(key, val){
+      content: function () {
+          var self = this;
+          return $.ajax({
+              url: route,
+              dataType: 'json',
+              method: 'get'
+          }).done(function (response) {
+            var ligne = new Array();
+            var i = 0
+            $.each(response, function(key, val){
 
-                ligne[i] = '<p>'+val+'</p>';
-                i++;
-              })
-                self.setContentPrepend('<div class="bg-success">')
-                self.setContent(ligne);
-                self.setContentAppend('</div>')
-                self.setTitle("Questions cochées");
-            }).error(function(response){
-                self.setTitle('Désolé');
-                self.setContent('Il y a eu un problème');
-            });
-        },
+              ligne[i] = '<p>'+val+'</p>';
+              i++;
+            })
+              self.setContentPrepend('<div class="bg-success">')
+              self.setContent(ligne);
+              self.setContentAppend('</div>')
+              self.setTitle("Questions cochées");
+          }).error(function(response){
+              self.setTitle('Désolé');
+              self.setContent('Il y a eu un problème');
+          });
+      },
     });
   });
 
@@ -107,12 +94,20 @@ $(function () {
         }
     });
   });
-  $('#nouvelleSaisie').on('click', function(e) {
 
-    var user =  $("#user").attr('name');
-
-
+  $('#nouvelleSaisieCarre').on('click', function(e) {
     e.preventDefault();
+    nouvelleSaisie("#"+$(this).attr('id'));
+  });
+
+  $('#nouvelleSaisieRond').on('click', function(e) {
+    e.preventDefault();
+    nouvelleSaisie("#"+$(this).attr('id'));
+  });
+
+  function nouvelleSaisie(route_id) {
+    console.log(route_id);
+    var user =  $("#user").attr('name');
     $.confirm ({
       title: 'Eventuellement',
       content: '' +
@@ -132,9 +127,9 @@ $(function () {
                 var name = user;
             }
 
-            $('#nouvelleSaisie').attr('href', $('#nouvelleSaisie').attr('href')+'/'+name);
+            $(route_id).attr('href', $(route_id).attr('href')+'/'+name);
 
-            window.location.href = $('#nouvelleSaisie').attr('href');
+            window.location.href = $(route_id).attr('href');
         }
     },
     annuler: function () {
@@ -151,7 +146,7 @@ onContentReady: function () {
     });
     }
     })
-  })
+  };
 
   $('.choix').on('click', function(e){
 
