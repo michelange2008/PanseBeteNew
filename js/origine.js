@@ -14,7 +14,7 @@ $(function () {
                 }
         })
 
-          $('#origine_'+alerte_id).toggleClass('ouvert');
+        $('#origine_'+alerte_id).toggleClass('ouvert');
     }
 
     $('.afficher').on('click', function (){
@@ -109,11 +109,11 @@ $(function () {
     console.log(route_id);
     var user =  $("#user").attr('name');
     $.confirm ({
-      title: 'Eventuellement',
+      title: 'Nouvelle saisie',
       content: '' +
       '<form action="" class="formName">' +
       '<div class="form-group">' +
-      '<label>Si l\'élevage est différent de l\'utilisateur, saisir son nom</label>' +
+      '<label>Si l\'élevage est différent de l\'utilisateur, saisir son nom, sinon cliquez simplement sur Ok</label>' +
       '<input type="text" placeholder='+user+' class="name form-control" required />' +
       '</div>' +
       '</form>',
