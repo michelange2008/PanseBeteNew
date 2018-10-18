@@ -6,6 +6,20 @@
   --otorange : #f58021;
   --otorangefonce: #904b13;
 }
+
+.oeil {
+  background-size: contain;
+  width: 50px;
+  margin-left: 5px;
+}
+.oeil-ferme {
+  background: url('../svg/oeil_ferme.svg') center no-repeat;
+}
+.oeil-ouvert {
+  background: url('../svg/oeil_ouvert.svg') center no-repeat;
+}
+
+
 .bouton-rond {
   position: fixed;
   bottom: 5%;
@@ -249,10 +263,6 @@ a, a:link, a:hover  {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-.jumbotron {
-  height: 100vh;
 }
 
 @media screen and (min-width: 800px) {

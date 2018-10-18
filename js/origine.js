@@ -168,5 +168,17 @@ onContentReady: function () {
 
   });
 
-
+// Bascule voir le mot de passe
+$('.oeil').on('click', function() {
+  $(this).toggleClass('oeil-ouvert');
+  $(this).toggleClass('oeil-ferme');
+  var type = $('#password').attr('type');
+  if(type === 'password') {
+    console.log(type);
+    $('#password').attr('type', "toto");
+  }
+  else {
+    $('#password').attr('type', "password");
+  }
+});
 })

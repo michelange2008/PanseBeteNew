@@ -37,7 +37,7 @@
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Mot de passe') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-4 d-flex">
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
                                 @if ($errors->has('password'))
@@ -45,15 +45,16 @@
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
+                                  <div class="oeil oeil-ouvert" alt="affiche le mot de passe"></div>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
+                                <div class="form-check d-flex">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                                    <label class="form-check-label label-remember-modif" for="remember">
+                                    <label class="form-check-label label-remember-modif" style = margin-left:0 for="remember">
                                         {{ __('Se souvenir de Moi') }}
                                     </label>
                                 </div>
@@ -66,7 +67,7 @@
                                     {{ __('Connection') }}
                                 </button>
 
-                                <a class="btn btn-link btn-otorange" href="{{ route('password.request') }}">
+                                <a class="d-block" href="{{ route('password.request') }}">
                                     {{ __('Mot de passe oublié ?') }}
                                 </a>
                             </div>
