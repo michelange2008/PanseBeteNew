@@ -25,13 +25,9 @@ class LectureController extends Controller
 
     public function detail($saisie_id) {
 
-//         session()->put('lecture_id', $saisie_id);
-
         $saisie = Saisie::find($saisie_id);
 
         $themes = Theme::all();
-
-//         dd($saisie->salertes->first()->alerte->theme->id);
 
         return view('lecture.detail', [
             'saisie' => $saisie,

@@ -7,6 +7,52 @@
   --otorangefonce: #904b13;
 }
 
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+  padding-bottom: 10px;
+}
+a, a:link, a:hover  {
+  text-decoration: none;
+}
+
+.bg-otobleu, .btn-otobleu {
+  background: var(--otobleu);
+  color: white;
+}
+
+.btn-otobleu:hover {
+  color: black;
+  background: var(--otobleuclair);
+}
+
+.btn-otorange, .bg-otorange {
+  background: var(--otorange);
+  color: black;
+}
+
+.btn-otorange:hover{
+  background: var(--otorangefonce);
+  color: white;
+}
+.btn-otojaune, .bg-otojaune  {
+  background: var(--otojaune);
+  color: black;
+}
+
+.btn-otojaune:hover  {
+  background: var(--otojaunefonce);
+  color: white;
+}
+
+/* LOGIN */
+
+.label-remember-modif {
+  margin-left: 50px;
+  margin-top: 3px;
+}
+
 .oeil {
   background-size: contain;
   width: 50px;
@@ -19,6 +65,16 @@
   background: url('../svg/oeil_ouvert.svg') center no-repeat;
 }
 
+/* SOUSMENU */
+
+.sousmenu-intitule {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px;
+}
+
+/* LECTURE LISTE AJOUTER SIASIE */
 
 .bouton-rond {
   position: fixed;
@@ -45,17 +101,6 @@
 .decalage {
   margin-left: 3px;
 }
-
-body {
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
-  min-height: 100vh;
-  padding-bottom: 10px;
-}
-a, a:link, a:hover  {
-  text-decoration: none;
-}
-
 
 .otoveil {
   height: 40px;
@@ -151,42 +196,6 @@ a, a:link, a:hover  {
           flex-direction: row;
 }
 
-.bg-otobleu, .btn-otobleu {
-  background: var(--otobleu);
-  color: white;
-}
-
-.btn-otobleu:hover {
-  color: black;
-  background: var(--otobleuclair);
-}
-
-.btn-otorange, .bg-otorange {
-  background: var(--otorange);
-  color: black;
-}
-
-.btn-otorange:hover{
-  background: var(--otorangefonce);
-  color: white;
-}
-.btn-otojaune, .bg-otojaune  {
-  background: var(--otojaune);
-  color: black;
-}
-
-.btn-otojaune:hover  {
-  background: var(--otojaunefonce);
-  color: white;
-}
-
-
-.bg-coral {
-  background: Coral;
-}
-.bg-darksalmon {
-  background: darksalmon;
-}
 .titre > img {
   width: 45px;
 }
@@ -205,10 +214,6 @@ a, a:link, a:hover  {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-.label-remember-modif {
-	margin-left: 50px;
-	margin-top: 3px;
 }
 .origine {
   margin-bottom: 5px;
@@ -238,6 +243,8 @@ a, a:link, a:hover  {
   margin: 20vh 10vw;
 }
 
+/* SAISIE ALERTES */
+
 .panneau-alerte {
   margin-top: -17px;
   border: none;
@@ -265,6 +272,36 @@ a, a:link, a:hover  {
           flex-direction: row;
 }
 
+/* LECTURE DETAIL */
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+.detail-otorange {
+  background: var(--otorange);
+}
+.detail-otobleu {
+  background: var(--otobleu);
+  color: white;
+}
+.detail > h5 {
+  margin-bottom: 0;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+.icones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.icones > img {
+  height: 30px;
+}
+
 @media screen and (min-width: 800px) {
 
   html {
@@ -276,6 +313,9 @@ a, a:link, a:hover  {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .detail > h5 {
+    font-size: 1.25rem;
   }
 }
 
@@ -304,6 +344,11 @@ a, a:link, a:hover  {
 
 @media screen and (max-width: 300px) {
   html {
-    font-size: 0.5rem;
+    font-size: 0.65rem;
+  }
+
+  .detail > h5 {
+    line-height: 2.5rem;
+
   }
 }

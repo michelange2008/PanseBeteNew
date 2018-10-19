@@ -19,14 +19,17 @@
       @endif
     @endforeach
     @if($affiche)
-      <div class="alert bg-otobleu d-flex flex-row justify-content-between">
+      <div class="alert detail detail-otobleu">
         <h5>{{$theme->nom}}</h5>
-        <img class="otoveil" src="{{URL::asset('svg/saisie')}}/ok.svg" alt="ok" />
+        <div class="icones">
+          <img class="otoveil" src="{{URL::asset('svg/saisie')}}/ok.svg" alt="ok" />
+        </div>
       </div>
 
     @else
-      <div id="alert_{{$theme->id}}" class="deplie alert bg-otorange d-flex flex-row justify-content-between curseur">
-        <h5>{{$theme->nom}}</h5>
+      <div id="alert_{{$theme->id}}" class="deplie alert detail detail-otorange">
+
+        <h5>{{$theme->nom}} ({{$i}})</h5>
         <div class="icones">
           <img src="{{URL::asset('svg/saisie')}}/deplie.svg" alt="deplie" class="icone otoveil" title="affiche les alertes" />
         </div>
