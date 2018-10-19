@@ -43,7 +43,7 @@
       </p>
       @endif
     </div>
-    <div class="d-flex flex-row justify-content-between">
+    <div class="d-flex flex-row justify-content-between" style="padding-right:20px">
       <div class="d-flex flex-column justify-content-center">
         <a id="supprime_{{$saisie->id}}" href="{{route('lecture.supprimer', $saisie->id)}}" class=" supprime justify-self-end btn btn-sm btn-otorange rounded-0">Suppr.</a>
       </div>

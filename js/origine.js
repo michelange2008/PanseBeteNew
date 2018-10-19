@@ -175,7 +175,7 @@ $('.oeil').on('click', function() {
   var type = $('#password').attr('type');
   if(type === 'password') {
     console.log(type);
-    $('#password').attr('type', "toto");
+    $('#password').attr('type', "text");
   }
   else {
     $('#password').attr('type', "password");

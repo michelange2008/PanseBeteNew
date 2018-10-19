@@ -4,7 +4,9 @@
 
       <a href="{{route('lecture.liste', session()->get('espece'))}}"><img src="{{URL::asset('svg/especes')."/".session()->get('espece')->icone}}" alt="{{session()->get('espece')->nom}}" title="revenir à la liste des saisies" /></a>
       <div class="sousmenu-intitule d-flex flex-column justify-content-center align-items-start" style="flex:1">
-        <h5 class="" style="padding-bottom:0">{{ucfirst($saisie->elevage->nom)}}</h5>
+        @isset($saisie)
+            <h5 class="" style="padding-bottom:0">{{ucfirst($saisie->elevage->nom)}}</h5>
+        @endisset
         <p class="">{{session()->get('espece')->nom}}</p>
     </div>
     <div class="d-flex flex-column justify-content-center" style="padding-bottom:0">
