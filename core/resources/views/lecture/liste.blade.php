@@ -9,12 +9,12 @@
 <div class="container-fluid">
 
   <div class="alert desktop-only" style="padding:0">
-    <a id="nouvelleSaisieCarre" href="{{route('saisie.nouvelle', '')}}" class="btn btn-otobleu rounded-0" role="button">
+    <a id="nouvelleSaisieCarre" href="{{route('saisie.nouvelle', '')}}" class="btn btn-otobleu rounded-0" role="button" title="cliquez pour une nouvelle saisie">
       <h6>nouvelle saisie</h6>
     </a>
   </div>
   <div class="bouton-rond smartphone-only">
-    <a id="nouvelleSaisieRond" href="{{route('saisie.nouvelle', '')}}" role="button"></a>
+    <a id="nouvelleSaisieRond" href="{{route('saisie.nouvelle', '')}}" role="button" title="cliquez pour une nouvelle saisie"></a>
   </div>
   @if($liste->count() === 0)
   <div class="alert alert-secondary">
