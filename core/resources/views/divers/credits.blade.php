@@ -17,7 +17,7 @@
     </p>
   </div>
   <h6 class="accordeon-intermediaire">Ont participé à la rédaction, aux relectures et aux tests de ce document:</h6>
-  
+
     @foreach($especes as $espece)
       <h3>{{$espece->nom}}</h3>
       <div>
@@ -49,22 +49,6 @@
 
 @endsection
 
-
-@push('js')
-
-<script src="{{asset('js/ziehharmonika.js')}}"></script>
-
-<script>
-$(document).ready(function() {
-		$('.ziehharmonika').ziehharmonika({
-			collapsible: true,
-			prefix: ''
-		});
-	});
-</script>
-
-
-@endpush
 
 @push('css')
 

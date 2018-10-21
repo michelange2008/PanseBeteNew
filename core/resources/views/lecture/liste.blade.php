@@ -16,16 +16,19 @@
   <div class="bouton-rond smartphone-only">
     <a id="nouvelleSaisieRond" href="{{route('saisie.nouvelle', '')}}" role="button" title="cliquez pour une nouvelle saisie"></a>
   </div>
+
   @if($liste->count() === 0)
-  <div class="alert alert-secondary">
-    <p>Il n'y a pas encore de saisie réalisée. Vous pouvez commencer à faire la première
-      en cliquant sur
-      <span class="desktop-only">le bouton <span class="accent">nouvelle saisie</span> ci-dessus.</span>
-      <span class="smartphone-only"> le bouton <span class="rond">+</span> ci-dessous.</span>
-    </p>
-    <div class="arrowDown"></div>
-  </div>
+    <div class="pas-de-saisie alert alert-secondary">
+      <div class="arrow arrowUp"></div>
+      <p>Il n'y a pas encore de saisie réalisée.<p>
+        <p>Vous pouvez faire la première en cliquant sur
+          <span class="desktop-only">le bouton <span class="accent">nouvelle&nbspsaisie</span> ci-dessus.</span>
+        <span class="smartphone-only"> le bouton <span class="rond">+</span> ci-dessous.</span>
+      </p>
+      <div class="arrow arrowDown"></div>
+    </div>
   @endif
+
 @foreach($liste as $saisie)
   <div class="alert alert-dark">
     <div>
@@ -56,7 +59,6 @@
       </div>
     </div>
   </div>
-
 @endforeach
 
 </div>

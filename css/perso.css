@@ -74,7 +74,30 @@ a, a:link, a:hover  {
   padding: 10px;
 }
 
-/* LECTURE LISTE AJOUTER SIASIE */
+/* LECTURE LISTE AJOUTER SAISIE */
+
+.pas-de-saisie {
+	margin: 10vh 3px 0 3px;
+}
+.arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  opacity: 1;
+}
+
+.arrowDown {
+  border-width: 20px 15px 0 15px;
+  border-color: #e2e3E5 transparent transparent transparent;
+  right: 10px;
+  bottom: -20px;
+}
+
+.arrowUp {
+  display: none;
+}
+
 
 .bouton-rond {
   position: fixed;
@@ -173,21 +196,9 @@ a, a:link, a:hover  {
   border-radius: 100%;
 }
 
-.arrowDown {
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 20.0px 15px 0 15px;
-	position: absolute;
-	bottom: 0;
-	right: 10px;
-	bottom: -20px;
-	border-color: #e2e3E5 transparent transparent transparent;
-	opacity: 1;
-}
-
 .titre {
   width: 98%;
+  padding-left: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -318,7 +329,20 @@ a, a:link, a:hover  {
     display: none;
   }
   .desktop-only {
+    display: inline;
+  }
+  .arrowUp {
     display: block;
+    border-width: 0 15px 20px;
+    border-color: transparent transparent #e2e3E5;
+    left: 10px;
+    top: -20px;
+  }
+  .arrowDown {
+    display: none;
+  }
+  .pas-de-saisie {
+  	margin: 10vh 10%;
   }
 }
 
@@ -349,4 +373,12 @@ a, a:link, a:hover  {
   body {
     max-width: 60%;
   }
+}
+
+@media screen and (max-width: 992px) {
+  .jconfirm-box-container {
+    max-width: inherit;
+    flex: inherit;
+  }
+
 }

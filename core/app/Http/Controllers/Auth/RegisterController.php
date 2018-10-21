@@ -63,6 +63,9 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+      // LIGNE RAJOUTEE PAR MICHEL POUR EVITER L'ACCES SAUVAGE A LA PAGE DE CREATION D'UN NOUVEL UTILISATEUR
+        return redirect()->route('login');
+      //####################################################################################################
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
