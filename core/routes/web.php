@@ -47,8 +47,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/lecture/origines/{saisie_id}', ['uses' => 'LectureController@originesListe', 'as' => 'lecture.originesListe']);
 
     Route::get('/lecture/pdf/{saisie_id}', ['uses' => 'PdfController@index', 'as' => 'pdf']);
-
-    Route::get('/essai', ['uses' => 'EssaiController@index', 'as' => 'essai']);
 });
 
 Auth::routes();
