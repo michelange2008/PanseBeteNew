@@ -31,4 +31,9 @@ class Saisie extends Model
     {
       return $this->belongsTo(Espece::class);
     }
+
+    public function sorigine()
+    {
+      return $this->hasMany(Sorigine::class);
+    }
 }

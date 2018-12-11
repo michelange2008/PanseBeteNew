@@ -44,9 +44,9 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/lecture/observations/{alerte_id}', ['uses' => 'LectureController@observations', 'as' => 'lecture.observations']);
 
-    Route::get('/lecture/pdf/{saisie_id}', ['uses' => 'PdfController@index', 'as' => 'pdf']);
+    Route::get('/lecture/origines/{saisie_id}', ['uses' => 'LectureController@originesListe', 'as' => 'lecture.originesListe']);
 
-    Route::get('/essai', ['uses' => 'EssaiController@index', 'as' => 'essai']);
+    Route::get('/lecture/pdf/{saisie_id}', ['uses' => 'PdfController@index', 'as' => 'pdf']);
 });
 
 Auth::routes();

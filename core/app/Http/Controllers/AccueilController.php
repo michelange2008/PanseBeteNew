@@ -28,29 +28,6 @@ class AccueilController extends Controller
       ]);
     }
 
-    // public function choix($espece_id)
-    // {
-    //   session()->forget(['saisie', 'alertes']);
-    //
-    //   $espece = Espece::find($espece_id);
-    //
-    //   $nbAlertes = Alerte::where('espece_id', $espece_id)->count();
-    //
-    //   session()->put('espece', $espece);
-    //
-    //   if($nbAlertes > 0)
-    //   {
-    //       $nbSaisies = Saisie::where('user_id', auth()->user()->id)->where('espece_id', $espece_id)->count();
-    //       return view('choix', [
-    //         'nbSaisies' => $nbSaisies,
-    //       ]);
-    //   }
-    //   else
-    //   {
-    //       return view('travaux');
-    //   }
-    // }
-
     public function instructions()
     {
       return view('divers.instructions');

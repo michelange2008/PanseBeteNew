@@ -86,7 +86,8 @@
         @endif
       @endforeach
     </div>
-  <div class="container-fluid d-flex flex-row justify-content-end">
+  <div class="container-fluid d-flex flex-row justify-content-between">
+    <a id="listeOrigines" href="{{route('lecture.originesListe', session()->get('saisie_id'))}}" class="btn btn-otojaune btn-sm rounded-0">Liste des origines</a>
     <a href="{{route('lecture.liste', session()->get('espece'))}}" class="btn btn-otobleu btn-sm rounded-0">Voir toutes les saisies</a>
   </div>
 @endsection

@@ -25,6 +25,8 @@ class LectureController extends Controller
 
     public function detail($saisie_id) {
 
+        session()->put('saisie_id', $saisie_id);
+
         $saisie = Saisie::find($saisie_id);
 
         $themes = Theme::all();
@@ -37,6 +39,8 @@ class LectureController extends Controller
 
     public function supprimer($saisie_id)
     {
+      session()->put('saisie_id', $saisie_id);
+
       $elevage = Saisie::where('id', $saisie_id)->first()->elevage_id;
 
       $effacerElevage = false;
@@ -63,5 +67,16 @@ class LectureController extends Controller
       }
 
       return response()->json($tableNomOrigines, 200);
+    }
+
+    public function originesListe($saisie_id)
+    {
+      session()->put('saisie_id', $saisie_id);
+
+      $sorigines = Sorigine::where('saisie_id', $saisie_id)->get();
+
+      return view('lecture.originesListe', [
+        'sorigines' => $sorigines,
+      ]);
     }
 }

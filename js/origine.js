@@ -1,3 +1,5 @@
+
+
 $(function () {
 
     function deplie(id) {
@@ -131,20 +133,20 @@ $(function () {
 
             window.location.href = $(route_id).attr('href');
         }
-    },
-    annuler: function () {
+      },
+      annuler: function () {
         //close
+      },
     },
-},
-onContentReady: function () {
-    // bind to events
-    var jc = this;
-    this.$content.find('form').on('submit', function (e) {
-        // if the user submits the form by pressing enter in the field.
-        e.preventDefault();
-        jc.$$formSubmit.trigger('click'); // reference the button and click it
-    });
-    }
+    onContentReady: function () {
+        // bind to events
+        var jc = this;
+        this.$content.find('form').on('submit', function (e) {
+            // if the user submits the form by pressing enter in the field.
+            e.preventDefault();
+            jc.$$formSubmit.trigger('click'); // reference the button and click it
+        });
+      }
     })
   };
 
@@ -181,4 +183,72 @@ $('.oeil').on('click', function() {
     $('#password').attr('type', "password");
   }
 });
+
+$('.dd').nestable(
+
+);
+
+
+
+function startup() {
+  var el = document.getElementsByTagName("canvas")[0];
+  el.addEventListener("touchstart", handleStart, false);
+  el.addEventListener("touchend", handleEnd, false);
+  el.addEventListener("touchcancel", handleCancel, false);
+  el.addEventListener("touchleave", handleLeave, false);
+  el.addEventListener("touchmove", handleMove, false);
+}
+
+function handleStart(evt) {
+  evt.preventDefault();
+  var el = document.getElementsByTagName("canvas")[0];
+  console.log(el);
+  var ctx = el.getContext("2d");
+  var touches = evt.changedTouches;
+
+  for (var i=0; i<touches.length; i++) {
+    ongoingTouches.push(touches[i]);
+    var color = colorForTouch(touches[i]);
+    ctx.fillStyle = color;
+    ctx.fillRect(touches[i].pageX-2, touches[i].pageY-2, 4, 4);
+  }
+}
+// Destiner à afficher la barre de scroll sur l'écran du portable dans le fenetre LISTE
+// des origines si elle déborde dans le bas de l'écran
+var winHeight = screen.height;
+var pageHeight = $('html').height();
+if(winHeight >= pageHeight)
+{
+  $('#scroll').css('display', 'none');
+}
+
+// fonction pour afficher l'accordeon
+$(document).ready(function() {
+		$('.ziehharmonika').ziehharmonika({
+			collapsible: true,
+			prefix: ''
+		});
+	});
+// afficher une information avant de passer à la liste des originesListe
+$("#listeOrigines").on('click', function(e){
+  e.preventDefault();
+  $.confirm({
+    theme: "supervan",
+    title: "<h5 style='text-align: left; color:red'>A lire !<img src='../../svg/instructions.svg' /> </h5>",
+    content: "<p style='text-align: justify'>A la page suivante, vous aurez la liste de toutes les questions que vous avez cochées, quelque soit le thème.</p>"
+    + "<p style='text-align: justify'>Il est possible de les déplacer en le faisant glisser. Vous pouvez aussi grouper certaines questions en les faisant glisser vers la droite.</p>"
+    + "<p style='text-align: justify'>S'il y a besoin de faire défiler la page, il faut utiliser la barre de défilement orange</p>",
+    buttons : {
+      formSubmit : {
+        text: "continuer",
+        keys : ['enter', 'esc'],
+        btnClass : 'btn-red',
+        action: function() {
+          location.href = $('#listeOrigines').attr('href');
+        },
+      }
+    },
+  });
+});
+
 })

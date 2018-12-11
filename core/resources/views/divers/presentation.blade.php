@@ -45,22 +45,6 @@
 @endsection
 
 
-@push('js')
-
-<script src="{{asset('js/ziehharmonika.js')}}"></script>
-
-<script>
-$(document).ready(function() {
-		$('.ziehharmonika').ziehharmonika({
-			collapsible: true,
-			prefix: ''
-		});
-	});
-</script>
-
-
-@endpush
-
 @push('css')
 
 <link href="{{asset('css/ziehharmonika.css')}}" rel="stylesheet" type="text/css">
