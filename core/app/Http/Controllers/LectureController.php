@@ -59,7 +59,7 @@ class LectureController extends Controller
 
       foreach(Sorigine::where('salerte_id', $salerte_id)->get() as $sorigine)
       {
-          $tableNomOrigines[] = $sorigine->origine->question;
+          $tableNomOrigines[] = ucfirst($sorigine->origine->reponse);
       }
 
       return response()->json($tableNomOrigines, 200);
