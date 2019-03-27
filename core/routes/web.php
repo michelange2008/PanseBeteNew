@@ -12,6 +12,10 @@
 */
 Route::group(['middleware' => ['auth']], function () {
 
+    Route::resource('/utilisateur', 'UserController');
+
+    Route::get('/admin', ['uses' => 'AdminController@index', 'as' => 'admin.index']);
+
     Route::get('/', ['uses' => 'AccueilController@accueil', 'as' => 'accueil']);
 
     Route::get('/presentation', ['uses' => 'AccueilController@presentation', 'as' => 'presentation']);

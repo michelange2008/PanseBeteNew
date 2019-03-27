@@ -34,6 +34,9 @@
                 <li class="nav-item"><a class="nav-link" href="{{route('presentation')}}">Otoveil&nbsp?</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('credits')}}">Qui a fait quoi&nbsp?</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('instructions')}}">Mode d'emploi</a></li>
+                @if (Auth::user()->admin)
+                  <li class="nav-item"><a class="nav-link" href="{{route('admin.index')}}">Administration</a></li>
+                @endif
 
       </ul>
     </div>
