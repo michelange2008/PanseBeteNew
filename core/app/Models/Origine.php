@@ -9,7 +9,7 @@ class Origine extends Model
 
     protected $table = 'origines';
     public $timestamps = false;
-    protected $fillable = array('alerte_id', 'question');
+    protected $fillable = array('alerte_id', 'question', 'reponse');
 
     public function alerte()
     {

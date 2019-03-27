@@ -16,7 +16,7 @@
             <div class="dd-handle d-flex flex-row">
               <img src="{{URL::asset('svg/saisie'."/".$sorigine->salerte->alerte->theme->icone)}}" alt="-" class="img-handle">
               <p class="text-handle">
-                {{$sorigine->origine->question}}
+                {{ucfirst($sorigine->origine->reponse)}}
               </p>
 
             </div>
