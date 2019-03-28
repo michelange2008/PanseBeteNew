@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Espece;
 use App\Models\User;
 
 class UserController extends Controller
 {
+
+  public function __construct()
+  {
+    $this->middleware('isAdmin');
+  }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +21,18 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+      if(!Auth::user()->admin)
+      {
+        return view('accueil', [
+          'especes' => Espece::all(),
+        ]);
+      }
+      else
+      {
+        return view('admin/admin', [
+          'users' => User::orderBy('admin', 'desc')->get(),
+        ]);
+      }
     }
 
     /**
@@ -24,7 +42,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+      return redirect()->route('utilisateur.index');
     }
 
     /**
@@ -35,7 +53,17 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datas = $request->all();
+        $user = new User();
+        $user->name = $datas['nom'];
+        $user->email = $datas['email'];
+        $user->password = bcrypt($datas['mdp']);
+        $user->save();
+        return response()->json([
+          "id" => $user->id,
+          "nom" => $user->name,
+          "email" => $user->email
+        ]);
     }
 
     /**
@@ -46,7 +74,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        return redirect()->route('utilisateur.index');
     }
 
     /**
@@ -57,7 +85,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+      return redirect()->route('utilisateur.index');
     }
 
     /**
@@ -69,7 +97,14 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $datas = $request->all();
+      $user = User::find($id);
+      $user->name = $datas['nom'];
+      $user->email = $datas['email'];
+      $user->save();
+      return response()->json([
+        "id" => $user->id,
+      ]);
     }
 
     /**
@@ -80,6 +115,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::destroy($id);
+
+        return response()->json(['message' => 'OK']);
     }
 }

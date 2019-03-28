@@ -10,7 +10,7 @@
 @endpush
 
 @section('contenu')
-  <div class="container-fluid">
+  <div id="totum" class="container-fluid">
     <div class="alert alert-success">
       <h1>Gestion des utilisateurs</h1>
     </div>
@@ -25,8 +25,8 @@
         </thead>
         <tbody>
           @foreach ($users as $user)
-            <tr id="ligne_{{$user->id}}" class="{{($user->admin) ? "text-danger": ""}}">
-              <td>{{$user->name}}</td>
+            <tr id="ligne_{{$user->id}}" class="ligne {{($user->admin) ? "text-danger": ""}}">
+              <td id="nom_{{$user->id}}" class="nom">{{$user->name}}</td>
               <td id="email_{{$user->id}}" class="modifEmail curseur">{{$user->email}}</td>
               <td id="admin_{{$user->id}}" class="text-center">{{($user->admin) ? "OUI" : "NON"}}</td>
               <td id="modifier_{{$user->id}}" class="modifier cell-delmod curseur">
@@ -40,8 +40,8 @@
         </tbody>
       </table>
     </div>
-    <div id="plus" class="d-flex justify-content-end curseur">
-      <img src="{{URL::asset('svg')}}/plus_rond.svg" alt="Ajouter" title="Ajouter un utilisateur">
+    <div class="d-flex justify-content-end">
+      <img id="plus" class="curseur" src="{{URL::asset('svg')}}/plus_rond.svg" alt="Ajouter" title="Ajouter un utilisateur">
     </div>
   </div>
 @endsection

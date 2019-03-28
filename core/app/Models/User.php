@@ -22,4 +22,14 @@ class User extends Model
         return $this->hasMany(Saisie::Class);
     }
 
+    public function isAdmin()
+    {
+      if($user->isAdmin == 1)
+      {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
 }

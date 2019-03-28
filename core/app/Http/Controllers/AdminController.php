@@ -9,20 +9,13 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+      $this->middleware('isAdmin');
+    }
+
     public function index()
     {
-      if(!Auth::user()->admin)
-      {
-        return view('accueil', [
-          'especes' => Espece::all(),
-        ]);
-      }
-      else
-      {
-        return view('admin/admin', [
-          'users' => User::orderBy('admin', 'desc')->get(),
-        ]);
-      }
-
+      return redirect('utilisateur');
     }
 }

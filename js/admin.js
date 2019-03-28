@@ -1,4 +1,47 @@
 $(function() {
+  // Modification d'un utilisateur
+  $('.ligne').on('click', '.modifier', function() {
+    var id = $(this).attr('id').split("_")[1];
+    var nom = $('#nom_'+id).text();
+    var email = $('#email_'+id).text();
+    $.confirm({
+      columnClass : 'large',
+      type : 'green',
+      title : "Modification d'utilisateur",
+      content : '' +
+        '<form action="" class="formName">' +
+        '<div class = "form-group">' +
+        '<label>Nom</label>' +
+        '<input type="text" class = "nom form-control" value="'+nom+'" required />' +
+        '</div><div class="form-group">' +
+        '<label>Adresse mail</label>' +
+        '<input type="text" class = "email form-control" value="'+email+'" required />' +
+        '</div></form>',
+        buttons : {
+          formSubmit: {
+            text : 'enregistrer',
+            btnClass : 'btn-green',
+            action : function(data) {
+              var nom = this.$content.find('.nom').val();
+              var email = this.$content.find('.email').val();
+              if(verifChampsModif(nom, email) && verifEmail(email)) {
+                modifie(id, nom, email);
+              }
+              else {
+                return false;
+              }
+            }
+          },
+          cancel :  {
+            text : "annuler",
+            btnClass : 'btn-red',
+            action : function() {
+
+            }
+          }
+        }
+      })
+    })
   // Ajout d'un utilisateur
   $('#plus').on('click', function() {
     $.confirm({
@@ -24,18 +67,43 @@ $(function() {
         formSubmit: {
           text : 'enregistrer',
           btnClass : 'btn-green',
-          action : function() {
+          action : function(data) {
             var nom = this.$content.find('.nom').val();
             var email = this.$content.find('.email').val();
             var mdp1 = this.$content.find('.mdp1').val();
             var mdp2 = this.$content.find('.mdp2').val();
             if(verifChampsRemplis(nom, email, mdp1, mdp2) && verifEmail(email) && verifMdpEgal(mdp1, mdp2) && verifTailleMdp(mdp1)) {
-              console.log("c'est bon");
+              envoi(nom, email, mdp1);
             }
             else {
               return false;
             }
           }
+        },
+        cancel :  {
+          text : "annuler",
+          btnClass : 'btn-red',
+          action : function() {
+
+          }
+        }
+      }
+    })
+  })
+
+  $('tr').on('click', '.supprimer', function() {
+    var id = $(this).attr('id').split("_")[1];
+    var nom = $('#nom_'+id).html();
+    $.confirm({
+      type : 'red',
+      theme : 'dark',
+      title : "Suppression !",
+      content : 'Etes-vous sûr de vouloir supprimer '+nom,
+      buttons : {
+        supprimer : function() {
+          supprimer(id);
+        },
+        annuler : function() {
         }
       }
     })
@@ -48,6 +116,13 @@ $(function() {
     }
     return true;
   }
+
+  function verifChampsModif(nom, email) {
+    if(!nom || !email) {
+      alerte('Il faut remplir tous les champs');
+      return false;
+    }
+    return true;  }
 
   function verifMdpEgal(mdp1, mdp2) {
     if(mdp1 !== mdp2) {
@@ -82,5 +157,91 @@ $(function() {
       title : 'Attention !',
       content : texte
     });
+  }
+
+  function envoi(nom, email, mdp) {
+    $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+    });
+
+    $.ajax({
+      type: 'POST',
+      url: 'utilisateur',
+      data: {
+        'nom' : nom,
+        'email' : email,
+        'mdp' : mdp
+      },
+      dataType: 'JSON',
+      success: function (data) {
+        creeLigne(data.id, data.nom, data.email);
+        },
+      error: function (e) {
+            console.log(e.responseText);
+        }
+    });
+  }
+  function modifie(id, nom, email) {
+    console.log(email);
+    $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+    });
+
+    $.ajax({
+      type: 'PUT',
+      url: 'utilisateur/'+id,
+      data: {
+        'nom' : nom,
+        'email' : email,
+      },
+      dataType: 'JSON',
+      success: function (data) {
+        modifieLigne(id, nom, email);
+        },
+      error: function (e) {
+            console.log(e.responseText);
+        }
+    });
+  }
+
+  function supprimer(id) {
+    $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+    });
+
+    $.ajax({
+      type: 'DELETE',
+      url: 'utilisateur/'+id,
+
+      success: function (data) {
+        $('#ligne_'+id).remove();
+        },
+      error: function (e) {
+            console.log(e.responseText);
+        }
+    });
+  }
+
+  function creeLigne(id, nom, email) {
+    $('tbody').append('<tr><td id="nom_'+id+'" class="nom">'+nom+'</td>' +
+              '<td id="email_'+id+'" class="modifEmail curseur">'+email+'</td>' +
+              '<td id="admin_'+id+'" class="text-center">-</td>' +
+              '<td id="modifier_'+id+'" class="modifier cell-delmod curseur">' +
+                '<img src="http://localhost/pansebete/svg/modifie.svg" alt="Modifier" title="Modifier cet utilisateur">' +
+              '</td>' +
+              '<td id="moins_'+id+'" class="supprimer cell-delmod curseur" title="Supprimer cet utilisateur">' +
+                '<img src="http://localhost/pansebete/svg/moins.svg" alt="Supprimer">' +
+              '</td></tr>');
+  }
+
+  function modifieLigne(id, nom, email) {
+    $('#nom_'+id).html(nom);
+    $('#email_'+id).html(email);
   }
 })

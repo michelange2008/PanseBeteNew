@@ -62,6 +62,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'hasEspece' => \App\Http\Middleware\SessionEspeceExist::class,
         'nullToZero' => \App\Http\Middleware\SanitizeMiddleware::class,
+        'isAdmin' => \App\Http\Middleware\IsAdmin::class,
         ];
 
     /**
