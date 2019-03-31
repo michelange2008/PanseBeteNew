@@ -14,11 +14,12 @@
     <div class="alert alert-success">
       <h1>Gestion des utilisateurs</h1>
     </div>
-    <div class="contenu">
+    <div class="table-responsive contenu">
       <table class="table table-hover">
         <thead class="table-dark">
           <th>Nom</th>
           <th>Email</th>
+          <th class="text-center">Saisies</th>
           <th class="text-center">Administrateur</th>
           <th class="text-center">Modifier</th>
           <th class="text-center">Supprimer</th>
@@ -28,6 +29,7 @@
             <tr id="ligne_{{$user->id}}" class="ligne {{($user->admin) ? "text-danger": ""}}">
               <td id="nom_{{$user->id}}" class="nom">{{$user->name}}</td>
               <td id="email_{{$user->id}}" class="modifEmail curseur">{{$user->email}}</td>
+              <td id="saisies_{{$user->id}}" class="text-center saisies">{{count($saisies_groupees[$user->id])}}</td>
               <td id="admin_{{$user->id}}" class="text-center">{{($user->admin) ? "OUI" : "NON"}}</td>
               <td id="modifier_{{$user->id}}" class="modifier cell-delmod curseur">
                 <img src="{{URL::asset('svg')}}/modifie.svg" alt="Modifier" title="Modifier cet utilisateur">

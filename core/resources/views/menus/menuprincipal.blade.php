@@ -31,8 +31,16 @@
                 @endif
                 <div class="dropdown-divider"></div>
                 <li class="nav-item"><a class="nav-link" href="{{route('accueil')}}">Démarrer</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{route('presentation')}}">Otoveil&nbsp?</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{route('credits')}}">Qui a fait quoi&nbsp?</a></li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" id="infos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      En savoir plus
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="infos">
+                    <a class="dropdown-item" href="{{route('presentation')}}">Otoveil&nbsp?</a>
+                    <a class="dropdown-item" href="{{route('credits')}}">Qui a fait quoi&nbsp?</a>
+                    <a class="dropdown-item" href="{{route('mentions_legales')}}">Mentions légales</a>
+                  </div>
+                </li>
                 <li class="nav-item"><a class="nav-link" href="{{route('instructions')}}">Mode d'emploi</a></li>
                 @if (Auth::user()->admin)
                   <li class="nav-item"><a class="nav-link" href="{{route('admin.index')}}">Administration</a></li>
@@ -41,9 +49,9 @@
       </ul>
     </div>
     <a class="navbar-brand" href="{{ url('/') }}">
-      {{ config('app.name', 'Panse-bête') }}
+      {{ config('app.name', 'Panse-bêtes') }}
     </a>
-    <img src="{{URL::asset('')}}otoveil.jpeg" alt="otoveil" class="otoveil"/>
+    <img src="{{URL::asset('')}}img/itab_otoveil.jpeg" alt="otoveil" class="otoveil"/>
     </div>
   </nav>
 </div>

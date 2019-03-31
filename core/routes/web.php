@@ -12,6 +12,10 @@
 */
 Route::group(['middleware' => ['auth']], function () {
 
+    Route::get('/utilisateur/tousSauf/{id}', ['uses' => 'UserController@tousSauf', 'as' => 'tousSauf']);
+
+    Route::get('/utilisateur/changeSaisieUser/{ancien_user_id}/{nouveau_user_id}', ['uses' => 'UserController@changeSaisieUser', 'as' => 'changeSaisieUser']);
+
     Route::resource('/utilisateur', 'UserController');
 
     Route::get('/admin', ['uses' => 'AdminController@index', 'as' => 'admin.index']);
@@ -23,6 +27,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/instructions', ['uses' => 'AccueilController@instructions', 'as' => 'instructions']);
 
     Route::get('/credits', ['uses' => 'AccueilController@credits', 'as' => 'credits']);
+
+    Route::get('/mentions_legales', ['uses' => 'AccueilController@mentions_legales', 'as' => 'mentions_legales']);
 
     Route::get('entravaux/{espece_id}', ['uses' => 'AccueilController@entravaux', 'as' => 'entravaux']);
 

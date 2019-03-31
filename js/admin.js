@@ -94,19 +94,52 @@ $(function() {
   $('tr').on('click', '.supprimer', function() {
     var id = $(this).attr('id').split("_")[1];
     var nom = $('#nom_'+id).html();
-    $.confirm({
-      type : 'red',
-      theme : 'dark',
-      title : "Suppression !",
-      content : 'Etes-vous sûr de vouloir supprimer '+nom,
-      buttons : {
-        supprimer : function() {
-          supprimer(id);
-        },
-        annuler : function() {
+    var nombre_saisies = $('#saisies_'+id).html()
+    //cas ou l'utilisateur a une saisie
+    if(nombre_saisies > 0) {
+      $.confirm({
+        columnClass : 'large',
+        type : 'red',
+        theme : 'dark',
+        title : "Suppression de "+nom+" !",
+        content : '<p>Cet utilisateur.trice a effectué '+nombre_saisies+' saisie(s). </p>'+
+          "<p>Si vous le supprimez <strong>toutes ses saisies seront aussi supprimées</strong>. " +
+          "Mais vous pouvez choisir de transférer ses saisies à un autre utilisateur.trice</p>",
+        buttons : {
+          supprimer :
+            function() {
+              supprimer(id);
+            },
+          transferer :
+            function() {
+              transferer(id);
+            },
+          annuler :
+            function() {
+              console.log('annule');
+            },
         }
-      }
-    })
+      })
+
+    }
+    // cas ou l'utilisateur n'a pas de saisie
+    else {
+
+      $.confirm({
+        columnClass : 'large',
+        type : 'red',
+        theme : 'dark',
+        title : "Suppression de "+nom+" !",
+        content : 'Etes-vous sûr de vouloir supprimer '+nom,
+        buttons : {
+          supprimer : function() {
+            supprimer(id);
+          },
+          annuler : function() {
+          }
+        }
+      })
+    }
   })
 
   function verifChampsRemplis(nom, email, mdp1, mdp2) {
@@ -209,6 +242,7 @@ $(function() {
   }
 
   function supprimer(id) {
+    console.log(id);
     $.ajaxSetup({
     headers: {
       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -231,17 +265,77 @@ $(function() {
   function creeLigne(id, nom, email) {
     $('tbody').append('<tr><td id="nom_'+id+'" class="nom">'+nom+'</td>' +
               '<td id="email_'+id+'" class="modifEmail curseur">'+email+'</td>' +
-              '<td id="admin_'+id+'" class="text-center">-</td>' +
-              '<td id="modifier_'+id+'" class="modifier cell-delmod curseur">' +
-                '<img src="http://localhost/pansebete/svg/modifie.svg" alt="Modifier" title="Modifier cet utilisateur">' +
+              '<td id="saisies_'+id+'" class="text-center saisies">0</td>' +
+              '<td id="admin_'+id+'" class="text-center">NON</td>' +
+              '<td id="modifier_'+id+'" class="modifier cell-delmod">' +
+                '<img src="http://localhost/pansebete/svg/modifie_gris.svg" alt="Modifier" title="Pour modifier ce nouvel utilisateur, il faut rafraichir la page (touche F5)">' +
               '</td>' +
-              '<td id="moins_'+id+'" class="supprimer cell-delmod curseur" title="Supprimer cet utilisateur">' +
-                '<img src="http://localhost/pansebete/svg/moins.svg" alt="Supprimer">' +
+              '<td id="moins_'+id+'" class="supprimer cell-delmod" title="Pour supprimer ce nouvel utilisateur, il faut rafraichir la page (touche F5)">' +
+                '<img src="http://localhost/pansebete/svg/moins_gris.svg" alt="Supprimer" >' +
               '</td></tr>');
   }
 
   function modifieLigne(id, nom, email) {
     $('#nom_'+id).html(nom);
     $('#email_'+id).html(email);
+  }
+
+  function transferer(id) {
+    $.confirm({
+      columnClass: 'large',
+      theme : 'dark',
+      type : 'green',
+      buttons : {
+        annuler : function(){
+
+        }
+      },
+      content : function() {
+        var self = this;
+        return $.ajax({
+          url: 'utilisateur/tousSauf/'+id,
+          dataType: 'json',
+          method: 'get'
+        }).done(function(response){
+          self.setTitle("Cliquer sur l'utilisateur choisi:")
+
+          $.each(JSON.parse(response), function(key, val) {
+            self.setContentAppend(
+              '<div id="'+val.id+'" user="'+id+'" class="nom curseur">'+val.name+'</div>');
+          })
+
+        }).fail(function(){
+          self.setContent('Y eu une couille dans le pâté')
+        })
+      },
+      onContentReady: function () {
+          // when content is fetched & rendered in DOM
+          $('.nom').on('click', function() {
+              var ancien_user = $(this).attr('user');
+              var nouveau_user = $(this).attr('id');
+              $.ajax({
+                url: 'utilisateur/changeSaisieUser/'+ancien_user+'/'+nouveau_user,
+                dataType: 'json',
+                method: 'get'
+              }).done(function(response){
+                supprimer(ancien_user);
+                $.alert({
+                  columnClass: 'large',
+                  theme: 'supervan',
+                  type: 'green',
+                  title: "Déplacement de saisies et suppression d'un utilisateur",
+                  content: "C'est fait",
+                  buttons: {
+                    Fermer: {
+                      action: function() {
+                        location.reload();
+                      }
+                    }
+                  }
+                })
+              })
+          })
+        }
+    });
   }
 })

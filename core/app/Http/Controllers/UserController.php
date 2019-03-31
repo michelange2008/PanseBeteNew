@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\Models\Espece;
 use App\Models\User;
+use App\Models\Saisie;
 
 class UserController extends Controller
 {
@@ -29,8 +31,22 @@ class UserController extends Controller
       }
       else
       {
+        $users =User::orderBy('admin', 'desc')->get();
+        $saisies_groupees = Saisie::all()->mapToGroups(function($item, $key) {
+          return [$item['user_id'] => $item['id']];
+        });
+        $users_saisies = $saisies_groupees->keys();
+
+        foreach ($users as $user) {
+
+          if(!$users_saisies->contains($user->id))
+          {
+            $saisies_groupees->put($user->id, collect([]));
+          }
+        }
         return view('admin/admin', [
-          'users' => User::orderBy('admin', 'desc')->get(),
+          'users' => $users,
+          'saisies_groupees' => $saisies_groupees,
         ]);
       }
     }
@@ -118,5 +134,23 @@ class UserController extends Controller
         User::destroy($id);
 
         return response()->json(['message' => 'OK']);
+    }
+
+    public function tousSauf($id)
+    {
+      $users = User::select('id', 'name')->where('id', '!=', $id)->get();
+
+      return response()->json(json_encode($users));
+    }
+
+    public function changeSaisieUser($ancien_user_id, $nouveau_user_id)
+    {
+      $saisies = Saisie::where('user_id', $ancien_user_id)->get();
+      foreach ($saisies as $saisie) {
+        $saisie->user_id = $nouveau_user_id;
+        $saisie->save();
+      }
+
+      return response()->json(["nombre_saisies" => Saisie::where('user_id', $nouveau_user_id)->count()]);
     }
 }

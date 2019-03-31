@@ -49,6 +49,11 @@ class AccueilController extends Controller
       ]);
     }
 
+    public function mentions_legales()
+    {
+      return view('divers.mentions_legales');
+    }
+
     public function entravaux($espece_id)
     {
       if(Espece::find($espece_id)->fini === 1)
@@ -59,4 +64,5 @@ class AccueilController extends Controller
         return error;
       }
     }
+
 }
