@@ -106,18 +106,25 @@ $(function() {
           "<p>Si vous le supprimez <strong>toutes ses saisies seront aussi supprimées</strong>. " +
           "Mais vous pouvez choisir de transférer ses saisies à un autre utilisateur.trice</p>",
         buttons : {
-          supprimer :
-            function() {
+          supprimer : {
+            btnClass : 'btn-red',
+            action: function() {
               supprimer(id);
             },
-          transferer :
-            function() {
+
+          },
+          transferer : {
+            btnClass: 'btn-green',
+            action: function() {
               transferer(id);
-            },
-          annuler :
-            function() {
+            }
+          },
+          annuler : {
+            action: function() {
               console.log('annule');
             },
+            btnClass: 'btn-dark'
+          }
         }
       })
 
@@ -286,9 +293,7 @@ $(function() {
       theme : 'dark',
       type : 'green',
       buttons : {
-        annuler : function(){
-
-        }
+        annuler : function(){}
       },
       content : function() {
         var self = this;
@@ -323,10 +328,11 @@ $(function() {
                   columnClass: 'large',
                   theme: 'supervan',
                   type: 'green',
-                  title: "Déplacement de saisies et suppression d'un utilisateur",
-                  content: "C'est fait",
+                  title: "C'est fait",
+                  content: "déplacement des saisies & suppression d'un utilisateur",
                   buttons: {
                     Fermer: {
+                      btnClass: 'btn-green',
                       action: function() {
                         location.reload();
                       }

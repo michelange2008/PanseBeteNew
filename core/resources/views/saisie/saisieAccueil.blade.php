@@ -20,6 +20,7 @@
         @if($saisie->salertes->count() > 0)
         <?php $count = 0 ?>
           @foreach($saisie->salertes as $salerte)
+            <?php // TODO: problème de theme non object si reprise de la saisie après abandon ?>
             @if($theme->id === $salerte->alerte->theme->id)
               <?php $count++  ?>
             @endif

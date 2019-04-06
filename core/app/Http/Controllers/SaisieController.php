@@ -32,7 +32,6 @@ class SaisieController extends Controller
       $saisie = Saisie::find(session()->get('saisie_id'));
 
       session()->forget('theme');
-
       return view('saisie.saisieAccueil',[
         'themes' => $themes,
         'saisie' => $saisie,

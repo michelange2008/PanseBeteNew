@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "15bfa88aa0b6f5422db04a4ee99a0172",
+    "content-hash": "f3e60b1cdad1d7306945689d2548196b",
     "packages": [
         {
             "name": "barryvdh/laravel-dompdf",
@@ -330,25 +330,30 @@
         },
         {
             "name": "dragonmantank/cron-expression",
-            "version": "v2.2.0",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dragonmantank/cron-expression.git",
-                "reference": "92a2c3768d50e21a1f26a53cb795ce72806266c5"
+                "reference": "72b6fbf76adb3cf5bc0db68559b33d41219aba27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dragonmantank/cron-expression/zipball/92a2c3768d50e21a1f26a53cb795ce72806266c5",
-                "reference": "92a2c3768d50e21a1f26a53cb795ce72806266c5",
+                "url": "https://api.github.com/repos/dragonmantank/cron-expression/zipball/72b6fbf76adb3cf5bc0db68559b33d41219aba27",
+                "reference": "72b6fbf76adb3cf5bc0db68559b33d41219aba27",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0.0"
+                "php": "^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~6.4"
+                "phpunit/phpunit": "^6.4|^7.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Cron\\": "src/Cron/"
@@ -375,7 +380,7 @@
                 "cron",
                 "schedule"
             ],
-            "time": "2018-06-06T03:12:17+00:00"
+            "time": "2019-03-31T00:38:28+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -1300,16 +1305,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.50",
+            "version": "1.0.51",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "dab4e7624efa543a943be978008f439c333f2249"
+                "reference": "755ba7bf3fb9031e6581d091db84d78275874396"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/dab4e7624efa543a943be978008f439c333f2249",
-                "reference": "dab4e7624efa543a943be978008f439c333f2249",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/755ba7bf3fb9031e6581d091db84d78275874396",
+                "reference": "755ba7bf3fb9031e6581d091db84d78275874396",
                 "shasum": ""
             },
             "require": {
@@ -1380,7 +1385,42 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2019-02-01T08:50:36+00:00"
+            "time": "2019-03-30T13:22:34+00:00"
+        },
+        {
+            "name": "lightools/xml",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lightools/xml.git",
+                "reference": "b4269bab9645eddc6731970f31b8e4aec30c57c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lightools/xml/zipball/b4269bab9645eddc6731970f31b8e4aec30c57c3",
+                "reference": "b4269bab9645eddc6731970f31b8e4aec30c57c3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "nette/tester": "1.*",
+                "php": ">=5.5"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Simple and safe parsing of XML and HTML sources.",
+            "time": "2017-02-05T11:52:42+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2355,6 +2395,55 @@
                 "uuid"
             ],
             "time": "2018-07-19T23:38:55+00:00"
+        },
+        {
+            "name": "robbrazier/piwik",
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RobBrazier/Laravel_Piwik.git",
+                "reference": "af955a0e07be41896f3b36470fb5298c2ca271ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RobBrazier/Laravel_Piwik/zipball/af955a0e07be41896f3b36470fb5298c2ca271ba",
+                "reference": "af955a0e07be41896f3b36470fb5298c2ca271ba",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.2",
+                "illuminate/support": ">=5.2 | <= 5.5",
+                "lightools/xml": "^1.0",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.2.*",
+                "phpspec/prophecy": "^1.7",
+                "phpunit/phpcov": "3.1.*",
+                "phpunit/phpunit": "5.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "RobBrazier\\Piwik": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Brazier",
+                    "email": "laravelpiwik@brzr.co"
+                }
+            ],
+            "description": "Piwik Package for Laravel",
+            "keywords": [
+                "laravel",
+                "piwik"
+            ],
+            "time": "2018-07-17T21:01:38+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
