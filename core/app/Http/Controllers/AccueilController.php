@@ -17,13 +17,16 @@ class AccueilController extends Controller
 
     public function accueil()
     {
+      $saisies = Saisie::where('user_id', auth()->user()->id)
+                  ->orderBy('created_at', 'desc')->get();
+
       $this->effaceElevages();
 
       $especes = Espece::all();
-
       session()->forget(['espece', 'theme']);
 
       return view('accueil', [
+        "saisies" => $saisies,
         'especes' => $especes,
       ]);
     }

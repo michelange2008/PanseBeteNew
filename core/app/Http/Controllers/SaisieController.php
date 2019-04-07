@@ -42,12 +42,13 @@ class SaisieController extends Controller
     // Méthode qui conduit vers une nouvelle saisie
     // elle redirige vers accueil
     */
-    public function nouvelle($elevage)
+    public function nouvelle($elevage, $espece_id)
     {
         Elevage::firstOrCreate(['nom' => $elevage]);
 
         session()->put('elevage', Elevage::where('nom', $elevage)->first());
-        // dd(session()->get('elevage'));
+
+        session()->put('espece_id', $espece_id);
 
         $this->nouvelleSaisie();
 
@@ -60,7 +61,6 @@ class SaisieController extends Controller
     */
     public function modifier($saisie_id)
     {
-
       $saisie = Saisie::find($saisie_id);
 
       session()->put('saisie_id', $saisie_id);
@@ -78,10 +78,14 @@ class SaisieController extends Controller
 
       session()->put('theme', $theme);
 
+      $saisie = Saisie::find(session()->get('saisie_id'));
+
+      session()->put('espece', $saisie->espece);
+
       $sAlertes = Salerte::where('saisie_id', session()->get('saisie_id'))->get();
 
       $alertes = Alerte::where('theme_id', $theme_id)
-      ->where('espece_id', session()->get('espece')->id)
+      ->where('espece_id', $saisie->espece->id)
       ->get();
 
       if($alertes->count() > 0)

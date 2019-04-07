@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@extends('menus.sousmenu')
+@extends('menus.menuprincipal')
 
 @section('contenu')
 <div class="container-fluid bg-otobleu titre">

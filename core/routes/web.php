@@ -12,6 +12,8 @@
 */
 Route::group(['middleware' => ['auth']], function () {
 
+  // Gestion des utilisateurs
+
     Route::get('/utilisateur/tousSauf/{id}', ['uses' => 'UserController@tousSauf', 'as' => 'tousSauf']);
 
     Route::get('/utilisateur/changeSaisieUser/{ancien_user_id}/{nouveau_user_id}', ['uses' => 'UserController@changeSaisieUser', 'as' => 'changeSaisieUser']);
@@ -19,6 +21,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('/utilisateur', 'UserController');
 
     Route::get('/admin', ['uses' => 'AdminController@index', 'as' => 'admin.index']);
+
+  // Routes principales
 
     Route::get('/', ['uses' => 'AccueilController@accueil', 'as' => 'accueil']);
 
@@ -32,21 +36,23 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('entravaux/{espece_id}', ['uses' => 'AccueilController@entravaux', 'as' => 'entravaux']);
 
-    Route::get('/saisie/nouvelle/{elevage}', ['uses' => 'SaisieController@nouvelle', 'as' => 'saisie.nouvelle'])->middleware('hasEspece');
+  // Saisies
 
-    Route::get('/saisie/modifier/{saisie}', ['uses' => 'SaisieController@modifier', 'as' => 'saisie.modifier'])->middleware('hasEspece');
+    Route::get('/saisie/nouvelle/{elevage}/{espece_id}', ['uses' => 'SaisieController@nouvelle', 'as' => 'saisie.nouvelle']);
 
-    Route::get('/saisie', ['uses' => 'SaisieController@accueil', 'as' => 'saisie.accueil'])->middleware('hasEspece');
+    Route::get('/saisie/modifier/{saisie}', ['uses' => 'SaisieController@modifier', 'as' => 'saisie.modifierBis']);
 
-    Route::get('/saisie/{theme_id}', ['uses' => 'SaisieController@alertes', 'as' => 'saisie.alertes'])->middleware('hasEspece');
+    Route::get('/saisie', ['uses' => 'SaisieController@accueil', 'as' => 'saisie.accueil']);
 
-    Route::post('/saisie/enregistre', ['uses' => 'SaisieController@enregistre', 'as' => 'saisie.enregistre'])->middleware('nullToZero')->middleware('hasEspece');
+    Route::get('/saisie/{theme_id}', ['uses' => 'SaisieController@alertes', 'as' => 'saisie.alertes']);
+
+    Route::post('/saisie/enregistre', ['uses' => 'SaisieController@enregistre', 'as' => 'saisie.enregistre'])->middleware('nullToZero');
 
     Route::get('/saisie/resultats', ['uses' => 'SaisieController@enregistre', 'as' => 'saisie.resultats']);
 
     Route::post('/saisie/origines/store', ['uses' => 'SaisieController@storeOrigines', 'as' => 'saisie.origines.store']);
 
-    Route::get('/lecture/{espece_id}', ['uses' => 'LectureController@liste', 'as' => 'lecture.liste']);
+  // Lecture des saisies
 
     Route::get('/lecture/detail/{saisie_id}', ['uses' => 'LectureController@detail', 'as' => 'lecture.detail']);
 

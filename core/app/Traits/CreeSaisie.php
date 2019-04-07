@@ -13,14 +13,14 @@ trait CreeSaisie
 
         $saisie->user_id = auth()->guard()->user()->id;
 
-        $saisie->espece_id = session()->get('espece')->id;
+        $saisie->espece_id = session()->get('espece_id');
 
         $saisie->elevage_id = session()->get('elevage')->id;
 
         $saisie->save();
 
         $saisies = Saisie::where('user_id', auth()->guard()->user()->id)
-                          ->where('espece_id', session()->get('espece')->id)
+                          ->where('espece_id', session()->get('espece_id'))
                           ->where('elevage_id', session()->get('elevage')->id)
                           ->orderByDesc('created_at')->first();
 

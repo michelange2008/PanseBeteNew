@@ -1,7 +1,7 @@
 @section('menuprincipal')
 <div id="app">
   <nav class="navbar navbar-nav navbar-expand-lg navbar-light bg-light navbar-static-top">
-    <div class="container-fluid">
+    <div class="container-fluid flex-nowrap">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuAver" aria-controls="menuAver" aria-expanded="false" aria-label="Toggle-navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,7 +30,7 @@
                     </li>
                 @endif
                 <div class="dropdown-divider"></div>
-                <li class="nav-item"><a class="nav-link" href="{{route('accueil')}}">Démarrer</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('accueil')}}">Accueil</a></li>
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" id="infos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                       En savoir plus

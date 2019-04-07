@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@extends('menus.menuprincipal')
+
 
 @section('contenu')
 <div class="container-fluid">
@@ -25,7 +25,7 @@
       </ol>
   </div>
   <div class="d-flex flex-row justify-content-between">
-    <a href="{{URL::previous()}}" class="btn btn-otobleu rounded-0">Retour</a>
+    <a href="{{route('lecture.liste', session()->get('espece'))}}" class="btn btn-otobleu rounded-0">Retour</a>
   </div>
 </div>
 

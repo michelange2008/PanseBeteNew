@@ -4,7 +4,7 @@
 <br />
 <div class="entete">
   <img src="{{URL::asset('/')}}otoveil.jpeg" alt="otoveil" class="logo">
-  <h1 class="titre">PANSE-BETE</h1>
+  <h1 class="titre">PANSE-BÊTES</h1>
   </div>
 </div>
 

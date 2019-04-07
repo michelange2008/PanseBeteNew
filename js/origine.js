@@ -2,6 +2,8 @@
 
 $(function () {
 
+    $('[data-toggle="tooltip"]').tooltip();
+
     function deplie(id) {
 
       var alerte_id = id.split('_')[1];
@@ -97,26 +99,33 @@ $(function () {
     });
   });
 
-  $('#nouvelleSaisieCarre').on('click', function(e) {
-    e.preventDefault();
-    nouvelleSaisie("#"+$(this).attr('id'));
+  $('.nouvelle-saisie-item').on('click', function(e) {
+    var espece_id = $(this).attr('id').split('_')[1];
+    var route = $(this).attr('route');
+    nouvelleSaisie(route, $(this).attr('name'), espece_id);
   });
 
-  $('#nouvelleSaisieRond').on('click', function(e) {
-    e.preventDefault();
-    nouvelleSaisie("#"+$(this).attr('id'));
-  });
+  // Menu boules
+    $('.menu-item').fadeToggle(0);
+    $('.bouton-rond').on('click', function() {
+      $('.menu-item').fadeToggle();
+    });
+    $('.menu-item').on('click', function() {
+      $('.menu-item').fadeToggle();
+      var espece_id = $(this).attr('id').split('_')[1];
+      var route = $(this).attr('route');
+      nouvelleSaisie(route, $(this).attr('name'), espece_id);
+    })
 
-  function nouvelleSaisie(route_id) {
-    console.log(route_id);
-    var user =  $("#user").attr('name');
+  function nouvelleSaisie(route, nom, espece_id) {
+    console.log(route);
     $.confirm ({
       title: 'Nouvelle saisie',
       content: '' +
       '<form action="" class="formName">' +
       '<div class="form-group">' +
       '<label>Si l\'élevage est différent de l\'utilisateur, saisir son nom, sinon cliquez simplement sur Ok</label>' +
-      '<input type="text" placeholder='+user+' class="name form-control" required />' +
+      '<input type="text" placeholder='+nom+' class="name form-control" required />' +
       '</div>' +
       '</form>',
       buttons: {
@@ -126,12 +135,11 @@ $(function () {
         action: function () {
             var name = this.$content.find('.name').val();
             if(!name){
-                var name = user;
+                var name = nom;
             }
 
-            $(route_id).attr('href', $(route_id).attr('href')+'/'+name);
-
-            window.location.href = $(route_id).attr('href');
+            console.log(route+'/saisie/nouvelle/'+name+'/'+espece_id);
+            window.location.href = route+'/saisie/nouvelle/'+name+'/'+espece_id;
         }
       },
       annuler: function () {
@@ -250,5 +258,6 @@ $("#listeOrigines").on('click', function(e){
     },
   });
 });
+
 
 })

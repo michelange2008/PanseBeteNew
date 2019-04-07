@@ -2,11 +2,11 @@
 
 @extends('menus.menuprincipal')
 
+@extends('menus.sousmenu')
+
 @section('contenu')
 <div class="container-fluid">
-  <div class="alert alert-success">
-    <h3 class="text-truncate">{{$saisie->elevage->nom}} <small>({{$saisie->created_at->month}} {{$saisie->created_at->locale('fr')->monthName}} {{$saisie->created_at->year}})</small></h3>
-  </div>
+
   @foreach($themes as $theme)
 
   <?php $affiche = true;
@@ -88,7 +88,6 @@
     </div>
   <div class="container-fluid d-flex flex-row justify-content-between">
     <a id="listeOrigines" href="{{route('lecture.originesListe', session()->get('saisie_id'))}}" class="btn btn-otojaune btn-sm rounded-0">Liste des origines</a>
-    <a href="{{route('accueil')}}" class="btn btn-otobleu btn-sm rounded-0">Retour</a>
-
+    <a href="{{route('lecture.liste', session()->get('espece'))}}" class="btn btn-otobleu btn-sm rounded-0">Voir toutes les saisies</a>
   </div>
 @endsection
