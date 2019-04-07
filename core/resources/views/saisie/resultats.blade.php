@@ -2,6 +2,8 @@
 
 @extends('menus.menuprincipal')
 
+@extends('aide', ['page' => $page])
+
 @section('contenu')
 <div class="container-fluid bg-otobleu titre">
   <img src="{{URL::asset('svg/saisie')."/".session()->get('theme')->icone}}" alt="{{session()->get('theme')->nom}}" class="">

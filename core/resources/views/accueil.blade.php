@@ -2,6 +2,8 @@
 
 @extends('menus.menuprincipal')
 
+@extends('aide', ['page' => $page])
+
 @section('contenu')
 
   <div class="container-fluid">
@@ -38,7 +40,7 @@
                 <img src="{{URL::asset('svg/especes')."/".$saisie->espece->icone}}" alt="">
                 <div class="saisie-info d-flex flex-column">
                   <h5 class="attention">{{$saisie->elevage->nom}}</h5>
-                  <p><em>({{$saisie->created_at->month}} {{$saisie->created_at->locale('fr')->monthName}} {{$saisie->created_at->year}})</em>
+                  <p><em>({{$saisie->created_at->day}} {{$saisie->created_at->locale('fr')->monthName}} {{$saisie->created_at->year}})</em>
                   @if ($saisie->salertes->count() === 0)
                     Pas d'alerte</p>
                   @elseif ($saisie->salertes->count() === 1)

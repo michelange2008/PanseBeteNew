@@ -12,30 +12,7 @@ use App\Models\Espece;
 
 class LectureController extends Controller
 {
-    // public function liste($espece_id)
-    // {
-    //     session()->put('espece', Espece::findOrFail($espece_id));
-    //
-    //     $listeSaisies = Saisie::where('user_id', auth()->user()->id)->where('espece_id', session('espece')->id)->get();
-    //
-    //     return view('lecture.liste', [
-    //         'liste' => $listeSaisies,
-    //     ]);
-    // }
 
-    // public function detail($saisie_id) {
-    //
-    //     session()->put('saisie_id', $saisie_id);
-    //
-    //     $saisie = Saisie::find($saisie_id);
-    //
-    //     $themes = Theme::all();
-    //
-    //     return view('lecture.detail', [
-    //         'saisie' => $saisie,
-    //         'themes' => $themes,
-    //     ]);
-    // }
     public function detail($saisie_id) {
 
         session()->put('saisie_id', $saisie_id);
@@ -45,6 +22,7 @@ class LectureController extends Controller
         $themes = Theme::all();
 
         return view('lecture.detail', [
+            'page' => 'detail',
             'saisie' => $saisie,
             'themes' => $themes,
         ]);
@@ -98,6 +76,7 @@ class LectureController extends Controller
       $sorigines = Sorigine::where('saisie_id', $saisie_id)->get();
 
       return view('lecture.originesListe', [
+        'page' => 'origines',
         'sorigines' => $sorigines,
       ]);
     }

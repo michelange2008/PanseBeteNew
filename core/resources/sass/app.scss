@@ -8,6 +8,17 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// Fichier perso
+@import "aide";
+@import "admin";
+@import "fab";
+@import "font";
+@import "nestable";
+@import "pdf";
+@import "perso";
+@import "scroll";
+@import "ziehharmonika";
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);

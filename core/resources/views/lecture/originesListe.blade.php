@@ -2,6 +2,8 @@
 
 @extends('menus.menuprincipal')
 
+@extends('aide', ['page' => $page])
+
 @section('contenu')
 <div class="container-fluid">
   <div class="bg-otorange titre rounded-0" style="width:100%">

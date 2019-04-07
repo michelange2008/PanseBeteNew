@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "din";
+    font-style: normal;
+    src: url('/storage/fonts/DINPRO-REGULAR.OTF');
+}
+@font-face {
+    font-family: "din";
+    font-style: italic;
+    src: url('/storage/fonts/DINPro-Italic.otf');
+}
+@font-face {
+    font-family: "din";
+    font-weight: bold;
+    src: url('/storage/fonts/DINPRO-BOLD.OTF');
+}
+
+html {
+  font-family: "din";
+  font-size: 80%;
+}
+.entete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.titre {
+  margin-left: 250px;
+}
+
+.logo {
+  height: 100px;
+}
+.theme  {
+  margin: 1px;
+  padding: 5px;
+}
+
+.theme-pb {
+  background: lightgrey;
+}
+
+.theme-ok {
+  background: darkgrey;
+  color: white;
+}
+
+.intitule-alerte {
+  padding: 5px;
+  font-weight: bold;
+  margin-right: 5%;
+  margin-left: 5%;
+  background: white;
+}
+
+h4 {
+  font-family: "din";
+
+  padding-left: 5px;
+}
+
+.question {
+  font-size: 80%;
+  margin-left: 20px;
+  padding-left: 30px;
+  border-left: solid 4px slategrey;
+
+}
