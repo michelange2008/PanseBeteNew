@@ -106,7 +106,6 @@ $(function () {
   });
 
   // Menu boules
-    $('.menu-item').fadeToggle(0);
     $('.bouton-rond').on('click', function() {
       $('.menu-item').fadeToggle();
     });

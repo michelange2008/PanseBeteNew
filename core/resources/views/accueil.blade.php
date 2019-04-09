@@ -52,14 +52,14 @@
               </div>
               <div class="d-flex flex-row justify-content-between" style="padding-right:20px">
                 <div class="d-flex flex-column justify-content-center">
-                  <a id="supprime_{{$saisie->id}}" href="{{route('lecture.supprimer', $saisie->id)}}" class=" supprime justify-self-end btn btn-sm btn-otorange rounded-0">Suppr.</a>
+                  <a id="supprime_{{$saisie->id}}" href="{{route('lecture.supprimer', $saisie->id)}}" class=" supprime justify-self-end btn btn-sm btn-otorange rounded-0"><i class="far fa-trash-alt"></i> Suppr.</a>
                 </div>
                 <div>
                   @if($saisie->salertes->count() > 0)
                   <a href="{{route('pdf', $saisie->id)}}" class="btn btn-sm rounded-0"><img src="{{URL::asset('/svg/saisie')}}/pdf.svg" alt="pdf" class="otoveil" /></a>
-                  <a href="{{route('lecture.detail', $saisie->id)}}" class="btn btn-sm btn-otobleu rounded-0">Voir</a>
+                  <a href="{{route('lecture.detail', $saisie->id)}}" class="btn btn-sm btn-otobleu rounded-0"><i class="far fa-eye"></i> Voir</a>
                   @endif
-                  <a href="{{route('saisie.modifierBis', $saisie->id)}}" class="btn btn-sm btn-otojaune rounded-0">Modifier</a>
+                  <a href="{{route('saisie.modifierBis', $saisie->id)}}" class="btn btn-sm btn-otojaune rounded-0"><i class="fa fa-pencil-alt"></i> Modifier</a>
                 </div>
               </div>
           </div>

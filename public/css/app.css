@@ -9498,6 +9498,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .aide-bouton {
+  display: none;
   border-radius: 100%;
   width: 50px;
   height: 50px;
@@ -9523,6 +9524,39 @@ a.text-dark:hover, a.text-dark:focus {
   transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
+}
+
+.aide-contenu {
+  display: none;
+  position: fixed;
+  left: 10vh;
+  top: 10vh;
+}
+
+.aide-contenu-chiffre {
+  font-size: 3rem;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  border-radius: 100%;
+  line-height: -moz-block-height;
+}
+
+.aide-contenu-texte {
+  width: 72vw;
+  padding: 10px;
+  -webkit-box-shadow: 2px 2px 4px black;
+          box-shadow: 2px 2px 4px black;
+}
+
+.aide-contenu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#texte-2 {
+  display: none;
 }
 
 #aide-image {
@@ -10323,7 +10357,7 @@ html {
   justify-content: space-between;
 }
 
-.titre {
+.pdf-titre {
   margin-left: 250px;
 }
 
@@ -10367,6 +10401,7 @@ h4 {
 
 :root {
   --otobleu: #125e6b;
+  --otobleutrans: #125e6bcc;
   --otobleuclair: #21aac2;
   --otojaune: #dadf21;
   --otojaunefonce: #6b6d10;
@@ -10386,7 +10421,12 @@ a, a:link, a:hover {
 }
 
 .bg-otobleu, .btn-otobleu {
-  background: var(--otobleu);
+  background: #125e6b;
+  color: white;
+}
+
+.bg-otobleu-trans, .btn-otobleu-trans {
+  background: #125e6bcc;
   color: white;
 }
 
@@ -10413,6 +10453,18 @@ a, a:link, a:hover {
 .btn-otojaune:hover {
   background: var(--otojaunefonce);
   color: white;
+}
+
+.color-otobleu {
+  color: #125e6b;
+}
+
+.color-otojaune {
+  color: #dadf21;
+}
+
+.coor-otorange {
+  color: #f58021;
 }
 
 /* LOGIN */
@@ -10518,6 +10570,7 @@ a, a:link, a:hover {
 }
 
 .menu-item {
+  display: none;
   height: 50px;
   width: 50px;
   border-radius: 100%;

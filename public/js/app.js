@@ -67,29 +67,34 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(6);
-module.exports = __webpack_require__(1);
+__webpack_require__(1);
+module.exports = __webpack_require__(2);
 
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */
-/***/ (function(module, exports) {
-
 $(function () {
+  $('.aide-bouton').fadeToggle();
   $('.aide-bouton').on('click', function () {
-    $('#aide-image').fadeToggle();
+    $('.aide-contenu').fadeToggle();
+  });
+  $('#affiche-texte-1').on('click', function () {
+    $('#texte-1').fadeToggle();
+    $('#texte-2').fadeToggle();
+  });
+  $('#affiche-texte-2').on('click', function () {
+    $('#texte-2').fadeToggle();
+    $('#texte-1').fadeToggle();
   });
 });
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

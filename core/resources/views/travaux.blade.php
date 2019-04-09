@@ -2,8 +2,6 @@
 
 @extends('menus.menuprincipal')
 
-@extends('menus.sousmenu')
-
 @section('contenu')
 <div class="container-fluid">
   <img src="{{URL::asset('/svg')}}/entravaux.svg" alt="en travaux" style="height:70px" />
