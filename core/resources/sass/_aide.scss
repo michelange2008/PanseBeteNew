@@ -45,6 +45,10 @@
   top: 0;
   left: 0;
 }
+.aide-icones {
+  width: 30px;
+  border-radius: 100%;
+}
 #texte-2 {
   display: none;
 }
@@ -60,9 +64,15 @@
   display: none;
 }
 
-@media screen and (max-width: 640px) {
-  .aide-bouton {
-    display: none;
+@media screen and (min-width: 576px) {
+  .aide-contenu {
+    width: 60vw;
+    left: 20vw;
+    top: 40vh;
+  }
+  .aide-icones {
+    border-radius: inherit;
+    width: 60px;
   }
 
 }

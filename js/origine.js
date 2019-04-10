@@ -105,16 +105,6 @@ $(function () {
     nouvelleSaisie(route, $(this).attr('name'), espece_id);
   });
 
-  // Menu boules
-    $('.bouton-rond').on('click', function() {
-      $('.menu-item').fadeToggle();
-    });
-    $('.menu-item').on('click', function() {
-      $('.menu-item').fadeToggle();
-      var espece_id = $(this).attr('id').split('_')[1];
-      var route = $(this).attr('route');
-      nouvelleSaisie(route, $(this).attr('name'), espece_id);
-    })
 
   function nouvelleSaisie(route, nom, espece_id) {
     console.log(route);

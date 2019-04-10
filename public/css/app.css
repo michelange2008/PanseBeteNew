@@ -9555,6 +9555,11 @@ a.text-dark:hover, a.text-dark:focus {
   left: 0;
 }
 
+.aide-icones {
+  width: 30px;
+  border-radius: 100%;
+}
+
 #texte-2 {
   display: none;
 }
@@ -9570,9 +9575,15 @@ a.text-dark:hover, a.text-dark:focus {
   display: none;
 }
 
-@media screen and (max-width: 640px) {
-  .aide-bouton {
-    display: none;
+@media screen and (min-width: 576px) {
+  .aide-contenu {
+    width: 60vw;
+    left: 20vw;
+    top: 40vh;
+  }
+  .aide-icones {
+    border-radius: inherit;
+    width: 60px;
   }
 }
 
@@ -10453,6 +10464,10 @@ a, a:link, a:hover {
 .btn-otojaune:hover {
   background: var(--otojaunefonce);
   color: white;
+}
+
+.bg-gris-trans {
+  background: #808080cc;
 }
 
 .color-otobleu {

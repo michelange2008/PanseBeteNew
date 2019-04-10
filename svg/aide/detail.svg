@@ -106,7 +106,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
      inkscape:cx="248.00904"
-     inkscape:cy="239.89471"
+     inkscape:cy="138.87945"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
      showgrid="false"
@@ -2053,5 +2053,12 @@ Ou revenir à l'accueil en cliquant sur Retour   "
          style="fill:#ffffff"
          id="path5427" />
     </g>
+    <rect
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.241;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect5915"
+       width="20.980658"
+       height="12.695303"
+       x="132.02098"
+       y="153.58868" />
   </g>
 </svg>
