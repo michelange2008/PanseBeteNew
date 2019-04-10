@@ -9534,6 +9534,11 @@ a.text-dark:hover, a.text-dark:focus {
   display: none;
 }
 
+.aide-contenu-saisie {
+  width: 50vw;
+  left: 30vw !important;
+}
+
 .aide-contenu-chiffre {
   font-size: 3rem;
   height: 50px;
@@ -10468,6 +10473,11 @@ a, a:link, a:hover {
 
 .bg-gris-trans {
   background: #808080cc;
+}
+
+.bg-aide-trans {
+  background: #808080cc;
+  color: white;
 }
 
 .color-otobleu {

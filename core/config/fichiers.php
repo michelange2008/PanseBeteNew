@@ -3,6 +3,7 @@
 $path = "public";
 
 return [
-  'images' => $path.'/svg',
-  'especes' => $path.'/svg/especes',
+  'images' => $path.'/svg/',
+  'especes' => $path.'/svg/especes/',
+  'saisie' => $path.'/svg/saisie/',
 ];

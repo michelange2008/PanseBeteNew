@@ -1,7 +1,6 @@
 @section('aide')
-<div id="{{$page}}" class="aide-bouton">
-</div>
-<!-- <img id="aide-image" class="" src="{{URL::asset('svg/aide').'/'.$page.'.svg'}}" alt=""> -->
+<div id="{{$page}}" class="aide-bouton"></div>
+
 <div class="aide-contenu ">
 
   <div id="texte-d-1" class="desktop-only aide-contenu-container">
