@@ -1,7 +1,7 @@
 @section('aide')
 <div id="{{$page}}" class="aide-bouton">
 </div>
-<img id="aide-image" class="" src="{{URL::asset('svg/aide').'/'.$page.'.svg'}}" alt="">
+<!-- <img id="aide-image" class="" src="{{URL::asset('svg/aide').'/'.$page.'.svg'}}" alt=""> -->
 <div class="aide-contenu">
 
   <div id="texte-1" class="aide-contenu-container">
@@ -32,7 +32,6 @@
         <button id="affiche-texte-2" class="btn btn-otorange aide-contenu-texte-plus font-italic curseur">suite <i class="fa fa-angle-double-right"></i></button>
       </div>
     </div>
-  </div>
   <div id="texte-2" class="aide-contenu-container">
     <p class="aide-contenu-chiffre bg-otorange">2</p>
     <div class="aide-contenu-texte smartphone-only bg-otobleu-trans text-light">
@@ -46,6 +45,7 @@
         <button id="affiche-texte-1" class="btn btn-otorange aide-contenu-texte-plus font-italic"><i class="fa fa-angle-double-left"></i> précédent</button>
       </div>
     </div>
+  </div>
   </div>
 </div>
 @endsection
