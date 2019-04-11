@@ -14,18 +14,19 @@
   transition: transform 1s;
 
   &:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     transition: transform 1s;
   }
 }
 .aide-contenu {
   position: fixed;
   width: 70vw;
-  left: 10vh;
+  left: 10vw;
   top: 10vh;
   display: none;
 }
 .aide-contenu-saisie {
+  top: 6vh !important;
   width: 50vw;
   left: 30vw !important;
 }
@@ -54,6 +55,10 @@
   width: 50px;
   border-radius: 100%;
 }
+.aide-petit-bouton {
+  padding: 5px;
+  width: max-content;
+}
 #texte-s-2, #texte-d-2 {
   display: none;
   width: 100%;
@@ -69,6 +74,9 @@
   z-index: 9999;
   display: none;
 }
+.aide-deplacement {
+  width: 40vw;
+}
 
 @media screen and (min-width: 576px) {
   .aide-contenu {
@@ -78,6 +86,13 @@
   .aide-icones {
     border-radius: inherit;
     width: 60px;
+  }
+}
+
+@media screen and (max-width: 798.99px) {
+  .aide-contenu-saisie {
+    left:5vw !important;
+    width: 80vw;
   }
 
 }

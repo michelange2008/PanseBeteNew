@@ -26,7 +26,10 @@ a, a:link, a:hover  {
   background: $otobleutrans;
   color: white;
 }
-
+.bg-otobleuclair {
+  background: $otobleuclair;
+  color: black;
+}
 .btn-otobleu:hover {
   color: black;
   background: var(--otobleuclair);
@@ -55,7 +58,7 @@ a, a:link, a:hover  {
   background: #808080cc;
 }
 .bg-aide-trans {
-  background: #808080cc;
+  background: #808080ff;
   color: white;
 }
 .color-otobleu {
@@ -392,8 +395,6 @@ a, a:link, a:hover  {
 
   .nouvelle-saisie-item {
       height: 60px;
-      border-radius: 5%;
-      box-shadow: 1px 1px 4px black;
       transition: filter 1s;
   }
   .nouvelle-saisie-item:hover {

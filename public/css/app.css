@@ -9518,8 +9518,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .aide-bouton:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
@@ -9529,12 +9529,13 @@ a.text-dark:hover, a.text-dark:focus {
 .aide-contenu {
   position: fixed;
   width: 70vw;
-  left: 10vh;
+  left: 10vw;
   top: 10vh;
   display: none;
 }
 
 .aide-contenu-saisie {
+  top: 6vh !important;
   width: 50vw;
   left: 30vw !important;
 }
@@ -9565,6 +9566,13 @@ a.text-dark:hover, a.text-dark:focus {
   border-radius: 100%;
 }
 
+.aide-petit-bouton {
+  padding: 5px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
 #texte-s-2, #texte-d-2 {
   display: none;
   width: 100%;
@@ -9581,6 +9589,10 @@ a.text-dark:hover, a.text-dark:focus {
   display: none;
 }
 
+.aide-deplacement {
+  width: 40vw;
+}
+
 @media screen and (min-width: 576px) {
   .aide-contenu {
     left: 15vw;
@@ -9589,6 +9601,13 @@ a.text-dark:hover, a.text-dark:focus {
   .aide-icones {
     border-radius: inherit;
     width: 60px;
+  }
+}
+
+@media screen and (max-width: 798.99px) {
+  .aide-contenu-saisie {
+    left: 5vw !important;
+    width: 80vw;
   }
 }
 
@@ -10446,6 +10465,11 @@ a, a:link, a:hover {
   color: white;
 }
 
+.bg-otobleuclair {
+  background: #21aac2;
+  color: black;
+}
+
 .btn-otobleu:hover {
   color: black;
   background: var(--otobleuclair);
@@ -10476,7 +10500,7 @@ a, a:link, a:hover {
 }
 
 .bg-aide-trans {
-  background: #808080cc;
+  background: #808080ff;
   color: white;
 }
 
@@ -10882,9 +10906,6 @@ a, a:link, a:hover {
   }
   .nouvelle-saisie-item {
     height: 60px;
-    border-radius: 5%;
-    -webkit-box-shadow: 1px 1px 4px black;
-            box-shadow: 1px 1px 4px black;
     -webkit-transition: -webkit-filter 1s;
     transition: -webkit-filter 1s;
     transition: filter 1s;

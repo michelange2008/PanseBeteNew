@@ -18,7 +18,7 @@
       </div>
       @foreach ($especes as $espece)
           <img src="{{URL::asset('svg/especes')."/".$espece->icone}}"
-                id="nouvelle_{{$espece->id}}" name="{{auth()->user()->name}}" class="nouvelle-saisie-item"
+                id="nouvelle_{{$espece->id}}" name="{{auth()->user()->name}}" class="nouvelle-saisie-item shadow"
                 route= "{{url('/')}}"
                 alt="{{$espece->nom}}" data-toggle="tooltip" data-placement="top" title="{{$espece->nom}}">
       @endforeach

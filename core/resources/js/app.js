@@ -2,6 +2,10 @@ $(function() {
 // MENU AIDE
   $('.aide-bouton').fadeIn();
 
+  $('.close').on('click', function() {
+    $('.aide-contenu').fadeOut();
+  })
+
   $('.aide-bouton').on('focusout', function() {
     $('.aide-contenu').fadeOut();
   })
