@@ -1,7 +1,7 @@
 @section('aide')
 <div id="{{$page}}" class="aide-bouton"></div>
 
-<div class="aide-contenu ">
+<div id="aide-contenu-detail" class="aide-contenu">
 
   <div id="texte-d-1" class="aide-contenu-container">
     <p class="aide-contenu-chiffre bg-aide-trans">1</p>
@@ -24,6 +24,22 @@
           <img class="otoveil" src="{{URL::asset(config('fichiers.saisie'))}}/deplie.svg" alt="deplie">
         </div>
       </div>
+      <p>En cliquant <i class="fas fa-mouse-pointer"></i> sur l'icone
+        <img class="otoveil" src="{{URL::asset(config('fichiers.saisie'))}}/deplie.svg" alt="deplie">
+        vous dépliez la liste des alertes qui ont été notée pour ce pôle
+      </p>
+      <div class="panneau-alerte alert alert-dark bg-otojaune rounded-0">
+        <div class="element-alerte justify-content-between">
+          <div class="d-flex align-items-center">
+            <span class="font-weight-bold">votre alerte&nbsp</span>
+            <span>(la valeur seuil)</span>
+          </div>
+          <img class="otoveil" src="{{URL::asset(config('fichiers.saisie'))}}/oeil.svg" alt="voir">
+        </div>
+      </div>
+      <p>Et si vous cliquez sur l'icone <img class="otoveil" src="{{URL::asset(config('fichiers.saisie'))}}/oeil.svg" alt="voir">
+        vous retrouverez les questions que vous avez cochées.
+      </p>
       <p></p>
       <div class="d-flex justify-content-end">
         <button id="affiche-texte-d-2" class="btn btn-otorange aide-contenu-texte-plus font-italic curseur">suite <i class="fa fa-angle-double-right"></i></button>
@@ -42,7 +58,7 @@
       <p>cela vous mènera à une page où toutes les causes possibles de problème que vous avez cochées seront listées quel que soit le pôle</p>
       <p></p>
       <p>Vous pouvez aussi revenir à l'accueil en cliquant sur </p>
-      <p class="aide-petit-bouton bg-otobleu">Liste de origines</p>
+      <p class="aide-petit-bouton bg-otobleu">Retour</p>
     <p></p>
     <div class="d-flex justify-content-end">
       <button id="affiche-texte-d-1" class="btn btn-otorange aide-contenu-texte-plus font-italic"><i class="fa fa-angle-double-left"></i> précédent</button>

@@ -1,9 +1,9 @@
 
 
 $(function () {
-
+// affichage des tool tip bootstrap
     $('[data-toggle="tooltip"]').tooltip();
-
+// déplier les origines
     function deplie(id) {
 
       var alerte_id = id.split('_')[1];
@@ -20,17 +20,17 @@ $(function () {
 
         $('#origine_'+alerte_id).toggleClass('ouvert');
     }
-
+// Quand on clique sur afficher, ça se déplie
     $('.afficher').on('click', function (){
         var id = $(this).attr('id');
         deplie(id);
     });
-
+// Pareil quand on clique sur déplie
     $('.deplie').on('click', function() {
         var id = $(this).attr('id');
         deplie(id);
     });
-
+// Alerte + ajax pour afficher les questions cochées
   $('.affiche-origine').on('click', function(){
     var alerte_id = $(this).attr('id').split('_')[2];
     var route = $('#route_'+alerte_id).attr('action');
@@ -71,7 +71,7 @@ $(function () {
     });
   });
 
-
+// suppression d'une saisie
   $('.supprime').on('click', function(e){
     var id = '#' + $(this).attr('id');
     console.log(id);
@@ -98,7 +98,7 @@ $(function () {
         }
     });
   });
-
+// Nom pour une nouvelle saisie
   $('.nouvelle-saisie-item').on('click', function(e) {
     var espece_id = $(this).attr('id').split('_')[1];
     var route = $(this).attr('route');
@@ -146,7 +146,7 @@ $(function () {
       }
     })
   };
-
+// Espèces non finies
   $('.choix').on('click', function(e){
 
     var espece_nom = $(this).attr('id');

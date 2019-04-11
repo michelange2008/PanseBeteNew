@@ -7,7 +7,7 @@
 @section('contenu')
 <div class="container-fluid">
   <div class="bg-otorange titre rounded-0" style="width:100%">
-    <img src="{{URL::asset('svg/saisie')}}/oeil-blanc.svg" alt="oeil" class="">
+    <img src="{{URL::asset(config('fichiers.saisie'))}}/check.svg" alt="case cochée" class="">
     <h5>Questions cochées</h5>
   </div>
 
@@ -26,7 +26,7 @@
         @endforeach
       </ol>
   </div>
-  <div class="d-flex flex-row justify-content-between">
+  <div class="d-flex flex-row justify-content-end">
     <a href="{{URL::previous()}}" class="btn btn-otobleu rounded-0">Retour</a>
   </div>
 </div>

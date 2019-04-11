@@ -69,10 +69,13 @@
     <div class="pas-de-saisie alert alert-secondary">
       <div class="arrow arrowUp"></div>
       <p>Il n'y a pas encore de saisie réalisée.<p>
-        <p>Vous pouvez faire la première en cliquant sur
-          <span class="desktop-only">un des boutons correspondant à votre type de troupeau ci-dessus.</span>
-        <span class="smartphone-only"> le bouton <span class="rond">+</span> ci-dessous.</span>
+        <p class="desktop-only">Vous pouvez faire la première en cliquant sur un des boutons correspondant à votre type de troupeau ci-dessus.</p>
+        <p class="smartphone-only">Vous pouvez faire la première en cliquant sur le bouton&nbsp
+            <img class="aide-icones" src="{{URL::asset(config('fichiers.images'))}}/plus_rond_bord_blanc.svg" alt="plus">  ci-dessous.</span>
       </p>
+      <p>A tout moment, vous pourrez trouver une aide contextuelle en cliquant sur l'icone&nbsp
+      <img class="aide-icones" src="{{URL::asset(config('fichiers.images'))}}/aide.svg" alt=""> </p>
+      <p></p>
       <div class="arrow arrowDown"></div>
     </div>
   @endif

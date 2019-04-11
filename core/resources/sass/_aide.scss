@@ -1,13 +1,13 @@
 .aide-bouton {
   display: none;
   border-radius: 100%;
-  width: 50px;
-  height: 50px;
-  background: url('../svg/aide.svg') no-repeat $otojaune;
+  width: 40px;
+  height: 40px;
+  background: url('../svg/aide.svg') no-repeat;
   background-size: contain;
   position: fixed;
   top: 30vh;
-  right: 20px;
+  right: 1vh;
   z-index: 10000;
   cursor: pointer;
   transform: scale(1);
@@ -77,6 +77,10 @@
 .aide-deplacement {
   width: 40vw;
 }
+#aide-contenu-detail {
+  top: 1vh !important;
+
+}
 
 @media screen and (min-width: 576px) {
   .aide-contenu {
@@ -94,5 +98,8 @@
     left:5vw !important;
     width: 80vw;
   }
-
+  #aide-contenu-detail {
+    left: 1vw !important;
+    width: 95vw !important;
+  }
 }

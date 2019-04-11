@@ -9500,13 +9500,13 @@ a.text-dark:hover, a.text-dark:focus {
 .aide-bouton {
   display: none;
   border-radius: 100%;
-  width: 50px;
-  height: 50px;
-  background: url("../svg/aide.svg") no-repeat #dadf21;
+  width: 40px;
+  height: 40px;
+  background: url("../svg/aide.svg") no-repeat;
   background-size: contain;
   position: fixed;
   top: 30vh;
-  right: 20px;
+  right: 1vh;
   z-index: 10000;
   cursor: pointer;
   -webkit-transform: scale(1);
@@ -9593,6 +9593,10 @@ a.text-dark:hover, a.text-dark:focus {
   width: 40vw;
 }
 
+#aide-contenu-detail {
+  top: 1vh !important;
+}
+
 @media screen and (min-width: 576px) {
   .aide-contenu {
     left: 15vw;
@@ -9608,6 +9612,10 @@ a.text-dark:hover, a.text-dark:focus {
   .aide-contenu-saisie {
     left: 5vw !important;
     width: 80vw;
+  }
+  #aide-contenu-detail {
+    left: 1vw !important;
+    width: 95vw !important;
   }
 }
 
