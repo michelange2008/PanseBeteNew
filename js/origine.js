@@ -109,11 +109,12 @@ $(function () {
   function nouvelleSaisie(route, nom, espece_id) {
     console.log(route);
     $.confirm ({
+      columnClass: 'large',
       title: 'Nouvelle saisie',
       content: '' +
       '<form action="" class="formName">' +
       '<div class="form-group">' +
-      '<label>Si l\'élevage est différent de l\'utilisateur, saisir son nom, sinon cliquez simplement sur Ok</label>' +
+      '<label>Si l\'élevage n\'appartient pas à la personne connectée, saisir son nom, sinon cliquez simplement sur Ok</label>' +
       '<input type="text" placeholder='+nom+' class="name form-control" required />' +
       '</div>' +
       '</form>',

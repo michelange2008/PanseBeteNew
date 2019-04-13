@@ -34,6 +34,8 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/mentions_legales', ['uses' => 'AccueilController@mentions_legales', 'as' => 'mentions_legales']);
 
+    Route::get('/aide', ['uses' => 'AccueilController@aide', 'as' => 'aide']);
+
     Route::get('entravaux/{espece_id}', ['uses' => 'AccueilController@entravaux', 'as' => 'entravaux']);
 
   // Saisies

@@ -8,7 +8,7 @@
 
 <div class="container-fluid bg-otorange titre">
   <img src="{{URL::asset('svg/saisie')}}/oeil.svg" alt="regard" class="">
-  <h5>Pôles d'observation ({{$saisie->elevage->nom}})</h5>
+  <h5 class="text-truncate">Pôles d'observation ({{$saisie->elevage->nom}})</h5>
 </div>
 
   <div class="container-fluid">

@@ -58,6 +58,10 @@ class AccueilController extends Controller
       return view('divers.mentions_legales');
     }
 
+    public function aide()
+    {
+      return view('aide.aide');
+    }
     public function entravaux($espece_id)
     {
       if(Espece::find($espece_id)->fini === 1)

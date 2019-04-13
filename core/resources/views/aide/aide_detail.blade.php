@@ -1,5 +1,7 @@
 @section('aide')
-<div id="{{$page}}" class="aide-bouton"></div>
+<div id="aide">
+  <div id="aide-rond" class="aide-bouton"></div>
+</div>
 
 <div id="aide-contenu-detail" class="aide-contenu">
 

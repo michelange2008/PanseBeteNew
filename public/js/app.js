@@ -67,27 +67,22 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(6);
-module.exports = __webpack_require__(1);
+__webpack_require__(1);
+module.exports = __webpack_require__(2);
 
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */
-/***/ (function(module, exports) {
-
 $(function () {
+
   // MENU AIDE
-  $('.aide-bouton').fadeIn();
+  $('#aide-rond').fadeIn().draggable({
+    containment: '#aide',
+    cursor: 'move',
+    snap: '#aide'
+  });
 
   $('.close').on('click', function () {
     $('.aide-contenu').fadeOut();
@@ -132,6 +127,12 @@ $(function () {
     nouvelleSaisie(route, $(this).attr('name'), espece_id);
   });
 });
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

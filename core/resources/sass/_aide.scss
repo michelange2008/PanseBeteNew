@@ -1,3 +1,11 @@
+#aide {
+  position: fixed;
+  right: 3vw;
+  top: 0;
+  width: 40px;
+  height: 100vh;
+  z-index: 10000;
+}
 .aide-bouton {
   display: none;
   border-radius: 100%;
@@ -7,8 +15,7 @@
   background-size: contain;
   position: fixed;
   top: 30vh;
-  right: 1vh;
-  z-index: 10000;
+  right: 3vw;
   cursor: pointer;
   transform: scale(1);
   transition: transform 1s;
@@ -61,7 +68,6 @@
 }
 #texte-s-2, #texte-d-2 {
   display: none;
-  width: 100%;
 }
 
 #aide-image {
@@ -79,8 +85,11 @@
 }
 #aide-contenu-detail {
   top: 1vh !important;
-
 }
+// .aide-special-info-menu {
+//   display: block !important;
+// }
+
 
 @media screen and (min-width: 576px) {
   .aide-contenu {
@@ -98,8 +107,19 @@
     left:5vw !important;
     width: 80vw;
   }
+  #aide {
+    right: 0vw !important;
+  }
+  #aide-rond {
+    right: 0vw !important;
+  }
   #aide-contenu-detail {
     left: 1vw !important;
     width: 95vw !important;
+  }
+}
+@media screen and (min-width: 991.99px) {
+  .aide-special-info-menu {
+    display: none !important;
   }
 }

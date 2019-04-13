@@ -1,6 +1,11 @@
 $(function() {
+
 // MENU AIDE
-  $('.aide-bouton').fadeIn();
+  $('#aide-rond').fadeIn().draggable({
+    containment: '#aide',
+    cursor: 'move',
+    snap: '#aide'
+  });
 
   $('.close').on('click', function() {
     $('.aide-contenu').fadeOut();

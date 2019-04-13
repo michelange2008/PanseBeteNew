@@ -9497,6 +9497,15 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+#aide {
+  position: fixed;
+  right: 3vw;
+  top: 0;
+  width: 40px;
+  height: 100vh;
+  z-index: 10000;
+}
+
 .aide-bouton {
   display: none;
   border-radius: 100%;
@@ -9506,8 +9515,7 @@ a.text-dark:hover, a.text-dark:focus {
   background-size: contain;
   position: fixed;
   top: 30vh;
-  right: 1vh;
-  z-index: 10000;
+  right: 3vw;
   cursor: pointer;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -9575,7 +9583,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 #texte-s-2, #texte-d-2 {
   display: none;
-  width: 100%;
 }
 
 #aide-image {
@@ -9613,9 +9620,21 @@ a.text-dark:hover, a.text-dark:focus {
     left: 5vw !important;
     width: 80vw;
   }
+  #aide {
+    right: 0vw !important;
+  }
+  #aide-rond {
+    right: 0vw !important;
+  }
   #aide-contenu-detail {
     left: 1vw !important;
     width: 95vw !important;
+  }
+}
+
+@media screen and (min-width: 991.99px) {
+  .aide-special-info-menu {
+    display: none !important;
   }
 }
 
