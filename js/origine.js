@@ -227,28 +227,6 @@ $(document).ready(function() {
 			collapsible: true,
 			prefix: ''
 		});
+    $('.ziehharmonika h3:eq(0)').ziehharmonika('open', true);
 	});
-// afficher une information avant de passer à la liste des originesListe
-// $("#listeOrigines").on('click', function(e){
-//   e.preventDefault();
-//   $.confirm({
-//     theme: "supervan",
-//     title: "<h5 style='text-align: left; color:red'>A lire !<img src='../../svg/instructions.svg' /> </h5>",
-//     content: "<p style='text-align: justify'>A la page suivante, vous aurez la liste de toutes les questions que vous avez cochées, quelque soit le thème.</p>"
-//     + "<p style='text-align: justify'>Il est possible de les déplacer en le faisant glisser. Vous pouvez aussi grouper certaines questions en les faisant glisser vers la droite.</p>"
-//     + "<p style='text-align: justify'>S'il y a besoin de faire défiler la page, il faut utiliser la barre de défilement orange</p>",
-//     buttons : {
-//       formSubmit : {
-//         text: "continuer",
-//         keys : ['enter', 'esc'],
-//         btnClass : 'btn-red',
-//         action: function() {
-//           location.href = $('#listeOrigines').attr('href');
-//         },
-//       }
-//     },
-//   });
-// });
-
-
 })

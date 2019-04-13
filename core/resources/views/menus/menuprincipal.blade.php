@@ -30,7 +30,7 @@
                     </li>
                 @endif
                 <div class="dropdown-divider"></div>
-                <li class="nav-item"><a class="nav-link" href="{{route('accueil')}}">Accueil</a></li>
+                <li class="nav-item" title="Pour démarrer"><a class="nav-link" href="{{route('accueil')}}">Accueil</a></li>
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" id="infos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                       En savoir plus

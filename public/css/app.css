@@ -9574,6 +9574,10 @@ a.text-dark:hover, a.text-dark:focus {
   border-radius: 100%;
 }
 
+.aide-icones-petite {
+  width: 30px;
+}
+
 .aide-petit-bouton {
   padding: 5px;
   width: -webkit-max-content;
@@ -11008,6 +11012,8 @@ a, a:link, a:hover {
     right: 25px;
     width: 60px;
     height: 200px;
+    -webkit-box-shadow: 1px 1px 4px black;
+            box-shadow: 1px 1px 4px black;
   }
 }
 

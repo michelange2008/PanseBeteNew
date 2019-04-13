@@ -30,9 +30,9 @@
     <h3>Des méthodes pour la prévention et la surveillance</h3>
     <div>
       <p>
-        Des méthodes pour la prévention et la surveillance des troupeaux, adaptées à l’AB et transposables en élevage conventionnel, étaient attendues à la fin du projet.
+        Le projet avait pour but de produite des méthodes pour la prévention et la surveillance des troupeaux, adaptées à l’AB et transposables en élevage conventionnel..
       </p><p>
-        C’est ce que nous présentons sous la forme de 4 livrets, un pour chaque principale espèce : bovins lait, bovins viande, ovins lait et viande et caprins.
+        C’est ce que nous présentons sous la forme de 5 livrets, un pour chaque type de production: bovins lait, bovins viande, ovins lait, ovins viande et caprins.
       </p>
     </div>
   </div>

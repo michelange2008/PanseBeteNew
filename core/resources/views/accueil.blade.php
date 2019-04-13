@@ -71,10 +71,10 @@
       <p>Il n'y a pas encore de saisie réalisée.<p>
         <p class="desktop-only">Vous pouvez faire la première en cliquant sur un des boutons correspondant à votre type de troupeau ci-dessus.</p>
         <p class="smartphone-only">Vous pouvez faire la première en cliquant sur le bouton&nbsp
-            <img class="aide-icones" src="{{URL::asset(config('fichiers.images'))}}/plus_rond_bord_blanc.svg" alt="plus">  ci-dessous.</span>
+            <img class="aide-icones-petite" src="{{URL::asset(config('fichiers.images'))}}/plus_rond_bord_blanc.svg" alt="plus">  ci-dessous.</span>
       </p>
       <p>A tout moment, vous pourrez trouver une aide contextuelle en cliquant sur l'icone&nbsp
-      <img class="aide-icones" src="{{URL::asset(config('fichiers.images'))}}/aide.svg" alt=""> </p>
+      <img class="aide-icones-petite" src="{{URL::asset(config('fichiers.images'))}}/aide.svg" alt=""> </p>
       <p></p>
       <div class="arrow arrowDown"></div>
     </div>

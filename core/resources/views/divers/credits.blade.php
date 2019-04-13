@@ -6,20 +6,20 @@
 <div class="container">
   <h5>Le CASDAR OTOVEIL, fruit d'un projet collectif</h5>
 <div class="ziehharmonika">
-  <h3>Chef de projet</h3>
+  <h3><i style="font-size:2rem" class="fas fa-users"></i> Chef de projet</h3>
   <div>
     <p><span class="font-weight-bold">Catherine EXPERTON</span> - ITAB</p>
 </div>
-  <h3>Coordination de la rédaction des livrets</h3>
+  <h3><i style="font-size:2rem" class="fas fa-user-friends"></i> Coordination de la rédaction des livrets</h3>
   <div>
     <p>
       <span class="font-weight-bold">Thierry MOUCHARD</span> - ITAB
     </p>
   </div>
-  <h6 class="accordeon-intermediaire">Ont participé à la rédaction, aux relectures et aux tests de ce document:</h6>
+  <h6 class="accordeon-intermediaire">Conception, rédaction, relectures et tests de ce document:</h6>
 
     @foreach($especes as $espece)
-      <h3>{{$espece->nom}}</h3>
+        <h3><img style="height:38px; padding-right:5px" src="{{URL::asset(config('fichiers.especes')).'/'.$espece->icone}}" alt="{{$espece->nom}}">{{ucfirst($espece->nom)}}</h3>
       <div>
           @foreach($participants as $participant)
 
@@ -38,7 +38,19 @@
           @endforeach
       </div>
     @endforeach
-
+    <h6 class="accordeon-intermediaire">Panse-bêtes WebApp</h6>
+    <h3><i style="font-size:2rem" class="fas fa-globe-europe"></i> Conception web</h3>
+    <div>
+      <p>
+        <span class="font-weight-bold">Michel BOUY</span> - ANTIKOR
+      </p>
+    </div>
+    <h3><i style="font-size:2rem" class="fas fa-book-reader"></i> Relecture et tests</h3>
+    <div>
+      <p>
+        <span class="font-weight-bold">Agathe VALORY</span> - ITAB
+      </p>
+    </div>
 
   <div class="container d-flex justify-content-end" style="border:none;padding:0">
     <a href="{{URL::route('accueil')}}" class="btn btn-otobleu text-light rounded-0">retour</a>
