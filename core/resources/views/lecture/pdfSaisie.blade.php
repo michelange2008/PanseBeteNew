@@ -3,7 +3,7 @@
 @section('contenu')
 <br />
 <div class="entete">
-  <img src="{{URL::asset('/')}}otoveil.jpeg" alt="otoveil" class="logo">
+  <img src="{{asset(config('chemins.images'))}}/otoveil.jpeg" alt="otoveil" class="logo">
   <h1 class="pdf-titre">PANSE-BÊTES</h1>
   </div>
 </div>

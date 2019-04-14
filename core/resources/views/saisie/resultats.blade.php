@@ -6,7 +6,7 @@
 
 @section('contenu')
 <div class="container-fluid bg-otobleu titre">
-  <img src="{{URL::asset('svg/saisie')."/".session()->get('theme')->icone}}" alt="{{session()->get('theme')->nom}}" class="">
+  <img src="{{asset(config('chemins.saisie')).'/'.session()->get('theme')->icone}}" alt="{{session()->get('theme')->nom}}" class="">
   <h5>{{ucfirst(session()->get('theme')->nom)}} (résultats)</h5>
 </div>
 <div class="container-fluid">
@@ -50,8 +50,8 @@
       @endforeach
     </div>
   @endforeach
-  {{Form::submit('Enregistrer et retour', ['class' => 'btn btn-otobleu btn-sm grands-boutons coupe'])}}
-  <a href="{{URL::previous()}}" class="btn btn-otorange btn-sm grands-boutons coupe">Revenir aux observations</a>
+  {{Form::submit('Enregistrer et retour', ['class' => 'btn btn-otobleu grands-boutons coupe'])}}
+  <a href="{{URL::previous()}}" class="btn btn-otorange grands-boutons coupe">Revenir aux observations</a>
 </div>
   {{Form::close()}}
 @endsection

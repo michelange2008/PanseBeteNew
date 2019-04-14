@@ -16,10 +16,10 @@
       <span class="font-weight-bold">Thierry MOUCHARD</span> - ITAB
     </p>
   </div>
-  <h6 class="accordeon-intermediaire">Conception, rédaction, relectures et tests de ce document:</h6>
+  <h6 class="accordeon-intermediaire">Conception, rédaction, relectures et tests des livrets:</h6>
 
     @foreach($especes as $espece)
-        <h3><img style="height:38px; padding-right:5px" src="{{URL::asset(config('fichiers.especes')).'/'.$espece->icone}}" alt="{{$espece->nom}}">{{ucfirst($espece->nom)}}</h3>
+        <h3><img style="height:38px; padding-right:10px" src="{{config('chemins.especes').$espece->icone}}" alt="{{$espece->nom}}">{{ucfirst($espece->nom)}}</h3>
       <div>
           @foreach($participants as $participant)
 

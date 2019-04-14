@@ -15,7 +15,7 @@
       <p>Si vous voulez travailler sur une nouvelle grille, cliquez sur l'icone ci-dessus <i class="fas fa-arrow-up"></i> correspondant au type de troupeau</p>
       <div class="d-flex flex-row justify-content-around ">
         @foreach($especes as $espece)
-        <img class="aide-icones shadow" src="{{config('fichiers.especes').$espece->icone}}" alt="">
+        <img class="aide-icones shadow" src="{{config('chemins.especes').$espece->icone}}" alt="">
         @endforeach
       </div>
       <div class="aide-special-info-menu">
@@ -62,12 +62,12 @@
     <div class="aide-contenu-texte smartphone-only bg-aide-trans">
       <h3>Nouvelle grille</h3>
       <p>Si vous voulez travailler sur une nouvelle grille, cliquez sur le bouton</p>
-      <div class="d-flex justify-content-center"><img src="{{config('fichiers.images')}}plus_rond_bord_blanc.svg" alt=""></div>
+      <div class="d-flex justify-content-center"><img src="{{config('chemins.images')}}plus_rond_bord_blanc.svg" alt=""></div>
       <p>en bas à droite.</p>
       <p>Puis, choisissez l'icone correspondant au type de troupeau.</p>
       <div class="d-flex flex-row justify-content-around">
         @foreach($especes as $espece)
-        <img class="aide-icones" src="{{config('fichiers.especes').$espece->icone}}" alt="">
+        <img class="aide-icones" src="{{config('chemins.especes').$espece->icone}}" alt="">
         @endforeach
       </div>
       <div class="aide-special-info-menu">

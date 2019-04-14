@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card" style="margin-top:10px">
               <div>
-                <img src="{{URL::asset('')}}otoveil.jpeg" class="" alt="otoveil" style="height:130px"/>
+                <img src="{{asset(config('chemins.images'))}}/otoveil.jpeg" class="" alt="otoveil" style="height:130px"/>
 
               </div>
                 <div class="card-header">

@@ -15,6 +15,11 @@ class AccueilController extends Controller
     use CreeSaisie;
     use EffaceElevages;
 
+    public function index()
+    {
+      return view('front');
+    }
+
     public function accueil()
     {
       $saisies = Saisie::where('user_id', auth()->user()->id)

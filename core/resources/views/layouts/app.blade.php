@@ -15,8 +15,7 @@
       rel="stylesheet"
       integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
       crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{asset('public/css/app.css')}}" />
+    <link rel="stylesheet" href="{{asset(config('chemins.css'))}}/app.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css" />
     @stack('css')
 
@@ -52,7 +51,9 @@
     <script src="{{ asset('js/origine.js') }}"></script>
     <script src="{{ asset('js/fab.js') }}"></script>
     <script src="{{asset('js/ziehharmonika.js')}}"></script>
-    <script src="{{asset('public/js/app.js')}}"></script>
+    <script src="{{asset(config('chemins.js'))}}/app.js"></script>
 
+    <script src="{{asset('js/jquery.countdown.min.js')}}"></script>
+    <script src="{{asset('js/car.js')}}"></script>
 </body>
 </html>

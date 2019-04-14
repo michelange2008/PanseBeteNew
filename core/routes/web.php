@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', ['uses' => 'AccueilController@index', 'as' => 'front']);
+
 Route::group(['middleware' => ['auth']], function () {
 
   // Gestion des utilisateurs
@@ -24,7 +26,7 @@ Route::group(['middleware' => ['auth']], function () {
 
   // Routes principales
 
-    Route::get('/', ['uses' => 'AccueilController@accueil', 'as' => 'accueil']);
+    Route::get('/accueil', ['uses' => 'AccueilController@accueil', 'as' => 'accueil']);
 
     Route::get('/presentation', ['uses' => 'AccueilController@presentation', 'as' => 'presentation']);
 

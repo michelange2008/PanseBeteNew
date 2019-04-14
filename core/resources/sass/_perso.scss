@@ -12,10 +12,12 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   min-height: 100vh;
-  padding-bottom: 10px;
 }
 a, a:link, a:hover  {
   text-decoration: none;
+}
+.container-fluid {
+  padding-bottom: 5px;
 }
 
 .bg-otobleu, .btn-otobleu {
@@ -174,6 +176,10 @@ a, a:link, a:hover  {
 }
 .decalage {
   margin-left: 3px;
+}
+.img-40 {
+  width: 40px;
+  max-height: 40px;
 }
 
 .otoveil {
@@ -424,7 +430,7 @@ a, a:link, a:hover  {
     padding: 5px;
   }
   body {
-    min-height: calc(100vh - 10px);
+    min-height: calc(100vh - 60px);
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;

@@ -22,18 +22,24 @@
     @endforeach
     @if($affiche)
       <div class="alert detail detail-otobleu">
-        <h5>{{$theme->nom}}</h5>
+        <div class="d-flex flex-row align-items-center">
+          <img class="img-40" src="{{asset(config('chemins.saisie')).'/'.$theme->icone}}" alt="">
+          <h5 class="text-nowrap">{{$theme->nom}}</h5>
+        </div>
         <div class="icones">
-          <img class="otoveil" src="{{URL::asset('svg/saisie')}}/ok.svg" alt="ok" />
+          <img class="otoveil" src="{{asset(config('chemins.saisie'))}}/ok.svg" alt="ok" />
         </div>
       </div>
 
     @else
       <div id="alert_{{$theme->id}}" class="deplie alert detail detail-otorange">
 
-        <h5>{{$theme->nom}} ({{$i}})</h5>
+        <div class="d-flex flex-row align-items-center">
+          <img class="img-40" src="{{asset(config('chemins.saisie')).'/'.$theme->icone}}" alt="">
+          <h5>{{$theme->nom}} ({{$i}})</h5>
+        </div>
         <div class="icones">
-          <img src="{{URL::asset('svg/saisie')}}/deplie.svg" alt="deplie" class="icone otoveil" title="affiche les alertes" />
+          <img src="{{asset(config('chemins.saisie'))}}/deplie.svg" alt="deplie" class="icone otoveil" title="affiche les alertes" />
         </div>
       </div>
 
@@ -77,7 +83,7 @@
                 </p>
                 @endif
               </div>
-                <img id = "icone-origine_{{$saisie->id}}_{{$sAlerte->id}}" src="{{URL::asset('svg/saisie')}}/oeil.svg" alt="origine" class="affiche-origine otoveil curseur" />
+                <img id = "icone-origine_{{$saisie->id}}_{{$sAlerte->id}}" src="{{asset(config('chemins.saisie'))}}/oeil.svg" alt="origine" class="affiche-origine otoveil curseur" />
             </div>
 
             </div>
@@ -89,8 +95,8 @@
       @endforeach
     </div>
   <div class="container-fluid d-flex flex-row justify-content-between">
-    <a id="listeOrigines" href="{{route('lecture.originesListe', session()->get('saisie_id'))}}" class="btn btn-otojaune btn-sm rounded-0">Liste des origines</a>
-    <a href="{{route('accueil')}}" class="btn btn-otobleu btn-sm rounded-0">Retour</a>
+    <a id="listeOrigines" href="{{route('lecture.originesListe', session()->get('saisie_id'))}}" class="btn btn-otojaune rounded-0">Liste des origines</a>
+    <a href="{{route('accueil')}}" class="btn btn-otobleu rounded-0">Retour</a>
 
   </div>
 @endsection

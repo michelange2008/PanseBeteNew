@@ -6,7 +6,7 @@
 
 @section('contenu')
 <div class="container-fluid bg-otobleu titre">
-  <img src="{{URL::asset('svg/saisie')."/".session()->get('theme')->icone}}" alt="{{session()->get('theme')->nom}}" class="">
+  <img src="{{asset(config('chemins.saisie')).'/'.session()->get('theme')->icone}}" alt="{{session()->get('theme')->nom}}" class="otoveil">
   <h5>{{ucfirst(session()->get('theme')->nom)}}</h5>
 </div>
 
@@ -74,8 +74,8 @@
 
   @endforeach()
 
-  {{Form::submit('envoyer', ['class' => 'btn btn-otobleu btn-sm'])}}
-  <a href="{{route('saisie.accueil')}}" class="btn btn-sm btn-otorange" title="revenir à la liste">retour</a>
+  {{Form::submit('envoyer', ['class' => 'btn btn-otorange rounded-0'])}}
+  <a href="{{route('saisie.accueil')}}" class="btn btn-otobleu rounded-0" title="revenir à la liste">retour</a>
   {{Form::close()}}
 </div>
 

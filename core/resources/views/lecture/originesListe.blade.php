@@ -7,7 +7,7 @@
 @section('contenu')
 <div class="container-fluid">
   <div class="bg-otorange titre rounded-0" style="width:100%">
-    <img src="{{URL::asset(config('fichiers.saisie'))}}/check.svg" alt="case cochée" class="">
+    <img src="{{URL::asset(config('chemins.saisie'))}}/check.svg" alt="case cochée" class="">
     <h5>Questions cochées</h5>
   </div>
 
@@ -16,7 +16,7 @@
         @foreach($sorigines as $sorigine)
           <li class="dd-item" data-id="{{$sorigine->id}}">
             <div class="dd-handle d-flex flex-row">
-              <img src="{{URL::asset('svg/saisie'."/".$sorigine->salerte->alerte->theme->icone)}}" alt="-" class="img-handle">
+              <img src="{{asset(config('chemins.saisie')."/".$sorigine->salerte->alerte->theme->icone)}}" alt="-" class="img-handle">
               <p class="text-handle">
                 {{ucfirst($sorigine->origine->reponse)}}
               </p>
@@ -33,11 +33,6 @@
 
 <canvas id="scroll"></canvas>
 @endsection
-
-@push('css')
-<link href="{{asset('css/nestable.css')}}" rel="stylesheet" type="text/css">
-<link href="{{asset('css/scroll.css')}}" rel="stylesheet" type="text/css">
-@endpush
 
 <script>
 

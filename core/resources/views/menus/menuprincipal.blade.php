@@ -52,7 +52,7 @@
     <a class="navbar-brand" href="{{ url('/') }}">
       {{ config('app.name', 'Panse-bêtes') }}
     </a>
-    <img src="{{URL::asset('')}}img/itab_otoveil.jpeg" alt="otoveil" class="otoveil"/>
+    <img src="{{asset(config('chemins.images'))}}/itab_otoveil.jpeg" alt="otoveil" class="otoveil"/>
     </div>
   </nav>
 </div>

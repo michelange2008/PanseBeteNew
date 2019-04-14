@@ -8,13 +8,18 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-// Fichier perso
+// fontawesome
+@import "faw/fontawesome.scss";
+@import "faw/solid.scss";
+@import "faw/regular.scss";
+
+// Fichiers perso
+@import "front";
 @import "aide";
 @import "admin";
 @import "fab";
 @import "font";
 @import "nestable";
-@import "pdf";
 @import "perso";
 @import "scroll";
 @import "ziehharmonika";

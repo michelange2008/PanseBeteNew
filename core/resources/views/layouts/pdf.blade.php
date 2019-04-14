@@ -7,10 +7,10 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="{{ asset('css/pdf.css') }}" rel="stylesheet">
-
-    <title>{{ config('app.name', 'Aver') }}</title>
+    <title>{{ config('app.name', 'Panses-Bêtes') }}</title>
+    <link rel="icon" href="{{asset(config('chemins.images'))}}/favicon.ico" />
      <!-- Styles -->
+     <link href="{{ asset(config('chemins.css'))}}/pdf.css" rel="stylesheet">
 </head>
 <body>
 

@@ -7,14 +7,14 @@
 @section('contenu')
 
 <div class="container-fluid bg-otorange titre">
-  <img src="{{URL::asset('svg/saisie')}}/oeil.svg" alt="regard" class="">
+  <img src="{{config('chemins.saisie')}}oeil.svg" alt="regard" class="">
   <h5 class="text-truncate">Pôles d'observation ({{$saisie->elevage->nom}})</h5>
 </div>
 
   <div class="container-fluid">
     @foreach($themes as $theme)
     <div class="espece-item theme-item bg-otobleu d-flex flex-row">
-      <img src="{{URL::asset('svg/saisie')."/".$theme->icone}}" alt="{{$theme->nom}}" />
+      <img src="{{config('chemins.saisie').$theme->icone}}" alt="{{$theme->nom}}" />
       <div class="coupe d-flex justify-content-between" style="flex:1">
         <div class="d-flex flex-column justify-content-center">
           <a href="{{route('saisie.alertes', ['theme_id' => $theme->id])}}" class="btn btn-otobleu">{{ucfirst($theme->nom)}}</a>

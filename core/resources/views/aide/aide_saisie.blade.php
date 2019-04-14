@@ -14,7 +14,7 @@
       <p>Il y a <strong>6 à 7 pôles d'observation</strong> (selon les espèces). Vous pouvez tous les passer en revue les uns après les autres ou simplement ceux qui vous intéressent.</p>
       <p>Pour cela, il suffit de <span class="aide-petit-bouton bg-otobleu"> cliquer sur le titre du pôle <i class="fas fa-mouse-pointer"></i> </span>que l'on veut explorer.</p>
       <p>Il est intéressant dans tous les cas de commencer par le premier pôle: </p>
-      <p class="bg-otobleu"><img class="aide-icones" src="{{config('fichiers.saisie')}}global.svg" alt="global"> Regard global sur le troupeau</p>
+      <p class="bg-otobleu"><img class="aide-icones" src="{{config('chemins.saisie')}}global.svg" alt="global"> Regard global sur le troupeau</p>
       <p></p>
       <div class="d-flex justify-content-end">
         <button id="affiche-texte-d-2" class="btn btn-otorange aide-contenu-texte-plus font-italic curseur">suite <i class="fa fa-angle-double-right"></i></button>

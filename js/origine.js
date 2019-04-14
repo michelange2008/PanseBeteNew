@@ -40,6 +40,7 @@ $(function () {
       }
     });
     $.confirm({
+      columnClass: 'large',
       theme: 'dark',
       buttons: {
         fermer: function(){
@@ -81,7 +82,7 @@ $(function () {
         content: "Etes-vous sûr.e.s de vouloir supprimer définitivement cette saisie ?",
         type: 'red',
         columnClass: 'medium',
-        theme: 'supervan',
+        theme: 'dark',
         buttons: {
             supprimer:{
               btnClass: 'btn-red',
@@ -153,6 +154,7 @@ $(function () {
     var espece_nom = $(this).attr('id');
 
     $.alert({
+      columnClass: 'large',
       theme: "dark",
       title: "Désolé !",
       content: "Le travail pour les <strong>"+espece_nom+"</strong> est encore en cours",

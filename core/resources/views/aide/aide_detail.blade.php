@@ -16,18 +16,18 @@
       <div class="alert detail detail-otobleu">
         <h5>Pôle sans alerte</h5>
         <div class="icones">
-          <img src="{{URL::asset(config('fichiers.saisie'))}}/ok.svg" class="otoveil" alt="ok">
+          <img src="{{URL::asset(config('chemins.saisie'))}}/ok.svg" class="otoveil" alt="ok">
         </div>
       </div>
       <p>Les pôles pour lesquels vous avez signalé des alertes sont marqués en orange</p>
       <div class="alert detail detail-otorange">
         <h5>Pôle avec alerte</h5>
         <div class="icones">
-          <img class="otoveil" src="{{URL::asset(config('fichiers.saisie'))}}/deplie.svg" alt="deplie">
+          <img class="otoveil" src="{{URL::asset(config('chemins.saisie'))}}/deplie.svg" alt="deplie">
         </div>
       </div>
       <p>En cliquant <i class="fas fa-mouse-pointer"></i> sur l'icone
-        <img class="otoveil" src="{{URL::asset(config('fichiers.saisie'))}}/deplie.svg" alt="deplie">
+        <img class="otoveil" src="{{URL::asset(config('chemins.saisie'))}}/deplie.svg" alt="deplie">
         vous dépliez la liste des alertes qui ont été notée pour ce pôle
       </p>
       <div class="panneau-alerte alert alert-dark bg-otojaune rounded-0">
@@ -36,10 +36,10 @@
             <span class="font-weight-bold">votre alerte&nbsp</span>
             <span>(la valeur seuil)</span>
           </div>
-          <img class="otoveil" src="{{URL::asset(config('fichiers.saisie'))}}/oeil.svg" alt="voir">
+          <img class="otoveil" src="{{URL::asset(config('chemins.saisie'))}}/oeil.svg" alt="voir">
         </div>
       </div>
-      <p>Et si vous cliquez sur l'icone <img class="otoveil" src="{{URL::asset(config('fichiers.saisie'))}}/oeil.svg" alt="voir">
+      <p>Et si vous cliquez sur l'icone <img class="otoveil" src="{{URL::asset(config('chemins.saisie'))}}/oeil.svg" alt="voir">
         vous retrouverez les questions que vous avez cochées.
       </p>
       <p></p>
