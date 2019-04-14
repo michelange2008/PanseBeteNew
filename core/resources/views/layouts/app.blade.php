@@ -39,8 +39,6 @@
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
         crossorigin="anonymous"></script>
     @stack('js')
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
     <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
 
@@ -52,8 +50,9 @@
     <script src="{{ asset('js/fab.js') }}"></script>
     <script src="{{asset('js/ziehharmonika.js')}}"></script>
     <script src="{{asset(config('chemins.js'))}}/app.js"></script>
-
+<!-- Compte à rebours à supprimer après le 4 juin -->
     <script src="{{asset('js/jquery.countdown.min.js')}}"></script>
     <script src="{{asset('js/car.js')}}"></script>
+<!-- ############################################# -->
 </body>
 </html>
