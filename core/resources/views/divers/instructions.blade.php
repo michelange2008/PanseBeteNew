@@ -2,7 +2,6 @@
 
 @extends('menus.menuprincipal')
 
-
 @section('contenu')
 
 <div class="ziehharmonika">
@@ -55,12 +54,6 @@
   <div class="container d-flex justify-content-end" style="border:none;padding:0">
     <a href="{{URL::route('accueil')}}" class="btn btn-secondary text-light rounded-0">retour</a>
   </div>
-
 </div>
+
 @endsection
-
-@push('css')
-
-<link href="{{asset('css/ziehharmonika.css')}}" rel="stylesheet" type="text/css">
-
-@endpush

@@ -17,18 +17,13 @@
       crossorigin="anonymous" />
     <link rel="stylesheet" href="{{asset(config('chemins.css'))}}/app.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css" />
-    @stack('css')
-
 </head>
 <body>
 
         @yield('menuprincipal')
         @yield('menu')
-        @yield('sousmenu')
-        @yield('dashboard')
         @yield('contenu')
         @yield('aide')
-        @yield('pied_de_page')
 
    <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -38,21 +33,21 @@
         src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
         crossorigin="anonymous"></script>
-    @stack('js')
+    @stack('js') <!-- Juste pour admin.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
     <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
 
 
-    <script src="{{asset('js/jquery.nestable.js')}}"></script>
-    <script src="{{asset('js/ziehharmonika.js')}}"></script>
-    <script src="{{ asset('js/bootstrap/bootstrap.js') }}"></script>
-    <script src="{{ asset('js/origine.js') }}"></script>
-    <script src="{{ asset('js/fab.js') }}"></script>
-    <script src="{{asset('js/ziehharmonika.js')}}"></script>
+    <script src="{{asset(config('chemins.js'))}}/jquery.nestable.js"></script>
+    <script src="{{asset(config('chemins.js'))}}/ziehharmonika.js"></script>
+    <script src="{{asset(config('chemins.js'))}}/bootstrap/bootstrap.min.js"></script>
+    <script src="{{asset(config('chemins.js'))}}/origine.js"></script>
+    <script src="{{asset(config('chemins.js'))}}/fab.js"></script>
+    <script src="{{asset(config('chemins.js'))}}/ziehharmonika.js"></script>
     <script src="{{asset(config('chemins.js'))}}/app.js"></script>
 <!-- Compte à rebours à supprimer après le 4 juin -->
-    <script src="{{asset('js/jquery.countdown.min.js')}}"></script>
-    <script src="{{asset('js/car.js')}}"></script>
+    <script src="{{asset(config('chemins.js'))}}/jquery.countdown.min.js"></script>
+    <script src="{{asset(config('chemins.js'))}}/car.js"></script>
 <!-- ############################################# -->
 </body>
 </html>

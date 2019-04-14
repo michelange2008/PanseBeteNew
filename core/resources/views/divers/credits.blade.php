@@ -58,12 +58,4 @@
   </div>
 </div>
 
-
 @endsection
-
-
-@push('css')
-
-<link href="{{asset('css/ziehharmonika.css')}}" rel="stylesheet" type="text/css">
-
-@endpush

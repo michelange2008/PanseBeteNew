@@ -2,7 +2,6 @@
 
 @extends('menus.menuprincipal')
 
-
 @section('contenu')
 
   <div class="alert alert-success rounded-0">

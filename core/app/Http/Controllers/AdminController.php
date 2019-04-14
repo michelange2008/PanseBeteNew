@@ -18,4 +18,9 @@ class AdminController extends Controller
     {
       return redirect('utilisateur');
     }
+
+    public function inscription()
+    {
+      return view('divers.inscription');
+    }
 }

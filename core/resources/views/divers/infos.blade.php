@@ -2,8 +2,6 @@
 
 @extends('menus.menuprincipal')
 
-@extends('menus.sousmenu')
-
 @section('contenu')
 <div class="container-fluid">
 

@@ -24,6 +24,8 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/admin', ['uses' => 'AdminController@index', 'as' => 'admin.index']);
 
+    Route::get('/inscription', ['uses' => 'AdminController@inscription', 'as' => 'admin.inscription']);
+
   // Routes principales
 
     Route::get('/accueil', ['uses' => 'AccueilController@accueil', 'as' => 'accueil']);

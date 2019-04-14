@@ -5,9 +5,6 @@
 @push('js')
   <script src="{{asset('js/admin.js')}}"></script>
 @endpush
-@push('css')
-  <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
-@endpush
 
 @section('contenu')
   <div id="totum" class="container-fluid">
@@ -32,10 +29,10 @@
               <td id="saisies_{{$user->id}}" class="text-center saisies">{{count($saisies_groupees[$user->id])}}</td>
               <td id="admin_{{$user->id}}" class="text-center">{{($user->admin) ? "OUI" : "NON"}}</td>
               <td id="modifier_{{$user->id}}" class="modifier cell-delmod curseur">
-                <img src="{{URL::asset('svg')}}/modifie.svg" alt="Modifier" title="Modifier cet utilisateur">
+                <img src="{{asset(config('chemins.admin'))}}/modifie.svg" alt="Modifier" title="Modifier cet utilisateur">
               </td>
               <td id="moins_{{$user->id}}" class="supprimer cell-delmod curseur" title="Supprimer cet utilisateur">
-                <img src="{{URL::asset('svg')}}/moins.svg" alt="Supprimer">
+                <img src="{{asset(config('chemins.admin'))}}/moins.svg" alt="Supprimer">
               </td>
             </tr>
           @endforeach
@@ -43,7 +40,7 @@
       </table>
     </div>
     <div class="d-flex justify-content-end">
-      <img id="plus" class="curseur" src="{{URL::asset('svg')}}/plus_rond.svg" alt="Ajouter" title="Ajouter un utilisateur">
+      <img id="plus" class="curseur" src="{{asset(config('chemins.admin'))}}/plus_rond.svg" alt="Ajouter" title="Ajouter un utilisateur">
     </div>
   </div>
 @endsection

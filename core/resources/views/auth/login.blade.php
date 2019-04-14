@@ -78,4 +78,24 @@
         </div>
     </div>
 </div>
+
+<div class="container mt-3">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h5>Vous n'avez pas d'identifiant et de mot de passe ?</h5>
+          <h5>Savez-vous ce qu'est Panse-Bêtes ?</h5>
+        </div>
+        <div class="card-body">
+          <p class="text-break">Panse-Bêtes est un outil permettant d'analyse de façon globale la situation sanitaire d'un troupeau. Il est destiné aux éleveurs, aux techniciens et aux vétérinaires </p>
+          <p class="text-break">Il s'agit de passer en revue les différentes composantes d'un élevage (santé globale, métabolisme, santé des jeunes, mamelle, pieds, etc.) et d'objectiver les causes possibles de problèmes.</p>
+          <p>Si vous souhaitez obtenir un identifiant et un mot de passe, cliquez sur le bouton ci-dessous.</p>
+          <button class="align-right btn btn-otorange rounded-0" type="button" name="button">Obtenir un identifiant</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 @endsection
