@@ -12,6 +12,10 @@
 */
 Route::get('/', ['uses' => 'AccueilController@index', 'as' => 'front']);
 
+Route::get('/inscription', ['uses' => 'InscriptionController@index', 'as' => 'inscription.index']);
+
+Route::post('/inscription/envoi', ['uses' => 'InscriptionController@envoi', 'as' => 'inscription.envoi']);
+
 Route::group(['middleware' => ['auth']], function () {
 
   // Gestion des utilisateurs
@@ -24,7 +28,6 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/admin', ['uses' => 'AdminController@index', 'as' => 'admin.index']);
 
-    Route::get('/inscription', ['uses' => 'AdminController@inscription', 'as' => 'admin.inscription']);
 
   // Routes principales
 
@@ -72,3 +75,5 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 Auth::routes();
+
+Route::any('/captcha', ['uses' => 'CaptchaController@index', 'as' => 'captcha-test']);

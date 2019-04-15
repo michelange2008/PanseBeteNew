@@ -87,11 +87,13 @@
           <h5>Vous n'avez pas d'identifiant et de mot de passe ?</h5>
           <h5>Savez-vous ce qu'est Panse-Bêtes ?</h5>
         </div>
-        <div class="card-body">
-          <p class="text-break">Panse-Bêtes est un outil permettant d'analyse de façon globale la situation sanitaire d'un troupeau. Il est destiné aux éleveurs, aux techniciens et aux vétérinaires </p>
-          <p class="text-break">Il s'agit de passer en revue les différentes composantes d'un élevage (santé globale, métabolisme, santé des jeunes, mamelle, pieds, etc.) et d'objectiver les causes possibles de problèmes.</p>
-          <p>Si vous souhaitez obtenir un identifiant et un mot de passe, cliquez sur le bouton ci-dessous.</p>
-          <button class="align-right btn btn-otorange rounded-0" type="button" name="button">Obtenir un identifiant</button>
+        <div class="card-body d-flex flex-column">
+          <p class="text-break">Panse-Bêtes est un outil permettant une approche globale la situation sanitaire d'un troupeau. Il est destiné aux éleveurs, aux techniciens et aux vétérinaires </p>
+          <p class="text-break">Cet outil permet de passer en revue les différentes composantes d'un élevage (santé globale, métabolisme, santé des jeunes, mamelle, pieds, etc.) et d'objectiver les causes possibles de problèmes.</p>
+          <p>Si vous souhaitez utiliser Panse-Bêtes, cliquez sur le bouton ci-dessous.</p>
+          <a class="align-self-end " href="{{route('admin.inscription')}}">
+            <button class="btn btn-otorange rounded-0" type="button" name="button">Demander un identifiant</button>
+          </a>
         </div>
       </div>
 
