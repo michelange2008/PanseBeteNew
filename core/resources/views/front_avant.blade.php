@@ -13,7 +13,7 @@
         <div id="car" class="p-2 text-center"><h3></h3></div>
         <h4 class=""><span class="color-otojaune">Panse-bêtes</span> sera opérationnel !!!</h4>
         <p></p>
-        <h5>Rendez-vous le 4 juin 2019 à l'ESA d'Angers, au Colloque de restitution du casdar Otoveil <a href="http://www.itab.asso.fr/programmes/otoveil.php"> <i class='fa fa-external-link-alt'></i> </a></h5>
+        <h5>Rendez-vous le 4 juin 2019 à l'ESA d'Angers, au Colloque de restitution du casdar Otoveil <a href="http://www.itab.asso.fr/programmes/otoveil.php" title="cliquer pour afficher le programme"> <i class='fa fa-external-link-alt'></i> </a></h5>
       </div>
     </div>
     <div class="acces-entete">
