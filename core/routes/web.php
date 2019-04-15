@@ -75,5 +75,3 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 Auth::routes();
-
-Route::any('/captcha', ['uses' => 'CaptchaController@index', 'as' => 'captcha-test']);

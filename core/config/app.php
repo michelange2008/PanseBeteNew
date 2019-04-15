@@ -161,7 +161,6 @@ return [
         Bestmomo\NiceArtisan\NiceArtisanServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
         RobBrazier\Piwik\PiwikServiceProvider::class,
-        Mews\Captcha\CaptchaServiceProvider::class,
     ],
 
     /*
@@ -212,7 +211,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'Piwik' => RobBrazier\Piwik\Facades\Piwik::class,
-        'Captcha' => Mews\Captcha\Facades\Captcha::class,
     ],
 
 ];
