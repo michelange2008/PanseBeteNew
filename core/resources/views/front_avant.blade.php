@@ -22,11 +22,7 @@
         Viser l’équilibre de santé de mon troupeau
       </p>
       </h3>
-      <div class="commencer d-flex justify-content-center">
-        {{-- <a href="{{route('accueil')}}"> --}}
-          <button class="btn  btn-otobleu btn-lg rounded-0" disabled>Commencer</button>
-        </a>
-      </div>
+
     </div>
 </div>
 @endsection
