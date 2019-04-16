@@ -90,11 +90,26 @@
         <div class="card-body d-flex flex-column">
           <p class="text-break">Panse-Bêtes est un outil permettant une approche globale la situation sanitaire d'un troupeau. Il est destiné aux éleveurs, aux techniciens et aux vétérinaires </p>
           <p class="text-break">Cet outil permet de passer en revue les différentes composantes d'un élevage (santé globale, métabolisme, santé des jeunes, mamelle, pieds, etc.) et d'objectiver les causes possibles de problèmes.</p>
-          <p>Si vous souhaitez utiliser Panse-Bêtes, cliquez sur le bouton ci-dessous.</p>
-          <a class="align-self-end " href="{{route('admin.inscription')}}">
-            <button class="btn btn-otorange rounded-0" type="button" name="button">Demander un identifiant</button>
-          </a>
-        </div>
+          <div class="row mb-3">
+            <div class="col-md-8">
+              <p class="text-break">Pour voir une démo de Panses-Bêtes <i class="fas fa-arrow-right"></i></p>
+            </div><div class="col-md-4">
+              <a class="align-middle" href="{{route('demo')}}">
+                <button class="btn btn-otobleu rounded-0" type="button" name="button"><i class="fas fa-video"></i> Voir une démonstration</button>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <p>Pour pouvoir utiliser Panse-Bêtes  <i class="fas fa-arrow-right"></i></p>
+            </div><div class="col-md-4">
+              <a class="align-middle" href="{{route('inscription.index')}}">
+                <button class="btn btn-otorange rounded-0" type="button" name="button"><i class="far fa-id-card"></i> Demander un identifiant</button>
+              </div>
+            </a>
+          </div>
+
+          </div>
       </div>
 
     </div>

@@ -16,7 +16,7 @@
       integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
       crossorigin="anonymous" />
     <link rel="stylesheet" href="{{asset(config('chemins.css'))}}/app.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css" />
 </head>
 <body>
 
@@ -26,7 +26,7 @@
         @yield('aide')
 
     <script type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js">
     </script>
      <script
         src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
@@ -34,7 +34,8 @@
         crossorigin="anonymous"></script>
 
     @stack('js') <!-- Juste pour admin.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
     <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
 
 

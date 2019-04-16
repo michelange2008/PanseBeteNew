@@ -64,7 +64,7 @@ $(function () {
               self.setContent(ligne);
               self.setContentAppend('</div>')
               self.setTitle("Questions cochées");
-          }).error(function(response){
+          }).fail(function(response){
               self.setTitle('Désolé');
               self.setContent('Il y a eu un problème');
           });

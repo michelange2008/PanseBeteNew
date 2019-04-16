@@ -10,4 +10,5 @@ return [
   'admin' => $path.'/img/admin/',
   'css' => $path.'/css/',
   'js' => $path.'/js/',
+  'fichiers' => $path.'/fichiers/',
 ];

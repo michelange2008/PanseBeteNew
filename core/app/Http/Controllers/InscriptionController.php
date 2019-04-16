@@ -35,15 +35,16 @@ class InscriptionController extends Controller
         'region' => $datas['region']
       ]);
 
-      $message = "Nous avons bien enregistré votre demande, on vous répond dès que possible";
+      $message = "Nous avons bien enregistré votre demande, nous allons vous répondre dès que possible";
       return view('admin.reception')->with(['message' => $message]);
     } else {
-      $message = "Une demande avec cette adresse mail a déjà été faite. Nous allons vous répondre dès que possible";
+      $message = "Une demande avec cette adresse mail a déjà été faite. Ne vous inquiétez pas, nous allons vous répondre dès que possible";
       return view('admin.reception')->with(['error' => $message]);
     }
+  }
 
-
-
-    // $nouveau->save();
+  public function demo()
+  {
+    return view('demo');
   }
 }

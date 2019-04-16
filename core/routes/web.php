@@ -16,6 +16,8 @@ Route::get('/inscription', ['uses' => 'InscriptionController@index', 'as' => 'in
 
 Route::post('/inscription/envoi', ['uses' => 'InscriptionController@envoi', 'as' => 'inscription.envoi']);
 
+Route::get('/demo', ['uses' => 'InscriptionController@demo', 'as' => 'demo']);
+
 Route::group(['middleware' => ['auth']], function () {
 
   // Gestion des utilisateurs

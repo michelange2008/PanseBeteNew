@@ -34,7 +34,7 @@
           </p>
         </div>
         <div class="element-centre">
-          <img id="img_{{$resultat->alerte->id}}" src="{{URL::asset('svg/saisie')}}/deplie.svg" alt="déplie" class="otoveil">
+          <img class="img-40" id="img_{{$resultat->alerte->id}}" src="{{asset(config('chemins.saisie'))}}/deplie.svg" alt="déplie" class="otoveil">
         </div>
       </div>
       <div id = "origine_{{$resultat->alerte->id}}" class ="non-affiche" >
