@@ -2,10 +2,13 @@
 
 @extends('menus.menuprincipal')
 
-@extends('aide.aide_origines', ['page' => $page])
+@extends('aide.aide_origines')
 
 @section('contenu')
 <div class="container-fluid">
+  <div class="alert alert-success">
+    <h3 class="text-truncate">{{$saisie->elevage->nom}} <small>({{$saisie->created_at->month}} {{$saisie->created_at->locale('fr')->monthName}} {{$saisie->created_at->year}})</small></h3>
+  </div>
   <div class="bg-otorange titre rounded-0" style="width:100%">
     <img src="{{URL::asset(config('chemins.saisie'))}}/check.svg" alt="case cochée" class="">
     <h5>Questions cochées</h5>

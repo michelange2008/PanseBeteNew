@@ -15384,7 +15384,14 @@ readers do not read off random characters that represent icons */
 .aide-contenu-container {
   position: absolute;
   top: 0;
-  left: 0;
+}
+
+.aide-contenu-container-droite {
+  left: 20vw;
+}
+
+.aide-contenu-container-gauche {
+  left: 10vw;
 }
 
 .aide-icones {
@@ -16405,6 +16412,11 @@ a, a:link, a:hover {
 
 .decalage {
   margin-left: 3px;
+}
+
+.img-25 {
+  width: 25px;
+  max-height: 25px;
 }
 
 .img-40 {

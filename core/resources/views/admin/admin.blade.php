@@ -20,7 +20,7 @@
             <th>profession</th>
             <th>région</th>
             <th class="text-center">Supprimer</th>
-            <th class="text-center">Ne pas inscrire</th>
+            <th class="text-center">Envoyer un mail</th>
             <th class="text-center">Inscrire</th>
           </thead>
           <tbody id="inscription">
@@ -31,13 +31,17 @@
                   <td id="professionInsc_{{$inscription->id}}">{{$inscription->profession}}</td>
                   <td id="regionInsc_{{$inscription->id}}">{{str_replace('"', '', $inscription->region)}}</td> <!-- fallait enlever les doubles quotes des régions -->
                   <td id="suppr_{{$inscription->id}}" class="destroy cell-delmod curseur">
-                    <img src="{{asset(config('chemins.admin'))}}/destroy.svg" alt="destroy">
+                    <img src="{{asset(config('chemins.admin'))}}/destroy.svg" alt="destroy" title = "Inscription de robot à détruire sans poser de question">
                   </td>
-                  <td id="del_{{$inscription->id}}" class="delete cell-delmod curseur">
-                    <img src="{{asset(config('chemins.admin'))}}/moins.svg" alt="Ne pas garder">
+                  <td id="del_{{$inscription->id}}" class="delete cell-delmod">
+                    <a class="d-block text-center"
+                        href="mailto:{{$inscription->email}}?subject=Votre demande d'identifiant Panse-Bêtes&body=Bonjour {{$inscription->nom}}">
+                      <img class="img-25" src="{{asset(config('chemins.admin'))}}/question.svg" alt="On sait pas"
+                          title = "Inscription qui pose problème mais à qui on va envoyer un mail">
+                    </a>
                   </td>
                   <td id="ok_{{$inscription->id}}" class="garder cell-delmod curseur">
-                    <img src="{{asset(config('chemins.admin'))}}/plus.svg" alt="Garder">
+                    <img src="{{asset(config('chemins.admin'))}}/plus.svg" alt="Garder" title="Inscription OK à valider">
                   </td>
                 </tr>
               @endforeach

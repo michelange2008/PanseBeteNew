@@ -33,7 +33,6 @@ class SaisieController extends Controller
 
       session()->forget('theme');
       return view('saisie.saisieAccueil',[
-        'page' => 'saisie',
         'themes' => $themes,
         'saisie' => $saisie,
       ]);
@@ -92,7 +91,6 @@ class SaisieController extends Controller
       if($alertes->count() > 0)
       {
           return view('saisie.alertes', [
-              'page' => 'alertes',
               'alertes' => $alertes,
               'sAlertes' => $sAlertes,
           ]);
@@ -145,14 +143,12 @@ class SaisieController extends Controller
       {
           $message = "Ok, il n'y a pas de problème";
           return view('saisie.resultats', [
-              'page' => 'resultats',
               'resultats' => $resultats,
           ])->with(['message' => $message]);
       }
       else // au moins une alerte anormale
       {
           return view('saisie.resultats', [
-              'page' => 'resultats',
               'resultats' => $resultats,
           ]);
       }

@@ -31,7 +31,6 @@ class AccueilController extends Controller
       session()->forget(['espece', 'theme']);
 
       return view('accueil', [
-        "page" => "accueil",
         "saisies" => $saisies,
         'especes' => $especes,
       ]);

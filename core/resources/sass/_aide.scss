@@ -37,8 +37,6 @@
   width: 50vw;
   left: 30vw !important;
 }
-.aide-contenu-container {
-}
 
 .aide-contenu-chiffre {
   font-size: 3rem;
@@ -56,7 +54,13 @@
 .aide-contenu-container {
   position: absolute;
   top: 0;
-  left: 0;
+}
+.aide-contenu-container-droite {
+  left: 20vw;
+}
+.aide-contenu-container-gauche
+{
+  left: 10vw;
 }
 .aide-icones {
   width: 50px;

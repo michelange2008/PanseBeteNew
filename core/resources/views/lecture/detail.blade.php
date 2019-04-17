@@ -2,7 +2,7 @@
 
 @extends('menus.menuprincipal')
 
-@extends('aide.aide_detail', ['page' => $page])
+@extends('aide.aide_detail')
 
 @section('contenu')
 <div class="container-fluid">

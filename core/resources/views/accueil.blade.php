@@ -2,7 +2,7 @@
 
 @extends('menus.menuprincipal')
 
-@extends('aide.aide_accueil', ['page' => $page, 'especes' => $especes])
+@extends('aide.aide_accueil', ['especes' => $especes])
 
 @section('contenu')
 

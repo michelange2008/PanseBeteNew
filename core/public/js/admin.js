@@ -287,6 +287,7 @@ $(function() {
 
 
   function supprimer(ligne_id, url, id) {
+    console.log(url);
     $.ajaxSetup({
     headers: {
       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -387,6 +388,8 @@ $(function() {
   $('.ligne_inscription').on('click', '.destroy', function(){
     var inscription_id = $(this).attr('id').split('_')[1];
     var nom = $('#nomInsc_'+inscription_id).html();
+    var ligne_id = '#ligneInsc_'+inscription_id;
+    var url = 'inscription/destroy/';
     $.confirm({
       columnClass : 'large',
       type : 'red',
@@ -395,7 +398,7 @@ $(function() {
       content : 'Etes-vous sûr de vouloir supprimer définitivement '+nom,
       buttons : {
         supprimer : function() {
-          supprimer('inscription/destroy/', inscription_id);
+          supprimer(ligne_id, url, inscription_id);
         },
         annuler : function() {
         }
