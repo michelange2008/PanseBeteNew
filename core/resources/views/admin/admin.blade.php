@@ -3,13 +3,53 @@
 
 @extends('menus.menuprincipal')
 @push('js')
-  <script src="{{asset('js/admin.js')}}"></script>
+  <script src="{{asset(config('chemins.js'))}}/admin.js"></script>
 @endpush
 
 @section('contenu')
+  @if ($inscriptions->count() > 0)
+    <div class="container-fluid">
+      <div class="alert alert-warning">
+        <h3>Demandes d'identifiant</h3>
+      </div>
+      <div class="table-responsive contenu">
+        <table class="table table-hover">
+          <thead class="table-dark">
+            <th>nom</th>
+            <th>email</th>
+            <th>profession</th>
+            <th>région</th>
+            <th class="text-center">Supprimer</th>
+            <th class="text-center">Ne pas inscrire</th>
+            <th class="text-center">Inscrire</th>
+          </thead>
+          <tbody id="inscription">
+              @foreach ($inscriptions as $inscription)
+                <tr id="ligneInsc_{{$inscription->id}}" class="ligne_inscription">
+                  <td id="nomInsc_{{$inscription->id}}">{{$inscription->nom}}</td>
+                  <td id="emailInsc_{{$inscription->id}}">{{$inscription->email}}</td>
+                  <td id="professionInsc_{{$inscription->id}}">{{$inscription->profession}}</td>
+                  <td id="regionInsc_{{$inscription->id}}">{{str_replace('"', '', $inscription->region)}}</td> <!-- fallait enlever les doubles quotes des régions -->
+                  <td id="suppr_{{$inscription->id}}" class="destroy cell-delmod curseur">
+                    <img src="{{asset(config('chemins.admin'))}}/destroy.svg" alt="destroy">
+                  </td>
+                  <td id="del_{{$inscription->id}}" class="delete cell-delmod curseur">
+                    <img src="{{asset(config('chemins.admin'))}}/moins.svg" alt="Ne pas garder">
+                  </td>
+                  <td id="ok_{{$inscription->id}}" class="garder cell-delmod curseur">
+                    <img src="{{asset(config('chemins.admin'))}}/plus.svg" alt="Garder">
+                  </td>
+                </tr>
+              @endforeach
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  @endif
   <div id="totum" class="container-fluid">
     <div class="alert alert-success">
-      <h1>Gestion des utilisateurs</h1>
+      <h3>Gestion des utilisateurs</h3>
     </div>
     <div class="table-responsive contenu">
       <table class="table table-hover">
@@ -21,7 +61,7 @@
           <th class="text-center">Modifier</th>
           <th class="text-center">Supprimer</th>
         </thead>
-        <tbody>
+        <tbody id="user">
           @foreach ($users as $user)
             <tr id="ligne_{{$user->id}}" class="ligne {{($user->admin) ? "text-danger": ""}}">
               <td id="nom_{{$user->id}}" class="nom">{{$user->name}}</td>

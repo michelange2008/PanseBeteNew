@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/essai', ['uses' => 'EssaiController@index', 'as' => 'essai']);
+
 Route::get('/', ['uses' => 'AccueilController@index', 'as' => 'front']);
 
 Route::get('/inscription', ['uses' => 'InscriptionController@index', 'as' => 'inscription.index']);
@@ -28,8 +30,12 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::resource('/utilisateur', 'UserController');
 
-    Route::get('/admin', ['uses' => 'AdminController@index', 'as' => 'admin.index']);
+    Route::get('/administration', ['uses' => 'AdminController@index', 'as' => 'admin.index']);
 
+    // Route::get('/admin', ['uses' => 'AdminController@index', 'as' => 'admin.index']);
+    Route::delete('/inscription/destroy/{id}', ['uses' => 'InscriptionController@destroy', 'as' => 'inscription.destroy']);
+
+    Route::post('/inscription/transferre', ['uses' => 'UserController@transferre', 'as' => 'inscription.transferre']);
 
   // Routes principales
 

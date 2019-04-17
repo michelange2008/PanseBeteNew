@@ -47,4 +47,9 @@ class InscriptionController extends Controller
   {
     return view('demo');
   }
+
+  public function destroy($inscription_id)
+  {
+    Inscription::destroy($inscription_id);
+  }
 }

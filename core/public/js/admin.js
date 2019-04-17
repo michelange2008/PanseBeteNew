@@ -93,6 +93,7 @@ $(function() {
 
   $('tr').on('click', '.supprimer', function() {
     var id = $(this).attr('id').split("_")[1];
+    var ligne_id = '#ligne_'+id;
     var nom = $('#nom_'+id).html();
     var nombre_saisies = $('#saisies_'+id).html()
     //cas ou l'utilisateur a une saisie
@@ -109,7 +110,7 @@ $(function() {
           supprimer : {
             btnClass : 'btn-red',
             action: function() {
-              supprimer(id);
+              supprimer(ligne_id, 'utilisateur/', id);
             },
 
           },
@@ -140,7 +141,7 @@ $(function() {
         content : 'Etes-vous sûr de vouloir supprimer '+nom,
         buttons : {
           supprimer : function() {
-            supprimer(id);
+            supprimer(ligne_id, 'utilisateur/', id);
           },
           annuler : function() {
           }
@@ -223,8 +224,44 @@ $(function() {
         }
     });
   }
+
+  function transferreInscription(id, nom, email) {
+    $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+    });
+
+    $.ajax({
+      type: 'POST',
+      url: 'inscription/transferre',
+      data: {
+        'id' : id,
+        'nom' : nom,
+        'email' : email,
+      },
+      dataType: 'JSON',
+      success: function (data) {
+        if(data.id == "estDeja") {
+          $.alert({ // cas où un utilisateur est déjà inscrit avec le mail email
+            theme: 'dark',
+            type: 'red',
+            columnClass: 'large',
+            title: 'Attention!',
+            content: data.message,
+          });
+        } else { // Si pas d'utilisateur avec le même email, on crée sa ligne et on détruit l'autre
+          creeLigne(data.id, nom, email);
+          $('#ligneInsc_'+id).remove();
+        }
+      },
+      error: function (e) {
+            console.log(e.responseText);
+      }
+    });
+  };
+
   function modifie(id, nom, email) {
-    console.log(email);
     $.ajaxSetup({
     headers: {
       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -246,10 +283,10 @@ $(function() {
             console.log(e.responseText);
         }
     });
-  }
+  };
 
-  function supprimer(id) {
-    console.log(id);
+
+  function supprimer(ligne_id, url, id) {
     $.ajaxSetup({
     headers: {
       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -258,27 +295,28 @@ $(function() {
 
     $.ajax({
       type: 'DELETE',
-      url: 'utilisateur/'+id,
+      url: url+id,
 
       success: function (data) {
-        $('#ligne_'+id).remove();
+        $(ligne_id).remove();
+
         },
       error: function (e) {
             console.log(e.responseText);
         }
     });
-  }
+  };
 
   function creeLigne(id, nom, email) {
-    $('tbody').append('<tr><td id="nom_'+id+'" class="nom">'+nom+'</td>' +
+    $('tbody#user').append('<tr><td id="nom_'+id+'" class="nom">'+nom+'</td>' +
               '<td id="email_'+id+'" class="modifEmail curseur">'+email+'</td>' +
               '<td id="saisies_'+id+'" class="text-center saisies">0</td>' +
               '<td id="admin_'+id+'" class="text-center">NON</td>' +
               '<td id="modifier_'+id+'" class="modifier cell-delmod">' +
-                '<img src="http://localhost/pansebete/svg/modifie_gris.svg" alt="Modifier" title="Pour modifier ce nouvel utilisateur, il faut rafraichir la page (touche F5)">' +
+                '<img src="http://localhost/pansebete/core/public/img/admin/modifie_gris.svg" alt="Modifier" title="Pour modifier ce nouvel utilisateur, il faut rafraichir la page (touche F5)">' +
               '</td>' +
               '<td id="moins_'+id+'" class="supprimer cell-delmod" title="Pour supprimer ce nouvel utilisateur, il faut rafraichir la page (touche F5)">' +
-                '<img src="http://localhost/pansebete/svg/moins_gris.svg" alt="Supprimer" >' +
+                '<img src="http://localhost/pansebete/core/public/img/admin/moins_gris.svg" alt="Supprimer" >' +
               '</td></tr>');
   }
 
@@ -344,4 +382,32 @@ $(function() {
         }
     });
   }
+
+// Supprimer directement les inscriptions à qui on ne répond pas
+  $('.ligne_inscription').on('click', '.destroy', function(){
+    var inscription_id = $(this).attr('id').split('_')[1];
+    var nom = $('#nomInsc_'+inscription_id).html();
+    $.confirm({
+      columnClass : 'large',
+      type : 'red',
+      theme : 'dark',
+      title : "Suppression de "+nom+" !",
+      content : 'Etes-vous sûr de vouloir supprimer définitivement '+nom,
+      buttons : {
+        supprimer : function() {
+          supprimer('inscription/destroy/', inscription_id);
+        },
+        annuler : function() {
+        }
+      }
+    })
+  });
+
+// Transferrer les inscriptions que l'on garde
+  $('.ligne_inscription').on('click', '.garder', function() {
+    var inscription_id = $(this).attr('id').split('_')[1];
+    var nom = $('#nomInsc_'+inscription_id).html();
+    var email = $('#emailInsc_'+inscription_id).html();
+    transferreInscription(inscription_id, nom, email);
+  })
 })

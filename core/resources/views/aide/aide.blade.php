@@ -9,6 +9,11 @@
   <div class="container-fluid alert alert-success">
     <h2> <img class="aide-icones" src="{{config('chemins.images')}}instructions.svg" alt="mode d'emploi"> Panse-bêtes, comment démarrer ?</h2>
   </div>
+  <div class="col-md-4">
+    <a class="align-middle" href="{{route('demo')}}">
+      <button class="btn btn-otobleu rounded-0" type="button" name="button"><i class="fas fa-video"></i> Voir une démonstration</button>
+    </a>
+  </div>
   <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-5 m-3 p-3 border shadow">
@@ -31,10 +36,6 @@
       </div>
     </div>
 
-    <div class="col-md-7  d-flex flex-row align-items-center m-3 p-3 border">
-      <img class="img-fluid pr-3" src="{{config('chemins.aide')}}aide_theme.svg" alt="">
-      <p>Ce qui amène à une page qui liste les 7 pôles. Il faut choisir un pôle en cliquant sur son nom</p>
-    </div>
     <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-5 m-3 p-3 border shadow">

@@ -5,9 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Mail\Accepte;
+use App\Mail\Refuse;
+use Mail;
 use App\Models\Espece;
 use App\Models\User;
 use App\Models\Saisie;
+use App\Models\Inscription;
 
 class UserController extends Controller
 {
@@ -80,6 +84,41 @@ class UserController extends Controller
           "nom" => $user->name,
           "email" => $user->email
         ]);
+    }
+
+    // tranferre une inscription dans la base des utilisateurs
+    public function transferre(Request $request)
+    {
+      $datas = $request->all();
+      // retourver le mot de passe de l'inscription
+      $inscription = Inscription::find($datas['id']);
+
+      // vérifier que ce email n'existe pas dans la base de donnée
+      if(User::where('email', $datas['email'])->count() == 0) {
+        $user = User::create([
+          'name' => $datas['nom'],
+          'email' => $datas['email'],
+          'password' => $inscription->mdp,
+        ]);
+
+        $user->save();
+
+        Mail::to($user)
+                ->bcc(auth()->user())
+                ->send(new Accepte($user));
+
+        Inscription::destroy($datas['id']);
+
+        return response()->json([
+          "id" => $user->id,
+        ]);
+      } else {
+        return response()->json([
+          "id" => "estDeja",
+          "message" => "Un utilisateur avec l'email ".$datas['email']." existe déjà.",
+        ]);
+      }
+
     }
 
     /**
