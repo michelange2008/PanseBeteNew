@@ -33,9 +33,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/administration', ['uses' => 'AdminController@index', 'as' => 'admin.index']);
 
     // Route::get('/admin', ['uses' => 'AdminController@index', 'as' => 'admin.index']);
-    Route::delete('/inscription/destroy/{id}', ['uses' => 'InscriptionController@destroy', 'as' => 'inscription.destroy']);
+    // Route::delete('/inscription/destroy/{id}', ['uses' => 'InscriptionController@destroy', 'as' => 'inscription.destroy']);
 
-    Route::post('/inscription/transferre', ['uses' => 'UserController@transferre', 'as' => 'inscription.transferre']);
+    // Route::post('/inscription/transferre', ['uses' => 'UserController@transferre', 'as' => 'inscription.transferre']);
+
+    Route::get('/administration/valide/{id}', ['uses' => 'UserController@valideUser', 'as' => 'admin.valide']);
 
   // Routes principales
 

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Espece;
 use App\Models\User;
 use App\Models\Saisie;
-use App\Models\Inscription;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -13,6 +12,7 @@ class AdminController extends Controller
 {
     public function __construct()
     {
+      // accès limité aux administrateurs
       $this->middleware('isAdmin');
     }
 
@@ -34,7 +34,6 @@ class AdminController extends Controller
       return view('admin.admin', [
         'users' => $users,
         'saisies_groupees' => $saisies_groupees,
-        'inscriptions' => Inscription::all(),
       ]);
 
     }

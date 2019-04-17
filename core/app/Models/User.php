@@ -10,7 +10,7 @@ class User extends Model
 
     protected $table = 'users';
     public $timestamps = true;
-    protected $fillable = array('name', 'email', 'password','admin');
+    protected $fillable = array('name', 'email', 'password','profession', 'region', 'admin', 'valide');
 
     public function salertes()
     {
