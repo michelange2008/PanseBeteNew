@@ -1,20 +1,13 @@
 @extends('layouts.app')
 
+
 @section('contenu')
 
-<div class="erreur">
-<a href="{{route('accueil')}}" class="alert-link">
-  <div class="alert alert-warning d-flex" role="alert">
-      <div class="element-centre">
-        <img src="{{URL::asset('svg')}}/deconnecte.svg" alt="deconnecte" class="otoveil" />
-      </div class="element-centre">
-      <div>
-        <h5>Désolé mais, entre temps quelqu'un a modifié cette saisie</h5>
-        <h6>il faut retourner à l'accueil...</h6>
-
-      </div>
-  </div>
-</a>
+<div class="jumbotron">
+  <h1 class="display-4">Désolé !</h1>
+  <p class="lead">Il semble que vous vous soyez égarés dans les dédales de l'application</p>
+  <hr class="my-4">
+  <p>Mais n'ayez crainte, il vous suffira de cliquer sur le bouton ci-dessous pour trouver une issue.</p>
+  <a class="btn btn-otobleu btn-lg" href="{{route('accueil')}}" role="button">Sortir</a>
 </div>
-
 @endsection

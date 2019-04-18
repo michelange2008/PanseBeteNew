@@ -18,9 +18,11 @@ Route::get('/inscription', ['uses' => 'InscriptionController@index', 'as' => 'in
 
 Route::post('/inscription/envoi', ['uses' => 'InscriptionController@envoi', 'as' => 'inscription.envoi']);
 
+Route::get('/inscription/patience', ['uses' => 'InscriptionController@afficheNonValide', 'as' => 'inscription.nonvalide']);
+
 Route::get('/demo', ['uses' => 'InscriptionController@demo', 'as' => 'demo']);
 
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth', 'isValid']], function () {
 
   // Gestion des utilisateurs
 

@@ -37,25 +37,25 @@
                   </div><div class="form-group">
                     <select class="custom-select" name="region">
                       <option selected>Votre région ?</option>
-                      <option value= 'Auvergne-Rhône-Alpes'>Auvergne-Rhône-Alpes</option>
-                      <option value= 'Bourgogne-Franche-Comté'>Bourgogne-Franche-Comté</option>
-                      <option value= 'Bretagne'>Bretagne</option>
-                      <option value= 'Centre-Val_de_Loire'>Centre-Val de Loire</option>
-                      <option value= 'Corse'>Corse</option>
-                      <option value= 'Grand_Est'>Grand Est</option>
-                      <option value= 'Guadeloupe'>Guadeloupe</option>
-                      <option value= 'Guyane'>Guyane</option>
-                      <option value= 'Hauts-de-France'>Hauts-de-France</option>
-                      <option value= 'Île-de-France'>Île-de-France</option>
-                      <option value= 'La_Réunion'>La Réunion</option>
-                      <option value= 'Martinique'>Martinique</option>
-                      <option value= 'Mayotte'>Mayotte</option>
-                      <option value= 'Normandie'>Normandie</option>
-                      <option value= 'Nouvelle-Aquitaine'>Nouvelle-Aquitaine</option>
-                      <option value= 'Occitanie'>Occitanie</option>
-                      <option value= 'Pays_de_la_Loire'>Pays de la Loire</option>
+                      <option value= "Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
+                      <option value= "Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
+                      <option value= "Bretagne">Bretagne</option>
+                      <option value= "Centre-Val_de_Loire">Centre-Val de Loire</option>
+                      <option value= "Corse">Corse</option>
+                      <option value= "Grand_Est">Grand Est</option>
+                      <option value= "Guadeloupe">Guadeloupe</option>
+                      <option value= "Guyane">Guyane</option>
+                      <option value= "Hauts-de-France">Hauts-de-France</option>
+                      <option value= "Île-de-France">Île-de-France</option>
+                      <option value= "La_Réunion">La Réunion</option>
+                      <option value= "Martinique">Martinique</option>
+                      <option value= "Mayotte">Mayotte</option>
+                      <option value= "Normandie">Normandie</option>
+                      <option value= "Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
+                      <option value= "Occitanie">Occitanie</option>
+                      <option value= "Pays_de_la_Loire">Pays de la Loire</option>
                       <option value= "Provence-Alpes-Côte_d'Azur">Provence-Alpes-Côte d'Azur</option>
-                      <option value= 'Hors_de_France'>Hors de France</option>
+                      <option value= "Hors_de_France">Hors de France</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -70,7 +70,6 @@
                 <div class="d-flex justify-content-end">
                   {{Form::submit('Envoi',['class' => 'btn btn-otorange rounded-0'])}}
                 </div>
-
                 {{Form::close()}}
 
             </div>

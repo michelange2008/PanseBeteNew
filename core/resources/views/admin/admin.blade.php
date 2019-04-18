@@ -72,7 +72,7 @@
             @if ($user->valide == 1)
               <tr id="ligne_{{$user->id}}" class="ligne {{($user->admin) ? "text-danger": ""}}">
                 <td id="nom_{{$user->id}}" class="nom">{{$user->name}}</td>
-                <td id="email_{{$user->id}}" class="modifEmail curseur">{{$user->email}}</td>
+                <td id="email_{{$user->id}}" class="modifEmail">{{$user->email}}</td>
                 <td id="saisies_{{$user->id}}" class="text-center saisies">{{count($saisies_groupees[$user->id])}}</td>
                 <td id="admin_{{$user->id}}" class="text-center">{{($user->admin) ? "OUI" : "NON"}}</td>
                 <td id="modifier_{{$user->id}}" class="modifier cell-delmod curseur">

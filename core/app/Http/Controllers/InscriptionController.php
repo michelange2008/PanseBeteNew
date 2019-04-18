@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Inscription;
+use App\Models\User;
 
 class InscriptionController extends Controller
 {
@@ -26,13 +26,14 @@ class InscriptionController extends Controller
     $datas['profession'] = (array_key_exists('profession', $datas) && $datas['profession'] != "Votre profession ?") ? $datas['profession'] : "non précisé";
     $datas['region'] = (array_key_exists('region', $datas) && $datas['region'] != "Votre région ?") ? $datas['region'] : "non précisé";
 
-    if(Inscription::where('email', $datas['email'])->count() == 0) {
-      $nouveau = Inscription::firstOrCreate([
-        'nom' => $datas['nom'],
+    if(User::where('email', $datas['email'])->count() == 0) {
+      $nouveau = User::firstOrCreate([
+        'name' => $datas['nom'],
         'email' => $datas['email'],
-        'mdp' => bcrypt($datas['mot_de_passe']),
+        'password' => bcrypt($datas['mot_de_passe']),
         'profession' => $datas['profession'],
-        'region' => $datas['region']
+        'region' => $datas['region'],
+        'valide' => 0,
       ]);
 
       $message = "Nous avons bien enregistré votre demande, nous allons vous répondre dès que possible";
@@ -48,8 +49,9 @@ class InscriptionController extends Controller
     return view('demo');
   }
 
-  public function destroy($inscription_id)
+  public function afficheNonValide()
   {
-    Inscription::destroy($inscription_id);
+    $message = "Une demande avec cette adresse mail a déjà été faite. Ne vous inquiétez pas, nous allons vous répondre dès que possible";
+    return view('admin.reception')->with(['error' => $message]);
   }
 }

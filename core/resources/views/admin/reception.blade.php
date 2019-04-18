@@ -19,8 +19,8 @@
             @endisset
 
             <div class="">
-              <a href="http://www.itab.asso.fr/">
-                <button class="btn btn-otobleu rounded-0" type="button" name="button"> <i class="fa fa-sign-out-alt"></i> Quitter Panse-Bêtes</button>
+              <a href="{{route('login')}}">
+                <button class="btn btn-otobleu rounded-0" type="button" name="button"> <i class="fa fa-sign-out-alt"></i> Retour</button>
               </a>
             </div>
           </div>
