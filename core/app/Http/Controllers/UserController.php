@@ -66,18 +66,32 @@ class UserController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Création d'un nouvel utilisateur
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
+      // validation de la saisie
+        $datas = request()->validate([
+          'nom' => 'required|max:191',
+          'email' => 'required|email|max:191|unique:users',
+          'mot_de_passe' => 'required|min:6',
+          'retapez_votre_mot_de_passe' => 'required|min:6|same:mot_de_passe',
+          'profession' => 'max:191',
+          'region' => 'max:191',
+          'captcha' => 'required|in:agriculture biologique, agriculture bio',
+        ]);
+        $datas['profession'] = (array_key_exists('profession', $datas) && $datas['profession'] != "Votre profession ?") ? $datas['profession'] : "non précisé";
+        $datas['region'] = (array_key_exists('region', $datas) && $datas['region'] != "Votre région ?") ? $datas['region'] : "non précisé";
+      // création de l'utilisateur
         $datas = $request->all();
         $user = new User();
         $user->name = $datas['nom'];
         $user->email = $datas['email'];
-        $user->password = bcrypt($datas['mdp']);
+        $user->password = bcrypt($datas['mot_de_passe']);
+        $user->valide = $datas['valide'];
         $user->save();
         return response()->json([
           "id" => $user->id,
@@ -86,41 +100,25 @@ class UserController extends Controller
         ]);
     }
 
-    // tranferre une inscription dans la base des utilisateurs
-    public function transferre(Request $request)
+    /**
+    * Rend valide un user
+    **/
+    public function valideUser($user_id)
     {
-      $datas = $request->all();
-      // retourver le mot de passe de l'inscription
-      $inscription = Inscription::find($datas['id']);
+      // On change la statut non valide de l'user
+      $user = User::find($user_id);
+      $user->valide = 1;
+      $user->save();
 
-      // vérifier que ce email n'existe pas dans la base de donnée
-      if(User::where('email', $datas['email'])->count() == 0) {
-        $user = User::create([
-          'name' => $datas['nom'],
-          'email' => $datas['email'],
-          'password' => $inscription->mdp,
-        ]);
+      // On lui envoie un mail
+      Mail::to($user)->bcc(auth()->user())->send(new Accepte($user));
 
-        $user->save();
-
-        Mail::to($user)
-                ->bcc(auth()->user())
-                ->send(new Accepte($user));
-
-        Inscription::destroy($datas['id']);
-
-        return response()->json([
-          "id" => $user->id,
-        ]);
-      } else {
-        return response()->json([
-          "id" => "estDeja",
-          "message" => "Un utilisateur avec l'email ".$datas['email']." existe déjà.",
-        ]);
-      }
-
+      return response()->json([
+        "id" => $user->id,
+        "nom" => $user->name,
+        "email" => $user->email,
+      ]);
     }
-
     /**
      * Display the specified resource.
      *
@@ -172,7 +170,7 @@ class UserController extends Controller
     {
         User::destroy($id);
 
-        return response()->json(['message' => 'OK']);
+        return response()->json(['message' => $id]);
     }
 
     public function tousSauf($id)

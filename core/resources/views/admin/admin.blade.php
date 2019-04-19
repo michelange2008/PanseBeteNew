@@ -7,7 +7,7 @@
 @endpush
 
 @section('contenu')
-  @if ($inscriptions->count() > 0)
+  @if ($users->count() > 0)
     <div class="container-fluid">
       <div class="alert alert-warning">
         <h3>Demandes d'identifiant</h3>
@@ -20,26 +20,32 @@
             <th>profession</th>
             <th>région</th>
             <th class="text-center">Supprimer</th>
-            <th class="text-center">Ne pas inscrire</th>
+            <th class="text-center">Envoyer un mail</th>
             <th class="text-center">Inscrire</th>
           </thead>
-          <tbody id="inscription">
-              @foreach ($inscriptions as $inscription)
-                <tr id="ligneInsc_{{$inscription->id}}" class="ligne_inscription">
-                  <td id="nomInsc_{{$inscription->id}}">{{$inscription->nom}}</td>
-                  <td id="emailInsc_{{$inscription->id}}">{{$inscription->email}}</td>
-                  <td id="professionInsc_{{$inscription->id}}">{{$inscription->profession}}</td>
-                  <td id="regionInsc_{{$inscription->id}}">{{str_replace('"', '', $inscription->region)}}</td> <!-- fallait enlever les doubles quotes des régions -->
-                  <td id="suppr_{{$inscription->id}}" class="destroy cell-delmod curseur">
-                    <img src="{{asset(config('chemins.admin'))}}/destroy.svg" alt="destroy">
-                  </td>
-                  <td id="del_{{$inscription->id}}" class="delete cell-delmod curseur">
-                    <img src="{{asset(config('chemins.admin'))}}/moins.svg" alt="Ne pas garder">
-                  </td>
-                  <td id="ok_{{$inscription->id}}" class="garder cell-delmod curseur">
-                    <img src="{{asset(config('chemins.admin'))}}/plus.svg" alt="Garder">
-                  </td>
-                </tr>
+          <tbody id="nonvalide">
+              @foreach ($users as $user)
+                @if ($user->valide == 0)
+                  <tr id="ligneNonValide_{{$user->id}}" class="ligne_nonvalide">
+                    <td id="nomNonValide_{{$user->id}}">{{$user->name}}</td>
+                    <td id="emailNonValide_{{$user->id}}">{{$user->email}}</td>
+                    <td id="professionNonValide_{{$user->id}}">{{$user->profession}}</td>
+                    <td id="regionNonValide_{{$user->id}}">{{str_replace('"', '', $user->region)}}</td> <!-- fallait enlever les doubles quotes des régions -->
+                    <td id="suppr_{{$user->id}}" class="destroy cell-delmod curseur">
+                      <img src="{{asset(config('chemins.admin'))}}/destroy.svg" alt="destroy" title = "Inscription de robot à détruire sans poser de question">
+                    </td>
+                    <td id="del_{{$user->id}}" class="delete cell-delmod">
+                      <a class="d-block text-center"
+                      href="mailto:{{$user->email}}?subject=Votre demande d'identifiant Panse-Bêtes&body=Bonjour {{$user->nom}}">
+                      <img class="img-25" src="{{asset(config('chemins.admin'))}}/question.svg" alt="On sait pas"
+                      title = "Inscription qui pose problème mais à qui on va envoyer un mail">
+                      </a>
+                    </td>
+                    <td id="ok_{{$user->id}}" class="garder cell-delmod curseur">
+                      <img src="{{asset(config('chemins.admin'))}}/plus.svg" alt="Garder" title="Inscription OK à valider">
+                    </td>
+                  </tr>
+                @endif
               @endforeach
           </tbody>
         </table>
@@ -63,18 +69,20 @@
         </thead>
         <tbody id="user">
           @foreach ($users as $user)
-            <tr id="ligne_{{$user->id}}" class="ligne {{($user->admin) ? "text-danger": ""}}">
-              <td id="nom_{{$user->id}}" class="nom">{{$user->name}}</td>
-              <td id="email_{{$user->id}}" class="modifEmail curseur">{{$user->email}}</td>
-              <td id="saisies_{{$user->id}}" class="text-center saisies">{{count($saisies_groupees[$user->id])}}</td>
-              <td id="admin_{{$user->id}}" class="text-center">{{($user->admin) ? "OUI" : "NON"}}</td>
-              <td id="modifier_{{$user->id}}" class="modifier cell-delmod curseur">
-                <img src="{{asset(config('chemins.admin'))}}/modifie.svg" alt="Modifier" title="Modifier cet utilisateur">
-              </td>
-              <td id="moins_{{$user->id}}" class="supprimer cell-delmod curseur" title="Supprimer cet utilisateur">
-                <img src="{{asset(config('chemins.admin'))}}/moins.svg" alt="Supprimer">
-              </td>
-            </tr>
+            @if ($user->valide == 1)
+              <tr id="ligne_{{$user->id}}" class="ligne {{($user->admin) ? "text-danger": ""}}">
+                <td id="nom_{{$user->id}}" class="nom">{{$user->name}}</td>
+                <td id="email_{{$user->id}}" class="modifEmail">{{$user->email}}</td>
+                <td id="saisies_{{$user->id}}" class="text-center saisies">{{count($saisies_groupees[$user->id])}}</td>
+                <td id="admin_{{$user->id}}" class="text-center">{{($user->admin) ? "OUI" : "NON"}}</td>
+                <td id="modifier_{{$user->id}}" class="modifier cell-delmod curseur">
+                  <img src="{{asset(config('chemins.admin'))}}/modifie.svg" alt="Modifier" title="Modifier cet utilisateur">
+                </td>
+                <td id="moins_{{$user->id}}" class="supprimer cell-delmod curseur" title="Supprimer cet utilisateur">
+                  <img src="{{asset(config('chemins.admin'))}}/moins.svg" alt="Supprimer">
+                </td>
+              </tr>
+            @endif
           @endforeach
         </tbody>
       </table>

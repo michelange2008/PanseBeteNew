@@ -15242,45 +15242,7 @@ readers do not read off random characters that represent icons */
 
 .acces {
   height: 100vh;
-  background: #f58021;
-  padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.acces-logo {
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.acces-logo > img {
-  max-width: 100%;
-}
-
-.acces-entete {
-  margin: auto;
-  padding: 20px 20px 0 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.commencer {
-  margin-top: 40px;
+  padding-top: 20vh;
 }
 
 @media screen and (orientation: landscape) and (max-width: 800px) {
@@ -15293,25 +15255,11 @@ readers do not read off random characters that represent icons */
         -ms-flex-align: end;
             align-items: end;
   }
-  .acces-entete {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding-bottom: 0;
-    padding-top: 0;
-  }
 }
 
 @media screen and (min-width: 800px) {
   .acces {
-    height: 94vh;
-  }
-  .acces-entete {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -ms-flex-item-align: end;
-        align-self: end;
+    height: 75vh;
   }
 }
 
@@ -15384,7 +15332,14 @@ readers do not read off random characters that represent icons */
 .aide-contenu-container {
   position: absolute;
   top: 0;
-  left: 0;
+}
+
+.aide-contenu-container-droite {
+  left: 20vw;
+}
+
+.aide-contenu-container-gauche {
+  left: 10vw;
 }
 
 .aide-icones {
@@ -16303,11 +16258,11 @@ a, a:link, a:hover {
 }
 
 .oeil-ferme {
-  background: url("../svg/oeil_ferme.svg") center no-repeat;
+  background: url("../img/oeil_ferme.svg") center no-repeat;
 }
 
 .oeil-ouvert {
-  background: url("../svg/oeil_ouvert.svg") center no-repeat;
+  background: url("../img/oeil_ouvert.svg") center no-repeat;
 }
 
 /* LECTURE LISTE AJOUTER SAISIE */
@@ -16405,6 +16360,11 @@ a, a:link, a:hover {
 
 .decalage {
   margin-left: 3px;
+}
+
+.img-25 {
+  width: 25px;
+  max-height: 25px;
 }
 
 .img-40 {

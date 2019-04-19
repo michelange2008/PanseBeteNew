@@ -10,17 +10,19 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/essai', ['uses' => 'EssaiController@index', 'as' => 'essai']);
-
 Route::get('/', ['uses' => 'AccueilController@index', 'as' => 'front']);
 
-Route::get('/inscription', ['uses' => 'InscriptionController@index', 'as' => 'inscription.index']);
+Route::get('/visiteur', ['uses' => 'VisiteurController@index', 'as' => 'visiteur.index']);
 
-Route::post('/inscription/envoi', ['uses' => 'InscriptionController@envoi', 'as' => 'inscription.envoi']);
+Route::post('/visiteur/envoi', ['uses' => 'VisiteurController@envoi', 'as' => 'visiteur.envoi']);
 
-Route::get('/demo', ['uses' => 'InscriptionController@demo', 'as' => 'demo']);
+Route::get('/visiteur/patience', ['uses' => 'VisiteurController@afficheNonValide', 'as' => 'visiteur.nonvalide']);
 
-Route::group(['middleware' => ['auth']], function () {
+Route::get('/demo', ['uses' => 'VisiteurController@demo', 'as' => 'demo']);
+
+Route::get('/presentation', ['uses' => 'VisiteurController@presentation', 'as' => 'visiteur.presentation']);
+
+Route::group(['middleware' => ['auth', 'isValid']], function () {
 
   // Gestion des utilisateurs
 
@@ -33,15 +35,17 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/administration', ['uses' => 'AdminController@index', 'as' => 'admin.index']);
 
     // Route::get('/admin', ['uses' => 'AdminController@index', 'as' => 'admin.index']);
-    Route::delete('/inscription/destroy/{id}', ['uses' => 'InscriptionController@destroy', 'as' => 'inscription.destroy']);
+    // Route::delete('/visiteur/destroy/{id}', ['uses' => 'VisiteurController@destroy', 'as' => 'visiteur.destroy']);
 
-    Route::post('/inscription/transferre', ['uses' => 'UserController@transferre', 'as' => 'inscription.transferre']);
+    // Route::post('/visiteur/transferre', ['uses' => 'UserController@transferre', 'as' => 'visiteur.transferre']);
+
+    Route::get('/administration/valide/{id}', ['uses' => 'UserController@valideUser', 'as' => 'admin.valide']);
 
   // Routes principales
 
     Route::get('/accueil', ['uses' => 'AccueilController@accueil', 'as' => 'accueil']);
 
-    Route::get('/presentation', ['uses' => 'AccueilController@presentation', 'as' => 'presentation']);
+    Route::get('/description', ['uses' => 'AccueilController@description', 'as' => 'description']);
 
     Route::get('/instructions', ['uses' => 'AccueilController@instructions', 'as' => 'instructions']);
 

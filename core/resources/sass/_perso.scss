@@ -86,10 +86,10 @@ a, a:link, a:hover  {
   margin-left: 2px;
 }
 .oeil-ferme {
-  background: url('../svg/oeil_ferme.svg') center no-repeat;
+  background: url('../img/oeil_ferme.svg') center no-repeat;
 }
 .oeil-ouvert {
-  background: url('../svg/oeil_ouvert.svg') center no-repeat;
+  background: url('../img/oeil_ouvert.svg') center no-repeat;
 }
 
 /* LECTURE LISTE AJOUTER SAISIE */
@@ -167,6 +167,10 @@ a, a:link, a:hover  {
 }
 .decalage {
   margin-left: 3px;
+}
+.img-25 {
+  width: 25px;
+  max-height: 25px;
 }
 .img-40 {
   width: 40px;

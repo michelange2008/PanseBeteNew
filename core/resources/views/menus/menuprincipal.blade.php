@@ -18,7 +18,7 @@
                       </a>
 
                       <div class="dropdown-menu" aria-labelledby="utilisateur">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
+                        <a class="dropdown-item" href="{{ route('login') }}"
                               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                               Déconnection
                         </a>
@@ -37,7 +37,7 @@
                   </a>
                   <div class="dropdown-menu" aria-labelledby="infos">
                     <a class="dropdown-item" href="{{route('instructions')}}">Panse-Bêtes&nbsp?</a>
-                    <a class="dropdown-item" href="{{route('presentation')}}">Otoveil&nbsp?</a>
+                    <a class="dropdown-item" href="{{route('description')}}">Otoveil&nbsp?</a>
                     <a class="dropdown-item" href="{{route('credits')}}">Qui a fait quoi&nbsp?</a>
                     <a class="dropdown-item" href="{{route('mentions_legales')}}">Mentions légales</a>
                   </div>

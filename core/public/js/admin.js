@@ -42,7 +42,7 @@ $(function() {
         }
       })
     })
-  // Ajout d'un utilisateur
+  // Ajout d'un utilisateur valide
   $('#plus').on('click', function() {
     $.confirm({
       columnClass : 'large',
@@ -62,7 +62,42 @@ $(function() {
         '</div><div class="form-group">' +
         '<label>Retapez le mot de passe (6 car. mini)</label>' +
         '<input type="password" placeholder="retapez le mot de passe" class = "mdp2 form-control" required />' +
-        '</div></form>',
+        '</div></form>'+
+        '<div class="form-group">'+
+            '<select class="custom-select" name="profession">'+
+              '<option selected>Profession ?</option>'+
+              '<option value="Eleveur">Eleveur</option>'+
+              '<option value="Technicien">Technicien</option>'+
+              '<option value="Animateur">Animateur</option>'+
+              '<option value="Vétérinaire">Vétérinaire</option>'+
+              '<option value="Enseignant">Enseignant</option>'+
+              '<option value="Etudiant">Etudiant</option>'+
+              '<option value="Autre">Autre</option>'+
+            '</select>'+
+          '</div><div class="form-group">'+
+            '<select class="custom-select" name="region">'+
+              '<option selected>Région ?</option>'+
+              '<option value= "Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>'+
+              '<option value= "Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>'+
+              '<option value= "Bretagne">Bretagne</option>'+
+              '<option value= "Centre-Val_de_Loire">Centre-Val de Loire</option>'+
+              '<option value= "Corse">Corse</option>'+
+              '<option value= "Grand_Est">Grand Est</option>'+
+              '<option value= "Guadeloupe">Guadeloupe</option>'+
+              '<option value= "Guyane">Guyane</option>'+
+              '<option value= "Hauts-de-France">Hauts-de-France</option>'+
+              '<option value= "Île-de-France">Île-de-France</option>'+
+              '<option value= "La_Réunion">La Réunion</option>'+
+              '<option value= "Martinique">Martinique</option>'+
+              '<option value= "Mayotte">Mayotte</option>'+
+              '<option value= "Normandie">Normandie</option>'+
+              '<option value= "Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>'+
+              '<option value= "Occitanie">Occitanie</option>'+
+              '<option value= "Pays_de_la_Loire">Pays de la Loire</option>'+
+              '<option value= "Provence-Alpes-Côte_d_Azur">Provence-Alpes-Côte d Azur</option>'+
+              '<option value= "Hors_de_France">Hors de France</option>'+
+            '</select>'+
+        '</div>',
       buttons : {
         formSubmit: {
           text : 'enregistrer',
@@ -70,10 +105,12 @@ $(function() {
           action : function(data) {
             var nom = this.$content.find('.nom').val();
             var email = this.$content.find('.email').val();
-            var mdp1 = this.$content.find('.mdp1').val();
-            var mdp2 = this.$content.find('.mdp2').val();
-            if(verifChampsRemplis(nom, email, mdp1, mdp2) && verifEmail(email) && verifMdpEgal(mdp1, mdp2) && verifTailleMdp(mdp1)) {
-              envoi(nom, email, mdp1);
+            var mot_de_passe = this.$content.find('.mdp1').val();
+            var retapez_votre_mot_de_passe = this.$content.find('.mdp2').val();
+            var captcha = "agriculture biologique"
+            var valide = 1;
+            if(verifChampsRemplis(nom, email, mot_de_passe, retapez_votre_mot_de_passe) && verifEmail(email) && verifMdpEgal(mot_de_passe, retapez_votre_mot_de_passe) && verifTailleMdp(mot_de_passe)) {
+              envoi(nom, email, mot_de_passe, retapez_votre_mot_de_passe, valide, captcha);
             }
             else {
               return false;
@@ -91,6 +128,7 @@ $(function() {
     })
   })
 
+// suppression d'un utilisateur valide
   $('tr').on('click', '.supprimer', function() {
     var id = $(this).attr('id').split("_")[1];
     var ligne_id = '#ligne_'+id;
@@ -184,7 +222,7 @@ $(function() {
   }
 
   function verifTailleMdp(mdp) {
-    if(mdp.length < 7) {
+    if(mdp.length < 6) {
       alerte("Le mot de passe est trop court")
       return false;
     }
@@ -200,7 +238,7 @@ $(function() {
     });
   }
 
-  function envoi(nom, email, mdp) {
+  function envoi(nom, email, mot_de_passe, retapez_votre_mot_de_passe, valide, captcha) {
     $.ajaxSetup({
     headers: {
       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -213,7 +251,10 @@ $(function() {
       data: {
         'nom' : nom,
         'email' : email,
-        'mdp' : mdp
+        'mot_de_passe' : mot_de_passe,
+        'retapez_votre_mot_de_passe' : retapez_votre_mot_de_passe,
+        'valide': valide,
+        'captcha': captcha
       },
       dataType: 'JSON',
       success: function (data) {
@@ -224,42 +265,6 @@ $(function() {
         }
     });
   }
-
-  function transferreInscription(id, nom, email) {
-    $.ajaxSetup({
-    headers: {
-      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-      }
-    });
-
-    $.ajax({
-      type: 'POST',
-      url: 'inscription/transferre',
-      data: {
-        'id' : id,
-        'nom' : nom,
-        'email' : email,
-      },
-      dataType: 'JSON',
-      success: function (data) {
-        if(data.id == "estDeja") {
-          $.alert({ // cas où un utilisateur est déjà inscrit avec le mail email
-            theme: 'dark',
-            type: 'red',
-            columnClass: 'large',
-            title: 'Attention!',
-            content: data.message,
-          });
-        } else { // Si pas d'utilisateur avec le même email, on crée sa ligne et on détruit l'autre
-          creeLigne(data.id, nom, email);
-          $('#ligneInsc_'+id).remove();
-        }
-      },
-      error: function (e) {
-            console.log(e.responseText);
-      }
-    });
-  };
 
   function modifie(id, nom, email) {
     $.ajaxSetup({
@@ -299,7 +304,6 @@ $(function() {
 
       success: function (data) {
         $(ligne_id).remove();
-
         },
       error: function (e) {
             console.log(e.responseText);
@@ -384,9 +388,11 @@ $(function() {
   }
 
 // Supprimer directement les inscriptions à qui on ne répond pas
-  $('.ligne_inscription').on('click', '.destroy', function(){
-    var inscription_id = $(this).attr('id').split('_')[1];
-    var nom = $('#nomInsc_'+inscription_id).html();
+  $('.ligne_nonvalide').on('click', '.destroy', function(){
+    var nonvalide_id = $(this).attr('id').split('_')[1];
+    var nom = $('#nomNonValide_'+nonvalide_id).html();
+    var ligne_id = '#ligneNonValide_'+nonvalide_id;
+    var url = 'utilisateur/';
     $.confirm({
       columnClass : 'large',
       type : 'red',
@@ -395,7 +401,7 @@ $(function() {
       content : 'Etes-vous sûr de vouloir supprimer définitivement '+nom,
       buttons : {
         supprimer : function() {
-          supprimer('inscription/destroy/', inscription_id);
+          supprimer(ligne_id, url, nonvalide_id);
         },
         annuler : function() {
         }
@@ -403,11 +409,28 @@ $(function() {
     })
   });
 
-// Transferrer les inscriptions que l'on garde
-  $('.ligne_inscription').on('click', '.garder', function() {
+// Valide un utilisateur qui s'est inscrit et que l'on garde
+  $('.ligne_nonvalide').on('click', '.garder', function() {
     var inscription_id = $(this).attr('id').split('_')[1];
-    var nom = $('#nomInsc_'+inscription_id).html();
-    var email = $('#emailInsc_'+inscription_id).html();
-    transferreInscription(inscription_id, nom, email);
-  })
+
+    $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+    });
+
+    $.ajax({
+      type: 'GET',
+      url: 'administration/valide/'+inscription_id,
+      dataType: 'JSON',
+      success: function (data) {
+          creeLigne(data.id, data.nom, data.email);
+          $('#ligneNonValide_'+data.id).remove();
+      },
+      error: function (e) {
+            console.log(e.responseText);
+      }
+    });
+  });
+
 })

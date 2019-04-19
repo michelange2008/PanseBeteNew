@@ -22,7 +22,6 @@ class LectureController extends Controller
         $themes = Theme::all();
 
         return view('lecture.detail', [
-            'page' => 'detail',
             'saisie' => $saisie,
             'themes' => $themes,
         ]);
@@ -73,11 +72,13 @@ class LectureController extends Controller
     {
       session()->put('saisie_id', $saisie_id);
 
+      $saisie = Saisie::find($saisie_id);
+
       $sorigines = Sorigine::where('saisie_id', $saisie_id)->get();
 
       return view('lecture.originesListe', [
-        'page' => 'origines',
         'sorigines' => $sorigines,
+        'saisie' => $saisie,
       ]);
     }
 }

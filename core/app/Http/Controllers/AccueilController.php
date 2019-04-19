@@ -31,7 +31,6 @@ class AccueilController extends Controller
       session()->forget(['espece', 'theme']);
 
       return view('accueil', [
-        "page" => "accueil",
         "saisies" => $saisies,
         'especes' => $especes,
       ]);
@@ -42,9 +41,9 @@ class AccueilController extends Controller
       return view('divers.instructions');
     }
 
-    public function presentation()
+    public function description()
     {
-      return view('divers.presentation');
+      return view('divers.description');
     }
 
     public function credits()
