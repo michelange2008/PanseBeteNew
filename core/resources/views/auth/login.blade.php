@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card" style="margin-top:10px">
               <div>
-                <img src="{{asset(config('chemins.images'))}}/otoveil.jpeg" class="" alt="otoveil" style="height:130px"/>
+                <img src="{{asset(config('chemins.images'))}}/itab_otoveil_long.jpeg" class="" alt="otoveil" style="width:100%"/>
 
               </div>
                 <div class="card-header">
@@ -45,7 +45,7 @@
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
-                                  <div class="oeil oeil-ouvert" alt="affiche le mot de passe"></div>
+                                  <div class="oeil oeil-ouvert" alt="affiche le mot de passe" title="afficher/cacher le mot de passe"></div>
                             </div>
                         </div>
 
@@ -64,7 +64,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-otobleu">
-                                    {{ __('Connection') }}
+                                    <i class="fas fa-sign-in-alt"></i> {{ __('Connection') }}
                                 </button>
 
                                 <a class="d-block" href="{{ route('password.request') }}">
@@ -84,35 +84,16 @@
     <div class="col-md-8">
       <div class="card">
         <div class="card-header">
-          <h5>Vous n'avez pas d'identifiant et de mot de passe ?</h5>
-          <h5>Savez-vous ce qu'est Panse-Bêtes ?</h5>
+          <h5>C'est votre première fois ?</h5>
         </div>
-        <div class="card-body d-flex flex-column">
-          <p class="text-break">Panse-Bêtes est un outil permettant une approche globale la situation sanitaire d'un troupeau. Il est destiné aux éleveurs, aux techniciens et aux vétérinaires </p>
-          <p class="text-break">Cet outil permet de passer en revue les différentes composantes d'un élevage (santé globale, métabolisme, santé des jeunes, mamelle, pieds, etc.) et d'objectiver les causes possibles de problèmes.</p>
-          <div class="row mb-3">
-            <div class="col-md-8">
-              <p class="text-break">Pour voir une démo de Panses-Bêtes <i class="fas fa-arrow-right"></i></p>
-            </div><div class="col-md-4">
-              <a class="align-middle" href="{{route('demo')}}">
-                <button class="btn btn-otobleu rounded-0" type="button" name="button"><i class="fas fa-video"></i> Voir une démonstration</button>
-              </a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-8">
-              <p>Pour pouvoir utiliser Panse-Bêtes  <i class="fas fa-arrow-right"></i></p>
-            </div><div class="col-md-4">
-              <a class="align-middle" href="{{route('inscription.index')}}">
-                <button class="btn btn-otorange rounded-0" type="button" name="button"><i class="far fa-id-card"></i> Demander un identifiant</button>
-              </div>
+        <div class="card-body d-flex justify-content-center">
+            <a href="{{route('visiteur.index')}}">
+              <button class="btn btn-otorange" type="button" name="button"><i class="far fa-id-card"></i> Demander un identifiant</button>
             </a>
           </div>
-
-          </div>
       </div>
-
     </div>
   </div>
 </div>
+
 @endsection

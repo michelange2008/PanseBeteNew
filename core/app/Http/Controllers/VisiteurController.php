@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 
-class InscriptionController extends Controller
+class VisiteurController extends Controller
 {
   public function index()
   {
@@ -53,5 +53,10 @@ class InscriptionController extends Controller
   {
     $message = "Une demande avec cette adresse mail a déjà été faite. Ne vous inquiétez pas, nous allons vous répondre dès que possible";
     return view('admin.reception')->with(['error' => $message]);
+  }
+
+  public function presentation()
+  {
+    return view('divers.presentation');
   }
 }

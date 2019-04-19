@@ -3,7 +3,7 @@
 @section('contenu')
   <div class="container-fluid">
     <div class="row justify-content-center">
-      <div class="col-8">
+      <div class="col-md-8">
         <div class="card m-3">
           <img class="card-img-top mb-3" src="{{asset(config('chemins.images'))}}/itab_otoveil_long.jpeg" alt="ITAB Otoveil">
           <div class="card-body">
