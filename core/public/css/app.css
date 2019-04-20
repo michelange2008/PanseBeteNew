@@ -15259,7 +15259,7 @@ readers do not read off random characters that represent icons */
 
 @media screen and (min-width: 800px) {
   .acces {
-    height: 75vh;
+    height: 94vh;
   }
 }
 
@@ -16186,7 +16186,7 @@ a, a:link, a:hover {
 
 .bg-otobleu, .btn-otobleu {
   background: #125e6b;
-  color: white;
+  color: white !important;
 }
 
 .bg-otobleu-trans, .btn-otobleu-trans {
@@ -16241,8 +16241,20 @@ a, a:link, a:hover {
   color: #dadf21;
 }
 
-.coor-otorange {
+.color-otorange {
   color: #f58021;
+}
+
+.nav-link {
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+.nav-link:hover {
+  font-weight: 400;
+  background: lightgrey;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
 }
 
 /* LOGIN */

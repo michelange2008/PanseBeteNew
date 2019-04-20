@@ -7,7 +7,7 @@
 @section('contenu')
 
   <div class="container-fluid alert alert-success">
-    <h2> <img class="aide-icones" src="{{config('chemins.images')}}instructions.svg" alt="mode d'emploi"> Panse-bêtes, comment démarrer ?</h2>
+    <h2> <img class="aide-icones" src="{{config('chemins.images')}}instructions.svg" alt="mode d'emploi"> Aide</h2>
   </div>
   <div class="col-md-4">
     <a class="align-middle" href="{{route('demo')}}">
