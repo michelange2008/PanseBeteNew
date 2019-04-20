@@ -4,7 +4,7 @@
 @section('contenu')
   <div class="container-fluid">
     <div class="row justify-content-center">
-      <div class="col-10">
+      <div class="col-md-10">
         <div class="card m-3">
           <img class="card-img-top mb-3" src="{{asset(config('chemins.images'))}}/itab_otoveil_long.jpeg" alt="ITAB Otoveil">
           <div class="card-body">
@@ -12,7 +12,7 @@
               <h3>Demande d'un identifiant Panse-Bêtes</h3>
               <p class="card-text">Pour pouvoir vous envoyer une identifiant et un mot de passe, nous avons besoin de quelques renseignements</p>
               <p class="card-text">Nous vous demandons de remplir le formulaire ci-dessous et dès réception nous vous enverrons les éléments vous permettant d'utiliser Panse-Bêtes</p>
-                {{Form::open(['route' => 'inscription.envoi'])}}
+                {{Form::open(['route' => 'visiteur.envoi'])}}
                 <div class="form-group">
                   {{Form::text('nom', '', ['class' => 'form-control', 'placeholder' => 'votre nom*', 'required' => 'required'])}}
                 </div>

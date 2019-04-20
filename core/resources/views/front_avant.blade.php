@@ -8,8 +8,8 @@
     </div>
     <div class="row">
       <div class="col-lg-2"></div>
-      <div class=" p-3 col-lg-8 bg-otobleu shadow">
-        <h4>Attention ! dans ...</h4>
+      <div class="mt-3 p-3 col-lg-8 bg-otobleu shadow">
+        <h4>Bonne nouvelle ! dans ...</h4>
         <div id="car" class="p-2 text-center"><h3></h3></div>
         <h4 class=""><span class="color-otojaune">Panse-bêtes</span> sera opérationnel !!!</h4>
         <p></p>
