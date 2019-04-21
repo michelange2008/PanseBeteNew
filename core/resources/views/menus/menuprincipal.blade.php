@@ -12,7 +12,7 @@
                   <li class="nav-item"><a class="nav-link" href="{{route('login')}}">Se connecter</a></li>
               @else
                   <li class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" id="utilisateur" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <a href="#" class="nav-link dropdown-toggle bg-otobleu" id="utilisateur" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                           {{ Auth::user()->name }}
 
                       </a>
@@ -31,9 +31,10 @@
                 @endif
                 <div class="dropdown-divider"></div>
                 <li class="nav-item" title="Pour démarrer"><a class="nav-link" href="{{route('accueil')}}">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('aide')}}">Aide</a></li>
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" id="infos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                      En savoir plus
+                      A propos
                   </a>
                   <div class="dropdown-menu" aria-labelledby="infos">
                     <a class="dropdown-item" href="{{route('instructions')}}">Panse-Bêtes&nbsp?</a>
@@ -42,7 +43,6 @@
                     <a class="dropdown-item" href="{{route('mentions_legales')}}">Mentions légales</a>
                   </div>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="{{route('aide')}}">Mode d'emploi</a></li>
                 @if (Auth::user()->admin)
                   <li class="nav-item"><a class="nav-link" href="{{route('admin.index')}}">Administration</a></li>
                 @endif

@@ -7,10 +7,6 @@
 @section('contenu')
 
   <div class="container-fluid">
-    <div class="alert alert-success">
-      <h3>{{auth()->user()->name}}</h3>
-    </div>
-
     <div class="nouvelle-saisie-liste alert desktop-only btn-otobleu" style="padding:0">
       <div class="d-flex flex-column">
         <h6>Nouvelle saisie</h6>
