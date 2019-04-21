@@ -44,11 +44,6 @@ class VisiteurController extends Controller
     }
   }
 
-  public function demo()
-  {
-    return view('demo');
-  }
-
   public function afficheNonValide()
   {
     $message = "Une demande avec cette adresse mail a déjà été faite. Ne vous inquiétez pas, nous allons vous répondre dès que possible";
@@ -57,6 +52,6 @@ class VisiteurController extends Controller
 
   public function presentation()
   {
-    return view('divers.presentation');
+    return view('divers.video', ['theme' => 'PBpresentation']);
   }
 }
