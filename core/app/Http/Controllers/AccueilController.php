@@ -66,6 +66,12 @@ class AccueilController extends Controller
     {
       return view('aide.aide');
     }
+
+    public function video()
+    {
+      return view('aide.video');
+    }
+
     public function entravaux($espece_id)
     {
       if(Espece::find($espece_id)->fini === 1)

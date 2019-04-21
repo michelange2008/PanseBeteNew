@@ -18,8 +18,6 @@ Route::post('/visiteur/envoi', ['uses' => 'VisiteurController@envoi', 'as' => 'v
 
 Route::get('/visiteur/patience', ['uses' => 'VisiteurController@afficheNonValide', 'as' => 'visiteur.nonvalide']);
 
-Route::get('/demo', ['uses' => 'VisiteurController@demo', 'as' => 'demo']);
-
 Route::get('/presentation', ['uses' => 'VisiteurController@presentation', 'as' => 'visiteur.presentation']);
 
 Route::group(['middleware' => ['auth', 'isValid']], function () {
@@ -33,11 +31,6 @@ Route::group(['middleware' => ['auth', 'isValid']], function () {
     Route::resource('/utilisateur', 'UserController');
 
     Route::get('/administration', ['uses' => 'AdminController@index', 'as' => 'admin.index']);
-
-    // Route::get('/admin', ['uses' => 'AdminController@index', 'as' => 'admin.index']);
-    // Route::delete('/visiteur/destroy/{id}', ['uses' => 'VisiteurController@destroy', 'as' => 'visiteur.destroy']);
-
-    // Route::post('/visiteur/transferre', ['uses' => 'UserController@transferre', 'as' => 'visiteur.transferre']);
 
     Route::get('/administration/valide/{id}', ['uses' => 'UserController@valideUser', 'as' => 'admin.valide']);
 
@@ -54,6 +47,8 @@ Route::group(['middleware' => ['auth', 'isValid']], function () {
     Route::get('/mentions_legales', ['uses' => 'AccueilController@mentions_legales', 'as' => 'mentions_legales']);
 
     Route::get('/aide', ['uses' => 'AccueilController@aide', 'as' => 'aide']);
+
+    Route::get('/aide/video', ['uses' => 'AccueilController@video', 'as' => 'aide.video']);
 
     Route::get('entravaux/{espece_id}', ['uses' => 'AccueilController@entravaux', 'as' => 'entravaux']);
 

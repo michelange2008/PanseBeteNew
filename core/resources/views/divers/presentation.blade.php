@@ -2,8 +2,8 @@
 
 @section('contenu')
   <div class="controller-fluid">
-    <video controls="controls" style="width:100%; max-height:80vh" poster="{{asset(config('chemins.images'))}}/otoveil_petit.jpeg" >
-      <source src="{{asset(config('chemins.fichiers'))}}/PBpresentation.mp4" type="video/mp4" />
+    <video controls="controls" preload="auto" style="width:100%; max-height:80vh" poster="{{asset(config('chemins.images'))}}/otoveil_petit.jpeg" >
+      <source src="{{asset(config('chemins.fichiers'))}}/PBpresentation.m4v" type="video/mp4" />
       Votre navigateur ne supporte pas le tag <video>
       </video>
   </div>
