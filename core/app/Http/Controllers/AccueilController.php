@@ -17,7 +17,7 @@ class AccueilController extends Controller
 
     public function index()
     {
-      return view('front_avant');
+      return view('front');
     }
 
     public function accueil()
