@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'catherine.experton@itab.asso.fr'),
-        'name' => env('MAIL_FROM_NAME', 'Catherine Experton'),
+        'address' => env('MAIL_FROM_ADDRESS', 'automate@panse-betes.fr'),
+        'name' => env('MAIL_FROM_NAME', 'Panse-Bêtes'),
     ],
 
     /*

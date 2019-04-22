@@ -50,7 +50,7 @@ class VisiteurController extends Controller
       $admin = User::where('email', 'michelange@wanadoo.fr')->first();
 
       // On envoie un mail à l'administratrice de Panse-Bêtes pour l'avertir qu'un nouvel utilisateur est intéressé
-      Mail::to($admin)->send(new Inscription($nouveau));
+      Mail::to(config('mail.from.address'))->send(new Inscription($nouveau));
 
       // Et on affiche le message correspondant
       $message = "Nous avons bien enregistré votre demande, nous allons vous répondre dès que possible";
