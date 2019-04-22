@@ -1,6 +1,6 @@
 $(function() {
   console.log(document.location.origin);
-  
+
   // Modification d'un utilisateur
   $('.ligne').on('click', '.modifier', function() {
     var id = $(this).attr('id').split("_")[1];
@@ -319,10 +319,10 @@ $(function() {
               '<td id="saisies_'+id+'" class="text-center saisies">0</td>' +
               '<td id="admin_'+id+'" class="text-center">NON</td>' +
               '<td id="modifier_'+id+'" class="modifier cell-delmod">' +
-                '<img src="../img/admin/modifie_gris.svg" alt="Modifier" title="Pour modifier ce nouvel utilisateur, il faut rafraichir la page (touche F5)">' +
+                '<img src="'+document.location.origin+'/core/public/img/admin/modifie_gris.svg" alt="Modifier" title="Pour modifier ce nouvel utilisateur, il faut rafraichir la page (touche F5)">' +
               '</td>' +
               '<td id="moins_'+id+'" class="supprimer cell-delmod" title="Pour supprimer ce nouvel utilisateur, il faut rafraichir la page (touche F5)">' +
-                '<img src="../img/admin/moins_gris.svg" alt="Supprimer" >' +
+                '<img src="'+document.location.origin+'/core/public/img/admin/moins_gris.svg" alt="Supprimer" >' +
               '</td></tr>');
   }
 
