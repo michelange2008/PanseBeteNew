@@ -1,4 +1,5 @@
 $(function() {
+  console.log(document.location.origin);
   // Modification d'un utilisateur
   $('.ligne').on('click', '.modifier', function() {
     var id = $(this).attr('id').split("_")[1];
