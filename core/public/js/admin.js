@@ -1,6 +1,4 @@
 $(function() {
-  console.log(document.location.origin);
-
   // Modification d'un utilisateur
   $('.ligne').on('click', '.modifier', function() {
     var id = $(this).attr('id').split("_")[1];
@@ -66,7 +64,7 @@ $(function() {
         '<input type="password" placeholder="retapez le mot de passe" class = "mdp2 form-control" required />' +
         '</div></form>'+
         '<div class="form-group">'+
-            '<select class="custom-select" name="profession">'+
+            '<select id="profession" class="custom-select" name="profession">'+
               '<option selected>Profession ?</option>'+
               '<option value="Eleveur">Eleveur</option>'+
               '<option value="Technicien">Technicien</option>'+
@@ -77,7 +75,7 @@ $(function() {
               '<option value="Autre">Autre</option>'+
             '</select>'+
           '</div><div class="form-group">'+
-            '<select class="custom-select" name="region">'+
+            '<select id="region" class="custom-select" name="region">'+
               '<option selected>Région ?</option>'+
               '<option value= "Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>'+
               '<option value= "Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>'+
@@ -109,10 +107,15 @@ $(function() {
             var email = this.$content.find('.email').val();
             var mot_de_passe = this.$content.find('.mdp1').val();
             var retapez_votre_mot_de_passe = this.$content.find('.mdp2').val();
+            var profession = this.$content.find('#profession option:selected').text();
+            profession = (profession == "Profession ?" ? "non précisé" : profession); // si pas de saisie valeur 'non précisé'
+            var region = this.$content.find('#region option:selected').text();
+            region = (region == "Région ?" ? "non précisé" : region);// idem
+
             var captcha = "agriculture biologique"
             var valide = 1;
             if(verifChampsRemplis(nom, email, mot_de_passe, retapez_votre_mot_de_passe) && verifEmail(email) && verifMdpEgal(mot_de_passe, retapez_votre_mot_de_passe) && verifTailleMdp(mot_de_passe)) {
-              envoi(nom, email, mot_de_passe, retapez_votre_mot_de_passe, valide, captcha);
+              envoi(nom, email, mot_de_passe, retapez_votre_mot_de_passe, valide, captcha, profession, region);
             }
             else {
               return false;
@@ -240,7 +243,7 @@ $(function() {
     });
   }
 
-  function envoi(nom, email, mot_de_passe, retapez_votre_mot_de_passe, valide, captcha) {
+  function envoi(nom, email, mot_de_passe, retapez_votre_mot_de_passe, valide, captcha, profession, region) {
     $.ajaxSetup({
     headers: {
       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -256,7 +259,9 @@ $(function() {
         'mot_de_passe' : mot_de_passe,
         'retapez_votre_mot_de_passe' : retapez_votre_mot_de_passe,
         'valide': valide,
-        'captcha': captcha
+        'captcha': captcha,
+        'profession': profession,
+        'region': region
       },
       dataType: 'JSON',
       success: function (data) {

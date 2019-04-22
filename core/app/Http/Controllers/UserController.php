@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Mail\Accepte;
-use App\Mail\Refuse;
 use Mail;
 use App\Models\Espece;
 use App\Models\User;
@@ -83,8 +82,7 @@ class UserController extends Controller
           'region' => 'max:191',
           'captcha' => 'required|in:agriculture biologique, agriculture bio',
         ]);
-        $datas['profession'] = (array_key_exists('profession', $datas) && $datas['profession'] != "Votre profession ?") ? $datas['profession'] : "non précisé";
-        $datas['region'] = (array_key_exists('region', $datas) && $datas['region'] != "Votre région ?") ? $datas['region'] : "non précisé";
+
       // création de l'utilisateur
         $datas = $request->all();
         $user = new User();
@@ -92,6 +90,8 @@ class UserController extends Controller
         $user->email = $datas['email'];
         $user->password = bcrypt($datas['mot_de_passe']);
         $user->valide = $datas['valide'];
+        $user->profession = $datas['profession'];
+        $user->region = $datas['region'];
         $user->save();
         return response()->json([
           "id" => $user->id,

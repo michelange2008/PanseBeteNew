@@ -4,14 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Mail;
+use App\Mail\Inscription;
 
 class VisiteurController extends Controller
 {
+  // affiche le formulaire de demande d'identifiant
   public function index()
   {
     return view('admin.inscription');
   }
 
+  // fonction retour de la validation du formulaire de demande d'identifiant
   public function envoi(Request $request)
   {
     $datas = request()->validate([
@@ -23,22 +27,39 @@ class VisiteurController extends Controller
       'region' => 'max:191',
       'captcha' => 'required|in:agriculture biologique, agriculture bio',
     ]);
+    // Modification des champs profession et region s'ils n'ont pas été remplis dans le formulaire
     $datas['profession'] = (array_key_exists('profession', $datas) && $datas['profession'] != "Votre profession ?") ? $datas['profession'] : "non précisé";
     $datas['region'] = (array_key_exists('region', $datas) && $datas['region'] != "Votre région ?") ? $datas['region'] : "non précisé";
 
+    // On vérifie que cet email n'est pas déjà dans la bdd user
     if(User::where('email', $datas['email'])->count() == 0) {
+
+      /*
+      On crée un nouveau user avec les éléments du formulaire
+      mais en lui attribuant une valeur 0 à valide (user en attente de validation)
+      */
       $nouveau = User::firstOrCreate([
         'name' => $datas['nom'],
         'email' => $datas['email'],
         'password' => bcrypt($datas['mot_de_passe']),
         'profession' => $datas['profession'],
-        'region' => $datas['region'],
+        'region' => str_replace('"', '', $datas['region']),
         'valide' => 0,
       ]);
 
+      $admin = User::where('email', 'michelange@wanadoo.fr')->first();
+
+      // On envoie un mail à l'administratrice de Panse-Bêtes pour l'avertir qu'un nouvel utilisateur est intéressé
+      Mail::to($admin)->send(new Inscription($nouveau));
+
+      // Et on affiche le message correspondant
       $message = "Nous avons bien enregistré votre demande, nous allons vous répondre dès que possible";
       return view('admin.reception')->with(['message' => $message]);
-    } else {
+    }
+
+    else
+
+    {
       $message = "Une demande avec cette adresse mail a déjà été faite. Ne vous inquiétez pas, nous allons vous répondre dès que possible";
       return view('admin.reception')->with(['error' => $message]);
     }

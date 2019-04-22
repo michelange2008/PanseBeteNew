@@ -88,7 +88,7 @@
         </div>
         <div class="card-body d-flex justify-content-center">
             <a href="{{route('visiteur.index')}}">
-              <button class="btn btn-otorange" type="button" name="button"><i class="far fa-id-card"></i> Demander un identifiant</button>
+              <button class="btn btn-otorange" type="button" name="button"><i class="far fa-id-card"></i> Obtenir un accès</button>
             </a>
           </div>
       </div>
