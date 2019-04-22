@@ -52,6 +52,10 @@ class VisiteurController extends Controller
 
   public function presentation()
   {
-    return view('divers.video', ['theme' => 'PBpresentation']);
+    return view('divers.video', [
+      'theme' => 'PBpresentation',
+      'bouton' => "retour à l'accueil",
+      'route' => 'front'
+    ]);
   }
 }

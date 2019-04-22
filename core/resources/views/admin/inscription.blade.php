@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="d-flex justify-content-end">
-                  {{Form::submit('Envoi',['class' => 'btn btn-otorange rounded-0'])}}
+                  <button class="btn btn-otorange rounded-0" type="submit" name="button"><i class="fas fa-share-square"></i> envoi</button>
                 </div>
                 {{Form::close()}}
 

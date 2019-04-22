@@ -69,7 +69,11 @@ class AccueilController extends Controller
 
     public function video()
     {
-      return view('divers.video', ['theme' => 'aide']);
+      return view('divers.video', [
+        'theme' => 'aide',
+        'bouton' => 'retour',
+        'route' => 'aide',
+      ]);
     }
 
     public function entravaux($espece_id)

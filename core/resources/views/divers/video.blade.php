@@ -22,8 +22,8 @@
       </div>
     </div>
     <div class="b-3 p-3 align-self-end">
-      <a href="{{route('front')}}">
-        <button class="btn btn-lg btn-otobleu rounded-0" type="button" name="button"><i class="fas fa-undo-alt"></i> Retour à l'accueil</button>
+      <a href="{{route($route)}}">
+        <button class="btn btn-lg btn-otobleu rounded-0" type="button" name="button"><i class="fas fa-undo-alt"></i> {{$bouton}}</button>
       </a>
     </div>
   </div>
