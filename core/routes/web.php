@@ -79,6 +79,10 @@ Route::group(['middleware' => ['auth', 'isValid']], function () {
     Route::get('/lecture/origines/{saisie_id}', ['uses' => 'LectureController@originesListe', 'as' => 'lecture.originesListe']);
 
     Route::get('/lecture/pdf/{saisie_id}', ['uses' => 'PdfController@index', 'as' => 'pdf']);
+
+  // Gestion des notes
+
+    Route::resource('/notes', 'NoteController');
 });
 
 Auth::routes();

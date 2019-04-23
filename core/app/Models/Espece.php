@@ -26,4 +26,9 @@ class Espece extends Model
       return $this->hasMany(Saisie::class);
     }
 
+    public function notes()
+    {
+      return $this->belongsToMany(Espece::class);
+    }
+
 }

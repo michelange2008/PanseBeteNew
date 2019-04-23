@@ -32,4 +32,9 @@ class User extends Model
         return false;
       }
     }
+
+    public function notes()
+    {
+        return $this->hasMany(Notes::class);
+    }
 }
