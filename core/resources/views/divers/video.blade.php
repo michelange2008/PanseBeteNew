@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('contenu')
-  <div class="controller-fluid d-flex flex-column bg-otorange" style="height:94vh">
+  <div class="controller-fluid d-flex flex-column bg-otorange" style="height:94vh; justify-content:space-around">
     <video class="align-self-center m-1" controls="controls" preload="auto" style="max-width:100%; max-height:60vh" poster="{{asset(config('chemins.fichiers'))}}/{{$theme}}.png" >
       <source
         src="{{asset(config('chemins.fichiers'))}}/{{$theme}}.m4v" type="video/mp4" />
@@ -21,7 +21,7 @@
         </a>
       </div>
     </div>
-    <div class="b-3 p-3 align-self-end">
+    <div class="pr-3 align-self-end">
       <a href="{{route($route)}}">
         <button class="btn btn-lg btn-otobleu rounded-0" type="button" name="button"><i class="fas fa-undo-alt"></i> {{$bouton}}</button>
       </a>
