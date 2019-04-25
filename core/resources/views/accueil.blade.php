@@ -31,7 +31,7 @@
       <div class="bouton-rond smartphone-only">
       </div>
 
-
+    <!-- S'il y a des saisies, affichage de la liste des saisies avec des informations et des boutons -->
     @if ($saisies->count() > 0)
       <div>
         @foreach ($saisies as $saisie)
@@ -40,6 +40,7 @@
                 <img src="{{config('chemins.especes').$saisie->espece->icone}}" alt="">
                 <div class="saisie-info d-flex flex-column">
                   <h5 class="attention">{{$saisie->elevage->nom}}</h5>
+                  <!-- information sur la saisie: date et nombre d'alertes s'il y en a -->
                   <p><em>({{$saisie->created_at->day}} {{$saisie->created_at->locale('fr')->monthName}} {{$saisie->created_at->year}})</em>
                   @if ($saisie->salertes->count() === 0)
                     Pas d'alerte</p>
@@ -50,6 +51,7 @@
                   @endif
                 </div>
               </div>
+              <!-- Boutons: supprimer, pdf, voir, modifier -->
               <div class="d-flex flex-row justify-content-between" style="padding-right:20px">
                 <div class="d-flex flex-column justify-content-center">
                   <a id="supprime_{{$saisie->id}}" href="{{route('lecture.supprimer', $saisie->id)}}" class=" supprime justify-self-end btn btn-sm btn-otorange rounded-0"><i class="far fa-trash-alt"></i> Suppr.</a>
@@ -59,7 +61,7 @@
                   <a href="{{route('pdf', $saisie->id)}}" class="btn btn-sm rounded-0"><img src="{{config('chemins.saisie')}}pdf.svg" alt="pdf" class="otoveil" /></a>
                   <a href="{{route('lecture.detail', $saisie->id)}}" class="btn btn-sm btn-otobleu rounded-0"><i class="far fa-eye"></i> Voir</a>
                   @endif
-                  <a href="{{route('saisie.modifierBis', $saisie->id)}}" class="btn btn-sm btn-otojaune rounded-0"><i class="fa fa-pencil-alt"></i> Modifier</a>
+                  <a href="{{route('saisie.modifier', $saisie->id)}}" class="btn btn-sm btn-otojaune rounded-0"><i class="fa fa-pencil-alt"></i> Modifier</a>
                 </div>
               </div>
           </div>

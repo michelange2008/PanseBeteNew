@@ -22,20 +22,42 @@ class SaisieController extends Controller
     use CreeOrigines;
 
     /*
+    // Méthode qui affiche le choix entre une saisie par alertes ou par pôle
+    //quand on fait une nouvelle saisie ou que l'on modifie une ancienne
+    */
+    public function accueil()
+    {
+      return view('saisie.saisieAccueil');
+    }
+    /*
     // Méthode qui affiche la liste des thèmes quand on fait une nouvelle saisie
     // ou que l'on modifie une ancienne
     */
-    public function accueil()
+    public function saisie($type)
     {
       $themes = Theme::all();
 
       $saisie = Saisie::find(session()->get('saisie_id'));
 
       session()->forget('theme');
-      return view('saisie.saisieAccueil',[
-        'themes' => $themes,
-        'saisie' => $saisie,
-      ]);
+
+      if ($type == config('constantes.pol')) {
+        return view('saisie.saisieParPole',[
+          'themes' => $themes,
+          'saisie' => $saisie,
+        ]);
+      }
+      else {
+        $alertes = Alerte::where('espece_id', $saisie->espece_id)->get();
+
+        $sAlertes = Salerte::where('saisie_id', session()->get('saisie_id'))->get();
+
+        return view('saisie.saisieParAlerte',[
+            'themes' => $themes,
+            'alertes' => $alertes,
+            'sAlertes' => $sAlertes,
+          ]);
+      }
     }
 
     /*
@@ -61,11 +83,16 @@ class SaisieController extends Controller
     */
     public function modifier($saisie_id)
     {
+      $themes = Theme::all();
+
       $saisie = Saisie::find($saisie_id);
 
       session()->put('saisie_id', $saisie_id);
 
-      return Redirect()->route('saisie.accueil');
+      return view('saisie.saisieParPole', [
+        'themes' => $themes,
+        'saisie' => $saisie,
+      ]);
     }
 
     /*
