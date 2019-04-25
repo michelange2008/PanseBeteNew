@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Espece;
 use App\Models\User;
 use App\Models\Saisie;
+use App\Models\Note;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -31,9 +32,13 @@ class AdminController extends Controller
           $saisies_groupees->put($user->id, collect([]));
         }
       }
+
+      $notes = Note::all();
+
       return view('admin.admin', [
         'users' => $users,
         'saisies_groupees' => $saisies_groupees,
+        'notes' => $notes,
       ]);
 
     }

@@ -40,7 +40,22 @@ class NoteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datas = $request->all();
+        $note = Note::firstOrCreate([
+          'user_id' => auth()->user()->id,
+          'note_fond' => $datas['note_fond'],
+          'avis_fond' => $datas['avis_fond'],
+          'note_forme' => $datas['note_forme'],
+          'avis_forme' => $datas['avis_forme'],
+          'utilisation' => $datas['utilisation']
+        ]);
+        foreach ($datas as $key => $value) {
+          if(explode("_", $key)[0] == "espece") {
+            $note->especes()->attach($value);
+          }
+        }
+
+        return view('note.merci');
     }
 
     /**

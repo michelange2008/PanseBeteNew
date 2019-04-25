@@ -23,6 +23,7 @@ class CreateNotesTable extends Migration
             $table->text('avis_fond');
             $table->integer('note_forme');
             $table->text('avis_forme');
+            $table->integer('utilisation');
             $table->timestamps();
         });
     }

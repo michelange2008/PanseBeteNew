@@ -7,10 +7,12 @@
 @endpush
 
 @section('contenu')
+
+  <!-- Tableau des demandes d'accès -->
   @if ($users->count() > 0)
     <div class="container-fluid">
       <div class="alert alert-warning">
-        <h3>Demandes d'identifiant</h3>
+        <h3><i class="fas fa-user-check"></i> Demandes d'identifiant</h3>
       </div>
       <div class="table-responsive contenu">
         <table class="table table-hover">
@@ -51,11 +53,12 @@
         </table>
       </div>
     </div>
-
   @endif
+
+  <!-- Tableau des utilisateurs -->
   <div id="totum" class="container-fluid">
     <div class="alert alert-success">
-      <h3>Gestion des utilisateurs</h3>
+      <h3><i class="fas fa-users"></i> Gestion des utilisateurs</h3>
     </div>
     <div class="table-responsive contenu">
       <table class="table table-hover">
@@ -91,4 +94,36 @@
       <img id="plus" class="curseur" src="{{asset(config('chemins.admin'))}}/plus_rond.svg" alt="Ajouter" title="Ajouter un utilisateur">
     </div>
   </div>
+
+<!-- Tableau des notes -->
+  <div id="totum" class="container-fluid">
+    <div class="alert alert-danger">
+      <h3><i class="fas fa-user-edit"></i> Avis des utilisateurs</h3>
+    </div>
+    <div class="table-responsive contenu">
+      <table class="table table-hover">
+        <thead class="table-dark">
+          <th>Nom</th>
+          <th class="text-center">Nombre d'utilisations</th>
+          <th class="text-center">Note sur Panse-Bêtes</th>
+          <th class="text-center">Commentaire</th>
+          <th class="text-center">Note sur l'application</th>
+          <th class="text-center">Commentaire</th>
+        </thead>
+        <tbody id="user">
+          @foreach ($notes as $note)
+              <tr id="ligne_{{$user->id}}" class="ligne {{($user->admin) ? "text-danger": ""}}">
+                <td id="avisnom_{{$user->id}}" class="nom">{{$user->name}}</td>
+                <td id="utilisation_{{$user->id}}" class="text-center saisies">{{$note->utilisation}}</td>
+                <td id="notefond_{{$user->id}}" class="text-center">{{$note->note_fond}}</td>
+                <td id="avisfond_{{$user->id}}" class="">{{$note->avis_fond}}</td>
+                <td id="noteforme_{{$user->id}}" class="text-center">{{$note->note_forme}}</td>
+                <td id="avisforme_{{$user->id}}" class="">{{$note->avis_forme}}</td>
+              </tr>
+          @endforeach
+        </tbody>
+      </table>
+    </div>
+  </div>
+
 @endsection

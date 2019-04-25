@@ -8,8 +8,8 @@
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-10">
-        <div class="alert alert-success">
-          <h3>Donnez-nous votre avis sur Panse-Bêtes</h3>
+        <div class="alert bg-otobleu">
+          <h3><i class="fas fa-user-edit"></i> Donnez-nous votre avis sur Panse-Bêtes</h3>
         </div>
       </div>
     </div>
@@ -18,61 +18,103 @@
       <div class="col-md-10">
         <p>Metuentes igitur idem latrones Lycaoniam magna parte campestrem cum se inpares nostris fore congressione stataria documentis frequentibus scirent, tramitibus deviis petivere Pamphyliam diu quidem intactam sed timore populationum et caedium, milite per omnia diffuso propinqua, magnis undique praesidiis conmunitam.
         </p>
-        <h5>Merci de bien vouloir remplir ce petit questionnaire</h5>
+        <h5 class="color-otobleu">Merci de bien vouloir remplir ce petit questionnaire</h5>
       </div>
     </div>
     {{ Form::open(['route' => 'notes.store']) }}
-    <div class="form-row align-items-center">
-    </div>
+
     <div class="form-row">
       <div class="col-md-1"></div>
       <div class="col-md-6 border p-3 mr-1">
-        <p class='lead'>Sur quels type de production avez-vous utilisé Panse-Bêtes?</p>
+        <p class='lead'>
+          <img class="img-25 pb-1" src="{{asset(config('chemins.note'))}}/troupeau.svg" alt="">
+          Sur quels type de production avez-vous utilisé Panse-Bêtes?
+        </p>
         @foreach ($especes as $espece)
         <div class="custom-control custom-switch">
-          <input id="espece_{{$espece->id}}" class="custom-control-input" type="checkbox" name="{{$espece->id}}" value="">
+          <input id="espece_{{$espece->id}}" class="custom-control-input" type="checkbox" name="espece_{{$espece->id}}" value="{{$espece->id}}">
           <label for="espece_{{$espece->id}}" class="custom-control-label">{{ $espece->nom }}</label>
         </div>
         @endforeach
       </div>
       <div class="col-md-4 border p-3">
-        <p class='lead'>Combien de fois avez-vous utilisé Panse-Bêtes?</p>
+        <p class='lead'>
+          <img class="img-25 pb-1" src="{{asset(config('chemins.note'))}}/count.svg" alt="">
+          Combien de fois avez-vous utilisé Panse-Bêtes?
+        </p>
         <div class="custom-control custom-radio">
-          <input id="une" type="radio" name="utilisation" value="" class="custom-control-input">
+          <input id="une" type="radio" name="utilisation" value="0" class="custom-control-input">
           <label for="une" class="custom-control-label">Une fois</label>
         </div>
         <div class="custom-control custom-radio">
-          <input id="quelques" type="radio" name="utilisation" value="" class="custom-control-input">
+          <input id="quelques" type="radio" name="utilisation" value="1" class="custom-control-input">
           <label for="quelques" class="custom-control-label">Quelques fois</label>
         </div>
         <div class="custom-control custom-radio">
-          <input id="souvent" type="radio" name="utilisation" value="" class="custom-control-input">
+          <input id="souvent" type="radio" name="utilisation" value="2" class="custom-control-input">
           <label for="souvent" class="custom-control-label">Souvent</label>
         </div>
       </div>
     </div>
-    <div class="form-row">
+    <div class="form-row mt-3">
       <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <p class='lead'>Sur le fond, que pensez-vous de Panse-Bêtes?</p>
+      <div class="col-md-10 border border-bottom-0 p-2">
+        <p class='lead'>
+          <img class="img-25 pb-1" src="{{asset(config('chemins.note'))}}/cerveau.svg" alt="">
+          Les grilles Panse-Bêtes sont-elles pertinentes et utiles ?
+        </p>
       </div>
       <div class="col-md-1"></div>
       <div class="col-md-1"></div>
-      <div class="col-md-3">
-        <label for="customRange1">Quelle note donnez vous</label>
-        @for ($i=0; $i < 6; $i++)
+      <div class="col-md-3 border border-right-0 border-top-0">
+        <label for="customRange1">Quelle note donnez vous ?</label>
+        @for ($i=0; $i < 5; $i++)
           <div class="custom-control custom-radio">
-            <input id="{{$i}}" type="radio" name="note_fond" value="" class="custom-control-input">
-            <label for="{{$i}}" class="custom-control-label">{{$i}}</label>
+            <input id="fond_{{$i}}" type="radio" name="note_fond" value="{{$i}}" class="custom-control-input">
+            <label for="fond_{{$i}}" class="custom-control-label">{{$i}}</label>
           </div>
         @endfor
+        <small class="form-text text-muted">(0 = null, 4 = génial)</small>
+      </div>
+      <div class="col-md-7 border border-left-0 border-top-0 pb-2 pr-2">
+        <label for="avis_fond">Vous pouvez détailler votre appréciation et proposer des améliorations:</label>
+        <textarea id="avis_fond" rows="6" style="width:100%" name="avis_fond" value="avis_fond"></textarea>
+      </div>
     </div>
-    <div class="col-md-7">
-      <label for="avis_fond">Si vous le souhaitez, vous pouvez détailler votre appréciation</label>
-      <textarea id="avis_fond" rows="6" columns="10" style="width:100%" name="" value=""></textarea>
+    <div class="form-row mt-3">
+      <div class="col-md-1"></div>
+      <div class="col-md-10 border border-bottom-0 p-2">
+        <p class='lead'>
+          <img class="img-25 pb-1" src="{{asset(config('chemins.note'))}}/application.svg" alt="">
+          l'application Panse-Bêtes est-elle pratique et adaptée ?
+        </p>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-3 border border-right-0 border-top-0">
+        <label for="customRange1">Quelle note donnez vous ?</label>
+        @for ($i=0; $i < 5; $i++)
+          <div class="custom-control custom-radio">
+            <input id="forme_{{$i}}" type="radio" name="note_forme" value="{{$i}}" class="custom-control-input">
+            <label for="forme_{{$i}}" class="custom-control-label">{{$i}}</label>
+          </div>
+        @endfor
+        <small class="form-text text-muted">(0 = null, 4 = génial)</small>
+      </div>
+      <div class="col-md-7 border border-left-0 border-top-0 pb-2 pr-2">
+        <label for="avis_fond">Vous pouvez détailler votre appréciation et proposer des améliorations:</label>
+        <textarea id="avis_fond" rows="6" style="width:100%" name="avis_forme" value="avis_forme"></textarea>
+      </div>
     </div>
-
-  </div>
+    <div class="form-row mt-3">
+      <div class="col-md-1"></div>
+      <div class="col-md-10 d-flex justify-content-end">
+        <button class="btn btn-otorange rounded-0" type="submit" name="button"><i class="fas fa-share-square"></i> Valider</button>
+        <a href="{{route('accueil')}}">
+          <button class="btn btn-otobleu rounded-0 ml-2" type="button" name="button"><i class="fas fa-undo-alt"></i> Annuler</button>
+        </a>
+      </div>
+    </div>
       {{ Form::close() }}
 
 

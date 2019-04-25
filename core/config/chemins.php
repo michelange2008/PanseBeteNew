@@ -8,6 +8,7 @@ return [
   'saisie' => $path.'/img/saisie/',
   'aide' => $path.'/img/aide/',
   'admin' => $path.'/img/admin/',
+  'note' => $path.'/img/note/',
   'css' => $path.'/css/',
   'js' => $path.'/js/',
   'fichiers' => $path.'/fichiers/',
