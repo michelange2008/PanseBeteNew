@@ -5,53 +5,55 @@
 @extends('aide.aide_resultats')
 
 @section('contenu')
-<div class="container-fluid bg-otobleu titre">
-  <img src="{{asset(config('chemins.saisie')).'/'.session()->get('theme')->icone}}" alt="{{session()->get('theme')->nom}}" class="">
-  <h5>{{ucfirst(session()->get('theme')->nom)}} (résultats)</h5>
-</div>
-<div class="container-fluid">
-  <p class="aide">
-    (cliquer sur les flèches pour afficher les causes possibles)
-  </p>
-</div>
-@if(isset($message))
-  <div class="container-fluid bg-success">
-    <h5>{{$message}}</h5>
-  </div>
-@endif
-{{ Form::open(['route' => 'saisie.origines.store'])}}
-<div class="container-fluid">
-  @foreach($resultats as $resultat)
-      <div id="alerte_{{$resultat->alerte->id}}" class="alerte-item bg-otorange deplie d-flex flex-row justify-content-between curseur">
-        <div>
-          <p class="font-weight-bold ">{{$resultat->alerte->nom}}</p>
-          <p class=" text-light">
-            @if($resultat->alerte->type !== 'liste')
-            {{$resultat->valeur}} {{$resultat->alerte->unite}} (limite {{$resultat->alerte->niveau}} {{$resultat->alerte->unite}})
-            @else
-
-            @endif
-          </p>
-        </div>
-        <div class="element-centre">
-          <img class="img-40" id="img_{{$resultat->alerte->id}}" src="{{asset(config('chemins.saisie'))}}/deplie.svg" alt="déplie" class="otoveil">
-        </div>
-      </div>
-      <div id = "origine_{{$resultat->alerte->id}}" class ="non-affiche" >
-      @foreach($resultat->alerte->origines as $origine)
-      <div class="container-fluid origine bg-otojaune d-flex flex-row " >
-        <div class="col-10">
-          {{ Form::label($resultat->id."_".$origine->id, $origine->question)}}
-        </div>
-        <div style="margin:auto">
-          {{ Form::checkbox($resultat->id."_".$origine->id)}}
-        </div>
-      </div>
-      @endforeach
+  <div class="container-fluid">
+    <div class="alert bg-otobleu">
+      <h3><img class="otoveil mr-3" src="{{asset(config('chemins.saisie'))}}/analyse.svg" alt=""> Analyse des alertes</h3>
     </div>
-  @endforeach
-  {{Form::submit('Enregistrer et retour', ['class' => 'btn btn-otobleu grands-boutons coupe'])}}
-  <a href="{{URL::previous()}}" class="btn btn-otorange grands-boutons coupe">Revenir aux observations</a>
-</div>
-  {{Form::close()}}
+  </div>
+  @if(isset($message))
+    <div class="container-fluid bg-success">
+      <h5>{{$message}}</h5>
+    </div>
+  @endif
+
+  {{ Form::open(['route' => 'saisie.origines.store'])}}
+
+    <div class="container-fluid">
+      @foreach($resultats as $resultat)
+
+          <div id="alerte_{{$resultat->alerte->id}}" class="alerte-item bg-otorange deplie d-flex flex-row justify-content-between curseur">
+            <div>
+              <p><strong>{{$resultat->alerte->nom}}</strong> <em>({{$resultat->alerte->theme->nom}})</em></p>
+              <p class=" text-light">
+                @if($resultat->alerte->type !== 'liste')
+                  {{$resultat->valeur}} {{$resultat->alerte->unite}} (limite {{$resultat->alerte->niveau}} {{$resultat->alerte->unite}})
+                @else
+
+                @endif
+              </p>
+            </div>
+            <div class="element-centre">
+              <img class="img-40" id="img_{{$resultat->alerte->id}}" src="{{asset(config('chemins.saisie'))}}/deplie.svg" alt="déplie" class="otoveil">
+            </div>
+          </div>
+          <div id = "origine_{{$resultat->alerte->id}}" class ="non-affiche" >
+            @foreach($resultat->alerte->origines as $origine)
+              <div class="container-fluid origine bg-otojaune d-flex flex-row " >
+                <div class="col-10">
+                  {{ Form::label($resultat->id."_".$origine->id, $origine->question)}}
+                </div>
+                <div style="margin:auto">
+                  {{ Form::checkbox($resultat->id."_".$origine->id)}}
+                </div>
+              </div>
+            @endforeach
+          </div>
+
+      @endforeach
+
+      {{Form::submit('Enregistrer et retour', ['class' => 'btn btn-otobleu grands-boutons coupe'])}}
+      <a href="{{URL::previous()}}" class="btn btn-otorange grands-boutons coupe">Revenir aux observations</a>
+      {{Form::close()}}
+    </div>
+
 @endsection

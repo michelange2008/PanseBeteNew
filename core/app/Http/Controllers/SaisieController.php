@@ -135,14 +135,24 @@ class SaisieController extends Controller
     */
     public function enregistre(Request $request)
     {
-      if(!session()->has('theme')) // condition pour éviter une arrivée à cette méthode par des voies non prévues
-      {
-        return Redirect()->action('AccueilController@accueil');
-      }
-
+      // if(!session()->has('theme')) // condition pour éviter une arrivée à cette méthode par des voies non prévues
+      // {
+      //   return Redirect()->action('AccueilController@accueil');
+      // }
       session()->forget('alerte'); // Elimine la valeur alerte stockée
+      $type = $request->all()['type']; // On récupère le type d'approche: alerte ou pole
 
-      $alertes = Alerte::where('theme_id', session()->get('theme')->id)->get();
+      // si c'est une approche par pole, on ne prend que les alertes correspondant au pole (=theme) en cours
+      if($type == config('constantes.pol')) {
+        $alertes = Alerte::where('theme_id', session()->get('theme')->id)
+                          ->where('espece_id', session()->get('espece_id'))
+                          ->get();
+        $themes[] = session()->get('theme');
+      }
+      else {
+        $alertes = Alerte::where('espece_id', session()->get('espece_id'))->get();
+        $themes = Theme::all();
+      }
 
       // VALIDATION
       // après utilisation d'un middleware Sanitize qui transforme en 0 les null
@@ -162,9 +172,9 @@ class SaisieController extends Controller
         }
       }
 
-      $datas = array_slice($request->all(),1); // on enlève le token
+      $datas = array_slice($request->all(),2); // on enlève le token et le type
 
-      $resultats = $this->renvoieSalerte($datas); // utilisation du trait CreeAlerte pour l'enregistrement de la saisie
+      $resultats = $this->renvoieSalerte($datas, $alertes); // utilisation du trait CreeAlerte pour l'enregistrement de la saisie
 
       if($resultats->count() === 0) // aucune alerte anormale
       {
@@ -177,6 +187,7 @@ class SaisieController extends Controller
       {
           return view('saisie.resultats', [
               'resultats' => $resultats,
+              'themes' => $themes,
           ]);
       }
     }

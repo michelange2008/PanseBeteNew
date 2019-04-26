@@ -8,15 +8,10 @@ use App\Models\Salerte;
  */
 trait CreeAlerte
 {
-  function renvoieSalerte($datas)
+  function renvoieSalerte($datas, $alertes)
   {
 
     $resultats = collect();
-
-
-    $alertes = Alerte::where('theme_id', session()->get('theme')->id)
-              ->where('espece_id', session()->get('espece')->id)
-              ->get(); // choix d'un nombre restreint d'alerte pour éviter un foreach trop long
 
     foreach ($alertes as $alerte) {
 

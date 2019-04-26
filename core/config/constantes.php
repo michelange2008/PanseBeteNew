@@ -1,6 +1,6 @@
 <?php
 
 return [
-  'ale' => 'alertes',
-  'pol' => 'poles' 
+  'ale' => 1,
+  'pol' => 2
 ];
