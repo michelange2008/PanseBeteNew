@@ -22,6 +22,21 @@ class SaisieController extends Controller
     use CreeOrigines;
 
     /*
+    // Méthode qui conduit vers une nouvelle saisie
+    // elle redirige vers accueil
+    */
+    public function nouvelle($elevage_nom, $espece_id)
+    {
+      $elevage = Elevage::firstOrCreate(['nom' => $elevage_nom]);
+
+      session()->put('espece_id', $espece_id);
+
+      $this->nouvelleSaisie($elevage->id);
+
+      return Redirect()->action('SaisieController@accueil');
+    }
+
+    /*
     // Méthode qui affiche le choix entre une saisie par alertes ou par pôle
     //quand on fait une nouvelle saisie ou que l'on modifie une ancienne
     */
@@ -35,6 +50,10 @@ class SaisieController extends Controller
     */
     public function saisie($type)
     {
+      session()->forget('type_saisie');
+
+      session()->put('type_saisie', $type);
+
       $themes = Theme::all();
 
       $saisie = Saisie::find(session()->get('saisie_id'));
@@ -61,73 +80,6 @@ class SaisieController extends Controller
     }
 
     /*
-    // Méthode qui conduit vers une nouvelle saisie
-    // elle redirige vers accueil
-    */
-    public function nouvelle($elevage, $espece_id)
-    {
-        Elevage::firstOrCreate(['nom' => $elevage]);
-
-        session()->put('elevage', Elevage::where('nom', $elevage)->first());
-
-        session()->put('espece_id', $espece_id);
-
-        $this->nouvelleSaisie();
-
-        return Redirect()->action('SaisieController@accueil');
-    }
-
-    /*
-    // Méthode pour modifier une saisie existante
-    // Elle redirige vers accueil
-    */
-    public function modifier($saisie_id)
-    {
-      $themes = Theme::all();
-
-      $saisie = Saisie::find($saisie_id);
-
-      session()->put('saisie_id', $saisie_id);
-
-      return view('saisie.saisieParPole', [
-        'themes' => $themes,
-        'saisie' => $saisie,
-      ]);
-    }
-
-    /*
-    // Méthode qui ouvre la vue sur les alertes d'un thème dans le cadre d'une nouvelle saisie
-    // ou de la modification d'une saisie existante
-    */
-    public function alertes($theme_id)
-    {
-      $theme = Theme::find($theme_id);
-
-      session()->put('theme', $theme);
-
-      $saisie = Saisie::find(session()->get('saisie_id'));
-
-      session()->put('espece', $saisie->espece);
-
-      $sAlertes = Salerte::where('saisie_id', session()->get('saisie_id'))->get();
-
-      $alertes = Alerte::where('theme_id', $theme_id)
-      ->where('espece_id', $saisie->espece->id)
-      ->get();
-
-      if($alertes->count() > 0)
-      {
-          return view('saisie.alertes', [
-              'alertes' => $alertes,
-              'sAlertes' => $sAlertes,
-          ]);
-      }
-      else {
-          return view('travaux');
-      }
-    }
-
-    /*
     // Méthode pour enregistrer la saisie correspondant aux alertes d'un thème
     // Elle valide la saisie
     // ELle enregistre en bdd les alertes
@@ -135,18 +87,14 @@ class SaisieController extends Controller
     */
     public function enregistre(Request $request)
     {
-      // if(!session()->has('theme')) // condition pour éviter une arrivée à cette méthode par des voies non prévues
-      // {
-      //   return Redirect()->action('AccueilController@accueil');
-      // }
-      session()->forget('alerte'); // Elimine la valeur alerte stockée
-      $type = $request->all()['type']; // On récupère le type d'approche: alerte ou pole
+      // TODO: A SUPPRIMER
+      // session()->forget('alerte'); // Elimine la valeur alerte stockée
 
       // si c'est une approche par pole, on ne prend que les alertes correspondant au pole (=theme) en cours
-      if($type == config('constantes.pol')) {
+      if(session()->get('type_saisie') == config('constantes.pol')) {
         $alertes = Alerte::where('theme_id', session()->get('theme')->id)
-                          ->where('espece_id', session()->get('espece_id'))
-                          ->get();
+        ->where('espece_id', session()->get('espece_id'))
+        ->get();
         $themes[] = session()->get('theme');
       }
       else {
@@ -172,24 +120,76 @@ class SaisieController extends Controller
         }
       }
 
-      $datas = array_slice($request->all(),2); // on enlève le token et le type
+      $datas = array_slice($request->all(),1); // on enlève le token
 
       $resultats = $this->renvoieSalerte($datas, $alertes); // utilisation du trait CreeAlerte pour l'enregistrement de la saisie
 
       if($resultats->count() === 0) // aucune alerte anormale
       {
-          $message = "Ok, il n'y a pas de problème";
-          return view('saisie.resultats', [
-              'resultats' => $resultats,
+        $message = "Ok, il n'y a pas de problème";
+        return view('saisie.resultats', [
+          'resultats' => $resultats,
           ])->with(['message' => $message]);
-      }
-      else // au moins une alerte anormale
-      {
+        }
+        else // au moins une alerte anormale
+        {
           return view('saisie.resultats', [
-              'resultats' => $resultats,
-              'themes' => $themes,
+          'resultats' => $resultats,
+          'themes' => $themes,
           ]);
+        }
       }
+
+      /*
+      // Méthode qui ouvre la vue sur les alertes d'un thème dans le cadre d'une nouvelle saisie
+      // ou de la modification d'une saisie existante
+      */
+      public function alertes($theme_id)
+      {
+        $theme = Theme::find($theme_id);
+
+        session()->put('theme', $theme);
+
+        $saisie = Saisie::find(session()->get('saisie_id'));
+
+        $sAlertes = Salerte::where('saisie_id', session()->get('saisie_id'))->get();
+
+        $alertes = Alerte::where('theme_id', $theme_id)
+        ->where('espece_id', $saisie->espece->id)
+        ->get();
+
+        if($alertes->count() > 0)
+        {
+          return view('saisie.alertes', [
+            'alertes' => $alertes,
+            'sAlertes' => $sAlertes,
+          ]);
+        }
+        else {
+          return view('travaux');
+        }
+      }
+
+    /*
+    // Méthode pour modifier une saisie existante
+    // Elle redirige vers accueil
+    */
+    public function modifier($saisie_id)
+    {
+      $themes = Theme::all();
+
+      $saisie = Saisie::find($saisie_id);
+
+      if(!sesssion()->has('saisie_id')) {
+
+        session()->put('saisie_id', $saisie_id);
+
+      }
+
+      return view('saisie.saisieParPole', [
+        'themes' => $themes,
+        'saisie' => $saisie,
+      ]);
     }
 
     /*
@@ -199,8 +199,18 @@ class SaisieController extends Controller
     {
 
         $this->creeOrigines(array_slice($request->all(),1));
+        // si c'est une saisie par pôles on renvoie à la liste des pôles pour saisir le suivant
+        if(session()->get('type_saisie') == config('constantes.pol')) {
 
-        return redirect()->action('SaisieController@accueil');
+          return view('saisie.saisieParPole', [
+            'saisie' => Saisie::find(session()->get('saisie_id')),
+            'themes' => Theme::all(),
+          ]);
+        }
+        // Sinon c'est que c'est une saisie par alerte et on renvoie à la synthèse
+        else {
+          return redirect()->route('lecture.detail', session('saisie_id'));
+        }
     }
 
 }

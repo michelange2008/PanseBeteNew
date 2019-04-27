@@ -28,7 +28,7 @@ class AccueilController extends Controller
       $this->effaceElevages();
 
       $especes = Espece::all();
-      session()->forget(['espece', 'theme']);
+      session()->forget(['espece_id', 'theme', 'saisie', 'type_saisie']);
 
       return view('accueil', [
         "saisies" => $saisies,

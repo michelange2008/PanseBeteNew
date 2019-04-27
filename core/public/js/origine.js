@@ -108,7 +108,6 @@ $(function () {
 
 
   function nouvelleSaisie(route, nom, espece_id) {
-    console.log(route);
     $.confirm ({
       columnClass: 'large',
       title: 'Nouvelle saisie',
@@ -128,8 +127,6 @@ $(function () {
             if(!name){
                 var name = nom;
             }
-
-            console.log(route+'/saisie/nouvelle/'+name+'/'+espece_id);
             window.location.href = route+'/saisie/nouvelle/'+name+'/'+espece_id;
         }
       },

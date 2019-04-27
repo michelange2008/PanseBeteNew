@@ -16,7 +16,7 @@ class SessionEspeceExist
     public function handle($request, Closure $next)
     {
 
-        if(session()->get('espece') == null)
+        if(session()->get('espece_id') == null)
         {
           return redirect()->route('accueil');
         }

@@ -7,7 +7,7 @@ use Carbon\Carbon;
 trait CreeSaisie
 {
 
-    public function nouvelleSaisie()
+    public function nouvelleSaisie($elevage_id)
     {
         $saisie = new Saisie();
 
@@ -15,16 +15,11 @@ trait CreeSaisie
 
         $saisie->espece_id = session()->get('espece_id');
 
-        $saisie->elevage_id = session()->get('elevage')->id;
+        $saisie->elevage_id = $elevage_id;
 
         $saisie->save();
 
-        $saisies = Saisie::where('user_id', auth()->guard()->user()->id)
-                          ->where('espece_id', session()->get('espece_id'))
-                          ->where('elevage_id', session()->get('elevage')->id)
-                          ->orderByDesc('created_at')->first();
-
-        session()->put('saisie_id', $saisies->id);
+        session()->put('saisie_id', $saisie->id);
 
     }
 

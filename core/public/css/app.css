@@ -16322,7 +16322,7 @@ a, a:link, a:hover {
 }
 
 .bouton-rond {
-  background: url("../svg/plus.svg") no-repeat center var(--otobleu);
+  background: url("../img/plus.svg") no-repeat center var(--otobleu);
   background-size: contain;
   border-radius: 100%;
   height: 50px;

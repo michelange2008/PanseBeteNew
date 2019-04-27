@@ -34,7 +34,6 @@
   <div class="container-fluid">
 
     {{Form::open(['route' => 'saisie.enregistre'])}}
-    <input type="hidden" name="type" value="{{config('constantes.ale')}}">
     @foreach ($themes as $theme)
       <div class="ml-2 mt-3 d-flex flex-row align-items-center bg-otobleuclair">
         <img class="img-40" src="{{asset(config('chemins.saisie')).'/'.$theme->icone}}" alt="">

@@ -32,7 +32,6 @@
 
 <div class="container-fluid">
   {{Form::open(['route' => 'saisie.enregistre'])}}
-  <input type="hidden" name="type" value="{{config('constantes.pol')}}">
 
   @foreach($alertes as $alerte)
 

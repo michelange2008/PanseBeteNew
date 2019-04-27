@@ -56,15 +56,15 @@ Route::group(['middleware' => ['auth', 'isValid']], function () {
 
     Route::get('/saisie/nouvelle/{elevage}/{espece_id}', ['uses' => 'SaisieController@nouvelle', 'as' => 'saisie.nouvelle']);
 
-    Route::get('/saisie/modifier/{saisie}', ['uses' => 'SaisieController@modifier', 'as' => 'saisie.modifier']);
-
     Route::get('/saisie', ['uses' => 'SaisieController@accueil', 'as' => 'saisie.accueil']);
 
     Route::get('/saisie/type/{type}', ['uses' => 'SaisieController@saisie', 'as' => 'saisie.type']);
 
-    Route::get('/saisie/{theme_id}', ['uses' => 'SaisieController@alertes', 'as' => 'saisie.alertes']);
-
     Route::post('/saisie/enregistre', ['uses' => 'SaisieController@enregistre', 'as' => 'saisie.enregistre'])->middleware('nullToZero');
+
+    Route::get('/saisie/modifier/{saisie}', ['uses' => 'SaisieController@modifier', 'as' => 'saisie.modifier']);
+
+    Route::get('/saisie/{theme_id}', ['uses' => 'SaisieController@alertes', 'as' => 'saisie.alertes']);
 
     Route::get('/saisie/resultats', ['uses' => 'SaisieController@enregistre', 'as' => 'saisie.resultats']);
 

@@ -58,16 +58,6 @@ class LectureController extends Controller
       return response()->json($tableNomOrigines, 200);
     }
 
-    // public function originesListe($saisie_id)
-    // {
-    //   session()->put('saisie_id', $saisie_id);
-    //
-    //   $sorigines = Sorigine::where('saisie_id', $saisie_id)->get();
-    //
-    //   return view('lecture.originesListe', [
-    //     'sorigines' => $sorigines,
-    //   ]);
-    // }
     public function originesListe($saisie_id)
     {
       session()->put('saisie_id', $saisie_id);
