@@ -60,6 +60,16 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Panse-Bêtes'),
     ],
 
+    'contact' => [
+        'address' => 'contact@panse-betes.fr',
+        'name' => 'Catherine Experton',
+   ],
+
+   'admin' => [
+        'address' => 'admin@panse-betes.fr',
+        'name' => 'Michel BOUY',
+   ],
+
     /*
     |--------------------------------------------------------------------------
     | E-Mail Encryption Protocol

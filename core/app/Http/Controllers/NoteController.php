@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Note;
 use Illuminate\Http\Request;
+use Mail;
 
 use App\Models\Espece;
 
@@ -54,7 +55,9 @@ class NoteController extends Controller
             $note->especes()->attach($value);
           }
         }
-
+        Mail::to(config('mail.contact.address'))
+                ->send(new Avis({{auth()->user()}}));
+                
         return view('note.merci');
     }
 
