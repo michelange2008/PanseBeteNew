@@ -36,4 +36,9 @@ class Alerte extends Model
         return $this->hasMany(Salerte::class, 'alerte_id');
     }
 
+    public function categorie()
+    {
+      return $this->belongsTo(Categorie::class);
+    }
+
 }

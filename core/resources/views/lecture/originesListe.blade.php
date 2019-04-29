@@ -11,7 +11,13 @@
   </div>
   <div class="bg-otorange titre rounded-0" style="width:100%">
     <img src="{{URL::asset(config('chemins.saisie'))}}/check.svg" alt="case cochée" class="">
-    <h5>Questions cochées</h5>
+    <h5>Questions cochées (regroupées par catégories)</h5>
+  </div>
+
+
+  <div class="bg-otorange titre rounded-0" style="width:100%">
+    <img src="{{URL::asset(config('chemins.saisie'))}}/check.svg" alt="case cochée" class="">
+    <h5>Questions cochées (ordonnées par pôles)</h5>
   </div>
 
   <div id="nestable2" class="dd">

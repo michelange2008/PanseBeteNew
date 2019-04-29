@@ -9,6 +9,7 @@ use App\Models\Salerte;
 use App\Models\Sorigine;
 use App\Models\Elevage;
 use App\Models\Espece;
+use App\Models\Categorie;
 
 class LectureController extends Controller
 {
@@ -66,9 +67,12 @@ class LectureController extends Controller
 
       $sorigines = Sorigine::where('saisie_id', $saisie_id)->get();
 
+      $categories = Categorie::all();
+
       return view('lecture.originesListe', [
         'sorigines' => $sorigines,
         'saisie' => $saisie,
+        'categories' => $categories,
       ]);
     }
 }
