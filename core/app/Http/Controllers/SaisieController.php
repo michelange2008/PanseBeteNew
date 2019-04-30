@@ -180,7 +180,7 @@ class SaisieController extends Controller
 
       $saisie = Saisie::find($saisie_id);
 
-      if(!sesssion()->has('saisie_id')) {
+      if(!session()->has('saisie_id')) {
 
         session()->put('saisie_id', $saisie_id);
 
