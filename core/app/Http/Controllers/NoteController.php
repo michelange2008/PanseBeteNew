@@ -56,8 +56,8 @@ class NoteController extends Controller
           }
         }
         Mail::to(config('mail.contact.address'))
-                ->send(new Avis({{auth()->user()}}));
-                
+                ->send(new Avis(auth()->user()));
+
         return view('note.merci');
     }
 
