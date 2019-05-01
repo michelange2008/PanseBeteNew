@@ -58,10 +58,11 @@
     <script src="{{asset(config('chemins.js'))}}/jquery.nestable.js"></script>
     <script src="{{asset(config('chemins.js'))}}/ziehharmonika.js"></script>
     <script src="{{asset(config('chemins.js'))}}/bootstrap/bootstrap.min.js"></script>
-    <script src="{{asset(config('chemins.js'))}}/origine.js"></script>
+    <script src="{{asset(config('chemins.js'))}}/pansebetes.js"></script>
     <script src="{{asset(config('chemins.js'))}}/fab.js"></script>
     <script src="{{asset(config('chemins.js'))}}/ziehharmonika.js"></script>
     <script src="{{asset(config('chemins.js'))}}/app.js"></script>
+    <script src="{{asset(config('chemins.js'))}}/origines.js"></script>
 <!-- Compte à rebours à supprimer après le 4 juin -->
     <script src="{{asset(config('chemins.js'))}}/jquery.countdown.min.js"></script>
     <script src="{{asset(config('chemins.js'))}}/car.js"></script>

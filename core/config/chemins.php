@@ -9,6 +9,7 @@ return [
   'aide' => $path.'/img/aide/',
   'admin' => $path.'/img/admin/',
   'note' => $path.'/img/note/',
+  'categories' => $path.'/img/categories/',
   'css' => $path.'/css/',
   'js' => $path.'/js/',
   'fichiers' => $path.'/fichiers/',

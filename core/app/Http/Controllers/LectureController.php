@@ -67,7 +67,15 @@ class LectureController extends Controller
 
       $sorigines = Sorigine::where('saisie_id', $saisie_id)->get();
 
-      $categories = Categorie::all();
+      // on recherche la liste des catégories dans le sorigines
+      foreach ($sorigines as $sorigine) {
+        $cat[] = $sorigine->origine->categorie_id;
+      }
+      // on élimine les doublons de cette liste
+      collect($cat)->unique();
+
+      // et on recherche les objets catégories de cette liste
+      $categories = Categorie::whereIn('id', collect($cat)->unique())->get();
 
       return view('lecture.originesListe', [
         'sorigines' => $sorigines,

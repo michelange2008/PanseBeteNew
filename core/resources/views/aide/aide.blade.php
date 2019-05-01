@@ -13,7 +13,7 @@
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-5">
-        <div class="card">
+        <div class="card" style="height:100%">
           <img class="img-100" src="{{asset(config('chemins.aide'))}}/aide_video.svg" alt="tutoriel">
           <div class="card-body">
             <h5 class="card-title">Tutoriel vidéo</h5>
