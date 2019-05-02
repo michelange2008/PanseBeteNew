@@ -7,19 +7,23 @@
 @section('contenu')
 
   <div class="container-fluid">
-
-    <div class="nouvelle-saisie-liste alert desktop-only btn-otobleu" style="padding:0">
-      <div class="d-flex flex-column">
-        <h6>Nouvelle saisie</h6>
-        <p><em>(choisir le type d'élevage)</em></p>
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="nouvelle-saisie-liste alert desktop-only btn-otobleu" style="padding:0">
+          <div class="d-flex flex-column">
+            <h6>Nouvelle saisie</h6>
+            <p><em>(choisir le type d'élevage) <i class="fas fa-arrow-right"></i></em></p>
+          </div>
+          @foreach ($especes as $espece)
+            <img src="{{config('chemins.especes').$espece->icone}}"
+            id="nouvelle_{{$espece->id}}" name="{{auth()->user()->name}}" class="nouvelle-saisie-item shadow"
+            route= "{{url('/')}}"
+            alt="{{$espece->nom}}" data-toggle="tooltip" data-placement="top" title="{{$espece->nom}}">
+          @endforeach
+        </div>
       </div>
-      @foreach ($especes as $espece)
-          <img src="{{config('chemins.especes').$espece->icone}}"
-                id="nouvelle_{{$espece->id}}" name="{{auth()->user()->name}}" class="nouvelle-saisie-item shadow"
-                route= "{{url('/')}}"
-                alt="{{$espece->nom}}" data-toggle="tooltip" data-placement="top" title="{{$espece->nom}}">
-      @endforeach
     </div>
+    <!-- Menu qui ne s'affiche que avec un smartphone -->
     <div class="menu-rond">
         @foreach ($especes as $espece)
           <img class="menu-item" id="menu-item_{{$espece->id}}"
@@ -33,39 +37,44 @@
 
     <!-- S'il y a des saisies, affichage de la liste des saisies avec des informations et des boutons -->
     @if ($saisies->count() > 0)
-      <div>
-        @foreach ($saisies as $saisie)
-            <div class="alert alert-secondary">
-              <div class="d-flex flex-row align-items-start">
-                <img src="{{config('chemins.especes').$saisie->espece->icone}}" alt="">
-                <div class="saisie-info d-flex flex-column">
-                  <h5 class="attention">{{$saisie->elevage->nom}}</h5>
-                  <!-- information sur la saisie: date et nombre d'alertes s'il y en a -->
-                  <p><em>({{$saisie->created_at->day}} {{$saisie->created_at->locale('fr')->monthName}} {{$saisie->created_at->year}})</em>
-                  @if ($saisie->salertes->count() === 0)
-                    Pas d'alerte</p>
-                  @elseif ($saisie->salertes->count() === 1)
-                    <strong>{{$saisie->salertes->count()}} alerte</strong>
-                  @else
-                    <strong>{{$saisie->salertes->count()}} alertes</strong>
-                  @endif
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div>
+            @foreach ($saisies as $saisie)
+              <div class="alert alert-secondary pb-0">
+                <div class="d-flex flex-row align-items-start">
+                  <img src="{{config('chemins.especes').$saisie->espece->icone}}" alt="">
+                  <div class="saisie-info d-flex flex-column">
+                    <h5 class="attention">{{$saisie->elevage->nom}}</h5>
+                    <!-- information sur la saisie: date et nombre d'alertes s'il y en a -->
+                    <p><em>({{$saisie->created_at->day}} {{$saisie->created_at->locale('fr')->monthName}} {{$saisie->created_at->year}})</em>
+                      @if ($saisie->salertes->count() === 0)
+                        Pas d'alerte</p>
+                      @elseif ($saisie->salertes->count() === 1)
+                        <strong>{{$saisie->salertes->count()}} alerte</strong>
+                      @else
+                        <strong>{{$saisie->salertes->count()}} alertes</strong>
+                      @endif
+                    </div>
+                  </div>
+                  <!-- Boutons: supprimer, pdf, voir, modifier -->
+                  <div class="d-flex flex-row justify-content-between" style="padding-right:20px">
+                    <div class="d-flex flex-column justify-content-center">
+                      <a id="supprime_{{$saisie->id}}" href="{{route('lecture.supprimer', $saisie->id)}}" class=" supprime justify-self-end btn btn-sm btn-otorange rounded-0"><i class="far fa-trash-alt"></i> Suppr.</a>
+                    </div>
+                    <div>
+                      @if($saisie->salertes->count() > 0)
+                        <a href="{{route('pdf', $saisie->id)}}" class="btn btn-sm rounded-0"><img src="{{config('chemins.saisie')}}pdf.svg" alt="pdf" class="otoveil" /></a>
+                        <a href="{{route('lecture.detail', $saisie->id)}}" class="btn btn-sm btn-otobleu rounded-0"><i class="far fa-eye"></i> Voir</a>
+                      @endif
+                      <a href="{{route('saisie.modifier', $saisie->id)}}" class="btn btn-sm btn-otojaune rounded-0"><i class="fa fa-pencil-alt"></i> Modifier</a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <!-- Boutons: supprimer, pdf, voir, modifier -->
-              <div class="d-flex flex-row justify-content-between" style="padding-right:20px">
-                <div class="d-flex flex-column justify-content-center">
-                  <a id="supprime_{{$saisie->id}}" href="{{route('lecture.supprimer', $saisie->id)}}" class=" supprime justify-self-end btn btn-sm btn-otorange rounded-0"><i class="far fa-trash-alt"></i> Suppr.</a>
-                </div>
-                <div>
-                  @if($saisie->salertes->count() > 0)
-                  <a href="{{route('pdf', $saisie->id)}}" class="btn btn-sm rounded-0"><img src="{{config('chemins.saisie')}}pdf.svg" alt="pdf" class="otoveil" /></a>
-                  <a href="{{route('lecture.detail', $saisie->id)}}" class="btn btn-sm btn-otobleu rounded-0"><i class="far fa-eye"></i> Voir</a>
-                  @endif
-                  <a href="{{route('saisie.modifier', $saisie->id)}}" class="btn btn-sm btn-otojaune rounded-0"><i class="fa fa-pencil-alt"></i> Modifier</a>
-                </div>
-              </div>
-          </div>
-        @endforeach
+              @endforeach
+
+        </div>
+      </div>
       </div>
   @else
     <div class="pas-de-saisie alert alert-secondary">

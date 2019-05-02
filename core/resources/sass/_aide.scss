@@ -27,7 +27,7 @@
 }
 .aide-contenu {
   position: fixed;
-  width: 70vw;
+  width: 50vw;
   left: 10vw;
   top: 10vh;
   display: none;
@@ -100,7 +100,8 @@
 
 @media screen and (min-width: 576px) {
   .aide-contenu {
-    left: 15vw;
+    left: 5vw;
+    width: 90vw;
     top: 30vh;
   }
   .aide-icones {
