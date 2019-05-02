@@ -57,6 +57,11 @@ class AccueilController extends Controller
       ]);
     }
 
+    public function contact()
+    {
+      return view('divers.contact');
+    }
+
     public function mentions_legales()
     {
       return view('divers.mentions_legales');

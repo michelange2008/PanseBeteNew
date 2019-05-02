@@ -44,6 +44,8 @@ Route::group(['middleware' => ['auth', 'isValid']], function () {
 
     Route::get('/credits', ['uses' => 'AccueilController@credits', 'as' => 'credits']);
 
+    Route::get('/contact', ['uses' => 'AccueilController@contact', 'as' => 'contact']);
+
     Route::get('/mentions_legales', ['uses' => 'AccueilController@mentions_legales', 'as' => 'mentions_legales']);
 
     Route::get('/aide', ['uses' => 'AccueilController@aide', 'as' => 'aide']);

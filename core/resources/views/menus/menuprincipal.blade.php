@@ -43,6 +43,7 @@
                     <a class="dropdown-item" href="{{route('instructions')}}">Panse-Bêtes&nbsp?</a>
                     <a class="dropdown-item" href="{{route('description')}}">Otoveil&nbsp?</a>
                     <a class="dropdown-item" href="{{route('credits')}}">Qui a fait quoi&nbsp?</a>
+                    <a class="dropdown-item" href="{{route('contact')}}">Nous contacter</a>
                     <a class="dropdown-item" href="{{route('mentions_legales')}}">Mentions légales</a>
                   </div>
                 </li>
