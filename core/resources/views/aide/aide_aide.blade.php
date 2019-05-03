@@ -6,7 +6,6 @@
 <div class="aide-contenu ">
 
   <div id="texte-d-1" class="aide-contenu-container">
-    <p class="aide-contenu-chiffre bg-aide-trans">1</p>
     <div class="close" style="font-size:2rem" title="fermer">
       <i class="fas fa-window-close"></i>
     </div>

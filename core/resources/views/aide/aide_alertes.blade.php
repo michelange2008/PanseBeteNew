@@ -4,7 +4,6 @@
 </div>
 
 <div class="aide-contenu ">
-  <div id="texte-d-1" class="aide-contenu-container">
     <div class="close" style="font-size:2rem">
       <i class="fas fa-window-close "></i>
     </div>

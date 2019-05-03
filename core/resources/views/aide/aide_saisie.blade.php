@@ -5,7 +5,6 @@
 
 <div class="aide-contenu aide-contenu-saisie">
   <div id="texte-d-1" class=" aide-contenu-container">
-    <p class="aide-contenu-chiffre bg-aide-trans">1</p>
     <div class="close" style="font-size:2rem">
       <i class="fas fa-window-close"></i>
     </div>
@@ -26,7 +25,6 @@
   </div>
 
   <div id="texte-d-2" class="aide-contenu-container">
-    <p class="aide-contenu-chiffre bg-aide-trans">2</p>
     <div class="close" style="font-size:2rem">
       <i class="fas fa-window-close"></i>
     </div>

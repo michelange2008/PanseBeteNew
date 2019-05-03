@@ -6,7 +6,6 @@
 <div class="aide-contenu ">
 
   <div id="texte-d-1" class="desktop-only aide-contenu-container">
-    <p class="aide-contenu-chiffre bg-aide-trans">1</p>
     <div class="close" style="font-size:2rem" title="fermer">
       <i class="fas fa-window-close"></i>
     </div>
@@ -31,12 +30,11 @@
   </div>
 
   <div id="texte-d-2" class="desktop-only aide-contenu-container">
-    <p class="aide-contenu-chiffre bg-aide-trans">2</p>
     <div class="close" style="font-size:2rem" title="fermer">
       <i class="fas fa-window-close"></i>
     </div>
     <div class="aide-contenu-texte desktop-only bg-aide-trans text-light">
-      <p>Vous pouvez aussi travailler sur des grilles existantes:</p>
+      <p class="lead">Vous pouvez aussi travailler sur des grilles que vous aviez saisies précédemment&nbsp:</p>
       <div class="row">
         <div class="col-md-8 mb-1">
           <img class="img-100" src="{{asset(config('chemins.aide'))}}/aide_modif_saisie.png" alt="">
