@@ -61,7 +61,7 @@ class SaisieController extends Controller
       session()->forget('theme');
 
       if ($type == config('constantes.pol')) {
-        return view('saisie.saisieParPole',[
+        return view('saisie.choixDuPole',[
           'themes' => $themes,
           'saisie' => $saisie,
         ]);
@@ -87,14 +87,12 @@ class SaisieController extends Controller
     */
     public function enregistre(Request $request)
     {
-      // TODO: A SUPPRIMER
-      // session()->forget('alerte'); // Elimine la valeur alerte stockée
-
       // si c'est une approche par pole, on ne prend que les alertes correspondant au pole (=theme) en cours
       if(session()->get('type_saisie') == config('constantes.pol')) {
         $alertes = Alerte::where('theme_id', session()->get('theme')->id)
         ->where('espece_id', session()->get('espece_id'))
         ->get();
+
         $themes[] = session()->get('theme');
       }
       else {
@@ -126,11 +124,21 @@ class SaisieController extends Controller
 
       if($resultats->count() === 0) // aucune alerte anormale
       {
-        $message = "Ok, il n'y a pas de problème";
-        return view('saisie.resultats', [
-          'resultats' => $resultats,
-          ])->with(['message' => $message]);
+        $message = "Il n'y a aucun problème";
+        if(session()->get('type_saisie') == config('constantes.ale'))
+        {
+          return view('saisie.resultatsGlobalOk', [
+            'resultats' => $resultats,
+            ])->with(['message' => $message]);
         }
+        else
+        {
+          return view('saisie.resultatsPoleOk', [
+              'resultats' => $resultats,
+              'theme' => session()->get('theme'),
+            ])->with(['message' => $message]);
+        }
+      }
         else // au moins une alerte anormale
         {
           return view('saisie.resultats', [
@@ -160,7 +168,8 @@ class SaisieController extends Controller
 
         if($alertes->count() > 0)
         {
-          return view('saisie.alertes', [
+          return view('saisie.saisieParPole', [
+            'saisie' => $saisie,
             'alertes' => $alertes,
             'sAlertes' => $sAlertes,
           ]);
@@ -180,13 +189,17 @@ class SaisieController extends Controller
 
       $saisie = Saisie::find($saisie_id);
 
+      session()->put('espece_id', $saisie->espece->id);
+
+      session()->put('type_saisie', config('constantes.pol'));
+
       if(!session()->has('saisie_id')) {
 
         session()->put('saisie_id', $saisie_id);
 
       }
 
-      return view('saisie.saisieParPole', [
+      return view('saisie.choixDuPole', [
         'themes' => $themes,
         'saisie' => $saisie,
       ]);
@@ -202,7 +215,7 @@ class SaisieController extends Controller
         // si c'est une saisie par pôles on renvoie à la liste des pôles pour saisir le suivant
         if(session()->get('type_saisie') == config('constantes.pol')) {
 
-          return view('saisie.saisieParPole', [
+          return view('saisie.choixDuPole', [
             'saisie' => Saisie::find(session()->get('saisie_id')),
             'themes' => Theme::all(),
           ]);

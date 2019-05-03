@@ -9,17 +9,13 @@
     <div class="alert bg-otobleu">
       <h3><img class="otoveil mr-3" src="{{asset(config('chemins.saisie'))}}/analyse.svg" alt=""> Analyse des alertes</h3>
     </div>
-  </div>
-  @if(isset($message))
-    <div class="container-fluid bg-success">
-      <h5>{{$message}}</h5>
-    </div>
-  @endif
+
 
   {{ Form::open(['route' => 'saisie.origines.store'])}}
 
-    <div class="container-fluid">
-      @foreach($resultats as $resultat)
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        @foreach($resultats as $resultat)
 
           <div id="alerte_{{$resultat->alerte->id}}" class="alerte-item bg-otorange deplie d-flex flex-row justify-content-between curseur">
             <div>
@@ -48,12 +44,22 @@
               </div>
             @endforeach
           </div>
+        @endforeach
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-11 d-flex justify-content-end">
+        <button type="submit" class="btn btn-otorange rounded-0">
+          <i class="fas fa-share-square"></i> Envoyer
+        </button>
+        <a href="{{URL::previous()}}" class="btn btn-otobleu rounded-0 ml-2"><i class="fas fa-undo-alt"></i> Retour aux observations</a>
+      </div>
+      <div class="col-md-1">
 
-      @endforeach
+      </div>
+      </div>
+    {{Form::close()}}
 
-      {{Form::submit('Enregistrer et retour', ['class' => 'btn btn-otobleu grands-boutons coupe'])}}
-      <a href="{{URL::previous()}}" class="btn btn-otorange grands-boutons coupe">Revenir aux observations</a>
-      {{Form::close()}}
     </div>
 
 @endsection

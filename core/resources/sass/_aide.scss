@@ -27,15 +27,21 @@
 }
 .aide-contenu {
   position: fixed;
-  width: 50vw;
-  left: 10vw;
-  top: 10vh;
+  width: 100vw;
+  left: 0;
+  top: 15vh;
   display: none;
 }
+
+.aide-contenu-container {
+  top: 0;
+  margin: auto;
+  width: 60%;
+}
+
 .aide-contenu-saisie {
   top: 6vh !important;
-  width: 50vw;
-  left: 30vw !important;
+
 }
 
 .aide-contenu-chiffre {
@@ -50,17 +56,6 @@
 .aide-contenu-texte {
   padding: 20px;
   box-shadow: 2px 2px 4px black;
-}
-.aide-contenu-container {
-  position: absolute;
-  top: 0;
-}
-.aide-contenu-container-droite {
-  left: 20vw;
-}
-.aide-contenu-container-gauche
-{
-  left: 10vw;
 }
 .aide-icones {
   width: 50px;
@@ -100,9 +95,7 @@
 
 @media screen and (min-width: 576px) {
   .aide-contenu {
-    left: 5vw;
-    width: 90vw;
-    top: 30vh;
+
   }
   .aide-icones {
     border-radius: inherit;

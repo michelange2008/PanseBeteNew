@@ -5,7 +5,7 @@
 
 <div class="aide-contenu ">
 
-  <div id="texte-d-1" class="desktop-only aide-contenu-container aide-contenu-container-gauche">
+  <div id="texte-d-1" class="desktop-only aide-contenu-container">
     <p class="aide-contenu-chiffre bg-aide-trans">1</p>
     <div class="close" style="font-size:2rem" title="fermer">
       <i class="fas fa-window-close"></i>
@@ -35,15 +35,18 @@
     <div class="close" style="font-size:2rem" title="fermer">
       <i class="fas fa-window-close"></i>
     </div>
-    <div class="aide-contenu-texte bg-aide-trans text-light">
+    <div class="aide-contenu-texte desktop-only bg-aide-trans text-light">
       <p>Vous pouvez aussi travailler sur des grilles existantes:</p>
-      <div class="d-flex justify-content-around align-items-center">
-        <p>les <span class="bg-otorange aide-petit-bouton"> <i class='far fa-trash-alt'></i> supprimer </span> </p>
-        <p>les <span class='bg-otobleu aide-petit-bouton'> <i class="far fa-eye"></i> Voir </span> </p>
-      </div>
-      <div class="d-flex justify-content-around align-items-center">
-        <p>les <span class="bg-otojaune aide-petit-bouton"> <i class="fa fa-pencil-alt"></i> Modifier </span> </p>
-        <p>ou rouvrir le pdf <span style="font-size: 2rem; color:red"><i class="far fa-file-pdf"></i></span></p>
+      <div class="row">
+        <div class="col-md-8 mb-1">
+          <img class="img-100" src="{{asset(config('chemins.aide'))}}/aide_modif_saisie.png" alt="">
+        </div>
+        <div class="col-md-4">
+          <p class="mr-3">les <span class="bg-otorange aide-petit-bouton"> <i class='far fa-trash-alt'></i> supprimer </span> </p>
+          <p class="mr-3">les <span class='bg-otobleu aide-petit-bouton'> <i class="far fa-eye"></i> Voir </span> </p>
+          <p class="mr-3">les <span class="bg-otojaune aide-petit-bouton"> <i class="fa fa-pencil-alt"></i> Modifier </span> </p>
+          <p>ou rouvrir le pdf <span style="font-size: 2rem; color:red"><i class="far fa-file-pdf"></i></span></p>
+        </div>
       </div>
       <p></p>
       <div class="d-flex justify-content-end">

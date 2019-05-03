@@ -2,58 +2,100 @@
 
 @extends('menus.menuprincipal')
 
-@extends('aide.aide_saisie')
+@extends('aide.aide_alertes')
 
 @section('contenu')
   <div class="container-fluid">
-    <div class="alert alert-success d-flex">
-      <img class="img-40" src="{{asset(config('chemins.categories'))."/".$saisie->espece->icone}}" alt="">
-      <h3 class="pl-3 text-truncate">{{$saisie->elevage->nom}} <small>({{$saisie->created_at->month}} {{$saisie->created_at->locale('fr')->monthName}} {{$saisie->created_at->year}})</small></h3>
+    <div class="alert bg-otobleuclair d-flex">
+      <h3 class="pl-3 text-truncate"><i class="fas fa-eye"></i> Saisie des observations</h3>
     </div>
-    <div class="row justify-content-md-center">
-      <div class="col-md-10">
-        <div class="bg-otorange titre mb-3 d-flex flex-row align-items-center">
-          <img class="img-75 p-1" src="{{asset(config('chemins.saisie'))}}/oeil.svg" alt="regard" class="">
-          <h5 class="text-truncate">Pôles d'observation ({{$saisie->elevage->nom}})</h5>
+
+    <div class="row justify-content-center">
+      <div class="col-md-11">
+        <div class="bg-otobleu titre d-flex p-2">
+          <img src="{{asset(config('chemins.saisie')).'/'.session()->get('theme')->icone}}" alt="{{session()->get('theme')->nom}}" class="otoveil">
+          <h3 class="pl-2">{{ucfirst(session()->get('theme')->nom)}}</h3>
         </div>
       </div>
     </div>
-    <div class="row justify-content-md-center">
-      <div class="col-md-10">
-        @foreach($themes as $theme)
-          <div class="espece-item theme-item bg-otobleu d-flex flex-row">
-            <img src="{{asset(config('chemins.saisie'))."/".$theme->icone}}" alt="{{$theme->nom}}" />
-            <div class="coupe d-flex justify-content-between" style="flex:1">
-              <div class="d-flex flex-column justify-content-center">
-                <a href="{{route('saisie.alertes', ['theme_id' => $theme->id])}}" class="btn btn-otobleu">{{ucfirst($theme->nom)}}</a>
-              </div>
-              @if($saisie->salertes->count() > 0)
-                <?php $count = 0 ?>
-                @foreach($saisie->salertes as $salerte)
-                  <?php // TODO: problème de theme non object si reprise de la saisie après abandon ?>
-                  @if($theme->id === $salerte->alerte->theme->id)
-                    <?php $count++  ?>
-                  @endif
-                @endforeach()
-                @if($count > 0)
-                  <div class="nb-alertes">
-                    ({{$count}})
-                    <?php $count=0 ?>
-                  </div>
-                @endif
-              @endif
-            </div>
+
+    @if($errors->any())
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="alert alert-danger">
+
+            <strong>Oups, nous n'avons pas pu valider votre saisie pour la raison suivante</strong>
+
+            <ul class="list-unstyled">
+              @foreach($errors->all() as $error)
+
+                <li>
+                  {{ $error }}
+                </li>
+
+              @endforeach
+            </ul>
           </div>
-        @endforeach
+        </div>
+      </div>
+    @endif
+    {{Form::open(['route' => 'saisie.enregistre'])}}
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+
+        @foreach($alertes as $alerte)
+
+          <?php
+          $value ="";
+          $attention = "";
+          foreach ($sAlertes as $sAlerte ) {
+            if($sAlerte->alerte_id === $alerte->id)
+            {
+              $value = $sAlerte->valeur;
+              $attention = "attention";
+            }
+          }
+          ?>
+
+          <div class="affiche alerte-item">
+            <p class="{{$attention}}">{{$alerte->id}} - {{$alerte->nom}}</p>
+            <div>
+              @if($alerte->type = "liste" && $alerte->critalertes->count() > 0)
+                <?php // construction du tableau pour la liste déroulante
+                $liste = [];
+                foreach($alerte->critalertes as $crit){
+                  $liste[] = $crit->nom;
+                }
+                ?>
+                {{Form::select('alerte_'.$alerte->id, $liste, $value)}}
+              @else()
+                <input
+                name="alerte_{{$alerte->id}}"
+                type="number"
+                placeholder="{{ old('alerte_'.$alerte->id) }}"
+                class="zone-saisie"
+                value = "{{$value}}"
+                />
+                {{Form::label('alerte_'.$alerte->id, $alerte->unite)}}
+
+              @endif()
+            </div>
+
+          </div>
+
+        @endforeach()
       </div>
     </div>
-    <div class="row justify-content-md-end m-3">
-        <a href="{{route('lecture.detail', session('saisie_id'))}}" class="btn btn-info rounded-0">J'ai fini et je veux voir la synthèse</a>
-
+    <div class="row">
+      <div class="col-md-11 d-flex justify-content-end">
+        <button type="submit" class="btn btn-otorange rounded-0">
+          <i class="fas fa-share-square"></i> Envoyer
+        </button>
+        <a href="{{route('saisie.type', config('constantes.pol'))}}" class="btn btn-otobleu rounded-0 ml-2" title="revenir à la liste"><i class="fas fa-undo-alt"></i> Retour</a>
+      </div>
+      <div class="col-md-1"></div>
+      {{Form::close()}}
     </div>
   </div>
-
-
-
 
 @endsection()
