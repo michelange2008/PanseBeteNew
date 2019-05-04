@@ -52,8 +52,6 @@ Route::group(['middleware' => ['auth', 'isValid']], function () {
 
     Route::get('/aide/video', ['uses' => 'AccueilController@video', 'as' => 'aide.video']);
 
-    Route::get('entravaux/{espece_id}', ['uses' => 'AccueilController@entravaux', 'as' => 'entravaux']);
-
   // Saisies
 
     Route::get('/saisie/nouvelle/{elevage}/{espece_id}', ['uses' => 'SaisieController@nouvelle', 'as' => 'saisie.nouvelle']);

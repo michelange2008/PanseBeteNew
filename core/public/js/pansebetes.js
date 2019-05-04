@@ -208,11 +208,11 @@ function handleStart(evt) {
     ctx.fillRect(touches[i].pageX-2, touches[i].pageY-2, 4, 4);
   }
 }
-// TODO: Scroll à quoi ça sert ?
 // Destiner à afficher la barre de scroll sur l'écran du portable dans le fenetre LISTE
 // des origines si elle déborde dans le bas de l'écran
 var winHeight = screen.height;
 var pageHeight = $('html').height();
+console.log(winHeight);
 if(winHeight >= pageHeight)
 {
   $('#scroll').css('display', 'none');

@@ -81,15 +81,4 @@ class AccueilController extends Controller
       ]);
     }
 
-    public function entravaux($espece_id)
-    {
-      if(Espece::find($espece_id)->fini === 1)
-      {
-        return 1;
-      }
-      else {
-        return error;
-      }
-    }
-
 }

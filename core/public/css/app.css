@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@charset "UTF-8";
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -15853,24 +15853,6 @@ readers do not read off random characters that represent icons */
           transform: scale(0.4) translateY(0px) translateX(40px);
 }
 
-@font-face {
-  font-family: "din";
-  font-style: normal;
-  src: url("../font/DINPRO-REGULAR.OTF");
-}
-
-@font-face {
-  font-family: "din";
-  font-style: italic;
-  src: url("../font/DINPro-Italic.otf");
-}
-
-@font-face {
-  font-family: "din";
-  font-weight: bold;
-  src: url("../font/DINPRO-BOLD.OTF");
-}
-
 /**
  * Nestable
  */
@@ -16688,7 +16670,7 @@ a, a:link, a:hover {
 
 @media screen and (max-width: 769px) {
   #scroll {
-    background: url("../svg/scroll.svg") no-repeat center rgba(245, 128, 33, 0.7);
+    background: url("../img/scroll.svg") no-repeat center rgba(245, 128, 33, 0.7);
     background-size: contain;
     position: fixed;
     z-index: 10000;
