@@ -77,7 +77,7 @@ class AccueilController extends Controller
       return view('divers.video', [
         'theme' => 'aide',
         'bouton' => 'retour',
-        'route' => 'aide',
+        'route' => 'accueil',
       ]);
     }
 

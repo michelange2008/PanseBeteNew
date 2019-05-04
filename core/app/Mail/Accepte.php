@@ -32,6 +32,6 @@ class Accepte extends Mailable
     public function build()
     {
         return $this->subject("Validation de l'inscription à Panses-Bêtes")
-                    ->view('admin.accepte');
+                    ->view('admin.mail_accepte');
     }
 }
