@@ -10,15 +10,7 @@
       <div class="col-md-12">
         <div class="alert alert-success d-flex">
           <img class="img-40" src="{{asset(config('chemins.categories'))."/".$saisie->espece->icone}}" alt="">
-          <h3 class="pl-3 text-truncate">{{$saisie->elevage->nom}} <small>({{$saisie->created_at->month}} {{$saisie->created_at->locale('fr')->monthName}} {{$saisie->created_at->year}})</small></h3>
-        </div>
-      </div>
-    </div>
-    <div class="row justify-content-md-center">
-      <div class="col-md-10">
-        <div class="bg-otorange titre mb-3 d-flex flex-row align-items-center">
-          <img class="img-75 p-1" src="{{asset(config('chemins.saisie'))}}/oeil.svg" alt="regard" class="">
-          <h5 class="text-truncate">Pôles d'observation ({{$saisie->elevage->nom}})</h5>
+          <h3 class="pl-3 text-truncate">Choix du pôle d'observation ({{$saisie->elevage->nom}} <small>- {{$saisie->created_at->month}} {{$saisie->created_at->locale('fr')->monthName}} {{$saisie->created_at->year}})</small></h3>
         </div>
       </div>
     </div>

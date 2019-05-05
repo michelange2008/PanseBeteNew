@@ -45,8 +45,8 @@ class SaisieController extends Controller
       return view('saisie.saisieAccueil');
     }
     /*
-    // Méthode qui affiche la liste des thèmes quand on fait une nouvelle saisie
-    // ou que l'on modifie une ancienne
+    // Méthode appelée après le choix d'une nouvelle saisie
+    // puis le choix d'un approche exhaustive ou par pôle (= $type)
     */
     public function saisie($type)
     {
@@ -54,11 +54,16 @@ class SaisieController extends Controller
 
       session()->put('type_saisie', $type);
 
-      $themes = Theme::all();
-
       $saisie = Saisie::find(session()->get('saisie_id'));
 
       session()->forget('theme');
+      // Petit bricolage pour ne prendre que les thèmes qui ont des alertes pour l'espèce concernée
+      $themes_utilises = Alerte::select('theme_id')->where('espece_id', $saisie->espece_id)->groupBy('theme_id')->get();
+
+      foreach ($themes_utilises as $alerte) {
+        $liste_themes_utilises[] = $alerte->theme_id;
+      }
+      $themes = Theme::find($liste_themes_utilises);
 
       if ($type == config('constantes.pol')) {
         return view('saisie.choixDuPole',[

@@ -53,16 +53,20 @@
             }
             ?>
             <div class="affiche alerte-item ml-3 pl-3">
-              <p class="{{$attention}}">{{ucfirst($alerte->nom)}}</p>
+              <p class="{{$attention}}">{{ucfirst($alerte->nom)}} ({{$alerte->id}})</p>
               <div>
                 @if($alerte->type = "liste" && $alerte->critalertes->count() > 0)
                   <?php // construction du tableau pour la liste déroulante
                   $liste = [];
                   foreach($alerte->critalertes as $crit){
-                    $liste[] = $crit->nom;
+                    $liste[$crit->valeur] = $crit->nom;
                   }
+                  ksort($liste);
                   ?>
                   {{Form::select('alerte_'.$alerte->id, $liste, $value)}}
+                  @if($alerte->unite != "")
+                    {{Form::label('alerte_'.$alerte->id, $alerte->unite)}}
+                  @endif
                 @else()
                   <input
                   name="alerte_{{$alerte->id}}"
