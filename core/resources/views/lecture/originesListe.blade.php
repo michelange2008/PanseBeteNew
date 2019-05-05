@@ -87,4 +87,9 @@
 </div>
 
 <canvas id="scroll"></canvas>
+
+@push('js')
+  <script src="{{asset(config('chemins.js'))}}/jquery.nestable.js"></script>
+  <script src="{{asset(config('chemins.js'))}}/liste_des_origines.js"></script>
+@endpush
 @endsection

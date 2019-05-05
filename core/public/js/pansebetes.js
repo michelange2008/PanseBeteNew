@@ -179,12 +179,8 @@ $('.oeil').on('click', function() {
   }
 });
 
-$('.dd').nestable(
 
-);
-
-
-
+// FOnction pour le scroll en position smartphone dans liste des origines
 function startup() {
   var el = document.getElementsByTagName("canvas")[0];
   el.addEventListener("touchstart", handleStart, false);

@@ -43,7 +43,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
     @stack('js') <!-- Juste pour admin.js -->
 
-    <script src="{{asset(config('chemins.js'))}}/jquery.nestable.js"></script>
     <script src="{{asset(config('chemins.js'))}}/ziehharmonika.js"></script>
     <script src="{{asset(config('chemins.js'))}}/popper.min.js"></script>
     <script src="{{asset(config('chemins.js'))}}/bootstrap/bootstrap.min.js"></script>
