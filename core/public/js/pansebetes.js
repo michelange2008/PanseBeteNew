@@ -178,40 +178,6 @@ $('.oeil').on('click', function() {
 });
 
 
-// FOnction pour le scroll en position smartphone dans liste des origines
-function startup() {
-  var el = document.getElementsByTagName("canvas")[0];
-  el.addEventListener("touchstart", handleStart, false);
-  el.addEventListener("touchend", handleEnd, false);
-  el.addEventListener("touchcancel", handleCancel, false);
-  el.addEventListener("touchleave", handleLeave, false);
-  el.addEventListener("touchmove", handleMove, false);
-}
-
-function handleStart(evt) {
-  evt.preventDefault();
-  var el = document.getElementsByTagName("canvas")[0];
-  console.log(el);
-  var ctx = el.getContext("2d");
-  var touches = evt.changedTouches;
-
-  for (var i=0; i<touches.length; i++) {
-    ongoingTouches.push(touches[i]);
-    var color = colorForTouch(touches[i]);
-    ctx.fillStyle = color;
-    ctx.fillRect(touches[i].pageX-2, touches[i].pageY-2, 4, 4);
-  }
-}
-// Destiner à afficher la barre de scroll sur l'écran du portable dans le fenetre LISTE
-// des origines si elle déborde dans le bas de l'écran
-var winHeight = screen.height;
-var pageHeight = $('html').height();
-console.log(winHeight);
-if(winHeight >= pageHeight)
-{
-  $('#scroll').css('display', 'none');
-}
-
 // fonction pour afficher l'accordeon
 $(document).ready(function() {
 		$('.ziehharmonika').ziehharmonika({
