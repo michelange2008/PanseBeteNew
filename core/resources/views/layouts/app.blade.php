@@ -46,8 +46,6 @@
     <script src="{{asset(config('chemins.js'))}}/ziehharmonika.js"></script>
     <script src="{{asset(config('chemins.js'))}}/bootstrap/bootstrap.min.js"></script>
     <script src="{{asset(config('chemins.js'))}}/pansebetes.js"></script>
-    {{-- <script src="{{asset(config('chemins.js'))}}/fab.js"></script> --}}
-    <script src="{{asset(config('chemins.js'))}}/ziehharmonika.js"></script>
     <script src="{{asset(config('chemins.js'))}}/app.js"></script>
 
 </body>
