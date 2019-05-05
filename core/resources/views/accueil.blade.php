@@ -18,7 +18,7 @@
             <img src="{{config('chemins.especes').$espece->icone}}"
             id="nouvelle_{{$espece->id}}" name="{{auth()->user()->name}}" class="nouvelle-saisie-item shadow"
             route= "{{url('/')}}"
-            alt="{{$espece->nom}}" data-toggle="tooltip" data-placement="top" title="{{$espece->nom}}">
+            alt="{{$espece->nom}}" title="{{$espece->nom}}">
           @endforeach
         </div>
       </div>

@@ -1,6 +1,4 @@
 $(function () {
-// affichage des tool tip bootstrap
-    $('[data-toggle="tooltip"]').tooltip();
 // déplier les origines
     function deplie(id) {
 

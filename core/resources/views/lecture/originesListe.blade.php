@@ -86,7 +86,7 @@
   </div>
 </div>
 
-<canvas id="scroll"></canvas>
+<!--<canvas id="scroll"></canvas>-->
 
 @push('js')
   <script src="{{asset(config('chemins.js'))}}/jquery.nestable.js"></script>

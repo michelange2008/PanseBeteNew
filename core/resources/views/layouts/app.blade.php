@@ -41,16 +41,14 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
-    @stack('js') <!-- Juste pour admin.js -->
+    @stack('js')
 
     <script src="{{asset(config('chemins.js'))}}/ziehharmonika.js"></script>
-    <script src="{{asset(config('chemins.js'))}}/popper.min.js"></script>
     <script src="{{asset(config('chemins.js'))}}/bootstrap/bootstrap.min.js"></script>
     <script src="{{asset(config('chemins.js'))}}/pansebetes.js"></script>
     <script src="{{asset(config('chemins.js'))}}/fab.js"></script>
     <script src="{{asset(config('chemins.js'))}}/ziehharmonika.js"></script>
     <script src="{{asset(config('chemins.js'))}}/app.js"></script>
-    <script src="{{asset(config('chemins.js'))}}/origines.js"></script>
 
 </body>
 </html>
