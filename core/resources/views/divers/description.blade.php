@@ -43,3 +43,7 @@
 </div>
 
 @endsection
+
+@push('js')
+  <script src="{{asset(config('chemins.js'))}}/ziehharmonika.js"></script>
+@endpush
