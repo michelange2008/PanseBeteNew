@@ -179,9 +179,6 @@ class SaisieController extends Controller
             'sAlertes' => $sAlertes,
           ]);
         }
-        else {
-          return view('travaux');
-        }
       }
 
     /*
