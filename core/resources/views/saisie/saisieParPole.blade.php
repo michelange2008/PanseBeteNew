@@ -58,7 +58,7 @@
           ?>
 
           <div class="affiche alerte-item">
-            <p class="{{$attention}}">{{$alerte->id}} - {{$alerte->nom}}</p>
+            <p class="{{$attention}}">{{ucfirst($alerte->nom)}}</p>
             <div>
               @if($alerte->type = "liste" && $alerte->critalertes->count() > 0)
                 <?php // construction du tableau pour la liste déroulante

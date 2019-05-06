@@ -53,7 +53,7 @@
             }
             ?>
             <div class="affiche alerte-item ml-3 pl-3">
-              <p class="{{$attention}}">{{ucfirst($alerte->nom)}} ({{$alerte->id}})</p>
+              <p class="{{$attention}}">{{ucfirst($alerte->nom)}}</p>
               <div>
                 @if($alerte->type = "liste" && $alerte->critalertes->count() > 0)
                   <?php // construction du tableau pour la liste déroulante
