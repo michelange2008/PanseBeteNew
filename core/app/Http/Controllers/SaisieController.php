@@ -126,7 +126,7 @@ class SaisieController extends Controller
       $datas = array_slice($request->all(),1); // on enlève le token
 
       $resultats = $this->renvoieSalerte($datas, $alertes); // utilisation du trait CreeAlerte pour l'enregistrement de la saisie
-
+      dd($resultats[0]);
       if($resultats->count() === 0) // aucune alerte anormale
       {
         $message = "Il n'y a aucun problème";

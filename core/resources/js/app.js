@@ -200,21 +200,21 @@ $(function() {
     $('.aide-contenu').fadeToggle();
   })
   $('#affiche-texte-d-1').on('click', function() {
-    $('#texte-d-1').fadeToggle();
-    $('#texte-d-2').fadeToggle();
+    $('#texte-d-1').fadeToggle(0);
+    $('#texte-d-2').fadeToggle(0);
   })
   $('#affiche-texte-d-2').on('click', function() {
-    $('#texte-d-2').fadeToggle();
-    $('#texte-d-1').fadeToggle();
+    $('#texte-d-2').fadeToggle(0);
+    $('#texte-d-1').fadeToggle(0);
   })
   $('#affiche-texte-s-1').on('click', function() {
-    $('#texte-s-1').fadeToggle();
-    $('#texte-s-2').fadeToggle();
+    $('#texte-s-1').fadeToggle(0);
+    $('#texte-s-2').fadeToggle(0);
   })
   $('#affiche-texte-s-2').on('click', function() {
     console.log('coucou');
-    $('#texte-s-2').fadeToggle();
-    $('#texte-s-1').fadeToggle();
+    $('#texte-s-2').fadeToggle(0);
+    $('#texte-s-1').fadeToggle(0);
   })
 // MENU ROND
   $('.bouton-rond').on('click', function() {
