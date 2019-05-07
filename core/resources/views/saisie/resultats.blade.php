@@ -2,14 +2,18 @@
 
 @extends('menus.menuprincipal')
 
-@extends('aide.aide_resultats')
+@extends('aide.aide_detail')
 
 @section('contenu')
   <div class="container-fluid">
     <div class="alert bg-otobleu">
       <h3><img class="otoveil mr-3" src="{{asset(config('chemins.saisie'))}}/analyse.svg" alt=""> Analyse des alertes</h3>
     </div>
-
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <p class="text-muted"><small>Pour afficher la listes des origines possibles, cliquez sur la double-flèche à droite de chaque alerte</small></p>
+      </div>
+    </div>
 
   {{ Form::open(['route' => 'saisie.origines.store'])}}
 
