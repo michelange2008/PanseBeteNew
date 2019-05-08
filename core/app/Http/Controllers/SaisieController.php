@@ -7,6 +7,7 @@ use App\Models\Saisie;
 use App\Models\Theme;
 use App\Models\Alerte;
 use App\Models\Salerte;
+use App\Models\Sorigine;
 use App\Models\Origine;
 use App\Models\Elevage;
 use App\Traits\CreeAlerte;
@@ -122,6 +123,13 @@ class SaisieController extends Controller
           ]);
         }
       }
+      // en cas de modification d'une saisie déjà réalisée on récupère les id des origines pour pouvoir recocher les cases
+      // En effet le trait CreeAlerte élimine toutes les alertes de la saisie
+      $liste_origines = [];
+      $ori = sOrigine::select('origine_id')->where('saisie_id', session()->get('saisie_id'))->get();
+      foreach ($ori as $value) {
+        $liste_origines[] = $value->origine_id;
+      }
 
       $datas = array_slice($request->all(),1); // on enlève le token
 
@@ -149,6 +157,7 @@ class SaisieController extends Controller
           return view('saisie.resultats', [
           'resultats' => $resultats,
           'themes' => $themes,
+          'liste_origines' => $liste_origines,
           ]);
         }
       }

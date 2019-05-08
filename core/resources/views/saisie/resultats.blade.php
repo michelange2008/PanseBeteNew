@@ -43,7 +43,14 @@
                   {{ Form::label($resultat->id."_".$origine->id, $origine->question)}}
                 </div>
                 <div style="margin:auto">
-                  {{ Form::checkbox($resultat->id."_".$origine->id)}}
+                  <!-- boucle destinée à recocher les cases qui avaient été cochées à la précédente saisie -->
+                  @if (in_array($origine->id, $liste_origines))
+                    <!-- case cochée -->
+                    {{ Form::checkbox($resultat->id."_".$origine->id, '', true)}}
+                  @else
+                    <!-- case non cochée -->
+                    {{ Form::checkbox($resultat->id."_".$origine->id)}}
+                  @endif
                 </div>
               </div>
             @endforeach
