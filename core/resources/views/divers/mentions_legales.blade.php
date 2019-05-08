@@ -13,9 +13,17 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-1">
-
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <div class="alert bg-otobleu d-flex">
+        <img class="mr-3 img-40" src="{{asset(config('chemins.note'))}}/credit.svg" alt="">
+        <h5 class="mt-2">Crédits</h5>
+      </div>
+        <p class="lead">Icones: NounProject <a href="https://thenounproject.com/" title="site de NounProject"><i class="fas fa-external-link-square-alt"></i></a></p>
     </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1"></div>
     <div class="col-md-10">
       <div class="alert bg-otobleu d-flex">
         <img class="mr-3 img-40" src="{{asset(config('chemins.note'))}}/count_blanc.svg" alt="">
