@@ -16,7 +16,26 @@
 
     <!-- Matomo -->
       <script type="text/javascript">
+      // require user consent before processing data
+          _paq.push(['requireConsent']);
+          _paq.push(['trackPageview']);
+      // fin require user consent
         var _paq = window._paq || [];
+          // Debut - Obligation CNIL
+          _paq.push([function() {
+              var self = this;
+              function getOriginalVisitorCookieTimeout() {
+                  var now = new Date(),
+                  nowTs = Math.round(now.getTime() / 1000),
+                  visitorInfo = self.getVisitorInfo();
+                  var createTs = parseInt(visitorInfo[2]);
+                  var cookieTimeout = 33696000; // 13 mois en secondes
+                  var originalTimeout = createTs + cookieTimeout - nowTs;
+                  return originalTimeout;
+              }
+              this.setVisitorCookieTimeout( getOriginalVisitorCookieTimeout() );
+          }]);
+          // Fin - Obligation CNIL
         /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
         _paq.push(['trackPageView']);
         _paq.push(['enableLinkTracking']);
