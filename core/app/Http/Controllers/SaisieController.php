@@ -43,7 +43,11 @@ class SaisieController extends Controller
     */
     public function accueil()
     {
-      return view('saisie.saisieAccueil');
+      $saisie = Saisie::find(session()->get('saisie_id'));
+
+      return view('saisie.saisieAccueil', [
+        'saisie' => $saisie,
+      ]);
     }
     /*
     // Méthode appelée après le choix d'une nouvelle saisie
@@ -55,9 +59,9 @@ class SaisieController extends Controller
 
       session()->put('type_saisie', $type);
 
-      $saisie = Saisie::find(session()->get('saisie_id'));
-
       session()->forget('theme');
+
+      $saisie = Saisie::find(session()->get('saisie_id'));
       // Petit bricolage pour ne prendre que les thèmes qui ont des alertes pour l'espèce concernée
       $themes_utilises = Alerte::select('theme_id')->where('espece_id', $saisie->espece_id)->groupBy('theme_id')->get();
 
@@ -78,6 +82,7 @@ class SaisieController extends Controller
         $sAlertes = Salerte::where('saisie_id', session()->get('saisie_id'))->get();
 
         return view('saisie.saisieParAlerte',[
+            'saisie' => $saisie,
             'themes' => $themes,
             'alertes' => $alertes,
             'sAlertes' => $sAlertes,
@@ -105,7 +110,7 @@ class SaisieController extends Controller
         $alertes = Alerte::where('espece_id', session()->get('espece_id'))->get();
         $themes = Theme::all();
       }
-
+      $saisie = Saisie::find(session()->get('saisie_id'));
       // VALIDATION
       // après utilisation d'un middleware Sanitize qui transforme en 0 les null
       foreach ($alertes as $alerte) {
@@ -142,12 +147,14 @@ class SaisieController extends Controller
         {
           return view('saisie.resultatsGlobalOk', [
             'resultats' => $resultats,
+            'saisie' => $saisie,
             ])->with(['message' => $message]);
         }
         else
         {
           return view('saisie.resultatsPoleOk', [
               'resultats' => $resultats,
+              'saisie' => $saisie,
               'theme' => session()->get('theme'),
             ])->with(['message' => $message]);
         }
@@ -157,6 +164,7 @@ class SaisieController extends Controller
           return view('saisie.resultats', [
           'resultats' => $resultats,
           'themes' => $themes,
+          'saisie' => $saisie,
           'liste_origines' => $liste_origines,
           ]);
         }
@@ -204,11 +212,7 @@ class SaisieController extends Controller
 
       session()->put('type_saisie', config('constantes.pol'));
 
-      if(!session()->has('saisie_id')) {
-
-        session()->put('saisie_id', $saisie_id);
-
-      }
+      session()->put('saisie_id', $saisie_id);
 
       return view('saisie.choixDuPole', [
         'themes' => $themes,

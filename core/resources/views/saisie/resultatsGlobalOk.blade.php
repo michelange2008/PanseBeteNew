@@ -2,13 +2,10 @@
 
 @extends('menus.menuprincipal')
 
+@extends('menus.sousmenu', ['titre' => 'Analyse des alertes'])
+
 @section('contenu')
   <div class="container-fluid">
-    <div class="alert bg-otobleu">
-      <h3><img class="otoveil mr-3" src="{{asset(config('chemins.saisie'))}}/analyse.svg" alt=""> Analyse des alertes</h3>
-    </div>
-  </div>
-
       <div class="row justify-content-center">
         <div class="col-md-6">
           <div class="card">

@@ -4,12 +4,10 @@
 
 @extends('aide.aide_origines')
 
+@extends('menus.sousmenu', ['titre' => 'Liste des origines'])
+
 @section('contenu')
 <div class="container-fluid">
-  <div class="alert alert-success d-flex">
-    <img class="img-40" src="{{asset(config('chemins.categories'))."/".$saisie->espece->icone}}" alt="">
-    <h3 class="pl-3 text-truncate">{{$saisie->elevage->nom}} <small>({{$saisie->created_at->month}} {{$saisie->created_at->locale('fr')->monthName}} {{$saisie->created_at->year}})</small></h3>
-  </div>
   <div class="bg-otorange titre rounded-0 ml-3 d-flex justify-content-between align-items-center" style="min-height:45px">
     <div class="d-flex align-items-center">
       <img class="img-resp" src="{{URL::asset(config('chemins.saisie'))}}/check.svg" alt="case cochée" class="">

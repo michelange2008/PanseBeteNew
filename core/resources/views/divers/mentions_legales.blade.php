@@ -2,16 +2,11 @@
 
 @extends('menus.menuprincipal')
 
+@extends('menus.soustitre', ['soustitre' => "Mentions légales", 'icone' => 'legal'])
+
 @section('contenu')
 
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="alert alert-success rounded-0">
-        <h1>Mentions légales</h1>
-      </div>
-    </div>
-  </div>
   <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-10">

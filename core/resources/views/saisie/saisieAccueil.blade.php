@@ -2,14 +2,16 @@
 
 @extends('menus.menuprincipal')
 
+@extends('menus.sousmenu', ['titre' => 'Saisie des observations'])
+
 @section('contenu')
 
 <div class="container-fluid">
-  <div class="alert bg-otobleu">
-    <h3>Quel type d'approche souhaitez-vous ?</h3>
-  </div>
   <div class="row justify-content-center">
     <div class="col-md-10">
+      <div class="alert bg-otobleu">
+        <h4>Quel type d'approche souhaitez-vous ?</h3>
+      </div>
       <div class="card-deck">
         <div class="card">
           <div class="card-body">

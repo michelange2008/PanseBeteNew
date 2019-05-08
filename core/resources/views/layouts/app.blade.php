@@ -53,6 +53,8 @@
 
         @yield('menuprincipal')
         @yield('menu')
+        @yield('sousmenu')
+        @yield('soustitre')
         @yield('contenu')
         @yield('aide')
 

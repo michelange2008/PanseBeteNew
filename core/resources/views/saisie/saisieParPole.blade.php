@@ -4,12 +4,10 @@
 
 @extends('aide.aide_alertes')
 
+@extends('menus.sousmenu', ['titre' => 'Saisie des observations'])
+
 @section('contenu')
   <div class="container-fluid">
-    <div class="alert bg-otobleuclair d-flex">
-      <h3 class="pl-3 text-truncate"><i class="fas fa-eye"></i> Saisie des observations</h3>
-    </div>
-
     <div class="row justify-content-center">
       <div class="col-md-11">
         <div class="bg-otobleu titre d-flex p-2">

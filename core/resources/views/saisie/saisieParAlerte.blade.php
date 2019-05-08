@@ -4,12 +4,9 @@
 
 @extends('aide.aide_alertes')
 
+@extends('menus.sousmenu', ['titre' => 'Saisie des observations'])
+
 @section('contenu')
-  <div class="container-fluid">
-    <div class="alert bg-otobleuclair">
-      <h3><i class="fas fa-eye"></i> Saisie des observations</h3>
-    </div>
-  </div>
 
   @if($errors->any())
 

@@ -6,8 +6,10 @@
 
 @section('contenu')
 
-  <div class="container-fluid alert bg-otorange">
-    <h2 class="color-otobleu"> <img class="aide-icones" src="{{config('chemins.aide')}}instructions.svg" alt="mode d'emploi"> Aide</h2>
+  <div class="container-fluid">
+    <div class="alert bg-otorange">
+      <h3 class="color-otobleu"> <img class="aide-icones img-40" src="{{config('chemins.aide')}}instructions.svg" alt="mode d'emploi"> Aide</h3>
+    </div>
   </div>
   <div class="container-fluid">
     <div class="row">

@@ -2,16 +2,11 @@
 
 @extends('menus.menuprincipal')
 
+@extends('menus.soustitre', ['soustitre' => "Nous contacter", 'icone' => 'contact'])
+
 @section('contenu')
 
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="alert bg-otobleu">
-        <h3>Nous contacter</h3>
-      </div>
-    </div>
-  </div>
   <div class="row no-gutters">
     <p class="lead">Panse-Bêtes est un outil largement perfectible. Il doit être évolutif,
       se corriger au fil des expériences de terrain. Nous avons donc besoin de vos avis,
