@@ -19,7 +19,7 @@
     <div class="col-md-10">
       <div class="alert bg-otobleu d-flex">
         <img class="mr-3 img-40" src="{{asset(config('chemins.note'))}}/count_blanc.svg" alt="">
-        <h5>Suivi de la fréquentation du site</h5>
+        <h5 class="mt-2">Suivi de la fréquentation du site</h5>
       </div>
       <p>Nous avons mis en place un outil de suivi de la fréquentation de Panse-Bêtes afin de connaître l'utilisation de cet outil.</p>
       <p>Il s'agit d'un logiciel libre, nommé Matomo <a href="https://matomo.org/" title="site de Matomo"><i class="fas fa-external-link-square-alt"></i></a>, qui n'est pas intrusif, qui anonymise votre adresse IP et respecte la réglementation actuelle sur la protection de la vie privée.
