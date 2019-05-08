@@ -17,7 +17,8 @@
 
     </div>
     <div class="col-md-10">
-      <div class="alert bg-otobleu">
+      <div class="alert bg-otobleu d-flex">
+        <img class="mr-3 img-40" src="{{asset(config('chemins.note'))}}/count_blanc.svg" alt="">
         <h5>Suivi de la fréquentation du site</h5>
       </div>
       <p>Nous avons mis en place un outil de suivi de la fréquentation de Panse-Bêtes afin de connaître l'utilisation de cet outil.</p>
