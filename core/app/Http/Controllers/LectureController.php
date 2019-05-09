@@ -70,8 +70,9 @@ class LectureController extends Controller
       // s'il n'y a aucune alerte
       if($sorigines->count() == 0) {
         $message = "Il n'y a aucun problème signalé";
-        return view('saisie.resultatsGlobalOk')->with(['message' => $message]);
+        return view('saisie.resultatsGlobalOk', ['saisie' => $saisie])->with(['message' => $message]);
       }
+
       // on recherche la liste des catégories dans le sorigines
       foreach ($sorigines as $sorigine) {
         $cat[] = $sorigine->origine->categorie_id;
@@ -81,7 +82,6 @@ class LectureController extends Controller
 
       // et on recherche les objets catégories de cette liste
       $categories = Categorie::whereIn('id', collect($cat)->unique())->get();
-
       return view('lecture.originesListe', [
         'sorigines' => $sorigines,
         'saisie' => $saisie,

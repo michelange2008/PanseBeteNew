@@ -4,7 +4,7 @@
 
 @extends('aide.aide_origines')
 
-@extends('menus.sousmenu', ['titre' => 'Liste des origines'])
+
 
 @section('contenu')
 <div class="container-fluid">
