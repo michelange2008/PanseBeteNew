@@ -98,9 +98,9 @@
       @endforeach
     <div class="row mb-3">
       <div class="col-md-1"></div>
-      <div class="col-md-10 d-flex justify-content-between">
-        <a id="listeOrigines" href="{{route('lecture.originesListe', session()->get('saisie_id'))}}" class="btn btn-otojaune rounded-0"><i class="fas fa-align-right"></i> Liste des origines</a>
-        <a href="{{route('accueil')}}" class="btn btn-otobleu rounded-0"><i class="fas fa-undo-alt"></i> Retour</a>
+      <div class="col-md-10 d-flex justify-content-end">
+        <a id="listeOrigines" href="{{route('lecture.originesListe', session()->get('saisie_id'))}}" class="btn btn-otojaune rounded-0 mr-1"><i class="fas fa-align-right"></i> Liste des origines</a>
+        <a href="{{route('accueil')}}" class="btn btn-otobleu rounded-0"><i class="fas fa-undo-alt"></i> Retour à l'accueil</a>
       </div>
     </div>
     </div>

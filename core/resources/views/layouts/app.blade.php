@@ -16,11 +16,11 @@
 
     <!-- Matomo -->
       <script type="text/javascript">
-      // require user consent before processing data
-          _paq.push(['requireConsent']);
-          _paq.push(['trackPageview']);
-      // fin require user consent
         var _paq = window._paq || [];
+        // require user consent before processing data
+        _paq.push(['requireConsent']);
+        _paq.push(['trackPageview']);
+        // fin require user consent
           // Debut - Obligation CNIL
           _paq.push([function() {
               var self = this;

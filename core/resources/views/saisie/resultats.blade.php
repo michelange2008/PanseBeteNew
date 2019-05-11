@@ -4,13 +4,15 @@
 
 @extends('aide.aide_detail')
 
+@extends('menus.sousmenu', ['titre' => "Analyse des alertes"])
+
 @section('contenu')
   <div class="container-fluid">
-    <div class="alert bg-otobleu">
-      <h3><img class="otoveil mr-3" src="{{asset(config('chemins.saisie'))}}/analyse.svg" alt=""> Analyse des alertes</h3>
-    </div>
     <div class="row justify-content-center">
       <div class="col-md-10">
+        <div class="alert bg-otobleu">
+          <h5 class=" text-truncate"><img class="img-40 mr-3" src="{{asset(config('chemins.saisie'))}}/analyse.svg" alt=""> Recherche des origines possibles</h5>
+        </div>
         <p class="text-muted"><small>Pour afficher la listes des origines possibles, cliquez sur la double-flèche à droite de chaque alerte</small></p>
       </div>
     </div>
@@ -40,7 +42,7 @@
             @foreach($resultat->alerte->origines as $origine)
               <div class="container-fluid origine bg-otojaune d-flex flex-row " >
                 <div class="col-10">
-                  {{ Form::label($resultat->id."_".$origine->id, $origine->question)}}
+                  {{ Form::label($resultat->id."_".$origine->id, ucfirst($origine->reponse))}}
                 </div>
                 <div style="margin:auto">
                   <!-- boucle destinée à recocher les cases qui avaient été cochées à la précédente saisie -->

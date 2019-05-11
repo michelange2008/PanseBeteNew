@@ -58,16 +58,16 @@
                     </div>
                   </div>
                   <!-- Boutons: supprimer, pdf, voir, modifier -->
-                  <div class="d-flex flex-row justify-content-between" style="padding-right:20px">
+                  <div class="d-flex flex-row justify-content-between mb-2 mt-2">
                     <div class="d-flex flex-column justify-content-center">
                       <a id="supprime_{{$saisie->id}}" href="{{route('lecture.supprimer', $saisie->id)}}" class=" supprime justify-self-end btn btn-sm btn-otorange rounded-0"><i class="far fa-trash-alt"></i> Suppr.</a>
                     </div>
                     <div>
                       @if($saisie->salertes->count() > 0)
-                        <a href="{{route('pdf', $saisie->id)}}" class="btn btn-sm rounded-0"><img src="{{config('chemins.saisie')}}pdf.svg" alt="pdf" class="otoveil" /></a>
-                        <a href="{{route('lecture.detail', $saisie->id)}}" class="btn btn-sm btn-otobleu rounded-0"><i class="far fa-eye"></i> Voir</a>
+                          <a href="{{route('pdf', $saisie->id)}}" target="_blank" class="btn btn-sm btn-danger rounded-0 mr-1"><i class="far fa-file-pdf"></i> Afficher le pdf</a>
+                          <a href="{{route('lecture.detail', $saisie->id)}}" class="btn btn-sm btn-otobleu rounded-0 mr-1"><i class="far fa-eye"></i> Voir la synthèse</a>
                       @endif
-                      <a href="{{route('saisie.modifier', $saisie->id)}}" class="btn btn-sm btn-otojaune rounded-0"><i class="fa fa-pencil-alt"></i> Modifier</a>
+                      <a href="{{route('saisie.modifier', $saisie->id)}}" class="btn btn-sm btn-otojaune rounded-0"><i class="fa fa-pencil-alt"></i> Modifier la saisie</a>
                     </div>
                   </div>
                 </div>

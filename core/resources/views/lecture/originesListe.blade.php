@@ -32,21 +32,17 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8 d-flex justify-content-around">
-    </div>
-  </div>
+
   <div id="parCategorie" class="row">
     <div class="col-md-12">
       @foreach ($categories as $categorie)
         <div class="row m-3">
-          <div class="col-md-1"></div>
+          <div class="col-md-2"></div>
           <div class="col-md-3 bg-otojaune d-flex flex-row align-items-center">
             <img class="img-75 p-2" src="{{asset(config('chemins.categories'))."/".$categorie->icone}}" alt="">
             <h6 class="lead text-center">{{ucfirst($categorie->nom)}}</h6>
           </div>
-          <div class="col-md-7 bg-otobleu pt-2">
+          <div class="col-md-5 bg-otobleu pt-2">
             @foreach ($sorigines as $sorigine)
               @if ($categorie->id == $sorigine->origine->categorie_id)
                 <div class="row p-1 pl-3">
@@ -61,8 +57,8 @@
 
     </div>
 
-  <div id="parPole" class="row" style="display:none">
-    <div class="col-md-12">
+  <div id="parPole" class="row m-3 justify-content-center" style="display:none">
+    <div class="col-md-10">
       <div id="nestable2" class="dd">
         <ol class="dd-list">
           @foreach($sorigines as $sorigine)
@@ -79,8 +75,11 @@
       </div>
     </div>
   </div>
-  <div class="d-flex flex-row justify-content-end">
-    <a href="{{URL::previous()}}" class="btn btn-otobleu rounded-0">Retour</a>
+  <div class="row">
+    <div class="col-md-10 d-flex justify-content-end">
+      <a href="{{route('pdf', $saisie->id)}}" target="_blank" class="btn btn-danger rounded-0 mr-1"><i class="far fa-file-pdf"></i> Voir le pdf</a>
+      <a href="{{URL::previous()}}" class="btn btn-otobleu rounded-0 mr-1"><i class="fas fa-undo-alt"></i> Retour page préc.</a>
+    </div>
   </div>
 </div>
 
