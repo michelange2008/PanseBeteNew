@@ -9,11 +9,13 @@ use App\Models\Saisie;
 use App\Models\Participant;
 use App\Traits\CreeSaisie;
 use App\Traits\EffaceElevages;
+use App\Traits\LitJson;
 
 class AccueilController extends Controller
 {
     use CreeSaisie;
     use EffaceElevages;
+    use LitJson;
 
     public function index()
     {
@@ -64,7 +66,9 @@ class AccueilController extends Controller
 
     public function mentions_legales()
     {
-      return view('divers.mentions_legales');
+      return view('divers.mentions_legales', [
+        'infos' => $this->litJson("mentions_legales.json"),
+      ]);
     }
 
     public function aide()

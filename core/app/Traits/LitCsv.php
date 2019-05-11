@@ -24,9 +24,5 @@ trait LitCsv
       return $tableSansTitre;
 
     }
-
-
-
-
   }
 }
