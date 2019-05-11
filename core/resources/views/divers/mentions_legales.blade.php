@@ -74,26 +74,26 @@
     <div class="col-md-10">
       <div class="alert bg-otobleu d-flex">
         <img class="mr-3 img-40" src="{{asset(config('chemins.images'))}}/divers/rgpd.svg" alt="">
-        <h5 class="mt-2">Protection des données personnelles</h5>
+        <h5 class="mt-2">Protection des données personnelles (RGPD)</h5>
       </div>
       <div class="pl-3">
         <p class="lead">Panse-Bêtes ne stocke que très peu de données personnelles</p>
-        <p class="bg-otorange p-1"><strong>Pour les utilisateurs disposant d'un identifiant ou en cours de demande d'identifiant</strong></p>
+        <p class="bg-otorange p-1"><strong>Pour les utilisateurs disposant d'un identifiant ou qui ont demandé un identifiant</strong></p>
         <div class="ml-1">
           <p>Les données dont nous disposons sont : l'<strong>adresse de courriel</strong>, la profession et la région (si ces deux dernières données ont été renseignées).
            Le mot de passe est stocké sous forme cryptée: seul l'utilisateur connaît ce mot de passe.</p>
-          <p>l'utilisateur qui ne souhaite ne plus figurer dans la liste des personnes disposant d'un identifiant devra envoyer un courriel à l'administratrice de Panse-Bêtes <a href="mailto:contact@panse-betes.fr ?subject=Demande de désinscription" title="cliquez pour écrire un mail"><i class="fas fa-envelope"></i></a> </p>
+          <p>l'utilisateur qui ne souhaite plus figurer dans la liste des personnes disposant d'un identifiant devra envoyer un courriel à l'administratrice de Panse-Bêtes <a href="mailto:contact@panse-betes.fr ?subject=Demande de désinscription" title="cliquez pour écrire un mail"><i class="fas fa-envelope"></i></a> </p>
         </div>
         <p class="bg-otorange p-1"><strong>Pour les saisies qui ont été réalisées</strong></p>
         <div class="ml-1">
           <p>A l'exception des administrateurs du site, toutes les données saisies (nom de l'élevages, observations, alertes, etc.) ne sont accessibles qu'à l'utilisateur qui a créé la saisie.</p>
-          <p>Si vous souhaitez que ces données ne soit pas accessibles aux administrateurs du site, il faut supprimer la saisie une fois le pdf imprimé. Cette suppression entraîne une disparition complète des données.</p>
+          <p>Si vous souhaitez que ces données ne soit pas potentiellement accessibles aux administrateurs du site, il faut supprimer la saisie une fois le pdf imprimé. Cette suppression entraîne une disparition complète des données.</p>
           <p>Il est possible que, dans un avenir plus ou moins lointain, un traitement statistique anonymisé soit réalisé sur les données saisies. En aucune cas les noms de l'élevage ou les informations de l'utilisateur connecté ne feront partie de ces analyses statistiques.</p>
         </div>
-        <div class="border p-2 color-otobleu bg-light">
+        <div class="border p-2 text-light bg-dark">
           Toutes demandes concernant les données personnelles, leur mode de gestion, la sécurité du stockage ou leur rectification peuvent être adressées à l'administratrice de Panse-Bêtes
           <a href="mailto:contact@panse-betes.fr ?subject=Au sujet des informations personnelles" title="cliquez pour écrire un mail">
-            <i class="fas fa-envelope"></i>
+            <i class="fas fa-envelope"></i>.
           </a>
         </div>
       </div>
