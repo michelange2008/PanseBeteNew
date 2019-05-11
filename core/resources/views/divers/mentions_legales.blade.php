@@ -44,12 +44,25 @@
     <div class="col-md-1"></div>
     <div class="col-md-10">
       <div class="alert bg-otobleu d-flex">
+        <img class="mr-3 img-40" src="{{asset(config('chemins.note'))}}/credit.svg" alt="">
+        <h5 class="mt-2">Crédits</h5>
+      </div>
+      <div class="pl-3">
+        <p class="lead">Icones: NounProject <a href="https://thenounproject.com/" title="site de NounProject"><i class="fas fa-external-link-square-alt"></i></a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <div class="alert bg-otobleu d-flex">
         <img class="mr-3 img-40" src="{{asset(config('chemins.images'))}}/divers/cookie.svg" alt="">
         <h5 class="mt-2">Cookies</h5>
       </div>
       <div class="pl-3">
         <p class="lead">Cette application n'utilise ni cookie traceur ni cookie de réseaux sociaux</p>
-        <p>Les seuls cookies déposés sur votre ordinateurs sont indispensable au fonctionnement de l'application. Ils ne sont pas intrusifs</p>
+        <p>Les seuls cookies déposés sur votre ordinateurs sont indispensable au fonctionnement de l'application. Ils ne sont pas intrusifs et ne contiennent pas de données personnelles.</p>
         <p>L'application ne procède à aucune lecture de cookies tiers déposés par d'autres sites sur votre ordinateur.</p>
         <p>Un cookie de mesure d'audience est déposé sauf si vous l'avez refusé (cf. ci-dessous).</p>
       </div>
@@ -60,14 +73,34 @@
     <div class="col-md-1"></div>
     <div class="col-md-10">
       <div class="alert bg-otobleu d-flex">
-        <img class="mr-3 img-40" src="{{asset(config('chemins.note'))}}/credit.svg" alt="">
-        <h5 class="mt-2">Crédits</h5>
+        <img class="mr-3 img-40" src="{{asset(config('chemins.images'))}}/divers/rgpd.svg" alt="">
+        <h5 class="mt-2">Protection des données personnelles</h5>
       </div>
       <div class="pl-3">
-        <p class="lead">Icones: NounProject <a href="https://thenounproject.com/" title="site de NounProject"><i class="fas fa-external-link-square-alt"></i></a></p>
+        <p class="lead">Panse-Bêtes ne stocke que très peu de données personnelles</p>
+        <p class="bg-otorange p-1"><strong>Pour les utilisateurs disposant d'un identifiant ou en cours de demande d'identifiant</strong></p>
+        <div class="ml-1">
+          <p>Les données dont nous disposons sont : l'<strong>adresse de courriel</strong>, la profession et la région (si ces deux dernières données ont été renseignées).
+           Le mot de passe est stocké sous forme cryptée: seul l'utilisateur connaît ce mot de passe.</p>
+          <p>l'utilisateur qui ne souhaite ne plus figurer dans la liste des personnes disposant d'un identifiant devra envoyer un courriel à l'administratrice de Panse-Bêtes <a href="mailto:contact@panse-betes.fr ?subject=Demande de désinscription" title="cliquez pour écrire un mail"><i class="fas fa-envelope"></i></a> </p>
+        </div>
+        <p class="bg-otorange p-1"><strong>Pour les saisies qui ont été réalisées</strong></p>
+        <div class="ml-1">
+          <p>A l'exception des administrateurs du site, toutes les données saisies (nom de l'élevages, observations, alertes, etc.) ne sont accessibles qu'à l'utilisateur qui a créé la saisie.</p>
+          <p>Si vous souhaitez que ces données ne soit pas accessibles aux administrateurs du site, il faut supprimer la saisie une fois le pdf imprimé. Cette suppression entraîne une disparition complète des données.</p>
+          <p>Il est possible que, dans un avenir plus ou moins lointain, un traitement statistique anonymisé soit réalisé sur les données saisies. En aucune cas les noms de l'élevage ou les informations de l'utilisateur connecté ne feront partie de ces analyses statistiques.</p>
+        </div>
+        <div class="border p-2 color-otobleu bg-light">
+          Toutes demandes concernant les données personnelles, leur mode de gestion, la sécurité du stockage ou leur rectification peuvent être adressées à l'administratrice de Panse-Bêtes
+          <a href="mailto:contact@panse-betes.fr ?subject=Au sujet des informations personnelles" title="cliquez pour écrire un mail">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>
+</div>
+
   <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-10">
@@ -87,7 +120,6 @@
       </div>
     </div>
   </div>
-</div>
 
 
 
