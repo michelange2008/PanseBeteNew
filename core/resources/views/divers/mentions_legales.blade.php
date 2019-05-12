@@ -45,9 +45,19 @@
     <div class="col-md-10">
       <div class="alert bg-otobleu d-flex">
         <img class="mr-3 img-40" src="{{asset(config('chemins.note'))}}/credit.svg" alt="">
-        <h5 class="mt-2">Crédits</h5>
+        <h5 class="mt-2">License et crédits</h5>
       </div>
-      <div class="pl-3">
+      <div class="ml-3">
+        <h5>License</h5>
+        <div class="d-flex flex-row justify-content-around align-items-center mb-3">
+          <img style="height:40px" src="{{asset(config('chemins.images'))}}/divers/by-sa.svg" alt="CC-BY-SA">
+          <p class="lead m-0">le site est placé sous licence Creative Commons CC-BY-SA</p>
+        </div>
+        <p>Le titulaire des droits autorise toute utilisation de l’œuvre originale (y compris à des fins commerciales)
+          ainsi que la création d’œuvres dérivées, à condition qu’elles soient distribuées
+          sous une licence identique à celle qui régit l’œuvre originale. </p>
+        <p>Pour en savoir plus <a href="https://http://creativecommons.fr/" title="site de Creative Commons"> <i class="fas fa-external-link-square-alt"></i></a> </p>
+        <h5>Crédits</h5>
         <p class="lead">Icones: NounProject <a href="https://thenounproject.com/" title="site de NounProject"><i class="fas fa-external-link-square-alt"></i></a></p>
       </div>
     </div>
