@@ -66,8 +66,10 @@
                   @endif
                 @else()
                   <input
+                  lang = "en"
                   name="alerte_{{$alerte->id}}"
                   type="number"
+                  step="0.01"
                   placeholder="{{ old('alerte_'.$alerte->id) }}"
                   class="zone-saisie"
                   value = "{{$value}}"

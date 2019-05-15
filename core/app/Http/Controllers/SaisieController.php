@@ -118,13 +118,13 @@ class SaisieController extends Controller
         if($alerte->type === "pourcentage")
         {
           $essai = request()->validate([
-            'alerte_'.$alerte->id => 'integer|between:0,100',
+            'alerte_'.$alerte->id => 'numeric|between:0,100',
           ]);
         }
         elseif($alerte->type === "valeur")
         {
           $essai = request()->validate([
-            'alerte_'.$alerte->id => 'integer|min:0',
+            'alerte_'.$alerte->id => 'numeric|min:0',
           ]);
         }
       }

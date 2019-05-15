@@ -15,10 +15,15 @@
     </div>
     <div class="row">
       <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <p>Metuentes igitur idem latrones Lycaoniam magna parte campestrem cum se inpares nostris fore congressione stataria documentis frequentibus scirent, tramitibus deviis petivere Pamphyliam diu quidem intactam sed timore populationum et caedium, milite per omnia diffuso propinqua, magnis undique praesidiis conmunitam.
-        </p>
-        <h5 class="color-otobleu">Merci de bien vouloir remplir ce petit questionnaire</h5>
+      <div class="col-md-10 ml-3 p-3">
+        <p>Panse-Bêtes est le résultat d'un travail collectif qui s'est déroulé sur les trois années du projet Otoveil.
+          Mais c'est un outil encore perfectible.</p>
+        <p>Sur le fond, il y a sûrement des aspects de la santé des troupeaux qui ont été insuffisamment abordés
+        ou pour lesquels les indicateurs recherchés peuvent être améliorés ou modifiés.</p>
+        <p>Sur la forme, le site Panse-Bêtes peut gagner en clarté, en ergonomie et en compréhension.</p>
+        <p>Mais toutes ces améliorations ne peuvent être permises que par l'utilisation en conditions réelles de cet outil.</p>
+        <p>Pour cette raison, vos avis et critiques nous sont indispensables.</p>
+        <h5 class="color-otobleu">Alors merci de bien vouloir remplir ce petit questionnaire</h5>
       </div>
     </div>
     {{ Form::open(['route' => 'notes.store']) }}

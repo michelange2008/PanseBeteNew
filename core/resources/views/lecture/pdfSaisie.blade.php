@@ -72,7 +72,21 @@
         @foreach($saisie->salertes as $sAlerte)
           @if($sAlerte->alerte->theme->id === $theme->id)
             <div class="intitule-alerte">
-              <h4 class="">{{ucfirst($sAlerte->alerte->nom)}}</h4>
+              <h4 class="">{{ucfirst($sAlerte->alerte->nom)}}
+                <span style="color:red" >
+                  @if($sAlerte->alerte->type !== "liste")
+                    : {{$sAlerte->valeur}} {{$sAlerte->alerte->unite}}
+                </span>
+                <span style="color:darkslategrey">
+                  (seuil: {{$sAlerte->alerte->niveau}} {{$sAlerte->alerte->unite}})
+                </span>
+                  @else
+                <span style="color:red">
+                  : {{$sAlerte->alerte->critalertes[$sAlerte->valeur]->nom}}
+                </span>
+                  @endif()
+              </span>
+              </h4>
               <div class="question">
                 @foreach($sAlerte->sorigines as $sorigine)
                   <p style="font-weight:light">

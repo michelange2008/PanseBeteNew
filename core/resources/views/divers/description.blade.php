@@ -19,7 +19,7 @@
             Cela dans le but de limiter le recours aux intrants de synthèse (dont les traitements antibiotiques et certains antiparasitaires) et de renforcer les pratiques sanitaires d’élevage plus respectueuses du bien-être animal et de l’environnement, dans une approche de santé intégrée.
           </p>
         </div>
-        <h3>Objectiver le notion d'équilibre sanitaire</h3>
+        <h3>Objectiver la notion d'équilibre sanitaire</h3>
         <div>
           <p>
             L’équilibre de santé d’un troupeau est un concept évoqué dans les fermes biologiques. Il s’agit d’un état global de bonne santé du troupeau, avec peu d’animaux malades et recevant peu d’intrants médicamenteux.

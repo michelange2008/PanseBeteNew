@@ -17,7 +17,7 @@ class SanitizeMiddleware
     {
       foreach ($request->input() as $key => $value) {
         // if (empty($value)) {
-        $request->request->set($key, intval($value));
+        $request->request->set($key, floatval($value));
         // }
       }
 
