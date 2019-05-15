@@ -64,10 +64,18 @@
                     </div>
                     <div>
                       @if($saisie->salertes->count() > 0)
-                          <a href="{{route('pdf', $saisie->id)}}" target="_blank" class="btn btn-sm btn-danger rounded-0 mr-1"><i class="far fa-file-pdf"></i> Afficher le pdf</a>
-                          <a href="{{route('lecture.detail', $saisie->id)}}" class="btn btn-sm btn-otobleu rounded-0 mr-1"><i class="far fa-eye"></i> Voir la synthèse</a>
+                          <a href="{{route('pdf', $saisie->id)}}" target="_blank" class="btn btn-sm btn-danger rounded-0 m-1">
+                            <span class="smartphone-only"><i class="far fa-file-pdf"></i> pdf</span>
+                            <span class="desktop-only"><i class="far fa-file-pdf"></i> Afficher le pdf</span>
+                          </a>
+                          <a href="{{route('lecture.detail', $saisie->id)}}" class="btn btn-sm btn-otobleu rounded-0 m-1">
+                            <span class="smartphone-only"><i class="far fa-eye"></i> Voir</span>
+                            <span class="desktop-only"><i class="far fa-eye"></i> Voir la synthèse</span>
                       @endif
-                      <a href="{{route('saisie.modifier', $saisie->id)}}" class="btn btn-sm btn-otojaune rounded-0"><i class="fa fa-pencil-alt"></i> Modifier la saisie</a>
+                      <a href="{{route('saisie.modifier', $saisie->id)}}" class="btn btn-sm btn-otojaune rounded-0 m-1">
+                        <span class="smartphone-only"><i class="fa fa-pencil-alt"></i> Modifier</span>
+                        <span class="desktop-only"><i class="fa fa-pencil-alt"></i> Modifier la saisie</span>
+                      </a>
                     </div>
                   </div>
                 </div>
