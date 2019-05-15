@@ -78,7 +78,8 @@
   <div class="row">
     <div class="col-md-10 d-flex justify-content-end">
       <a href="{{route('pdf', $saisie->id)}}" target="_blank" class="btn btn-danger rounded-0 mr-1"><i class="far fa-file-pdf"></i> Voir le pdf</a>
-      <a href="{{URL::previous()}}" class="btn btn-otobleu rounded-0 mr-1"><i class="fas fa-undo-alt"></i> Retour page préc.</a>
+      <a href="{{route('lecture.detail', $saisie->id)}}" class="btn btn-otojaune rounded-0 mr-1"><i class="fas fa-eye"></i> Synthèse des observations</a>
+      <a href="{{route('accueil')}}" class="btn btn-otobleu rounded-0 mr-1"><i class="fas fa-undo-alt"></i> Retour à l'accueil</a>
     </div>
   </div>
 </div>

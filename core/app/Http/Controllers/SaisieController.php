@@ -11,6 +11,7 @@ use App\Models\Sorigine;
 use App\Models\Origine;
 use App\Models\Elevage;
 use App\Traits\CreeAlerte;
+use App\Traits\ThemesAvecAlerte;
 
 use Illuminate\Support\Facades\Redirect;
 use App\Traits\CreeOrigines;
@@ -21,6 +22,7 @@ class SaisieController extends Controller
     use CreeAlerte;
     use CreeSaisie;
     use CreeOrigines;
+    use ThemesAvecAlerte;
 
     /*
     // Méthode qui conduit vers une nouvelle saisie
@@ -34,7 +36,7 @@ class SaisieController extends Controller
 
       $this->nouvelleSaisie($elevage->id);
 
-      return Redirect()->action('SaisieController@accueil');
+      return Redirect()->action('SaisieController@saisieN');
     }
 
     /*
@@ -48,6 +50,24 @@ class SaisieController extends Controller
       return view('saisie.saisieAccueil', [
         'saisie' => $saisie,
       ]);
+    }
+
+    public function SaisieN()
+    {
+      $saisie = Saisie::find(session()->get('saisie_id'));
+
+      $themes = $this->themesAvecAlerte($saisie);
+
+      $alertes = Alerte::where('espece_id', $saisie->espece_id)->get();
+
+      $sAlertes = Salerte::where('saisie_id', session()->get('saisie_id'))->get();
+
+      return view('saisie.saisieParAlerte',[
+          'saisie' => $saisie,
+          'themes' => $themes,
+          'alertes' => $alertes,
+          'sAlertes' => $sAlertes,
+        ]);
     }
     /*
     // Méthode appelée après le choix d'une nouvelle saisie
@@ -220,25 +240,44 @@ class SaisieController extends Controller
       ]);
     }
 
+    public function modifierN($saisie_id)
+    {
+      $saisie = Saisie::find($saisie_id);
+
+      session()->put('saisie_id', $saisie_id);
+
+      session()->put('espece_id', $saisie->espece->id);
+
+      return Redirect()->action('SaisieController@saisieN');
+    }
+
     /*
     // Méthode pour enregistrer les origine d'une alerte anormale
     */
+    // public function storeOrigines(Request $request)
+    // {
+    //
+    //     $this->creeOrigines(array_slice($request->all(),1));
+    //     // si c'est une saisie par pôles on renvoie à la liste des pôles pour saisir le suivant
+    //     if(session()->get('type_saisie') == config('constantes.pol')) {
+    //
+    //       return view('saisie.choixDuPole', [
+    //         'saisie' => Saisie::find(session()->get('saisie_id')),
+    //         'themes' => Theme::all(),
+    //       ]);
+    //     }
+    //     // Sinon c'est que c'est une saisie par alerte et on renvoie à la synthèse
+    //     else {
+    //       return redirect()->route('lecture.detail', session('saisie_id'));
+    //     }
+    // }
+
     public function storeOrigines(Request $request)
     {
+      $this->creeOrigines(array_slice($request->all(),1));
 
-        $this->creeOrigines(array_slice($request->all(),1));
-        // si c'est une saisie par pôles on renvoie à la liste des pôles pour saisir le suivant
-        if(session()->get('type_saisie') == config('constantes.pol')) {
+      return redirect()->route('lecture.originesListe', session('saisie_id'));
 
-          return view('saisie.choixDuPole', [
-            'saisie' => Saisie::find(session()->get('saisie_id')),
-            'themes' => Theme::all(),
-          ]);
-        }
-        // Sinon c'est que c'est une saisie par alerte et on renvoie à la synthèse
-        else {
-          return redirect()->route('lecture.detail', session('saisie_id'));
-        }
     }
 
 }

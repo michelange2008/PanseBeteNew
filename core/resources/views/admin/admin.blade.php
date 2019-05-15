@@ -110,7 +110,7 @@
           <th class="text-center">Note sur l'application</th>
           <th class="text-center">Commentaire</th>
         </thead>
-        <tbody id="user">
+        <tbody id="avis">
           @foreach ($notes as $note)
               <tr id="ligne_{{$user->id}}" class="ligne {{($user->admin) ? "text-danger": ""}}">
                 <td id="avisnom_{{$user->id}}" class="nom">{{$user->name}}</td>

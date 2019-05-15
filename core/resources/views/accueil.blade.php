@@ -67,7 +67,7 @@
                           <a href="{{route('pdf', $saisie->id)}}" target="_blank" class="btn btn-sm btn-danger rounded-0 mr-1"><i class="far fa-file-pdf"></i> Afficher le pdf</a>
                           <a href="{{route('lecture.detail', $saisie->id)}}" class="btn btn-sm btn-otobleu rounded-0 mr-1"><i class="far fa-eye"></i> Voir la synthèse</a>
                       @endif
-                      <a href="{{route('saisie.modifier', $saisie->id)}}" class="btn btn-sm btn-otojaune rounded-0"><i class="fa fa-pencil-alt"></i> Modifier la saisie</a>
+                      <a href="{{route('saisie.modifierN', $saisie->id)}}" class="btn btn-sm btn-otojaune rounded-0"><i class="fa fa-pencil-alt"></i> Modifier la saisie</a>
                     </div>
                   </div>
                 </div>
