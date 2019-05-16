@@ -53,7 +53,7 @@
         </table>
       </div>
     @else
-      <p class="lead">Il n'y a pas de demande d'accès en cours</p>
+      <p class="lead ml-3">Il n'y a pas de demande d'accès en cours.</p>
     @endif
   </div>
 
@@ -128,7 +128,7 @@
       </table>
     </div>
   @else
-    <p class="lead">Il n'y pas encore d'avis</p>
+    <p class="lead ml-3">Il n'y pas encore d'avis.</p>
   @endif
   </div>
 
