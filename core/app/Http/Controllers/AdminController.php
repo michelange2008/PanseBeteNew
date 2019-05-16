@@ -20,6 +20,10 @@ class AdminController extends Controller
     public function index()
     {
       $users =User::orderBy('admin', 'desc')->get();
+
+      // Utilisateur qui a demandé identifiant et en attente de validation
+      $demandes = User::where('valide', 0)->get();
+
       $saisies_groupees = Saisie::all()->mapToGroups(function($item, $key) {
         return [$item['user_id'] => $item['id']];
       });
@@ -37,6 +41,7 @@ class AdminController extends Controller
 
       return view('admin.admin', [
         'users' => $users,
+        'demandes' => $demandes,
         'saisies_groupees' => $saisies_groupees,
         'notes' => $notes,
       ]);
