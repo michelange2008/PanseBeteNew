@@ -15,12 +15,14 @@ use App\Traits\CreeAlerte;
 use Illuminate\Support\Facades\Redirect;
 use App\Traits\CreeOrigines;
 use App\Traits\CreeSaisie;
+use App\Traits\SupprimePole;
 
 class SaisieController extends Controller
 {
     use CreeAlerte;
     use CreeSaisie;
     use CreeOrigines;
+    use SupprimePole;
 
     /*
     // Méthode qui conduit vers une nouvelle saisie
@@ -62,13 +64,8 @@ class SaisieController extends Controller
       session()->forget('theme');
 
       $saisie = Saisie::find(session()->get('saisie_id'));
-      // Petit bricolage pour ne prendre que les thèmes qui ont des alertes pour l'espèce concernée
-      $themes_utilises = Alerte::select('theme_id')->where('espece_id', $saisie->espece_id)->groupBy('theme_id')->get();
-
-      foreach ($themes_utilises as $alerte) {
-        $liste_themes_utilises[] = $alerte->theme_id;
-      }
-      $themes = Theme::find($liste_themes_utilises);
+      // Trait pour ne prendre que les thèmes qui ont des alertes pour l'espèce concernée
+      $themes = $this->supprimePole($saisie);
 
       if ($type == config('constantes.pol')) {
         return view('saisie.choixDuPole',[
@@ -211,13 +208,9 @@ class SaisieController extends Controller
     {
       $saisie = Saisie::find($saisie_id);
 
-      // Petit bricolage pour ne prendre que les thèmes qui ont des alertes pour l'espèce concernée
-      $themes_utilises = Alerte::select('theme_id')->where('espece_id', $saisie->espece_id)->groupBy('theme_id')->get();
+      // Trait pour ne prendre que les thèmes qui ont des alertes pour l'espèce concernée
 
-      foreach ($themes_utilises as $alerte) {
-        $liste_themes_utilises[] = $alerte->theme_id;
-      }
-      $themes = Theme::find($liste_themes_utilises);
+      $themes = $this->supprimePole($saisie);
 
       session()->put('espece_id', $saisie->espece->id);
 
