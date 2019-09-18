@@ -8,6 +8,11 @@
 
 @section('contenu')
   <div class="container-fluid">
+    @if (session('message'))
+      <div class="alert alert-warning">
+          {{ session('message') }}
+      </div>
+  @endif
     <div class="row justify-content-md-center">
       <div class="col-md-10">
         @foreach($themes as $theme)

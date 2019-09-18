@@ -196,6 +196,11 @@ class SaisieController extends Controller
             'sAlertes' => $sAlertes,
           ]);
         }
+        else {
+          session()->flash('message', "Il n'y a pas d'alerte pour ce pôle !");
+
+          return back()->withInput();
+        }
       }
 
     /*
@@ -204,9 +209,15 @@ class SaisieController extends Controller
     */
     public function modifier($saisie_id)
     {
-      $themes = Theme::all();
-
       $saisie = Saisie::find($saisie_id);
+
+      // Petit bricolage pour ne prendre que les thèmes qui ont des alertes pour l'espèce concernée
+      $themes_utilises = Alerte::select('theme_id')->where('espece_id', $saisie->espece_id)->groupBy('theme_id')->get();
+
+      foreach ($themes_utilises as $alerte) {
+        $liste_themes_utilises[] = $alerte->theme_id;
+      }
+      $themes = Theme::find($liste_themes_utilises);
 
       session()->put('espece_id', $saisie->espece->id);
 

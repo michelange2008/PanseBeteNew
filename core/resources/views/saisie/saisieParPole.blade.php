@@ -7,6 +7,7 @@
 @extends('menus.sousmenu', ['titre' => 'Saisie des observations'])
 
 @section('contenu')
+
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-md-11">
