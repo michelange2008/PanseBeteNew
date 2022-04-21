@@ -7,7 +7,6 @@
     "require": {
         "php": "^8.0.2",
         "barryvdh/laravel-dompdf": "^1",
-        "bestmomo/nice-artisan": "^1.1",
         "flynsarmy/csv-seeder": "1.*",
         "laravel/framework": "^9.2",
         "laravel/ui": "^3.4",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d12420475cff3d669b857c2b3c6e3b7c",
+    "content-hash": "53c6c6a19af129da6fcb03e252a5b5f3",
     "packages": [
         {
             "name": "barryvdh/laravel-dompdf",
@@ -81,56 +81,6 @@
                 }
             ],
             "time": "2022-01-29T08:02:59+00:00"
-        },
-        {
-            "name": "bestmomo/nice-artisan",
-            "version": "V1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bestmomo/nice-artisan.git",
-                "reference": "9f24afeeafb95f694f1ce50dcc4491000885422a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bestmomo/nice-artisan/zipball/9f24afeeafb95f694f1ce50dcc4491000885422a",
-                "reference": "9f24afeeafb95f694f1ce50dcc4491000885422a",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "^9.0",
-                "php": ">=8.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Bestmomo\\NiceArtisan\\NiceArtisanServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Bestmomo\\NiceArtisan\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bestmomo",
-                    "email": "grandheretique@free.fr",
-                    "homepage": "https://laravel.sillo.org"
-                }
-            ],
-            "description": "Web interface for Laravel Artisan",
-            "homepage": "http://github.com/bestmomo/nice-artisan",
-            "support": {
-                "issues": "https://github.com/bestmomo/nice-artisan/issues",
-                "source": "https://github.com/bestmomo/nice-artisan/tree/V1.5.0"
-            },
-            "time": "2022-02-17T12:34:58+00:00"
         },
         {
             "name": "brick/math",
