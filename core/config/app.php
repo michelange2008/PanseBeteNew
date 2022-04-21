@@ -211,6 +211,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'Piwik' => RobBrazier\Piwik\Facades\Piwik::class,
+        'Str' => Illuminate\Support\Str::class,
     ],
 
 ];
