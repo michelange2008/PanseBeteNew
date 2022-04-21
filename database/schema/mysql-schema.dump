@@ -1,0 +1,292 @@
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+DROP TABLE IF EXISTS `pb_alertes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pb_alertes` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nom` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` enum('liste','valeur','pourcentage','nombre','poids','boolean') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `unite` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `niveau` int(10) NOT NULL,
+  `modalites` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `theme_id` int(10) unsigned NOT NULL,
+  `espece_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `alertes_nom_index` (`nom`),
+  KEY `alertes_theme_id_index` (`theme_id`),
+  KEY `alertes_espece_id_index` (`espece_id`),
+  CONSTRAINT `alertes_espece_id_foreign` FOREIGN KEY (`espece_id`) REFERENCES `pb_especes` (`id`),
+  CONSTRAINT `alertes_theme_id_foreign` FOREIGN KEY (`theme_id`) REFERENCES `pb_themes` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `pb_categories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pb_categories` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nom` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `icone` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `categories_nom_index` (`nom`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `pb_critalertes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pb_critalertes` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `alerte_id` int(10) unsigned NOT NULL,
+  `nom` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `valeur` int(10) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `critalertes_alerte_id_index` (`alerte_id`),
+  CONSTRAINT `critalertes_alerte_id_foreign` FOREIGN KEY (`alerte_id`) REFERENCES `pb_alertes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `pb_elevages`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pb_elevages` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nom` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `pb_espece_note`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pb_espece_note` (
+  `espece_id` int(10) unsigned NOT NULL,
+  `note_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`espece_id`,`note_id`),
+  KEY `table_espece_note_espece_id_index` (`espece_id`),
+  KEY `table_espece_note_note_id_index` (`note_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `pb_espece_participant`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pb_espece_participant` (
+  `espece_id` int(10) unsigned NOT NULL,
+  `participant_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`espece_id`,`participant_id`),
+  KEY `espece_participant_espece_id_index` (`espece_id`),
+  KEY `espece_participant_participant_id_index` (`participant_id`),
+  CONSTRAINT `espece_participant_espece_id_foreign` FOREIGN KEY (`espece_id`) REFERENCES `pb_especes` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `espece_participant_participant_id_foreign` FOREIGN KEY (`participant_id`) REFERENCES `pb_participants` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `pb_especes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pb_especes` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nom` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `icone` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fini` tinyint(1) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`),
+  KEY `especes_nom_index` (`nom`),
+  KEY `especes_icone_index` (`icone`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `pb_migrations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pb_migrations` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `pb_notes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pb_notes` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `note_fond` int(11) NOT NULL,
+  `avis_fond` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `note_forme` int(11) NOT NULL,
+  `avis_forme` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `utilisation` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `notes_user_id_foreign` (`user_id`),
+  CONSTRAINT `notes_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `pb_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `pb_origines`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pb_origines` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `alerte_id` int(10) unsigned NOT NULL,
+  `question` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `reponse` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `categorie_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `origines_alerte_id_index` (`alerte_id`),
+  KEY `categorie_id` (`categorie_id`),
+  CONSTRAINT `pb_origines_ibfk_1` FOREIGN KEY (`categorie_id`) REFERENCES `pb_categories` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `pb_participants`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pb_participants` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nom` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `institution` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `pb_password_resets`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pb_password_resets` (
+  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  KEY `password_resets_email_index` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `pb_saisies`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pb_saisies` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `elevage_id` int(10) unsigned NOT NULL,
+  `espece_id` int(10) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `elevage_id` (`elevage_id`),
+  KEY `pb_saisies_ibfk_1` (`espece_id`),
+  KEY `slistes_user_id_foreign` (`user_id`),
+  CONSTRAINT `pb_saisies_ibfk_1` FOREIGN KEY (`espece_id`) REFERENCES `pb_especes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `pb_saisies_ibfk_2` FOREIGN KEY (`elevage_id`) REFERENCES `pb_elevages` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `slistes_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `pb_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `pb_salertes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pb_salertes` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `alerte_id` int(10) unsigned NOT NULL,
+  `saisie_id` int(10) unsigned NOT NULL,
+  `valeur` varchar(191) NOT NULL,
+  `danger` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `alerte_id` (`alerte_id`),
+  KEY `saisie_id` (`saisie_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `pb_sorigines`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pb_sorigines` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `origine_id` int(10) unsigned NOT NULL,
+  `salerte_id` int(10) unsigned NOT NULL,
+  `saisie_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `sorigines_salerte_id_index` (`salerte_id`),
+  KEY `pb_sorigines_ibfk_1` (`origine_id`),
+  KEY `saisie_id` (`saisie_id`),
+  CONSTRAINT `pb_sorigines_ibfk_1` FOREIGN KEY (`origine_id`) REFERENCES `pb_origines` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `pb_sorigines_ibfk_2` FOREIGN KEY (`saisie_id`) REFERENCES `pb_saisies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `sorigines_salerte_id_foreign` FOREIGN KEY (`salerte_id`) REFERENCES `pb_salertes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `pb_themes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pb_themes` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nom` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `icone` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `themes_nom_index` (`nom`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `pb_users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pb_users` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `profession` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'non précisée',
+  `region` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'non précisée',
+  `admin` tinyint(4) NOT NULL DEFAULT 0,
+  `valide` tinyint(2) NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `users_name_index` (`name`),
+  KEY `users_email_index` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+INSERT INTO `pb_migrations` VALUES (1,'2014_10_12_100000_create_password_resets_table',1);
+INSERT INTO `pb_migrations` VALUES (2,'2018_09_23_060132_create_alertes_table',1);
+INSERT INTO `pb_migrations` VALUES (3,'2018_09_23_060132_create_critalertes_table',1);
+INSERT INTO `pb_migrations` VALUES (4,'2018_09_23_060132_create_themes_table',1);
+INSERT INTO `pb_migrations` VALUES (5,'2018_09_23_060132_create_users_table',1);
+INSERT INTO `pb_migrations` VALUES (6,'2018_09_23_060133_create_especes_table',1);
+INSERT INTO `pb_migrations` VALUES (7,'2018_09_23_060133_create_origines_table',1);
+INSERT INTO `pb_migrations` VALUES (8,'2018_09_23_060133_create_salertes_table',1);
+INSERT INTO `pb_migrations` VALUES (9,'2018_09_23_060133_create_sorigines_table',1);
+INSERT INTO `pb_migrations` VALUES (10,'2018_09_23_060143_create_foreign_keys',1);
+INSERT INTO `pb_migrations` VALUES (12,'2018_09_27_165244_create_table_slistes',2);
+INSERT INTO `pb_migrations` VALUES (13,'2018_10_09_042932_create_table_participants',3);
+INSERT INTO `pb_migrations` VALUES (14,'2018_10_09_043732_create_table_espece_participant',3);
+INSERT INTO `pb_migrations` VALUES (15,'2018_10_09_071233_create_table_elevages',4);
+INSERT INTO `pb_migrations` VALUES (16,'2019_04_23_041615_create_notes_table',5);
+INSERT INTO `pb_migrations` VALUES (17,'2019_04_23_044447_create_table_espece_note',5);
+INSERT INTO `pb_migrations` VALUES (18,'2019_04_29_040045_create_categories_table',6);
+INSERT INTO `pb_migrations` VALUES (19,'2022_04_21_161204_create_alertes_table',0);
+INSERT INTO `pb_migrations` VALUES (20,'2022_04_21_161204_create_categories_table',0);
+INSERT INTO `pb_migrations` VALUES (21,'2022_04_21_161204_create_critalertes_table',0);
+INSERT INTO `pb_migrations` VALUES (22,'2022_04_21_161204_create_elevages_table',0);
+INSERT INTO `pb_migrations` VALUES (23,'2022_04_21_161204_create_espece_note_table',0);
+INSERT INTO `pb_migrations` VALUES (24,'2022_04_21_161204_create_espece_participant_table',0);
+INSERT INTO `pb_migrations` VALUES (25,'2022_04_21_161204_create_especes_table',0);
+INSERT INTO `pb_migrations` VALUES (26,'2022_04_21_161204_create_notes_table',0);
+INSERT INTO `pb_migrations` VALUES (27,'2022_04_21_161204_create_origines_table',0);
+INSERT INTO `pb_migrations` VALUES (28,'2022_04_21_161204_create_origines_copie_table',0);
+INSERT INTO `pb_migrations` VALUES (29,'2022_04_21_161204_create_participants_table',0);
+INSERT INTO `pb_migrations` VALUES (30,'2022_04_21_161204_create_password_resets_table',0);
+INSERT INTO `pb_migrations` VALUES (31,'2022_04_21_161204_create_saisies_table',0);
+INSERT INTO `pb_migrations` VALUES (32,'2022_04_21_161204_create_salertes_table',0);
+INSERT INTO `pb_migrations` VALUES (33,'2022_04_21_161204_create_sorigines_table',0);
+INSERT INTO `pb_migrations` VALUES (34,'2022_04_21_161204_create_table_espece_note_table',0);
+INSERT INTO `pb_migrations` VALUES (35,'2022_04_21_161204_create_themes_table',0);
+INSERT INTO `pb_migrations` VALUES (36,'2022_04_21_161204_create_users_table',0);
+INSERT INTO `pb_migrations` VALUES (37,'2022_04_21_161205_add_foreign_keys_to_alertes_table',0);
+INSERT INTO `pb_migrations` VALUES (38,'2022_04_21_161205_add_foreign_keys_to_critalertes_table',0);
+INSERT INTO `pb_migrations` VALUES (39,'2022_04_21_161205_add_foreign_keys_to_espece_participant_table',0);
+INSERT INTO `pb_migrations` VALUES (40,'2022_04_21_161205_add_foreign_keys_to_notes_table',0);
+INSERT INTO `pb_migrations` VALUES (41,'2022_04_21_161205_add_foreign_keys_to_origines_table',0);
+INSERT INTO `pb_migrations` VALUES (42,'2022_04_21_161205_add_foreign_keys_to_saisies_table',0);
+INSERT INTO `pb_migrations` VALUES (43,'2022_04_21_161205_add_foreign_keys_to_sorigines_table',0);
+INSERT INTO `pb_migrations` VALUES (44,'2022_04_21_161205_add_foreign_keys_to_table_espece_note_table',0);
