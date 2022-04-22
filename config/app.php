@@ -158,9 +158,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Bestmomo\NiceArtisan\NiceArtisanServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
-        RobBrazier\Piwik\PiwikServiceProvider::class,
     ],
 
     /*
@@ -210,7 +208,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
-        'Piwik' => RobBrazier\Piwik\Facades\Piwik::class,
         'Str' => Illuminate\Support\Str::class,
     ],
 
