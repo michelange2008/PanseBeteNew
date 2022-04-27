@@ -36,4 +36,14 @@ class Saisie extends Model
     {
       return $this->hasMany(Sorigine::class);
     }
+
+    public function chiffres()
+    {
+      return $this->hasMany(Chiffre::class);
+    }
+
+    public function sindicateurs()
+    {
+      return $this->hasMany(Indicateur::class);
+    }
 }

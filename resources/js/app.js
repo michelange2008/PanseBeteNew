@@ -1,3 +1,5 @@
+require('@fortawesome/fontawesome-free/js/all.js');
+
 $(function() {
   // déplier les origines
       function deplie(id) {

@@ -4,7 +4,13 @@
 
 @extends('aide.aide_alertes')
 
-@extends('menus.sousmenu', ['titre' => 'Saisie des observations'])
+@extends('menus.sousmenu', [
+  'titre' => 'Saisie des observations',
+  'bouton1' => true,
+  'route1' => route('saisie.chiffres', $saisie->id),
+  'libelle1' => __('boutons.chiffres'),
+  'fa1' => 'fa-angles-left',
+])
 
 @section('contenu')
 
@@ -33,7 +39,7 @@
       {{Form::open(['route' => 'saisie.enregistre'])}}
       @foreach ($themes as $theme)
         <div class="ml-2 mt-3 d-flex flex-row align-items-center bg-otobleu">
-          <img class="img-40" src="{{asset(config('chemins.saisie')).'/'.$theme->icone}}" alt="">
+          <img class="img-40" src="{{url('storage/img/saisie/'.$theme->icone)}}" alt="">
           <h5>{{$theme->nom}}</h5>
         </div>
         @foreach($alertes as $alerte)
@@ -89,7 +95,7 @@
       <button type="submit" class="btn btn-otorange rounded-0">
         <i class="fas fa-share-square"></i> envoyer
       </button>
-      <a href="{{route('saisie.accueil')}}" class="btn btn-otobleu rounded-0" title="revenir à la liste"><i class="fas fa-undo-alt"></i> retour</a>
+      <a href="{{route('saisie.accueil', $saisie->id)}}" class="btn btn-otobleu rounded-0" title="revenir à la liste"><i class="fas fa-undo-alt"></i> retour</a>
       {{Form::close()}}
 
     </div>

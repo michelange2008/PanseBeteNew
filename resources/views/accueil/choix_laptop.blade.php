@@ -15,9 +15,9 @@
       @foreach ($especes as $espece)
 
         <img src="{{ 'storage/img/especes/'.$espece->icone}}"
-        id="nouvelle_{{$espece->id}}" name="{{auth()->user()->name}}" class="nouvelle-saisie-item shadow curseur"
-        route= "{{url('/')}}"
-        alt="{{$espece->nom}}" title="{{$espece->nom}}">
+          id="nouvelle_{{$espece->id}}" name="{{auth()->user()->name}}" class="nouvelle-saisie-item shadow curseur"
+          route= "{{url('/')}}"
+          alt="{{$espece->nom}}" title="{{$espece->nom}}">
 
       @endforeach
 

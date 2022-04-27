@@ -19,7 +19,7 @@ class CreateAlertesTable extends Migration
             $table->enum('type', ['liste', 'valeur', 'pourcentage', 'nombre', 'poids', 'boolean']);
             $table->string('unite', 191);
             $table->integer('niveau');
-            $table->string('modalites', 191);
+            $table->set('modalite', ['OBS', 'NUM', 'CAL'])->default('OBS');
             $table->unsignedInteger('theme_id')->index('alertes_theme_id_index');
             $table->unsignedInteger('espece_id')->index('alertes_espece_id_index');
         });

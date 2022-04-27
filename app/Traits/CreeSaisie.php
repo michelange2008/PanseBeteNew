@@ -21,6 +21,8 @@ trait CreeSaisie
 
         session()->put('saisie_id', $saisie->id);
 
+        return $saisie->id;
+
     }
 
 }

@@ -10,14 +10,14 @@
       <div class="col-md-6">
         <div class="card">
           <div class="card-header d-flex align-items-center bg-otojaune">
-              <img class="img-40" style="filter:brightness(0)" src="{!! asset(config('chemins.saisie'))."/".$theme->icone !!}" alt="">
+              <img class="img-40" style="filter:brightness(0)" src="{{ url('storage/img/saisie/').$theme->icone }}" alt="">
               <h4 class="mb-0">{{ucfirst($theme->nom)}}</h4>
           </div>
           <div class="card-body">
             <h5 class="lead">{{$message}}</h5>
           </div>
           <div class="card-footer bg-transparent border-0 d-flex justify-content-end">
-            <a href="{{route('saisie.modifier', session()->get('saisie_id'))}}">
+            <a href="{{route('saisie.accueil', session()->get('saisie_id'))}}">
               <button class="btn btn-otorange rounded-0"><i class="fas fa-globe"></i> Choisir un autre pôle</button>
             </a>
             <a href="{{route('saisie.alertes', ['theme_id' => $theme->id])}}">

@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\SaisieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,21 +55,31 @@ Route::group(['middleware' => ['auth', 'isValid']], function () {
 
   // Saisies
 
-    Route::get('/saisie/nouvelle/{elevage}/{espece_id}', ['uses' => 'SaisieController@nouvelle', 'as' => 'saisie.nouvelle']);
+    Route::controller(SaisieController::class)->group(function() {
 
-    Route::get('/saisie', ['uses' => 'SaisieController@accueil', 'as' => 'saisie.accueil']);
+      Route::get('/saisie/nouvelle/{elevage}/{espece_id}', 'nouvelle')->name('saisie.nouvelle');
 
-    Route::get('/saisie/type/{type}', ['uses' => 'SaisieController@saisie', 'as' => 'saisie.type']);
+      Route::get('/saisie/{saisie_id}', 'accueil')->name('saisie.accueil');
 
-    Route::post('/saisie/enregistre', ['uses' => 'SaisieController@enregistre', 'as' => 'saisie.enregistre'])->middleware('nullToZero');
+      Route::get('/saisie/observations/{saisie_id}', 'observations')->name('saisie.observations');
 
-    Route::get('/saisie/modifier/{saisie}', ['uses' => 'SaisieController@modifier', 'as' => 'saisie.modifier']);
+      Route::get('/saisie/chiffres/{saisie_id}', 'chiffres')->name('saisie.chiffres');
 
-    Route::get('/saisie/{theme_id}', ['uses' => 'SaisieController@alertes', 'as' => 'saisie.alertes']);
+      Route::post('/saisie/enregistreChiffres', 'enregistreChiffres')->name('saisie.enregistreChiffres');
 
-    Route::get('/saisie/resultats', ['uses' => 'SaisieController@enregistre', 'as' => 'saisie.resultats']);
+      Route::get('/saisie/syntheseChiffres/{saisie_id}', 'syntheseChiffres')->name('saisie.syntheseChiffres');
 
-    Route::post('/saisie/origines/store', ['uses' => 'SaisieController@storeOrigines', 'as' => 'saisie.origines.store']);
+      Route::post('/saisie/enregistre', 'enregistre')->name('saisie.enregistre')->middleware('nullToZero');
+
+      Route::get('/saisie/modifier/{saisie}', 'modifier')->name('saisie.modifier');
+
+      Route::get('/saisie/{theme_id}', 'alertes')->name('saisie.alertes');
+
+      Route::get('/saisie/resultats', 'enregistre')->name('saisie.resultats');
+
+      Route::post('/saisie/origines/store', 'storeOrigines')->name('saisie.origines.store');
+
+    });
 
   // Lecture des saisies
 

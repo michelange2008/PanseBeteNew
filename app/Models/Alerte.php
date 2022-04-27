@@ -41,4 +41,9 @@ class Alerte extends Model
       return $this->belongsTo(Categorie::class);
     }
 
+    public function sindicateurs()
+    {
+      return $this->hasMany(Sindicateur::class);
+    }
+
 }
