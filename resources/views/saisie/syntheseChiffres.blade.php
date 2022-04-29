@@ -34,25 +34,52 @@
 
     <div class="row justify-content-center">
 
-      <div class="col-md-8">
-
-        @foreach ($salertes_groupees as $noms_theme => $salertes)
+      <div class="col-md-10">
 
 
-          <div class="">
-            {{ $noms_theme }}
-          </div>
-          @foreach ($salertes as $salerte)
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="text-end">Vos parametres</th>
+                <th class="text-end">Seuils d'alerte</th>
+              </tr>
+            </thead>
+            @foreach ($sindicateurs_groupes as $noms_theme => $sindicateurs)
 
-            <div class="">
-              {{ $salerte->nom_alerte }}
-              {{ $salerte->valeur }}
-              {{ $salerte->unite }}
-            </div>
+            <tbody>
+              <tr>
+                <td colspan="3" class="bg-light">
+                  <h5>{{ ucfirst($noms_theme) }}</h5>
+                </td>
 
+              </tr>
+              @foreach ($sindicateurs as $sindicateur)
+                <tr>
+                  <td>{{ $sindicateur->nom_alerte }}</td>
+
+                    @if ($sindicateur->indicateur > $sindicateur->niveau)
+                      <td class="text-end bg-danger">
+                        <strong>
+                          {{ $sindicateur->indicateur }} {{ $sindicateur->unite }}
+                        </strong>
+                    </td>
+                    @else
+                      <td class="text-end bg-success">
+                      {{ $sindicateur->indicateur }} {{ $sindicateur->unite }}
+                    </td>
+                    @endif
+
+                  <td class="text-end">
+                    {{ $sindicateur->niveau }}  {{ $sindicateur->unite }}
+                  </td>
+
+                </tr>
+              @endforeach
+            </tbody>
           @endforeach
+          </table>
 
-        @endforeach
 
       </div>
 

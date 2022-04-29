@@ -1,0 +1,256 @@
+{
+  "nb_vaches" : {
+    "id" : "nb_vaches",
+    "libelle" : "Nombre de vaches",
+    "groupe" : "effectifs",
+    "step" : 1,
+    "min" : 1,
+    "type" : "base"
+  },
+  "nb_genisses_NV" : {
+    "id" : "nb_genisses_NV",
+    "libelle" : "Nombre de génisses (de la naissance au vélage)",
+    "groupe" : "effectifs",
+    "step" : 1,
+    "min" : 1,
+    "type" : "base"
+  },
+  "nb_velages" : {
+    "id" : "nb_velages",
+    "libelle" : "Nombre total de vélages",
+    "groupe" : "effectifs",
+    "step" : 1,
+    "min" : 1,
+    "type" : "base"
+  },
+  "nb_velages_vaches" : {
+    "id" : "nb_velages_vaches",
+    "libelle" : "Nombre de vélages de vaches",
+    "groupe" : "effectifs",
+    "step" : 1,
+    "min" : 1,
+    "type" : "base"
+  },
+  "nb_velages_genisses" : {
+    "id" : "nb_velages_genisses",
+    "libelle" : "Nombre de vélages de génisses (1er vélages)",
+    "groupe" : "effectifs",
+    "step" : 1,
+    "min" : 1,
+    "type" : "base"
+  },
+  "nb_veaux_nes" : {
+    "id" : "nb_veaux_nes",
+    "libelle" : "Nombre de veaux nés",
+    "groupe" : "effectifs",
+    "step" : 1,
+    "type" : "base"
+  },
+  "nb_reformes" : {
+    "id" : "nb_reformes",
+    "libelle" : "Nombre de vaches réformées",
+    "groupe" : "effectifs",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_vaches"
+  },
+  "mort_vaches" : {
+    "id" : "mort_vaches",
+    "libelle" : "Nombre de vaches mortes",
+    "groupe" : "mortalité",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_vaches"
+  },
+  "mort_NV" : {
+    "id" : "mort_nv",
+    "libelle" : "Nombre de génisses mortes (de la naissance au vélage)",
+    "groupe" : "mortalité",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_genisses_NV"
+  },
+  "mort_24" : {
+    "id" : "mort_24",
+    "libelle" : "Nombre de veaux morts dans les premières 24h",
+    "groupe" : "mortalité",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages"
+  },
+  "frais_veto" : {
+    "id" : "frais_veto",
+    "libelle" : "Frais vétérinaires (hors conseil)",
+    "groupe" : "divers",
+    "step" : 1,
+    "round" : 0,
+    "type" : "calculé",
+    "denom" : "nb_vaches"
+  },
+  "premier_velage" : {
+    "id" : "premier_velage",
+    "libelle" : "Age au premier vélage (en mois)",
+    "groupe" : "reproduction",
+    "step" : 1,
+    "type" : "numérique"
+  },
+  "IA_fec_x10" : {
+    "id" : "IA_fec_x10",
+    "libelle" : "Nombre d'inséminations fécondantes",
+    "groupe" : "reproduction",
+    "step" : 0.1,
+    "round" : 1,
+    "type" : "numérique"
+  },
+  "vel_genisses_diff" : {
+    "id" : "vel_genisses_diff",
+    "libelle" : "Nombre de vélages difficiles sur des génisses",
+    "groupe" : "reproduction",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages_genisses"
+  },
+  "non_del" : {
+    "id" : "non_del",
+    "libelle" : "Non-délivrances",
+    "groupe" : "post-partum et métabolique",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages"
+  },
+  "metrites" : {
+    "id" : "metrites",
+    "libelle" : "Métrites",
+    "groupe" : "post-partum et métabolique",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages"
+  },
+  "avortements" : {
+    "id" : "avortements",
+    "libelle" : "Avortements (3 derniers mois gest.)",
+    "groupe" : "reproduction",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages"
+  },
+  "fdl" : {
+    "id" : "fdl",
+    "libelle" : "Fièvres de lait",
+    "groupe" : "post-partum et métabolique",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages"
+  },
+  "caillettes" : {
+    "id" : "caillettes",
+    "libelle" : "Caillettes",
+    "groupe" : "post-partum et métabolique",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages"
+  },
+  "cetoses" : {
+    "id" : "cetoses",
+    "libelle" : "Cétoses",
+    "groupe" : "post-partum et métabolique",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages"
+  },
+  "tetanies" : {
+    "id" : "tetanies",
+    "libelle" : "Tétanies",
+    "groupe" : "post-partum et métabolique",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_vaches"
+  },
+  "mammites" : {
+    "id" : "mammites",
+    "libelle" : "Mammites cliniques",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_vaches"
+  },
+  "nouv_mamm_tar" : {
+    "id" : "nouv_mamm_tar",
+    "libelle" : "Nouvelles infections en période sèche",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages_vaches"
+  },
+  "primi_nouv_mamm_debut" : {
+    "id" : "primi_nouv_mamm_debut",
+    "libelle" : "Infections mammaires en début de lactation sur les primipares",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages_genisses"
+  },
+  "cellules" : {
+    "id" : "cellules",
+    "libelle" : "Concentration en Cellules Somatiques du lait de Tank (CCSt) hors lait trié",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "numérique"
+  },
+  "uree" : {
+    "id" : "uree",
+    "libelle" : "Taux d'urée dans le lait",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "numérique"
+  },
+  "staphs" : {
+    "id" : "staphs",
+    "libelle" : "Présence de staphylocoques dans le lait",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "numérique"
+  },
+  "salmo" : {
+    "id" : "salmo",
+    "libelle" : "Présence de salmonelles dans le lait",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "numérique"
+  },
+  "listeria" : {
+    "id" : "listeria",
+    "libelle" : "Présence de listeria dans le lait",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "numérique"
+  },
+  "coli" : {
+    "id" : "coli",
+    "libelle" : "Présence de colibacilles dans le lait",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "numérique"
+  }
+}

@@ -21,7 +21,7 @@
 
       <div class="col-md-10">
 
-        @include('fragments.flashArray')
+        @include('fragments.flashCollect')
 
       </div>
 
@@ -48,10 +48,11 @@
                 <label class="col-sm-8 col-form-label" for="{{ $element->id }}">{{$element->libelle}}</label>
                 <div class="col-sm-4">
 
-                  <input class="form-control" type="number"
-                  min=0
+                  <input class="form-control chiffre" type="number"
+                  min= {{ $element->min ?? 0}}
                   step={{ $element->step }}
                   name="{{ $element->id }}"
+
                   value="{{ $chiffresSaisis->get($element->id)  ?? 0 }}">
                 </div>
 

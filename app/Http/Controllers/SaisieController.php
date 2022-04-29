@@ -10,12 +10,12 @@ use App\Models\Alerte;
 use App\Models\Salerte;
 use App\Models\Sorigine;
 use App\Models\Origine;
-use App\Models\Chiffre;
+use App\Models\Schiffre;
 use App\Models\Elevage;
 use App\Traits\CreeAlerte;
 
 use Illuminate\Support\Facades\Redirect;
-use App\Traits\ChoixIndicateur;
+use App\Http\Indicateurs\Indicateurs;
 use App\Traits\StoreIndicateurs;
 use App\Traits\CreeOrigines;
 use App\Traits\CreeSaisie;
@@ -24,7 +24,7 @@ use App\Traits\LitJson;
 
 class SaisieController extends Controller
 {
-  use CreeAlerte, CreeSaisie, CreeOrigines, SupprimePole, LitJson, ChoixIndicateur, StoreIndicateurs;
+  use CreeAlerte, CreeSaisie, CreeOrigines, SupprimePole, LitJson, StoreIndicateurs;
 
   /*
   // Méthode qui conduit vers une nouvelle saisie
@@ -77,7 +77,7 @@ class SaisieController extends Controller
 
     $sAlertes = Salerte::where('saisie_id', session()->get('saisie_id'))->get();
 
-    return view('saisie.saisieParAlerte',[
+    return view('saisie.saisieObservations',[
     'saisie' => $saisie,
     'themes' => $themes,
     'alertes' => $alertes,
@@ -97,14 +97,14 @@ class SaisieController extends Controller
   public function chiffres($saisie_id)
   {
     $saisie = Saisie::find($saisie_id);
-    $chiffresSaisisBruts =Chiffre::select('libelle', 'valeur')->where("saisie_id", $saisie->id)->get();
+    $chiffresSaisisBruts =Schiffre::select('libelle', 'valeur')->where("saisie_id", $saisie->id)->get();
     $chiffresSaisis = Collect();
     foreach ($chiffresSaisisBruts as $key => $value) {
       $chiffresSaisis->put($value->libelle, $value->valeur);
     }
     // On récupère les libellé du formulaire dans un json dépendant de
     // l'espèce du type chiffresVL.json
-    $chiffresBruts = $this->LitJson('chiffres'.$saisie->espece->abbr.'.json');
+    $chiffresBruts = $this->LitJson('parametres'.$saisie->espece->abbr.'.json');
     // On en fait une collection et l'on structure par groupe (effectif, mortalité, etc)
     $chiffres = Collect($chiffresBruts);
     $chiffresGroupes = $chiffres->groupBy('groupe');
@@ -213,23 +213,27 @@ class SaisieController extends Controller
     // la récupère dans une variable
     $saisie_id = array_shift($chiffres);
     $espece_abbr = Saisie::find($saisie_id)->espece->abbr;
-    // Utilise le trait CHoixIndicateurs pour instancier la classe IndicateursESP
-    // en fonction de l'espèce
-    $indicateurs = $this->choixIndicateur($saisie_id, $chiffres, $espece_abbr);
+    // On récupère les libellé du formulaire dans un json dépendant de
+    // l'espèce du type chiffresVL.json
+    $parametres = $this->LitJson('parametres'.$espece_abbr.'.json');
+    // Création d'un objet indicateurs pour le calcul et le stockage
+    $indicateurs = new Indicateurs($saisie_id, $chiffres, $parametres);
     // Avec IndicateursESP on vérifier que la saisie n'est pas incohérente
     // La classe IndicateursESP va stocker les ondicateurs calculés dans la table sindicateurs
     // si la saisie n'est pas valide on retourne au formulaire
-    if($indicateurs->validation()->count() > 0) {
-      return redirect()->back()->with(['message' => $indicateurs->validation(), 'couleur' => 'alert-danger']);
+    $indicateurs->calculIndicateurs();
+    if($indicateurs->getErreurs()->count() > 0) {
+
+      return redirect()->back()->with(['message' => $indicateurs->getErreurs(), 'couleur' => 'alert-danger']);
+
     }
     // Sinon on poursuit l'enregistrement des données
     else {
       // On stocke les indicateurs calculés dans la table salerte avec le trait StoreIndicateurs
-      $indicateurs->synthese();
-
+      $indicateurs->store();
       // Et on enregistre les nouvelles données avec une ligne par élément chiffré
       foreach ($chiffres as $libelle => $valeur) {
-        DB::table('chiffres')->updateOrInsert(
+        DB::table('schiffres')->updateOrInsert(
           ['saisie_id' => $saisie_id, 'libelle' => $libelle],
           ['valeur' => $valeur]
         );
@@ -251,20 +255,21 @@ class SaisieController extends Controller
   public function syntheseChiffres($saisie_id)
   {
     $saisie = Saisie::find($saisie_id);
-    $salertes = DB::table('salertes')
-                    ->select('themes.nom AS nom_theme', 'alertes.nom as nom_alerte', 'salertes.valeur', 'alertes.unite')
-                    ->join('alertes', 'alertes.id', '=', 'salertes.alerte_id')
+    $sindicateurs = DB::table('sindicateurs')
+                    ->select('themes.nom AS nom_theme', 'alertes.nom as nom_alerte',
+                    'sindicateurs.indicateur', 'alertes.unite', 'alertes.niveau AS niveau')
+                    ->join('alertes', 'alertes.id', '=', 'sindicateurs.alerte_id')
                     ->join('themes', 'alertes.theme_id', '=' , 'themes.id')
                     ->where('alertes.modalite', '<>', 'OBS')
                     ->where('alertes.espece_id', $saisie->espece_id)
-                    ->where('salertes.saisie_id', $saisie_id)
+                    ->where('sindicateurs.saisie_id', $saisie_id)
                     ->get();
 
-    $salertes_groupees = $salertes->groupBy('nom_theme');
+    $sindicateurs_groupes = $sindicateurs->groupBy('nom_theme');
 
     return view('saisie.syntheseChiffres', [
       'saisie' => Saisie::find($saisie_id),
-      'salertes_groupees' => $salertes_groupees,
+      'sindicateurs_groupes' => $sindicateurs_groupes,
 
     ]);
 
