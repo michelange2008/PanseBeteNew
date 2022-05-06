@@ -1,7 +1,7 @@
 <?php
 
 return [
-  'saisie_titre' => "Une démarche en deux temps",
+  'saisie_titre' => "Démarrage et synthèse",
   'saisie_chiffres' => "Saisie des données chiffrées",
   'saisie_intro_1_1' => "Dans un premier temps, on saisit d'abord toutes les informations chiffrées sur le troupeau:
     effectifs, mortalités, nombre de maladies, cellules, boiteries, etc.",
@@ -9,4 +9,12 @@ return [
   'saisie_observations' => "Saisie des observations",
   'saisie_intro_2_1' => "Puis, il faut saisir les différentes observations faites sur les animaux",
   'saisie_intro_2_2' => "Pour chaque observation, il est demandé soit une réponse oui/non, soit une évaluation semi-qualitative",
+  'alerte' => 'alerte',
+  'alertes' => 'alertes',
+  'pas_alerte' => 'pas d\'alerte',
+  'del' => 'Suppr.',
+  'start' => 'Commencer',
+  'voir' => 'voir',
+  'edit' => 'modifier',
+
 ];

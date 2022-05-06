@@ -5,17 +5,7 @@
 
 @extends('aide.aide_alertes')
 
-@extends('menus.sousmenu', [
-  'titre' => 'Visualisation des indicateurs chiffres',
-  'bouton1' => true,
-  'route1' => route('saisie.chiffres', $saisie->id),
-  'libelle1' => __('boutons.chiffres'),
-  'fa1' => 'fa-angles-left',
-  'bouton2' => true,
-  'route2' => route('saisie.observations', $saisie->id),
-  'libelle2' => __('boutons.observations'),
-  'fa2' => 'fa-angles-right',
-])
+@extends('menus.menulateral')
 
 @section('contenu')
 
@@ -49,7 +39,7 @@
 
             <tbody>
               <tr>
-                <td colspan="3" class="bg-light">
+                <td colspan="3" class="bg-gris-trans">
                   <h5>{{ ucfirst($noms_theme) }}</h5>
                 </td>
 
@@ -57,15 +47,15 @@
               @foreach ($sindicateurs as $sindicateur)
                 <tr>
                   <td>{{ $sindicateur->nom_alerte }}</td>
-
+                    {{-- on affiche d'une couleur différente selon si les indicateurs dépassent les alertes --}}
                     @if ($sindicateur->indicateur > $sindicateur->niveau)
-                      <td class="text-end bg-danger">
+                      <td class="text-end bg-otorange ">
                         <strong>
                           {{ $sindicateur->indicateur }} {{ $sindicateur->unite }}
                         </strong>
                     </td>
                     @else
-                      <td class="text-end bg-success">
+                      <td class="text-end bg-otobleu">
                       {{ $sindicateur->indicateur }} {{ $sindicateur->unite }}
                     </td>
                     @endif

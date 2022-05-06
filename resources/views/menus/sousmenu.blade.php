@@ -22,6 +22,7 @@
             'route' => $route1 ?? '',
             'libelle' => $libelle1 ?? '',
             'fa' => $fa1 ?? '',
+            'couleur' => $couleur1 ?? '',
             ])
         @endisset
         @isset($bouton2)
@@ -29,6 +30,7 @@
             'route' => $route2 ?? '',
             'libelle' => $libelle2 ?? '',
             'fa' => $fa2 ?? '',
+            'couleur' => $couleur2 ?? '',
             ])
         @endisset
       </div>

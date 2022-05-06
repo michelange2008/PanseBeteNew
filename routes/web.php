@@ -69,7 +69,7 @@ Route::group(['middleware' => ['auth', 'isValid']], function () {
 
       Route::get('/saisie/syntheseChiffres/{saisie_id}', 'syntheseChiffres')->name('saisie.syntheseChiffres');
 
-      Route::post('/saisie/enregistre', 'enregistre')->name('saisie.enregistre')->middleware('nullToZero');
+      Route::post('/saisie/enregistreObservations', 'enregistreObservations')->name('saisie.enregistreObservations')->middleware('nullToZero');
 
       Route::get('/saisie/modifier/{saisie}', 'modifier')->name('saisie.modifier');
 

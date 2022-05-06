@@ -17832,8 +17832,13 @@ a, a:link, a:hover {
   padding-bottom: 5px;
 }
 
-.bg-otobleu, .btn-otobleu {
-  background: #125e6b;
+.bg-otobleu {
+  background: #125e6b !important;
+  color: white !important;
+}
+
+.btn-otobleu {
+  background: #125e6b !important;
   color: white !important;
 }
 
@@ -17843,17 +17848,17 @@ a, a:link, a:hover {
 }
 
 .bg-otobleuclair {
-  background: #21aac2;
-  color: black;
+  background: var(--otobleuclair) !important;
+  color: black !important;
 }
 
 .btn-otobleu:hover {
-  color: black;
-  background: var(--otobleuclair);
+  color: black !important;
+  background: var(--otobleuclair) !important;
 }
 
 .btn-otorange, .bg-otorange {
-  background: var(--otorange);
+  background: var(--otorange) !important;
   color: black;
 }
 
@@ -17873,7 +17878,7 @@ a, a:link, a:hover {
 }
 
 .bg-gris-trans {
-  background: rgba(128, 128, 128, 0.8);
+  background: rgba(128, 128, 128, 0.8) !important;
 }
 
 .bg-aide-trans {

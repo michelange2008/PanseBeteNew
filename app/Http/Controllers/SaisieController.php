@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Saisie;
 use App\Models\Theme;
 use App\Models\Alerte;
+use App\Models\Critalerte;
 use App\Models\Salerte;
 use App\Models\Sorigine;
 use App\Models\Origine;
@@ -21,10 +22,11 @@ use App\Traits\CreeOrigines;
 use App\Traits\CreeSaisie;
 use App\Traits\SupprimePole;
 use App\Traits\LitJson;
+use App\Traits\ThemesTools;
 
 class SaisieController extends Controller
 {
-  use CreeAlerte, CreeSaisie, CreeOrigines, SupprimePole, LitJson, StoreIndicateurs;
+  use CreeAlerte, CreeSaisie, CreeOrigines, SupprimePole, LitJson, StoreIndicateurs, ThemesTools;
 
   /*
   // Méthode qui conduit vers une nouvelle saisie
@@ -42,10 +44,45 @@ class SaisieController extends Controller
   }
 
   /*
-  // Méthode qui affiche le choix entre une saisie par alertes ou par pôle
-  //quand on fait une nouvelle saisie ou que l'on modifie une ancienne
+  // Affiche la page d'accueil d'une série
+  // quand on fait une nouvelle saisie ou que l'on modifie une ancienne
   */
   public function accueil($saisie_id)
+  {
+    $saisie = Saisie::find($saisie_id);
+    // Dans le cas où c'est une espèce pour laquelle il y a un calcul auto
+    // des données chiffrées, on affiche un page d'accueil
+    if($saisie->espece->fini) {
+
+      $contenu = $this->LitJson('saisie_accueil_fini.json');
+
+      //Utilisation du trait supprimePole pour ne prendre que les thèmes de l'espèce
+      $themes = $this->supprimePole($saisie);
+
+      return view('saisie.saisieAccueil', [
+        'saisie' => $saisie,
+        'contenu' => $contenu,
+        'themes' => $themes,
+      ]);
+
+    // Sinon on renvoie à la saisie complètes des observations
+    } else {
+
+      return redirect()->route('saisie.observations', ['saisie_id' => $saisie_id]);
+
+    }
+
+  }
+
+  /**
+   * bifurcation
+   *
+   * Undocumented function long description
+   *
+   * @param type var Description
+   * @return return type
+   */
+  public function bifurcation($saisie_id)
   {
     $saisie = Saisie::find($saisie_id);
 
@@ -59,7 +96,6 @@ class SaisieController extends Controller
       return redirect()->route('saisie.observations', ['saisie_id' => $saisie_id]);
 
     }
-
   }
 
   /*
@@ -69,19 +105,34 @@ class SaisieController extends Controller
   public function observations($saisie_id)
   {
     $saisie = Saisie::find($saisie_id);
+    // Boucle pour le cas où des espèces ne sont pas différenciées entre num et observation
+    $modalite = ($saisie->espece->fini) ? ['OBS'] : ['OBS', 'NUM', 'CAL'];
 
-    // Trait pour ne prendre que les thèmes qui ont des alertes pour l'espèce concernée
-    $themes = $this->supprimePole($saisie);
+    $alertes = Alerte::where('espece_id', $saisie->espece->id)
+                      ->where('modalite', $modalite)
+                      ->where('actif', true)
+                      ->get();
 
-    $alertes = Alerte::where('espece_id', $saisie->espece_id)->get();
+    // On utiliser la méthode usedThemes du trait ThemesTools
+    $themes = $this->alertesThemes($alertes);
+    // On extraie les salertes
+    $salertes= Salerte::where('saisie_id', $saisie->id)->get();
+    // On passe en revue les alertes
+    foreach ($alertes as $alerte) {
+      // On recherche s'il y a déjà eu une saisie en rapport avec cette alerte
+      $salerte = $salertes->where('alerte_id', $alerte->id)->first();
+      // Si oui on y rentre la valeur
+      if($salerte != null) {
+        $alerte->saisie = $salerte->valeur;
+      }
 
-    $sAlertes = Salerte::where('saisie_id', session()->get('saisie_id'))->get();
+    }
 
     return view('saisie.saisieObservations',[
     'saisie' => $saisie,
-    'themes' => $themes,
     'alertes' => $alertes,
-    'sAlertes' => $sAlertes,
+    'themes' => $themes,
+    'critalertes' => Critalerte::all(),
     ]);
 
 
@@ -97,10 +148,16 @@ class SaisieController extends Controller
   public function chiffres($saisie_id)
   {
     $saisie = Saisie::find($saisie_id);
-    $chiffresSaisisBruts =Schiffre::select('libelle', 'valeur')->where("saisie_id", $saisie->id)->get();
+
+    $chiffresSaisisBruts = Schiffre::select('libelle', 'valeur')
+                                ->where("saisie_id", $saisie->id)
+                                ->get();
     $chiffresSaisis = Collect();
+
     foreach ($chiffresSaisisBruts as $key => $value) {
+
       $chiffresSaisis->put($value->libelle, $value->valeur);
+
     }
     // On récupère les libellé du formulaire dans un json dépendant de
     // l'espèce du type chiffresVL.json
@@ -110,8 +167,8 @@ class SaisieController extends Controller
     $chiffresGroupes = $chiffres->groupBy('groupe');
 
     return view('saisie.saisieChiffres', [
-      'chiffresSaisis' => $chiffresSaisis,
       'saisie' => $saisie,
+      'chiffresSaisis' => $chiffresSaisis,
       'chiffresGroupes' => $chiffresGroupes,
     ]);
   }
@@ -122,38 +179,54 @@ class SaisieController extends Controller
   // ELle enregistre en bdd les alertes
   // Elle renvoie une vue avec les alertes anormales pour pouvoir voir les questions correspondantes
   */
-  public function enregistre(Request $request)
+  public function enregistreObservations(Request $request)
   {
+    $datas = $request->all();
+
+    array_shift($datas);
+
+    $saisie_id = array_shift($datas);
+
+    foreach ($datas as $alerte_id => $valeur) {
+
+      Salerte::create([
+        'alerte_id' => substr($alerte_id, 1),
+        'saisie_id' => $saisie_id,
+        'valeur' => $valeur,
+      ]);
+
+    }
+
     // si c'est une approche par pole, on ne prend que les alertes correspondant au pole (=theme) en cours
-    if(session()->get('type_saisie') == config('constantes.pol')) {
-      $alertes = Alerte::where('theme_id', session()->get('theme')->id)
-      ->where('espece_id', session()->get('espece_id'))
-      ->get();
-
-      $themes[] = session()->get('theme');
-    }
-    else {
-      $alertes = Alerte::where('espece_id', session()->get('espece_id'))->get();
-      $themes = Theme::all();
-    }
-    $saisie = Saisie::find(session()->get('saisie_id'));
-    // VALIDATION
-    // après utilisation d'un middleware Sanitize qui transforme en 0 les null
-    foreach ($alertes as $alerte) {
-
-      if($alerte->type === "pourcentage")
-      {
-        $essai = request()->validate([
-        'alerte_'.$alerte->id => 'numeric|between:0,100',
-        ]);
-      }
-      elseif($alerte->type === "valeur")
-      {
-        $essai = request()->validate([
-        'alerte_'.$alerte->id => 'numeric|min:0',
-        ]);
-      }
-    }
+    // if(session()->get('type_saisie') == config('constantes.pol')) {
+    //   $alertes = Alerte::where('theme_id', session()->get('theme')->id)
+    //   ->where('espece_id', session()->get('espece_id'))
+    //   ->get();
+    //
+    //   $themes[] = session()->get('theme');
+    // }
+    // else {
+    //   $alertes = Alerte::where('espece_id', session()->get('espece_id'))->get();
+    //   $themes = Theme::all();
+    // }
+    // $saisie = Saisie::find(session()->get('saisie_id'));
+    // // VALIDATION
+    // // après utilisation d'un middleware Sanitize qui transforme en 0 les null
+    // foreach ($alertes as $alerte) {
+    //
+    //   if($alerte->type === "pourcentage")
+    //   {
+    //     $essai = request()->validate([
+    //     'alerte_'.$alerte->id => 'numeric|between:0,100',
+    //     ]);
+    //   }
+    //   elseif($alerte->type === "valeur")
+    //   {
+    //     $essai = request()->validate([
+    //     'alerte_'.$alerte->id => 'numeric|min:0',
+    //     ]);
+    //   }
+    // }
     // en cas de modification d'une saisie déjà réalisée on récupère les id des origines pour pouvoir recocher les cases
     // En effet le trait CreeAlerte élimine toutes les alertes de la saisie
     $liste_origines = [];
@@ -162,7 +235,7 @@ class SaisieController extends Controller
       $liste_origines[] = $value->origine_id;
     }
 
-    $datas = array_slice($request->all(),1); // on enlève le token
+    // $datas = array_slice($request->all(),1); // on enlève le token
 
     $resultats = $this->renvoieSalerte($datas, $alertes); // utilisation du trait CreeAlerte pour l'enregistrement de la saisie
 
@@ -260,9 +333,11 @@ class SaisieController extends Controller
                     'sindicateurs.indicateur', 'alertes.unite', 'alertes.niveau AS niveau')
                     ->join('alertes', 'alertes.id', '=', 'sindicateurs.alerte_id')
                     ->join('themes', 'alertes.theme_id', '=' , 'themes.id')
+                    ->where('alertes.actif', 1)
                     ->where('alertes.modalite', '<>', 'OBS')
                     ->where('alertes.espece_id', $saisie->espece_id)
                     ->where('sindicateurs.saisie_id', $saisie_id)
+                    ->orderBy('alertes.id')
                     ->get();
 
     $sindicateurs_groupes = $sindicateurs->groupBy('nom_theme');

@@ -2,7 +2,7 @@
 
 @extends('menus.menuprincipal')
 
-@extends('menus.sousmenu', ['titre' => 'Analyse des alertes'])
+@extends('menus.menulateral')
 
 @section('contenu')
   <div class="container-fluid">

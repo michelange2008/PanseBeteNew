@@ -4,13 +4,7 @@
 
 @extends('aide.aide_alertes')
 
-@extends('menus.sousmenu', [
-  'titre' => 'Saisie des observations',
-  'bouton1' => true,
-  'route1' => route('saisie.chiffres', $saisie->id),
-  'libelle1' => __('boutons.chiffres'),
-  'fa1' => 'fa-angles-left',
-])
+@extends('menus.menulateral')
 
 @section('contenu')
 
@@ -34,71 +28,96 @@
 
   @endif
 
-  <div class="row justify-content-center">
-    <div class="col-md-11">
-      {{Form::open(['route' => 'saisie.enregistre'])}}
-      @foreach ($themes as $theme)
-        <div class="ml-2 mt-3 d-flex flex-row align-items-center bg-otobleu">
-          <img class="img-40" src="{{url('storage/img/saisie/'.$theme->icone)}}" alt="">
-          <h5>{{$theme->nom}}</h5>
-        </div>
-        @foreach($alertes as $alerte)
-          @if ($theme->id == $alerte->theme_id)
-            <?php
-            $value ="";
-            $attention = "";
-            foreach ($sAlertes as $sAlerte ) {
-              if($sAlerte->alerte_id === $alerte->id)
-              {
-                $value = $sAlerte->valeur;
-                $attention = "attention";
-              }
-            }
-            ?>
-            <div class="affiche alerte-item ml-3 pl-3">
-              <p class="{{$attention}}">{{ucfirst($alerte->nom)}}</p>
-              <div>
-                @if($alerte->type = "liste" && $alerte->critalertes->count() > 0)
-                  <?php // construction du tableau pour la liste déroulante
-                  $liste = [];
-                  foreach($alerte->critalertes as $crit){
-                    $liste[$crit->valeur] = $crit->nom;
-                  }
-                  ksort($liste);
-                  ?>
-                  {{Form::select('alerte_'.$alerte->id, $liste, $value)}}
-                  @if($alerte->unite != "")
-                    {{Form::label('alerte_'.$alerte->id, $alerte->unite)}}
-                  @endif
-                @else()
-                  <input
-                  lang = "en"
-                  name="alerte_{{$alerte->id}}"
-                  type="number"
-                  step="0.01"
-                  placeholder="{{ old('alerte_'.$alerte->id) }}"
-                  class="zone-saisie"
-                  value = "{{$value}}"
-                  />
-                  {{Form::label('alerte_'.$alerte->id, $alerte->unite)}}
-                @endif()
-              </div>
-            </div>
+  <form class="form-inline" action="{{ route('saisie.enregistreObservations') }}" method="post">
 
-          @endif
+    <div class="row justify-content-center">
+
+      <div class="col-md-11">
+
+        @csrf
+
+        <input type="hidden" name="saisie_id" value="{{ $saisie->id }}">
+
+        @foreach ($themes as $theme)
+
+          <div class="ml-2 mt-3 d-flex flex-row align-items-center bg-otobleu">
+            <img class="img-40" src="{{url('storage/img/saisie/'.$theme->icone)}}" alt="">
+            <h5>{{ ucfirst($theme->nom) }}</h5>
+          </div>
+
+
+          @foreach ($alertes as $alerte)
+
+            @if ($alerte->theme_id == $theme->id)
+
+              <div class="row mb-3">
+
+
+                  <div class="form-group">
+
+                    <label class="m-2" for="A{{ $alerte->id }}">{{ $alerte->nom }}</label>
+
+                    @if ($alerte->type == "liste")
+                      <div class="col-sm-5 col-xl-3">
+
+                      <select class="form-control" name="A{{ $alerte->id }}">
+
+                        @foreach ($critalertes as $critalerte)
+
+                          @if ($critalerte->alerte_id == $alerte->id)
+
+                            <option value="{{ $critalerte->valeur }}">{{ $critalerte->nom }}</option>
+
+                          @endif
+
+                        @endforeach
+
+                      </select>
+
+                    </div>
+                    @else
+
+                      <div class="col-sm-5 col-xl-3 d-flex flex-row align-items-end">
+
+                        <input class="form-control" type="number" min=0 step=1 name="A{{ $alerte->id }}" value="">
+
+                        <div class="mx-3">
+
+                          {{ $alerte->unite }}
+
+                        </div>
+
+                      </div>
+
+                    @endif
+
+
+                </div>
+
+              </div>
+
+            @endif
+
+          @endforeach
 
         @endforeach
 
 
-      @endforeach()
-
-      <button type="submit" class="btn btn-otorange rounded-0">
-        <i class="fas fa-share-square"></i> envoyer
-      </button>
-      <a href="{{route('saisie.accueil', $saisie->id)}}" class="btn btn-otobleu rounded-0" title="revenir à la liste"><i class="fas fa-undo-alt"></i> retour</a>
-      {{Form::close()}}
+      </div>
 
     </div>
+    <div class="row justify-content-center">
+
+      <div class="col-md-11">
+
+        @enregistreAnnule(['couleur' => 'btn-otorange'])
+
+      </div>
+
+
+    </div>
+
   </div>
+</form>
 
 @endsection

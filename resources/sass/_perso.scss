@@ -20,25 +20,31 @@ a, a:link, a:hover  {
   padding-bottom: 5px;
 }
 
-.bg-otobleu, .btn-otobleu {
-  background: $otobleu;
+.bg-otobleu {
+  background: $otobleu !important;
   color: white !important;
 }
+
+.btn-otobleu {
+  background: $otobleu !important;
+  color: white !important;
+}
+
 .bg-otobleu-trans, .btn-otobleu-trans {
   background: $otobleutrans;
   color: white;
 }
 .bg-otobleuclair {
-  background: $otobleuclair;
-  color: black;
+  background: var(--otobleuclair) !important;
+  color: black !important;
 }
 .btn-otobleu:hover {
-  color: black;
-  background: var(--otobleuclair);
+  color: black !important;
+  background: var(--otobleuclair) !important;
 }
 
 .btn-otorange, .bg-otorange {
-  background: var(--otorange);
+  background: var(--otorange) !important;
   color: black;
 }
 
@@ -57,7 +63,7 @@ a, a:link, a:hover  {
 }
 
 .bg-gris-trans {
-  background: #808080cc;
+  background: #808080cc !important;
 }
 .bg-aide-trans {
   background: #808080ff;

@@ -4,13 +4,7 @@
 
 @extends('aide.aide_alertes')
 
-@extends('menus.sousmenu', [
-  'titre' => 'Saisie des données chiffrées',
-  'bouton1' => true,
-  'route1' => route('saisie.observations', $saisie->id),
-  'libelle1' => __('boutons.observations'),
-  'fa1' => 'fa-angles-right',
-])
+@extends('menus.menulateral')
 
 @section('contenu')
 
@@ -35,13 +29,17 @@
 
           @csrf
 
+          @enregistreAnnule([
+          'couleur' => 'btn-otorange'
+          ])
+
           @foreach ($chiffresGroupes as $groupe => $elements)
             <div class="bg-otobleu px-3 py-1">
               <h4 class="p-0">
                 {{ ucfirst($groupe) }}
               </h4>
-
             </div>
+
             <input type="hidden" name="saisie_id" value="{{ $saisie->id }}">
             @foreach ($elements as $element)
               <div class="form-group row my-2">

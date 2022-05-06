@@ -98,11 +98,35 @@
     "step" : 1,
     "type" : "numérique"
   },
+  "velIA1" : {
+    "id" : "velIA1",
+    "libelle" : "Intervalle vélage 1ère insémination",
+    "groupe" : "reproduction",
+    "step" : 1,
+    "round" : 1,
+    "type" : "numérique"
+  },
   "IA_fec_x10" : {
     "id" : "IA_fec_x10",
-    "libelle" : "Nombre d'inséminations fécondantes",
+    "libelle" : "Nombre moyen d'IA Féc / IA",
     "groupe" : "reproduction",
     "step" : 0.1,
+    "round" : 1,
+    "type" : "numérique"
+  },
+  "plus3IA" : {
+    "id" : "plus3IA",
+    "libelle" : "Vaches avec 3 IA ou plus (%)",
+    "groupe" : "reproduction",
+    "step" : 1,
+    "round" : 1,
+    "type" : "numérique"
+  },
+  "IVV" : {
+    "id" : "IVV",
+    "libelle" : "Intervalle vélage - vélage (jours)",
+    "groupe" : "reproduction",
+    "step" : 1,
     "round" : 1,
     "type" : "numérique"
   },
@@ -173,6 +197,15 @@
     "id" : "tetanies",
     "libelle" : "Tétanies",
     "groupe" : "post-partum et métabolique",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_vaches"
+  },
+  "tb_anormaux" : {
+    "id" : "tb_anormaux",
+    "libelle" : "TB < 30 ou > 45",
+    "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
     "type" : "pourcentage",

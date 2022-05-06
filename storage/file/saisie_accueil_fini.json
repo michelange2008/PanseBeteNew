@@ -2,6 +2,7 @@
   "titre" : "saisie_titre",
   "items" : {
     "un" : {
+      "icone" : "chiffres.svg",
       "ordre" : "fa-1",
       "titre" : "saisie_chiffres",
       "intro_1" : "saisie_intro_1_1",
@@ -10,6 +11,7 @@
       "route" : "saisie.chiffres"
     },
     "deux" : {
+      "icone" : "observations.svg",
       "ordre" : "fa-2",
       "titre" : "saisie_observations",
       "intro_1" : "saisie_intro_2_1",
