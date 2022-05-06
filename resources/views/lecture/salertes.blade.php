@@ -1,4 +1,4 @@
-<h3>Synthèse globale</h3>
+<h3>@lang('titres.synth_globale')</h3>
 
 @foreach($themes as $theme)
 

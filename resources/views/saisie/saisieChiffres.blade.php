@@ -23,7 +23,9 @@
 
     <div class="row justify-content-center">
 
-      <div class="col-md-8">
+      <div class="col-sm-11 col-md-10 col-lg-9">
+
+        <h3>@lang('titres.edit_chiffres')</h3>
 
         <form class="" action="{{route('saisie.enregistreChiffres')}}" method="post">
 

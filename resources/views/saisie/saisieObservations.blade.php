@@ -28,11 +28,13 @@
 
   @endif
 
-  <form class="form-inline" action="{{ route('saisie.enregistreObservations') }}" method="post">
+  <div class="row justify-content-center">
 
-    <div class="row justify-content-center">
+    <div class="ccol-sm-11 col-md-10 col-lg-9">
 
-      <div class="col-md-11">
+      <h3>@lang('titres.edit_observations')</h3>
+
+        <form action="{{ route('saisie.enregistreObservations') }}" method="post">
 
         @csrf
 
@@ -44,7 +46,6 @@
             <img class="img-40" src="{{url('storage/img/saisie/'.$theme->icone)}}" alt="">
             <h5>{{ ucfirst($theme->nom) }}</h5>
           </div>
-
 
           @foreach ($alertes as $alerte)
 
@@ -108,16 +109,16 @@
     </div>
     <div class="row justify-content-center">
 
-      <div class="col-md-11">
+      <div class="col-sm-11 col-md-10 col-lg-9">
 
         @enregistreAnnule(['couleur' => 'btn-otorange'])
 
       </div>
 
+    </form>
 
     </div>
 
   </div>
-</form>
 
 @endsection

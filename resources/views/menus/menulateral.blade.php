@@ -22,27 +22,27 @@
       <div class=navbar-nav>
 
         <a class="nav-link active" href="{{ route('saisie.accueil', $saisie->id) }}">
-          <strong><i class="fa-solid fa-globe"></i> Synthèse globale</strong>
+          <strong><i class="fa-solid fa-globe"></i> @lang('titres.synth_globale')</strong>
         </a>
 
         <a class="nav-link " href="{{ route('saisie.syntheseChiffres', $saisie->id) }}">
-          <i class="fa-solid fa-chart-line"></i> Données chiffrées</a>
+          <i class="fa-solid fa-chart-line"></i> @lang('titres.d_chiffrees')</a>
 
         <a class="nav-link " href="{{ route('lecture.originesListe', $saisie->id) }}">
-          <i class="fa-solid fa-meteor"></i> Liste des origines</a>
+          <i class="fa-solid fa-meteor"></i> @lang('titres.l_origines')</a>
 
         <div class="nav-item dropdown">
 
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
               role="button" aria-haspopup="true" aria-expanded="false">
-              <i class="fa-solid fa-pen-to-square"></i> Modifier la saisie
+              <i class="fa-solid fa-pen-to-square"></i> @lang('titres.edit_saisie')
           </a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="{{ route('saisie.chiffres', $saisie->id) }}">
-              <i class="fa-solid fa-chart-line"></i> Modifier les chiffres
+              <i class="fa-solid fa-chart-line"></i> @lang('titres.edit_chiffres')
             </a>
             <a class="dropdown-item" href="{{ route('saisie.observations', $saisie->id) }}">
-              <i class="fa-solid fa-eye"></i> Modifier les observations
+              <i class="fa-solid fa-eye"></i> @lang('titres.edit_observations')
             </a>
           </div>
 

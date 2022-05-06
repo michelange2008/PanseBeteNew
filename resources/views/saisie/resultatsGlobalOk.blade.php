@@ -7,7 +7,10 @@
 @section('contenu')
   <div class="container-fluid">
       <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-sm-11 col-md-10 col-lg-9">
+
+          <h3>@lang('titres.l_origines')</h3>
+
           <div class="card">
             <div class="card-header d-flex align-items-center bg-otojaune">
                 <h4 class="mb-0">Sur tous les aspects du troupeau</h4>
