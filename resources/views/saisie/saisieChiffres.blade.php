@@ -4,7 +4,7 @@
 
 @extends('aide.aide_alertes')
 
-@extends('menus.menulateral')
+@extends('menus.menuSaisie')
 
 @section('contenu')
 

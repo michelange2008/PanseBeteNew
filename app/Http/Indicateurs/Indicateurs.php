@@ -3,10 +3,11 @@ namespace App\Http\Indicateurs;
 
 use DB;
 use App\Models\Alerte;
+use App\Models\Salerte;
 
 /**
 * Classe  pour le calcul des indicateurs (mortalités, ...) et leur stockage
-* dans le bdd sindicateurs.
+* dans le bdd salertes.
 */
 class Indicateurs
 {
@@ -101,7 +102,7 @@ class Indicateurs
   */
   public function store()
   {
-    foreach ($this->indicateurs as $abbr => $indicateur) {
+    foreach ($this->indicateurs as $abbr => $valeur) {
       try {
 
         $alerte_id = Alerte::where('abbr', $abbr)->first()->id;
@@ -111,10 +112,9 @@ class Indicateurs
         dd("L'erreur vient de l'abbréviation suivante: ".$abbr);
       }
 
-      DB::table('sindicateurs')
-      ->updateOrInsert(
+      Salerte::updateOrCreate(
       ['saisie_id' => $this->saisie_id, 'alerte_id' => $alerte_id],
-      ['indicateur' => $indicateur]
+      ['valeur' => $valeur]
       );
     }
   }

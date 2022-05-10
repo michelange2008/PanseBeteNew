@@ -1,0 +1,71 @@
+{{-- Menu destiné à la saisie: il affiche le nom et la date la saisie
+    Pour les saisies pour lesquelles il y a déjà des salertes (saisie antérieure)
+      le menu permet de voir  les différents résultats et de la modiers
+    Pour les saisies nouvelles sans salertes, le menu n'affiche rien d'autre
+ --}}
+@section('menu')
+
+  <div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-light px-3 mb-3" style="background-color: #d4d4d4">
+
+      <span class="navbar-brand navbar-text">
+
+        @include('menus.nomDate')
+
+      </span>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuSaisie"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menuSaisie">
+
+      <div class=navbar-nav>
+
+        @if ($saisie->initiee)
+
+          <a class="nav-link active" href="{{ route('saisie.accueil', $saisie->id) }}">
+            <strong><i class="fa-solid fa-globe"></i> @lang('titres.synth_globale')</strong>
+          </a>
+
+          <a class="nav-link " href="{{ route('saisie.syntheseChiffres', $saisie->id) }}">
+            <i class="fa-solid fa-chart-line"></i> @lang('titres.d_chiffrees')</a>
+
+            <a class="nav-link " href="{{ route('lecture.originesListe', $saisie->id) }}">
+              <i class="fa-solid fa-meteor"></i> @lang('titres.l_origines')</a>
+
+              <div class="nav-item dropdown">
+
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="fa-solid fa-pen-to-square"></i> @lang('titres.edit_saisie')
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{{ route('saisie.chiffres', $saisie->id) }}">
+                  <i class="fa-solid fa-chart-line"></i> @lang('titres.edit_chiffres')
+                </a>
+                <a class="dropdown-item" href="{{ route('saisie.observations', $saisie->id) }}">
+                  <i class="fa-solid fa-eye"></i> @lang('titres.edit_observations')
+                </a>
+        @else
+
+
+
+        @endif
+          </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</nav>
+
+</div>
+
+@endsection

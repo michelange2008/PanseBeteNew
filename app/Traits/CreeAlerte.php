@@ -8,6 +8,23 @@ use App\Models\Salerte;
  */
 trait CreeAlerte
 {
+
+  public function creeAlerte($alerte_id, $valeur): bool
+  {
+    $alerte = Alerte::find($alerte_id);
+
+    if ($valeur < $alerte->borne_inf || $valeur > $alerte->borne_sup) {
+
+      return true;
+
+    } else {
+
+      return false;
+
+    }
+
+  }
+
   function renvoieSalerte($datas, $alertes)
   {
 

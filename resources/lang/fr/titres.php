@@ -7,4 +7,5 @@ return array(
   'edit_saisie' => "Modifier la saisie",
   'edit_chiffres' => "Modifier les données chiffrées",
   'edit_observations' => "Modifier les observations",
+  'accueil' => 'Accueil',
 );

@@ -1,9 +1,23 @@
-<div class="row justify-content-center my-3">
+{{-- Issu de saisieAccueil
+Affiche la page d'accueil en cas de saisie déjà remplie avec les éventuelles alertes--}}
+@extends('layouts.app')
 
-  <div class="col-sm-11 col-md-10 col-lg-9">
+@extends('menus.menuprincipal')
 
-    @include('lecture.salertes')
+@section('sousmenu')
 
-  </div>
+  @include('menus.menuSaisie')
 
-</div>
+  @section('contenu')
+
+    <div class="row justify-content-center my-3">
+
+      <div class="col-sm-11 col-md-10 col-lg-9">
+
+        @include('lecture.salertes')
+
+      </div>
+
+    </div>
+
+  @endsection

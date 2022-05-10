@@ -4,7 +4,7 @@
 
 @extends('aide.aide_alertes')
 
-@extends('menus.menulateral')
+@extends('menus.menuSaisie')
 
 @section('contenu')
 
@@ -67,7 +67,14 @@
 
                           @if ($critalerte->alerte_id == $alerte->id)
 
-                            <option value="{{ $critalerte->valeur }}">{{ $critalerte->nom }}</option>
+                            @if ($alerte->saisie == $critalerte->valeur)
+
+                              <option value="{{ $critalerte->valeur }}" selected = "selected">{{ $critalerte->nom }}</option>
+
+                            @else
+                              <option value="{{ $critalerte->valeur }}">{{ $critalerte->nom }}</option>
+
+                            @endif
 
                           @endif
 
@@ -80,7 +87,7 @@
 
                       <div class="col-sm-5 col-xl-3 d-flex flex-row align-items-end">
 
-                        <input class="form-control" type="number" min=0 step=1 name="A{{ $alerte->id }}" value="">
+                        <input class="form-control" type="number" min=0 step=1 name="A{{ $alerte->id }}" value="{{ $alerte->saisie }}">
 
                         <div class="mx-3">
 

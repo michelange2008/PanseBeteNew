@@ -5,7 +5,7 @@ namespace App\Traits;
 use App\Models\Alerte;
 use App\Models\Theme;
 /**
- *
+ * A SUPPRIMER ET A REMPLACER PAR PolesEspece
  */
 trait SupprimePole
 {

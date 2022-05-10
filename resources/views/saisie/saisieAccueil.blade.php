@@ -4,7 +4,7 @@
 
 @section('sousmenu')
 
-  @include('menus.menulateral')
+  @include('menus.menuSaisieVide')
 
 @section('contenu')
 
