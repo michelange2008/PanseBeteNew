@@ -2,7 +2,7 @@
 
 @extends('menus.menuprincipal')
 
-@extends('menus.menuSaisieVide')
+@extends('menus.menuSaisie')
 
 @section('contenu')
   <div class="container-fluid">
