@@ -21,10 +21,11 @@ use App\Traits\CreeOrigines;
 use App\Traits\CreeSaisie;
 use App\Traits\LitJson;
 use App\Traits\ThemesTools;
+use App\Traits\FormatSalertes;
 
 class SaisieController extends Controller
 {
-  use CreeAlerte, CreeSaisie, CreeOrigines, LitJson, SalerteIsDanger, ThemesTools;
+  use CreeAlerte, CreeSaisie, CreeOrigines, LitJson, SalerteIsDanger, ThemesTools, FormatSalertes;
 
   /*
   // Méthode qui conduit vers une nouvelle saisie
@@ -83,8 +84,12 @@ class SaisieController extends Controller
         // et rajouter le nombre de salertes avec danger )= true
         $themes = $this->themesEspeceAvecDanger($saisie_id, $saisie->espece->id);
 
+        $salertes = Salerte::where('saisie_id', $saisie_id)->get();
+        $salertes = $this->formatSalertes($salertes);
+
         return view('accueil.accueilSaisiePleine', [
           'saisie' => $saisie,
+          'salertes' => $salertes,
           'themes' => $themes,
           'alertes' => Alerte::where('saisie_id', $saisie->id),
         ]);
@@ -334,7 +339,7 @@ class SaisieController extends Controller
 
       // Trait pour ne prendre que les thèmes qui ont des alertes pour l'espèce concernée
 
-      // $themes = $this->supprimePole($saisie);
+      // $themes = $this->themesEspece($saisie);
       //
       // session()->put('espece_id', $saisie->espece->id);
       //

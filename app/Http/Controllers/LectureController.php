@@ -11,12 +11,12 @@ use App\Models\Elevage;
 use App\Models\Espece;
 use App\Models\Categorie;
 
-use App\Traits\SupprimePole;
+use App\Traits\ThemesTools;
 
 class LectureController extends Controller
 {
 
-    use SupprimePole;
+    use ThemesTools;
 
     public function detail($saisie_id) {
 
@@ -24,8 +24,8 @@ class LectureController extends Controller
 
         $saisie = Saisie::find($saisie_id);
 
-        //Utilisation du trait supprimePole pour ne prendre que les thèmes de l'espèce
-        $themes = $this->supprimePole($saisie);
+        // Utilisation du trait themesEspece pour ne prendre que les thèmes de l'espèce
+        $themes = $this->themesEspece($saisie);
 
         return view('lecture.detail', [
             'saisie' => $saisie,

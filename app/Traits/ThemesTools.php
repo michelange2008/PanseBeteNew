@@ -11,6 +11,8 @@ use App\Models\Alerte;
  */
 trait ThemesTools
 {
+  // Permet de ne garder que les thèmes correspondant à une liste d'alerte
+  // Utilisé notamment pour l'affichage du formulaire des observations
   function alertesThemes($alertes)
   {
     // On crée une collection vide
