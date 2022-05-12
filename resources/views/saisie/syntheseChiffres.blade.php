@@ -32,55 +32,55 @@
               <tr>
                 <th><h3>@lang('titres.d_chiffrees')</h3></th>
                 <th>Seuils d'alerte</th>
-                <th class="text-end">Vos parametres</th>
+                <th class="text-center">Vos parametres</th>
               </tr>
             </thead>
 
-            @foreach ($salertesNum_groupes as $noms_theme => $salertesNum)
+            @foreach ($themes as $theme)
 
             <tbody>
               <tr>
                 <td colspan="3" class="bg-gris-trans">
-                  <h5>{{ ucfirst($noms_theme) }}</h5>
+                  <h5>{{ ucfirst($theme->nom) }}</h5>
                 </td>
 
               </tr>
 
-              @foreach ($salertesNum as $salerteNum)
+              @foreach ($salertesNum as $salerte)
+
+                @if ($salerte->alerte->theme->id == $theme->id)
+
 
                 <tr>
                   <td>
-                    @if ($salerteNum->danger) <strong><i class="fa-solid fa-circle-exclamation"></i> @endif
 
-                    {{ $salerteNum->nom_alerte }}
+                    @if ($salerte->danger)
+                        <strong><i class="fa-solid fa-circle-exclamation"></i>
+                    @endif
+                    {{ $salerte->alerte->nom }}
+
                   </td>
 
                   <td>
-                    @if ($salerteNum->borne_inf != 0)
 
-                      de {{ $salerteNum->borne_inf }} {{ $salerteNum->unite }} à {{ $salerteNum->borne_sup }}  {{ $salerteNum->unite }}
+                    {{ $salerte->norme }}
 
-                    @else
-
-                      < {{ $salerteNum->borne_sup }}  {{ $salerteNum->unite }}
-
-                    @endif
                   </td>
 
                     {{-- on affiche d'une couleur différente selon si les indicateurs dépassent les alertes --}}
-                    @if ($salerteNum->danger)
-                      <td class="text-end bg-otorange ">
-                        <strong>
-                          {{ $salerteNum->valeur }} {{ $salerteNum->unite }}
-                        </strong>
-                      </td>
+                    @if ($salerte->danger)
 
-                    @else
-                      <td class="text-end bg-otobleu">
+                      <td class="bg-otorange text-center">
 
-                        {{ $salerteNum->valeur }} {{ $salerteNum->unite }}
+                      @else
 
-                      </td>
+                        <td class="bg-otobleu text-center">
+
+                        @endif
+
+                    {{ $salerte->valeur }} {{ $salerte->alerte->unite }}
+
+                  </td>
 
                     @endif
 
@@ -93,6 +93,8 @@
           @endforeach
 
         </table>
+
+        @synthese()
 
       </div>
 

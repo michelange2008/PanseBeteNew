@@ -118,7 +118,10 @@
 
       <div class="col-sm-11 col-md-10 col-lg-9">
 
-        @enregistreAnnule(['couleur' => 'btn-otorange'])
+        @enregistreAnnule([
+          'couleur' => 'btn-otorange',
+          'route' => route('saisie.accueil', $saisie->id),
+        ])
 
       </div>
 

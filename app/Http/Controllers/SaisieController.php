@@ -268,28 +268,46 @@ class SaisieController extends Controller
     public function syntheseChiffres($saisie_id)
     {
       $saisie = Saisie::find($saisie_id);
+      // On récupère toutes les alertes NUM et actives
+
+      $alertes = Alerte::where('modalite', 'NUM')->where('actif', 1)->get();
+      // On récupère tous les thèmes
       $themes = Theme::all();
+      // On ne garde que ceux de l'espèce de la saisie en cours
       $themes = $this->themesEspece($saisie->espece->id);
-      $salertes = Salerte::where('saisie_id', $saisie_id);
+      // On ne garde que les thèmes des alertes NUM et actives
+      $themes = $this->alertesThemes($alertes);
+      // On récupère toutes les salertes de la saisie en cours
+      $salertes = Salerte::where('saisie_id', $saisie_id)
+                          ->addSelect(['modalite'=> Alerte::select('modalite')
+                          ->whereColumn('alerte_id', 'alertes.id')
+                        ])->get();
 
-      $salertesNum = DB::table('salertes')
-                      ->select('themes.nom AS nom_theme', 'alertes.nom as nom_alerte',
-                      'salertes.valeur', 'salertes.danger', 'alertes.unite',
-                      'alertes.borne_inf as borne_inf', 'alertes.borne_sup AS borne_sup')
-                      ->join('alertes', 'alertes.id', '=', 'salertes.alerte_id')
-                      ->join('themes', 'alertes.theme_id', '=' , 'themes.id')
-                      ->where('alertes.actif', 1)
-                      ->where('alertes.modalite', '<>', 'OBS')
-                      ->where('saisie_id', $saisie_id)
-                      ->orderBy('alertes.id')
-                      ->get();
+      $salertesNum = $salertes->where('modalite', 'NUM');
 
-      $salertesNum_groupes = $salertesNum->groupBy('nom_theme');
+      // On formate $salertes pour l'affichage
+      $salertes = $this->formatSalertes($salertes);
+
+
+      // $salertesNum = DB::table('salertes')
+      //                 ->select('themes.nom AS nom_theme', 'alertes.nom as nom_alerte',
+      //                 'salertes.valeur', 'salertes.danger', 'alertes.unite',
+      //                 'alertes.borne_inf as borne_inf', 'alertes.borne_sup AS borne_sup')
+      //                 ->join('alertes', 'alertes.id', '=', 'salertes.alerte_id')
+      //                 ->join('themes', 'alertes.theme_id', '=' , 'themes.id')
+      //                 ->where('alertes.actif', 1)
+      //                 ->where('alertes.modalite', '<>', 'OBS')
+      //                 ->where('saisie_id', $saisie_id)
+      //                 ->orderBy('alertes.id')
+      //                 ->get();
+      //
+      // $salertesNum_groupes = $salertesNum->groupBy('nom_theme');
 
       return view('saisie.syntheseChiffres', [
       'saisie' => Saisie::find($saisie_id),
-      'salertesNum_groupes' => $salertesNum_groupes,
-
+      // 'salertesNum_groupes' => $salertesNum_groupes,
+      'themes' => $themes,
+      'salertesNum' => $salertesNum,
       ]);
 
     }

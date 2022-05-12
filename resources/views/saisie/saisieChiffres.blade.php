@@ -32,7 +32,8 @@
           @csrf
 
           @enregistreAnnule([
-          'couleur' => 'btn-otorange'
+          'couleur' => 'btn-otorange',
+          'route' => route('saisie.accueil', $saisie->id),
           ])
 
           @foreach ($chiffresGroupes as $groupe => $elements)
@@ -62,7 +63,8 @@
           @endforeach
 
           @enregistreAnnule([
-          'couleur' => 'btn-otorange'
+          'couleur' => 'btn-otorange',
+          'route' => route('saisie.accueil', $saisie->id),
           ])
 
         </form>

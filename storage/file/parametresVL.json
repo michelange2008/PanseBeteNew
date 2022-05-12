@@ -46,6 +46,14 @@
     "step" : 1,
     "type" : "base"
   },
+  "nb_pature" : {
+    "id" : "nb_pature",
+    "libelle" : "Nombre d'animaux au pâturage l'été",
+    "groupe" : "effectifs",
+    "step" : 1,
+    "round" : 0,
+    "type" : "base"
+  },
   "nb_reformes" : {
     "id" : "nb_reformes",
     "libelle" : "Nombre de vaches réformées",
@@ -88,7 +96,7 @@
     "groupe" : "divers",
     "step" : 1,
     "round" : 0,
-    "type" : "calculé",
+    "type" : "calcule",
     "denom" : "nb_vaches"
   },
   "premier_velage" : {
@@ -96,7 +104,7 @@
     "libelle" : "Age au premier vélage (en mois)",
     "groupe" : "reproduction",
     "step" : 1,
-    "type" : "numérique"
+    "type" : "numerique"
   },
   "velIA1" : {
     "id" : "velIA1",
@@ -104,7 +112,7 @@
     "groupe" : "reproduction",
     "step" : 1,
     "round" : 1,
-    "type" : "numérique"
+    "type" : "numerique"
   },
   "IA_fec_x10" : {
     "id" : "IA_fec_x10",
@@ -112,7 +120,7 @@
     "groupe" : "reproduction",
     "step" : 0.1,
     "round" : 1,
-    "type" : "numérique"
+    "type" : "numerique"
   },
   "plus3IA" : {
     "id" : "plus3IA",
@@ -120,7 +128,7 @@
     "groupe" : "reproduction",
     "step" : 1,
     "round" : 1,
-    "type" : "numérique"
+    "type" : "numerique"
   },
   "IVV" : {
     "id" : "IVV",
@@ -128,7 +136,7 @@
     "groupe" : "reproduction",
     "step" : 1,
     "round" : 1,
-    "type" : "numérique"
+    "type" : "numerique"
   },
   "vel_genisses_diff" : {
     "id" : "vel_genisses_diff",
@@ -244,7 +252,7 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "numérique"
+    "type" : "numerique"
   },
   "uree" : {
     "id" : "uree",
@@ -252,7 +260,7 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "numérique"
+    "type" : "numerique"
   },
   "staphs" : {
     "id" : "staphs",
@@ -260,7 +268,7 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "numérique"
+    "type" : "numerique"
   },
   "salmo" : {
     "id" : "salmo",
@@ -268,7 +276,7 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "numérique"
+    "type" : "numerique"
   },
   "listeria" : {
     "id" : "listeria",
@@ -276,7 +284,7 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "numérique"
+    "type" : "numerique"
   },
   "coli" : {
     "id" : "coli",
@@ -284,6 +292,121 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "numérique"
+    "type" : "numerique"
+  },
+  "mort_24" : {
+    "id" : "mort_24",
+    "libelle" : "Nombre de veaux morts dans les 1ères 24 heures",
+    "groupe" : "jeunes",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_veaux_nes"
+  },
+  "mort_1_S" : {
+    "id" : "mort_1_S",
+    "libelle" : "Nombre de veaux morts entre 1 jour et le sevrage",
+    "groupe" : "jeunes",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_veaux_nes"
+  },
+  "morb_veaux" : {
+    "id" : "morb_veaux",
+    "libelle" : "Nombre total de veaux malades et soignés",
+    "groupe" : "jeunes",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_veaux_nes"
+  },
+  "omph" : {
+    "id" : "omph",
+    "libelle" : "Nombre de veaux avec des gros  nombrils",
+    "groupe" : "jeunes",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_veaux_nes"
+  },
+  "diarrhees_veaux" : {
+    "id" : "diarrhees_veaux",
+    "libelle" : "Nombre de veaux avec problèmes digestifs (diarrhée, coccidiose)",
+    "groupe" : "jeunes",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_veaux_nes"
+  },
+  "respi_veaux" : {
+    "id" : "respi_veaux",
+    "libelle" : "Nombre de veaux avec problèmes respiratoires",
+    "groupe" : "jeunes",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_veaux_nes"
+  },
+  "diarrhees_J_A" : {
+    "id" : "diarrhees_J_A",
+    "libelle" : "Nombre de cas de diarrhée sur jeunes et adultes",
+    "groupe" : "parasitisme",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_pature"
+  },
+  "foies_saisis" : {
+    "id" : "foies_saisis",
+    "libelle" : "Nombre de foies saisis",
+    "groupe" : "parasitisme",
+    "step" : 1,
+    "round" : 0,
+    "type" : "numerique"
+  },
+  "boiterie_vache" : {
+    "id" : "boiterie_vache",
+    "libelle" : "Nombre de vaches boitant sévèrement",
+    "groupe" : "santé des pieds",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_vaches"
+  },
+  "reforme_boiterie" : {
+    "id" : "reforme_boiterie",
+    "libelle" : "Nombre de vaches réformées problèmes de pattes",
+    "groupe" : "santé des pieds",
+    "step" : 1,
+    "round" : 0,
+    "type" : "numerique"
+  },
+  "boiterie_trait" : {
+    "id" : "boiterie_trait",
+    "libelle" : "Nombre d'animaux traités pour boiterie'",
+    "groupe" : "santé des pieds",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_vaches"
+  },
+  "sabots_longs" : {
+    "id" : "sabots_longs",
+    "libelle" : "Nombre de vaches avec des sabots allongés",
+    "groupe" : "santé des pieds",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_vaches"
+  },
+  "boiterie_vache" : {
+    "id" : "boiterie_vache",
+    "libelle" : "Nombre de vaches boitant sévèrement",
+    "groupe" : "santé des pieds",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_vaches"
   }
 }

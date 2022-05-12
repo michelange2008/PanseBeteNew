@@ -83,6 +83,12 @@
       "libelle" : "Nombre de métrites",
       "groupe" : "reproduction",
       "unite" : "int"
+    },
+    "mort_24" : {
+      "id" : "mort_24",
+      "libelle" : "Nombre de veaux morts dans les 1ères 24 heures",
+      "groupe" : "jeunes",
+      "unite" : "int"
     }
   }
 }
