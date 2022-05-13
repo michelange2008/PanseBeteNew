@@ -18,6 +18,8 @@ class CreateSaisiesTable extends Migration
             $table->unsignedInteger('user_id')->index('slistes_user_id_foreign');
             $table->unsignedInteger('elevage_id')->index('elevage_id');
             $table->unsignedInteger('espece_id')->index('pb_saisies_ibfk_1');
+            $table->boolean('hasnum')->default(0);
+            $table->boolean('hasobs')->default(0);
             $table->timestamps();
         });
     }

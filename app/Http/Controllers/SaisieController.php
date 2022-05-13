@@ -50,12 +50,6 @@ class SaisieController extends Controller
     {
       $saisie = Saisie::find($saisie_id);
 
-      // Mise à jour de l'état initiee de la saisie en fonction du nombre de salertes
-      // Normalement on devrai pouvoir supprimer ces 3 lignes une fois le travail fini
-      $salertes = Salerte::where('saisie_id', $saisie->id)->get();
-      if($salertes->count() > 0) {
-        Saisie::where('id', $saisie->id)->update(['initiee' => true]);
-      }
       //##############################################################################
       // A SUPPRIMER QUAND TOUTES LES ESPECES SERONT FINIE
       // Dans le cas où c'est une espèce pour laquelle il n'y a pas de calcul auto
@@ -68,18 +62,10 @@ class SaisieController extends Controller
       // #############################################################################
 
       // Avec une saisie sur une espèce finie
-      // S'il n'y a eu aucune saisie on affiche une page d'accueil spécifique
-      if (!$saisie->initiee) {
-
-        $contenu = $this->LitJson('saisie_accueil_fini.json');
-
-        return view('accueil.accueilSaisieVide', [
-        'saisie' => $saisie,
-        'contenu' => $contenu,
-        ]);
-      // Sinon on affiche le résultat de la saisie avec un menu complet pour voir
+      // Si il y a eu saisie des données num et des observations, on affiche
+      // le résultat de la saisie avec un menu complet pour voir
       // ou modifier cette saisie
-      } else {
+      if ($saisie->hasnum && $saisie->hasobs) {
         // Utilisation du trait themesEspeceAvecDanger pour ne prendre que les thèmes de l'espèce
         // et rajouter le nombre de salertes avec danger )= true
         $themes = $this->themesEspeceAvecDanger($saisie_id, $saisie->espece->id);
@@ -92,6 +78,16 @@ class SaisieController extends Controller
           'salertes' => $salertes,
           'themes' => $themes,
           'alertes' => Alerte::where('saisie_id', $saisie->id),
+        ]);
+
+      // S'il n'y a eu aucune saisie, ni num ni obs on affiche une page d'accueil spécifique
+      // Variable si il y a eu l'une ou l'autre des types de saisies (num, obs ou rien du tout)
+      } else {
+        $contenu = $this->LitJson('saisie_accueil_fini.json');
+
+        return view('accueil.accueilSaisieVide', [
+        'saisie' => $saisie,
+        'contenu' => $contenu,
         ]);
 
       }
@@ -196,6 +192,8 @@ class SaisieController extends Controller
         ['valeur' => $valeur, 'danger' => $this->creeAlerte($alerte_id, $valeur)],
         );
       }
+      // On passe la variable hasObs à true
+      Saisie::where('id', $saisie_id)->update(['hasobs' => 1]);
 
       $liste_origines = [];
       $ori = sOrigine::select('origine_id')->where('saisie_id', session()->get('saisie_id'))->get();
@@ -248,9 +246,12 @@ class SaisieController extends Controller
           ['valeur' => $valeur]
           );
         }
-        // Et, dans la table salertes, on indique à la colonne "danger"
+        // Dans la table salertes, on indique à la colonne "danger"
         // si la valeur est en dehors de normes (borne_sup, borne_inf), grace au trait SalerteIsDanger
         $this->salerteIsDanger($saisie_id);
+        // On passe la variable hasnum de la table saisies à true
+        Saisie::where('id', $saisie_id)->update(['hasnum' => 1]);
+
         // Et on renvoie à la méthode synthèseChiffres
         return redirect()->route('saisie.syntheseChiffres', $saisie_id);
       }

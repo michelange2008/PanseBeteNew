@@ -12,8 +12,8 @@
  avec une valeur 0 par défaut.
 
 # Modification de la table __saisies__
- 1. Ajout d'une colonne à la fin (*bool*) qui s'appelle **initiee** et vaut 0 si
- il n'y a eu aucune saisie enregistrée (pas de lignes dans la table __salertes__)
+ 1. Ajout de 2 colonnes à la fin (*bool*) qui s'appellent **ininum** et **iniobs** et vaut 0 si
+ il n'y a eu aucune saisie enregistrée de donnees numériques ou d'observations (pas de lignes dans la table __salertes__)
  et 1 dans le cas contraire.
 
 # Dans la table __critalertes__

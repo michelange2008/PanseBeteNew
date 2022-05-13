@@ -1,5 +1,10 @@
 {{-- Issu de saisieAccueil
-Affiche une page d'accueil en cas de saisie jamais remplie = saisie vide--}}
+Affiche une page d'accueil en cas de saisie jamais remplie = saisie vide
+Il y a trois cas de figures:
+  - Aucune donnée saisie: deux card avec des boutons pour saisir l'une ou l'autre
+  - Saisie num saisie: il reste la card avec le bouton pour saisir les observation
+  - Saisie obs faite: idem avec un bouton pour commencer la saisie des chiffres
+--}}
 @extends('layouts.app')
 
 @extends('menus.menuprincipal')
@@ -17,41 +22,40 @@ Affiche une page d'accueil en cas de saisie jamais remplie = saisie vide--}}
         <div class="col-sm-11 col-md-10 col-lg-9">
 
           <div class="card-group">
-            {{-- contenu du fichier saisie_accueil_fini.json --}}
-            @foreach ($contenu->items as $item)
 
-              <div class="card mx-3">
+            <div class="card mx-3">
 
-                <div class="card-header">
+              @if ($saisie->hasnum)
 
-                  <img class="img-75" src="{{ url('storage/img/saisie/'.$item->icone) }}" alt="">
+                @include('accueil.accueilVide.hasNum')
 
-                </div>
+              @else
 
-                <div class="card-body">
+                @include('accueil.accueilVide.noNum')
 
-                  <h5 class="card-title">{{ __('saisie.'.$item->titre) }}</h5>
-                  <p class="card-text">{{ __('saisie.'.$item->intro_1) }}</p>
-                  <p class="card-text">{{ __('saisie.'.$item->intro_2) }}</p>
+              @endif
 
-                </div>
+            </div>
 
-                <div class="card-footer">
+            <div class="card mx-3">
 
-                  @vers([
-                    'couleur' => $item->couleur,
-                    'route' => route($item->route, $saisie->id),
-                    'libelle' => __('boutons.commencer'),
-                    "fa" => "fa-angles-right",
-                  ])
+              @if ($saisie->hasobs)
 
-                </div>
+                @include('accueil.accueilVide.hasObs')
 
-              </div>
+              @else
 
-            @endforeach
+                @include('accueil.accueilVide.noObs')
+
+              @endif
+
+            </div>
+
 
           </div>
+
+
+
 
         </div>
 
