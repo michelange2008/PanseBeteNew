@@ -19,6 +19,7 @@ class CreateSalertesTable extends Migration
             $table->unsignedInteger('saisie_id')->index('saisie_id');
             $table->string('valeur', 191);
             $table->boolean('danger');
+            $table->unsignedInteger('nbsorigine')->default(0);
         });
     }
 

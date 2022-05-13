@@ -28,22 +28,31 @@ Pour les saisies nouvelles sans salertes, le menu n'affiche rien d'autre
 
         @if ($saisie->hasnum && $saisie->hasobs)
 
-          <a class="nav-link active" href="{{ route('saisie.accueil', $saisie->id) }}">
+          <a class="nav-link active" href="{{ route('saisie.accueil', $saisie->id) }}"
+            data-toggle="tooltip" title="Voir la synthèse de vos résultats">
             <i class="fa-solid fa-globe"></i> @lang('titres.synth_globale')
           </a>
 
-          <a class="nav-link " href="{{ route('saisie.syntheseChiffres', $saisie->id) }}">
+          <a class="nav-link " href="{{ route('saisie.syntheseChiffres', $saisie->id) }}"
+            data-toggle="tooltip" title="Voir les paramètres chiffrés du troupeau">
             <i class="fa-solid fa-chart-line"></i> @lang('titres.d_chiffrees')
           </a>
 
-          <a class="nav-link " href="{{ route('lecture.originesListe', $saisie->id) }}">
+          <a class="nav-link " href="{{ route('lecture.originesListe', $saisie->id) }}"
+            data-toggle="tooltip" title="Voir la liste des origines des alertes">
             <i class="fa-solid fa-meteor"></i> @lang('titres.l_origines')
+          </a>
+
+          <a class="nav-link " href="{{ route('saisie.origines', $saisie->id) }}"
+            data-toggle="tooltip" title="Ajouter ou modifier des origines des alertes">
+            <i class="fa-solid fa-pen-to-square"></i> @lang('titres.s_origines')
           </a>
 
           <div class="nav-item dropdown">
 
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
-              role="button" aria-haspopup="true" aria-expanded="false">
+              role="button" aria-haspopup="true" aria-expanded="false"
+              data-toggle="tooltip" title="Ajouter ou modifier les informations">
               <i class="fa-solid fa-pen-to-square"></i> @lang('titres.edit_saisie')
             </a>
 

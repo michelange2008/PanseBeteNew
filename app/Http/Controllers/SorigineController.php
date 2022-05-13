@@ -1,0 +1,91 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Saisie;
+use App\Models\Alerte;
+use App\Models\Salerte;
+use App\Models\Origine;
+use App\Models\Sorigine;
+
+use App\Traits\ThemesTools;
+use App\Traits\FormatSalertes;
+use App\Traits\AjouteSorigine;
+
+class SorigineController extends Controller
+{
+
+    use ThemesTools, FormatSalertes, AjouteSorigine;
+
+      /**
+       * Méthode pour saisir les origines des alertes
+       *
+       */
+      public function origines($saisie_id)
+      {
+        $saisie = Saisie::find($saisie_id);
+        $salertes = Salerte::where('saisie_id',$saisie_id)
+                      ->where('danger', 1)
+                      ->orderBy('alerte_id')
+                      ->get();
+        $salertes = $this->formatSalertes($salertes);
+        $origines = Origine::all();
+        $themes = $this->themesEspeceAvecDanger($saisie);
+
+        return view('saisie.saisieOriginesIndex', [
+          'saisie' => $saisie,
+          'salertes' => $salertes,
+          'origines' => $origines,
+          'themes' => $themes,
+        ]);
+      }
+
+      /**
+       * Renvoie une page avec les orginines d'une alerte pour que l'on puisse
+       * les cocher ou non.
+       *
+       */
+      public function sorigineEdit(Request $request)
+      {
+        $saisie = Saisie::find($request->saisie_id);
+        $alerte = Alerte::find($request->alerte_id);
+        $origines = $this->ajouteSorigine($saisie->id, $alerte->id);
+        $sorigines = Sorigine::where('saisie_id', $saisie->id)->get();
+
+        return view('saisie.saisieParOrigine', [
+          'origines' => $origines,
+          'sorigines' => $sorigines,
+          'saisie' => $saisie,
+          'salerte_id' => $request->salerte_id,
+          'alerte' => $alerte,
+        ]);
+      }
+
+      /**
+       * Stocke les origines d'une alerte
+       *
+       */
+      public function enregistreOrigines(Request $request)
+      {
+        $saisie_id = $request->saisie_id;
+        $salerte_id = $request->salerte_id;
+
+        $origines_id = $request->except(['_token', 'saisie_id', 'salerte_id']);
+
+        $sorigines = Sorigine::where('saisie_id', $saisie_id)->where('salerte_id', $salerte_id)->delete();
+
+        foreach ($origines_id as $origine_id) {
+
+          Sorigine::create([
+            'salerte_id' => $salerte_id,
+            'saisie_id' => $saisie_id,
+            'origine_id' => $origine_id]);
+        }
+
+        Salerte::where('id', $salerte_id)->update(['nbsorigine' => count($origines_id)]);
+
+        return redirect()->route('saisie.origines', ['saisie_id' => $saisie_id]);
+
+      }
+}

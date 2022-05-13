@@ -18,3 +18,6 @@
 
 # Dans la table __critalertes__
   1. Supprimer les 3 lignes correspondant à __alerte_id = 2009__
+
+# dans la table __salertes__
+  1. Rajout d'une colonne *unsignedInteger* qui s'appelle **nbsorigine** et permet de savoir combien il y a de sorigines pour cette salerte

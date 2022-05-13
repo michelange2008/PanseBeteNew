@@ -16,4 +16,5 @@ const mix = require('laravel-mix');
    .options({
        processCssUrls: false
     })
+    .js('node_modules/popper.js/dist/popper.min.js', 'js')
     .js('resources/js/app.js', 'js');

@@ -53,16 +53,17 @@ trait ThemesTools
    * @param type $saisie_id
    * @return return collection de thèmes
    */
-  public function themesEspeceAvecDanger($saisie_id, $espece_id)
+  public function themesEspeceAvecDanger($saisie)
   {
-    $themes = $this->themesEspece($espece_id);
+
+    $themes = $this->themesEspece($saisie->espece->id);
     // On récupère toute la liste des salertes de la saisie et qui ont danger = true
     // avec en plus l'id des thèmes
     $themesAvecDanger = DB::table('salertes')
                 ->select('themes.id as themeId', 'salertes.danger')
                 ->join('alertes', 'salertes.alerte_id', 'alertes.id')
                 ->join('themes', 'themes.id', 'alertes.theme_id')
-                ->where('salertes.saisie_id', $saisie_id)
+                ->where('salertes.saisie_id', $saisie->id)
                 ->where('salertes.danger', true)
                 ->get();
     // On groupe par thème puis on mappe pour compter les nombre de salertes de chaque thème

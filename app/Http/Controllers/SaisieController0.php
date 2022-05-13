@@ -17,6 +17,7 @@ use App\Traits\CreeAlerte;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Indicateurs\Indicateurs;
 use App\Traits\SalerteIsDanger;
+use App\Traits\CreeOrigines;
 use App\Traits\CreeSaisie;
 use App\Traits\LitJson;
 use App\Traits\ThemesTools;
@@ -24,13 +25,11 @@ use App\Traits\FormatSalertes;
 
 class SaisieController extends Controller
 {
-  use CreeAlerte, CreeSaisie, LitJson, SalerteIsDanger, ThemesTools, FormatSalertes;
+  use CreeAlerte, CreeSaisie, CreeOrigines, LitJson, SalerteIsDanger, ThemesTools, FormatSalertes;
 
   /*
   // Méthode qui conduit vers une nouvelle saisie
   // elle redirige vers l'accueil de saisie
-  // TODO: supprimer tout ce qui est en rapport avec la saisie par pôle:
-  //          - route alerte
   */
   public function nouvelle($elevage_nom, $espece_id)
   {
@@ -69,7 +68,7 @@ class SaisieController extends Controller
       if ($saisie->hasnum && $saisie->hasobs) {
         // Utilisation du trait themesEspeceAvecDanger pour ne prendre que les thèmes de l'espèce
         // et rajouter le nombre de salertes avec danger )= true
-        $themes = $this->themesEspeceAvecDanger($saisie);
+        $themes = $this->themesEspeceAvecDanger($saisie_id, $saisie->espece->id);
 
         $salertes = Salerte::where('saisie_id', $saisie_id)->get();
         $salertes = $this->formatSalertes($salertes);
@@ -97,7 +96,7 @@ class SaisieController extends Controller
 
     /*
     // Méthode appelée après le choix d'une nouvelle saisie
-    // et pour la saisie des observations
+    // puis le choix d'un approche exhaustive ou par pôle (= $type)
     */
     public function observations($saisie_id)
     {
@@ -124,7 +123,7 @@ class SaisieController extends Controller
         }
 
       }
-
+      // dd($alertes);
       return view('saisie.saisieObservations',[
       'saisie' => $saisie,
       'alertes' => $alertes,
@@ -260,10 +259,12 @@ class SaisieController extends Controller
     }
 
     /**
-    * Affiche la synthèse des données chiffrées
+    * undocumented function summary
     *
-    * @param type $saisie_id
-    * @return return view
+    * Undocumented function long description
+    *
+    * @param type var Description
+    * @return return type
     */
     public function syntheseChiffres($saisie_id)
     {
@@ -288,6 +289,21 @@ class SaisieController extends Controller
       // On formate $salertes pour l'affichage
       $salertes = $this->formatSalertes($salertes);
 
+
+      // $salertesNum = DB::table('salertes')
+      //                 ->select('themes.nom AS nom_theme', 'alertes.nom as nom_alerte',
+      //                 'salertes.valeur', 'salertes.danger', 'alertes.unite',
+      //                 'alertes.borne_inf as borne_inf', 'alertes.borne_sup AS borne_sup')
+      //                 ->join('alertes', 'alertes.id', '=', 'salertes.alerte_id')
+      //                 ->join('themes', 'alertes.theme_id', '=' , 'themes.id')
+      //                 ->where('alertes.actif', 1)
+      //                 ->where('alertes.modalite', '<>', 'OBS')
+      //                 ->where('saisie_id', $saisie_id)
+      //                 ->orderBy('alertes.id')
+      //                 ->get();
+      //
+      // $salertesNum_groupes = $salertesNum->groupBy('nom_theme');
+
       return view('saisie.syntheseChiffres', [
       'saisie' => Saisie::find($saisie_id),
       // 'salertesNum_groupes' => $salertesNum_groupes,
@@ -295,6 +311,72 @@ class SaisieController extends Controller
       'salertesNum' => $salertesNum,
       ]);
 
+    }
+
+    /*
+    // Méthode qui ouvre la vue sur les alertes d'un thème dans le cadre d'une nouvelle saisie
+    // ou de la modification d'une saisie existante
+    */
+    public function alertes($saisie_id, $theme_id)
+    {
+      $theme = Theme::find($theme_id);
+
+      session()->put('theme', $theme);
+
+      $saisie = Saisie::find($saisie_id);
+
+      $sAlertes = Salerte::where('saisie_id', $saisie_id)->get();
+
+      $alertes = Alerte::where('theme_id', $theme_id)
+      ->where('espece_id', $saisie->espece->id)
+      ->get();
+
+      if($alertes->count() > 0)
+      {
+        return view('saisie.saisieParPole', [
+        'saisie' => $saisie,
+        'alertes' => $alertes,
+        'sAlertes' => $sAlertes,
+        ]);
+      }
+      else {
+        session()->flash('message', "Il n'y a pas d'alerte pour ce pôle !");
+
+        return back()->withInput();
+      }
+    }
+
+    /*
+    // Méthode pour modifier une saisie existante
+    // Elle redirige vers accueil
+    */
+    public function modifier($saisie_id)
+    {
+      $saisie = Saisie::find($saisie_id);
+
+      return redirect()->route('saisie.accueil', ['saisie_id' => $saisie->id]);
+
+    }
+
+    /*
+    // Méthode pour enregistrer les origine d'une alerte anormale
+    */
+    public function storeOrigines(Request $request)
+    {
+
+      $this->creeOrigines(array_slice($request->all(),1));
+      // si c'est une saisie par pôles on renvoie à la liste des pôles pour saisir le suivant
+      if(session()->get('type_saisie') == config('constantes.pol')) {
+
+        return view('saisie.choixDuPole', [
+        'saisie' => Saisie::find(session()->get('saisie_id')),
+        'themes' => Theme::all(),
+        ]);
+      }
+      // Sinon c'est que c'est une saisie par alerte et on renvoie à la synthèse
+      else {
+        return redirect()->route('lecture.detail', session('saisie_id'));
+      }
     }
 
   }

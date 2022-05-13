@@ -1,6 +1,5 @@
 <?php
 use App\Http\Controllers\SaisieController;
-use App\Http\Controllers\SorigineController;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,18 +71,13 @@ Route::group(['middleware' => ['auth', 'isValid']], function () {
 
       Route::post('/saisie/enregistreObservations', 'enregistreObservations')->name('saisie.enregistreObservations')->middleware('nullToZero');
 
+      Route::get('/saisie/modifier/{saisie}', 'modifier')->name('saisie.modifier');
+
+      Route::get('/saisie/{saisie_id}/{theme_id}', 'alertes')->name('saisie.alertes');
+
       Route::get('/saisie/resultats', 'enregistre')->name('saisie.resultats');
 
-
-    });
-
-    Route::controller(SorigineController::class)->group(function() {
-
-      Route::get('/saisie/origines/{saisie_id}', 'origines')->name('saisie.origines');
-
-      Route::post('/saisie/origines/edit', 'sorigineEdit')->name('saisie.sorigineEdit');
-
-      Route::post('/saisie/origines/enregistre', 'enregistreOrigines')->name('saisie.enregistreOrigines');
+      Route::post('/saisie/origines/store', 'storeOrigines')->name('saisie.origines.store');
 
     });
 

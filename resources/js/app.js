@@ -1,74 +1,18 @@
 require('@fortawesome/fontawesome-free/js/all.js');
+require('./deplierAlertes.js')
+require('./afficherOrigines.js')
 
 $(function() {
-  // déplier les origines
-      function deplie(id) {
 
-        var alerte_id = id.split('_')[1];
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
 
-        $('#origine_'+alerte_id).fadeToggle(); // déplie la liste des alertes
-
-        $.each($('.ouvert'), function() {
-              if($(this).attr('class') == "non-affiche ouvert" && $(this).attr('id') !== 'origine_'+alerte_id)
-                  {
-                      $(this).fadeToggle(100);
-                      $(this).toggleClass('ouvert');
-                  }
-          })
-
-          $('#origine_'+alerte_id).toggleClass('ouvert');
-      }
-  // Quand on clique sur afficher, ça se déplie
-      $('.afficher').on('click', function (){
-          var id = $(this).attr('id');
-          deplie(id);
-      });
-  // Pareil quand on clique sur déplie
-      $('.deplie').on('click', function() {
-          var id = $(this).attr('id');
-          deplie(id);
-      });
-  // Alerte + ajax pour afficher les questions cochées
-    $('.affiche-origine').on('click', function(){
-      var alerte_id = $(this).attr('id').split('_')[2];
-      var route = $('#route_'+alerte_id).attr('action');
-      $.ajaxSetup({
-        headers: {
-          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-      });
-      $.confirm({
-        columnClass: 'large',
-        theme: 'dark',
-        buttons: {
-          fermer: function(){
-          },
-        },
-        content: function () {
-            var self = this;
-            return $.ajax({
-                url: route,
-                dataType: 'json',
-                method: 'get'
-            }).done(function (response) {
-              var ligne = new Array();
-              var i = 0
-              $.each(response, function(key, val){
-
-                ligne[i] = '<p>'+val+'</p>';
-                i++;
-              })
-                self.setContentPrepend('<div class="bg-success">')
-                self.setContent(ligne);
-                self.setContentAppend('</div>')
-                self.setTitle("Questions cochées");
-            }).fail(function(response){
-                self.setTitle('Désolé');
-                self.setContent('Il y a eu un problème');
-            });
-        },
-      });
-    });
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
 
   // suppression d'une saisie
     $('.supprime').on('click', function(e){
