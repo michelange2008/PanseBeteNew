@@ -10,9 +10,9 @@ $(function() {
     }
   });
 
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
+  // $(function () {
+  //   $('[data-toggle="tooltip"]').tooltip()
+  // })
 
   // suppression d'une saisie
     $('.supprime').on('click', function(e){

@@ -4,7 +4,7 @@
 
 @extends('aide.aide_origines')
 
-
+@extends('menus.menuSaisie')
 
 @section('contenu')
 <div class="container-fluid">
@@ -19,9 +19,8 @@
       <i class="fas fa-map-signs"></i> Catégories/Pôles
     </button>
   </div>
-  <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
+  <div class="row justify-content-center">
+    <div class="col-sm-11 col-md-10 col-lg-9">
       <p id="aideBascule" class="text-muted text-center"><small>
         Vous pouvez basculer le type d'affichage (par catégorie ou par pôle) en cliquant sur le bouton au-dessus à droite.
       </small></p>

@@ -5613,18 +5613,18 @@
 $(function () {
   // Alerte + ajax pour afficher les questions cochées
   $('.affiche-origine').on('click', function () {
-    var alerte_id = $(this).attr('id').split('_')[2];
-    var route = $('#route_' + alerte_id).attr('action');
-    $.confirm({
+    var url_actuelle = window.location.href.match(/^.*\//);
+    var url = url_actuelle.toString().replace('saisie', 'lecture');
+    url = url + 'originesSalerte/' + $(this).attr('salerte_id');
+    $.alert({
+      closeIcon: true,
       columnClass: 'large',
       theme: 'dark',
-      buttons: {
-        fermer: function fermer() {}
-      },
+      animation: 'none',
       content: function content() {
         var self = this;
         return $.ajax({
-          url: route,
+          url: url,
           dataType: 'json',
           method: 'get'
         }).done(function (response) {
@@ -5637,7 +5637,7 @@ $(function () {
           self.setContentPrepend('<div class="bg-success">');
           self.setContent(ligne);
           self.setContentAppend('</div>');
-          self.setTitle("Questions cochées");
+          self.setTitle("");
         }).fail(function (response) {
           self.setTitle('Désolé');
           self.setContent('Il y a eu un problème');
@@ -5728,10 +5728,10 @@ $(function () {
     headers: {
       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
-  });
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip();
-  }); // suppression d'une saisie
+  }); // $(function () {
+  //   $('[data-toggle="tooltip"]').tooltip()
+  // })
+  // suppression d'une saisie
 
   $('.supprime').on('click', function (e) {
     var id = '#' + $(this).attr('id');

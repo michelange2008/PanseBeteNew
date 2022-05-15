@@ -27,7 +27,7 @@
 
         <h3>@lang('titres.edit_chiffres')</h3>
 
-        <form class="" action="{{route('saisie.enregistreChiffres')}}" method="post">
+        <form class="" action="{{route('schiffre.store')}}" method="post">
 
           @csrf
 

@@ -26,7 +26,7 @@
 
       <div class="col-sm-11 col-md-10 col-lg-9">
 
-          <table class="table">
+          <table class="table table-hover">
 
             <thead>
               <tr>
@@ -40,7 +40,7 @@
 
             <tbody>
               <tr>
-                <td colspan="3" class="bg-gris-trans">
+                <td colspan="3" class="bg-otobleu">
                   <h5>{{ ucfirst($theme->nom) }}</h5>
                 </td>
 
@@ -52,6 +52,7 @@
 
 
                 <tr>
+
                   <td>
 
                     @if ($salerte->danger)
@@ -59,7 +60,7 @@
                     @endif
                     {{ $salerte->alerte->nom }}
 
-                  </td>
+                  </td class="text-center">
 
                   <td>
 
@@ -74,7 +75,7 @@
 
                       @else
 
-                        <td class="bg-otobleu text-center">
+                        <td class="text-center">
 
                         @endif
 

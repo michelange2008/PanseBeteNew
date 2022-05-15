@@ -1,24 +1,22 @@
 $(function() {
-
   // Alerte + ajax pour afficher les questions cochées
     $('.affiche-origine').on('click', function(){
 
+      var url_actuelle = window.location.href.match(/^.*\//);
 
-      var alerte_id = $(this).attr('id').split('_')[2];
+      var url = url_actuelle.toString().replace('saisie', 'lecture');
 
-      var route = $('#route_'+alerte_id).attr('action');
-      
-      $.confirm({
+      url = url + 'originesSalerte/' + $(this).attr('salerte_id');
+
+      $.alert({
+        closeIcon: true,
         columnClass: 'large',
         theme: 'dark',
-        buttons: {
-          fermer: function(){
-          },
-        },
+        animation : 'none',
         content: function () {
             var self = this;
             return $.ajax({
-                url: route,
+                url: url,
                 dataType: 'json',
                 method: 'get'
             }).done(function (response) {
@@ -32,7 +30,7 @@ $(function() {
                 self.setContentPrepend('<div class="bg-success">')
                 self.setContent(ligne);
                 self.setContentAppend('</div>')
-                self.setTitle("Questions cochées");
+                self.setTitle("");
             }).fail(function(response){
                 self.setTitle('Désolé');
                 self.setContent('Il y a eu un problème');

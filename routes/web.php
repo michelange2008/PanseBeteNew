@@ -62,20 +62,25 @@ Route::group(['middleware' => ['auth', 'isValid']], function () {
 
       Route::get('/saisie/{saisie_id}', 'accueil')->name('saisie.accueil');
 
-      Route::get('/saisie/observations/{saisie_id}', 'observations')->name('saisie.observations');
-
-      Route::get('/saisie/chiffres/{saisie_id}', 'chiffres')->name('saisie.chiffres');
-
-      Route::post('/saisie/enregistreChiffres', 'enregistreChiffres')->name('saisie.enregistreChiffres');
-
-      Route::get('/saisie/syntheseChiffres/{saisie_id}', 'syntheseChiffres')->name('saisie.syntheseChiffres');
+      Route::get('/saisie/observations/{saisie_id}', 'saisieObservations')->name('saisie.observations');
 
       Route::post('/saisie/enregistreObservations', 'enregistreObservations')->name('saisie.enregistreObservations')->middleware('nullToZero');
 
       Route::get('/saisie/resultats', 'enregistre')->name('saisie.resultats');
 
+    });
+
+    Route::controller(SchiffreController::class)->group(function() {
+
+      Route::get('/saisie/schiffres/edit/{saisie_id}', 'edit')->name('schiffre.edit');
+
+      Route::post('/saisie/schiffres/store', 'store')->name('schiffre.store');
+
+      Route::get('/saisie/schiffres/{saisie_id}', 'show')->name('schiffre.show');
 
     });
+
+    // Routes des Sorigines
 
     Route::controller(SorigineController::class)->group(function() {
 
@@ -93,7 +98,7 @@ Route::group(['middleware' => ['auth', 'isValid']], function () {
 
     Route::get('/lecture/supprimer/{saisie_id}', ['uses' => 'LectureController@supprimer', 'as' => 'lecture.supprimer']);
 
-    Route::get('/lecture/observations/{alerte_id}', ['uses' => 'LectureController@observations', 'as' => 'lecture.observations']);
+    Route::get('/lecture/originesSalerte/{alerte_id}', ['uses' => 'LectureController@originesSalerte', 'as' => 'lecture.originesSalerte']);
 
     Route::get('/lecture/origines/{saisie_id}', ['uses' => 'LectureController@originesListe', 'as' => 'lecture.originesListe']);
 

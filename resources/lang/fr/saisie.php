@@ -20,5 +20,5 @@ return [
   'start' => 'Commencer',
   'voir' => 'voir',
   'edit' => 'modifier',
-
+  'causes' => 'causes identifiées',
 ];

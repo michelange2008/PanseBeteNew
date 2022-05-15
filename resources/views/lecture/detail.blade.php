@@ -47,7 +47,7 @@
           <div  id="origine_{{$theme->id}}" class="non-affiche">
             @foreach($saisie->salertes as $sAlerte)
               @if($sAlerte->alerte->theme->id === $theme->id)
-                <input type="hidden" id="route_{{$sAlerte->id}}" action ="{{route('lecture.observations', $sAlerte->id)}}" />
+                <input type="hidden" id="route_{{$sAlerte->id}}" action ="{{route('lecture.originesSalerte', $sAlerte->id)}}" />
                 <div class="panneau-alerte alert alert-dark bg-otojaune rounded-0">
                   <div class="intitule-alerte">
                     <p class="">{{$sAlerte->alerte->nom}}</p>

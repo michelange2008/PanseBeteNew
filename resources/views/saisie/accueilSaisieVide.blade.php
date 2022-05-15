@@ -1,5 +1,5 @@
 {{-- Issu de saisieAccueil
-Affiche une page d'accueil en cas de saisie jamais remplie = saisie vide
+Affiche une page d'saisie en cas de saisie jamais remplie = saisie vide
 Il y a trois cas de figures:
   - Aucune donnée saisie: deux card avec des boutons pour saisir l'une ou l'autre
   - Saisie num saisie: il reste la card avec le bouton pour saisir les observation
@@ -27,11 +27,11 @@ Il y a trois cas de figures:
 
               @if ($saisie->hasnum)
 
-                @include('accueil.accueilVide.hasNum')
+                @include('saisie.accueilVide.hasNum')
 
               @else
 
-                @include('accueil.accueilVide.noNum')
+                @include('saisie.accueilVide.noNum')
 
               @endif
 
@@ -41,11 +41,11 @@ Il y a trois cas de figures:
 
               @if ($saisie->hasobs)
 
-                @include('accueil.accueilVide.hasObs')
+                @include('saisie.accueilVide.hasObs')
 
               @else
 
-                @include('accueil.accueilVide.noObs')
+                @include('saisie.accueilVide.noObs')
 
               @endif
 

@@ -16,7 +16,11 @@
 
         @foreach ($themes as $theme)
 
-          <div class="ml-2 mt-3 d-flex flex-row align-items-center bg-otobleu">
+          <div class="mt-3 p-3 d-flex flex-row align-items-center
+
+            bg-otobleu  @if ($theme->nb_salertes > 0) bg-otorange @endif"
+
+          >
 
             <img class="img-40" src="{{url('storage/img/saisie/'.$theme->icone)}}" alt="">
 
@@ -28,7 +32,7 @@
 
             @if ($salerte->alerte->theme_id == $theme->id)
 
-              <div class=" p-3 m-3 bg-otojaune d-flex justify-content-between">
+              <div class=" p-3 mb-1 bg-otojaune d-flex justify-content-between">
 
                 <div class="">
 
@@ -38,14 +42,15 @@
 
                   @if ( $salerte->nbsorigine > 0 )
 
-                    <h6>Nombre de causes identifiées: <strong>{{ $salerte->nbsorigine }}</strong></h6>
+                    <h6><strong>{{ $salerte->nbsorigine }}</strong> @lang('saisie.causes')</h6>
 
                   @endif
 
                 </div>
 
                 <div class="">
-
+                  {{-- Choix d'un formulaire et non pas d'un simple bouton pour passer les données hidden
+                  à la méthode sorigineEdit. --}}
                   <form class="" action="{{ route('saisie.sorigineEdit') }}" method="post">
                     @csrf
                     <input type="hidden" name="saisie_id" value="{{ $saisie->id }}">

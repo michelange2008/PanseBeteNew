@@ -86,6 +86,14 @@ trait ThemesTools
 
           $theme->nb_salertes = $themeCountSalertes['nb_salertes'];
 
+          $icone = $theme->icone;
+
+          $nom_icone = explode(".", $icone)[0];
+          $extension_icone = explode(".", $icone)[1];
+          $icone_fonce = $nom_icone.'_fonce'.'.'.$extension_icone;
+
+          $theme->icone = $icone_fonce;
+
         }
 
       }

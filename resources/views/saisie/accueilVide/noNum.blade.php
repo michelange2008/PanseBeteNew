@@ -17,8 +17,8 @@
 <div class="card-footer">
 
   @vers([
-  'couleur' => 'otojaune',
-  'route' => route('saisie.chiffres', $saisie->id),
+  'couleur' => 'otobleu',
+  'route' => route('schiffre.edit', $saisie->id),
   'libelle' => __('boutons.chiffres'),
   "fa" => "fa-pen-to-square",
   ])

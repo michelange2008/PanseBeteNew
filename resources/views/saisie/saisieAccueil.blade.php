@@ -12,11 +12,11 @@
 
         @if ($saisie->salertes->count() == 0)
 
-          @include('accueil.accueilSaisieVide')
+          @include('saisie.accueilSaisieVide')
 
         @else
 
-            @include('accueil.accueilSaisiePleine')
+            @include('saisie.accueilSaisiePleine')
 
         @endif
 

@@ -3,7 +3,7 @@
 <div class="m-1">
 
   @vers([
-    'route' => route('saisie.syntheseChiffres', $saisie->id),
+    'route' => route('schiffre.show', $saisie->id),
     'couleur' => 'otobleu',
     'fa' => 'fas fa-calculator',
     'libelle' => __('boutons.voirChiffres'),
@@ -17,7 +17,7 @@
 <div class="m-1">
 
   @vers([
-    'route' => route('saisie.chiffres', $saisie->id),
+    'route' => route('schiffre.edit', $saisie->id),
     'couleur' => "otobleu",
     'fa' => 'fas fa-calculator',
     'libelle' => __('boutons.chiffres'),

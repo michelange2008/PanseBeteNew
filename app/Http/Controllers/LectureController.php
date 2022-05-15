@@ -17,7 +17,7 @@ class LectureController extends Controller
 {
 
     use ThemesTools;
-
+    // TODO: à supprimer car identique à saisie/{saisie_id}
     public function detail($saisie_id) {
 
         session()->put('saisie_id', $saisie_id);
@@ -25,7 +25,7 @@ class LectureController extends Controller
         $saisie = Saisie::find($saisie_id);
 
         // Utilisation du trait themesEspece pour ne prendre que les thèmes de l'espèce
-        $themes = $this->themesEspece($saisie);
+        $themes = $this->themesEspece($saisie->espece->id);
 
         return view('lecture.detail', [
             'saisie' => $saisie,
@@ -52,7 +52,12 @@ class LectureController extends Controller
       return redirect()->back();
     }
 
-    public function observations($salerte_id)
+    /*
+    // Renvoie un json avec la lsite des origines d'une salerte
+    // Methode utilisée par afficherOrigine.js qui fait une requête ajax pour
+    // pouvoir afficher les liste des origine en fenêtre modale
+     */
+    public function originesSalerte($salerte_id)
     {
       $tableNomOrigines = [];
 

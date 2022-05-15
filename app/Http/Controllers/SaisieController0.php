@@ -253,7 +253,7 @@ class SaisieController extends Controller
         Saisie::where('id', $saisie_id)->update(['hasnum' => 1]);
 
         // Et on renvoie à la méthode synthèseChiffres
-        return redirect()->route('saisie.syntheseChiffres', $saisie_id);
+        return redirect()->route('schiffre.show', $saisie_id);
       }
 
     }

@@ -31,6 +31,7 @@ trait FormatSalertes
   }
 
   /**
+   * Méthode interne au trait
    * Ajoute une propiété norme destinée à l'affichage
    * (par ex: "entre 15 et 25%")
    *
@@ -78,6 +79,7 @@ trait FormatSalertes
 }
 
   /**
+  * Méthode interne au trait
    * Pour une valeur de type liste, remplace l'indice par l'intitulé
    *
    * ex: valeur = 1 pour "hétérogénéité des l'EC des vaches" remplacé par "oui"

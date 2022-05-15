@@ -8,7 +8,7 @@
       "intro_1" : "saisie_intro_1_1",
       "intro_2" : "saisie_intro_1_2",
       "couleur" : "otojaune",
-      "route" : "saisie.chiffres"
+      "route" : "schiffre.edit"
     },
     "deux" : {
       "icone" : "observations.svg",
