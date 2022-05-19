@@ -22,6 +22,24 @@ Route::get('/visiteur/patience', ['uses' => 'VisiteurController@afficheNonValide
 
 Route::get('/presentation', ['uses' => 'VisiteurController@presentation', 'as' => 'visiteur.presentation']);
 
+
+Route::group(['middleware' => ['auth', 'isValid', 'isAdmin']], function() {
+
+  Route::prefix('/chiffres')->controller(ChiffreController::class)->group(function() {
+
+    Route::get('/', 'index')->name('chiffre.index');
+    Route::get('/create', 'create')->name('chiffre.create');
+    Route::post('/store', 'store')->name('chiffre.store');
+    Route::put('/update/{chiffre_id}', 'update')->name('chiffre.update');
+    // Route::get('/{chiffre_id}', 'show')->name('chiffre.show');
+    Route::get('/edit/{chiffre_id}', 'edit')->name('chiffre.edit');
+    Route::delete('/delete/{chiffre_id}', 'destroy')->name('chiffre.destroy');
+
+
+  });
+
+});
+
 Route::group(['middleware' => ['auth', 'isValid']], function () {
 
   // Gestion des utilisateurs
@@ -84,11 +102,13 @@ Route::group(['middleware' => ['auth', 'isValid']], function () {
 
     Route::controller(SorigineController::class)->group(function() {
 
-      Route::get('/saisie/origines/{saisie_id}', 'origines')->name('saisie.origines');
+      Route::get('/saisie/sorigines/{saisie_id}', 'index')->name('sorigines.index');
 
-      Route::post('/saisie/origines/edit', 'sorigineEdit')->name('saisie.sorigineEdit');
+      Route::get('/saisie/sorigines/show/{saisie_id}', 'show')->name('sorigines.show');
 
-      Route::post('/saisie/origines/enregistre', 'enregistreOrigines')->name('saisie.enregistreOrigines');
+      Route::post('/saisie/sorigines/edit', 'edit')->name('sorigines.edit');
+
+      Route::post('/saisie/sorigines/enregistre', 'store')->name('sorigines.store');
 
     });
 
@@ -100,7 +120,6 @@ Route::group(['middleware' => ['auth', 'isValid']], function () {
 
     Route::get('/lecture/originesSalerte/{alerte_id}', ['uses' => 'LectureController@originesSalerte', 'as' => 'lecture.originesSalerte']);
 
-    Route::get('/lecture/origines/{saisie_id}', ['uses' => 'LectureController@originesListe', 'as' => 'lecture.originesListe']);
 
     Route::get('/lecture/pdf/{saisie_id}', ['uses' => 'PdfController@index', 'as' => 'pdf']);
 

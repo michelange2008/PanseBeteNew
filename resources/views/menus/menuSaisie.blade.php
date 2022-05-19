@@ -38,12 +38,12 @@ Pour les saisies nouvelles sans salertes, le menu n'affiche rien d'autre
             <i class="fa-solid fa-chart-line"></i> @lang('titres.d_chiffrees')
           </a>
 
-          <a class="nav-link " href="{{ route('lecture.originesListe', $saisie->id) }}"
+          <a class="nav-link " href="{{ route('sorigines.index', $saisie->id) }}"
             title="Voir la liste des origines des alertes">
             <i class="fa-solid fa-meteor"></i> @lang('titres.l_origines')
           </a>
 
-          <a class="nav-link " href="{{ route('saisie.origines', $saisie->id) }}"
+          <a class="nav-link " href="{{ route('sorigines.show', $saisie->id) }}"
             title="Ajouter ou modifier des origines des alertes">
             <i class="fa-solid fa-pen-to-square"></i> @lang('titres.s_origines')
           </a>

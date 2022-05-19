@@ -17,3 +17,9 @@ const mix = require('laravel-mix');
        processCssUrls: false
     })
     .js('resources/js/app.js', 'js');
+
+mix.copy('node_modules/bootstrap-table/dist/bootstrap-table.min.css', 'public/css/bootstrap-table.min.css');
+
+mix.copy('node_modules/jquery/dist/jquery.min.js', 'public/js/jquery.min.js');
+mix.copy('node_modules/bootstrap-table/dist/bootstrap-table-locale-all.min.js', 'resources/js/bootstrap-table-locale-all.min.js');
+mix.copy('node_modules/bootstrap-table/dist/bootstrap-table.min.js', 'public/js/bootstrap-table.min.js');

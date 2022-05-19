@@ -13,11 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sindicateurs', function (Blueprint $table) {
+        Schema::create('chiffres', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('alerte_id');
-            $table->unsignedInteger('saisie_id');
-            $table->float('indicateur', 8, 2);
+            $table->string('nom', 100);
+            $table->string('groupe', 50);
         });
     }
 
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sindicateurs');
+        Schema::dropIfExists('chiffres');
     }
 };

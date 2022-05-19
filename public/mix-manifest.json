@@ -1,5 +1,8 @@
 {
-    "/js/popper.min.js": "/js/popper.min.js",
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/css/bootstrap-table.min.css": "/css/bootstrap-table.min.css",
+    "/js/jquery.min.js": "/js/jquery.min.js",
+    "/resources/js/bootstrap-table-locale-all.min.js": "/resources/js/bootstrap-table-locale-all.min.js",
+    "/js/bootstrap-table.min.js": "/js/bootstrap-table.min.js"
 }

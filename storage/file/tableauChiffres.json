@@ -1,0 +1,30 @@
+{
+  "tri" : {
+
+    "colonne" : "num",
+
+    "ordre" : "asc"
+  },
+
+  "liste" : {
+
+    "groupe" : {
+      "id" : "groupe",
+      "nom" : "tableaux.groupe",
+      "align" : "left",
+      "sortable" : true
+    },
+    "nom" : {
+      "id" : "nom",
+      "nom" : "tableaux.chiffre",
+      "align" : "left",
+      "sortable" : true
+    },
+    "suppr" : {
+      "id" : "suppr",
+      "nom" : "tableaux.del",
+      "align" : "center",
+      "sortable" : false
+    }
+  }
+}

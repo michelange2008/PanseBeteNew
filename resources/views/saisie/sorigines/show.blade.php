@@ -51,7 +51,7 @@
                 <div class="">
                   {{-- Choix d'un formulaire et non pas d'un simple bouton pour passer les données hidden
                   à la méthode sorigineEdit. --}}
-                  <form class="" action="{{ route('saisie.sorigineEdit') }}" method="post">
+                  <form class="" action="{{ route('sorigines.edit') }}" method="post">
                     @csrf
                     <input type="hidden" name="saisie_id" value="{{ $saisie->id }}">
                     <input type="hidden" name="alerte_id" value="{{ $salerte->alerte_id }}">

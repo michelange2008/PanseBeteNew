@@ -10,4 +10,6 @@ return array(
   'edit_chiffres' => "Modifier les données chiffrées",
   'edit_observations' => "Modifier les observations",
   'accueil' => 'Accueil',
+  'list_chiffres' => "Paramètres numériques",
+  'create_chiffre' => "Ajouter un nouveau paramètre",
 );

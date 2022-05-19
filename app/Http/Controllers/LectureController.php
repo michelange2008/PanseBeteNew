@@ -17,6 +17,7 @@ class LectureController extends Controller
 {
 
     use ThemesTools;
+
     // TODO: à supprimer car identique à saisie/{saisie_id}
     public function detail($saisie_id) {
 
@@ -68,6 +69,7 @@ class LectureController extends Controller
 
       return response()->json($tableNomOrigines, 200);
     }
+
 
     public function originesListe($saisie_id)
     {

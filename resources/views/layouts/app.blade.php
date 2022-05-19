@@ -12,6 +12,7 @@
     <link rel="icon" href="{{url('favicon.ico ')}}" />
     <!-- Styles -->
     <link rel="stylesheet" href="{{ url('css/app.css') }}" />
+    <link rel="stylesheet" href="{{url('css/bootstrap-table.min.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css" />
 
   </head>
@@ -25,14 +26,17 @@
     @yield('aide')
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script> --}}
+    <script src="{{ url('js/jquery.min.js') }}"></script>
+    <script src="{{ url('js/app.js') }}"></script>
+    <script src="{{ url('js/bootstrap/bootstrap.min.js') }}"></script>
+    <script src="{{ url('js/bootstrap-table.min.js') }}"></script>
+
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
     @stack('js')
 
-    <script src="{{ url('js/bootstrap/bootstrap.min.js') }}"></script>
     {{-- <script src="{{asset(config('chemins.js'))}}/pansebetes.js"></script> --}}
-    <script src="{{ url('js/app.js') }}"></script>
 
   </body>
 </html>

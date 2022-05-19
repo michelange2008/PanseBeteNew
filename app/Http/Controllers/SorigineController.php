@@ -8,6 +8,7 @@ use App\Models\Alerte;
 use App\Models\Salerte;
 use App\Models\Origine;
 use App\Models\Sorigine;
+use App\Models\Categorie;
 
 use App\Traits\ThemesTools;
 use App\Traits\FormatSalertes;
@@ -18,11 +19,45 @@ class SorigineController extends Controller
 
     use ThemesTools, FormatSalertes, AjouteSorigine;
 
-      /**
-       * Méthode pour saisir les origines des alertes
-       *
-       */
-      public function origines($saisie_id)
+
+    /*
+    // Affiche la liste des sorigines d'une saisie
+     */
+    public function index($saisie_id)
+    {
+      session()->put('saisie_id', $saisie_id);
+
+      $saisie = Saisie::find($saisie_id);
+
+      $sorigines = Sorigine::where('saisie_id', $saisie_id)->get();
+
+      // s'il n'y a aucune alerte
+      if($sorigines->count() == 0) {
+        $message = "Il n'y a aucun problème signalé";
+        return view('saisie.resultatsGlobalOk', ['saisie' => $saisie])->with(['message' => $message]);
+      }
+
+      // on recherche la liste des catégories dans le sorigines
+      foreach ($sorigines as $sorigine) {
+        $cat[] = $sorigine->origine->categorie_id;
+      }
+      // on élimine les doublons de cette liste
+      collect($cat)->unique();
+
+      // et on recherche les objets catégories de cette liste
+      $categories = Categorie::whereIn('id', collect($cat)->unique())->get();
+      return view('saisie.sorigines.index', [
+        'sorigines' => $sorigines,
+        'saisie' => $saisie,
+        'categories' => $categories,
+      ]);
+    }
+
+    /**
+     * Méthode pour saisir les origines des alertes
+     *
+     */
+      public function show($saisie_id)
       {
         $saisie = Saisie::find($saisie_id);
         $salertes = Salerte::where('saisie_id',$saisie_id)
@@ -33,7 +68,7 @@ class SorigineController extends Controller
         $origines = Origine::all();
         $themes = $this->themesEspeceAvecDanger($saisie);
 
-        return view('saisie.saisieOriginesIndex', [
+        return view('saisie.sorigines.show', [
           'saisie' => $saisie,
           'salertes' => $salertes,
           'origines' => $origines,
@@ -42,18 +77,19 @@ class SorigineController extends Controller
       }
 
       /**
-       * Renvoie une page avec les orginines d'une alerte pour que l'on puisse
-       * les cocher ou non.
-       *
+       * Renvoie une page avec les origines d'une alerte pour que l'on puisse
+       * les cocher ou non (et donc en faire des sorigines).
+       * C'est une route post car il a fallu passer plusieurs variables et c'était
+       * plus élégant comme ça.
        */
-      public function sorigineEdit(Request $request)
+      public function edit(Request $request)
       {
         $saisie = Saisie::find($request->saisie_id);
         $alerte = Alerte::find($request->alerte_id);
         $origines = $this->ajouteSorigine($saisie->id, $alerte->id);
         $sorigines = Sorigine::where('saisie_id', $saisie->id)->get();
 
-        return view('saisie.saisieParOrigine', [
+        return view('saisie.sorigines.edit', [
           'origines' => $origines,
           'sorigines' => $sorigines,
           'saisie' => $saisie,
@@ -66,7 +102,7 @@ class SorigineController extends Controller
        * Stocke les origines d'une alerte
        *
        */
-      public function enregistreOrigines(Request $request)
+      public function store(Request $request)
       {
         $saisie_id = $request->saisie_id;
         $salerte_id = $request->salerte_id;
@@ -85,7 +121,7 @@ class SorigineController extends Controller
 
         Salerte::where('id', $salerte_id)->update(['nbsorigine' => count($origines_id)]);
 
-        return redirect()->route('saisie.origines', ['saisie_id' => $saisie_id]);
+        return redirect()->route('sorigines.show', ['saisie_id' => $saisie_id]);
 
       }
 }

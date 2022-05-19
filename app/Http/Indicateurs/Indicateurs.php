@@ -105,7 +105,7 @@ class Indicateurs
   }
 
   /*
-  // Stocke les indicateurs calculés dans les table sindicateurs
+  // Stocke les indicateurs calculés 
   */
   public function store()
   {

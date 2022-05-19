@@ -49,6 +49,15 @@
                 </li>
                 @if (Auth::user()->admin)
                   <li class="nav-item"><a class="nav-link" href="{{route('admin.index')}}">Administration</a></li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="coeur" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Gestion des indicateurs
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="coeur">
+                      <a class="dropdown-item" href="{{route('chiffre.index')}}">Chiffres</a>
+                    </div>
+                  </li>
+
                 @endif
 
       </ul>

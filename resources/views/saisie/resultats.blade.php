@@ -17,7 +17,7 @@
       </div>
     </div>
 
-  {{ Form::open(['route' => 'saisie.origines.store'])}}
+  {{ Form::open(['route' => 'sorigines.show.store'])}}
 
     <div class="row justify-content-center">
       <div class="col-md-10">

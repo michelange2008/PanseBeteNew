@@ -226,7 +226,6 @@ class SaisieController extends Controller
       // Création d'un objet indicateurs pour le calcul et le stockage
       $indicateurs = new Indicateurs($saisie_id, $chiffres, $parametres);
       // Avec Indicateurs on vérifier que la saisie n'est pas incohérente
-      // La classe Indicateurs va stocker les ondicateurs calculés dans la table sindicateurs
       // si la saisie n'est pas valide on retourne au formulaire
       $indicateurs->calculIndicateurs();
       if($indicateurs->getErreurs()->count() > 0) {

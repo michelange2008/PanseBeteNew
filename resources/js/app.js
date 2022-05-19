@@ -2,6 +2,10 @@ require('@fortawesome/fontawesome-free/js/all.js');
 require('./deplierAlertes.js')
 require('./afficherOrigines.js')
 
+// require( './bootstrap-table.min.js');
+// require( './bootstrap-table-accent-neutralise.min.js');
+require( './bootstrap-table-locale-all.min.js');
+
 $(function() {
 
   $.ajaxSetup({

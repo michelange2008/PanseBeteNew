@@ -15,7 +15,7 @@ Permet de cocher les origines d'une alerte lors de la saisie
 
     <div class="ccol-sm-11 col-md-10 col-lg-9">
 
-      <form class="" action="{{ route('saisie.enregistreOrigines') }}" method="post">
+      <form class="" action="{{ route('sorigines.store') }}" method="post">
         @csrf
 
         <h3>{{ $alerte->nom }}</h3>

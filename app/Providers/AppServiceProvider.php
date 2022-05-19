@@ -21,6 +21,19 @@ class AppServiceProvider extends ServiceProvider
       Blade::include('fragments.blocEnregistreAnnule', 'enregistreAnnule');
       Blade::include('fragments.btnSynthese', 'synthese');
 
+      Blade::include('fragments.titre', 'titre');
+
+      Blade::include('fragments.dateSortable','dateSortable');
+
+      Blade::include('fragments.nomLien', 'nomLien');
+      Blade::include('fragments.voir','voir');
+      Blade::include('fragments.ouinon','ouinon');
+      Blade::include('fragments.supprLigne','supprLigne');
+      Blade::include('fragments.modifierLigne','modifierLigne');
+
+      Blade::include('fragments.inputText','inputText');
+      Blade::include('fragments.inputSelect','inputSelect');
+
     }
 
     /**

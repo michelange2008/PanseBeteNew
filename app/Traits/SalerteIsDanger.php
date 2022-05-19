@@ -2,7 +2,6 @@
 namespace App\Traits;
 
 use App\Models\Alerte;
-use App\Models\Sindicateur;
 use App\Models\Salerte;
 /**
  * Tranferts les indicateurs stockés dans la table sindicateurs à la table salertes

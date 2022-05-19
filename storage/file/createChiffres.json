@@ -1,0 +1,29 @@
+{
+  "titre" : {
+    "texte" : "titres.create_chiffre",
+    "icone" : "default.svg"
+  },
+  "route" : "",
+  "route_id" : "",
+  "liste" : {
+    "nom" : {
+      "label" : "nom",
+      "name" : "nom",
+      "type" : "text"
+    },
+    "groupe" : {
+      "label" : "groupe",
+      "name" : "groupe",
+      "type" : "select",
+      "options" : {
+        "": "disabled",
+        "effectifs" : "",
+        "mortalité": "",
+        "reproduction et post-partum" : "",
+        "lait et mamelle" : "",
+        "jeunes" : "",
+        "parasitisme" : ""
+      }
+    }
+  }
+}

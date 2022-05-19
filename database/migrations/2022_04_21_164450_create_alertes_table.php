@@ -16,7 +16,7 @@ class CreateAlertesTable extends Migration
         Schema::create('alertes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nom', 191)->index('alertes_nom_index');
-            $table->enum('type', ['liste', 'valeur', 'pourcentage', 'nombre', 'poids', 'boolean']);
+            $table->enum('type', ['liste', 'valeur', 'pourcentage', 'nombre', 'poids', 'boolean', 'ratio']);
             $table->string('unite', 191);
             $table->integer('borne_inf')->default(0);
             $table->integer('borne_sup');
