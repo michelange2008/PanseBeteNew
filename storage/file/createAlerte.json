@@ -1,0 +1,75 @@
+{
+  "titre" : {
+    "icone" : "plus.svg",
+    "titre" : "create_alerte"
+  },
+
+  "prefixe" : "alerte",
+
+  "liste" : {
+    "nom" : {
+      "label" : "nom",
+      "name" : "nom",
+      "type" : "text"
+    },
+    "type" : {
+      "label" : "type",
+      "name" : "type",
+      "type" : "select",
+      "options" : {
+        "" : "disabled",
+        "liste" : "enabled",
+        "valeur" : "enabled",
+        "pourcentage" : "enabled",
+        "nombre" : "enabled",
+        "poids" : "enabled",
+        "boolean" : "enabled",
+        "ratio" : "enabled"
+      }
+    },
+    "unite" : {
+      "label" : "unité",
+      "name" : "unite",
+      "type" : "text"
+    },
+    "modalite" : {
+      "label" : "modalité",
+      "name" : "modalite",
+      "type" : "select",
+      "options" : {
+        "" : "disabled",
+        "OBS" : "enabled",
+        "NUM" : "enabled"
+      }
+    },
+    "borne_inf" : {
+      "label" : "minimum",
+      "name" : "borne_inf",
+      "type" : "number"
+    },
+    "borne_sup" : {
+      "label" : "maximum",
+      "name" : "borne_sup",
+      "type" : "number"
+    },
+    "theme" : {
+      "label" : "thème",
+      "name" : "theme_id",
+      "type" : "select",
+      "options" : {
+      }
+    },
+    "espece" : {
+      "label" : "espèce",
+      "name" : "espece_id",
+      "type" : "select",
+      "options" : {
+      }
+    },
+    "actif" : {
+      "label" : "actif",
+      "name" : "actif",
+      "type": "ouinon"
+    }
+  }
+}

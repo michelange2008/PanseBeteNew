@@ -1,10 +1,10 @@
 {
   "titre" : {
-    "texte" : "titres.create_chiffre",
-    "icone" : "default.svg"
+    "titre" : "create_chiffre",
+    "icone" : "plus.svg"
   },
-  "route" : "",
-  "route_id" : "",
+  "prefixe" : "chiffre",
+
   "liste" : {
     "nom" : {
       "label" : "nom",
@@ -17,12 +17,13 @@
       "type" : "select",
       "options" : {
         "": "disabled",
-        "effectifs" : "",
-        "mortalité": "",
-        "reproduction et post-partum" : "",
-        "lait et mamelle" : "",
-        "jeunes" : "",
-        "parasitisme" : ""
+        "effectifs" : "enabled",
+        "mortalité": "enabled",
+        "reproduction et post-partum" : "enabled",
+        "lait et mamelle" : "enabled",
+        "jeunes" : "enabled",
+        "parasitisme" : "enabled",
+        "divers" : "enabled"
       }
     }
   }

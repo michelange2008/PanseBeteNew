@@ -10,46 +10,81 @@
 
       <div class="col-sm-11 col-md-10 col-lg-9">
 
-        @titre(['titre'=> __($elements->titre->texte), 'icone' => $elements->titre->icone])
+        @titre(['titre'=> $elements->titre])
 
       </div>
 
     </div>
 
-    <form class="" action="{{ route($elements->route) }}" method="post">
+    <form class="" action="{{ route($elements->prefixe.'.store') }}" method="post">
 
       @csrf
 
       <div class="row justify-content-center">
 
-        @foreach ($elements->liste as $champ)
+        <div class="col-sm-11 col-md-10 col-lg-9">
 
-          <div class="col-sm-11 col-md-10 col-lg-9">
+          <div class="row ">
 
+            @foreach ($elements->liste as $champ)
 
-            @if ($champ->type == "text")
+              @if ($champ->type == "text")
 
-              @inputText([
-                'name' => $champ->name,
-                'label' => $champ->label,
-                'isName' => $champ->isName ?? '',
-              ])
+                <div class="col-md-8 col-lg-7">
+
+                  @inputText([
+                    'name' => $champ->name,
+                    'label' => $champ->label,
+                    'isName' => $champ->isName ?? '',
+                  ])
+
+                </div>
+
+              @elseif ($champ->type == "number")
+
+                <div class="col-md-3 col-lg-2">
+
+                  @inputNum([
+                    'name' => $champ->name,
+                    'label' => $champ->label,
+                    'isName' => $champ->isName ?? '',
+                  ])
+
+                </div>
+
+              @elseif ($champ->type == "ouinon")
+
+                <div class="col-md-3 col-lg-2">
+
+                  @inputOuiNon([
+                    'name' => $champ->name,
+                    'label' => $champ->label,
+                    'isName' => $champ->isName ?? '',
+                  ])
+
+                </div>
 
             @elseif ($champ->type == "select")
 
-              @inputSelect([
-                'name' => $champ->name,
-                'label' => $champ->label,
-                'options' => $champ->options,
-                'isOption' => $champ->isOption ?? '',
-              ])
+                <div class="col-md-4">
+
+                  @inputSelect([
+                    'name' => $champ->name,
+                    'label' => $champ->label,
+                    'options' => $champ->options,
+                    'isOption' => $champ->isOption ?? '',
+                  ])
+
+                </div>
 
 
-            @endif
+              @endif
 
-          </div>
 
-        @endforeach
+          @endforeach
+        </div>
+
+        </div>
 
       </div>
 

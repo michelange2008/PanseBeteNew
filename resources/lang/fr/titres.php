@@ -1,6 +1,7 @@
 <?php
 
 return array(
+  'titre' => 'titre',
   'synth_globale' => 'Synthèse globale',
   'd_chiffrees' => "Données chiffrées",
   'l_origines' => "Origines",
@@ -12,4 +13,6 @@ return array(
   'accueil' => 'Accueil',
   'list_chiffres' => "Paramètres numériques",
   'create_chiffre' => "Ajouter un nouveau paramètre",
+  'choix_alertes_espece' => "Choisissez une espèce pour afficher les alertes",
+  'create_alerte' => "ajouter une nouvelle alerte",
 );

@@ -8,11 +8,14 @@
 
   <input id="{{ $name }}"
           class="form-control @error( $name ) is-invalid @enderror"
-          type="text"
+          type="number"
           name="{{ $name }}"
           {{-- si c'est une modification on affiche la valeur d'origine --}}
           value="{{ ucfirst($isName) ?? old(ucfirst($name)) }}"
-          required>
+          @isset($required)
+            @if ($required) required @endif
+          @endisset
+            >
   {{-- affichage de l'erreur --}}
   <div id="{{ $name }}feedback" class="invalid-feedback">
 

@@ -20,8 +20,9 @@ class AppServiceProvider extends ServiceProvider
       Blade::include('fragments.boutonSupprimer', 'supprimer');
       Blade::include('fragments.blocEnregistreAnnule', 'enregistreAnnule');
       Blade::include('fragments.btnSynthese', 'synthese');
+      Blade::include('fragments.boutonAnnule', 'annule');
 
-      Blade::include('fragments.titre', 'titre');
+      Blade::include('comp.titre', 'titre');
 
       Blade::include('fragments.dateSortable','dateSortable');
 
@@ -32,6 +33,8 @@ class AppServiceProvider extends ServiceProvider
       Blade::include('fragments.modifierLigne','modifierLigne');
 
       Blade::include('fragments.inputText','inputText');
+      Blade::include('fragments.inputNum','inputNum');
+      Blade::include('fragments.inputOuiNon','inputOuiNon');
       Blade::include('fragments.inputSelect','inputSelect');
 
     }

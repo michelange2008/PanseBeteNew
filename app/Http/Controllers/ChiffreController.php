@@ -19,7 +19,7 @@ class ChiffreController extends Controller
      */
     public function index()
     {
-      $chiffres = Chiffre::all();
+      $chiffres = Chiffre::orderBy('groupe')->get();
 
       $fournisseur = new ListeChiffresFournisseur();
 

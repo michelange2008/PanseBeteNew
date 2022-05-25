@@ -55,6 +55,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="coeur">
                       <a class="dropdown-item" href="{{route('chiffre.index')}}">Chiffres</a>
+                      <a class="dropdown-item" href="{{route('alerte.index')}}">Alertes</a>
                     </div>
                   </li>
 

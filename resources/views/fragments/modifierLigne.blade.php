@@ -8,7 +8,7 @@ VARIABLES: id ET route
 
     title="Modification de la ligne">
 
-      <i class="text-center text-success fas fa-edit"></i>
+      <i class="text-center text-success fas fa-edit"></i> {{ $nom }}
 
 </a>
 

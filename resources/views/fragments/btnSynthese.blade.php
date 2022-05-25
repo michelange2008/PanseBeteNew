@@ -1,4 +1,4 @@
-@include('fragments.btnVers', [
+@vers([
   'couleur' => 'secondary',
   "route" => route('saisie.accueil', $saisie->id),
   'fa' => 'fa-rotate-left',

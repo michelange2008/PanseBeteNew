@@ -35,6 +35,18 @@ Route::group(['middleware' => ['auth', 'isValid', 'isAdmin']], function() {
     Route::get('/edit/{chiffre_id}', 'edit')->name('chiffre.edit');
     Route::delete('/delete/{chiffre_id}', 'destroy')->name('chiffre.destroy');
 
+  });
+
+  Route::prefix('/alerte')->controller(AlerteController::class)->group(function() {
+
+    Route::get('/', 'index')->name('alerte.index');
+    Route::get('/index/{espece_nom}', 'indexParEspece')->name('alerte.indexParEspece');
+    Route::get('/create', 'create')->name('alerte.create');
+    Route::post('/store', 'store')->name('alerte.store');
+    Route::put('/update/{alerte_id}', 'update')->name('alerte.update');
+    // Route::get('/{alerte_id}', 'show')->name('alerte.show');
+    Route::get('/edit/{alerte_id}', 'edit')->name('alerte.edit');
+    Route::delete('/delete/{alerte_id}', 'destroy')->name('alerte.destroy');
 
   });
 

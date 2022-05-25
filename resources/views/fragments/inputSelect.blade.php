@@ -25,7 +25,7 @@
 
       >
 
-      {{ $option }}
+      {{ ucfirst( $option ) }}
 
     </option>
 

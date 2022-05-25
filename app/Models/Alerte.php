@@ -45,4 +45,14 @@ class Alerte extends Model
     {
       return $this->hasOne(Numalerte::class);
     }
+
+    public function type()
+    {
+      return $this->belongsTo(Type::class);
+    }
+
+    public function modalite()
+    {
+      return $this->belongsTo(Modalite::class);
+    }
 }
