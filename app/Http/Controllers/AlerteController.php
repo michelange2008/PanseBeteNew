@@ -6,11 +6,14 @@ use DB;
 use App\Models\Espece;
 use App\Models\Alerte;
 use App\Models\Theme;
+use App\Models\Type;
+use App\Models\Modalite;
 
 use App\Comp\Titre;
 use App\Fournisseurs\TabLab;
 
 use App\Traits\LitJson;
+use App\Traits\CreateForm;
 
 use Illuminate\Http\Request;
 
@@ -20,7 +23,7 @@ use Illuminate\Http\Request;
 class AlerteController extends Controller
 {
 
-    use LitJson;
+    use LitJson, CreateForm;
     /**
      * Display a listing of the resource.
      *
@@ -48,11 +51,15 @@ class AlerteController extends Controller
     public function indexParEspece($espece_nom)
     {
       $espece = Espece::where('nom', $espece_nom)->first();
+
+      session( [ 'espece_id' => $espece->id]);
+
       $alertes = DB::table('alertes')->where('espece_id', $espece->id)
                     ->join('themes', 'themes.id', 'alertes.theme_id')
                     ->select('themes.nom as theme_nom', 'alertes.id as id',
                     'alertes.nom as alerte_nom', 'alertes.modalite',
-                    'alertes.type', 'alertes.unite', 'alertes.actif')
+                    'alertes.type', 'alertes.unite', 'alertes.actif',
+                    'alertes.supprimable', 'alertes.id as origines')
                     ->orderBy('themes.id')
                     ->get();
 
@@ -73,14 +80,7 @@ class AlerteController extends Controller
      */
     public function create()
     {
-        $themes = Theme::all();
-        $especes = Espece::all();
-
-        $elements = $this->litJson('createAlerte.json');
-
-        $elements->liste->theme->options = $themes;
-
-        $elements->liste->espece->options = $especes;
+        $elements = $this->createForm('createAlerte.json');
 
         return view('admin.create', [
           'elements' => $elements,
@@ -90,12 +90,28 @@ class AlerteController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+   * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        $espece = Espece::find($request->espece_id);
+
+        $alerte = new ALerte();
+        $alerte->nom = $request->nom;
+        $alerte->type_id = $request->type_id;
+        $alerte->unite = $request->unite;
+        $alerte->modalite_id = $request->modalite_id;
+        $alerte->borne_inf = $request->borne_inf;
+        $alerte->borne_sup = $request->borne_sup;
+        $alerte->theme_id = $request->theme_id;
+        $alerte->espece_id = $request->espece_id;
+        $alerte->actif = ($request->actif !== null) ? $request->actif : 0;
+
+        $alerte->save();
+
+        return redirect()->route('alerte.indexParEspece', $espece->nom)
+                          ->with('message', 'alerte_added');
     }
 
     /**

@@ -21,33 +21,22 @@
       "aligne" : "left",
       "sortable" : true
     },
-    "modalite" : {
-      "col" : "modalite",
-      "type" : "item",
-      "aligne" : "center",
-      "sortable" : true
-    },
-    "type" : {
-      "col" : "type",
-      "type" : "item",
-      "aligne" : "left",
-      "sortable" : false
-    },
-    "unite" : {
-      "col" : "unite",
-      "type" : "item",
-      "aligne" : "right",
-      "sortable" : false
-    },
     "actif" : {
       "col" : "actif",
       "type" : "ouinon",
       "aligne" : "center",
       "sortable" : false
+    },
+    "origines" : {
+      "col" : "origines",
+      "type" : "lien",
+      "route" : "origine.indexParAlerte",
+      "aligne" : "center",
+      "sortable" : false
     }
   },
 
-  "suppr" : false,
+  "suppr" : true,
 
   "tri" : {
 

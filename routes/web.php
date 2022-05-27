@@ -25,6 +25,8 @@ Route::get('/presentation', ['uses' => 'VisiteurController@presentation', 'as' =
 
 Route::group(['middleware' => ['auth', 'isValid', 'isAdmin']], function() {
 
+  Route::get('/dev', 'DevController@dev')->name('dev');
+
   Route::prefix('/chiffres')->controller(ChiffreController::class)->group(function() {
 
     Route::get('/', 'index')->name('chiffre.index');
@@ -49,6 +51,20 @@ Route::group(['middleware' => ['auth', 'isValid', 'isAdmin']], function() {
     Route::delete('/delete/{alerte_id}', 'destroy')->name('alerte.destroy');
 
   });
+
+  Route::prefix('/origine')->controller(AlerteController::class)->group(function() {
+
+    Route::get('/', 'index')->name('origine.index');
+    Route::get('/index/{alerte_id}', 'indexParAlerte')->name('origine.indexParAlerte');
+    Route::get('/create', 'create')->name('origine.create');
+    Route::post('/store', 'store')->name('origine.store');
+    Route::put('/update/{origine_id}', 'update')->name('origine.update');
+    // Route::get('/{origine_id}', 'show')->name('origine.show');
+    Route::get('/edit/{origine_id}', 'edit')->name('origine.edit');
+    Route::delete('/delete/{origine_id}', 'destroy')->name('origine.destroy');
+
+  });
+
 
 });
 

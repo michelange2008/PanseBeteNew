@@ -1,6 +1,7 @@
 <?php
 
 return [
+  'del' => "Suppression",
   'valider' => "valider",
   'commencer' => "commencer",
   "retour" => "retour",

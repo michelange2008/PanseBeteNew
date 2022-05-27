@@ -6,6 +6,8 @@
 
   <input id="{{ $name }}"
     class="custom-control-input @error( $name ) is-invalid @enderror"
+    name = {{ $name }}
+    value = 1
     type="checkbox"
     @if ($isName)
       checked = "checked"

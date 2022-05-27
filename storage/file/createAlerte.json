@@ -10,22 +10,16 @@
     "nom" : {
       "label" : "nom",
       "name" : "nom",
-      "type" : "text"
+      "type" : "text",
+      "required" : true
     },
     "type" : {
       "label" : "type",
-      "name" : "type",
+      "name" : "type_id",
+      "table" : "types",
       "type" : "select",
-      "options" : {
-        "" : "disabled",
-        "liste" : "enabled",
-        "valeur" : "enabled",
-        "pourcentage" : "enabled",
-        "nombre" : "enabled",
-        "poids" : "enabled",
-        "boolean" : "enabled",
-        "ratio" : "enabled"
-      }
+      "required" : true,
+      "options" : {}
     },
     "unite" : {
       "label" : "unité",
@@ -34,13 +28,11 @@
     },
     "modalite" : {
       "label" : "modalité",
-      "name" : "modalite",
+      "name" : "modalite_id",
+      "table": "modalites",
       "type" : "select",
-      "options" : {
-        "" : "disabled",
-        "OBS" : "enabled",
-        "NUM" : "enabled"
-      }
+      "required" : true,
+      "options" : {}
     },
     "borne_inf" : {
       "label" : "minimum",
@@ -55,20 +47,23 @@
     "theme" : {
       "label" : "thème",
       "name" : "theme_id",
+      "table" : "themes",
       "type" : "select",
-      "options" : {
-      }
+      "required" : true,
+      "options" : {}
     },
     "espece" : {
       "label" : "espèce",
       "name" : "espece_id",
+      "table" : "especes",
       "type" : "select",
-      "options" : {
-      }
+      "required" : true,
+      "options" : {}
     },
     "actif" : {
       "label" : "actif",
       "name" : "actif",
+      "isName" : true,
       "type": "ouinon"
     }
   }

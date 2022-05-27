@@ -2,36 +2,55 @@
 
   <label for="{{ $name }}">{{ ucfirst($label) }}</label>
 
-  <select class="form-control" name="{{ $name }}" required>
+  <select id="{{ $name }}" class="form-control" name="{{ $name }}"
 
-    @foreach ($options as $option => $val)
+    @isset($required)
+      @if ($required) required @endif
+    @endisset
 
-      <option value="{{ $option }}" {{ $val }}
-      {{-- Par défaut on affiche la valeur indiquée disabled --}}
-      @if ($val == "disabled")
-        selected="selected"
+    >
 
-      @endif
-      {{-- mais si c'est une modification on choisit l'ancienne valeur --}}
-      @isset($isOption)
+    <option value=""></option>
+    @foreach ($options as $option)
 
-        @if ($option == $isOption)
+      <option value="{{ $option->id }}"
 
-          selected="selected"
+        @isset($default)
 
-        @endif
+          @if ($option->id == $default)
 
-      @endisset
+            selected = "selected"
 
-      >
+          @endif
 
-      {{ ucfirst( $option ) }}
+        @endisset
 
-    </option>
+        {{-- mais si c'est une modification on choisit l'ancienne valeur --}}
+        @isset($isOption)
 
-  @endforeach
+          @if ($option == $isOption )
 
-</select>
+            selected = "selected"
 
+          @endif
 
-</div>
+        @endisset
+
+        >
+
+        {{ ucfirst( $option->nom ) }}
+
+      </option>
+
+    @endforeach
+
+  </select>
+  {{-- affichage de l'erreur --}}
+
+  <div class="invalid-feedback">
+
+    @error( $name ) {{ $message }} @enderror
+
+    </div>
+
+  </div>

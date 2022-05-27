@@ -14,6 +14,11 @@ $(function() {
     }
   });
 
+  $.validate({
+    validateHiddenInputs: true
+  });
+
+
   // $(function () {
   //   $('[data-toggle="tooltip"]').tooltip()
   // })

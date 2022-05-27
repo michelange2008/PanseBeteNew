@@ -16,10 +16,10 @@
 
     </div>
 
-    <form class="" action="{{ route($elements->prefixe.'.store') }}" method="post">
+
+    <form class="needs-validation" action="{{ route($elements->prefixe.'.store') }}" method="post">
 
       @csrf
-
       <div class="row justify-content-center">
 
         <div class="col-sm-11 col-md-10 col-lg-9">
@@ -36,6 +36,7 @@
                     'name' => $champ->name,
                     'label' => $champ->label,
                     'isName' => $champ->isName ?? '',
+                    'required' => $champ->required ?? '',
                   ])
 
                 </div>
@@ -71,6 +72,8 @@
                   @inputSelect([
                     'name' => $champ->name,
                     'label' => $champ->label,
+                    'required' => $champ->required,
+                    'default' => $champ->default ?? '',
                     'options' => $champ->options,
                     'isOption' => $champ->isOption ?? '',
                   ])
@@ -82,6 +85,7 @@
 
 
           @endforeach
+
         </div>
 
         </div>

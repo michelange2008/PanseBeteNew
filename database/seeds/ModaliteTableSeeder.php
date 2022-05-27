@@ -19,7 +19,7 @@ class ModaliteTableSeeder extends Seeder
 
       DB::table('modalites')->insert([
         [ 'nom' => "observations", 'abbr' => 'OBS'],
-        ['nom' => "valeurs numériques", 'abbr' => 'NUM'],
+        ['nom' => "paramètres numériques", 'abbr' => 'NUM'],
       ]);
     }
 }

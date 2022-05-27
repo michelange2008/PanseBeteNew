@@ -115,6 +115,8 @@ class TabLab extends Tab
       $ligne = collect();
       $id = $data->id;
       foreach ($data as $key => $value) {
+        if(isset($cadre->colonnes->$key)) {
+
         $colonne = $cadre->colonnes->$key;
           // Et dans chaque cas on appelle une méthode de Tab.php en fonction de
           // la variable type qui permet de créer un item formatté selon le type
@@ -191,13 +193,25 @@ class TabLab extends Tab
           // Puis on ajoute l'item ainsi créée à la ligne
           $ligne->push($item);
 
+        }
 
       }
       // On pourcours le json (sous partie colonnes)
       // S'il faut une colonne suppr, on l'ajoute
-      if($cadre->suppr) {
+      if($cadre->suppr ) {
+        // Mais on n'ajoute un lien de suppression seulement si il existe une
+        // variable supprimable à true
+        $supprimable = (isset($data->supprimable)) ? $data->supprimable : false;
 
-        $item = $this->delFactory($data->id, $cadre->prefixe);
+        if ($supprimable) {
+
+          $item = $this->delFactory($data->id, $cadre->prefixe);
+
+        } else {
+
+          $item = $this->itemFactory($data->id, '-');
+
+        }
         $ligne->push($item);
 
       }
