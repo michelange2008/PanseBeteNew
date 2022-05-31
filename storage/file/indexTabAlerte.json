@@ -17,7 +17,7 @@
     },
     "alerte_nom" : {
       "col" : "alerte_nom",
-      "type" : "modifier",
+      "type" : "show",
       "aligne" : "left",
       "sortable" : true
     },
@@ -29,6 +29,7 @@
     },
     "origines" : {
       "col" : "origines",
+      "intituleLigne" : " ",
       "type" : "lien",
       "route" : "origine.indexParAlerte",
       "aligne" : "center",

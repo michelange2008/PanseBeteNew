@@ -46,13 +46,17 @@ Route::group(['middleware' => ['auth', 'isValid', 'isAdmin']], function() {
     Route::get('/create', 'create')->name('alerte.create');
     Route::post('/store', 'store')->name('alerte.store');
     Route::put('/update/{alerte_id}', 'update')->name('alerte.update');
-    // Route::get('/{alerte_id}', 'show')->name('alerte.show');
+    Route::put('/updateListe/{alerte_id}', 'updateListe')->name('alerte.updateListe');
+    Route::put('/updateNum/{alerte_id}', 'updateNum')->name('alerte.updateNum');
+    Route::get('/{alerte_id}', 'show')->name('alerte.show');
     Route::get('/edit/{alerte_id}', 'edit')->name('alerte.edit');
+    Route::get('/editListe/{alerte_id}', 'editParamListe')->name('alerte.editParamListe');
+    Route::get('/editNum/{alerte_id}', 'editParamNum')->name('alerte.editParamNum');
     Route::delete('/delete/{alerte_id}', 'destroy')->name('alerte.destroy');
 
   });
 
-  Route::prefix('/origine')->controller(AlerteController::class)->group(function() {
+  Route::prefix('/origine')->controller(OrigineController::class)->group(function() {
 
     Route::get('/', 'index')->name('origine.index');
     Route::get('/index/{alerte_id}', 'indexParAlerte')->name('origine.indexParAlerte');

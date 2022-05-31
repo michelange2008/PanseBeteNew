@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use Illuminate\Http\Request;
+use App\Fournisseurs\TabLab;
+
+use App\Models\Alerte;
 
 class OrigineController extends Controller
 {
@@ -13,7 +17,6 @@ class OrigineController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -26,7 +29,21 @@ class OrigineController extends Controller
      */
     public function indexParAlerte($alerte_id)
     {
-      dd($alerte_id);
+      $origines = DB::table('origines')->where('alerte_id', $alerte_id)
+                  ->join('categories', 'categories.id', 'origines.categorie_id')
+                  ->select('categories.icone as categorie_icone', 'origines.id as id',
+                  'categories.nom as categorie_nom', 'origines.question as question',
+                  'origines.reponse as reponse')
+                  ->get();
+      $alerte = ALerte::find($alerte_id);
+      $tabLab = new TabLab($origines, 'indexTabOrigine.json', null, $alerte->nom);
+
+      $indexTab = $tabLab->get();
+
+      return view('admin.index.indexCadre', [
+        'indexTab' => $indexTab,
+      ]);
+
     }
 
     /**

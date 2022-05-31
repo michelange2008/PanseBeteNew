@@ -18,7 +18,7 @@ class TabLab extends Tab
 
   protected $indexTab;
 
-  function __construct($datas, $json, $icone)
+  function __construct($datas, $json, $icone = "default.svg", $soustitre = null)
   {
     // On initialise le tableau
     $this->indexTab = collect();
@@ -33,7 +33,18 @@ class TabLab extends Tab
 
     }
 
-    $titre = new Titre($icone, 'titre_liste_'.$cadre->prefixe);
+    try {
+
+      $bouton = $cadre->bouton;
+
+    } catch (\Exception $e) {
+
+      $bouton = null;
+
+    }
+
+    $titre = new Titre($icone, 'titre_liste_'.$cadre->prefixe, $soustitre, $bouton);
+
     $this->indexTab->titre = $titre;
     // Avec la méthode creeEntetes on crée la collection d'en-têtes
     $this->creeEntetes($cadre);
@@ -115,83 +126,104 @@ class TabLab extends Tab
       $ligne = collect();
       $id = $data->id;
       foreach ($data as $key => $value) {
+        // $key = intitulé de la variable sélectionné qui doit être égale à un intitulé de colonne dans le json
         if(isset($cadre->colonnes->$key)) {
+          // On récupère les données de la colonne dans le json par cette égalité
+          $colonne = $cadre->colonnes->$key;
+          // Cas où l'intitulé de la cellule du tableau est la même pour toutes les lignes
+          if(isset($colonne->intituleLigne)) {
 
-        $colonne = $cadre->colonnes->$key;
-          // Et dans chaque cas on appelle une méthode de Tab.php en fonction de
-          // la variable type qui permet de créer un item formatté selon le type
-          switch ($colonne->type) {
-            case 'date' :
-            $item = $this->dateFactory($id, $value);
-            break;
+            $value = $colonne->intituleLigne;
 
-            case 'icone' :
-
-            try {
-
-              $item = $this->iconeFactory($id, $value);
-
-            } catch (\Exception $e) {
-              dump("Problème avec l'utilisation d'iconeFactory:
-              pas de variable icone définie");
-              dump($colonne);
-              dd($e);
-            }
-
-            break;
-
-            case 'photo':
-            try {
-
-              $item = $this->photoFactory($id, $value);
-
-            } catch (\Exception $e) {
-              dump("Problème avec l'utilisation de photoFactory:
-              pas de variable photo définie");
-              dump($colonne);
-              dd($e);
-            }
-
-            break;
-
-            case 'lien' :
-            try {
-
-              $item = $this->lienFactory($value, $colonne->route);
-
-            } catch (\Exception $e) {
-              dump("Problème avec l'utilisation de lienFactory:
-              pas de variable route définie");
-              dump($colonne);
-              dd($e);
-            }
-
-            break;
-
-            case 'ouinon' :
-            $item = $this->ouinonFactory($id, $value);
-            break;
-
-            case 'modifier':
-            try {
-
-              $item = $this->modifierFactory($id, $value, $cadre->prefixe);
-
-            } catch (\Exception $e) {
-              dump("Problème avec l'utilisation de lienFactory:
-              pas de variable route définie");
-              dump($colonne);
-              dd($e);
-            }
-
-            break;
-
-            default:
-            $item = $this->itemFactory($id, $value);
-            break;
           }
-          // Puis on ajoute l'item ainsi créée à la ligne
-          $ligne->push($item);
+            // Et dans chaque cas on appelle une méthode de Tab.php en fonction de
+            // la variable type qui permet de créer un item formatté selon le type
+            switch ($colonne->type) {
+              case 'date' :
+              $item = $this->dateFactory($id, $value);
+              break;
+
+              case 'icone' :
+
+              try {
+                $path = (isset($colonne->path)) ? $colonne->path : '';
+
+                $item = $this->iconeFactory($id, $value, $colonne->path);
+
+              } catch (\Exception $e) {
+                dump("Problème avec l'utilisation d'iconeFactory:
+                pas de variable icone définie");
+                dump($colonne);
+                dd($e);
+              }
+
+              break;
+
+              case 'photo':
+              try {
+
+                $item = $this->photoFactory($id, $value);
+
+              } catch (\Exception $e) {
+                dump("Problème avec l'utilisation de photoFactory:
+                pas de variable photo définie");
+                dump($colonne);
+                dd($e);
+              }
+
+              break;
+
+              case 'lien' :
+              try {
+
+                $item = $this->lienFactory($value, $colonne->route, $id);
+
+              } catch (\Exception $e) {
+                dump("Problème avec l'utilisation de lienFactory:
+                pas de variable route définie");
+                dump($colonne);
+                dd($e);
+              }
+
+              break;
+
+              case 'ouinon' :
+              $item = $this->ouinonFactory($id, $value);
+              break;
+
+              case 'edit':
+              try {
+
+                $item = $this->editFactory($id, $value, $cadre->prefixe);
+
+              } catch (\Exception $e) {
+                dump("Problème avec l'utilisation de lienFactory:
+                pas de variable route définie");
+                dump($colonne);
+                dd($e);
+              }
+
+              break;
+
+              case 'show':
+              try {
+
+                $item = $this->showFactory($id, $value, $cadre->prefixe);
+
+              } catch (\Exception $e) {
+                dump("Problème avec l'utilisation de lienFactory:
+                pas de variable route définie");
+                dump($colonne);
+                dd($e);
+              }
+
+              break;
+            default:
+              $item = $this->itemFactory($id, $value);
+              break;
+            }
+            // Puis on ajoute l'item ainsi créée à la ligne
+            $ligne->push($item);
 
         }
 

@@ -5,15 +5,14 @@ namespace App\Http\Controllers;
 use DB;
 use App\Models\Espece;
 use App\Models\Alerte;
-use App\Models\Theme;
-use App\Models\Type;
-use App\Models\Modalite;
+use App\Models\Numalerte;
 
 use App\Comp\Titre;
 use App\Fournisseurs\TabLab;
 
 use App\Traits\LitJson;
-use App\Traits\CreateForm;
+use App\Traits\TypesTools;
+use App\Traits\FormTemplate;
 
 use Illuminate\Http\Request;
 
@@ -23,7 +22,7 @@ use Illuminate\Http\Request;
 class AlerteController extends Controller
 {
 
-    use LitJson, CreateForm;
+    use LitJson, TypesTools, FormTemplate;
     /**
      * Display a listing of the resource.
      *
@@ -57,8 +56,7 @@ class AlerteController extends Controller
       $alertes = DB::table('alertes')->where('espece_id', $espece->id)
                     ->join('themes', 'themes.id', 'alertes.theme_id')
                     ->select('themes.nom as theme_nom', 'alertes.id as id',
-                    'alertes.nom as alerte_nom', 'alertes.modalite',
-                    'alertes.type', 'alertes.unite', 'alertes.actif',
+                    'alertes.nom as alerte_nom', 'alertes.unite', 'alertes.actif',
                     'alertes.supprimable', 'alertes.id as origines')
                     ->orderBy('themes.id')
                     ->get();
@@ -80,9 +78,9 @@ class AlerteController extends Controller
      */
     public function create()
     {
-        $elements = $this->createForm('createAlerte.json');
+        $elements = $this->createForm('formAlerte.json');
 
-        return view('admin.create', [
+        return view('admin.editCreateForm', [
           'elements' => $elements,
         ]);
     }
@@ -97,7 +95,7 @@ class AlerteController extends Controller
     {
         $espece = Espece::find($request->espece_id);
 
-        $alerte = new ALerte();
+        $alerte = new Alerte();
         $alerte->nom = $request->nom;
         $alerte->type_id = $request->type_id;
         $alerte->unite = $request->unite;
@@ -115,14 +113,22 @@ class AlerteController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Même page que edit
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        //
+        $alerte = alerte::find($id);
+        // Utilisation de la classe titre avec la variable $translate à FALSE
+        // pour indiquer qu'il ne faut pas appliquer la traduction à $alerte->nom
+        $titre = new Titre('saisie/alertes_claire.svg', $alerte->nom, false);
+
+        return view('admin.alertes.show', [
+          'alerte' => $alerte,
+          'titre' => $titre,
+        ]);
     }
 
     /**
@@ -133,7 +139,15 @@ class AlerteController extends Controller
      */
     public function edit($id)
     {
-        //
+      $alerte = Alerte::find($id);
+
+      $elements = $this->editForm($alerte, 'formAlerte.json');
+
+      return view('admin.editCreateForm', [
+        'elements' => $elements,
+        'id' => $id,
+      ]);
+
     }
 
     /**
@@ -145,7 +159,95 @@ class AlerteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validate([
+          'nom' => 'required|max:100',
+        ]);
+
+        Alerte::where('id', $id)
+              ->update([
+                'nom' => $request->nom,
+                'type_id' => $request->type_id,
+                'unite' => $request->unite,
+                'modalite_id' => $request->modalite_id,
+                'theme_id' => $request->theme_id,
+                'actif' => ($request->actif == null) ? 0 : 1,
+              ]);
+
+        if($request->editParam) {
+
+          if ($this->isListe($request->type_id)) {
+
+            return redirect()->route('alerte.editParamListe', $id);
+
+          } else {
+
+            return redirect()->route('alerte.editParamNum', $id);
+
+          }
+
+        }
+
+        return redirect()->route('alerte.show', $id)->with(['message' => __('messages.alerte_edit')]);
+    }
+
+    /**
+     * fonction destinée à modifier les parametres des alertes de type liste
+     *
+     * @param int $id : alerte_id que l'on veut modifier
+     */
+    public function editParamListe($id)
+    {
+      // code...
+    }
+
+    /**
+     * fonction destinée à modifier les parametres des alertes qui ne sont pas
+     * de type liste mais de type valeur, ratio, pourcentage
+     *
+     * @param int $id : alerte_id que l'on veut modifier
+     */
+    public function editParamNum($id)
+    {
+      $alerteNum = Numalerte::where('alerte_id', $id)->first();
+
+      $elements = $this->editForm($alerteNum, 'formAlerteNum.json', 'updateNum');
+
+      $elements->titre->titre = $alerteNum->alerte->nom;
+      $elements->titre->translate = false;
+      $elements->titre->soustitre = 'edit_alerte_num';
+
+      return view('admin.editCreateForm', [
+
+        'elements' => $elements,
+
+      ]);
+
+    }
+
+    /**
+     * undocumented function summary
+     *
+     * Undocumented function long description
+     *
+     * @param type var Description
+     * @return return type
+     */
+    public function updateNum(Request $request, $id)
+    {
+      dd($request->all());
+    }
+
+    /**
+     * undocumented function summary
+     *
+     * Undocumented function long description
+     *
+     * @param type var Description
+     * @return return type
+     */
+    public function updateListe(Request $request, $id)
+    {
+      dd($request->all());
     }
 
     /**
@@ -156,6 +258,8 @@ class AlerteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Alerte::destroy($id);
+
+        return redirect()->back()->with('message', 'alerte_del');
     }
 }

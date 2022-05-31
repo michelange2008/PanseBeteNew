@@ -2,7 +2,9 @@
 ET UN ROUTAGE VERS LA METHODE edit
 VARIABLES: id ET route
 --}}
-<a href="{{ route($route, $id) }}" class="btn" type="submit" name="ok"
+<a href="{{ route($route, $id) }}"
+
+    class="allervers text-{{ $aligne ?? 'left' }}" type="submit" name="ok"
 
     data-toggle="tooltip" data-placement="top"
 

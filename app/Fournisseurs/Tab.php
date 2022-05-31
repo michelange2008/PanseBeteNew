@@ -33,7 +33,7 @@ abstract class Tab
     return $item;
   }
 
-  public function iconeFactory($id, $value)
+  public function iconeFactory($id, $value, $path)
   {
     $item = collect();
 
@@ -41,7 +41,7 @@ abstract class Tab
 
     $item->id = $id;
 
-    $item->nom = $value;
+    $item->nom = $path.$value;
 
     $item->route = null;
 
@@ -94,17 +94,32 @@ abstract class Tab
      return $item;
    }
 
-   public function modifierFactory($id, $value, $prefixe)
+   public function editFactory($id, $value, $prefixe)
    {
      $item = collect();
 
      $item->nom = $value;
 
-     $item->action = 'modifier';
+     $item->action = 'edit';
 
      $item->id = $id;
 
      $item->route = $prefixe.'.edit';
+
+     return $item;
+   }
+
+   public function showFactory($id, $value, $prefixe)
+   {
+     $item = collect();
+
+     $item->nom = $value;
+
+     $item->action = 'show';
+
+     $item->id = $id;
+
+     $item->route = $prefixe.'.show';
 
      return $item;
    }

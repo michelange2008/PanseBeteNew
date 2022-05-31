@@ -75,6 +75,7 @@
                   'nom' => ucfirst(__($item->nom)),
                   'route' => $item->route,
                   'icone' => $item->icone ?? '',
+                  'aligne' => $entete->aligne ?? '',
                 ])
               </td>
 
@@ -89,11 +90,17 @@
               <td>
                 @supprLigne(['id' => $item->id, 'route' => $item->route, 'titre' => $item->titre, 'texte' => $item->texte])
               </td>
-            @elseif ($item->action === 'modifier')
 
+            @elseif ($item->action === 'edit')
 
               <td>
-                @modifierLigne(['id' => $item->id, 'nom' => $item->nom, 'route' => $item->route])
+                @ligneEdit(['id' => $item->id, 'nom' => $item->nom, 'route' => $item->route])
+              </td>
+
+            @elseif ($item->action === 'show')
+
+              <td>
+                @ligneShow(['id' => $item->id, 'nom' => $item->nom, 'route' => $item->route])
               </td>
 
             @elseif ($item->action === 'ouinon')
@@ -108,7 +115,7 @@
 
               <td>
 
-                <img class="img-50" src="{{ url('storage/img/icones/'.$item->nom) }}" alt="{{ $item->nom }}">
+                <img class="img-40" src="{{ url('storage/img/'.$item->nom) }}" alt="{{ $item->nom }}">
 
               </td>
 

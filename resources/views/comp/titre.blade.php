@@ -4,7 +4,16 @@
 
   <div class="ml-3">
 
-    <h3 class="px-3">{{ ucfirst(__('titres.'.$titre->titre ?? '')) }}</h3>
+    @if ($titre->translate)
+
+      <h3 class="px-3">{{ ucfirst(__('titres.'.$titre->titre ?? '')) }}</h3>
+
+    @else
+
+      <h3 class="px-3">{{ ucfirst($titre->titre ?? '') }}</h3>
+
+    @endif
+
 
     @isset($titre->soustitre)
 

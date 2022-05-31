@@ -2,6 +2,7 @@
 
 return [
   'del' => "Suppression",
+  'edit' => "Modifier",
   'valider' => "valider",
   'commencer' => "commencer",
   "retour" => "retour",

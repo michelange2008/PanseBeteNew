@@ -28,7 +28,7 @@ class Alerte extends Model
 
     public function espece()
     {
-        return $this->belongsTo(Espece::class, 'id');
+        return $this->belongsTo(Espece::class);
     }
 
     public function salertes()

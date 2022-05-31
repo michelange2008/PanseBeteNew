@@ -7,4 +7,6 @@ return [
   'chiffre_update' => "Ce paramètre a été mis à jour",
   'chiffre_create' => "Un nouveau parametre a été créé",
   'chiffre_del' => "Ce paramètre a été supprimé",
+  'alerte_del' => "Cette alerte a bien été supprimée",
+  'alerte_edit' => "cette alerte a bien été modifiée",
 ];

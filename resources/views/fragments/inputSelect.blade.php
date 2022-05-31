@@ -11,6 +11,7 @@
     >
 
     <option value=""></option>
+
     @foreach ($options as $option)
 
       <option value="{{ $option->id }}"
@@ -28,7 +29,7 @@
         {{-- mais si c'est une modification on choisit l'ancienne valeur --}}
         @isset($isOption)
 
-          @if ($option == $isOption )
+          @if ($option->id == $isOption )
 
             selected = "selected"
 

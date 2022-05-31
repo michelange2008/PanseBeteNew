@@ -17,9 +17,13 @@
     </div>
 
 
-    <form class="needs-validation" action="{{ route($elements->prefixe.'.store') }}" method="post">
+    <form class="needs-validation" action="{{ $elements->route}}" method="post">
 
       @csrf
+
+      @method($elements->method)
+
+
       <div class="row justify-content-center">
 
         <div class="col-sm-11 col-md-10 col-lg-9">
@@ -55,7 +59,7 @@
 
               @elseif ($champ->type == "ouinon")
 
-                <div class="col-md-3 col-lg-2">
+                <div class="col-md-11 col-lg-8">
 
                   @inputOuiNon([
                     'name' => $champ->name,

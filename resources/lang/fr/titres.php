@@ -15,4 +15,6 @@ return array(
   'create_chiffre' => "Ajouter un nouveau paramètre",
   'choix_alertes_espece' => "Choisissez une espèce pour afficher les alertes",
   'create_alerte' => "ajouter une nouvelle alerte",
+  'edit_alerte' => "Modifier une alerte",
+  'edit_alerte_num' => "Modifier les seuils de l'alerte",
 );
