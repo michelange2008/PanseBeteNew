@@ -29,7 +29,7 @@
     "bootstrap-table": "^1.20.1",
     "jquery-confirm": "^3.3.4",
     "jquery-ui": "^1.13.1",
-    "npm": "^8.7.0",
+    "npm": "^8.11.0",
     "poppers": "^0.1.2",
     "table-dragger": "^1.0.3"
   }
