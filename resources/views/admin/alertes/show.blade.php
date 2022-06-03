@@ -67,8 +67,12 @@
               <p class="fw-bold">
 
                 @foreach ($alerte->critalertes as $critere)
-
-                  {{ ucfirst($critere->nom) }} @if (!$loop->last) / @endif
+                  <span @if ($critere->isAlerte)
+                    class="text-danger" @else class="text-success"
+                  @endif >
+                    {{ ucfirst($critere->nom) }}
+                  </span>
+                  @if (!$loop->last) / @endif
 
                 @endforeach
 

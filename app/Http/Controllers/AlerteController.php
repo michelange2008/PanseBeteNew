@@ -6,6 +6,7 @@ use DB;
 use App\Models\Espece;
 use App\Models\Alerte;
 use App\Models\Numalerte;
+use App\Models\Critalerte;
 
 use App\Comp\Titre;
 use App\Fournisseurs\TabLab;
@@ -100,16 +101,22 @@ class AlerteController extends Controller
         $alerte->type_id = $request->type_id;
         $alerte->unite = $request->unite;
         $alerte->modalite_id = $request->modalite_id;
-        $alerte->borne_inf = $request->borne_inf;
-        $alerte->borne_sup = $request->borne_sup;
         $alerte->theme_id = $request->theme_id;
         $alerte->espece_id = $request->espece_id;
         $alerte->actif = ($request->actif !== null) ? $request->actif : 0;
 
         $alerte->save();
 
-        return redirect()->route('alerte.indexParEspece', $espece->nom)
-                          ->with('message', 'alerte_added');
+        if ($this->isListe($request->type_id)) {
+
+          return redirect()->route('liste.create', $alerte->id);
+
+        } else {
+
+          return redirect()->route('num.create', $alerte->id);
+
+        }
+
     }
 
     /**
@@ -146,6 +153,7 @@ class AlerteController extends Controller
       return view('admin.editCreateForm', [
         'elements' => $elements,
         'id' => $id,
+        'routeAnnule' => route('alerte.show', $id)
       ]);
 
     }
@@ -177,77 +185,17 @@ class AlerteController extends Controller
 
           if ($this->isListe($request->type_id)) {
 
-            return redirect()->route('alerte.editParamListe', $id);
+            return redirect()->route('liste.edit', $id);
 
           } else {
 
-            return redirect()->route('alerte.editParamNum', $id);
+            return redirect()->route('num.edit', $id);
 
           }
 
         }
 
-        return redirect()->route('alerte.show', $id)->with(['message' => __('messages.alerte_edit')]);
-    }
-
-    /**
-     * fonction destinée à modifier les parametres des alertes de type liste
-     *
-     * @param int $id : alerte_id que l'on veut modifier
-     */
-    public function editParamListe($id)
-    {
-      // code...
-    }
-
-    /**
-     * fonction destinée à modifier les parametres des alertes qui ne sont pas
-     * de type liste mais de type valeur, ratio, pourcentage
-     *
-     * @param int $id : alerte_id que l'on veut modifier
-     */
-    public function editParamNum($id)
-    {
-      $alerteNum = Numalerte::where('alerte_id', $id)->first();
-
-      $elements = $this->editForm($alerteNum, 'formAlerteNum.json', 'updateNum');
-
-      $elements->titre->titre = $alerteNum->alerte->nom;
-      $elements->titre->translate = false;
-      $elements->titre->soustitre = 'edit_alerte_num';
-
-      return view('admin.editCreateForm', [
-
-        'elements' => $elements,
-
-      ]);
-
-    }
-
-    /**
-     * undocumented function summary
-     *
-     * Undocumented function long description
-     *
-     * @param type var Description
-     * @return return type
-     */
-    public function updateNum(Request $request, $id)
-    {
-      dd($request->all());
-    }
-
-    /**
-     * undocumented function summary
-     *
-     * Undocumented function long description
-     *
-     * @param type var Description
-     * @return return type
-     */
-    public function updateListe(Request $request, $id)
-    {
-      dd($request->all());
+        return redirect()->route('alerte.show', $id)->with(['message' => 'alerte_edit']);
     }
 
     /**

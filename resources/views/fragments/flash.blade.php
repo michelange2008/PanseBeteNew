@@ -2,7 +2,7 @@
 
     <div class="alert {{  session('couleur')  ?? 'alert-success'}} ">
 
-        {!! session('message') !!}
+        {!! __('messages.'.session('message')) !!}
 
     </div>
 

@@ -1,11 +1,15 @@
 {
-  "prefixe" : "alerte",
+  "prefixe" : "num",
 
   "titre" : {
     "translate" : true
   },
 
   "liste" : {
+    "alerte_id" : {
+      "name" : "alerte_id",
+      "type" : "hidden"
+    },
     "borne_inf" : {
       "label" : "Valeur minimum",
       "name" : "borne_inf",

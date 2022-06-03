@@ -23,7 +23,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1001,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'hétérogénéité marquée de l\'état coporel des vaches',
                 'type' => 'liste',
                 'unite' => '',
@@ -36,7 +36,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1002,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Etat de propreté du troupeau en hiver',
                 'type' => 'liste',
                 'unite' => '',
@@ -49,7 +49,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1003,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Comportements agressifs entre les vaches',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -62,7 +62,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1004,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Pourcentage de vaches avec blessures',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -75,7 +75,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1005,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Pourcentage d\'animaux accidentés au pâturage',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -88,7 +88,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1006,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Pourcentage d\'animaux accidentés en stabulation',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -101,7 +101,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1007,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Taux de mortalité des animaux d\'élevage (génisses après sevrage et vaches)',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -114,7 +114,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1008,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Taux de mortalités des animaux adultes en période d\'engraissement',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -127,7 +127,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1009,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Taux d\'animaux de plus de 10 ans',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -140,7 +140,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1010,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Montant des frais vétérinaires / vélage (hors conseil)',
                 'type' => 'valeur',
                 'unite' => '€',
@@ -153,7 +153,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1011,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Poids des génisses à la reproduction',
                 'type' => 'liste',
                 'unite' => '',
@@ -166,7 +166,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1012,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Variation d\'état corporel en phase de reproduction',
                 'type' => 'liste',
                 'unite' => '',
@@ -179,7 +179,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1013,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Taux de gestation (nb de vaches pleines / nb de vaches mises à la reproduction)',
                 'type' => 'liste',
                 'unite' => '',
@@ -192,7 +192,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1014,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Nombre d\'avortements pendant les 3 derniers mois de gestation',
                 'type' => 'valeur',
             'unite' => 'avortement(s)',
@@ -205,7 +205,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1015,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Intervalle vêlage 1 - vêlage 2',
                 'type' => 'valeur',
                 'unite' => 'jours',
@@ -218,7 +218,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1016,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% de vêlages difficiles des génisses',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -231,7 +231,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1017,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => '% de vaches avec un problème post-vélage (matrice non-délivrance ou métrite)',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -244,7 +244,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1018,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Poids de naissance des veaux mâles',
                 'type' => 'liste',
             'unite' => '(par rapport à la moyenne raciale)',
@@ -257,7 +257,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1019,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Engraissement : nombre d\'animaux en acidose clinique',
                 'type' => 'valeur',
                 'unite' => 'animaux',
@@ -270,7 +270,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1020,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Engraissement : nombre de morts',
                 'type' => 'valeur',
                 'unite' => 'animaux',
@@ -283,7 +283,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1021,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Vaches : Diarrhées et aspect des bouses',
                 'type' => 'liste',
                 'unite' => '',
@@ -296,7 +296,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1022,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Vaches : cas cliniques de météorisation',
                 'type' => 'valeur',
                 'unite' => 'cas',
@@ -309,7 +309,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1023,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Vaches : cas de tétanie d\'herbage',
                 'type' => 'valeur',
                 'unite' => 'cas',
@@ -322,7 +322,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1024,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Taux de mortalité 0 à 2 j',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -335,7 +335,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1025,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Taux de mortalité 3 à 15 j',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -348,7 +348,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1026,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Taux de mortalité 15 j au sevrage',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -361,7 +361,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1027,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'GMQ 0-210 j',
                 'type' => 'liste',
                 'unite' => '',
@@ -374,7 +374,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1028,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% veaux avec gros nombril',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -387,7 +387,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1029,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% de veaux avec problème digestif',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -400,7 +400,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1030,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% problème respiratoire',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -413,7 +413,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1031,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => '% problème fonctionnel (fractures écrasement etc.)',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -426,7 +426,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1032,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Prise de colostrum (% après 6 h)',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -439,7 +439,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1033,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% colostrum ne venant pas de la mère',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -452,7 +452,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1034,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'perte de poids et perte d\'état',
                 'type' => 'liste',
                 'unite' => '',
@@ -465,7 +465,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1035,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Présence de poils piqués, robe déstructurée',
                 'type' => 'liste',
                 'unite' => '',
@@ -478,7 +478,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1036,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Nombre de traitements curatifs contre les strongles digestifs pour les vaches allaitantes',
                 'type' => 'valeur',
                 'unite' => 'nombre de traitements',
@@ -491,7 +491,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1037,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Nombre de traitements curatifs contre les strongles digestifs pour les génisses',
                 'type' => 'valeur',
                 'unite' => 'nombre de traitements',
@@ -504,7 +504,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1038,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Nombre de traitements curatifs contre les stronges respiratoires chez les génisses',
                 'type' => 'valeur',
                 'unite' => 'nombre de traitements',
@@ -517,7 +517,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1039,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Nombre de traitements curatifs contre les stronges respiratoires chez les vaches allaitantes',
                 'type' => 'valeur',
                 'unite' => 'nombre de traitements',
@@ -530,7 +530,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1040,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% de bronchites vermineuses',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -543,7 +543,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1041,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Douve : nombre de cas cliniques',
                 'type' => 'valeur',
                 'unite' => 'cas',
@@ -556,7 +556,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1042,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Grande douve et paramphistomes : nombre de traitements curatifs',
                 'type' => 'valeur',
                 'unite' => 'nombre de traitements',
@@ -569,7 +569,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1043,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Nombre de ticket d\'abattage avec la mention "foie saisi"',
                 'type' => 'valeur',
                 'unite' => 'nombre',
@@ -582,7 +582,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1044,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Traitements curatifs ectoparasites au pâturage (tiques, mouches)',
                 'type' => 'valeur',
                 'unite' => 'nombre de traitements',
@@ -595,7 +595,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1045,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Traitements curatifs ectoparasites en stabulation (poux, gales, teignes,)',
                 'type' => 'valeur',
                 'unite' => 'nombre de traitements',
@@ -608,7 +608,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1046,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => '% de vaches avec mamelle défectueuse (déséquilibrée, 3 quartiers, trayons à problèmes)',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -621,7 +621,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1047,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Présence de cas de mammites',
                 'type' => 'valeur',
                 'unite' => 'nombre de mammites',
@@ -634,7 +634,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1048,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% de vaches ayant boité sévèrement',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -647,7 +647,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1049,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Nombre de taureau qui boite',
                 'type' => 'valeur',
                 'unite' => 'animaux',
@@ -660,7 +660,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 1050,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% d\'animaux traités pour boiteries',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -673,7 +673,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2000,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Hétérogénéité marquée de l\'état corporel des vaches intra-lot',
                 'type' => 'liste',
                 'unite' => '',
@@ -686,7 +686,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2001,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Animaux avec note d\'état corporel inférieur ou égale à 2',
                 'type' => 'valeur',
                 'unite' => 'animaux',
@@ -699,7 +699,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2002,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Animaux en fin de période de tarissement avec note d\'état corporel inférieur à 3',
                 'type' => 'valeur',
                 'unite' => 'animaux',
@@ -712,7 +712,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2003,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Animaux avec robe déstructurée',
                 'type' => 'liste',
                 'unite' => '',
@@ -725,7 +725,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2004,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Etat de propreté des animaux en bâtiment',
                 'type' => 'liste',
                 'unite' => '',
@@ -738,7 +738,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2005,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Comportements agressifs entre elles',
                 'type' => 'liste',
                 'unite' => '',
@@ -816,7 +816,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2011,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Poids des génisses à la première insémination',
                 'type' => 'liste',
                 'unite' => '',
@@ -1011,7 +1011,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2026,
                 'actif' => 0,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% de vaches avec TBi - TPi < 3g/kg et TBi faible <35g/kg',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1024,7 +1024,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2027,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Vaches avec bouses anormales (liquides, mousse, claires)',
                 'type' => 'liste',
                 'unite' => '',
@@ -1193,7 +1193,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2041,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Baisse de la production laitière',
                 'type' => 'liste',
                 'unite' => '',
@@ -1206,7 +1206,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2042,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => "Hétérogénéité de croissance sur les jeunes après 8 mois d'âge",
                 'type' => 'valeur',
                 'unite' => 'g/jour',
@@ -1219,7 +1219,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2043,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Etat corporel hétérogène',
                 'type' => 'liste',
                 'unite' => '',
@@ -1232,7 +1232,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2044,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Pas de reprise d\'état en fin de lactation',
                 'type' => 'valeur',
                 'unite' => 'animaux',
@@ -1258,7 +1258,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2046,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Poils piqués et ternes, robe déstructurée',
                 'type' => 'liste',
                 'unite' => '',
@@ -1271,7 +1271,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2047,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Toux estivale ou automnale',
                 'type' => 'liste',
                 'unite' => '',
@@ -1284,7 +1284,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2048,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => "Essoufflement lors de l'effort",
                 'type' => 'liste',
                 'unite' => '',
@@ -1297,7 +1297,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2049,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Durée de pâturage cumulé avant premier vêlage',
                 'type' => 'liste',
                 'unite' => '',
@@ -1310,7 +1310,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2050,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Oedème sous glossien (signe de la bouteille)',
                 'type' => 'liste',
                 'unite' => '',
@@ -1323,7 +1323,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2051,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Ticket d\'abattage avec la mention « foie saisie »',
                 'type' => 'valeur',
                 'unite' => 'animaux',
@@ -1336,7 +1336,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2052,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Vaches maigres à poils piqués ',
                 'type' => 'valeur',
                 'unite' => 'animaux',
@@ -1362,7 +1362,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2054,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Zones de dépilation, de grattage ? ',
                 'type' => 'liste',
                 'unite' => '',
@@ -1388,7 +1388,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2056,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Réformes pour problèmes de pattes',
                 'type' => 'valeur',
                 'unite' => 'animaux',
@@ -1466,7 +1466,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 2062,
                 'actif' => 0,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Ré-insémination dans les 60 jours suivant une insémination',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1479,7 +1479,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3000,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'État corporel du lot ou du troupeau',
                 'type' => 'liste',
                 'unite' => '',
@@ -1492,7 +1492,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3001,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'État de propreté des animaux',
                 'type' => 'liste',
                 'unite' => '',
@@ -1505,7 +1505,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3002,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Taux de réforme',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1518,7 +1518,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3003,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Taux de mortalité des chèvres',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1531,7 +1531,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3004,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% de chèvres atteintes de troubles respiratoires',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1544,7 +1544,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3005,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% de chèvres atteintes de troubles digestifs ?',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1557,7 +1557,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3006,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Poids moyen du lot à 8 mois (par rapport au poids moyen adulte)',
                 'type' => 'liste',
                 'unite' => '',
@@ -1570,7 +1570,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3007,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% d\'animaux à comportements sociaux anormaux',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1583,7 +1583,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3008,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% d\'animaux présentant des troubles nerveux',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1596,7 +1596,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3009,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Poids chevrettes à la première mise à la reproduction',
                 'type' => 'valeur',
                 'unite' => 'kg',
@@ -1609,7 +1609,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3010,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Pourcentage de chèvres ayant mis-bas en 2 mois',
                 'type' => 'liste',
                 'unite' => '',
@@ -1622,7 +1622,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3011,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Non-délivrance après mise bas',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1635,7 +1635,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3012,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Pourcentage de mises bas difficiles',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1648,7 +1648,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3013,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Avortements (+ de 3 en 1 semaine ou + de 4 % au total)',
                 'type' => 'liste',
                 'unite' => '',
@@ -1661,7 +1661,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3014,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Entérotoxémies',
                 'type' => 'valeur',
                 'unite' => 'animaux',
@@ -1674,7 +1674,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3015,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Toxémies de gestation, cétose',
                 'type' => 'valeur',
                 'unite' => 'animaux',
@@ -1687,7 +1687,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3016,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Acidose ruminale',
                 'type' => 'valeur',
                 'unite' => 'animaux',
@@ -1700,7 +1700,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3017,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Alcalose',
                 'type' => 'valeur',
                 'unite' => 'animaux',
@@ -1713,7 +1713,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3018,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Urolithiase (gravelle) du bouc',
                 'type' => 'valeur',
                 'unite' => 'animaux',
@@ -1726,7 +1726,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3019,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Concentration en Cellules Somatiques du lait de Tank',
                 'type' => 'valeur',
                 'unite' => 'cell./ml',
@@ -1739,7 +1739,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3020,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Si transformation : présence de salmonelles',
                 'type' => 'liste',
                 'unite' => '',
@@ -1752,7 +1752,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3021,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Si transformation : présence de listeria',
                 'type' => 'liste',
                 'unite' => '',
@@ -1765,7 +1765,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3022,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Si transformation : présence de staphylocoques > seuil réglemen.',
                 'type' => 'liste',
                 'unite' => '',
@@ -1778,7 +1778,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3023,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Pourcentage de chèvres infectées incurables',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1791,7 +1791,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3024,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Pourcentage de chèvres avec déséquilibres mammaires importants (largeur 3 doigts)',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1804,7 +1804,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3025,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Pourcentage de cas de mammites cliniques pendant le 1er mois',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1817,7 +1817,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3026,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Pourcentage de chèvres avec abcès',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1830,7 +1830,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3027,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Taux de mortalité durant les premières 24h (hors avortement)',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1843,7 +1843,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3028,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Renouvellement : Taux de mortalité chez les chevrettes',
                 'type' => 'valeur',
                 'unite' => 'nombre',
@@ -1856,7 +1856,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3029,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Taux de mortalité avant sevrage',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1869,7 +1869,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3030,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'diarrhées néonatales les 2 premières semaines',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1882,7 +1882,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3031,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'infection du nombril',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1895,7 +1895,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3032,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Nombre de cas d\'arthrite',
                 'type' => 'valeur',
                 'unite' => 'animaux',
@@ -1908,7 +1908,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3033,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'problèmes respiratoires',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -1921,7 +1921,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3034,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Poids des chevrettes au sevrage',
                 'type' => 'liste',
                 'unite' => '',
@@ -1934,7 +1934,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3035,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Age des chevrettes au sevrage',
                 'type' => 'liste',
                 'unite' => '',
@@ -1947,7 +1947,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3036,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Cryptosporidiose',
                 'type' => 'liste',
                 'unite' => '',
@@ -1960,7 +1960,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3037,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Coccidiose',
                 'type' => 'liste',
                 'unite' => '',
@@ -1973,7 +1973,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3038,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Résultats de coproscopies',
                 'type' => 'valeur',
                 'unite' => 'opg',
@@ -1986,7 +1986,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3039,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Strongles gastro-intestinaux : symptômes',
                 'type' => 'liste',
                 'unite' => '',
@@ -1999,7 +1999,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3040,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Strongles respiratoires : symptômes',
                 'type' => 'liste',
                 'unite' => '',
@@ -2012,7 +2012,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3041,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Traitement systématique contre les strongles digestifs',
                 'type' => 'liste',
                 'unite' => '',
@@ -2025,7 +2025,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3042,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Échec fréquent des traitements',
                 'type' => 'liste',
                 'unite' => '',
@@ -2038,7 +2038,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3043,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% de chèvres avec muqueuses pales',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2051,7 +2051,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3044,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Présence de paramphistomes à l\'autopsie',
                 'type' => 'liste',
                 'unite' => '',
@@ -2064,7 +2064,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3045,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Traitements ectoparasites au pâturage (tiques, mouches ...) ',
                 'type' => 'liste',
                 'unite' => '',
@@ -2077,7 +2077,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3046,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Traitements ectoparasites en stabulation (poux, gales, teignes,puce)',
                 'type' => 'liste',
                 'unite' => '',
@@ -2090,7 +2090,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3047,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Onglons déformés ou sabots allongés (ski) fréquents',
                 'type' => 'liste',
                 'unite' => '',
@@ -2103,7 +2103,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3048,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Présence d\'arthrites / gros genoux (chèvres)',
                 'type' => 'liste',
                 'unite' => '',
@@ -2116,7 +2116,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3049,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Si transformation : présence dEscherichia coli',
                 'type' => 'liste',
                 'unite' => '',
@@ -2129,7 +2129,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3050,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Présence de lésions cutanées (ectoparasites)',
                 'type' => 'liste',
                 'unite' => '',
@@ -2142,7 +2142,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 3051,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Présence de kératites (mouches)',
                 'type' => 'liste',
                 'unite' => '',
@@ -2155,7 +2155,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4000,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Homogénéité et état corporel du lot ou du troupeau',
                 'type' => 'liste',
                 'unite' => '',
@@ -2168,7 +2168,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4001,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Etat de propreté des animaux',
                 'type' => 'liste',
                 'unite' => '',
@@ -2181,7 +2181,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4002,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Taux de réforme',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2194,7 +2194,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4003,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Taux de mortalité des brebis',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2207,7 +2207,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4004,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% de brebis atteintes de troubles respiratoires chroniques',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2220,7 +2220,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4005,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => '% de brebis atteintes de troubles digestifs ? (propreté arrière train, diarrhée, ballonnement, etc..)',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2233,7 +2233,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4006,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Poids moyen du lot à 8 mois',
                 'type' => 'liste',
                 'unite' => '',
@@ -2246,7 +2246,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4007,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => '% d\'animaux à comportements sociaux anormaux ou stéréotypies (peur, tics, pica,)',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2259,7 +2259,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4008,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => '% d\'animaux présentant des troubles nerveux (convulsion, pousser au mur, perte déquilibre, coma,)',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2272,7 +2272,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4009,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Taux d\'infertilité des antenaises et agnelles : vides / mises à la reproduction',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2285,7 +2285,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4010,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% de mises-bas en 1 mois',
                 'type' => 'liste',
                 'unite' => '',
@@ -2298,7 +2298,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4011,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Taux d\'infertilité en fonction de la période et de la durée de la lutte',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2311,7 +2311,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4012,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Taux d\'avortement tardif (dans les 15 jours avant la mise bas prévue) des brebis',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2324,7 +2324,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4013,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Taux d\'avortement tardif des antenaises',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2337,7 +2337,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4014,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Y-a-til eu plus de 3 avortements en une semaine à la dernière mise-bas',
                 'type' => 'liste',
                 'unite' => '',
@@ -2350,7 +2350,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4015,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% de brebis atteintes de toxémie de gestation',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2363,7 +2363,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4016,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% de brebis atteintes de prolapsus vaginal en fin de gestation',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2376,7 +2376,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4017,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% de brebis ayant eu un agnelage difficile',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2389,7 +2389,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4018,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Taux de prolificité',
                 'type' => 'liste',
                 'unite' => 'Par rapport à la moyenne raciale',
@@ -2402,7 +2402,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4019,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Durée de mise bas d\'un lot',
                 'type' => 'valeur',
                 'unite' => 'mois',
@@ -2415,7 +2415,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4020,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% de brebis réformées pour cause de mammite et/ou perte d\'un quartier',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2428,7 +2428,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4021,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% de brebis ayant des lésions de la mamelle durant la phase d\'allaitement',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2441,7 +2441,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4022,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => '% d\'agneaux de faible poids à la naissance (< 2kg)',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2454,7 +2454,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4023,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Taux de mortalité (hors prédation) naissance-vente ',
                 'type' => 'liste',
                 'unite' => '',
@@ -2467,7 +2467,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4024,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => 'Taux de mortinatalité mort-né et dans les premières 48h',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2480,7 +2480,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4025,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Taux de mortalité de 48 heures à 10 jours (parmi les agneaux nés totaux)',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2493,7 +2493,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4026,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Taux de mortalité de 10 jours au sevrage-commercialisation (parmi les agneaux nés totaux)',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2506,7 +2506,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4027,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => 'Taux de mortalité (hors prédation) entre le sevrage et la première mise bas des agnelles',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2519,7 +2519,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4028,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% d\'agneaux n\'ayant pas tété 2h après la naissance ',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2532,7 +2532,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4029,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% dagneaux faibles qui ne se lèvent pas au bout de 20 minutes environs',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2545,7 +2545,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4030,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => '% d\'agneaux atteints de "agneau baveur" (0-5 jours)',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2558,7 +2558,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4031,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => '% d\'agneaux atteints de troubles du cordon (gros cordon, nombril humide)',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2571,7 +2571,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4032,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% d\'agneaux atteints d\'ecthyma sévère',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2584,7 +2584,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4033,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
                 'nom' => '% d\'agneaux atteints de diarrhée avant 3 semaines',
                 'type' => 'pourcentage',
                 'unite' => '%',
@@ -2597,7 +2597,7 @@ class AlertesTableSeeder extends Seeder
             array (
                 'id' => 4035,
                 'actif' => 1,
-                'abbr' => 'null',
+                'supprimable' => 0,
             'nom' => '% d\'agneaux atteints de diarrhée de 3 semaines au sevrage)',
             'type' => 'pourcentage',
             'unite' => '%',

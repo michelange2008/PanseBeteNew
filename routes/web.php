@@ -56,6 +56,23 @@ Route::group(['middleware' => ['auth', 'isValid', 'isAdmin']], function() {
 
   });
 
+  Route::prefix('/alerte/num')->controller(NumalerteController::class)->group(function() {
+
+    Route::get('/create/{alerte_id}', 'create')->name('num.create');
+    Route::post('/store', 'store')->name('num.store');
+    Route::put('/update/{alerte_id}', 'update')->name('num.update');
+    Route::get('/edit/{alerte_id}', 'edit')->name('num.edit');
+
+  });
+
+  Route::prefix('/alerte/liste')->controller(CritalerteController::class)->group(function() {
+
+    Route::get('/create/{alerte_id}', 'create')->name('liste.create');
+    Route::post('/store', 'store')->name('liste.store');
+    Route::put('/update/{alerte_id}', 'update')->name('liste.update');
+    Route::get('/edit/{alerte_id}', 'edit')->name('liste.edit');
+
+  });
   Route::prefix('/origine')->controller(OrigineController::class)->group(function() {
 
     Route::get('/', 'index')->name('origine.index');

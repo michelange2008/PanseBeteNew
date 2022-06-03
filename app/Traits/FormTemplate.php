@@ -24,7 +24,7 @@ trait FormTemplate
   {
     $elements = $this->litJson($json);
 
-
+    // Ajoute la liste d'options quand il s'agit d'un champs select
     foreach ($elements->liste as $element) {
 
       if(isset($element->table)) {
@@ -82,13 +82,13 @@ trait FormTemplate
   {
     $elements = $this->prepareForm($json);
 
-    $elements->route = route($elements->prefixe.'.'.$route_suffixe, $model->id);
-
     $elements->titre->icone = "edit.svg";
 
     $elements->titre->titre = "edit_".$elements->prefixe;
 
     $elements->method = "PUT";
+
+    $elements->route = route($elements->prefixe.'.'.$route_suffixe, $model->id);
 
     foreach ($elements->liste as $element => $details) {
 

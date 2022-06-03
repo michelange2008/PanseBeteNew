@@ -84,6 +84,10 @@
 
                 </div>
 
+              @elseif ($champ->type = "hidden")
+
+                <input type="hidden" name="{{ $champ->name }}" value="{{ $champ->isName ?? '' }}">
+
 
               @endif
 
@@ -100,7 +104,7 @@
 
         <div class="col-sm-11 col-md-10 col-lg-9">
 
-          @enregistreAnnule()
+          @enregistreAnnule(['route' => $routeAnnule ?? url()->previous()])
 
         </div>
 

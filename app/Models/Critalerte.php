@@ -8,8 +8,8 @@ class Critalerte extends Model
 {
 
     protected $table = 'critalertes';
-    public $timestamps = true;
-    protected $fillable = array('alerte_id', 'nom');
+    public $timestamps = false;
+    protected $guarded = [];
 
     public function alerte()
     {

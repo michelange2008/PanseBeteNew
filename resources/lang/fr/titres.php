@@ -17,4 +17,7 @@ return array(
   'create_alerte' => "ajouter une nouvelle alerte",
   'edit_alerte' => "Modifier une alerte",
   'edit_alerte_num' => "Modifier les seuils de l'alerte",
+  'create_alerte_num' => "Créer les paramètres quantitatifs de cette alerte",
+  'edit_alerte_listes' => "Modifier les valeurs qualitatives de l'alerte",
+  'create_alerte_listes' => "Créer les paramètres qualitatifs de cette alerte"
 );
