@@ -32,7 +32,7 @@
 
     <div class="ccol-sm-11 col-md-10 col-lg-9">
 
-      <h3>@lang('titres.edit_observations')</h3>
+      <h3>@lang('titres.observations_edit')</h3>
 
         <form action="{{ route('saisie.enregistreObservations') }}" method="post">
 

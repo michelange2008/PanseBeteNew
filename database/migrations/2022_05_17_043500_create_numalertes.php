@@ -21,8 +21,8 @@ return new class extends Migration
             $table->foreignId('alerte_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->integer('borne_inf')->default(0);
             $table->integer('borne_sup');
-            $table->foreignId('num_id')->constrained('chiffres')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('denom_id')->constrained('chiffres')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('num_id')->nullable()->constrained('chiffres')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('denom_id')->nullable()->constrained('chiffres')->onUpdate('cascade')->onDelete('cascade');
 
         });
     }

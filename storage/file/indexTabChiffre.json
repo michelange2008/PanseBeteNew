@@ -1,0 +1,30 @@
+{
+  "prefixe" : "chiffre",
+
+  "colonnes" : {
+
+    "chiffre_nom" : {
+      "col" : "chiffre_nom",
+      "type" : "edit",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "groupe_nom" : {
+      "col" : "groupe_nom",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : true
+    }
+  },
+
+  "suppr" : true,
+
+  "tri" : {
+
+    "colonne" : "groupe_nom",
+
+    "ordre" : "asc"
+  }
+
+
+}

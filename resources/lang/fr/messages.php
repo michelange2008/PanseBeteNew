@@ -9,4 +9,7 @@ return [
   'chiffre_del' => "Ce paramètre a été supprimé",
   'alerte_del' => "Cette alerte a bien été supprimée",
   'alerte_edit' => "cette alerte a bien été modifiée",
+  'origine_store' => "Une nouvelle origine a été crée",
+  'origine_update' => "L'origine a bien été mise à jour",
+  'origine_del' => "Cette origine a été supprimée",
 ];

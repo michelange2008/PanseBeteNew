@@ -19,6 +19,7 @@ class Titre
     $this->soustitre = $soustitre;
     $this->bouton = $bouton;
     $this->translate = $translate;
+
   }
 
   public function getIcone()

@@ -5,11 +5,14 @@ namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
 use App\Fournisseurs\TabLab;
+use App\Traits\FormTemplate;
 
 use App\Models\Alerte;
+use App\Models\Origine;
 
 class OrigineController extends Controller
 {
+  use FormTemplate;
     /**
      * Display a listing of the resource.
      *
@@ -33,12 +36,15 @@ class OrigineController extends Controller
                   ->join('categories', 'categories.id', 'origines.categorie_id')
                   ->select('categories.icone as categorie_icone', 'origines.id as id',
                   'categories.nom as categorie_nom', 'origines.question as question',
-                  'origines.reponse as reponse')
+                  'origines.reponse as reponse', 'origines.supprimable as supprimable')
                   ->get();
-      $alerte = ALerte::find($alerte_id);
+      $alerte = Alerte::find($alerte_id);
+
       $tabLab = new TabLab($origines, 'indexTabOrigine.json', null, $alerte->nom);
 
       $indexTab = $tabLab->get();
+
+      $indexTab->bouton->route = route('origine.create', $alerte->id);
 
       return view('admin.index.indexCadre', [
         'indexTab' => $indexTab,
@@ -51,9 +57,21 @@ class OrigineController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($alerte_id)
     {
-        //
+      $alerte = Alerte::find($alerte_id);
+
+      $elements = $this->createForm('formOrigine.json', 'store');
+
+      $elements->titre->titre = $alerte->nom;
+      $elements->titre->translate = false;
+      $elements->titre->soustitre = 'origine_create';
+
+      $elements->liste->alerte_id->isName = $alerte_id;
+
+      return view('admin.editCreateForm', [
+        'elements' => $elements,
+      ]);
     }
 
     /**
@@ -64,19 +82,23 @@ class OrigineController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+      Origine::create([
+        'alerte_id' => $request->alerte_id,
+        'question' => $request->question,
+        'reponse' => $request->reponse,
+        'categorie_id' => $request->categorie_id,
+      ]);
+
+      return redirect()->route('origine.indexParAlerte', $request->alerte_id)
+                        ->with('message', 'origine_store');
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * Non implémenté car les éléments des origines sont afficher dans
+     * le tableau d'index
      */
-    public function show($id)
-    {
-        //
-    }
+    public function show($id) {}
 
     /**
      * Show the form for editing the specified resource.
@@ -86,7 +108,13 @@ class OrigineController extends Controller
      */
     public function edit($id)
     {
-        //
+      $origine = Origine::find($id);
+
+      $elements = $this->editForm($origine, 'formOrigine.json');
+
+      return view('admin.editCreateForm', [
+        'elements' => $elements,
+      ]);
     }
 
     /**
@@ -98,7 +126,18 @@ class OrigineController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Origine::updateOrCreate(
+          ['id' => $id],
+          [
+            'question' => $request->question,
+            'reponse' => $request->reponse,
+            'categorie_id' => $request->categorie_id,
+          ]
+        );
+
+        return redirect()->route('origine.indexParAlerte', $request->alerte_id)
+                      ->with('message', 'origine_update');
+
     }
 
     /**
@@ -109,6 +148,8 @@ class OrigineController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Origine::destroy($id);
+
+        return redirect()->back()->with('message', 'origine_del');
     }
 }

@@ -79,7 +79,7 @@
                     'required' => $champ->required,
                     'default' => $champ->default ?? '',
                     'options' => $champ->options,
-                    'isOption' => $champ->isOption ?? '',
+                    'isName' => $champ->isName ?? '',
                   ])
 
                 </div>

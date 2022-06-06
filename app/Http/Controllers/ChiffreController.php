@@ -2,16 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use Illuminate\Http\Request;
 
 use App\Models\Chiffre;
 
-use App\Fournisseurs\ListeChiffresFournisseur;
+use App\Fournisseurs\TabLab;
+
 use App\Traits\LitJson;
+use App\Traits\FormTemplate;
 
 class ChiffreController extends Controller
 {
-  use LitJson;
+  use LitJson, FormTemplate;
     /**
      * Display a listing of the resource.
      *
@@ -19,14 +22,19 @@ class ChiffreController extends Controller
      */
     public function index()
     {
-      $chiffres = Chiffre::orderBy('groupe')->get();
+      $chiffres = DB::table('chiffres')
+                    ->join('groupes', 'groupes.id', 'chiffres.groupe_id')
+                    ->select('chiffres.id as id', 'chiffres.nom as chiffre_nom',
+                    'groupes.nom as groupe_nom', 'chiffres.supprimable')
+                    ->orderBy('groupes.id')
+                    ->get();
 
-      $fournisseur = new ListeChiffresFournisseur();
+      $tablab = new TabLab($chiffres, 'indexTabChiffre.json', 'saisie/chiffres_clair.svg');
 
-      $datas = $fournisseur->renvoieDatas($chiffres, __('titres.list_chiffres'), 'tableauChiffres.json', 'default.svg', 'chiffre.create', __('boutons.add_chiffre'));
+      $indexTab = $tablab->get();
 
-      return view('admin.chiffres.index', [
-        'datas' => $datas,
+      return view('admin.index.indexCadre', [
+        'indexTab' => $indexTab,
       ]);
     }
 
@@ -37,10 +45,9 @@ class ChiffreController extends Controller
      */
     public function create()
     {
-      $elements = $this->LitJson('createChiffres.json');
-      $elements->route = "chiffre.store";
+      $elements = $this->createForm('formChiffres.json');
 
-      return view('admin.create', [
+      return view('admin.editCreateForm', [
           'elements' => $elements,
         ]);
     }
@@ -55,16 +62,15 @@ class ChiffreController extends Controller
     {
       $validated = $request->validate([
         'nom' => 'required|max:100',
-        'groupe' => 'required',
       ]);
 
       Chiffre::create([
         'nom' => $request->nom,
-        'groupe' => $request->groupe,
+        'groupe_id' => $request->groupe_id,
       ]);
 
       return redirect()->route('chiffre.index')
-                      ->with( 'message', __('messages.chiffre_create') );
+                      ->with( 'message', 'chiffre_create');
 
     }
 
@@ -90,16 +96,11 @@ class ChiffreController extends Controller
     public function edit($id)
     {
       $chiffre = Chiffre::find($id);
-      $elements = $this->LitJson('createChiffres.json');
 
-      $elements->liste->nom->isName = $chiffre->nom;
-      $elements->liste->groupe->isOption = $chiffre->groupe;
-      $elements->route = 'chiffre.update';
-      $elements->route_id = $chiffre->id;
+      $elements = $this->editForm($chiffre, 'formChiffres.json');
 
-      return view('admin.edit', [
+      return view('admin.editCreateForm', [
           'elements' => $elements,
-          'chiffre' => $chiffre,
         ]);
     }
 
@@ -123,7 +124,7 @@ class ChiffreController extends Controller
       ]);
 
       return redirect()->route('chiffre.index')
-                      ->with( 'message', __('messages.chiffre_update') );
+                      ->with( 'message', 'chiffre_update' );
     }
 
     /**
@@ -137,7 +138,7 @@ class ChiffreController extends Controller
         Chiffre::destroy($id);
 
         return redirect()->route('chiffre.index')
-                        ->with( 'message', __('messages.chiffre_del') );
+                        ->with( 'message', 'chiffre_del' );
 
     }
 }

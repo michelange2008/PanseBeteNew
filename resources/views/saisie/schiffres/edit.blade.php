@@ -25,7 +25,7 @@
 
       <div class="col-sm-11 col-md-10 col-lg-9">
 
-        <h3>@lang('titres.edit_chiffres')</h3>
+        <h3>@lang('titres.chiffres_edit')</h3>
 
         <form class="" action="{{route('schiffre.store')}}" method="post">
 

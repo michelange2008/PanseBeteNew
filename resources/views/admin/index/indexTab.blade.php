@@ -19,10 +19,10 @@
 
 <table   id="table"
   data-toggle = "table"
-  data-locale = "fr-FR"
+  {{-- data-locale = "fr-FR" --}}
   {{-- data-sort-name = {{ $indexTab->intitules->tri->colonne ?? "" }} --}}
   {{-- data-sort-order = {{ $indexTab->intitules->tri->ordre ?? "" }} --}}
-  data-pagination="true"
+  data-pagination="false"
   data-pagination-v-align = "both"
   data-page-list="[10, 25, 50, 100, 200, All]"
   data-page-size="25"
@@ -94,7 +94,7 @@
             @elseif ($item->action === 'edit')
 
               <td>
-                @ligneEdit(['id' => $item->id, 'nom' => $item->nom, 'route' => $item->route])
+                @ligneEdit(['id' => $item->id, 'nom' => ucfirst($item->nom), 'route' => $item->route])
               </td>
 
             @elseif ($item->action === 'show')
@@ -132,6 +132,17 @@
       </tr>
     @endforeach
   </tbody>
+
 </table>
 
 @endif
+
+<div class="row my-3">
+
+  <div class="col-md-12">
+
+    <p class="text-secondary">{{ __('tableaux.end') }}</p>
+
+  </div>
+
+</div>

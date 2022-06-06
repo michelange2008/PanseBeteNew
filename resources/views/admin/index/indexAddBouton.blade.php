@@ -1,10 +1,11 @@
 <div id="toolbar" class="my-3">
 
-  <a href="{{ route($indexTab->bouton->route) }}"
+  <a href="{{ $indexTab->bouton->route }}"
 
     type="submit" class="btn btn-otobleu">
 
-    <i class="fas fa-plus-square"></i> {{ __('tableaux.'.$indexTab->bouton->libelle)}}
+    <i class="fas fa-plus-square"></i>
+     {{ ucfirst(__('tableaux.'.$indexTab->bouton->libelle))}}
 
   </a>
 

@@ -27,11 +27,25 @@
 
         <div class="col-sm-11 col-md-10 col-lg-9">
 
-          <img class="img-50 m-3" src="{{ url('storage/img/especes/'.$alerte->espece->icone) }}" alt="">
-
           <ul class="list-group">
 
             <li class="list-group-item bg-otorange">
+
+              <div class="d-flex align-items-center">
+
+                <img class="img-50" src="{{ url('storage/img/especes/'.$alerte->espece->icone) }}" alt="">
+
+                <div class="mx-3">
+
+                  <h4>{{ $alerte->nom }}</h4>
+
+                </div>
+
+              </div>
+
+            </li>
+
+            <li class="list-group-item">
 
               <div class="d-flex align-items-center">
 

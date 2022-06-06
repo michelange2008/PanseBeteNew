@@ -1,6 +1,7 @@
 <?php
 namespace App\Fournisseurs;
 use Illuminate\Support\Facades\Route;
+use Log;
 
 use App\Traits\LitJson;
 use App\Comp\Titre;
@@ -43,7 +44,7 @@ class TabLab extends Tab
 
     }
 
-    $titre = new Titre($icone, 'titre_liste_'.$cadre->prefixe, $soustitre, $bouton);
+    $titre = new Titre($icone, $cadre->prefixe.'_titre_liste', true, $soustitre, $bouton);
 
     $this->indexTab->titre = $titre;
     // Avec la méthode creeEntetes on crée la collection d'en-têtes
@@ -66,17 +67,19 @@ class TabLab extends Tab
   {
     $this->indexTab->bouton = collect();
     // On vérifier l'existe de la route nommée avec le préfixe
-    if(Route::has($cadre->prefixe.'.create')) {
-      // si elle existe on l'ajoute à tableau->bouton
-      $this->indexTab->bouton->route = $cadre->prefixe.'.create';
+    try {
 
-    } else {
+      $this->indexTab->bouton->route = route($cadre->prefixe.'.create');
 
-      dd("la route ".$cadre->prefixe.'.create n\'existe pas');
+    } catch (\Exception $e) {
 
+      Log::info('La route définie automatiquement n\'existe pas. il y sûrement
+      une id associée.
+      Il faut ajouter manuellement la route dans le contrôleur '.ucfirst($cadre->prefixe).'Controller');
+      // Sinon  il faut ajouter la route du bouton dans le contrôleur
     }
-    //
-    $this->indexTab->bouton->libelle = 'create_'.$cadre->prefixe;
+
+    $this->indexTab->bouton->libelle = $cadre->prefixe.'_create';
   }
 
   /**
@@ -236,7 +239,6 @@ class TabLab extends Tab
         $supprimable = (isset($data->supprimable)) ? $data->supprimable : false;
 
         if ($supprimable) {
-
           $item = $this->delFactory($data->id, $cadre->prefixe);
 
         } else {

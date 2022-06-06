@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use DB;
+use Illuminate\Http\Request;
+
 use App\Models\Espece;
 use App\Models\Alerte;
 use App\Models\Numalerte;
@@ -14,8 +16,6 @@ use App\Fournisseurs\TabLab;
 use App\Traits\LitJson;
 use App\Traits\TypesTools;
 use App\Traits\FormTemplate;
-
-use Illuminate\Http\Request;
 
 /*
 // Gestions des alertes
@@ -130,7 +130,7 @@ class AlerteController extends Controller
         $alerte = alerte::find($id);
         // Utilisation de la classe titre avec la variable $translate à FALSE
         // pour indiquer qu'il ne faut pas appliquer la traduction à $alerte->nom
-        $titre = new Titre('saisie/alertes_claire.svg', $alerte->nom, false);
+        $titre = new Titre('saisie/alertes_claire.svg', 'show_alerte');
 
         return view('admin.alertes.show', [
           'alerte' => $alerte,

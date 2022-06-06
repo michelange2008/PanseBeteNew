@@ -9,10 +9,11 @@ use App\Models\Numalerte;
 use App\Fournisseurs\TabLab;
 
 use App\Traits\FormTemplate;
+use App\Traits\TypesTools;
 
 class NumalerteController extends Controller
 {
-  use FormTemplate;
+  use FormTemplate, TypesTools;
 
   /**
    * Non implémenté car numalerte liée à alerte
@@ -30,7 +31,18 @@ class NumalerteController extends Controller
     {
       $alerte = Alerte::find($alerte_id);
 
-      $elements = $this->createForm('formAlerteNum.json');
+      // Si c'est une alerte de type VALEUR on prend les infos pour le formulaire
+      // dans un json différent que si c'est un pourcentage ou un ration
+      if ($this->isValeur($alerte->type_id)) {
+
+        $json = 'formAlerteNumValeur.json';
+
+      } else {
+
+        $json = 'formAlerteNum.json';
+      }
+
+      $elements = $this->createForm($json);
 
       $elements->titre->titre = $alerte->nom." ( ".$alerte->type->nom." )";
       $elements->titre->translate = false;
@@ -80,9 +92,26 @@ class NumalerteController extends Controller
      */
     public function edit($id)
     {
-      $alerteNum = Numalerte::where('alerte_id', $id)->first();
+      $alerte = Alerte::find($id);
 
-      $elements = $this->editForm($alerteNum, 'formAlerteNum.json');
+      $alerteNum = Numalerte::where('alerte_id', $id)->first();
+      // S'il n'y a aucune numalerte aossicée à cette alerte, on renvoie à create
+      if ($alerteNum == null) {
+
+        return redirect()->route('num.create', $id);
+
+      }
+      // Si c'est une alerte de type VALEUR on prend les infos pour le formulaire
+      // dans un json différent que si c'est un pourcentage ou un ration
+      if ($this->isValeur($alerte->type_id)) {
+
+        $json = 'formAlerteNumValeur.json';
+
+      } else {
+
+        $json = 'formAlerteNum.json';
+      }
+      $elements = $this->editForm($alerteNum, $json);
 
       $elements->titre->titre = $alerteNum->alerte->nom." ( ".$alerteNum->alerte->unite." )";
       $elements->titre->translate = false;

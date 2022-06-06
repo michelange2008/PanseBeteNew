@@ -23,5 +23,5 @@ mix.copy('node_modules/jquery-confirm/dist/jquery-confirm.min.css', 'public/css/
 
 mix.copy('node_modules/jquery/dist/jquery.min.js', 'public/js/jquery.min.js');
 mix.copy('node_modules/jquery-confirm/dist/jquery-confirm.min.js', 'public/js/jquery-confirm.min.js');
-// mix.copy('node_modules/bootstrap-table/dist/bootstrap-table-locale-all.min.js', 'resources/js/bootstrap-table-locale-all.min.js');
-mix.copy('node_modules/bootstrap-table/dist/bootstrap-table.min.js', 'public/js/bootstrap-table.min.js');
+mix.copy('node_modules/bootstrap-table/dist/locale/bootstrap-table-fr-FR.min.js', 'resources/js/bootstrap-table-fr-FR.min.js');
+mix.copy('node_modules/bootstrap-table/dist/bootstrap-table.min.js', 'resources/js/bootstrap-table.min.js');

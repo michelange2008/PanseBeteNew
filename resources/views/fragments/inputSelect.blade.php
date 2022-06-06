@@ -2,6 +2,7 @@
 
   <label for="{{ $name }}">{{ ucfirst($label) }}</label>
 
+
   <select id="{{ $name }}" class="form-control" name="{{ $name }}"
 
     @isset($required)
@@ -9,7 +10,6 @@
     @endisset
 
     >
-
     <option value=""></option>
 
     @foreach ($options as $option)
@@ -27,9 +27,10 @@
         @endisset
 
         {{-- mais si c'est une modification on choisit l'ancienne valeur --}}
-        @isset($isOption)
 
-          @if ($option->id == $isOption )
+        @isset($isName)
+
+          @if ($option->id == $isName )
 
             selected = "selected"
 

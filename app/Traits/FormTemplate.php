@@ -50,7 +50,7 @@ trait FormTemplate
    * @param json même fichier que précédemment
    * @return object idem mais avec les infos titre en plus
    */
-  public function createForm($json, $route_suffixe = 'store')
+  public function createForm($json, $route_suffixe = 'store', $soustitre = null)
   {
     $elements = $this->prepareForm($json);
 
@@ -58,7 +58,13 @@ trait FormTemplate
 
     $elements->titre->icone = "plus.svg";
 
-    $elements->titre->titre = "create_".$elements->prefixe;
+    $elements->titre->titre = $elements->prefixe."_create";
+
+    if($soustitre != null) {
+
+      $elements->titre->soustitre = $soustitre;
+
+    }
 
     $elements->method = "POST";
 
@@ -72,7 +78,7 @@ trait FormTemplate
    * Utilise la fonction prepareForm
    *
    * Y rajoute les informations sur le titre et l'icone du titre
-   * Rajoute aussi une clef hasName qui permet d'indiquer dans le formulaire
+   * Rajoute aussi une clef isOption qui permet d'indiquer dans le formulaire
    * edit les valeurs actuelles du model.
    *
    * @param json même fichier que précédemment
@@ -84,7 +90,7 @@ trait FormTemplate
 
     $elements->titre->icone = "edit.svg";
 
-    $elements->titre->titre = "edit_".$elements->prefixe;
+    $elements->titre->titre = $elements->prefixe."_edit";
 
     $elements->method = "PUT";
 
@@ -96,7 +102,7 @@ trait FormTemplate
 
         $item = $details->name;
 
-        $details->isOption = $model->$item;
+        $details->isName = $model->$item;
 
       } else {
 

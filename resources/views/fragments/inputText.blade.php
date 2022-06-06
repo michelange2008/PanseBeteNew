@@ -9,6 +9,7 @@
   <input id="{{ $name }}"
           class="form-control @error( $name ) is-invalid @enderror"
           type="text"
+          maxlength="191"
           name="{{ $name }}"
           {{-- si c'est une modification on affiche la valeur d'origine --}}
           value="{{ ucfirst($isName) ?? old($name) }}"

@@ -39,16 +39,18 @@ trait TypesTools
   }
 
   /**
-   * Test si la variable est 1 ou liste
-   * @param  [type]  $var
-   * @return boolean 
+   * fonction générique utilisée pour chaque type testé
+   *
+   * @param type var valeur que l'on veut tester
+   * @param string nom du type (liste, valeur, etc.)
+   * @param integer id du type (1, 2, 3, 4)
+   * @return boolean
    */
-  public function isListe($var)
+  public function test($var, $nom = '', $id = null)
   {
-
     $var = trim(mb_strtolower($var));
 
-    if ( $this->isType($var) && ( $var == "liste" || $var == 1 )) {
+    if ( $this->isType($var) && ( $var == $nom || $var == $id )) {
 
       return true;
 
@@ -57,6 +59,51 @@ trait TypesTools
       return false;
 
     }
+  }
+
+  /**
+   * Test si la variable est 1 ou liste et idem pour la suite avec les autres
+   * types
+   * @param  [type]  $var
+   * @return boolean
+   */
+  public function isListe($var)
+  {
+
+    return $this->test($var, 'liste', 1);
+
+  }
+
+  /**
+   * Renvoie TRUE si l'alerte est de type valeur
+   *
+   */
+  public function isRatio($var)
+  {
+
+    return $this->test($var, 'ratio', 2);
+
+  }
+
+    /**
+     * Renvoie TRUE si l'alerte est de type valeur
+     *
+     */
+    public function isPourcentage($var)
+    {
+
+      return $this->test($var, 'pourcentage', 3);
+
+    }
+
+  /**
+   * Renvoie TRUE si l'alerte est de type valeur
+   *
+   */
+  public function isValeur($var)
+  {
+
+    return $this->test($var, 'valeur', 4);
 
   }
 }

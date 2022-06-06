@@ -12,7 +12,7 @@
 
     <div class="ccol-sm-11 col-md-10 col-lg-9">
 
-      <h3>@lang('titres.edit_origines')</h3>
+      <h3>@lang('titres.origines_edit')</h3>
 
         @foreach ($themes as $theme)
 

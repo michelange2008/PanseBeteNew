@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('chiffres', function (Blueprint $table) {
+        Schema::create('groupes', function (Blueprint $table) {
             $table->id();
-            $table->string('nom', 100);
-            $table->bigInteger('groupe_id')->unsigned();
+            $table->string('nom', 50);
+            $table->string('icone', 20)->default('default.svg');
         });
     }
 
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('chiffres');
+        Schema::dropIfExists('groupes');
     }
 };

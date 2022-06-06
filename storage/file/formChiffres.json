@@ -1,0 +1,24 @@
+{
+  "prefixe" : "chiffre",
+
+  "titre" : {
+    "translate" : true
+  },
+
+  "liste" : {
+    "nom" : {
+      "label" : "nom",
+      "name" : "nom",
+      "type" : "text",
+      "required" : true
+    },
+    "groupe_id" : {
+      "label" : "groupe",
+      "name" : "groupe_id",
+      "table" : "groupes",
+      "type" : "select",
+      "required" : true,
+      "options" : {}
+    }
+  }
+}

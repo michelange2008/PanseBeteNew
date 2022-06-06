@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
 
 use App\Models\Schiffre;
 use App\Models\Saisie;
@@ -42,7 +43,7 @@ class SchiffreController extends Controller
     $saisie = Saisie::find($saisie_id);
     // On récupère toutes les alertes NUM et actives
 
-    $alertes = Alerte::where('modalite', 'NUM')->where('actif', 1)->get();
+    $alertes = Alerte::where('modalite_id', config::get('constantes.MODALITES.NUM'))->where('actif', 1)->get();
     // On récupère tous les thèmes
     $themes = Theme::all();
     // On ne garde que ceux de l'espèce de la saisie en cours
@@ -51,11 +52,11 @@ class SchiffreController extends Controller
     $themes = $this->alertesThemes($alertes);
     // On récupère toutes les salertes de la saisie en cours
     $salertes = Salerte::where('saisie_id', $saisie_id)
-                        ->addSelect(['modalite'=> Alerte::select('modalite')
+                        ->addSelect(['modalite_id'=> Alerte::select('modalite_id')
                         ->whereColumn('alerte_id', 'alertes.id')
                       ])->get();
 
-    $salertesNum = $salertes->where('modalite', 'NUM');
+    $salertesNum = $salertes->where('modalite_id', config::get('constantes.MODALITES.NUM'));
 
     // On formate $salertes pour l'affichage
     $salertes = $this->formatSalertes($salertes);

@@ -53,17 +53,17 @@ Pour les saisies nouvelles sans salertes, le menu n'affiche rien d'autre
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
               role="button" aria-haspopup="true" aria-expanded="false"
               title="Ajouter ou modifier les informations">
-              <i class="fa-solid fa-pen-to-square"></i> @lang('titres.edit_saisie')
+              <i class="fa-solid fa-pen-to-square"></i> @lang('titres.saisie_edit')
             </a>
 
             <div class="dropdown-menu">
 
               <a class="dropdown-item" href="{{ route('schiffre.edit', $saisie->id) }}">
-                <i class="fa-solid fa-chart-line"></i> @lang('titres.edit_chiffres')
+                <i class="fa-solid fa-chart-line"></i> @lang('titres.chiffres_edit')
               </a>
 
               <a class="dropdown-item" href="{{ route('saisie.observations', $saisie->id) }}">
-                <i class="fa-solid fa-eye"></i> @lang('titres.edit_observations')
+                <i class="fa-solid fa-eye"></i> @lang('titres.observations_edit')
               </a>
 
             </div>

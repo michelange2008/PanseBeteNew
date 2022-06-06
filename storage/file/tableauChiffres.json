@@ -34,7 +34,7 @@
   },
 
   "titre" : {
-    "texte" : "list_chiffres",
+    "texte" : "chiffres_liste",
     "icone" : "default.svg"
   }
 }

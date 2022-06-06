@@ -4,9 +4,13 @@ require('./afficherOrigines.js')
 require('./supprLigne')
 // require( './bootstrap-table.min.js');
 // require( './bootstrap-table-accent-neutralise.min.js');
-require( './bootstrap-table-locale-all.min.js');
+require( './bootstrap-table-fr-FR.min.js');
 
 $(function() {
+
+  $('#table').bootstrapTable({
+    locale: 'fr-FR'
+  })
 
   $.ajaxSetup({
     headers: {
