@@ -48,4 +48,45 @@ class AdminController extends Controller
 
     }
 
+    /**
+    * Rend valide un user
+    **/
+    public function valideUser($user_id)
+    {
+      // On change la statut non valide de l'user
+      $user = User::find($user_id);
+      $user->valide = 1;
+      $user->save();
+
+      // On lui envoie un mail
+      Mail::to($user)->bcc(auth()->user())->send(new Accepte($user));
+
+      return response()->json([
+        "id" => $user->id,
+        "nom" => $user->name,
+        "email" => $user->email,
+      ]);
+    }
+    /**
+     * Appel AJAX destiné à transférer les saisies d'un user que l'on supprime
+     * @param  [type] $id               [description]
+     * @return [type]     [description]
+     */
+    public function tousSauf($id)
+    {
+      $users = User::select('id', 'name')->where('id', '!=', $id)->get();
+
+      return response()->json(json_encode($users));
+    }
+
+    public function changeSaisieUser($ancien_user_id, $nouveau_user_id)
+    {
+      $saisies = Saisie::where('user_id', $ancien_user_id)->get();
+      foreach ($saisies as $saisie) {
+        $saisie->user_id = $nouveau_user_id;
+        $saisie->save();
+      }
+
+      return response()->json(["nombre_saisies" => Saisie::where('user_id', $nouveau_user_id)->count()]);
+    }
 }

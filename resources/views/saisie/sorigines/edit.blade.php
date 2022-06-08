@@ -33,7 +33,7 @@ Permet de cocher les origines d'une alerte lors de la saisie
             @endif
             >
 
-            <label class="form-check-label" for="O{{ $origine->id }}">{{ $origine->question }}</label>
+            <label class="form-check-label" for="O{{ $origine->id }}">{{ ucfirst($origine->reponse)." ?" }}</label>
 
 
           </div>

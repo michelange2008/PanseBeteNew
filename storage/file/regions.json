@@ -1,0 +1,20 @@
+{
+  "AURA" : "Auvergne-Rhône-Alpes",
+  "BFC" : "Bourgogne-Franche-Comté",
+  "BRE" : "Bretagne",
+  "CVL":"Centre-Val de Loire",
+  "COR" : "Corse",
+  "GE" : "Grand Est",
+  "GUA" : "Guadeloupe",
+  "GUY" : "Guyane",
+  "HDF" :"Hauts-de-France",
+  "IDF" : "Île-de-France",
+  "REU": "La Réunion",
+  "MAR" : "Martinique",
+  "MAY" : "Mayotte",
+  "NOR" : "Normandie",
+  "NA" : "Nouvelle-Aquitaine",
+  "OC" : "Occitanie",
+  "PDL" : "Pays de la Loire",
+  "PACA" :"Provence-Alpes-Côte d'Azur"
+}

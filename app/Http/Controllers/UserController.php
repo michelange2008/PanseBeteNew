@@ -12,15 +12,14 @@ use App\Models\User;
 use App\Models\Saisie;
 use App\Models\Inscription;
 
+use App\Traits\FormTemplate;
+use App\Comp\Titre;
+
 class UserController extends Controller
 {
-
-  public function __construct()
-  {
-    $this->middleware('isAdmin');
-  }
-    /**
-     * Display a listing of the resource.
+  use FormTemplate;
+  /**
+     * Redirige vers le controleur AdminController
      *
      * @return \Illuminate\Http\Response
      */
@@ -34,23 +33,8 @@ class UserController extends Controller
       }
       else
       {
-        $users =User::orderBy('admin', 'desc')->get();
-        $saisies_groupees = Saisie::all()->mapToGroups(function($item, $key) {
-          return [$item['user_id'] => $item['id']];
-        });
-        $users_saisies = $saisies_groupees->keys();
 
-        foreach ($users as $user) {
-
-          if(!$users_saisies->contains($user->id))
-          {
-            $saisies_groupees->put($user->id, collect([]));
-          }
-        }
-        return view('admin/admin', [
-          'users' => $users,
-          'saisies_groupees' => $saisies_groupees,
-        ]);
+        return redirect()->route('admin.index');
       }
     }
 
@@ -61,7 +45,7 @@ class UserController extends Controller
      */
     public function create()
     {
-      return redirect()->route('utilisateur.index');
+      return redirect()->route('user.index');
     }
 
     /**
@@ -85,6 +69,7 @@ class UserController extends Controller
 
       // création de l'utilisateur
         $datas = $request->all();
+        dd($datas);
         $user = new User();
         $user->name = $datas['nom'];
         $user->email = $datas['email'];
@@ -101,25 +86,6 @@ class UserController extends Controller
     }
 
     /**
-    * Rend valide un user
-    **/
-    public function valideUser($user_id)
-    {
-      // On change la statut non valide de l'user
-      $user = User::find($user_id);
-      $user->valide = 1;
-      $user->save();
-
-      // On lui envoie un mail
-      Mail::to($user)->bcc(auth()->user())->send(new Accepte($user));
-
-      return response()->json([
-        "id" => $user->id,
-        "nom" => $user->name,
-        "email" => $user->email,
-      ]);
-    }
-    /**
      * Display the specified resource.
      *
      * @param  int  $id
@@ -127,7 +93,14 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return redirect()->route('utilisateur.index');
+        $user = User::find($id);
+
+        $titre = new Titre(icone: 'profil_clair.svg', titre: 'user_info' );
+
+        return view('user.show', [
+          'titre' => $titre,
+          'user' => $user,
+        ]);
     }
 
     /**
@@ -138,7 +111,13 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-      return redirect()->route('utilisateur.index');
+      $user = User::find($id);
+
+      $elements = $this->editForm($user, 'formUser.json');
+
+      return view('admin.editCreateForm', [
+        'elements' => $elements,
+      ]);
     }
 
     /**
@@ -173,21 +152,34 @@ class UserController extends Controller
         return response()->json(['message' => $id]);
     }
 
-    public function tousSauf($id)
-    {
-      $users = User::select('id', 'name')->where('id', '!=', $id)->get();
+    // public function indexOld()
+    // {
+    //   if(!Auth::user()->admin)
+    //   {
+    //     return view('accueil', [
+    //       'especes' => Espece::all(),
+    //     ]);
+    //   }
+    //   else
+    //   {
+    //     $users =User::orderBy('admin', 'desc')->get();
+    //     $saisies_groupees = Saisie::all()->mapToGroups(function($item, $key) {
+    //       return [$item['user_id'] => $item['id']];
+    //     });
+    //     $users_saisies = $saisies_groupees->keys();
+    //
+    //     foreach ($users as $user) {
+    //
+    //       if(!$users_saisies->contains($user->id))
+    //       {
+    //         $saisies_groupees->put($user->id, collect([]));
+    //       }
+    //     }
+    //     return view('admin/admin', [
+    //       'users' => $users,
+    //       'saisies_groupees' => $saisies_groupees,
+    //     ]);
+    //   }
+    // }
 
-      return response()->json(json_encode($users));
-    }
-
-    public function changeSaisieUser($ancien_user_id, $nouveau_user_id)
-    {
-      $saisies = Saisie::where('user_id', $ancien_user_id)->get();
-      foreach ($saisies as $saisie) {
-        $saisie->user_id = $nouveau_user_id;
-        $saisie->save();
-      }
-
-      return response()->json(["nombre_saisies" => Saisie::where('user_id', $nouveau_user_id)->count()]);
-    }
 }

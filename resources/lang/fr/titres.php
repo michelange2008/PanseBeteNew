@@ -24,5 +24,6 @@ return array(
   'alerte_listes_create' => "Créer les paramètres qualitatifs de cette alerte",
   'origine_create' => "Ajout d'une nouvelle origine",
   'origine_edit' => "Modification de l'origine",
-
+  'user_info' => "Détail de mes informations",
+  'user_edit' => "Modification de mes informations",
 );

@@ -34,6 +34,12 @@ trait FormTemplate
         $element->options = $options;
 
       }
+
+      elseif (isset($element->liste)) {
+        $liste = $this->litJson($element->liste);
+dd($liste);
+        $elements->options = $liste;
+      }
     }
 
     return $elements;

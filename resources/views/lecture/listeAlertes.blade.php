@@ -15,7 +15,7 @@ Affiche la liste des alertes pour chaque thème quand il y en a --}}
 
             <strong>{{ $salerte->valeur }} {{ $salerte->alerte->unite }}</strong>&nbsp( {{ $salerte->norme }} )
 
-          </div>
+        </div>
 
         @if ($salerte->nbsorigine > 0)
 

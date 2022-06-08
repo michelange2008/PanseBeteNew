@@ -92,16 +92,34 @@ Route::group(['middleware' => ['auth', 'isValid', 'isAdmin']], function() {
 Route::group(['middleware' => ['auth', 'isValid']], function () {
 
   // Gestion des utilisateurs
+  Route::prefix('/utilisateur')->controller(UserController::class)->group(function() {
 
-    Route::get('/utilisateur/tousSauf/{id}', ['uses' => 'UserController@tousSauf', 'as' => 'tousSauf']);
+    Route::get('/', 'index')->name('user.index');
+    Route::get('/create', 'create')->name('user.create');
+    Route::post('/store', 'store')->name('user.store');
+    Route::get('/{id}', 'show')->name('user.show');
+    Route::get('/edit/{id}', 'edit')->name('user.edit');
+    Route::put('/update/{id}', 'update')->name('user.update');
+    Route::delete('/destroy/{id}', 'destroy')->name('user.destroy');
 
-    Route::get('/utilisateur/changeSaisieUser/{ancien_user_id}/{nouveau_user_id}', ['uses' => 'UserController@changeSaisieUser', 'as' => 'changeSaisieUser']);
+  });
+  // Gestion des droits des utilisateurs par l'admin: acceptation, suppression
+  Route::prefix('/administration')->controller(AdminController::class)->group( function() {
+    // Affiche la liste des utilisateurs avec ceux à valider et ceux validés
+    Route::get('/', 'index')->name('admin.index');
+    // Permet de valider un utilisateur qui a fait une demande d'accès
+    Route::get('/valide/{id}', 'valideUser')->name('admin.valide');
 
-    Route::resource('/utilisateur', 'UserController');
+  });
+  // Gestion des appels AJAX
+  Route::prefix('/api')->controller(ApiController::class)->group( function() {
+    // Route utilisée par admin.js pour changer les saisies d'un utilisateur que l'on supprimme
+    Route::get('/changeSaisieUser/{ancien_user_id}/{nouveau_user_id}', 'changeSaisieUser')->name('changeSaisieUser');
+    // Route utilisée par admin.js pour la même raison que précédemment
+    Route::get('/tousSauf/{id}', 'tousSauf')->name('tousSauf');
 
-    Route::get('/administration', ['uses' => 'AdminController@index', 'as' => 'admin.index']);
+  });
 
-    Route::get('/administration/valide/{id}', ['uses' => 'UserController@valideUser', 'as' => 'admin.valide']);
 
   // Routes principales
 
