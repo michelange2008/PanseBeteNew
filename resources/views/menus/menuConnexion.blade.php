@@ -12,7 +12,7 @@
     <a href="#" class="nav-link dropdown-toggle bg-otobleu"
         id="utilisateur" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="true">
-        <img class="img-20" src="{{url('storage/img/'.Auth::user()->role->icone)}}" alt="">
+        <img class="img-20" src="{{url('storage/img/roles/base.svg')}}" alt="">
 
       {{ Auth::user()->name }}
 

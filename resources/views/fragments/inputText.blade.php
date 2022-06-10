@@ -12,7 +12,7 @@
           maxlength="191"
           name="{{ $name }}"
           {{-- si c'est une modification on affiche la valeur d'origine --}}
-          value="{{ ucfirst($isName) ?? old($name) }}"
+          value="{{ $isName ?? old($name) }}"
           @isset($required)
             @if ($required) required @endif
           @endisset

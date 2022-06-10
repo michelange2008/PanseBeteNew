@@ -29,7 +29,8 @@
       "name" : "region",
       "type" : "select",
       "liste" : "regions.json",
-      "type" : "text"
+      "options" : {},
+      "required" : false
     }
   }
 }

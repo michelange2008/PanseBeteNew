@@ -18,6 +18,7 @@ use App\Comp\Titre;
 class UserController extends Controller
 {
   use FormTemplate;
+  
   /**
      * Redirige vers le controleur AdminController
      *
@@ -93,6 +94,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
+
         $user = User::find($id);
 
         $titre = new Titre(icone: 'profil_clair.svg', titre: 'user_info' );
@@ -129,14 +131,21 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $datas = $request->all();
-      $user = User::find($id);
-      $user->name = $datas['nom'];
-      $user->email = $datas['email'];
-      $user->save();
-      return response()->json([
-        "id" => $user->id,
+      $request->validate([
+        'name' => 'required | max:191',
+        'email' => 'email',
+        'profession' => 'alpha_num | nullable | max:191'
       ]);
+
+      User::where('id', $id)
+            ->update([
+              'name' => $request->name,
+              'email' => $request->email,
+              'profession' => $request->profession,
+              'region' => $request->region
+            ]);
+
+      return redirect()->route('user.show', $id)->with('message', 'user_update');
     }
 
     /**

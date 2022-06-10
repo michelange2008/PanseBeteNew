@@ -20,6 +20,16 @@
 
       <div class="col-sm-11 col-md-10 col-lg-9">
 
+        @include('fragments.flash')
+
+      </div>
+
+    </div>
+
+    <div class="row my-3 justify-content-center">
+
+      <div class="col-sm-11 col-md-10 col-lg-9">
+
         <div class="card" style="width: 18rem;">
 
           <div class="card-header">
@@ -30,11 +40,11 @@
 
           <div class="card-body">
 
-            <p class="card-text">{{ $user->email }}</p>
+            <p class="card-text fst-italic">{{ $user->email }}</p>
             <p class="card-text">{{ $user->profession }}</p>
-            <p class="card-text">{{ $user->région }}</p>
+            <p class="card-text">{{ $user->region }}</p>
             @if ($user->admin)
-              <p class="card-text">Administrateur du site</p>
+              <p class="card-text fw-bold">Administrateur du site</p>
             @endif
 
           </div>

@@ -128,6 +128,7 @@ class TabLab extends Tab
       // On initialise une collection pour la ligne
       $ligne = collect();
       $id = $data->id;
+
       foreach ($data as $key => $value) {
         // $key = intitulé de la variable sélectionné qui doit être égale à un intitulé de colonne dans le json
         if(isset($cadre->colonnes->$key)) {

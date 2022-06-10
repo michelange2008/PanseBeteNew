@@ -12,4 +12,5 @@ return [
   'origine_store' => "Une nouvelle origine a été crée",
   'origine_update' => "L'origine a bien été mise à jour",
   'origine_del' => "Cette origine a été supprimée",
+  'user_update' => "Le profil a été mis à jour",
 ];

@@ -13,10 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('roles', function (Blueprint $table) {
-            $table->id();
-            $table->string('nom', 10);
-            $table->string('icone')->default('roles/user.svg');
+        Schema::create('paraferme_user', function (Blueprint $table) {
+          $table->bigIncrements();
+          $table->foreignId('user_id')->constrained();
+          $table->foreignId('paraferme_id')->constrained()
+                ->onUpdate('cascade')->onDelete('cascade');
+          $table->string('value', 10);
         });
     }
 
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roles');
+        Schema::dropIfExists('paraferme_user');
     }
 };

@@ -62,6 +62,11 @@
                     Brebis laitières</a>
                 </div>
 
+                <a class="dropdown-item" href="{{route('paraferme.index')}}">
+                  <img class="img-40" src="{{url('storage/img/categories/logement.svg')}}" alt="">
+                  Exploitations
+                </a>
+
               </div>
             </li>
 

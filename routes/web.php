@@ -86,6 +86,8 @@ Route::group(['middleware' => ['auth', 'isValid', 'isAdmin']], function() {
 
   });
 
+  Route::resource('/paraferme', 'ParafermeController');
+
 
 });
 
