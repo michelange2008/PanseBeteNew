@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Casts\AsArrayObject;
-
+use Illuminate\Database\Eloquent\Casts\AsCollection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\User;
@@ -15,7 +15,7 @@ class Paraferme extends Model
     use HasFactory;
 
     protected $casts = [
-      'liste' => AsArrayObject::class,
+      'liste' => 'array',
     ];
 
     protected $guarded = [];

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
 use Illuminate\Http\Request;
 use App\Models\Alerte;
 use App\Models\User;
@@ -14,11 +14,18 @@ class DevController extends Controller
     {
       echo "page pour faire des choses dans la bdd";
 
-      $user = User::first();
-      $paraferme = Paraferme::where('type', 'liste')->first();
+      $user = User::find(10);
 
-      // $paraferme->liste[5] = "Vieille étable";
 
-      dump($paraferme->liste);
+      $tab = json_decode('{"1":"bggggb","2":"nhhhhhhhhhn"}');
+
+      dump(json_encode($tab));
+
+
+      Paraferme::updateOrCreate(
+        ['nom' => 'Aimentation'],
+        ['liste' => json_encode($tab, JSON_UNESCAPED_SLASHES)]
+      );
+
     }
 }

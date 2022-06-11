@@ -1,9 +1,11 @@
 <?php
 namespace App\Fournisseurs;
 
+use App\Traits\JsonFromBDD;
+
 abstract class Tab
 {
-
+  use JsonFromBDD;
   /*
   * Crée les items de la liste à afficher renvoyer par la méthode liste
   */
@@ -20,7 +22,31 @@ abstract class Tab
     return $item;
   }
 
-  public function dateFactory($id, $value)
+  public function jsonFactory($id, $col)
+  {
+    $item = collect();
+
+    $item->action = null;
+
+    $item->id = $id;
+
+    $nom = '';
+
+    if($col !== null) {
+      // On décode le json avec le trait JsonFromBDD
+      $infos = $this->jsonFromBDD($col);
+      // On cacatène les éléments
+      foreach ($infos as $value) {
+        $nom = $nom.' - '.ucfirst($value);
+      }
+    }
+    // On enlève le premier tiret et les especes inutiles
+    $item->nom = trim(substr(trim($nom), 1));
+
+    return $item;
+  }
+
+public function dateFactory($id, $value)
   {
     $item = collect();
 

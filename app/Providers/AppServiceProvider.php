@@ -41,6 +41,7 @@ class AppServiceProvider extends ServiceProvider
       Blade::include('fragments.inputCheckbox','inputCheckbox');
       Blade::include('fragments.inputCheckboxV','inputCheckboxV');
       Blade::include('fragments.inputHidden','inputHidden');
+      Blade::include('fragments.inputTextarea','inputTextarea');
 
     }
 

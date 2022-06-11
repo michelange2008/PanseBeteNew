@@ -84,6 +84,17 @@
 
                 </div>
 
+              @elseif ($champ->type == "textarea")
+
+                <div class="col-md-4">
+
+                  @inputTextarea([
+                    'label' => $champ->label,
+                    'name' => $champ->name,
+                    'liste' => '',
+                  ])
+                </div>
+
               @elseif ($champ->type = "hidden")
 
                 <input type="hidden" name="{{ $champ->name }}" value="{{ $champ->isName ?? '' }}">

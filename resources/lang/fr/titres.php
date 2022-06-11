@@ -26,4 +26,6 @@ return array(
   'origine_edit' => "Modification de l'origine",
   'user_info' => "Détail de mes informations",
   'user_edit' => "Modification de mes informations",
+  'paraferme_create' => "Nouveau paramètre d'exploitation",
+  'paraferme_edit' => "Modifier le paramètre d'exploitation",
 );

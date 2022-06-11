@@ -13,7 +13,7 @@ class StoreparafermeRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,9 @@ class StoreparafermeRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nom' => 'required|max:191|alpha_num',
+            'unite' => 'nullable|max:10',
+            'type' => 'required',
         ];
     }
 }

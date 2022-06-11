@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use DB;
-use App\Http\Requests\StoreparafermeRequest;
-use App\Http\Requests\UpdateparafermeRequest;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use App\Models\Paraferme;
 
 use App\Comp\Titre;
@@ -43,18 +44,56 @@ class ParafermeController extends Controller
      */
     public function create()
     {
-        //
+        $elements = $this->createForm('formParaferme.json');
+
+        return view('admin.editCreateForm', [
+          'elements' => $elements,
+        ]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreparafermeRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreparafermeRequest $request)
+    public function store(Request $request)
     {
-        //
+      $validator = Validator::make($request->all(), [
+        'nom' => 'required|max:191',
+        'unite' => 'nullable|max:10',
+        'type' => 'required',
+        'liste' => Rule::requiredIf(fn() => $request->type == 'liste'),
+      ])->validate();
+
+      // Si le type est "liste" on prépare la liste sous forme d'un json
+      if($request->type == 'liste') {
+          // On transforme la liste en tableau avec la virgule comme séparateur
+          $liste = explode(',', $request->liste);
+          // On transforme ca en json
+          $listeForJson = [];
+          // $listeJson = "{";
+          // foreach ($liste as $key => $value) {
+          //   $listeJson = $listeJson.strval($key+1).':'.$value
+          // }
+
+
+
+      } else {
+
+          $listeJson = null;
+
+      }
+      // Et on stocke les infos
+      $paraferme = new Paraferme();
+      $paraferme->nom = $request->nom;
+      $paraferme->unite = $request->unite;
+      $paraferme->type = $request->type;
+      $paraferme->liste = $listeJson;
+
+      $paraferme->save();
+
+      return redirect()->route('paraferme.index')->with(['message' => 'paraferme_store']);
     }
 
     /**
@@ -82,11 +121,11 @@ class ParafermeController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateparafermeRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\paraferme  $paraferme
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateparafermeRequest $request, paraferme $paraferme)
+    public function update(Request $request, paraferme $paraferme)
     {
         //
     }
@@ -97,8 +136,10 @@ class ParafermeController extends Controller
      * @param  \App\Models\paraferme  $paraferme
      * @return \Illuminate\Http\Response
      */
-    public function destroy(paraferme $paraferme)
+    public function destroy($id)
     {
-        //
+        Paraferme::destroy($id);
+
+        return redirect()->back()->with(['message' => 'paraferme_del']);
     }
 }

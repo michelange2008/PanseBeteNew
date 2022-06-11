@@ -50,9 +50,12 @@ class TabLab extends Tab
     // Avec la méthode creeEntetes on crée la collection d'en-têtes
     $this->creeEntetes($cadre);
     // Avec la méthode creeLignes on remplit le tableau de données sous la forme idoine
-    $this->creeLignes($cadre, $datas);
+    // Si les datas ont été obtenues avec DB
+      $this->creeLignes($cadre, $datas);
+
     // Ajoute un bouton "ajout d'un nouvel élément"
     $this->addBouton($cadre);
+
   }
 
   public function get()
@@ -121,6 +124,7 @@ class TabLab extends Tab
    */
   public function creeLignes($cadre, $datas)
   {
+
     // On initialise une collection lignes qui recevra toutes les infos sur les lignes
     $this->indexTab->lignes = collect();
     // On parcours chaque ligne de la table alerte
@@ -222,6 +226,17 @@ class TabLab extends Tab
               }
 
               break;
+
+              case 'json':
+              try {
+                $item = $this->jsonFactory($id, $value);
+
+              } catch (\Exception $e) {
+                dump($e."problème avec l'utilisation du lien jsonFactory");
+                dump($colonne);
+              }
+            break;
+
             default:
               $item = $this->itemFactory($id, $value);
               break;
@@ -240,11 +255,11 @@ class TabLab extends Tab
         $supprimable = (isset($data->supprimable)) ? $data->supprimable : false;
 
         if ($supprimable) {
-          $item = $this->delFactory($data->id, $cadre->prefixe);
+          $item = $this->delFactory($id, $cadre->prefixe);
 
         } else {
 
-          $item = $this->itemFactory($data->id, '-');
+          $item = $this->itemFactory($id, '-');
 
         }
         $ligne->push($item);

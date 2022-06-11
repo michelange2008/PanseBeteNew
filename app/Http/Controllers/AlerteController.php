@@ -130,7 +130,7 @@ class AlerteController extends Controller
         $alerte = alerte::find($id);
         // Utilisation de la classe titre avec la variable $translate à FALSE
         // pour indiquer qu'il ne faut pas appliquer la traduction à $alerte->nom
-        $titre = new Titre('saisie/alertes_claire.svg', 'show_alerte');
+        $titre = new Titre('saisie/alertes_claire.svg', 'alerte_show');
 
         return view('admin.alertes.show', [
           'alerte' => $alerte,

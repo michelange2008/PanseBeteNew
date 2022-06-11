@@ -13,4 +13,7 @@ return [
   'origine_update' => "L'origine a bien été mise à jour",
   'origine_del' => "Cette origine a été supprimée",
   'user_update' => "Le profil a été mis à jour",
+  'paraferme_store' => "Le nouveau paramètre a été créé",
+  'paraferme_update' => "Le paramètre a été modifié",
+  'paraferme_del' => "Le paramètre a été supprimé",
 ];

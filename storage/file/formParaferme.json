@@ -1,0 +1,36 @@
+{
+  "prefixe" : "paraferme",
+
+  "titre" : {
+    "translate" : true
+  },
+
+  "liste" : {
+    "nom" : {
+      "label" : "nom",
+      "name" : "nom",
+      "type" : "text",
+      "required" : true
+    },
+    "type" : {
+      "label" : "type",
+      "name" : "type",
+      "type" : "select",
+      "liste" : "parafermeTypes.json",
+      "required" : true,
+      "options" : {}
+    },
+    "unite" : {
+      "label" : "unité",
+      "name" : "unite",
+      "type" : "text"
+    },
+    "elements" : {
+      "label" : "Eléments de la liste (utiliser la virgule comme séparateur)",
+      "name" : "liste",
+      "type" : "textarea",
+      "required" : true,
+      "options" : {}
+    }
+  }
+}

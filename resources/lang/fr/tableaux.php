@@ -25,4 +25,9 @@ return [
   'origines' => "origines",
   'end'=> 'Fin de la liste',
   'vide' => 'Le tableau est vide',
+  'type' => 'type',
+  'unite' => 'unité',
+  'liste' => 'Eléments',
+  'paraferme_titre_liste' => "Liste de paramètres descriptifs de l'exploitation",
+  'paraferme_create' => "Ajouter un paramètre",
 ];

@@ -23,7 +23,7 @@
     },
     "liste" : {
       "col" : "liste",
-      "type" : "item",
+      "type" : "json",
       "aligne" : "left",
       "sortable" : false
     }

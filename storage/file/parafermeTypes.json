@@ -1,0 +1,16 @@
+{
+  "int" : {
+    "id" : "int",
+    "nom" :"Nombre entier"
+  },
+  "float" : {
+    "id" : "float",
+    "nom" : "Nombre avec une virgule"
+  },
+  "BRE" : {
+    "id" : "liste",
+    "nom" : "Liste d'éléments"
+  }
+
+
+}
