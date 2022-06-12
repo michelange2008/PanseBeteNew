@@ -2,7 +2,10 @@
 
   <label class="form-label" for="{{ $name }}">{{ $label }}</label>
 
-  <textarea class="form-control" name="{{ $name }}" rows="3" value="">{{ old($liste) }}</textarea>
+  <textarea id="{{ $name }}" class="form-control"
+            name="{{ $name }}" rows="3"
+            placeholder = "{{ $placeholder ?? "" }}"
+    >{{ old( $name ) ?? $isName }}</textarea>
 
   {{-- affichage de l'erreur --}}
   <div id="{{ $name }}feedback" class="invalid-feedback">

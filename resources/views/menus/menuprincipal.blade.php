@@ -10,7 +10,6 @@
 
             @include('menus.menuConnexion')
 
-          <div class="dropdown-divider"></div>
           <li class="nav-item" title="Pour démarrer"><a class="nav-link" href="{{route('accueil')}}">Accueil</a></li>
           <li class="nav-item"><a class="nav-link" href="{{route('aide')}}">Aide</a></li>
           @if (!Auth::user()->admin)

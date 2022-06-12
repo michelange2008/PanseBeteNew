@@ -5,7 +5,7 @@
 
     "nom" : {
       "col" : "nom",
-      "type" : "show",
+      "type" : "edit",
       "aligne" : "left",
       "sortable" : true
     },

@@ -7,7 +7,7 @@
     "id" : "float",
     "nom" : "Nombre avec une virgule"
   },
-  "BRE" : {
+  "liste" : {
     "id" : "liste",
     "nom" : "Liste d'éléments"
   }

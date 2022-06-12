@@ -3,13 +3,14 @@ namespace App\Traits;
 
 use DB;
 use App\Traits\LitJson;
+use App\Traits\JsonFromBDD;
 /**
  * Destiné à renvoyer la liste des éléments pour un formulaire create ou edit
  *
  */
 trait FormTemplate
 {
-  use LitJson;
+  use LitJson, JsonFromBDD;
 
   /**
    * Appelée par createForm ou editForm
@@ -95,22 +96,36 @@ trait FormTemplate
   public function editForm($model, $json, $route_suffixe = 'update')
   {
     $elements = $this->prepareForm($json);
-
+    // On ajoute l'icone au titre
     $elements->titre->icone = "edit.svg";
-
+    // ajoute le nom du titre qui fait référence à une ligne de tableaux.php
+    // dans resources/lang
     $elements->titre->titre = $elements->prefixe."_edit";
-
+    // On applique la méthode PUT au formulaire
     $elements->method = "PUT";
-
+    // On définit la route sous forme trucmuche.edit sauf indication contraire
     $elements->route = route($elements->prefixe.'.'.$route_suffixe, $model->id);
-
+    // Boucle destinée à préremplir les champs avec la valeur d'origine
     foreach ($elements->liste as $element => $details) {
-
+      // Contenu de la partie liste du json
+      // Si le champ table existe c'est qu'il s'agit d'une liste déroulante
       if (isset($details->table)) {
-
+        // Dans le cas d'une liste déroulante qui fait référence à une autre
+        // table, le name est sous la forme trucmuche_id
         $item = $details->name;
-
+        // Et donc le isName quii sert à défionir la valeur par défaut prend
+        // la valeur dans le model du champ trucmuche_id.
         $details->isName = $model->$item;
+      // S'il existe un champs format ( = format de données dans la BDD)
+      } elseif (isset($details->format)) {
+        // Si ce champs format = json, cela signifie que les données sont sous
+        // forme json dans la BDD
+        if ($details->format == 'json') {
+
+          // Utilisation du trait JsonFromBDD pour mettre en forme le champs
+          $details->isName = $this->jsonTabToString($model->$element, ', ');
+
+        }
 
       } else {
 

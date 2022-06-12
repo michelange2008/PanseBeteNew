@@ -34,15 +34,9 @@ abstract class Tab
 
     if($col !== null) {
       // On décode le json avec le trait JsonFromBDD
-      $infos = $this->jsonFromBDD($col);
-      // On cacatène les éléments
-      foreach ($infos as $value) {
-        $nom = $nom.' - '.ucfirst($value);
-      }
+      // et qui ajoute le séparateur
+      $item->nom = $this->jsonTabToString($col, ' - ');
     }
-    // On enlève le premier tiret et les especes inutiles
-    $item->nom = trim(substr(trim($nom), 1));
-
     return $item;
   }
 

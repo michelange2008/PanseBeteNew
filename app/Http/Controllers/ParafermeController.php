@@ -66,30 +66,14 @@ class ParafermeController extends Controller
         'liste' => Rule::requiredIf(fn() => $request->type == 'liste'),
       ])->validate();
 
-      // Si le type est "liste" on prépare la liste sous forme d'un json
-      if($request->type == 'liste') {
-          // On transforme la liste en tableau avec la virgule comme séparateur
-          $liste = explode(',', $request->liste);
-          // On transforme ca en json
-          $listeForJson = [];
-          // $listeJson = "{";
-          // foreach ($liste as $key => $value) {
-          //   $listeJson = $listeJson.strval($key+1).':'.$value
-          // }
-
-
-
-      } else {
-
-          $listeJson = null;
-
-      }
       // Et on stocke les infos
       $paraferme = new Paraferme();
       $paraferme->nom = $request->nom;
       $paraferme->unite = $request->unite;
       $paraferme->type = $request->type;
-      $paraferme->liste = $listeJson;
+      $paraferme->liste = ($request->type == 'liste')
+                          ? $this->stringToJson($request->liste)
+                          : null;
 
       $paraferme->save();
 
@@ -104,7 +88,7 @@ class ParafermeController extends Controller
      */
     public function show(paraferme $paraferme)
     {
-        //
+        return redirect()->route('paraferme.index');
     }
 
     /**
@@ -113,9 +97,18 @@ class ParafermeController extends Controller
      * @param  \App\Models\paraferme  $paraferme
      * @return \Illuminate\Http\Response
      */
-    public function edit(paraferme $paraferme)
+    public function edit($id)
     {
-        //
+        $paraferme = Paraferme::find($id);
+
+        $elements = $this->editForm(model: $paraferme, json: 'formParaferme.json');
+
+        return view('admin.editCreateForm', [
+          'elements' => $elements,
+          'id' => $id,
+          'routeAnnule' => route('paraferme.index'),
+        ]);
+
     }
 
     /**
@@ -127,7 +120,28 @@ class ParafermeController extends Controller
      */
     public function update(Request $request, paraferme $paraferme)
     {
-        //
+      $validator = Validator::make($request->all(), [
+        'nom' => 'required|max:191',
+        'unite' => 'nullable|max:10',
+        'type' => 'required',
+        'liste' => Rule::requiredIf(fn() => $request->type == 'liste'),
+      ])->validate();
+
+      Paraferme::updateOrCreate(
+        ['id' => $paraferme->id],
+        [
+          'nom' => $request->nom,
+          'unite' => $request->unite,
+          'type' => $request->type,
+          'liste' => ($request->type == 'liste')
+                      ? $this->stringToJson($request->liste)
+                      : null,
+        ]
+
+      );
+
+      return redirect()->route('paraferme.index')
+              ->with(['message' => 'paraferme_update']);
     }
 
     /**

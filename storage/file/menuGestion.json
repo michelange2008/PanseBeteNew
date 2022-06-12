@@ -1,3 +1,48 @@
 {
+  "chiffres" : {
+    "nom" : "Chiffres",
+    "route" : "chiffre.index",
+    "icone" : "saisie/chiffres.svg",
+    "hasSousmenu" : false
+  },
+  "alertes" : {
+    "nom" : "Alertes",
+    "route" : "alerte.index",
+    "icone" : "saisie/alertes.svg",
+    "hasSousmenu" : true,
+    "sousmenu" :  {
+      "vl" : {
+        "nom" : "Vaches laitières",
+        "route" : "alerte.indexParEspece",
+        "id" : "Vaches laitières",
+        "icone" : "especes/VL.svg"
+      },
+      "va" : {
+        "nom" : "Vaches allaitantes",
+        "route" : "alerte.indexParEspece",
+        "id" : "Vaches allaitantes",
+        "icone" : "especes/VA.svg"
+      },
+      "oa" : {
+        "nom" : "Brebis allaitantes",
+        "route" : "alerte.indexParEspece",
+        "id" : "Brebis allaitantes",
+        "icone" : "especes/OA.svg"
+      },
+      "cp" : {
+        "nom" : "Chèvres laitières",
+        "route" : "alerte.indexParEspece",
+        "id" : "Chèvres laitières",
+        "icone" : "especes/CP.svg"
+      },
+      "ol" : {
+        "nom" : "Brebis laitières",
+        "route" : "alerte.indexParEspece",
+        "id" : "Brebis laitières",
+        "icone" : "especes/OL.svg"
+      }
+    }
+
+  }
 
 }

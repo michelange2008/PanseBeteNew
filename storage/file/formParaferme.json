@@ -12,6 +12,11 @@
       "type" : "text",
       "required" : true
     },
+    "unite" : {
+      "label" : "unité",
+      "name" : "unite",
+      "type" : "text"
+    },
     "type" : {
       "label" : "type",
       "name" : "type",
@@ -20,17 +25,14 @@
       "required" : true,
       "options" : {}
     },
-    "unite" : {
-      "label" : "unité",
-      "name" : "unite",
-      "type" : "text"
-    },
-    "elements" : {
-      "label" : "Eléments de la liste (utiliser la virgule comme séparateur)",
+    "liste" : {
+      "label" : "Eléments de la liste (uniquement si Type = Liste)",
       "name" : "liste",
       "type" : "textarea",
+      "format" : "json",
+      "placeholder" : "Utilisez la virgule comme séparateur",
       "required" : true,
-      "options" : {}
+      "isName" : ""
     }
   }
 }

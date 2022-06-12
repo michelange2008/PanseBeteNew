@@ -4,7 +4,7 @@
  --}}
 <div class="form-group my-3">
 
-  <label for="{{ $name }}">{{ ucfirst($label) }}</label>
+  <label class="form-label" for="{{ $name }}">{{ ucfirst($label) }}</label>
 
   <input id="{{ $name }}"
           class="form-control @error( $name ) is-invalid @enderror"

@@ -34,7 +34,7 @@
 
               @if ($champ->type == "text")
 
-                <div class="col-md-8 col-lg-7">
+                <div class="col-md-6">
 
                   @inputText([
                     'name' => $champ->name,
@@ -71,7 +71,7 @@
 
             @elseif ($champ->type == "select")
 
-                <div class="col-md-4">
+                <div class="col-md-6">
 
                   @inputSelect([
                     'name' => $champ->name,
@@ -86,12 +86,13 @@
 
               @elseif ($champ->type == "textarea")
 
-                <div class="col-md-4">
+                <div class="col">
 
                   @inputTextarea([
                     'label' => $champ->label,
                     'name' => $champ->name,
-                    'liste' => '',
+                    'placeholder' => $champ->placeholder ?? "",
+                    'isName' => $champ->isName ?? "",
                   ])
                 </div>
 

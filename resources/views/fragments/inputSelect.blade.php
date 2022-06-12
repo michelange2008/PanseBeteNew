@@ -1,6 +1,6 @@
 <div class="form-group my-3">
 
-  <label for="{{ $name }}">{{ ucfirst($label) }}</label>
+  <label class="form-label" for="{{ $name }}">{{ ucfirst($label) }}</label>
 
 
   <select id="{{ $name }}" class="form-control" name="{{ $name }}"
