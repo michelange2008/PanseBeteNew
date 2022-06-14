@@ -36,6 +36,7 @@
 
             <h5 class="card-title">{{ ucfirst($user->name) }}</h5>
 
+
           </div>
 
           <div class="card-body">

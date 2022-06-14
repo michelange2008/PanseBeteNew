@@ -23,7 +23,7 @@ Route::get('/visiteur/patience', ['uses' => 'VisiteurController@afficheNonValide
 Route::get('/presentation', ['uses' => 'VisiteurController@presentation', 'as' => 'visiteur.presentation']);
 
 
-Route::group(['middleware' => ['auth', 'isValid', 'isAdmin']], function() {
+Route::group(['middleware' => ['auth', 'isValid', 'isAdmin', 'menu']], function() {
 
   Route::get('/dev', 'DevController@dev')->name('dev');
 
@@ -91,7 +91,7 @@ Route::group(['middleware' => ['auth', 'isValid', 'isAdmin']], function() {
 
 });
 
-Route::group(['middleware' => ['auth', 'isValid']], function () {
+Route::group(['middleware' => ['auth', 'isValid', 'menu']], function () {
 
   // Gestion des utilisateurs
   Route::prefix('/utilisateur')->controller(UserController::class)->group(function() {

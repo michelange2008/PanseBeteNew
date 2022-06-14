@@ -18,7 +18,7 @@ use App\Comp\Titre;
 class UserController extends Controller
 {
   use FormTemplate;
-  
+
   /**
      * Redirige vers le controleur AdminController
      *
