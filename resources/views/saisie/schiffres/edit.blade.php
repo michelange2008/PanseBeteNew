@@ -33,7 +33,7 @@
 
           @enregistreAnnule([
           'couleur' => 'btn-otorange',
-          'route' => route('saisie.accueil', $saisie->id),
+          'route' => route('saisie.show', $saisie->id),
           ])
 
           @foreach ($chiffresGroupes as $groupe => $elements)
@@ -46,15 +46,27 @@
             <input type="hidden" name="saisie_id" value="{{ $saisie->id }}">
             @foreach ($elements as $element)
               <div class="form-group row my-2">
-                <label class="col-sm-8 col-form-label" for="{{ $element->id }}">{{$element->libelle}}</label>
+
+                <label class="col-sm-8 col-form-label"
+                    for="{{ $element->id }}">
+
+                      {{$element->libelle}}
+
+                </label>
                 <div class="col-sm-4">
 
-                  <input class="form-control chiffre" type="number"
-                  min= {{ $element->min ?? 0}}
-                  step={{ $element->step }}
-                  name="{{ $element->id }}"
-
-                  value="{{ $chiffresSaisis->get($element->id)  ?? 0 }}">
+                  <input class="form-control chiffre text-center "
+                    type="number"
+                    min= "{{ $element->min ?? 0}}"
+                    step="{{ $element->step }}"
+                    name="{{ $element->id }}"
+                    @isset($element->required)
+                      @if ($element->required)
+                        required
+                      @endif
+                    @endisset
+                    value="{{ $chiffresSaisis->where('libelle', $element->id)->first()->valeur  ?? old($element->id) }}"
+                    >
                 </div>
 
               </div>
@@ -64,7 +76,7 @@
 
           @enregistreAnnule([
           'couleur' => 'btn-otorange',
-          'route' => route('saisie.accueil', $saisie->id),
+          'route' => route('saisie.show', $saisie->id),
           ])
 
         </form>

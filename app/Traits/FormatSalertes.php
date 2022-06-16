@@ -3,6 +3,7 @@ namespace App\Traits;
 
 use App\Models\Alerte;
 use App\Models\Critalerte;
+use App\Models\Sorigine;
 
 use App\Traits\TypesTools;
 
@@ -32,6 +33,8 @@ trait FormatSalertes
         $salerte = $this->normeNum($salerte);
 
       }
+      // dump($salerte->id ?? '');
+      $salerte = $this->nbOrigines($salerte);
 
     }
 
@@ -156,10 +159,34 @@ trait FormatSalertes
       // Et on les ajouter à salerte
       $salerte->norme = $norme;
 
+      return $salerte;
+
     } catch (\Exception $e) {
 
       dd($e.'| critères:'.$salerte);
     }
+
+  }
+
+  /**
+   * Recherche le  nombre de sorigines d'une salerte et l'ajoute à l'attribut
+   * nbOrigines
+   *
+   * @param type Alerte
+   * @return return void
+   */
+  public function nbOrigines($salerte)
+  {
+    try {
+
+      $salerte->nbsorigine = Sorigine::where('salerte_id', $salerte->id)->count();
+
+    } catch (\Exception $e) {
+
+
+
+    }
+
 
   }
 

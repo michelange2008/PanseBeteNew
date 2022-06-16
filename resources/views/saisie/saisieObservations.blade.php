@@ -121,7 +121,7 @@
 
         @enregistreAnnule([
           'couleur' => 'btn-otorange',
-          'route' => route('saisie.accueil', $saisie->id),
+          'route' => route('saisie.show', $saisie->id),
         ])
 
       </div>

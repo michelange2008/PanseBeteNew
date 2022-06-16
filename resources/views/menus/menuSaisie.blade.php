@@ -28,7 +28,7 @@ Pour les saisies nouvelles sans salertes, le menu n'affiche rien d'autre
 
         @if ($saisie->hasnum && $saisie->hasobs)
 
-          <a class="nav-link active" href="{{ route('saisie.accueil', $saisie->id) }}"
+          <a class="nav-link active" href="{{ route('saisie.show', $saisie->id) }}"
             title="Voir la synthèse de vos résultats">
             <i class="fa-solid fa-globe"></i> @lang('titres.synth_globale')
           </a>

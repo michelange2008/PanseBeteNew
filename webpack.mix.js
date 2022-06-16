@@ -10,7 +10,11 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-
+ mix.webpackConfig({
+     stats: {
+         children: true,
+     },
+ });
  mix.setPublicPath('public/');
  mix.sass('resources/sass/app.scss', 'css')
    .options({
@@ -22,6 +26,7 @@ const mix = require('laravel-mix');
 mix.copy('node_modules/jquery-confirm/dist/jquery-confirm.min.css', 'public/css/jquery-confirm.min.css');
 
 mix.copy('node_modules/jquery/dist/jquery.min.js', 'public/js/jquery.min.js');
+mix.copy('node_modules/jquery-ui-bundle/jquery-ui.min.js', 'public/js/jquery-ui.min.js');
 mix.copy('node_modules/jquery-confirm/dist/jquery-confirm.min.js', 'public/js/jquery-confirm.min.js');
-mix.copy('node_modules/bootstrap-table/dist/locale/bootstrap-table-fr-FR.min.js', 'resources/js/bootstrap-table-fr-FR.min.js');
-mix.copy('node_modules/bootstrap-table/dist/bootstrap-table.min.js', 'resources/js/bootstrap-table.min.js');
+mix.copy('node_modules/bootstrap-table/dist/locale/bootstrap-table-fr-FR.min.js', 'public/js/bootstrap-table-fr-FR.min.js');
+mix.copy('node_modules/bootstrap-table/dist/bootstrap-table.min.js', 'public/js/bootstrap-table.min.js');

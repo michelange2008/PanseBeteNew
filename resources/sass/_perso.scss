@@ -199,6 +199,18 @@ a, a:link, a:hover  {
   width: 40px;
   max-height: 40px;
 }
+
+.img-40-pale {
+  width: 40px;
+  max-height: 40px;
+  filter: opacity(50%);
+}
+.img-40-pale:hover {
+  width: 40px;
+  max-height: 40px;
+  filter: opacity(100%);
+}
+
 .img-75 {
   width: 75px;
   max-height: 75px;

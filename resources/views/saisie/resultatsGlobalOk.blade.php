@@ -19,7 +19,7 @@
               <h5 class="lead">{{$message}}</h5>
             </div>
             <div class="card-footer bg-transparent border-0 d-flex justify-content-end">
-              <a href="{{route('saisie.accueil', $saisie->id) }}">
+              <a href="{{route('saisie.show', $saisie->id) }}">
                 <button class="btn btn-otorange rounded-0"><i class="fas fa-arrow-left"></i> Revenir à la saisie</button>
               </a>
               <a href="{{route('accueil')}}">

@@ -85,23 +85,24 @@ class SchiffreController extends Controller
     $chiffresSaisisBruts = Schiffre::select('libelle', 'valeur')
     ->where("saisie_id", $saisie->id)
     ->get();
-    $chiffresSaisis = Collect();
-
-    foreach ($chiffresSaisisBruts as $key => $value) {
-
-      $chiffresSaisis->put($value->libelle, $value->valeur);
-
-    }
+    // $chiffresSaisis = Collect();
+    //
+    // foreach ($chiffresSaisisBruts as $key => $value) {
+    //
+    //   $chiffresSaisis->put($value->libelle, $value->valeur);
+    //
+    // }
     // On récupère les libellé du formulaire dans un json dépendant de
     // l'espèce du type chiffresVL.json
     $chiffresBruts = $this->LitJson('parametres'.$saisie->espece->abbr.'.json');
     // On en fait une collection et l'on structure par groupe (effectif, mortalité, etc)
     $chiffres = Collect($chiffresBruts);
     $chiffresGroupes = $chiffres->groupBy('groupe');
+    // dd($chiffresGroupes);
 
     return view('saisie.schiffres.edit', [
     'saisie' => $saisie,
-    'chiffresSaisis' => $chiffresSaisis,
+    'chiffresSaisis' => $chiffresSaisisBruts,
     'chiffresGroupes' => $chiffresGroupes,
     ]);
   }
@@ -145,7 +146,7 @@ class SchiffreController extends Controller
       foreach ($chiffres as $libelle => $valeur) {
         Schiffre::updateOrCreate(
         ['saisie_id' => $saisie_id, 'libelle' => $libelle],
-        ['valeur' => $valeur]
+        ['valeur' => ($valeur == null) ? 0 : $valeur ]
         );
       }
       // Dans la table salertes, on indique à la colonne "danger"

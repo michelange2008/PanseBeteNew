@@ -6,7 +6,7 @@
 
       @if (!$menu->$niv_1->hasSousmenu)
 
-      <a href="{{ $menu->$niv_1->route }}" class="nav-link"
+      <a href="{{ route($menu->$niv_1->route, $menu->$niv_1->id) }}" class="nav-link"
         id="{{ $menu->$niv_1->id }}">
 
         {{ ucfirst($menu->$niv_1->nom) }}
@@ -18,7 +18,7 @@
     @else
     <li class="nav-item dropdown">
 
-      <a href="{{ $menu->$niv_1->route }}" class="nav-link dropdown-toggle"
+      <a href="#" class="nav-link dropdown-toggle"
         id="{{ $menu->$niv_1->id }}"
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 
@@ -46,7 +46,7 @@
 
               @else
 
-                <a id={{ $menu->$niv_2->id }} class="nav-link dropdown-toggle" href="{{$menu->$niv_2->route}}"data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <a id={{ $menu->$niv_2->id }} class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 
                   <img class="img-40" src="{{url('storage/img/'. $menu->$niv_2->icone)}}" alt="">
 

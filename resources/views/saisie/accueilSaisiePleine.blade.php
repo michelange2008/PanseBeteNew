@@ -14,7 +14,7 @@ Affiche la page d'accueil en cas de saisie déjà remplie avec les éventuelles 
 
       <div class="col-sm-11 col-md-10 col-lg-9">
 
-        @include('lecture.salertes')
+        @include('saisie.salertes.salertes')
 
       </div>
 

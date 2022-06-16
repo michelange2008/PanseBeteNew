@@ -45,14 +45,15 @@ class Indicateurs
 
         } else {
           // On recherche l'intitule du dénominateur nul pour l'inscrire dans $erreurs
-          $libelle_erreur = "Attention";
-          foreach ($this->parametres as $abbr => $param) {
-            if($abbr == $parametre->denom) {
-              $libelle_erreur = $param->libelle;
-            }
-          }
-          // Et on inscrit l'erreur
-          $this->setErreurs($libelle_erreur, "messages.param_nul");
+          // $libelle_erreur = "Attention";
+          // foreach ($this->parametres as $abbr => $param) {
+          //   if($abbr == $parametre->denom) {
+          //     $libelle_erreur = $param->libelle;
+          //   }
+          // }
+          // // Et on inscrit l'erreur
+          // $this->setErreurs($libelle_erreur, "messages.param_nul");
+          $indicateur = 0;
 
         }
         $this->indicateurs->put($parametre->id, $indicateur);
@@ -73,7 +74,7 @@ class Indicateurs
 
         } catch (\Exception $e) {
           // Et on inscrit l'erreur
-          $this->setErreurs($parametre->libelle, "messages.param_nul");
+          $indicateur = 0;
 
         }
         $this->indicateurs->put($parametre->id, $indicateur);
@@ -124,7 +125,7 @@ class Indicateurs
 
       Salerte::updateOrCreate(
       ['saisie_id' => $this->saisie_id, 'alerte_id' => $alerte_id],
-      ['valeur' => $valeur]
+      ['valeur' => ($valeur == null) ? 0 : $valeur]
       );
     }
   }

@@ -17,7 +17,7 @@
             <h5 class="lead">{{$message}}</h5>
           </div>
           <div class="card-footer bg-transparent border-0 d-flex justify-content-end">
-            <a href="{{route('saisie.accueil', session()->get('saisie_id'))}}">
+            <a href="{{route('saisie.show', session()->get('saisie_id'))}}">
               <button class="btn btn-otorange rounded-0"><i class="fas fa-globe"></i> Choisir un autre pôle</button>
             </a>
             <a href="{{route('saisie.alertes', ['theme_id' => $theme->id])}}">

@@ -10,6 +10,8 @@
           class="form-control @error( $name ) is-invalid @enderror"
           type="number"
           name="{{ $name }}"
+          min="{{ $min ?? '' }}"
+          step={{ $step ?? '' }}
           {{-- si c'est une modification on affiche la valeur d'origine --}}
           value="{{ ucfirst($isName) ?? old(ucfirst($name)) }}"
           @isset($required)

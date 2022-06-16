@@ -37,7 +37,7 @@
       <p class="lead">Vous pouvez aussi travailler sur des grilles que vous aviez saisies précédemment&nbsp:</p>
       <div class="row">
         <div class="col-md-8 mb-1">
-          <img class="img-100" src="{{ url('storage/aide/aide_modif_saisie.png') }}" alt="">
+          <img class="img-100" src="{{ url('storage/img/aide/aide_modif_saisie.png') }}" alt="">
         </div>
         <div class="col-md-4">
           <p class="mr-3">les <span class="bg-otorange aide-petit-bouton"> <i class='far fa-trash-alt'></i> supprimer </span> </p>

@@ -4,7 +4,8 @@
     "/css/bootstrap-table.min.css": "/css/bootstrap-table.min.css",
     "/css/jquery-confirm.min.css": "/css/jquery-confirm.min.css",
     "/js/jquery.min.js": "/js/jquery.min.js",
+    "/js/jquery-ui.min.js": "/js/jquery-ui.min.js",
     "/js/jquery-confirm.min.js": "/js/jquery-confirm.min.js",
-    "/resources/js/bootstrap-table-fr-FR.min.js": "/resources/js/bootstrap-table-fr-FR.min.js",
-    "/resources/js/bootstrap-table.min.js": "/resources/js/bootstrap-table.min.js"
+    "/js/bootstrap-table-fr-FR.min.js": "/js/bootstrap-table-fr-FR.min.js",
+    "/js/bootstrap-table.min.js": "/js/bootstrap-table.min.js"
 }

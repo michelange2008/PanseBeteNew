@@ -6,7 +6,11 @@ use App\Models\Sorigine;
 use App\Models\Origine;
 
 /**
- * Ajoute des sorgines pour une saisie données à la liste de origines de l'alerte
+ * Ajoute des sorigines pour une saisie données à la liste de origines de l'alerte
+ * Indique si l'origine est cochée (cad dans la table sorigine) ou non en ajoutant
+ * un attribut cochee à la liste de origines.
+ * Ceela permet de faire l'affichage de la liste des origines avec les cases
+ * déjà coches
  */
 trait AjouteSorigine
 {

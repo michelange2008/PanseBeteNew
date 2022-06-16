@@ -42,14 +42,14 @@ class SaisieController extends Controller
 
     $saisie_id = $this->nouvelleSaisie($elevage->id);
 
-    return redirect()->route('saisie.accueil', ['saisie_id' => $saisie_id]);
+    return redirect()->route('saisie.show', ['saisie_id' => $saisie_id]);
   }
 
   /*
   // Affiche la page d'accueil d'une série
   // quand on fait une nouvelle saisie ou que l'on modifie une ancienne
   */
-    public function accueil($saisie_id)
+    public function show($saisie_id)
     {
       $saisie = Saisie::find($saisie_id);
 
@@ -75,7 +75,7 @@ class SaisieController extends Controller
 
         $salertes = Salerte::where('saisie_id', $saisie_id)->get();
         $salertes = $this->formatSalertes($salertes);
-
+// dd($salertes->where('alerte_id', 2000));
         return view('saisie.accueilSaisiePleine', [
           'saisie' => $saisie,
           'salertes' => $salertes,
@@ -169,7 +169,27 @@ class SaisieController extends Controller
         $liste_origines[] = $value->origine_id;
       }
 
-      return redirect()->route('saisie.accueil', $saisie_id);
+      return redirect()->route('saisie.show', $saisie_id);
+    }
+
+    public function destroy($saisie_id)
+    {
+      session()->put('saisie_id', $saisie_id);
+
+      $elevage = Saisie::where('id', $saisie_id)->first()->elevage_id;
+
+      $effacerElevage = false;
+
+      if(Saisie::where('elevage_id', $elevage)->count() === 1)
+      {
+        $effacerElevage = true;
+      }
+
+      Saisie::destroy($saisie_id);
+
+      if($effacerElevage) Elevage::destroy($elevage);
+
+      return redirect()->back();
     }
 
 

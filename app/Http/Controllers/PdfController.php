@@ -15,7 +15,7 @@ class PdfController extends Controller
     public function index($saisie_id)
     {
       $saisie = Saisie::findOrFail($saisie_id);
-      $pdf = PDF::loadView('lecture.pdfSaisie', [
+      $pdf = PDF::loadView('pdf.pdfSaisie', [
         'saisie' => $saisie,
         'themes' => Theme::all(),
         'categories' => Categorie::all(),

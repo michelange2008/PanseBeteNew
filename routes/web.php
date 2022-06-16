@@ -80,7 +80,6 @@ Route::group(['middleware' => ['auth', 'isValid', 'isAdmin', 'menu']], function(
     Route::get('/create/{alerte_id}', 'create')->name('origine.create');
     Route::post('/store', 'store')->name('origine.store');
     Route::put('/update/{origine_id}', 'update')->name('origine.update');
-    // Route::get('/{origine_id}', 'show')->name('origine.show');
     Route::get('/edit/{origine_id}', 'edit')->name('origine.edit');
     Route::delete('/delete/{origine_id}', 'destroy')->name('origine.destroy');
 
@@ -119,6 +118,8 @@ Route::group(['middleware' => ['auth', 'isValid', 'menu']], function () {
     Route::get('/changeSaisieUser/{ancien_user_id}/{nouveau_user_id}', 'changeSaisieUser')->name('changeSaisieUser');
     // Route utilisée par admin.js pour la même raison que précédemment
     Route::get('/tousSauf/{id}', 'tousSauf')->name('tousSauf');
+    // Route utiliséee par afficherOrigines.js pour récupérer la liste des sorigines d'une salerte
+    Route::get('/originesSalerte/{salerte_id}', 'originesSalerte');
 
   });
 
@@ -146,17 +147,20 @@ Route::group(['middleware' => ['auth', 'isValid', 'menu']], function () {
     Route::controller(SaisieController::class)->group(function() {
 
       Route::get('/saisie/nouvelle/{elevage}/{espece_id}', 'nouvelle')->name('saisie.nouvelle');
-
-      Route::get('/saisie/{saisie_id}', 'accueil')->name('saisie.accueil');
-
+      // Affiche la saisie en cours
+      Route::get('/saisie/{saisie_id}', 'show')->name('saisie.show');
+      // Modifie les observations d'une saisie (les données chiffrées passent par le SchiffreController)
       Route::get('/saisie/observations/{saisie_id}', 'saisieObservations')->name('saisie.observations');
 
       Route::post('/saisie/enregistreObservations', 'enregistreObservations')->name('saisie.enregistreObservations')->middleware('nullToZero');
 
-      Route::get('/saisie/resultats', 'enregistre')->name('saisie.resultats');
+      Route::get('/saisie/destroy/{saisie_id}', 'destroy')->name('saisie.destroy');
+
+      // Route::get('/saisie/resultats', 'enregistre')->name('saisie.resultats');
 
     });
 
+    // Gestion de la saisie des paramètres numériques
     Route::controller(SchiffreController::class)->group(function() {
 
       Route::get('/saisie/schiffres/edit/{saisie_id}', 'edit')->name('schiffre.edit');
@@ -180,14 +184,6 @@ Route::group(['middleware' => ['auth', 'isValid', 'menu']], function () {
       Route::post('/saisie/sorigines/enregistre', 'store')->name('sorigines.store');
 
     });
-
-  // Lecture des saisies
-
-    Route::get('/lecture/detail/{saisie_id}', ['uses' => 'LectureController@detail', 'as' => 'lecture.detail']);
-
-    Route::get('/lecture/supprimer/{saisie_id}', ['uses' => 'LectureController@supprimer', 'as' => 'lecture.supprimer']);
-
-    Route::get('/lecture/originesSalerte/{alerte_id}', ['uses' => 'LectureController@originesSalerte', 'as' => 'lecture.originesSalerte']);
 
 
     Route::get('/lecture/pdf/{saisie_id}', ['uses' => 'PdfController@index', 'as' => 'pdf']);

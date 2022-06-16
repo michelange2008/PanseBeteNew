@@ -20,7 +20,7 @@
               <p><em>({{$saisie->created_at->day}} {{$saisie->created_at->locale('fr')->monthName}} {{$saisie->created_at->year}})</em>
 
                 @if ($saisie->salertes->where('danger', 1)->count() === 0)
-                  Pas d'alerte</p>
+                  {{ ucfirst(__('saisie.no_alerte')) }}</p>
 
                 @elseif ($saisie->salertes->where('danger', 1)->count() === 1)
                   <strong>{{$saisie->salertes->count()}} @lang('saisie.alerte')</strong>
@@ -39,7 +39,7 @@
 
               <div>
 
-                <a href="{{route('saisie.accueil', $saisie->id)}}" class="btn btn-sm btn-otobleu rounded-0 m-1">
+                <a href="{{route('saisie.show', $saisie->id)}}" class="btn btn-sm btn-otobleu rounded-0 m-1">
                   <i class="fa fa-pencil-alt"></i> @lang('saisie.voir') / @lang('saisie.edit')
                 </a>
 
@@ -49,7 +49,7 @@
 
                 <a id="supprime_{{$saisie->id}}"
 
-                  href="{{route('lecture.supprimer', $saisie->id)}}"
+                  href="{{route('saisie.destroy', $saisie->id)}}"
 
                   class=" supprime justify-self-end btn btn-sm btn-otorange rounded-0">
 
@@ -70,5 +70,3 @@
   </div>
 
 </div>
-
-  

@@ -1,5 +1,5 @@
 {{-- Affiche la page de formulaire pour la saisie des parametres d'une
-alerte quand celle ci est de type liste. Appeler par edit ou update de
+alerte quand celle ci est de type liste. Appelé par edit ou update de
 CritalerteController --}}
 @extends('layouts.app')
 
@@ -69,7 +69,7 @@ CritalerteController --}}
 
         <div class="col-sm-11 col-md-10 col-lg-9">
 
-          @enregistreAnnule()
+          @enregistreAnnule(['route' => route('alerte.edit', $alerte->id)])
 
         </div>
 

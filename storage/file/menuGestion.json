@@ -2,7 +2,7 @@
   "admin" : {
     "nom" : "administration",
     "id" : "admin",
-    "route" : "administration",
+    "route" : "admin.index",
     "icone" : "",
     "niveau" : "niv_1",
     "hasSousmenu" : false
@@ -10,7 +10,6 @@
   "indicateurs" : {
     "nom" : "gestion des indicateurs",
     "id" : "indicateurs",
-    "route" : "#",
     "icone" : "",
     "niveau" : "niv_1",
     "hasSousmenu" : true
@@ -26,7 +25,6 @@
   "alertes" : {
     "nom" : "Alertes",
     "id" : "alertes",
-    "route" : "",
     "icone" : "saisie/alertes.svg",
     "niveau" : "niv_2",
     "parent" : "indicateurs",

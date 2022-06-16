@@ -80,7 +80,7 @@ class CritalerteController extends Controller
         $critalertes = Critalerte::where('alerte_id', $alerte_id)->get();
         $alerte = Alerte::find($alerte_id);
 
-        $titre = new Titre('edit.svg', $alerte->nom, false, 'edit_alerte_listes');
+        $titre = new Titre('edit.svg', $alerte->nom, false, 'alerte_listes_edit');
 
         return view('admin.alertes.paramListeForm', [
         'critalertes' => $critalertes,

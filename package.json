@@ -18,6 +18,7 @@
     "laravel-mix": "^6.0.43",
     "lodash": ">=4.17.21",
     "popper.js": "^1.12",
+    "resolve-url-loader": "^5.0.0",
     "sass": "^1.50.1",
     "sass-loader": "^12.6.0",
     "vue": "^3.2.33",
@@ -29,6 +30,8 @@
     "bootstrap-table": "^1.20.1",
     "jquery-confirm": "^3.3.4",
     "jquery-ui": "^1.13.1",
+    "jquery-ui-bundle": "^1.12.1-migrate",
+    "jquery-validate": "^2.0.0",
     "npm": "^8.7.0",
     "poppers": "^0.1.2",
     "table-dragger": "^1.0.3"

@@ -4,9 +4,9 @@ $(function() {
 
       var url_actuelle = window.location.href.match(/^.*\//);
 
-      var url = url_actuelle.toString().replace('saisie', 'lecture');
-
+      var url = url_actuelle.toString().replace('saisie', 'api');
       url = url + 'originesSalerte/' + $(this).attr('salerte_id');
+      console.log(url);
 
       $.alert({
         closeIcon: true,
