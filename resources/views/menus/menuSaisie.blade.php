@@ -43,11 +43,11 @@ Pour les saisies nouvelles sans salertes, le menu n'affiche rien d'autre
             <i class="fa-solid fa-meteor"></i> @lang('titres.l_origines')
           </a>
 
-          <a class="nav-link " href="{{ route('sorigines.show', $saisie->id) }}"
+          {{-- <a class="nav-link " href="{{ route('sorigines.show', $saisie->id) }}"
             title="Ajouter ou modifier des origines des alertes">
             <i class="fa-solid fa-pen-to-square"></i> @lang('titres.s_origines')
           </a>
-
+ --}}
           <div class="nav-item dropdown">
 
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
@@ -64,6 +64,30 @@ Pour les saisies nouvelles sans salertes, le menu n'affiche rien d'autre
 
               <a class="dropdown-item" href="{{ route('saisie.observations', $saisie->id) }}">
                 <i class="fa-solid fa-eye"></i> @lang('titres.observations_edit')
+              </a>
+
+            </div>
+
+          </div>
+
+          <div class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+              role="button" aria-haspopup="true" aria-expanded="false"
+              title="Editer les PDF">
+              <i class="fa-solid fa-file-pdf"></i> @lang('titres.pdf_edit')
+            </a>
+
+            <div class="dropdown-menu">
+
+              <a class="dropdown-item" href="{{ route('pdf.modele', $saisie->espece->id) }}"
+                  target = '_blank'>
+                <i class="fa-solid fa-table-list"></i> @lang('titres.pdf_modele')
+              </a>
+
+              <a class="dropdown-item" href="{{ route('pdf.saisie', $saisie->id) }}"
+                  target="_blank">
+                <i class="fa-solid fa-square-poll-horizontal"></i> @lang('titres.pdf_saisie')
               </a>
 
             </div>

@@ -31,4 +31,9 @@ class Espece extends Model
       return $this->belongsToMany(Note::class);
     }
 
+    public function chiffres()
+    {
+      return $this->belongsToMany(Chiffre::class);
+    }
+
 }

@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('paraferme_user', function (Blueprint $table) {
-          $table->bigIncrements();
+          $table->bigIncrements('id');
           $table->foreignId('user_id')->constrained();
           $table->foreignId('paraferme_id')->constrained()
                 ->onUpdate('cascade')->onDelete('cascade');

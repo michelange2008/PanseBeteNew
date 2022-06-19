@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Alerte;
 use App\Models\User;
 use App\Models\Paraferme;
+use App\Models\Chiffre;
+use App\Models\Espece;
+
 
 
 class DevController extends Controller
@@ -14,18 +17,12 @@ class DevController extends Controller
     {
       echo "page pour faire des choses dans la bdd";
 
-      $user = User::find(10);
+      $chiffres = Chiffre::all();
+      $espece = Espece::find(2);
 
-
-      $tab = json_decode('{"1":"bggggb","2":"nhhhhhhhhhn"}');
-
-      dump(json_encode($tab));
-
-
-      Paraferme::updateOrCreate(
-        ['nom' => 'Aimentation'],
-        ['liste' => json_encode($tab, JSON_UNESCAPED_SLASHES)]
-      );
+      foreach ($chiffres as $chiffre) {
+        $espece->chiffres()->attach($chiffre->id);
+      }
 
     }
 }

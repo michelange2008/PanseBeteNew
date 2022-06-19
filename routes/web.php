@@ -161,32 +161,44 @@ Route::group(['middleware' => ['auth', 'isValid', 'menu']], function () {
     });
 
     // Gestion de la saisie des paramètres numériques
-    Route::controller(SchiffreController::class)->group(function() {
+    Route::prefix('/saisie/schiffres')->controller(SchiffreController::class)->group(function() {
 
-      Route::get('/saisie/schiffres/edit/{saisie_id}', 'edit')->name('schiffre.edit');
+      Route::get('/edit/{saisie_id}', 'edit')->name('schiffre.edit');
 
-      Route::post('/saisie/schiffres/store', 'store')->name('schiffre.store');
+      Route::post('/store', 'store')->name('schiffre.store');
 
-      Route::get('/saisie/schiffres/{saisie_id}', 'show')->name('schiffre.show');
+      Route::get('/{saisie_id}', 'show')->name('schiffre.show');
+
+    });
+
+    Route::controller(SalerteController::class)->group(function() {
+
+      Route::get('/salerte/{saisie_id}/{theme_id}', 'index')->name('salerte.index');
 
     });
 
     // Routes des Sorigines
 
-    Route::controller(SorigineController::class)->group(function() {
+    Route::prefix('/saisie/sorigines')->controller(SorigineController::class)->group(function() {
 
-      Route::get('/saisie/sorigines/{saisie_id}', 'index')->name('sorigines.index');
+      Route::get('/{saisie_id}', 'index')->name('sorigines.index');
 
-      Route::get('/saisie/sorigines/show/{saisie_id}', 'show')->name('sorigines.show');
+      Route::get('/show/{saisie_id}', 'show')->name('sorigines.show');
 
-      Route::post('/saisie/sorigines/edit', 'edit')->name('sorigines.edit');
+      Route::post('/edit', 'edit')->name('sorigines.edit');
 
-      Route::post('/saisie/sorigines/enregistre', 'store')->name('sorigines.store');
+      Route::post('/enregistre', 'store')->name('sorigines.store');
 
     });
 
+    Route::prefix('pdf')->controller(PdfController::class)->group(function() {
 
-    Route::get('/lecture/pdf/{saisie_id}', ['uses' => 'PdfController@index', 'as' => 'pdf']);
+      // Tableau vide pour la saisie de chiffres
+      Route::get('/{espece}', 'PdfController@modele')->name('pdf.modele');
+      // Exportation de la saisie
+      Route::get('/saisie/{saisie}', 'PdfController@saisie')->name('pdf.saisie');
+
+    });
 
   // Gestion des notes
 

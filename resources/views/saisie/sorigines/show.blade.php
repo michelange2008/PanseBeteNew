@@ -86,7 +86,9 @@ alertes par thème et propose un bouton pour choisir les origines
 
       <div class="col-sm-11 col-md-10 col-lg-9">
 
-        @synthese()
+        @enregistreAnnule([
+
+        ])
 
       </div>
 

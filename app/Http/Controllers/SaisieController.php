@@ -75,7 +75,7 @@ class SaisieController extends Controller
 
         $salertes = Salerte::where('saisie_id', $saisie_id)->get();
         $salertes = $this->formatSalertes($salertes);
-// dd($salertes->where('alerte_id', 2000));
+
         return view('saisie.accueilSaisiePleine', [
           'saisie' => $saisie,
           'salertes' => $salertes,

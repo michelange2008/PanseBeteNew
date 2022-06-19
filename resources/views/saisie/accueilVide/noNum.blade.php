@@ -23,4 +23,11 @@
   "fa" => "fa-pen-to-square",
   ])
 
+  @vers([
+  'couleur' => 'otorange',
+  'route' => route('pdf.modele', $saisie->espece->id),
+  'target' => '_blank',
+  'libelle' => __('boutons.pdf_modele'),
+  "fa" => "fa-solid fa-file-pdf",
+  ])
 </div>

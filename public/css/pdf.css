@@ -67,3 +67,20 @@ h4 {
   border-left: solid 4px slategrey;
 
 }
+
+.table-groupe {
+  background-color:lightgrey;
+}
+
+.table-chiffres {
+  padding: 6px"
+}
+
+.table-chiffres-bordure {
+  border-bottom:1px solid grey;
+  padding: 5px"
+}
+
+.table-blanc {
+  color: white;
+}

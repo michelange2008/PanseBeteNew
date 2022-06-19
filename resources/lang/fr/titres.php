@@ -3,6 +3,7 @@
 return array(
   'titre' => 'titre',
   'synth_globale' => 'Synthèse globale',
+  'detail_theme' => "Détail du thème",
   'd_chiffrees' => "Données chiffrées",
   'l_origines' => "Origines",
   's_origines' => "Modifier les origines",
@@ -28,4 +29,7 @@ return array(
   'user_edit' => "Modification de mes informations",
   'paraferme_create' => "Nouveau paramètre d'exploitation",
   'paraferme_edit' => "Modifier le paramètre d'exploitation",
+  'pdf_edit' => "Editer les PDF",
+  'pdf_modele' => "Fiche vierge",
+  'pdf_saisie' => "Synthèse",
 );

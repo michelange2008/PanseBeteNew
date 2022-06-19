@@ -107,7 +107,7 @@ class SorigineController extends Controller
         $saisie_id = $request->saisie_id;
         $salerte_id = $request->salerte_id;
 
-        $origines_id = $request->except(['_token', 'saisie_id', 'salerte_id']);
+        $origines_id = $request->except(['_token', 'saisie_id', 'salerte_id', 'theme_id']);
         $sorigines = Sorigine::where('saisie_id', $saisie_id)->where('salerte_id', $salerte_id)->delete();
 
         foreach ($origines_id as $origine_id) {
@@ -118,7 +118,10 @@ class SorigineController extends Controller
             'origine_id' => $origine_id]);
         }
 
-        return redirect()->route('saisie.show', ['saisie_id' => $saisie_id]);
+        return redirect()->route('salerte.index', [
+          'saisie_id' => $saisie_id,
+          'theme_id' => $request->theme_id,
+        ]);
 
       }
 
