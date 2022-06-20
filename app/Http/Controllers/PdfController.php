@@ -10,9 +10,12 @@ use App\Models\Espece;
 use App\Models\Chiffre;
 use PDF;
 
+use App\Traits\CategoriesTools;
+use App\Traits\ThemesTools;
+
 class PdfController extends Controller
 {
-
+  use CategoriesTools, ThemesTools;
     /**
      * Fournit un pdf avec une grille vide pour saisir les données chiffrées
      *
@@ -38,11 +41,12 @@ class PdfController extends Controller
     }
     public function saisie(Saisie $saisie)
     {
+      $categoriesAvecOrigines = $this->categoriesAvecOrigines($saisie);
 
       $pdf = PDF::loadView('pdf.pdfSaisie', [
         'saisie' => $saisie,
         'themes' => Theme::all(),
-        'categories' => Categorie::all(),
+        'categories' => $categoriesAvecOrigines,
       ]);
       $nomFichier = $saisie->elevage->nom."_".$saisie->espece->nom."_".$saisie->updated_at.".pdf";
 

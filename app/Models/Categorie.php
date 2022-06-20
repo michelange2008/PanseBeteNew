@@ -10,7 +10,7 @@ class Categorie extends Model
 
     public function alertes()
     {
-      return $this->hasMany(Alerte::class);
+      return $this->hasMany(Origine::class);
     }
 
 }

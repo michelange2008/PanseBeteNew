@@ -4,6 +4,8 @@ namespace App\Traits;
 use DB;
 use App\Models\Theme;
 use App\Models\Alerte;
+use App\Models\Saisie;
+use App\Models\Salerte;
 
 /**
  * Outils de manipulation des thèmes
@@ -29,6 +31,27 @@ trait ThemesTools
     $themes = Theme::find($usedThemes);
 
     return $themes;
+  }
+
+  /**
+   * Ne garde que les themes d'une saisie donnée
+   *
+   * @param Saisie $saisie saisie en cours
+   * @return Theme $themes liste des themes avec alerte de la saisie
+   */
+  public function themesAvecAlerte(Saisie $saisie)
+  {
+    $salertes = Salerte::where('saisie_id', $saisie->id)->get();
+
+    $themeIdAvecAlerte = collect();
+
+    foreach ($salertes as $salerte) {
+      dump($salerte->alerte->theme_id);
+      $themeIdAvecAlerte->push($salerte->alerte->theme_id);
+
+    }
+
+    dd(Theme::find($themeIdAvecAlerte));
   }
   /*
   // Renvoie la liste des thèmes en ayant enlevé ceux qui ne concernent pas une espèce

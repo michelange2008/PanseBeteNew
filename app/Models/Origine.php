@@ -21,4 +21,9 @@ class Origine extends Model
         return $this->hasMany(Sorigine::class);
     }
 
+    public function categorie()
+    {
+      return $this->belongsTo(Categorie::class);
+    }
+
 }
