@@ -34,24 +34,29 @@ trait ThemesTools
   }
 
   /**
-   * Ne garde que les themes d'une saisie donnée
+   * Ne garde que les themes d'une saisie donnée quand y a des salertes dont
+   * l'alerte a ce thème
    *
    * @param Saisie $saisie saisie en cours
    * @return Theme $themes liste des themes avec alerte de la saisie
    */
-  public function themesAvecAlerte(Saisie $saisie)
+  public function themesIdAvecAlerte(Saisie $saisie)
   {
     $salertes = Salerte::where('saisie_id', $saisie->id)->get();
 
     $themeIdAvecAlerte = collect();
 
     foreach ($salertes as $salerte) {
-      dump($salerte->alerte->theme_id);
-      $themeIdAvecAlerte->push($salerte->alerte->theme_id);
+
+      if ($salerte->danger) {
+
+        $themeIdAvecAlerte->push($salerte->alerte->theme_id);
+
+      }
 
     }
 
-    dd(Theme::find($themeIdAvecAlerte));
+    return $themeIdAvecAlerte;
   }
   /*
   // Renvoie la liste des thèmes en ayant enlevé ceux qui ne concernent pas une espèce

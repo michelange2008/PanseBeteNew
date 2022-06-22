@@ -17,7 +17,7 @@
 
 <div class="page-break"></div>
 
-<!-- Affichage par Pole -->
-
+<!-- Affichage par Theme -->
+@include('pdf.parTheme')
 
 @endsection

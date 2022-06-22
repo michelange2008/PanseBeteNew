@@ -6,15 +6,6 @@ Présente les données par thème (global, repro, mamelle, etc.)
   <h2>Résultats par pôle</h2>
   @foreach($themes as $theme)
 
-    <?php $affiche = true;
-    $i = 0;  ?>
-    @foreach($saisie->salertes->where('danger', 1) as $sAlerte)
-      @if($sAlerte->alerte->theme->id === $theme->id)
-        <?php $affiche = false;
-        $i++;?>
-      @endif
-    @endforeach
-
     @if($affiche)
       <div class="theme theme-ok">
         <h3>{{mb_strtoupper($theme->nom)}} (OK)</h3>

@@ -43,9 +43,17 @@ class PdfController extends Controller
     {
       $categoriesAvecOrigines = $this->categoriesAvecOrigines($saisie);
 
+      $themes = Theme::all();
+
+      $themesIdAvecAlerte = $this->themesIdAvecAlerte($saisie);
+      foreach ($themes as $theme) {
+        dump($theme->whereIn($theme->id, $themesIdAvecAlerte)->get());
+      }
+dd('');
       $pdf = PDF::loadView('pdf.pdfSaisie', [
         'saisie' => $saisie,
         'themes' => Theme::all(),
+        'themesIdAvecAlerte' => $themesIdAvecAlerte,
         'categories' => $categoriesAvecOrigines,
       ]);
       $nomFichier = $saisie->elevage->nom."_".$saisie->espece->nom."_".$saisie->updated_at.".pdf";
