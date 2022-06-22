@@ -44,19 +44,24 @@ trait ThemesTools
   {
     $salertes = Salerte::where('saisie_id', $saisie->id)->get();
 
-    $themeIdAvecAlerte = collect();
+    $themes = Theme::all();
 
     foreach ($salertes as $salerte) {
 
       if ($salerte->danger) {
 
-        $themeIdAvecAlerte->push($salerte->alerte->theme_id);
+        $themes->where('id', $salerte->alerte->theme->id)->salerte = true;
 
       }
 
-    }
+      else {
 
-    return $themeIdAvecAlerte;
+        $themes->where('id', $salerte->alerte->theme->id)->salerte = false;
+      }
+    }
+    dd($themes);
+
+    // return $themeIdAvecAlerte;
   }
   /*
   // Renvoie la liste des thèmes en ayant enlevé ceux qui ne concernent pas une espèce

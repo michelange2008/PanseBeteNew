@@ -46,9 +46,11 @@ class PdfController extends Controller
       $themes = Theme::all();
 
       $themesIdAvecAlerte = $this->themesIdAvecAlerte($saisie);
+
       foreach ($themes as $theme) {
-        dump($theme->whereIn($theme->id, $themesIdAvecAlerte)->get());
+
       }
+
 dd('');
       $pdf = PDF::loadView('pdf.pdfSaisie', [
         'saisie' => $saisie,
