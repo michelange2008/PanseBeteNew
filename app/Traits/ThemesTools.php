@@ -46,22 +46,29 @@ trait ThemesTools
 
     $themes = Theme::all();
 
+    foreach ($themes as $theme) {
+
+      $theme->salerte = false;
+
+    }
+
     foreach ($salertes as $salerte) {
 
       if ($salerte->danger) {
 
-        $themes->where('id', $salerte->alerte->theme->id)->salerte = true;
+        foreach ($themes as $theme) {
+
+          if($theme->id == $salerte->alerte->theme_id) {
+
+            $theme->salerte = true;
+          }
+        }
 
       }
 
-      else {
-
-        $themes->where('id', $salerte->alerte->theme->id)->salerte = false;
-      }
     }
-    dd($themes);
 
-    // return $themeIdAvecAlerte;
+    return $themes;
   }
   /*
   // Renvoie la liste des thèmes en ayant enlevé ceux qui ne concernent pas une espèce

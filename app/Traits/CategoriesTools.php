@@ -22,7 +22,7 @@ trait CategoriesTools
     $salertes = Salerte::where('saisie_id', $saisie->id)->get();
     // On crée une collection vide
     $categorieIdAvecOrigine = collect();
-    //On passe en les salertes
+    // On passe en revue les salertes
     foreach ($salertes as $salerte) {
       // Si ces salertes ont des sorigines
       if ($salerte->sorigines !== null) {
@@ -33,6 +33,7 @@ trait CategoriesTools
         }
       }
     }
+    // Et on recherche toutes les catégories pour lesquelles il y une origine
     $categories = Categorie::find($categorieIdAvecOrigine);
 
     return $categories;

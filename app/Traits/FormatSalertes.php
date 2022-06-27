@@ -4,6 +4,7 @@ namespace App\Traits;
 use App\Models\Alerte;
 use App\Models\Critalerte;
 use App\Models\Sorigine;
+use App\Models\Numalerte;
 
 use App\Traits\TypesTools;
 
@@ -52,8 +53,9 @@ trait FormatSalertes
   public function normeNum($salerte)
   {
 
-      $borne_inf = $salerte->alerte->borne_inf;
-      $borne_sup = $salerte->alerte->borne_sup;
+      $numalerte = Numalerte::where('alerte_id', $salerte->alerte->id)->first();
+      $borne_inf = ($numalerte !== null) ? $numalerte->borne_inf : null;
+      $borne_sup = ($numalerte !== null) ? $numalerte->borne_sup : null;
       $unite = $salerte->alerte->unite;
 
       // Si aucune borne n'est nulle, c'est

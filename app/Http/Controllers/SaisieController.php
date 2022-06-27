@@ -23,10 +23,11 @@ use App\Traits\CreeSaisie;
 use App\Traits\LitJson;
 use App\Traits\ThemesTools;
 use App\Traits\FormatSalertes;
+use App\Traits\TypesTools;
 
 class SaisieController extends Controller
 {
-  use CreeAlerte, CreeSaisie, LitJson, SalerteIsDanger, ThemesTools, FormatSalertes;
+  use CreeAlerte, CreeSaisie, LitJson, SalerteIsDanger, ThemesTools, FormatSalertes, TypesTools;
 
   /*
   // Méthode qui conduit vers une nouvelle saisie
@@ -154,10 +155,22 @@ class SaisieController extends Controller
       foreach ($datas as $Aalerte_id => $valeur) {
         // On enlève le préfixe A pour récupérer l'id de l'alerte
         $alerte_id = substr($Aalerte_id, 1);
+        $alerte = Alerte::find($alerte_id);
         // Utilisation du trait CréeAlerte pour savoir si la valeur est en déhors des clous
+        $danger = $this->creeAlerte($alerte, $valeur);
+        // S'il existe déjà une salerte avec cette alerte mais d'une valeur différente
+        // il faut supprimer toutes les origines s'il y en a
+        $salerte =Salerte::where('saisie_id', $saisie_id)
+                  ->where('alerte_id', $alerte_id)
+                  ->where('valeur', '<>', $valeur)
+                  ->first();
+        if ($salerte !== null) {
+          $sorigines = Sorigine::where('salerte_id', $salerte->id)->get();
+          Sorigine::destroy($sorigines);
+        }
         Salerte::updateOrCreate(
         ['alerte_id' => $alerte_id, 'saisie_id' => $saisie_id],
-        ['valeur' => $valeur, 'danger' => $this->creeAlerte($alerte_id, $valeur)],
+        ['valeur' => $valeur, 'danger' => $danger],
         );
       }
       // On passe la variable hasObs à true

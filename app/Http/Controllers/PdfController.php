@@ -8,14 +8,16 @@ use App\Models\Theme;
 use App\Models\Categorie;
 use App\Models\Espece;
 use App\Models\Chiffre;
+use App\Models\Salerte;
 use PDF;
 
 use App\Traits\CategoriesTools;
 use App\Traits\ThemesTools;
+use App\Traits\FormatSalertes;
 
 class PdfController extends Controller
 {
-  use CategoriesTools, ThemesTools;
+  use CategoriesTools, ThemesTools, FormatSalertes;
     /**
      * Fournit un pdf avec une grille vide pour saisir les données chiffrées
      *
@@ -41,20 +43,19 @@ class PdfController extends Controller
     }
     public function saisie(Saisie $saisie)
     {
+      $salertes = Salerte::where('saisie_id', $saisie->id)->get();
+      $salertes = $this->formatSalertes($salertes);
+      // Utilisation du trait CategoriesTools pour avoir les catégories pour
+      // lesquelles il y a une origine.
       $categoriesAvecOrigines = $this->categoriesAvecOrigines($saisie);
-
-      $themes = Theme::all();
-
+      // Utilisation du trait ThemesTools pour ajouter un attribut booleen salerte
+      // au cous où il y a une ou des salertes pour un theme donné -> permet un
+      // affichage spécifique dans le pdf
       $themesIdAvecAlerte = $this->themesIdAvecAlerte($saisie);
 
-      foreach ($themes as $theme) {
-
-      }
-
-dd('');
       $pdf = PDF::loadView('pdf.pdfSaisie', [
         'saisie' => $saisie,
-        'themes' => Theme::all(),
+        'salertes' => $salertes,
         'themesIdAvecAlerte' => $themesIdAvecAlerte,
         'categories' => $categoriesAvecOrigines,
       ]);

@@ -19,7 +19,7 @@ trait SalerteIsDanger
         // On met la variable danger à false
         $danger = false;
         // On teste la variable valeur par rapport aux bornes de l'alerte correspondante
-        if ($salerte->valeur < $salerte->alerte->borne_inf || $salerte->valeur > $salerte->alerte->borne_sup) {
+        if ($salerte->valeur < $salerte->alerte->numalerte->borne_inf || $salerte->valeur > $salerte->alerte->borne_sup) {
           // Si elle est en dehors de bornes, on passe la variable danger à true
           $danger = true;
 
