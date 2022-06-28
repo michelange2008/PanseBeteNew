@@ -14,11 +14,12 @@ use App\Fournisseurs\TabLab;
 use App\Traits\LitJson;
 use App\Traits\TypesTools;
 use App\Traits\FormTemplate;
+use App\Traits\JsonFromBDD;
 
 class ParafermeController extends Controller
 {
 
-  use LitJson, TypesTools, FormTemplate;
+  use LitJson, TypesTools, FormTemplate, JsonFromBDD;
     /**
      * Display a listing of the resource.
      *

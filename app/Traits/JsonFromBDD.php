@@ -21,7 +21,7 @@ trait JsonFromBDD
     // Elimine les antislash
     $champ = str_replace('\\', '', $champ);
     // transforme le string en array
-    $tableau = json_decode($champ);
+    $tableau = json_decode($champ, JSON_UNESCAPED_UNICODE );
 
     return $tableau;
 

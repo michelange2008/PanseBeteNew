@@ -132,6 +132,7 @@ class SchiffreController extends Controller
     // La classe Indicateurs va stocker les ondicateurs calculés dans la table sindicateurs
     // si la saisie n'est pas valide on retourne au formulaire
     $indicateurs->calculIndicateurs();
+    
     if($indicateurs->getErreurs()->count() > 0) {
 
       return redirect()->back()->with(['message' => $indicateurs->getErreurs(), 'couleur' => 'alert-danger']);

@@ -12,7 +12,6 @@ trait LitJson
 
       $infos = json_decode($json_source);
 
-
       return $infos;
 
   }

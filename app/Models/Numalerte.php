@@ -14,7 +14,7 @@ class Numalerte extends Model
 
     public function alerte()
     {
-      return $this->hasOne(Alerte::class);
+      return $this->belongsTo(Alerte::class);
     }
 
     public function num()

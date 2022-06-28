@@ -168,6 +168,7 @@ class SaisieController extends Controller
           $sorigines = Sorigine::where('salerte_id', $salerte->id)->get();
           Sorigine::destroy($sorigines);
         }
+        // Ensuite on met à jour ou on crée la salerte correspondante
         Salerte::updateOrCreate(
         ['alerte_id' => $alerte_id, 'saisie_id' => $saisie_id],
         ['valeur' => $valeur, 'danger' => $danger],
