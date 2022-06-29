@@ -227,15 +227,15 @@ class TabLab extends Tab
 
               break;
 
-              case 'json':
-              try {
-                $item = $this->jsonFactory($id, $value);
-
-              } catch (\Exception $e) {
-                dump($e."problème avec l'utilisation du lien jsonFactory");
-                dump($colonne);
-              }
-            break;
+            //   case 'json':
+            //   try {
+            //     $item = $this->jsonFactory($id, $value);
+            //
+            //   } catch (\Exception $e) {
+            //     dump($e."problème avec l'utilisation du lien jsonFactory");
+            //     dump($colonne);
+            //   }
+            // break;
 
             default:
               $item = $this->itemFactory($id, $value);

@@ -3,14 +3,13 @@ namespace App\Traits;
 
 use DB;
 use App\Traits\LitJson;
-use App\Traits\JsonFromBDD;
 /**
  * Destiné à renvoyer la liste des éléments pour un formulaire create ou edit
  *
  */
 trait FormTemplate
 {
-  use LitJson, JsonFromBDD;
+  use LitJson;
 
   /**
    * Appelée par createForm ou editForm
@@ -113,19 +112,9 @@ trait FormTemplate
         // Dans le cas d'une liste déroulante qui fait référence à une autre
         // table, le name est sous la forme trucmuche_id
         $item = $details->name;
-        // Et donc le isName quii sert à défionir la valeur par défaut prend
+        // Et donc le isName qui sert à définir la valeur par défaut prend
         // la valeur dans le model du champ trucmuche_id.
         $details->isName = $model->$item;
-      // S'il existe un champs format ( = format de données dans la BDD)
-      } elseif (isset($details->format)) {
-        // Si ce champs format = json, cela signifie que les données sont sous
-        // forme json dans la BDD
-        if ($details->format == 'json') {
-
-          // Utilisation du trait JsonFromBDD pour mettre en forme le champs
-          $details->isName = $this->jsonTabToString($model->$element, ', ');
-
-        }
 
       } else {
 

@@ -14,12 +14,12 @@ use App\Fournisseurs\TabLab;
 use App\Traits\LitJson;
 use App\Traits\TypesTools;
 use App\Traits\FormTemplate;
-use App\Traits\JsonFromBDD;
+use App\Traits\StringTools;
 
 class ParafermeController extends Controller
 {
 
-  use LitJson, TypesTools, FormTemplate, JsonFromBDD;
+  use LitJson, TypesTools, FormTemplate, StringTools;
     /**
      * Display a listing of the resource.
      *
@@ -64,7 +64,7 @@ class ParafermeController extends Controller
         'nom' => 'required|max:191',
         'unite' => 'nullable|max:10',
         'type' => 'required',
-        'liste' => Rule::requiredIf(fn() => $request->type == 'liste'),
+        'parties' => Rule::requiredIf(fn() => $request->type == 'liste'),
       ])->validate();
 
       // Et on stocke les infos
@@ -72,10 +72,10 @@ class ParafermeController extends Controller
       $paraferme->nom = $request->nom;
       $paraferme->unite = $request->unite;
       $paraferme->type = $request->type;
-      $paraferme->liste = ($request->type == 'liste')
-                          ? $this->stringToJson($request->liste)
-                          : null;
-
+      // on utilise la méthode cleanString du trait tringTools pour nettoyer
+      $paraferme->parties = ($request->type == 'liste')
+                            ? $this->cleanString($request->parties)
+                            : null;
       $paraferme->save();
 
       return redirect()->route('paraferme.index')->with(['message' => 'paraferme_store']);
@@ -125,7 +125,7 @@ class ParafermeController extends Controller
         'nom' => 'required|max:191',
         'unite' => 'nullable|max:10',
         'type' => 'required',
-        'liste' => Rule::requiredIf(fn() => $request->type == 'liste'),
+        'parties' => Rule::requiredIf(fn() => $request->type == 'liste'),
       ])->validate();
 
       Paraferme::updateOrCreate(
@@ -134,12 +134,14 @@ class ParafermeController extends Controller
           'nom' => $request->nom,
           'unite' => $request->unite,
           'type' => $request->type,
-          'liste' => ($request->type == 'liste')
-                      ? $this->stringToJson($request->liste)
+          'parties' => ($request->type == 'liste')
+          // on utilise la méthode cleanString du trait tringTools pour nettoyer
+                      ? $this->cleanString($request->parties)
                       : null,
         ]
 
       );
+      // dd($request->nom);
 
       return redirect()->route('paraferme.index')
               ->with(['message' => 'paraferme_update']);

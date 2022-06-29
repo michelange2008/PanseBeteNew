@@ -21,9 +21,9 @@
       "aligne" : "left",
       "sortable" : true
     },
-    "liste" : {
-      "col" : "liste",
-      "type" : "json",
+    "parties" : {
+      "col" : "parties",
+      "type" : "item",
       "aligne" : "left",
       "sortable" : false
     }

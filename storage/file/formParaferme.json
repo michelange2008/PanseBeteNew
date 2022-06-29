@@ -25,14 +25,13 @@
       "required" : true,
       "options" : {}
     },
-    "liste" : {
+    "parties" : {
       "label" : "Eléments de la liste (uniquement si Type = Liste)",
-      "name" : "liste",
+      "name" : "parties",
       "type" : "textarea",
-      "format" : "json",
+      "format" : "text",
       "placeholder" : "Utilisez la virgule comme séparateur",
-      "required" : true,
-      "isName" : ""
+      "required" : true
     }
   }
 }

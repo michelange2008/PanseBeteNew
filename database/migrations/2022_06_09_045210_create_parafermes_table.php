@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nom', 191);
             $table->enum('type', ['int', 'float', 'liste']);
             $table->string('unite', 10)->nullable();
-            $table->json('liste')->nullable();
+            $table->longText('parties')->nullable();
         });
     }
 

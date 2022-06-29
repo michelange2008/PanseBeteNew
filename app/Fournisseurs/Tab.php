@@ -1,11 +1,8 @@
 <?php
 namespace App\Fournisseurs;
 
-use App\Traits\JsonFromBDD;
-
 abstract class Tab
 {
-  use JsonFromBDD;
   /*
   * Crée les items de la liste à afficher renvoyer par la méthode liste
   */
@@ -19,24 +16,6 @@ abstract class Tab
 
     $item->nom = $col;
 
-    return $item;
-  }
-
-  public function jsonFactory($id, $col)
-  {
-    $item = collect();
-
-    $item->action = null;
-
-    $item->id = $id;
-
-    $nom = '';
-
-    if($col !== null) {
-      // On décode le json avec le trait JsonFromBDD
-      // et qui ajoute le séparateur
-      $item->nom = $this->jsonTabToString($col, ' - ');
-    }
     return $item;
   }
 
