@@ -36,7 +36,9 @@ trait StringTools
     $parties = rtrim($parties, ',');
     // On déplace les espaces avant la virgule après la virgule
     $parties = str_replace(' ,', ', ', $parties);
-
+    // On passe tout en minuscule
+    $parties = mb_strtolower($parties);
+    
     return $parties;
   }
 }

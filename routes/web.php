@@ -98,8 +98,8 @@ Route::group(['middleware' => ['auth', 'isValid', 'menu']], function () {
     Route::get('/', 'index')->name('user.index');
     Route::get('/create', 'create')->name('user.create');
     Route::post('/store', 'store')->name('user.store');
-    Route::get('/{id}', 'show')->name('user.show');
-    Route::get('/edit/{id}', 'edit')->name('user.edit');
+    Route::get('/{user}', 'show')->name('user.show');
+    Route::get('/edit/{user}', 'edit')->name('user.edit');
     Route::put('/update/{id}', 'update')->name('user.update');
     Route::delete('/destroy/{id}', 'destroy')->name('user.destroy');
 
@@ -190,7 +190,7 @@ Route::group(['middleware' => ['auth', 'isValid', 'menu']], function () {
       Route::post('/enregistre', 'store')->name('sorigines.store');
 
     });
-
+    // Production de pdf
     Route::prefix('pdf')->controller(PdfController::class)->group(function() {
 
       // Tableau vide pour la saisie de chiffres
@@ -199,6 +199,21 @@ Route::group(['middleware' => ['auth', 'isValid', 'menu']], function () {
       Route::get('/saisie/{saisie}', 'PdfController@saisie')->name('pdf.saisie');
 
     });
+
+  // Route de gestion des informations de la ferme d'un user
+  Route::prefix('ferme')->controller(FermeController::class)->group(function() {
+
+    Route::get('/{user}', 'index')->name('ferme.index');
+
+    Route::get('/{user}/create', 'create')->name('ferme.create');
+
+    Route::post('{user}', 'store')->name('ferme.store');
+
+    Route::get('/edit/{user}', 'edit')->name('ferme.edit');
+
+    Route::put('{user}', 'update')->name('ferme.update');
+
+  });
 
   // Gestion des notes
 

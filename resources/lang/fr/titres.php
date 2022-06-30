@@ -32,4 +32,5 @@ return array(
   'pdf_edit' => "Editer les PDF",
   'pdf_modele' => "Fiche vierge",
   'pdf_saisie' => "Synthèse",
+  'ferme_edit' => "Modifier les paramètres de la ferme"
 );

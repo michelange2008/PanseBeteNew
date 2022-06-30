@@ -27,7 +27,7 @@ class ParafermeController extends Controller
      */
     public function index()
     {
-        $parafermes = DB::table('parafermes')->get();
+        $parafermes = DB::table('parafermes')->orderBy('ordre')->get();
 
         $tabLab = new TabLab(datas: $parafermes, json: 'indexTabParaferme.json');
 

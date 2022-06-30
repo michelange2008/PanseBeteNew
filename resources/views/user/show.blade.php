@@ -30,31 +30,17 @@
 
       <div class="col-sm-11 col-md-10 col-lg-9">
 
-        <div class="card" style="width: 18rem;">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
 
-          <div class="card-header">
+          <div class="col">
 
-            <h5 class="card-title">{{ ucfirst($user->name) }}</h5>
-
-
-          </div>
-
-          <div class="card-body">
-
-            <p class="card-text fst-italic">{{ $user->email }}</p>
-            <p class="card-text">{{ $user->profession }}</p>
-            <p class="card-text">{{ $user->region }}</p>
-            @if ($user->admin)
-              <p class="card-text fw-bold">Administrateur du site</p>
-            @endif
+              @include('user.profil')
 
           </div>
 
-          <div class="card-footer">
+          <div class="col">
 
-            @edit([
-              'route' => route('user.edit', $user->id),
-            ])
+            @include('user.ferme')
 
           </div>
 
@@ -63,6 +49,7 @@
       </div>
 
     </div>
+
   </div>
 
 @endsection

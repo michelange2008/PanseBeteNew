@@ -92,11 +92,8 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-
-        $user = User::find($id);
-
         $titre = new Titre(icone: 'profil_clair.svg', titre: 'user_info' );
 
         return view('user.show', [
@@ -111,10 +108,8 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($user)
     {
-      $user = User::find($id);
-
       $elements = $this->editForm($user, 'formUser.json');
 
       return view('admin.editCreateForm', [
@@ -160,35 +155,5 @@ class UserController extends Controller
 
         return response()->json(['message' => $id]);
     }
-
-    // public function indexOld()
-    // {
-    //   if(!Auth::user()->admin)
-    //   {
-    //     return view('accueil', [
-    //       'especes' => Espece::all(),
-    //     ]);
-    //   }
-    //   else
-    //   {
-    //     $users =User::orderBy('admin', 'desc')->get();
-    //     $saisies_groupees = Saisie::all()->mapToGroups(function($item, $key) {
-    //       return [$item['user_id'] => $item['id']];
-    //     });
-    //     $users_saisies = $saisies_groupees->keys();
-    //
-    //     foreach ($users as $user) {
-    //
-    //       if(!$users_saisies->contains($user->id))
-    //       {
-    //         $saisies_groupees->put($user->id, collect([]));
-    //       }
-    //     }
-    //     return view('admin/admin', [
-    //       'users' => $users,
-    //       'saisies_groupees' => $saisies_groupees,
-    //     ]);
-    //   }
-    // }
 
 }
