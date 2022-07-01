@@ -7,50 +7,18 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Comp\Titre;
 
+/**
+ * Controller un peu particulier car le modele AMi est light.
+ * Il correspond à une table avec user_id et ami_di, sachant que l'ami_id renvoie
+ * à la table user_id.
+ * Il aurait peut-être été mieux de faire une table pivot mais je ne sais pas si
+ * une table user_user aurait fonctionnée.
+ * Il n'y a donc que deux méthode edit (pour ajouter ou enlever des amis) et
+ * update pour stocker ces chois dans la bdd.
+ */
+
 class AmiController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(User $user)
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create(User $user)
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Ami  $ami
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Ami $ami)
-    {
-        //
-    }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -115,14 +83,4 @@ class AmiController extends Controller
         return redirect()->route('user.show', $user);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Ami  $ami
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Ami $ami)
-    {
-        //
-    }
 }
