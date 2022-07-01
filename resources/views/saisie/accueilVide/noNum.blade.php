@@ -25,7 +25,7 @@
 
   @vers([
   'couleur' => 'otorange',
-  'route' => route('pdf.modele', $saisie->espece->id),
+  'route' => route('pdf.modeleNum', $saisie->espece->id),
   'target' => '_blank',
   'libelle' => __('boutons.pdf_modele'),
   "fa" => "fa-solid fa-file-pdf",

@@ -9,6 +9,7 @@ use App\Models\Categorie;
 use App\Models\Espece;
 use App\Models\Chiffre;
 use App\Models\Salerte;
+use App\Models\Alerte;
 use PDF;
 
 use App\Traits\CategoriesTools;
@@ -23,7 +24,7 @@ class PdfController extends Controller
      *
      * @return return pdf
      */
-  public function modele(Espece $espece)
+  public function modeleNum(Espece $espece)
     {
       $chiffres = $espece->chiffres()
         ->orderBy('groupe_id')
@@ -31,7 +32,7 @@ class PdfController extends Controller
         ->get()
         ->groupBy('groupe_id');
 
-        $pdf = PDF::loadView('pdf.modele', [
+        $pdf = PDF::loadView('pdf.modeleNum', [
           'chiffres' => $chiffres,
           'espece' => $espece,
         ]);
@@ -41,6 +42,30 @@ class PdfController extends Controller
         return $pdf->stream($nomFichier);
 
     }
+
+    /**
+     * Affichage d'une fiche pdf vierge pour la saisie des observations
+     *
+     * @param Espece $espece
+     * @return return Pdf
+     */
+    public function modeleObs(Espece $espece)
+    {
+      $observations = Alerte::where('espece_id',$espece->id)
+                        ->where('actif', true)
+                        ->where('modalite_id', 1)
+                        ->orderBy('theme_id')->get();
+
+      $pdf = PDF::loadView('pdf.modeleObs', [
+        'observations' => $observations,
+        'espece' => $espece,
+      ]);
+
+      $nomFichier = "Parametres ( ".$espece->nom." ).pdf";
+
+      return $pdf->stream($nomFichier);
+    }
+
     public function saisie(Saisie $saisie)
     {
       $salertes = Salerte::where('saisie_id', $saisie->id)->get();

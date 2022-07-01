@@ -30,7 +30,8 @@ return array(
   'paraferme_create' => "Nouveau paramètre d'exploitation",
   'paraferme_edit' => "Modifier le paramètre d'exploitation",
   'pdf_edit' => "Editer les PDF",
-  'pdf_modele' => "Fiche vierge",
+  'pdf_modeleNum' => "Fiche vierge chiffres",
+  'pdf_modeleObs' => "Fiche vierge observations",
   'pdf_saisie' => "Synthèse",
   'ferme_edit' => "Modifier les paramètres de la ferme"
 );

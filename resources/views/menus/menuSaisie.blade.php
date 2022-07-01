@@ -80,9 +80,14 @@ Pour les saisies nouvelles sans salertes, le menu n'affiche rien d'autre
 
             <div class="dropdown-menu">
 
-              <a class="dropdown-item" href="{{ route('pdf.modele', $saisie->espece->id) }}"
+              <a class="dropdown-item" href="{{ route('pdf.modeleNum', $saisie->espece) }}"
                   target = '_blank'>
-                <i class="fa-solid fa-table-list"></i> @lang('titres.pdf_modele')
+                <i class="fa-solid fa-table-list"></i> @lang('titres.pdf_modeleNum')
+              </a>
+
+              <a class="dropdown-item" href="{{ route('pdf.modeleObs', $saisie->espece) }}"
+                  target = '_blank'>
+                <i class="fa-solid fa-table-list"></i> @lang('titres.pdf_modeleObs')
               </a>
 
               <a class="dropdown-item" href="{{ route('pdf.saisie', $saisie->id) }}"

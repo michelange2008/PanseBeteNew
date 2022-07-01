@@ -23,7 +23,7 @@ html {
 }
 
 .pdf-sous-titre {
-  font-weight: lighter;
+  font-weight: bold;
   font-style: italic;
 }
 
@@ -83,4 +83,19 @@ h4 {
 
 .table-blanc {
   color: white;
+}
+
+.col-350 {
+  max-width: 350px;
+}
+.col-left {
+  text-align: right;
+}
+
+.table-entete {
+  background: black;
+  color: white;
+}
+.tb-b-r {
+  border-right: dotted 1px black;
 }
