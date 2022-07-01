@@ -217,6 +217,21 @@ Route::group(['middleware' => ['auth', 'isValid', 'menu']], function () {
 
   });
 
+  // Gestion des amis
+  Route::prefix('amis')->controller(AmiController::class)->group(function() {
+
+    Route::get('/{user}', 'index')->name('amis.index');
+
+    Route::get('/{user}/create', 'create')->name('amis.create');
+
+    Route::post('{user}', 'store')->name('amis.store');
+
+    Route::get('/edit/{user}', 'edit')->name('amis.edit');
+
+    Route::put('{user}', 'update')->name('amis.update');
+
+  });
+
   // Gestion des notes
 
     Route::resource('/notes', 'NoteController');

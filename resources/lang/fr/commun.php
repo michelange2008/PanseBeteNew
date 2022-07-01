@@ -6,4 +6,5 @@ return [
   'exploitation' => 'Exploitation',
   'no_info' => "Il n'y a pas encore d'informations.",
   'clic_button_sub' => "Cliquez sur le bouton ci-dessous.",
+  'amis' => "Amis",
 ];

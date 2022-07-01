@@ -44,6 +44,12 @@
 
           </div>
 
+          <div class="col">
+
+            @include('user.amis')
+
+          </div>
+
         </div>
 
       </div>

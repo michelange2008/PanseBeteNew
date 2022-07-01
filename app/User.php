@@ -46,4 +46,9 @@ class User extends Authenticatable
       return $this->belongsToMany(Paraferme::class)->withPivot('value');
     }
 
+    public function amis()
+    {
+      return $this->hasMany(Ami::class);
+    }
+
 }

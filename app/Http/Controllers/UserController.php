@@ -9,6 +9,7 @@ use App\Mail\Accepte;
 use Mail;
 use App\Models\Espece;
 use App\Models\User;
+use App\Models\Ami;
 use App\Models\Saisie;
 use App\Models\Inscription;
 
@@ -96,9 +97,12 @@ class UserController extends Controller
     {
         $titre = new Titre(icone: 'profil_clair.svg', titre: 'user_info' );
 
+        $amis = Ami::where('user_id', $user->id)->get();
+
         return view('user.show', [
           'titre' => $titre,
           'user' => $user,
+          'amis' => $amis,
         ]);
     }
 

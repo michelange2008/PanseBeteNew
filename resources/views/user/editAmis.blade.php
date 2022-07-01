@@ -8,7 +8,7 @@
 
   <div class="container-fluid">
 
-    <form class="" action="{{ route('ferme.update', $user) }}" method="post">
+    <form class="" action="{{ route('amis.update', $user) }}" method="post">
       @csrf
       @method('PUT')
 
@@ -26,24 +26,18 @@
 
         <div class="col-sm-11 col-md-10 col-lg-9">
 
-          @foreach ($parafermes as $paraferme)
+          <h3>Amis</h3>
 
-            @if ($paraferme->type == "liste")
+          @include('user.inputAmiNonAmi', [
+            'liste' => $amis,
+            'checked' => 'checked'
+          ])
 
-              @include('user.inputSelectFerme')
+          <h3>Utilisateurs de Panse-Bêtes</h3>
 
-            @else
-              {{-- cf. fragments.inputNum --}}
-              @inputNum([
-                'label' => $paraferme->nom.' ('.$paraferme->unite.')',
-                'name' => $paraferme->id,
-                'min' => 0,
-                'step' => ($paraferme->type == 'int') ? 1 : 0.1,
-                'isName' => $paraferme->value,
-              ])
-            @endif
-
-          @endforeach
+          @include('user.inputAmiNonAmi', [
+            'liste' => $non_amis,
+          ])
 
         </div>
 

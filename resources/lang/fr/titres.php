@@ -33,5 +33,6 @@ return array(
   'pdf_modeleNum' => "Fiche vierge chiffres",
   'pdf_modeleObs' => "Fiche vierge observations",
   'pdf_saisie' => "Synthèse",
-  'ferme_edit' => "Modifier les paramètres de la ferme"
+  'ferme_edit' => "Modifier les paramètres de la ferme",
+  'amis_edit' => "Ajout de nouveaux amis",
 );

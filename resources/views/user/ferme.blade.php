@@ -26,11 +26,11 @@
       <div class="card-text d-flex flex-row justify-content-between">
 
         <p>
-          {{ $paraferme->nom }} :
+          {{ ucfirst($paraferme->nom) }} :
         </p>
 
         <p class="fw-bold">
-          {{ $paraferme->param->value }}
+          {{ ucfirst($paraferme->param->value) }} {{ $paraferme->unite }}
         </p>
 
       </div>
