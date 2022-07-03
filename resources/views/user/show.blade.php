@@ -46,11 +46,17 @@
 
           <div class="col">
 
-            @include('user.amis')
+            @include('user.amis_suiveurs')
 
           </div>
 
-        </div>
+          <div class="col">
+
+            @include('user.amis_suivis')
+
+          </div>
+
+      </div>
 
       </div>
 

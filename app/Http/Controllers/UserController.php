@@ -97,12 +97,18 @@ class UserController extends Controller
     {
         $titre = new Titre(icone: 'profil_clair.svg', titre: 'user_info' );
 
-        $amis = Ami::where('user_id', $user->id)->get();
+        $amis_suiveurs = Ami::where('user_id', $user->id)->get();
+
+        // AMIS SUIVIS
+        $liste_amis_suivis = Ami::select('user_id')->where('ami_id', $user->id)->get();
+
+        $amis_suivis = User::find($liste_amis_suivis);
 
         return view('user.show', [
           'titre' => $titre,
           'user' => $user,
-          'amis' => $amis,
+          'amis_suiveurs' => $amis_suiveurs,
+          'amis_suivis' => $amis_suivis
         ]);
     }
 

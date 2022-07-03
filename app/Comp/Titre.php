@@ -11,7 +11,11 @@ namespace App\Comp;
 class Titre
 {
 
-  function __construct($icone = "default.svg", $titre = 'titre', $translate = true, $soustitre = null, $bouton = null)
+  function __construct($icone = "default.svg",
+                      $titre = 'titre',
+                      $translate = true,
+                      $soustitre = null,
+                      $bouton = null)
   {
 
     $this->icone = $icone;

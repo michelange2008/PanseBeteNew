@@ -5,7 +5,7 @@ use App\Models\Saisie;
 use App\Models\Elevage;
 /**
  * Suppression des élevages qui ne correspondent à aucune saisies
- * Cas correspondant aux élevages créés pour une saisie mais dont on a supprimer la saisie
+ * Cas correspondant aux élevages créés pour une saisie mais dont on a supprimé la saisie
  */
 trait EffaceElevages
 {

@@ -1,6 +1,6 @@
 <div class="row justify-content-center">
 
-  <div class="col-md-10">
+  <div class="col-sm-11 col-md-10 col-lg-9">
 
     <div>
 
@@ -45,19 +45,23 @@
 
               </div>
 
-              <div class="d-flex flex-column justify-content-center">
+              @if ($supprime ?? true)
 
-                <a id="supprime_{{$saisie->id}}"
+                <div class="d-flex flex-column justify-content-center">
 
-                  href="{{route('saisie.destroy', $saisie->id)}}"
+                  <a id="supprime_{{$saisie->id}}"
 
-                  class=" supprime justify-self-end btn btn-sm btn-otorange rounded-0">
+                    href="{{route('saisie.destroy', $saisie->id)}}"
 
-                <i class="far fa-trash-alt"></i> @lang('saisie.del')
+                    class=" supprime justify-self-end btn btn-sm btn-otorange rounded-0">
 
-              </a>
+                    <i class="far fa-trash-alt"></i> @lang('saisie.del')
 
-            </div>
+                  </a>
+
+                </div>
+
+              @endif
 
           </div>
 

@@ -1,6 +1,6 @@
 <div class="row justify-content-center">
 
-  <div class="col-md-10">
+  <div class="col-sm-11 col-md-10 col-lg-9">
 
     <div class="nouvelle-saisie-liste alert desktop-only btn-otobleu" style="padding:0">
 

@@ -29,26 +29,31 @@ class AmiController extends Controller
     {
         // On récupère tous les utilisateurs sauf l'user connecté
         $users = User::where('id', '<>', $user->id)->orderBy('name')->get();
+        //######################################################################
+        // AMIS SUIVEURS
+        //######################################################################
         // On récupère la liste d'amis de l'user
-        $liste_amis = Ami::where('user_id', $user->id)->get();
+        $liste_amis_suiveurs = Ami::where('user_id', $user->id)->get();
         // On crée un tableau vide
-        $amis_id = [];
+        $amis_suiveurs_id = [];
         // on passe en revue la liste d'amis
-        foreach($liste_amis as $ami) {
+        foreach($liste_amis_suiveurs as $ami_suiveur) {
           // Pour ajouter les id des amis dans le tableau vide
-          $amis_id[] = $ami->ami_id;
+          $amis_suiveurs_id[] = $ami_suiveur->ami_id;
         }
         // Et on recherche tous les users dont l'id est dans le tableau d'amis
-        $amis = $users->find($amis_id);
+        $amis_suiveurs = $users->find($amis_suiveurs_id);
 
-        $non_amis = $users->diff($amis);
+        $non_amis = $users->diff($amis_suiveurs);
+
+
 
         $titre = new Titre(icone: "default.svg", titre: "amis_edit");
 
         return view('user.editAmis', [
           'user' => $user,
           'non_amis' => $non_amis,
-          'amis' => $amis,
+          'amis_suiveurs' => $amis_suiveurs,
           'titre' => $titre,
         ]);
     }
@@ -68,14 +73,14 @@ class AmiController extends Controller
         $datas->pull('_token');
         $datas->pull('_method');
         // on récupère les clefs = id des users choisis comme amis
-        $amis_id = $datas->keys()->all();
+        $amis_suiveurs_id = $datas->keys()->all();
         // On supprime tous les amis existants
         Ami::where('user_id', $user->id)->delete();
         // Et on crée l'ami pour chaque cas
-        foreach ($amis_id as $ami_id) {
+        foreach ($amis_suiveurs_id as $ami_suiveur_id) {
           Ami::create([
             'user_id' => $user->id,
-            'ami_id' => $ami_id,
+            'ami_id' => $ami_suiveur_id,
           ]);
 
         }

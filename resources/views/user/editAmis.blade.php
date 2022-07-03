@@ -29,7 +29,7 @@
           <h3>Amis</h3>
 
           @include('user.inputAmiNonAmi', [
-            'liste' => $amis,
+            'liste' => $amis_suiveurs,
             'checked' => 'checked'
           ])
 

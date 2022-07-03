@@ -44,4 +44,14 @@ class User extends Model
                   ->as('param')
                   ->withPivot('value');
     }
+    public function saisies()
+    {
+      return $this->hasMany(Saisie::class);
+    }
+
+    public function amis()
+    {
+      return $this->hasMany(Ami::class);
+    }
+
 }

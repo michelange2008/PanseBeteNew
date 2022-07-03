@@ -125,22 +125,28 @@ Route::group(['middleware' => ['auth', 'isValid', 'menu']], function () {
 
 
   // Routes principales
+  //
+  Route::controller('AccueilController')->group(function() {
+    // Liste des saisies de l'user authentifié
+    Route::get('/accueil', 'accueil')->name('accueil');
+    // Liste des saisies d'un ami suivi de l'auteur identifié
+    Route::get('/ami/{user}', 'saisiesAmi')->name('saisiesAmi');
+    // Description du programme (cf. menu principal)
+    Route::get('/description', 'description')->name('description');
+    // Instructions (cf. menu principal);
+    Route::get('/instructions', 'instructions')->name('instructions');
+    // etc.
+    Route::get('/credits', 'credits')->name('credits');
 
-    Route::get('/accueil', ['uses' => 'AccueilController@accueil', 'as' => 'accueil']);
+    Route::get('/contact', 'contact')->name('contact');
 
-    Route::get('/description', ['uses' => 'AccueilController@description', 'as' => 'description']);
+    Route::get('/mentions_legales', 'mentions_legales')->name('mentions_legales');
 
-    Route::get('/instructions', ['uses' => 'AccueilController@instructions', 'as' => 'instructions']);
+    Route::get('/aide', 'aide')->name('aide');
 
-    Route::get('/credits', ['uses' => 'AccueilController@credits', 'as' => 'credits']);
+    Route::get('/aide/video', 'video')->name('aide.video');
 
-    Route::get('/contact', ['uses' => 'AccueilController@contact', 'as' => 'contact']);
-
-    Route::get('/mentions_legales', ['uses' => 'AccueilController@mentions_legales', 'as' => 'mentions_legales']);
-
-    Route::get('/aide', ['uses' => 'AccueilController@aide', 'as' => 'aide']);
-
-    Route::get('/aide/video', ['uses' => 'AccueilController@video', 'as' => 'aide.video']);
+  });
 
   // Saisies
 
