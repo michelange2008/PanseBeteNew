@@ -1,6 +1,8 @@
 <?php
 
 return [
+  'first_time' => "C'est votre première fois ?",
+  'demande_acces' => "Demander un accès",
   'question_del' => "Voulez-vous vraiment supprimer cet élément ?",
   'admin' => 'Administrateur du site',
   'exploitation' => 'Exploitation',
