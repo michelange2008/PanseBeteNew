@@ -20,6 +20,7 @@
 
       <div class="col-sm-11 col-md-10 col-lg-9">
 
+
         @include('fragments.flash')
 
       </div>
@@ -30,7 +31,7 @@
 
       <div class="col-sm-11 col-md-10 col-lg-9">
 
-        <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
 
           <div class="col">
 
@@ -40,7 +41,7 @@
 
           <div class="col">
 
-            @include('user.ferme')
+            @include('user.amis_suivis')
 
           </div>
 
@@ -52,7 +53,7 @@
 
           <div class="col">
 
-            @include('user.amis_suivis')
+            @include('user.ferme')
 
           </div>
 

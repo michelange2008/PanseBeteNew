@@ -1,13 +1,21 @@
 {{-- issu de la vue user.show
 affiche les infos du profil de l'utilisateur (nom, origine, fonction)
  --}}
-<div class="card" style="width: 18rem;">
+<div class="card h-100">
 
-  <div class="card-header">
+  <div class="card-header d-flex flex-row align-items-center">
+    <div class="me-3">
 
-    <h5 class="card-title">{{ ucfirst($user->name) }}</h5>
+      <img class="img-40" src="{{ url('storage/img/infos_perso.svg') }}" alt="">
+
+    </div>
+
+    <div>
 
 
+    <h5 class="card-title">@lang('titres.user_info')</h5>
+
+</div>
   </div>
 
   <div class="card-body">

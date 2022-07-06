@@ -1,10 +1,19 @@
-<div class="card" style="width: 18rem;">
+<div class="card h-100">
 
-  <div class="card-header">
+  <div class="card-header d-flex flex-row align-items-center">
 
-    <h5 class="card-title">@lang('commun.amis')</h5>
-    <p>{{ ucfirst(__('commun.amis_suiveurs')) }}</p>
+    <div class="me-3">
 
+      <img class="img-40" src="{{ url('storage/img/amis_suiveurs.svg') }}" alt="">
+
+    </div>
+
+    <div class="">
+
+      <h5 class="card-title">@lang('commun.amis')</h5>
+      <p>{{ ucfirst(__('commun.amis_suiveurs')) }}</p>
+
+    </div>
 
   </div>
 

@@ -95,7 +95,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        $titre = new Titre(icone: 'profil_clair.svg', titre: 'user_info' );
+        $titre = new Titre(icone: 'profil_clair.svg', titre: $user->name, translate: false );
 
         $amis_suiveurs = Ami::where('user_id', $user->id)->get();
 

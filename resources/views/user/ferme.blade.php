@@ -1,9 +1,18 @@
-<div class="card" style="width: 18rem;">
+<div class="card">
 
-  <div class="card-header">
+  <div class="card-header d-flex flex-row align-items-center">
 
-    <h5 class="card-title">@lang('commun.exploitation')</h5>
+    <div class="me-3">
 
+      <img class="img-40" src="{{ url('storage/img/categories/logement.svg') }}" alt="">
+
+    </div>
+
+    <div>
+
+      <h5 class="card-title">@lang('commun.exploitation')</h5>
+
+    </div>
 
   </div>
 
@@ -21,23 +30,23 @@
 
     @else
 
-    @foreach ($user->parafermes->sortBy('ordre') as $paraferme)
+      @foreach ($user->parafermes->sortBy('ordre') as $paraferme)
 
-      <div class="card-text d-flex flex-row justify-content-between">
+        <div class="card-text d-flex flex-row justify-content-between">
 
-        <p>
-          {{ ucfirst($paraferme->nom) }} :
-        </p>
+          <p>
+            {{ ucfirst($paraferme->nom) }} :
+          </p>
 
-        <p class="fw-bold">
-          {{ ucfirst($paraferme->param->value) }} {{ $paraferme->unite }}
-        </p>
+          <p class="fw-bold">
+            {{ ucfirst($paraferme->param->value) }} {{ $paraferme->unite }}
+          </p>
 
-      </div>
+        </div>
 
-    @endforeach
+      @endforeach
 
-  @endif
+    @endif
 
   </div>
 
