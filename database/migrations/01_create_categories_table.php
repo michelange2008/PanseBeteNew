@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEspecesTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateEspecesTable extends Migration
      */
     public function up()
     {
-        Schema::create('especes', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nom', 191)->index('especes_nom_index');
-            $table->char('abbr', 3);
-            $table->string('icone', 191)->index('especes_icone_index');
-            $table->boolean('fini')->default(false);
+            $table->string('nom', 191)->index('categories_nom_index');
+            $table->string('icone', 191);
         });
     }
 
@@ -29,6 +27,6 @@ class CreateEspecesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('especes');
+        Schema::dropIfExists('categories');
     }
-}
+};

@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateTableElevages extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,8 @@ class CreateTableElevages extends Migration
     public function up()
     {
         Schema::create('elevages', function (Blueprint $table) {
-          $table->increments('id');
-          $table->string('nom', 191);
+            $table->id();
+            $table->string('nom', 191);
         });
     }
 
@@ -26,6 +26,6 @@ class CreateTableElevages extends Migration
      */
     public function down()
     {
-        Schema::drop('elevages');
+        Schema::dropIfExists('elevages');
     }
-}
+};

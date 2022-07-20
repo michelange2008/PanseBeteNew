@@ -15,7 +15,9 @@ return new class extends Migration
     {
         Schema::create('sindicateurs', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('alerte_id')->constrained();
+            $table->foreignId('saisie_id')->constrained();
+            $table->double('indicateur', 8, 2);
         });
     }
 

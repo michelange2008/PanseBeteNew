@@ -19,7 +19,7 @@ return new class extends Migration
                 ->onUpdate('cascade')->onDelete('cascade');
           $table->foreignId('paraferme_id')->constrained()
                 ->onUpdate('cascade')->onDelete('cascade');
-          $table->string('value', 10);
+          $table->string('value', 191);
         });
     }
 

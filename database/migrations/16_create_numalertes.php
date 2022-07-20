@@ -18,7 +18,7 @@ return new class extends Migration
     {
         Schema::create('numalertes', function (Blueprint $table) {
             $table->id();
-            $table->varchar('nom', 50);
+            $table->string('nom', 50);
             $table->foreignId('alerte_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->integer('borne_inf')->default(0);
             $table->integer('borne_sup')->nullable();

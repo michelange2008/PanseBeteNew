@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('roles', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('alerte_id')->constrained();
-            $table->foreignId('saisie_id')->constrained();
-            $table->double('indicateur', 8, 2);
+        Schema::create('especes', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nom', 191)->index('especes_nom_index');
+            $table->char('abbr', 3);
+            $table->string('icone', 191)->index('especes_icone_index');
+            $table->boolean('fini')->default(false);
         });
     }
 
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roles');
+        Schema::dropIfExists('especes');
     }
 };
