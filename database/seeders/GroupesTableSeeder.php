@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class CategoriesTableSeeder extends Seeder
+class GroupesTableSeeder extends Seeder
 {
 
     /**
@@ -16,56 +16,56 @@ class CategoriesTableSeeder extends Seeder
     {
         
 
-        \DB::table('categories')->delete();
+        \DB::table('groupes')->delete();
         
-        \DB::table('categories')->insert(array (
+        \DB::table('groupes')->insert(array (
             0 => 
             array (
                 'id' => 1,
-                'nom' => 'alimentation',
-                'icone' => 'alimentation.svg',
+                'nom' => 'effectifs',
+                'icone' => 'default.svg',
             ),
             1 => 
             array (
                 'id' => 2,
-                'nom' => 'logement',
-                'icone' => 'logement.svg',
+                'nom' => 'mortalité',
+                'icone' => 'default.svg',
             ),
             2 => 
             array (
                 'id' => 3,
-                'nom' => 'hygiène',
-                'icone' => 'hygiene.svg',
+                'nom' => 'reproduction et post-partum',
+                'icone' => 'default.svg',
             ),
             3 => 
             array (
                 'id' => 4,
-                'nom' => 'conduite',
-                'icone' => 'conduite.svg',
+                'nom' => 'lait et mamelle',
+                'icone' => 'default.svg',
             ),
             4 => 
             array (
                 'id' => 5,
-                'nom' => 'santé',
-                'icone' => 'sante.svg',
+                'nom' => 'jeunes',
+                'icone' => 'default.svg',
             ),
             5 => 
             array (
                 'id' => 6,
-                'nom' => 'génétique',
-                'icone' => 'genetique.svg',
+                'nom' => 'pieds',
+                'icone' => 'default.svg',
             ),
             6 => 
             array (
                 'id' => 7,
-                'nom' => 'divers',
-                'icone' => 'divers.svg',
+                'nom' => 'parasitisme',
+                'icone' => 'default.svg',
             ),
             7 => 
             array (
                 'id' => 8,
-                'nom' => 'parasitisme',
-                'icone' => 'parasitisme.svg',
+                'nom' => 'divers',
+                'icone' => 'default.svg',
             ),
         ));
         

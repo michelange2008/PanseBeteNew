@@ -23,36 +23,41 @@ class EspecesTableSeeder extends Seeder
             array (
                 'id' => 1,
                 'nom' => 'vaches allaitantes',
+                'abbr' => 'VA',
                 'icone' => 'VA.svg',
-                'fini' => 1,
+                'fini' => 0,
             ),
             1 => 
             array (
                 'id' => 2,
                 'nom' => 'vaches laitières',
+                'abbr' => 'VL',
                 'icone' => 'VL.svg',
-                'fini' => 0,
+                'fini' => 1,
             ),
             2 => 
             array (
                 'id' => 3,
                 'nom' => 'chèvres laitières',
+                'abbr' => 'CP',
                 'icone' => 'CP.svg',
-                'fini' => 1,
+                'fini' => 0,
             ),
             3 => 
             array (
                 'id' => 4,
                 'nom' => 'brebis allaitantes',
+                'abbr' => 'OA',
                 'icone' => 'OA.svg',
-                'fini' => 1,
+                'fini' => 0,
             ),
             4 => 
             array (
                 'id' => 5,
                 'nom' => 'brebis laitières',
+                'abbr' => 'OL',
                 'icone' => 'OL.svg',
-                'fini' => 1,
+                'fini' => 0,
             ),
         ));
         

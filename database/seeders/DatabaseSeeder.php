@@ -26,5 +26,15 @@ class DatabaseSeeder extends Seeder {
     // $this->call(EspeceNoteTableSeeder::class);
     // $this->call(EspeceParticipantTableSeeder::class);
     $this->call(GroupeSeeder::class);
+        $this->call(ModalitesTableSeeder::class);
+        $this->call(GroupesTableSeeder::class);
+        $this->call(TypesTableSeeder::class);
+        $this->call(ParafermesTableSeeder::class);
+        $this->call(ChiffresTableSeeder::class);
+        $this->call(NumalertesTableSeeder::class);
+        $this->call(SchiffresTableSeeder::class);
+        $this->call(SindicateursTableSeeder::class);
+        $this->call(AmisTableSeeder::class);
+        $this->call(ParafermeUserTableSeeder::class);
     }
 }

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Categorie extends Model
 {
-    protected $fillable = ['nom'];
+    protected $fillable = ['nom', 'icone'];
 
     public $timestamps = false;
 

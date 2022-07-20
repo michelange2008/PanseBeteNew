@@ -26,6 +26,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'La ration est-elle bien équilibrée en énergie/azote ?',
                 'reponse' => 'rapport énergie / azote déséquilibré',
                 'categorie_id' => 1,
+                'supprimable' => 1,
             ),
             1 => 
             array (
@@ -34,6 +35,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'La distribution de la ration est-elle bien répartie ?',
                 'reponse' => 'mauvaise répartition de la ration dans la journée',
                 'categorie_id' => 1,
+                'supprimable' => 1,
             ),
             2 => 
             array (
@@ -42,6 +44,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Les primipares sont-elles complémentées vis-à-vis des multipares ?',
                 'reponse' => 'pas de complémentation des primipares / multipares',
                 'categorie_id' => 1,
+                'supprimable' => 1,
             ),
             3 => 
             array (
@@ -50,6 +53,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Existe-t-il une ration spécifique de début de lactation ?',
                 'reponse' => 'pas de ration spécifique de début de lactation',
                 'categorie_id' => 1,
+                'supprimable' => 1,
             ),
             4 => 
             array (
@@ -58,6 +62,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Les bouses sont-elles hétérogènes',
                 'reponse' => 'bouses hétérogènes',
                 'categorie_id' => 1,
+                'supprimable' => 1,
             ),
             5 => 
             array (
@@ -66,6 +71,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Les vêlages sont-ils dispersés ?',
                 'reponse' => 'vêlages dispersés',
                 'categorie_id' => 4,
+                'supprimable' => 1,
             ),
             6 => 
             array (
@@ -74,6 +80,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'L\'accès à l\'auge est-il compétitif entre les animaux ?',
                 'reponse' => 'accès à l\'auge compétitif',
                 'categorie_id' => 1,
+                'supprimable' => 1,
             ),
             7 => 
             array (
@@ -82,6 +89,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le bâtiment est-il équipé de cornadis ?',
                 'reponse' => 'pas de cornadis',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             8 => 
             array (
@@ -90,6 +98,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le nombre de cornadis est-il au minimum supérieur au nombre d\'animaux présents ?',
                 'reponse' => 'plus d\'animaux que de places aux cornadis',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             9 => 
             array (
@@ -98,6 +107,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Y-a-t-il un mélange d\'animaux sans corne et d\'animaux cornus ?',
                 'reponse' => 'mélanges d\'animaux cornus et sans corne',
                 'categorie_id' => 4,
+                'supprimable' => 1,
             ),
             10 => 
             array (
@@ -106,6 +116,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Y-a-t-il eu des recherches parasitismes récemment ?',
                 'reponse' => 'par de recherche de parasites récente',
                 'categorie_id' => 8,
+                'supprimable' => 1,
             ),
             11 => 
             array (
@@ -114,6 +125,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le bâtiment est-il trop chargé ?',
                 'reponse' => 'bâtiment trop chargé',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             12 => 
             array (
@@ -122,6 +134,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'La quantité de paille est-elle suffisante ?',
                 'reponse' => 'paillage insuffisant en quantité',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             13 => 
             array (
@@ -130,6 +143,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'La fréquence de curage est-elle suffisante ?',
                 'reponse' => 'curage pas assez fréquent',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             14 => 
             array (
@@ -138,6 +152,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le bâtiment montre-t-il des signes d\'une mauvaise ventilation ?',
                 'reponse' => 'signes de mauvaise ventilation du bâtiment',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             15 => 
             array (
@@ -146,6 +161,7 @@ class OriginesTableSeeder extends Seeder
             'question' => 'Le bâtiment présente-t-il des excès d\'humidité importants (sol non stabilisé et non drainé)',
                 'reponse' => 'excès d\'humidité important dans le bâtiment',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             16 => 
             array (
@@ -154,6 +170,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'L\'orientation du bâtiment est-elle correcte ?',
                 'reponse' => 'mauvaise orientation du bâtiment',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             17 => 
             array (
@@ -162,6 +179,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le bardage du bâtiment est-il suffisant ?',
                 'reponse' => 'bardage insuffisant',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             18 => 
             array (
@@ -170,6 +188,7 @@ class OriginesTableSeeder extends Seeder
             'question' => 'La ration est-elle trop riche en amidon (acidose) ?',
                 'reponse' => 'ration trop riche en amidon',
                 'categorie_id' => 1,
+                'supprimable' => 1,
             ),
             19 => 
             array (
@@ -178,6 +197,7 @@ class OriginesTableSeeder extends Seeder
             'question' => 'La ration trop riche en azote soluble (ex : fourrages verts)?',
                 'reponse' => 'ration trop riche en azote soluble',
                 'categorie_id' => 1,
+                'supprimable' => 1,
             ),
             20 => 
             array (
@@ -186,6 +206,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Les animaux présentent-ils les symptômes de diarrhées? ',
                 'reponse' => 'présence de diarrhées',
                 'categorie_id' => 5,
+                'supprimable' => 1,
             ),
             21 => 
             array (
@@ -194,6 +215,7 @@ class OriginesTableSeeder extends Seeder
             'question' => 'Les animaux sont-ils susceptibles d\'être parasités (période de pâturage) ? (voir onglet parasitisme)',
                 'reponse' => 'animaux peut-être parasités',
                 'categorie_id' => 1,
+                'supprimable' => 1,
             ),
             22 => 
             array (
@@ -202,6 +224,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Est-ce que la nourriture est accessible à tous les animaux en même temps de manière équitable ?',
                 'reponse' => 'nourriture par forcément accessible à tous les animaux de manière équitable',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             23 => 
             array (
@@ -210,6 +233,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le nombre de cornadis est-il suffisant ? +10%/Nb d\'animaux présents ?',
                 'reponse' => 'nombre de cornadis insuffisants ',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             24 => 
             array (
@@ -218,6 +242,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'L\'absence de cornadis entre-rail des conflits à l\'auge ?',
                 'reponse' => 'conflits à l\'auge par absence de cornadis',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             25 => 
             array (
@@ -226,6 +251,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le troupeau présente-t-il une coexistence de vaches avec ou sans corne ?',
                 'reponse' => 'coexistence de vaches avec et sans cornes',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             26 => 
             array (
@@ -234,6 +260,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le bâtiment est-il protégé des perturbations électromagnétiques ?',
                 'reponse' => 'perturbations électromagnétiques possibles',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             27 => 
             array (
@@ -242,6 +269,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le lieu de vie des animaux présente-t-il des objets coupants',
                 'reponse' => 'présence d\'objets coupants dans les lieux de vie des animaux',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             28 => 
             array (
@@ -250,6 +278,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'La ration est-elle équilibrée ou présente-t-elle un excès d\'énergie ?',
                 'reponse' => 'excès d\'énergie',
                 'categorie_id' => 1,
+                'supprimable' => 1,
             ),
             29 => 
             array (
@@ -258,6 +287,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Certains animaux du troupeau sont-ils de souche d\'animaux nerveux',
                 'reponse' => '"quelques animaux issus de souches ""animaux nerveux"""',
                 'categorie_id' => 7,
+                'supprimable' => 1,
             ),
             30 => 
             array (
@@ -266,6 +296,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Les techniques d\'élevage permettent-elles la mise en place d\'une bonne relation homme/animal ?',
                 'reponse' => 'relation homme / animal perturbée',
                 'categorie_id' => 4,
+                'supprimable' => 1,
             ),
             31 => 
             array (
@@ -274,6 +305,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Les animaux sont-ils confrontés à des éléments perturbateurs : chiens, tiers,',
             'reponse' => 'présence d\'éléments perturbateurs (chiens, )',
                 'categorie_id' => 4,
+                'supprimable' => 1,
             ),
             32 => 
             array (
@@ -282,6 +314,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'La topographie du terrain est-elle accidentée ?',
                 'reponse' => 'terrain accidenté',
                 'categorie_id' => 7,
+                'supprimable' => 1,
             ),
             33 => 
             array (
@@ -290,6 +323,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le lieu de vie des animaux présente-t-il des objets coupants',
                 'reponse' => 'présence d\'objets coupants dans les lieux de vie des animaux',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             34 => 
             array (
@@ -298,6 +332,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Les animaux sont-ils préparés à la mise à l\'herbe ?',
                 'reponse' => 'pas de préparation à la mise à l\'herbe',
                 'categorie_id' => 4,
+                'supprimable' => 1,
             ),
             35 => 
             array (
@@ -306,6 +341,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Y-a-t-il un mélange d\'animaux de différents lots à la mise en pâtures provoquant des bagarres ?',
                 'reponse' => 'bagarres à la mise à l\'herbe',
                 'categorie_id' => 4,
+                'supprimable' => 1,
             ),
             36 => 
             array (
@@ -314,6 +350,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le nombre et les accès aux points d\'eau sont-ils adaptés ?',
                 'reponse' => 'nombre de points d\'eau insuffisant, accès problématique',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             37 => 
             array (
@@ -322,6 +359,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le troupeau présente-t-il une coexistence de vaches avec ou sans corne ?',
                 'reponse' => 'coexistence de vaches avec et sans cornes',
                 'categorie_id' => 4,
+                'supprimable' => 1,
             ),
             38 => 
             array (
@@ -330,6 +368,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Y-a-t-il des vaches vides et/ou un taureau dans les lots d\'animaux ?',
                 'reponse' => 'vaches vides avec taureau dans le lots',
                 'categorie_id' => 4,
+                'supprimable' => 1,
             ),
             39 => 
             array (
@@ -338,6 +377,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Les animaux sont-ils confrontés à des éléments perturbateurs : chiens, tiers,',
             'reponse' => 'présence d\'éléments perturbateurs (chiens, )',
                 'categorie_id' => 4,
+                'supprimable' => 1,
             ),
             40 => 
             array (
@@ -346,6 +386,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'La race du troupeau est-elle adaptée aux déplacements et au territoire ?',
                 'reponse' => 'race des animaux inadaptée par rapport aux déplacement',
                 'categorie_id' => 4,
+                'supprimable' => 1,
             ),
             41 => 
             array (
@@ -354,6 +395,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Est-ce que la nourriture est accessible à tous les animaux en même temps de manière équitable ?',
                 'reponse' => 'nourriture par forcément accessible à tous les animaux de manière équitable',
                 'categorie_id' => 1,
+                'supprimable' => 1,
             ),
             42 => 
             array (
@@ -362,6 +404,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le nombre de cornadis est-il suffisant ? +10%/Nb d\'animaux présents ?',
                 'reponse' => 'nombre de cornadis insuffisants ',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             43 => 
             array (
@@ -370,6 +413,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'L\'absence de cornadis entre-rail des conflits à l\'auge ?',
                 'reponse' => 'conflits à l\'auge par absence de cornadis',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             44 => 
             array (
@@ -378,6 +422,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le troupeau présente-t-il une coexistence de vaches avec ou sans corne ?',
                 'reponse' => 'coexistence de vaches avec et sans cornes',
                 'categorie_id' => 4,
+                'supprimable' => 1,
             ),
             45 => 
             array (
@@ -386,6 +431,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le bâtiment est-il protégé des perturbations électromagnétiques ?',
                 'reponse' => 'perturbations électromagnétiques possibles',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             46 => 
             array (
@@ -394,6 +440,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Les veaux ont-ils accès à une zone spécifique',
                 'reponse' => 'pas de zone spécifique pour les veaux',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             47 => 
             array (
@@ -402,6 +449,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le lieu de vie des animaux présente-t-il des objets coupants',
                 'reponse' => 'présence d\'objets coupants dans les lieux de vie des animaux',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             48 => 
             array (
@@ -410,6 +458,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Les sols bétonnés sont-ils glissants ?',
                 'reponse' => 'sols bétonnés glissants',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             49 => 
             array (
@@ -418,6 +467,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Y-a-t-il un mélange d\'animaux de différents lots à la mise en stabulation provoquant des bagarres ?',
                 'reponse' => 'bagarres en période de stabulation',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             50 => 
             array (
@@ -426,6 +476,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'La ration est-elle équilibrée et saine ?',
             'reponse' => 'ration déséquilibrée ou mal conservée (moisie)',
                 'categorie_id' => 1,
+                'supprimable' => 1,
             ),
             51 => 
             array (
@@ -434,6 +485,7 @@ class OriginesTableSeeder extends Seeder
             'question' => 'La ration contient-elle des plantes toxiques dans les fourrages récoltés ou pâturés ? (ex : Datura)',
                 'reponse' => 'plantes toxiques dans les fourrages récoltés',
                 'categorie_id' => 1,
+                'supprimable' => 1,
             ),
             52 => 
             array (
@@ -442,6 +494,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'L\'abreuvement est-il suffisant et accessible à tous les animaux ?',
                 'reponse' => 'abreuvement non accessible à tous les animaux',
                 'categorie_id' => 1,
+                'supprimable' => 1,
             ),
             53 => 
             array (
@@ -450,6 +503,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Les circuits électriques sont-ils en bon état ou source d\'électrocution ?',
                 'reponse' => 'circuits électriques en mauvais état',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             54 => 
             array (
@@ -458,6 +512,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le bâtiment est-il doté d\'un parafoudre et d\'une prise de terre électrique performante ?',
                 'reponse' => 'prise de terre non performante et absence de parafoudre',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             55 => 
             array (
@@ -466,6 +521,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le bâtiment présente-t-il des courants d\'air excessifs',
                 'reponse' => 'présence de courants d\'air dans le bâtiment',
                 'categorie_id' => 2,
+                'supprimable' => 1,
             ),
             56 => 
             array (
@@ -474,6 +530,7 @@ class OriginesTableSeeder extends Seeder
             'question' => 'Les animaux présentent-ils les symptômes de la grippe (diarrhée, toux, fièvre, etc.) ?',
                 'reponse' => 'symptômes de grippe',
                 'categorie_id' => 5,
+                'supprimable' => 1,
             ),
             57 => 
             array (
@@ -482,6 +539,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le troupeau est-il touché par le vol par de la boucherie sauvage en pâture ?',
                 'reponse' => 'vol d\'animaux',
                 'categorie_id' => 7,
+                'supprimable' => 1,
             ),
             58 => 
             array (
@@ -490,6 +548,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'La ration présente-t-elle suffisamment de fibres ?',
                 'reponse' => 'insuffisance de fibres dans la ration',
                 'categorie_id' => 1,
+                'supprimable' => 1,
             ),
             59 => 
             array (
@@ -498,6 +557,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Y-a-t-il un risque d\'entérotoxémie sur le lot avec des rations trop riches - La vaccination est-elle pratiquée ?',
             'reponse' => 'risques d\'entérotoxémie (et pas de vaccination)',
                 'categorie_id' => 1,
+                'supprimable' => 1,
             ),
             60 => 
             array (
@@ -506,6 +566,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'La mortalité fait-elle suite à une grippe non détectée ou mal soignée ?',
                 'reponse' => 'grippe non détecté ou mal soignée avec mortalité',
                 'categorie_id' => 5,
+                'supprimable' => 1,
             ),
             61 => 
             array (
@@ -514,6 +575,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le renouvellement du troupeau est-il suffisant pour réformer les animaux à risque ?',
                 'reponse' => 'réforme des animaux à risque insuffisante',
                 'categorie_id' => 4,
+                'supprimable' => 1,
             ),
             62 => 
             array (
@@ -522,6 +584,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le produits achetés sont-ils majoritairement à but curatif',
                 'reponse' => 'forte consommation de médicaments curatifs',
                 'categorie_id' => 5,
+                'supprimable' => 1,
             ),
             63 => 
             array (
@@ -530,6 +593,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Les apports sont-ils suffisants par rapport aux objectifs de croissance ?',
                 'reponse' => 'apports insuffisants par rapport aux objectifs de croissance',
                 'categorie_id' => 1,
+                'supprimable' => 1,
             ),
             64 => 
             array (
@@ -538,6 +602,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Le parasitisme est-il maîtrisé ?',
                 'reponse' => 'parasitisme mal maîtrisé',
                 'categorie_id' => 8,
+                'supprimable' => 1,
             ),
             65 => 
             array (
@@ -546,6 +611,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Les génisses sont-elles touchées par des pathologies du jeune âge ? (respiratoires',
                     'reponse' => 'pathologie du jeune âge chez les génisses',
                     'categorie_id' => 5,
+                    'supprimable' => 1,
                 ),
                 66 => 
                 array (
@@ -554,6 +620,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les apports alimentaires sont-ils suffisants durant le premier mois de lactation ? Et pour les primipares ?',
                     'reponse' => 'apports alimentaires insuffisants durant les 1er mois de lactation',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 67 => 
                 array (
@@ -562,6 +629,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les animaux ne sont-ils pas trop gras au vêlage ?',
                     'reponse' => 'vaches trop grasses au vêlage',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 68 => 
                 array (
@@ -570,6 +638,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Le parasitisme est-il maîtrisé ?',
                     'reponse' => 'parasitisme mal maîtrisé',
                     'categorie_id' => 8,
+                    'supprimable' => 1,
                 ),
                 69 => 
                 array (
@@ -578,6 +647,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Les maladies en lien avec la reproduction (BVD, chlamydioses,) sont-elles maîtrisées ?',
                     'reponse' => 'présence de maladies touchant la reproduction',
                     'categorie_id' => 5,
+                    'supprimable' => 1,
                 ),
                 70 => 
                 array (
@@ -586,6 +656,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les vêlages précédents ont-ils été difficiles ?',
                     'reponse' => 'vêlages précédents difficiles',
                     'categorie_id' => 5,
+                    'supprimable' => 1,
                 ),
                 71 => 
                 array (
@@ -594,6 +665,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La fertilité du taureau est-elle surveillée ?',
                     'reponse' => 'pas de surveillance de la fertilité du taureau',
                     'categorie_id' => 4,
+                    'supprimable' => 1,
                 ),
                 72 => 
                 array (
@@ -602,6 +674,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La présence du taureau est-elle trop courte ?',
                     'reponse' => 'présence du taureau trop courte',
                     'categorie_id' => 4,
+                    'supprimable' => 1,
                 ),
                 73 => 
                 array (
@@ -610,6 +683,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La ration est-elle équilibrée et notamment en apports minéraux ?',
                     'reponse' => 'ration déséquilibrée, notamment en minéraux',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 74 => 
                 array (
@@ -618,6 +692,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les animaux sont-ils confrontés à des éléments perturbateurs : chiens',
                 'reponse' => 'présence d\'éléments perturbateurs (chiens,)',
                     'categorie_id' => 4,
+                    'supprimable' => 1,
                 ),
                 75 => 
                 array (
@@ -626,6 +701,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Les maladies abortives (BVD, Fièvre Q, FCO) sont-elles maîtrisées ?',
                     'reponse' => 'présence de maladies abortives',
                     'categorie_id' => 5,
+                    'supprimable' => 1,
                 ),
                 76 => 
                 array (
@@ -634,6 +710,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'les gestantes sont-elles touchées par des infections diverses avec fièvre ?',
                     'reponse' => 'infections diverses sur les gestantes',
                     'categorie_id' => 5,
+                    'supprimable' => 1,
                 ),
                 77 => 
                 array (
@@ -642,6 +719,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Des traitements corticoïdes ont-ils été administrés',
                     'reponse' => 'traitements corticoïdes',
                     'categorie_id' => 5,
+                    'supprimable' => 1,
                 ),
                 78 => 
                 array (
@@ -650,6 +728,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les vaches ont-elles présenté un anoestrus d\'hiver ?',
                     'reponse' => 'anoestrus d\'hiver',
                     'categorie_id' => 7,
+                    'supprimable' => 1,
                 ),
                 79 => 
                 array (
@@ -658,6 +737,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les vaches ont-elles présenté un anoestrus d\'allaitement ?',
                     'reponse' => 'anoestrus d\'allaitement',
                     'categorie_id' => 7,
+                    'supprimable' => 1,
                 ),
                 80 => 
                 array (
@@ -666,6 +746,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les apports alimentaires sont-ils suffisants pour éviter les pertes d\'état ?',
                     'reponse' => 'perte d\'état par apports alimentaires insuffisants',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 81 => 
                 array (
@@ -674,6 +755,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les apports en vitamines, minéraux et oligo-éléments sont-ils suffisants',
                     'reponse' => 'apports en vitamines, minéraux et oligo-éléments insuffisants',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 82 => 
                 array (
@@ -682,6 +764,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les vaches ont-elles subies des métrites ou non-délivrances mal gérées ?',
                     'reponse' => 'non-délivrances mal gérées et métrites',
                     'categorie_id' => 5,
+                    'supprimable' => 1,
                 ),
                 83 => 
                 array (
@@ -690,6 +773,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les vêlages précédents ont-ils été difficiles ?',
                     'reponse' => 'vêlages précédents difficiles',
                     'categorie_id' => 5,
+                    'supprimable' => 1,
                 ),
                 84 => 
                 array (
@@ -698,6 +782,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les vaches sont-elles de souches faiblement indexées en fertilité ?',
                     'reponse' => 'souches avec faible fertilité',
                     'categorie_id' => 7,
+                    'supprimable' => 1,
                 ),
                 85 => 
                 array (
@@ -706,6 +791,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Le nombre de vaches par taureaux est-il cohérent ?',
                     'reponse' => 'nombre de vache par taureaux incohérent',
                     'categorie_id' => 4,
+                    'supprimable' => 1,
                 ),
                 86 => 
                 array (
@@ -714,6 +800,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'L\'alimentation des taureaux est-elle suffisante ?',
                     'reponse' => 'alimentation du taureau insuffisante',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 87 => 
                 array (
@@ -722,6 +809,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La fertilité du taureau est-elle surveillée ?',
                     'reponse' => 'pas de surveillance de la fertilité du taureau',
                     'categorie_id' => 4,
+                    'supprimable' => 1,
                 ),
                 88 => 
                 array (
@@ -730,6 +818,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Le type génétique du taureau est-il adapté à la morphologie des vaches et des génisses ?',
                     'reponse' => 'type génétique du taureau inadapté à la morphologie des femelles',
                     'categorie_id' => 4,
+                    'supprimable' => 1,
                 ),
                 89 => 
                 array (
@@ -738,6 +827,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La ration fin de gestation n\'est-elle pas trop riche ?',
                     'reponse' => 'ration de fin de gestation trop riche',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 90 => 
                 array (
@@ -746,6 +836,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les reproductrices présentent-elles une morphologie adaptée au vêlage ?',
                     'reponse' => 'morphologie des vaches inadaptée au vêlage',
                     'categorie_id' => 4,
+                    'supprimable' => 1,
                 ),
                 91 => 
                 array (
@@ -754,6 +845,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'L\'âge au vêlage est-il trop jeune ?',
                     'reponse' => 'vêlages trop précoces',
                     'categorie_id' => 4,
+                    'supprimable' => 1,
                 ),
                 92 => 
                 array (
@@ -762,6 +854,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La conduite des génisses de renouvellement est-elle cohérente avec l\'objectif d\'âge au vêlage ?',
                     'reponse' => 'conduites des génisses incohérente / âge au vêlage',
                     'categorie_id' => 4,
+                    'supprimable' => 1,
                 ),
                 93 => 
                 array (
@@ -770,6 +863,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Y-t-il trop de vêlages difficiles ? (cf. vêlages difficiles)',
                     'reponse' => 'vêlages difficiles',
                     'categorie_id' => 5,
+                    'supprimable' => 1,
                 ),
                 94 => 
                 array (
@@ -778,6 +872,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les mises-bas ont-elles lieu dans une case de vêlage dédiée et propre ?',
                     'reponse' => 'absence de case de vêlage',
                     'categorie_id' => 2,
+                    'supprimable' => 1,
                 ),
                 95 => 
                 array (
@@ -786,6 +881,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les interventions humaines respectent-elles les conditions d\'hygiène ?',
                     'reponse' => 'hygiène insuffisante dans les interventions',
                     'categorie_id' => 4,
+                    'supprimable' => 1,
                 ),
                 96 => 
                 array (
@@ -794,6 +890,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les apports en vitamines, minéraux et/ou oligoéléments sont-ils suffisants avant vêlage ?',
                     'reponse' => 'apports en vitamines, minéraux et oligo-éléments insuffisants',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 97 => 
                 array (
@@ -802,6 +899,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La ration de fin de gestation n\'est-elle pas trop riche ?',
                     'reponse' => 'ration de fin de gestation trop riche',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 98 => 
                 array (
@@ -810,6 +908,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Le type génétique du taureau peut-il être à l\'origine de ces poids de naissance trop élevé ?',
                     'reponse' => 'type génétique du taureau à l\'origine de poids de naissance trop élevés',
                     'categorie_id' => 4,
+                    'supprimable' => 1,
                 ),
                 99 => 
                 array (
@@ -818,6 +917,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La ration est-elle suffisamment riche en fibres ?',
                     'reponse' => 'ration pauvre en fibres',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 100 => 
                 array (
@@ -826,6 +926,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La ration est-elle excédentaire en amidon ?',
                     'reponse' => 'ration excédentaire en amidon',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 101 => 
                 array (
@@ -834,6 +935,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Les animaux ont-ils subit une transition alimentaire brutale ou trop courte (inférieur à 3 semaines) ?',
                     'reponse' => 'transition alimentaire trop brutale ou trop courte',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 102 => 
                 array (
@@ -842,6 +944,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La mise en quarantaine des animaux achetés est-elle respectée ?',
                     'reponse' => 'pas de mise en quarantaine des animaux achetés',
                     'categorie_id' => 5,
+                    'supprimable' => 1,
                 ),
                 103 => 
                 array (
@@ -850,6 +953,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La ration est-elle excédentaire ?',
                     'reponse' => 'ration excédentaire',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 104 => 
                 array (
@@ -858,6 +962,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les animaux sont-ils vaccinés contre les entérotoxémies ?',
                     'reponse' => 'pas de vaccination contre les entérotoxémies',
                     'categorie_id' => 5,
+                    'supprimable' => 1,
                 ),
                 105 => 
                 array (
@@ -866,6 +971,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La ration est-elle calculée ?',
                     'reponse' => 'pas de calcul de ration',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 106 => 
                 array (
@@ -874,6 +980,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La ration est-elle pesée ?',
                     'reponse' => 'ration non pesée',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 107 => 
                 array (
@@ -882,6 +989,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La ration distribuée est-elle différente de la ration calculée ?',
                     'reponse' => 'ration distribuée différente de la ration calculée',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 108 => 
                 array (
@@ -890,6 +998,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les délais de transition alimentaire sont-ils respectés ?',
                     'reponse' => 'transition alimentaire trop brutale ou trop courte',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 109 => 
                 array (
@@ -898,6 +1007,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'Comment les animaux valorisent la ration (observation des animaux) ?',
                     'reponse' => 'valorisation de la ration peut-être insuffisante',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 110 => 
                 array (
@@ -906,6 +1016,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les sols sont-ils glissants ?',
                     'reponse' => 'sols glissants',
                     'categorie_id' => 2,
+                    'supprimable' => 1,
                 ),
                 111 => 
                 array (
@@ -914,6 +1025,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les bagarres sont fréquentes ? Les animaux sont nerveux ?',
                     'reponse' => 'animaux nerveux, qui se battent',
                     'categorie_id' => 7,
+                    'supprimable' => 1,
                 ),
                 112 => 
                 array (
@@ -922,6 +1034,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La densité animale n\'est-elle pas trop élevée ?',
                     'reponse' => 'densité animale trop élevée',
                     'categorie_id' => 2,
+                    'supprimable' => 1,
                 ),
                 113 => 
                 array (
@@ -930,6 +1043,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Le bâtiment est-il suffisamment ventilé ? Présence de courants d\'air, ammoniac, chaleur,',
                     'reponse' => 'problèmes de ventilation du bâtiment',
                     'categorie_id' => 2,
+                    'supprimable' => 1,
                 ),
                 114 => 
                 array (
@@ -938,6 +1052,7 @@ class OriginesTableSeeder extends Seeder
                 'question' => 'La maladie des muqueuses (BVD) est-elle maîtrisée dans le troupeau ?',
                     'reponse' => 'BVD non maîtrisé',
                     'categorie_id' => 5,
+                    'supprimable' => 1,
                 ),
                 115 => 
                 array (
@@ -946,6 +1061,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La ration contient-elle suffisamment de fibres de structure ?',
                     'reponse' => 'pas assez de fibres de structure dans la ration',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 116 => 
                 array (
@@ -954,6 +1070,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La ration est-elle équilibrée ?',
                     'reponse' => 'ration déséquilibrée',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 117 => 
                 array (
@@ -962,6 +1079,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les délais de transition alimentaire sont-ils respectés ?',
                     'reponse' => 'transition alimentaire trop brutale ou trop courte',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 118 => 
                 array (
@@ -970,6 +1088,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'L\'eau est potable ?',
                     'reponse' => 'eau non potable',
                     'categorie_id' => 1,
+                    'supprimable' => 1,
                 ),
                 119 => 
                 array (
@@ -978,6 +1097,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'le troupeau est-il protégé des contaminations extérieures (personnes',
                         'reponse' => 'pas de protection du troupeau vis-à-vis des contamination extérieures',
                         'categorie_id' => 5,
+                        'supprimable' => 1,
                     ),
                     120 => 
                     array (
@@ -986,6 +1106,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Le troupeau est-il touché par la paratuberculose ?',
                         'reponse' => 'présence de paratuberculose',
                         'categorie_id' => 5,
+                        'supprimable' => 1,
                     ),
                     121 => 
                     array (
@@ -994,6 +1115,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Les parasites strongles digestifs, paramphistome et grande douve sont-ils maîtrisés',
                         'reponse' => 'pas de maîtrise du parasitisme',
                         'categorie_id' => 8,
+                        'supprimable' => 1,
                     ),
                     122 => 
                     array (
@@ -1002,6 +1124,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'L\'abreuvement sur points d\'eaux naturels potentiellement contaminés est-il sécurisé ?',
                         'reponse' => 'points d\'eaux naturels peut-être contaminés',
                         'categorie_id' => 8,
+                        'supprimable' => 1,
                     ),
                     123 => 
                     array (
@@ -1010,6 +1133,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Existe-il une bonne gestion du pâturage vis-à-vis du parasitisme ?',
                         'reponse' => 'pas de gestion particulière du pâturage vis-a-vis du parasitisme',
                         'categorie_id' => 8,
+                        'supprimable' => 1,
                     ),
                     124 => 
                     array (
@@ -1018,6 +1142,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Pratiquez-vous un suivi/dépistage de l\'infestation parasitaire ?',
                         'reponse' => 'suivi/dépistage des infections parasitaires',
                         'categorie_id' => 8,
+                        'supprimable' => 1,
                     ),
                     125 => 
                     array (
@@ -1026,6 +1151,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Les délais de transition alimentaire sont-ils respectés ?',
                         'reponse' => 'transition alimentaire trop brutale ou trop courte',
                         'categorie_id' => 1,
+                        'supprimable' => 1,
                     ),
                     126 => 
                     array (
@@ -1034,6 +1160,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'La proportion de légumineuses météorisantes (trèfle violet, …)',
                         'reponse' => 'présence de légumineuses météorisantes dans la ration',
                         'categorie_id' => 1,
+                        'supprimable' => 1,
                     ),
                     127 => 
                     array (
@@ -1042,6 +1169,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Pratiquez-vous le pâturage dans des vergers (pommiers) ?',
                         'reponse' => 'pâturage sous pommiers',
                         'categorie_id' => 1,
+                        'supprimable' => 1,
                     ),
                     128 => 
                     array (
@@ -1050,6 +1178,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Absence de complémentation en Mg à la mise à l\'herbe',
                         'reponse' => 'pas de complémentation en Mg à la mise à l\'herbe',
                         'categorie_id' => 1,
+                        'supprimable' => 1,
                     ),
                     129 => 
                     array (
@@ -1058,6 +1187,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Absence de transition entre la ration hivernale et printanière',
                         'reponse' => 'pas de transition entre les rations hivernales et printanières ',
                         'categorie_id' => 1,
+                        'supprimable' => 1,
                     ),
                     130 => 
                     array (
@@ -1066,6 +1196,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Ingestion excessive d\'herbe jeune qui accélère le transit',
                         'reponse' => 'Ingestion excessive d\'herbe jeune',
                         'categorie_id' => 1,
+                        'supprimable' => 1,
                     ),
                     131 => 
                     array (
@@ -1074,6 +1205,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'la mortalité est-elle en rapport avec des vêlages difficiles',
                         'reponse' => 'vêlages difficiles',
                         'categorie_id' => 5,
+                        'supprimable' => 1,
                     ),
                     132 => 
                     array (
@@ -1082,6 +1214,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Des apports minéraux sont-ils réalisés ?',
                         'reponse' => 'pas d\'apport de minéraux',
                         'categorie_id' => 1,
+                        'supprimable' => 1,
                     ),
                     133 => 
                     array (
@@ -1090,6 +1223,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Assurez-vous une bonne surveillance et êtes-vous correctement équipé ?',
                         'reponse' => 'Surveillance peut-être insuffisante',
                         'categorie_id' => 4,
+                        'supprimable' => 1,
                     ),
                     134 => 
                     array (
@@ -1098,6 +1232,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Etes-vous équipé d\'une case de vêlage et d\'isolement du couple mère veau ?',
                         'reponse' => 'pas de case de vêlage',
                         'categorie_id' => 4,
+                        'supprimable' => 1,
                     ),
                     135 => 
                     array (
@@ -1106,6 +1241,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Assurez-vous une bonne hygiène des locaux ?',
                         'reponse' => 'Hygiène des locaux insuffisante',
                         'categorie_id' => 3,
+                        'supprimable' => 1,
                     ),
                     136 => 
                     array (
@@ -1114,6 +1250,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Les vaches ont-elles de bonnes qualités maternelles ?',
                         'reponse' => 'faible qualité maternelle des vaches',
                         'categorie_id' => 7,
+                        'supprimable' => 1,
                     ),
                     137 => 
                     array (
@@ -1122,6 +1259,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'La prise de colostrum est-elle suffisante ?',
                         'reponse' => 'prise de colostrum insuffisante',
                         'categorie_id' => 4,
+                        'supprimable' => 1,
                     ),
                     138 => 
                     array (
@@ -1130,6 +1268,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Possédez-vous une banque de colostrum de qualité congelé ?',
                         'reponse' => 'Pas de banque de colostrum congelé',
                         'categorie_id' => 4,
+                        'supprimable' => 1,
                     ),
                     139 => 
                     array (
@@ -1138,6 +1277,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Possédez-vous et utilisez-vous un pèse colostrum ?',
                         'reponse' => 'Pas d\'utilisation d\'un pèse colostrum',
                         'categorie_id' => 4,
+                        'supprimable' => 1,
                     ),
                     140 => 
                     array (
@@ -1146,6 +1286,7 @@ class OriginesTableSeeder extends Seeder
                     'question' => 'Les mamelles des vaches sont-elles défectueuse (cf. mamelle vache) ?',
                         'reponse' => 'mamelle défectueuses',
                         'categorie_id' => 5,
+                        'supprimable' => 1,
                     ),
                     141 => 
                     array (
@@ -1154,6 +1295,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'La ration des mères n\'est-elle pas trop riche en énergie ou en azote ?',
                         'reponse' => 'ration des mères trop riche en énergie ou en azote',
                         'categorie_id' => 1,
+                        'supprimable' => 1,
                     ),
                     142 => 
                     array (
@@ -1162,6 +1304,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'La quantité de colostrum bue est-elle suffisante ?',
                         'reponse' => 'quantité de colostrum bu insuffisante',
                         'categorie_id' => 4,
+                        'supprimable' => 1,
                     ),
                     143 => 
                     array (
@@ -1170,6 +1313,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Possédez-vous et utilisez-vous un pèse colostrum ?',
                         'reponse' => 'Pas d\'utilisation d\'un pèse colostrum',
                         'categorie_id' => 4,
+                        'supprimable' => 1,
                     ),
                     144 => 
                     array (
@@ -1178,6 +1322,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Possédez-vous une banque de colostrum de qualité congelé ?',
                         'reponse' => 'Pas de banque de colostrum congelé',
                         'categorie_id' => 4,
+                        'supprimable' => 1,
                     ),
                     145 => 
                     array (
@@ -1186,6 +1331,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Y-a-t-il des box à veaux dans la stabulation ?',
                         'reponse' => 'présence de box à veaux dans la stabulation',
                         'categorie_id' => 2,
+                        'supprimable' => 1,
                     ),
                     146 => 
                     array (
@@ -1194,6 +1340,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Possédez-vous une case de quarantaine pour les veaux malades ?',
                         'reponse' => 'Pas de case de quarantaine pour les veaux malades',
                         'categorie_id' => 2,
+                        'supprimable' => 1,
                     ),
                     147 => 
                     array (
@@ -1202,6 +1349,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Les veaux présentent-ils des écarts d\'âge important ?',
                         'reponse' => 'écarts d\'âge important chez les veaux',
                         'categorie_id' => 4,
+                        'supprimable' => 1,
                     ),
                     148 => 
                     array (
@@ -1210,6 +1358,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Assurez-vous une bonne hygiène des box à veaux ?',
                         'reponse' => 'Hygiène des box à veau insuffisante',
                         'categorie_id' => 3,
+                        'supprimable' => 1,
                     ),
                     149 => 
                     array (
@@ -1218,6 +1367,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Rencontrez-vous des problèmes de coccidiose ?',
                         'reponse' => 'Problèmes de coccidiose',
                         'categorie_id' => 8,
+                        'supprimable' => 1,
                     ),
                     150 => 
                     array (
@@ -1226,6 +1376,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Le bâtiment est-il bien ventilé ?',
                         'reponse' => 'bâtiment mal ventilé',
                         'categorie_id' => 2,
+                        'supprimable' => 1,
                     ),
                     151 => 
                     array (
@@ -1234,6 +1385,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Possédez-vous une case de quarantaine pour les veaux malades ?',
                         'reponse' => 'Pas de case de quarantaine pour les veaux malades',
                         'categorie_id' => 2,
+                        'supprimable' => 1,
                     ),
                     152 => 
                     array (
@@ -1242,6 +1394,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Les veaux ont-ils accès à un abreuvoir adapté ?',
                         'reponse' => 'abreuvoir inadapté pour les veaux',
                         'categorie_id' => 1,
+                        'supprimable' => 1,
                     ),
                     153 => 
                     array (
@@ -1250,6 +1403,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'La ration des mères est-elle équilibrée ?',
                         'reponse' => 'ration des mère déséquilibrée',
                         'categorie_id' => 1,
+                        'supprimable' => 1,
                     ),
                     154 => 
                     array (
@@ -1258,6 +1412,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Y a-t-il une bonne surveillance et maîtrise du parasitisme (coccidiose',
                         'reponse' => 'mauvaise maîtrise du parasitisme (coccidiose)',
                             'categorie_id' => 8,
+                            'supprimable' => 1,
                         ),
                         155 => 
                         array (
@@ -1266,6 +1421,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Arrière-voussure les pathologies du jeune âge ?',
                             'reponse' => 'Peu de maîtrise des pathologies du jeune âge',
                             'categorie_id' => 5,
+                            'supprimable' => 1,
                         ),
                         156 => 
                         array (
@@ -1274,6 +1430,7 @@ class OriginesTableSeeder extends Seeder
                         'question' => 'Le critère génétique "croissance" est-il pris en compte dans votre sélection ? (choix des génisses et taureaux)',
                             'reponse' => '"pas de prise en compte du critère génétique ""croissance"" dans la sélection"',
                             'categorie_id' => 4,
+                            'supprimable' => 1,
                         ),
                         157 => 
                         array (
@@ -1282,6 +1439,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Les apports en oligoéléments à la mère sont-ils suffisants ?',
                             'reponse' => 'apports d\'oligo-éléments aux mères insuffisants',
                             'categorie_id' => 1,
+                            'supprimable' => 1,
                         ),
                         158 => 
                         array (
@@ -1290,6 +1448,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Désinfectez-vous les nombrils à la naissance ?',
                             'reponse' => 'pas de désinfection des nombrils à la naissance',
                             'categorie_id' => 3,
+                            'supprimable' => 1,
                         ),
                         159 => 
                         array (
@@ -1298,6 +1457,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Y-a-t-il des box à veaux dans la stabulation ?',
                             'reponse' => 'présence de box à veaux dans la stabulation',
                             'categorie_id' => 2,
+                            'supprimable' => 1,
                         ),
                         160 => 
                         array (
@@ -1306,6 +1466,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Assurez-vous une bonne hygiène des box à veaux ?',
                             'reponse' => 'Hygiène des box à veau insuffisante',
                             'categorie_id' => 3,
+                            'supprimable' => 1,
                         ),
                         161 => 
                         array (
@@ -1314,6 +1475,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'La ration des mères n\'est-elle pas trop riche en énergie ou en azote ?',
                             'reponse' => 'ration des mères trop riche en énergie ou en azote',
                             'categorie_id' => 1,
+                            'supprimable' => 1,
                         ),
                         162 => 
                         array (
@@ -1322,6 +1484,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Rencontrez-vous des problèmes de coccidiose, poux, tiques, strongylose ?',
                             'reponse' => 'problèmes de parasitisme divers',
                             'categorie_id' => 8,
+                            'supprimable' => 1,
                         ),
                         163 => 
                         array (
@@ -1330,6 +1493,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Arrière-voussure les pathologies du jeune âge ?',
                             'reponse' => 'Peu de maîtrise des pathologies du jeune âge',
                             'categorie_id' => 5,
+                            'supprimable' => 1,
                         ),
                         164 => 
                         array (
@@ -1338,6 +1502,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Y a t-il une bonne surveillance et maîtrise du parasitisme (coccidiose',
                             'reponse' => 'mauvaise maîtrise du parasitisme (coccidiose)',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             165 => 
                             array (
@@ -1346,6 +1511,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Avez-vous neutralisé les bétons neufs ?',
                                 'reponse' => 'Bétons neufs non neutralisés',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             166 => 
                             array (
@@ -1354,6 +1520,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La complémentation des veaux est-elle adaptée ?',
                                 'reponse' => 'complémentation des veaux inadaptée',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             167 => 
                             array (
@@ -1362,6 +1529,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'eau est-elle potable ?',
                                 'reponse' => 'eau non potable',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             168 => 
                             array (
@@ -1370,6 +1538,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le bâtiment est-il bien ventilé ?',
                                 'reponse' => 'bâtiment mal ventilé',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             169 => 
                             array (
@@ -1378,6 +1547,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La densité d\'animaux n\'est-elle pas trop importante pour le volume d\'air disponible ?',
                                 'reponse' => 'densité animale trop élevée / volume d\'air disponible',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             170 => 
                             array (
@@ -1386,6 +1556,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous un vide sanitaire et la désinfection des locaux ?',
                                 'reponse' => 'vide sanitaire et désinfection des locaux',
                                 'categorie_id' => 3,
+                                'supprimable' => 1,
                             ),
                             171 => 
                             array (
@@ -1394,6 +1565,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Y-a-t-il des mélange d\'animaux provenant de différents lots/lieux ?',
                                 'reponse' => 'mélange d\'animaux d\'origine différente',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             172 => 
                             array (
@@ -1402,6 +1574,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous la vaccination avant ou lors de l\'allotement ?',
                                 'reponse' => 'vaccination avant ou pendant l\'allotement',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             173 => 
                             array (
@@ -1410,6 +1583,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les animaux ont-ils subi un coup de chaud/froid lors du transport ou de l\'allotement ?',
                                 'reponse' => 'coup de chaud/froid pendant le transport ou l\'allotement',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             174 => 
                             array (
@@ -1418,6 +1592,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La densité d\'animaux n\'est-elle pas trop importante par rapport à la surface de vie ?',
                                 'reponse' => 'densité animale trop élevée / surface de vie',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             175 => 
                             array (
@@ -1426,6 +1601,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Y-a-t-il des box à veaux dans la stabulation ?',
                                 'reponse' => 'présence de box à veaux dans la stabulation',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             176 => 
                             array (
@@ -1434,6 +1610,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Maintenez-vous le taureau dans les cases avec vaches en chaleur ?',
                                 'reponse' => 'Taureau dans les cases avec les vaches en chaleur',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             177 => 
                             array (
@@ -1442,6 +1619,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous du matériel de surveillance ?',
                                 'reponse' => 'Pas de matériel de surveillance',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             178 => 
                             array (
@@ -1450,6 +1628,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous des cases de vêlage avec contention des mères ?',
                                 'reponse' => 'Pas de cases de vêlage avec contention des mères',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             179 => 
                             array (
@@ -1458,6 +1637,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Votre temps de surveillance est-il suffisant ?',
                                 'reponse' => 'Temps de surveillance insuffisant',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             180 => 
                             array (
@@ -1466,6 +1646,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les vêlages en extérieur sont-ils majoritaires ?',
                                 'reponse' => 'vêlages surtout en extérieur',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             181 => 
                             array (
@@ -1474,6 +1655,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les vêlages sont-ils étalés sur toute l\'année ?',
                                 'reponse' => 'vêlages étalés sur toute l\'année',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             182 => 
                             array (
@@ -1482,6 +1664,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les vaches présentent-elles des faibles qualités maternelles ?',
                                 'reponse' => 'faible qualité maternelle des vaches',
                                 'categorie_id' => 7,
+                                'supprimable' => 1,
                             ),
                             183 => 
                             array (
@@ -1490,6 +1673,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Avez-vous une proportion importante de gros veaux à la naissance ?',
                                 'reponse' => 'Proportion importante de gros veaux à la naissance',
                                 'categorie_id' => 7,
+                                'supprimable' => 1,
                             ),
                             184 => 
                             array (
@@ -1498,6 +1682,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les gros veaux à la naissance ne sont-ils pas dû à une ration des mères en fin de gestation trop riche ?',
                                 'reponse' => 'ration en fin de gestation trop riche',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             185 => 
                             array (
@@ -1506,6 +1691,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration des mères en fin de gestation est-elle déficitaire en minéraux',
                                 'reponse' => 'ration de fin des gestation déficitaire en minéraux',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             186 => 
                             array (
@@ -1514,6 +1700,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les vaches présentent-elles de faibles qualités maternelles ?',
                                 'reponse' => 'faible qualité maternelle des vaches',
                                 'categorie_id' => 7,
+                                'supprimable' => 1,
                             ),
                             187 => 
                             array (
@@ -1522,6 +1709,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous des vaches non dociles ?',
                                 'reponse' => 'Présence de vaches non dociles',
                                 'categorie_id' => 7,
+                                'supprimable' => 1,
                             ),
                             188 => 
                             array (
@@ -1530,6 +1718,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'observez-vous un manque d\'état important des mères en fin de gestation ?',
                                 'reponse' => 'Manque d\'état important des mères en fin de gestation',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             189 => 
                             array (
@@ -1538,6 +1727,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous une bonne gestion sanitaire du pâturage ?',
                                 'reponse' => 'pas de gestion sanitaire des pâturages',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             190 => 
                             array (
@@ -1546,6 +1736,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les pâtures présentent-elles des zones humides ?',
                                 'reponse' => 'pâturages avec zones humides',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             191 => 
                             array (
@@ -1554,6 +1745,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Le surpâturage est-il fréquent (hauteur d\'herbe <5cm à la sortie)',
                                 'reponse' => 'surpâturage fréquent',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             192 => 
                             array (
@@ -1562,6 +1754,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Epandez-vous du fumier frais tardivement ? (au printemps)',
                                 'reponse' => 'épandage tardif de fumier frais au printemps',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             193 => 
                             array (
@@ -1570,6 +1763,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'abreuvement au pâturage est-il de bonne qualité ?',
                                 'reponse' => 'qualité insuffisante de l\'abreuvement au pâturage',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             194 => 
                             array (
@@ -1578,6 +1772,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mélangez-vous d\'animaux de tout âge dans les mêmes parcelles ?',
                                 'reponse' => 'Mélange d\'animaux de tout âge sur les mêmes parcelles',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             195 => 
                             array (
@@ -1586,6 +1781,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Votre temps de détection des animaux à poils piqués est-il suffisant ?',
                                 'reponse' => 'Détection tardive des animaux à poil piqué',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             196 => 
                             array (
@@ -1594,6 +1790,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Recherchez-vous les parasites par analyse coprologique ou sanguine ?',
                                 'reponse' => 'Pas de recherche des parasites',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             197 => 
                             array (
@@ -1602,6 +1799,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Administrez-vous des traitements curatifs ?',
                                 'reponse' => 'Traitements curatifs',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             198 => 
                             array (
@@ -1610,6 +1808,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous une bonne gestion sanitaire du pâturage ?',
                                 'reponse' => 'pas de gestion sanitaire des pâturages',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             199 => 
                             array (
@@ -1618,6 +1817,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les pâtures présentent-elles des zones humides ?',
                                 'reponse' => 'pâturages avec zones humides',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             200 => 
                             array (
@@ -1626,6 +1826,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Le surpâturage est-il fréquent (hauteur d\'herbe <5cm à la sortie)',
                                 'reponse' => 'surpâturage fréquent',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             201 => 
                             array (
@@ -1634,6 +1835,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Epandez-vous du fumier frais tardivement ? (au printemps)',
                                 'reponse' => 'épandage tardif de fumier frais au printemps',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             202 => 
                             array (
@@ -1642,6 +1844,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'abreuvement au pâturage est-il de bonne qualité ?',
                                 'reponse' => 'qualité insuffisante de l\'abreuvement au pâturage',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             203 => 
                             array (
@@ -1650,6 +1853,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mélangez-vous d\'animaux de tout âge dans les mêmes parcelles ?',
                                 'reponse' => 'Mélange d\'animaux de tout âge sur les mêmes parcelles',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             204 => 
                             array (
@@ -1658,6 +1862,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Votre temps de détection des animaux à poils piqués est-il suffisant ?',
                                 'reponse' => 'Détection tardive des animaux à poil piqué',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             205 => 
                             array (
@@ -1666,6 +1871,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Recherchez-vous les parasites par analyse coprologique ou sanguine ?',
                                 'reponse' => 'Pas de recherche des parasites',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             206 => 
                             array (
@@ -1674,6 +1880,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Administrez-vous des traitements curatifs ?',
                                 'reponse' => 'Traitements curatifs',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             207 => 
                             array (
@@ -1682,6 +1889,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous une bonne gestion sanitaire du pâturage ?',
                                 'reponse' => 'pas de gestion sanitaire des pâturages',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             208 => 
                             array (
@@ -1690,6 +1898,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les pâtures présentent-elles des zones humides ?',
                                 'reponse' => 'pâturages avec zones humides',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             209 => 
                             array (
@@ -1698,6 +1907,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Le surpâturage est-il fréquent (hauteur d\'herbe <5cm à la sortie)',
                                 'reponse' => 'surpâturage fréquent',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             210 => 
                             array (
@@ -1706,6 +1916,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Epandez-vous du fumier frais tardivement ? (au printemps)',
                                 'reponse' => 'épandage tardif de fumier frais au printemps',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             211 => 
                             array (
@@ -1714,6 +1925,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'abreuvement au pâturage est-il de bonne qualité ?',
                                 'reponse' => 'qualité insuffisante de l\'abreuvement au pâturage',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             212 => 
                             array (
@@ -1722,6 +1934,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mélangez-vous d\'animaux de tout âge dans les mêmes parcelles ?',
                                 'reponse' => 'Mélange d\'animaux de tout âge sur les mêmes parcelles',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             213 => 
                             array (
@@ -1730,6 +1943,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Votre temps de détection des animaux à poils piqués est-il suffisant ?',
                                 'reponse' => 'Détection tardive des animaux à poil piqué',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             214 => 
                             array (
@@ -1738,6 +1952,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Recherchez-vous les parasites par analyse coprologique ou sanguine ?',
                                 'reponse' => 'Pas de recherche des parasites',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             215 => 
                             array (
@@ -1746,6 +1961,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Administrez-vous des traitements curatifs ?',
                                 'reponse' => 'Traitements curatifs',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             216 => 
                             array (
@@ -1754,6 +1970,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous une bonne gestion sanitaire du pâturage ?',
                                 'reponse' => 'pas de gestion sanitaire des pâturages',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             217 => 
                             array (
@@ -1762,6 +1979,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les pâtures présentent-elles des zones humides ?',
                                 'reponse' => 'pâturages avec zones humides',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             218 => 
                             array (
@@ -1770,6 +1988,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Le surpâturage est-il fréquent (hauteur d\'herbe <5cm à la sortie)',
                                 'reponse' => 'surpâturage fréquent',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             219 => 
                             array (
@@ -1778,6 +1997,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Epandez-vous du fumier frais tardivement ? (au printemps)',
                                 'reponse' => 'épandage tardif de fumier frais au printemps',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             220 => 
                             array (
@@ -1786,6 +2006,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'abreuvement au pâturage est-il de bonne qualité ?',
                                 'reponse' => 'qualité insuffisante de l\'abreuvement au pâturage',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             221 => 
                             array (
@@ -1794,6 +2015,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mélangez-vous d\'animaux de tout âge dans les mêmes parcelles ?',
                                 'reponse' => 'Mélange d\'animaux de tout âge sur les mêmes parcelles',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             222 => 
                             array (
@@ -1802,6 +2024,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Votre temps de détection des animaux à poils piqués est-il suffisant ?',
                                 'reponse' => 'Détection tardive des animaux à poil piqué',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             223 => 
                             array (
@@ -1810,6 +2033,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Recherchez-vous les parasites par analyse coprologique ou sanguine ?',
                                 'reponse' => 'Pas de recherche des parasites',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             224 => 
                             array (
@@ -1818,6 +2042,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Administrez-vous des traitements curatifs ?',
                                 'reponse' => 'Traitements curatifs',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             225 => 
                             array (
@@ -1826,6 +2051,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous une bonne gestion sanitaire du pâturage ?',
                                 'reponse' => 'pas de gestion sanitaire des pâturages',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             226 => 
                             array (
@@ -1834,6 +2060,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les pâtures présentent-elles des zones humides ?',
                                 'reponse' => 'pâturages avec zones humides',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             227 => 
                             array (
@@ -1842,6 +2069,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Le surpâturage est-il fréquent (hauteur d\'herbe <5cm à la sortie)',
                                 'reponse' => 'surpâturage fréquent',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             228 => 
                             array (
@@ -1850,6 +2078,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Epandez-vous du fumier frais tardivement ? (au printemps)',
                                 'reponse' => 'épandage tardif de fumier frais au printemps',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             229 => 
                             array (
@@ -1858,6 +2087,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'abreuvement au pâturage est-il de bonne qualité ?',
                                 'reponse' => 'qualité insuffisante de l\'abreuvement au pâturage',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             230 => 
                             array (
@@ -1866,6 +2096,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mélangez-vous d\'animaux de tout âge dans les mêmes parcelles ?',
                                 'reponse' => 'Mélange d\'animaux de tout âge sur les mêmes parcelles',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             231 => 
                             array (
@@ -1874,6 +2105,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Votre temps de détection des animaux à poils piqués est-il suffisant ?',
                                 'reponse' => 'Détection tardive des animaux à poil piqué',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             232 => 
                             array (
@@ -1882,6 +2114,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Recherchez-vous les parasites par analyse coprologique ou sanguine ?',
                                 'reponse' => 'Pas de recherche des parasites',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             233 => 
                             array (
@@ -1890,6 +2123,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Administrez-vous des traitements curatifs ?',
                                 'reponse' => 'Traitements curatifs',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             234 => 
                             array (
@@ -1898,6 +2132,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous une bonne gestion sanitaire du pâturage ?',
                                 'reponse' => 'pas de gestion sanitaire des pâturages',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             235 => 
                             array (
@@ -1906,6 +2141,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les pâtures présentent-elles des zones humides ?',
                                 'reponse' => 'pâturages avec zones humides',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             236 => 
                             array (
@@ -1914,6 +2150,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Le surpâturage est-il fréquent (hauteur d\'herbe <5cm à la sortie)',
                                 'reponse' => 'surpâturage fréquent',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             237 => 
                             array (
@@ -1922,6 +2159,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Epandez-vous du fumier frais tardivement ? (au printemps)',
                                 'reponse' => 'épandage tardif de fumier frais au printemps',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             238 => 
                             array (
@@ -1930,6 +2168,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'abreuvement au pâturage est-il de bonne qualité ?',
                                 'reponse' => 'qualité insuffisante de l\'abreuvement au pâturage',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             239 => 
                             array (
@@ -1938,6 +2177,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mélangez-vous d\'animaux de tout âge dans les mêmes parcelles ?',
                                 'reponse' => 'Mélange d\'animaux de tout âge sur les mêmes parcelles',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             240 => 
                             array (
@@ -1946,6 +2186,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Votre temps de détection des animaux à poils piqués est-il suffisant ?',
                                 'reponse' => 'Détection tardive des animaux à poil piqué',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             241 => 
                             array (
@@ -1954,6 +2195,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Recherchez-vous les parasites par analyse coprologique ou sanguine ?',
                                 'reponse' => 'Pas de recherche des parasites',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             242 => 
                             array (
@@ -1962,6 +2204,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Administrez-vous des traitements curatifs ?',
                                 'reponse' => 'Traitements curatifs',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             243 => 
                             array (
@@ -1970,6 +2213,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous une bonne gestion sanitaire du pâturage ?',
                                 'reponse' => 'pas de gestion sanitaire des pâturages',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             244 => 
                             array (
@@ -1978,6 +2222,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les pâtures présentent-elles des zones humides ?',
                                 'reponse' => 'pâturages avec zones humides',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             245 => 
                             array (
@@ -1986,6 +2231,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Le surpâturage est-il fréquent (hauteur d\'herbe <5cm à la sortie)',
                                 'reponse' => 'surpâturage fréquent',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             246 => 
                             array (
@@ -1994,6 +2240,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Epandez-vous du fumier frais tardivement ? (au printemps)',
                                 'reponse' => 'épandage tardif de fumier frais au printemps',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             247 => 
                             array (
@@ -2002,6 +2249,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'abreuvement au pâturage est-il de bonne qualité ?',
                                 'reponse' => 'qualité insuffisante de l\'abreuvement au pâturage',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             248 => 
                             array (
@@ -2010,6 +2258,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mélangez-vous d\'animaux de tout âge dans les mêmes parcelles ?',
                                 'reponse' => 'Mélange d\'animaux de tout âge sur les mêmes parcelles',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             249 => 
                             array (
@@ -2018,6 +2267,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Votre temps de détection des animaux à poils piqués est-il suffisant ?',
                                 'reponse' => 'Détection tardive des animaux à poil piqué',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             250 => 
                             array (
@@ -2026,6 +2276,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Recherchez-vous les parasites par analyse coprologique ou sanguine ?',
                                 'reponse' => 'Pas de recherche des parasites',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             251 => 
                             array (
@@ -2034,6 +2285,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Administrez-vous des traitements curatifs ?',
                                 'reponse' => 'Traitements curatifs',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             252 => 
                             array (
@@ -2042,6 +2294,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous une bonne gestion sanitaire du pâturage ?',
                                 'reponse' => 'pas de gestion sanitaire des pâturages',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             253 => 
                             array (
@@ -2050,6 +2303,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les pâtures présentent-elles des zones humides ?',
                                 'reponse' => 'pâturages avec zones humides',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             254 => 
                             array (
@@ -2058,6 +2312,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Le surpâturage est-il fréquent (hauteur d\'herbe <5cm à la sortie)',
                                 'reponse' => 'surpâturage fréquent',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             255 => 
                             array (
@@ -2066,6 +2321,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Epandez-vous du fumier frais tardivement ? (au printemps)',
                                 'reponse' => 'épandage tardif de fumier frais au printemps',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             256 => 
                             array (
@@ -2074,6 +2330,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'abreuvement au pâturage est-il de bonne qualité ?',
                                 'reponse' => 'qualité insuffisante de l\'abreuvement au pâturage',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             257 => 
                             array (
@@ -2082,6 +2339,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mélangez-vous d\'animaux de tout âge dans les mêmes parcelles ?',
                                 'reponse' => 'Mélange d\'animaux de tout âge sur les mêmes parcelles',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             258 => 
                             array (
@@ -2090,6 +2348,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Votre temps de détection des animaux à poils piqués est-il suffisant ?',
                                 'reponse' => 'Détection tardive des animaux à poil piqué',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             259 => 
                             array (
@@ -2098,6 +2357,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Recherchez-vous les parasites par analyse coprologique ou sanguine ?',
                                 'reponse' => 'Pas de recherche des parasites',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             260 => 
                             array (
@@ -2106,6 +2366,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Administrez-vous des traitements curatifs ?',
                                 'reponse' => 'Traitements curatifs',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             261 => 
                             array (
@@ -2114,6 +2375,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous une bonne gestion sanitaire du pâturage ?',
                                 'reponse' => 'pas de gestion sanitaire des pâturages',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             262 => 
                             array (
@@ -2122,6 +2384,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les pâtures présentent-elles des zones humides ?',
                                 'reponse' => 'pâturages avec zones humides',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             263 => 
                             array (
@@ -2130,6 +2393,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Le surpâturage est-il fréquent (hauteur d\'herbe <5cm à la sortie)',
                                 'reponse' => 'surpâturage fréquent',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             264 => 
                             array (
@@ -2138,6 +2402,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Epandez-vous du fumier frais tardivement ? (au printemps)',
                                 'reponse' => 'épandage tardif de fumier frais au printemps',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             265 => 
                             array (
@@ -2146,6 +2411,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'abreuvement au pâturage est-il de bonne qualité ?',
                                 'reponse' => 'qualité insuffisante de l\'abreuvement au pâturage',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             266 => 
                             array (
@@ -2154,6 +2420,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mélangez-vous d\'animaux de tout âge dans les mêmes parcelles ?',
                                 'reponse' => 'Mélange d\'animaux de tout âge sur les mêmes parcelles',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             267 => 
                             array (
@@ -2162,6 +2429,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Votre temps de détection des animaux à poils piqués est-il suffisant ?',
                                 'reponse' => 'Détection tardive des animaux à poil piqué',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             268 => 
                             array (
@@ -2170,6 +2438,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Recherchez-vous les parasites par analyse coprologique ou sanguine ?',
                                 'reponse' => 'Pas de recherche des parasites',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             269 => 
                             array (
@@ -2178,6 +2447,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Administrez-vous des traitements curatifs ?',
                                 'reponse' => 'Traitements curatifs',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             270 => 
                             array (
@@ -2186,6 +2456,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous une bonne gestion sanitaire du pâturage ?',
                                 'reponse' => 'pas de gestion sanitaire des pâturages',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             271 => 
                             array (
@@ -2194,6 +2465,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les pâtures présentent-elles des zones humides ?',
                                 'reponse' => 'pâturages avec zones humides',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             272 => 
                             array (
@@ -2202,6 +2474,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Le surpâturage est-il fréquent (hauteur d\'herbe <5cm à la sortie)',
                                 'reponse' => 'surpâturage fréquent',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             273 => 
                             array (
@@ -2210,6 +2483,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Epandez-vous du fumier frais tardivement ? (au printemps)',
                                 'reponse' => 'épandage tardif de fumier frais au printemps',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             274 => 
                             array (
@@ -2218,6 +2492,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'abreuvement au pâturage est-il de bonne qualité ?',
                                 'reponse' => 'qualité insuffisante de l\'abreuvement au pâturage',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             275 => 
                             array (
@@ -2226,6 +2501,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mélangez-vous d\'animaux de tout âge dans les mêmes parcelles ?',
                                 'reponse' => 'Mélange d\'animaux de tout âge sur les mêmes parcelles',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             276 => 
                             array (
@@ -2234,6 +2510,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Votre temps de détection des animaux à poils piqués est-il suffisant ?',
                                 'reponse' => 'Détection tardive des animaux à poil piqué',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             277 => 
                             array (
@@ -2242,6 +2519,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Recherchez-vous les parasites par analyse coprologique ou sanguine ?',
                                 'reponse' => 'Pas de recherche des parasites',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             278 => 
                             array (
@@ -2250,6 +2528,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Administrez-vous des traitements curatifs ?',
                                 'reponse' => 'Traitements curatifs',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             279 => 
                             array (
@@ -2258,6 +2537,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous une bonne gestion sanitaire du pâturage ?',
                                 'reponse' => 'pas de gestion sanitaire des pâturages',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             280 => 
                             array (
@@ -2266,6 +2546,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les pâtures présentent-elles des zones humides ?',
                                 'reponse' => 'pâturages avec zones humides',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             281 => 
                             array (
@@ -2274,6 +2555,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Le surpâturage est-il fréquent (hauteur d\'herbe <5cm à la sortie)',
                                 'reponse' => 'surpâturage fréquent',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             282 => 
                             array (
@@ -2282,6 +2564,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Epandez-vous du fumier frais tardivement ? (au printemps)',
                                 'reponse' => 'épandage tardif de fumier frais au printemps',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             283 => 
                             array (
@@ -2290,6 +2573,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'abreuvement au pâturage est-il de bonne qualité ?',
                                 'reponse' => 'qualité insuffisante de l\'abreuvement au pâturage',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             284 => 
                             array (
@@ -2298,6 +2582,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mélangez-vous d\'animaux de tout âge dans les mêmes parcelles ?',
                                 'reponse' => 'Mélange d\'animaux de tout âge sur les mêmes parcelles',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             285 => 
                             array (
@@ -2306,6 +2591,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Votre temps de détection des animaux à poils piqués est-il suffisant ?',
                                 'reponse' => 'Détection tardive des animaux à poil piqué',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             286 => 
                             array (
@@ -2314,6 +2600,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Recherchez-vous les parasites par analyse coprologique ou sanguine ?',
                                 'reponse' => 'Pas de recherche des parasites',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             287 => 
                             array (
@@ -2322,6 +2609,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Administrez-vous des traitements curatifs ?',
                                 'reponse' => 'Traitements curatifs',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             288 => 
                             array (
@@ -2330,6 +2618,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous une bonne gestion sanitaire du pâturage ?',
                                 'reponse' => 'pas de gestion sanitaire des pâturages',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             289 => 
                             array (
@@ -2338,6 +2627,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les pâtures présentent-elles des zones humides ?',
                                 'reponse' => 'pâturages avec zones humides',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             290 => 
                             array (
@@ -2346,6 +2636,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Le surpâturage est-il fréquent (hauteur d\'herbe <5cm à la sortie)',
                                 'reponse' => 'surpâturage fréquent',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             291 => 
                             array (
@@ -2354,6 +2645,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Epandez-vous du fumier frais tardivement ? (au printemps)',
                                 'reponse' => 'épandage tardif de fumier frais au printemps',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             292 => 
                             array (
@@ -2362,6 +2654,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'abreuvement au pâturage est-il de bonne qualité ?',
                                 'reponse' => 'qualité insuffisante de l\'abreuvement au pâturage',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             293 => 
                             array (
@@ -2370,6 +2663,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mélangez-vous d\'animaux de tout âge dans les mêmes parcelles ?',
                                 'reponse' => 'Mélange d\'animaux de tout âge sur les mêmes parcelles',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             294 => 
                             array (
@@ -2378,6 +2672,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Votre temps de détection des animaux à poils piqués est-il suffisant ?',
                                 'reponse' => 'Détection tardive des animaux à poil piqué',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             295 => 
                             array (
@@ -2386,6 +2681,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Recherchez-vous les parasites par analyse coprologique ou sanguine ?',
                                 'reponse' => 'Pas de recherche des parasites',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             296 => 
                             array (
@@ -2394,6 +2690,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Administrez-vous des traitements curatifs ?',
                                 'reponse' => 'Traitements curatifs',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             297 => 
                             array (
@@ -2402,6 +2699,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les souches de vaches avec des gros trayons et/ou quartiers déséquilibrés',
                                 'reponse' => 'vaches avec gros trayons',
                                 'categorie_id' => 6,
+                                'supprimable' => 1,
                             ),
                             298 => 
                             array (
@@ -2410,6 +2708,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les vaches présentent-elles de faibles qualités maternelles avec refus du veau et apparition de mammites et perte d\'un quartier ?',
                                 'reponse' => 'faible qualité maternelle des vaches -> mammites',
                                 'categorie_id' => 6,
+                                'supprimable' => 1,
                             ),
                             299 => 
                             array (
@@ -2418,6 +2717,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les vaches présentent-elles de fortes qualités maternelles avec une production laitière trop importante et apparition de mammites et perte d\'un quartier ?',
                                 'reponse' => 'faible qualité maternelle des vaches -> mammites',
                                 'categorie_id' => 6,
+                                'supprimable' => 1,
                             ),
                             300 => 
                             array (
@@ -2426,6 +2726,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les veaux sont-ils trop lourds à la naissance',
                                 'reponse' => 'veaux trop lourds à la naissance',
                                 'categorie_id' => 6,
+                                'supprimable' => 1,
                             ),
                             301 => 
                             array (
@@ -2434,6 +2735,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La montée de lait est-elle trop rapide par rapport aux besoins du veau et apparition de mammites et perte d\'un quartier ?',
                                 'reponse' => 'montée de lait trop rapide après le vêlage',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             302 => 
                             array (
@@ -2442,6 +2744,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration avec mauvais équilibre minéral en fin de lactation et problèmes de la mamelle ?',
                                 'reponse' => 'mauvais équilibre minéral favorisant des œdèmes de la mamelle',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             303 => 
                             array (
@@ -2450,6 +2753,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les génisses se tètent-elles entre elles après le sevrage avec déformation des mamelles ?',
                                 'reponse' => 'les génisses se tètent entre elles',
                                 'categorie_id' => 7,
+                                'supprimable' => 1,
                             ),
                             304 => 
                             array (
@@ -2458,6 +2762,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les vaches présentent-elles de faibles qualités maternelles avec refus du veau et apparition de mammites et perte d\'un quartier ?',
                                 'reponse' => 'faible qualité maternelle des vaches -> mammites',
                                 'categorie_id' => 6,
+                                'supprimable' => 1,
                             ),
                             305 => 
                             array (
@@ -2466,6 +2771,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les vaches présentent-elles de fortes qualités maternelles avec une production laitière trop importante et apparition de mammites et perte d\'un quartier ?',
                                 'reponse' => 'faible qualité maternelle des vaches -> mammites',
                                 'categorie_id' => 6,
+                                'supprimable' => 1,
                             ),
                             306 => 
                             array (
@@ -2474,6 +2780,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les veaux sont-ils trop lourds à la naissance',
                                 'reponse' => 'veaux trop lourds à la naissance',
                                 'categorie_id' => 6,
+                                'supprimable' => 1,
                             ),
                             307 => 
                             array (
@@ -2482,6 +2789,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La montée de lait est-elle trop rapide par rapport aux besoins du veau et apparition de mammites et perte d\'un quartier ?',
                                 'reponse' => 'montée de lait trop rapide après le vêlage',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             308 => 
                             array (
@@ -2490,6 +2798,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration avec mauvais équilibre minéral en fin de lactation et oedème de la mamelle + gros trayons congestionnés et durs + mammites ?',
                                 'reponse' => 'mauvais équilibre minéral favorisant des œdèmes de la mamelle',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             309 => 
                             array (
@@ -2498,6 +2807,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration présente-t-elle un excès d\'amidon ou sucres dans la ration ?',
                                 'reponse' => 'ration excédentaire en amidon et sucres',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             310 => 
                             array (
@@ -2506,6 +2816,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration présente-t-elle un manque de fibrosité ?',
                                 'reponse' => 'insuffisance de fibres dans la ration',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             311 => 
                             array (
@@ -2514,6 +2825,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration présente-t-elle un déficit en minéraux et oligo-éléments ?',
                                 'reponse' => 'déficit de la ration en minéraux et oligo-éléments',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             312 => 
                             array (
@@ -2522,6 +2834,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration présente-t-elle un déficit énergétique ?',
                                 'reponse' => 'ration déficitaire en énergie',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             313 => 
                             array (
@@ -2530,6 +2843,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les bétons neufs sont-ils neutralisés ?',
                                 'reponse' => 'bétons neufs non neutralisés',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             314 => 
                             array (
@@ -2538,6 +2852,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le bâtiment présente-t-il une humidité permanente sur les sols ?',
                                 'reponse' => 'excès d\'humidité permanente sur les sols',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             315 => 
                             array (
@@ -2546,6 +2861,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le raclage des aires de vie est-il suffisamment fréquent ?',
                                 'reponse' => 'raclage des aires de vie pas suffisamment fréquent',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             316 => 
                             array (
@@ -2554,6 +2870,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La sélection du troupeau est-elle axée sur les aptitudes fonctionnelles ?',
                                 'reponse' => 'sélection du troupeau non axées sur les aptitudes fonctionnelles',
                                 'categorie_id' => 6,
+                                'supprimable' => 1,
                             ),
                             317 => 
                             array (
@@ -2562,6 +2879,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le tri des génisses de renouvellement tient-il compte des aplombs ?',
                                 'reponse' => 'pas de tri des génisses sur les aplombs',
                                 'categorie_id' => 6,
+                                'supprimable' => 1,
                             ),
                             318 => 
                             array (
@@ -2570,6 +2888,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Y-a-t-il des cailloux, silex sur les chemins d\'accès ?',
                                 'reponse' => 'présence de cailloux',
                                 'categorie_id' => 7,
+                                'supprimable' => 1,
                             ),
                             319 => 
                             array (
@@ -2578,6 +2897,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration présente-t-elle un excès d\'amidon ou sucres dans la ration ?',
                                 'reponse' => 'ration excédentaire en amidon et sucres',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             320 => 
                             array (
@@ -2586,6 +2906,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration présente-t-elle un manque de fibrosité ?',
                                 'reponse' => 'insuffisance de fibres dans la ration',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             321 => 
                             array (
@@ -2594,6 +2915,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration présente-t-elle un déficit en minéraux et oligo-éléments ?',
                                 'reponse' => 'déficit de la ration en minéraux et oligo-éléments',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             322 => 
                             array (
@@ -2602,6 +2924,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration présente-t-elle un déficit énergétique ?',
                                 'reponse' => 'ration déficitaire en énergie',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             323 => 
                             array (
@@ -2610,6 +2933,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les bétons neufs sont-ils neutralisés ?',
                                 'reponse' => 'bétons neufs non neutralisés',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             324 => 
                             array (
@@ -2618,6 +2942,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le bâtiment présente-t-il une humidité permanente sur les sols ?',
                                 'reponse' => 'excès d\'humidité permanente sur les sols',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             325 => 
                             array (
@@ -2626,6 +2951,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le raclage des aires de vie est-il suffisamment fréquent ?',
                                 'reponse' => 'raclage des aires de vie pas suffisamment fréquent',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             326 => 
                             array (
@@ -2634,6 +2960,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La sélection du troupeau est-elle axée sur les aptitudes fonctionnelles ?',
                                 'reponse' => 'sélection du troupeau non axées sur les aptitudes fonctionnelles',
                                 'categorie_id' => 6,
+                                'supprimable' => 1,
                             ),
                             327 => 
                             array (
@@ -2642,6 +2969,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le tri des génisses de renouvellement tient-il compte des aplombs ?',
                                 'reponse' => 'pas de tri des génisses sur les aplombs',
                                 'categorie_id' => 6,
+                                'supprimable' => 1,
                             ),
                             328 => 
                             array (
@@ -2650,6 +2978,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le taureau est-il paré avant mise à la reproduction ?',
                                 'reponse' => 'pas de parage du taureau avant la mise à la reproduction',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             329 => 
                             array (
@@ -2658,6 +2987,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le taureau passe-t-il sa période de repos du litière accumulée ?',
                                 'reponse' => 'taureau sur litière accumulée pendant sa période de repos',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             330 => 
                             array (
@@ -2666,6 +2996,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Y-a-t-il des cailloux, silex sur les chemins d\'accès ?',
                                 'reponse' => 'présence de cailloux',
                                 'categorie_id' => 7,
+                                'supprimable' => 1,
                             ),
                             331 => 
                             array (
@@ -2674,6 +3005,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration présente-t-elle un excès d\'amidon ou sucres dans la ration ?',
                                 'reponse' => 'ration excédentaire en amidon et sucres',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             332 => 
                             array (
@@ -2682,6 +3014,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration présente-t-elle un manque de fibrosité ?',
                                 'reponse' => 'insuffisance de fibres dans la ration',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             333 => 
                             array (
@@ -2690,6 +3023,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration présente-t-elle un déficit en minéraux et oligo-éléments ?',
                                 'reponse' => 'déficit de la ration en minéraux et oligo-éléments',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             334 => 
                             array (
@@ -2698,6 +3032,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration présente-t-elle un déficit énergétique ?',
                                 'reponse' => 'ration déficitaire en énergie',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             335 => 
                             array (
@@ -2706,6 +3041,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les bétons neufs sont-ils neutralisés ?',
                                 'reponse' => 'bétons neufs non neutralisés',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             336 => 
                             array (
@@ -2714,6 +3050,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le bâtiment présente-t-il une humidité permanente sur les sols ?',
                                 'reponse' => 'excès d\'humidité permanente sur les sols',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             337 => 
                             array (
@@ -2722,6 +3059,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le raclage des aires de vie est-il suffisamment fréquent ?',
                                 'reponse' => 'raclage des aires de vie pas suffisamment fréquent',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             338 => 
                             array (
@@ -2730,6 +3068,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La sélection du troupeau est-elle axée sur les aptitudes fonctionnelles ?',
                                 'reponse' => 'sélection du troupeau non axées sur les aptitudes fonctionnelles',
                                 'categorie_id' => 6,
+                                'supprimable' => 1,
                             ),
                             339 => 
                             array (
@@ -2738,6 +3077,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le tri des génisses de renouvellement tient-il compte des aplombs ?',
                                 'reponse' => 'pas de tri des génisses sur les aplombs',
                                 'categorie_id' => 6,
+                                'supprimable' => 1,
                             ),
                             340 => 
                             array (
@@ -2746,6 +3086,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le taureau est-il paré avant mise à la reproduction ?',
                                 'reponse' => 'pas de parage du taureau avant la mise à la reproduction',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             341 => 
                             array (
@@ -2754,6 +3095,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le taureau passe-t-il sa période de repos du litière accumulée ?',
                                 'reponse' => 'taureau sur litière accumulée pendant sa période de repos',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             342 => 
                             array (
@@ -2762,6 +3104,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Y-a-t-il des cailloux, silex sur les chemins d\'accès ?',
                                 'reponse' => 'présence de cailloux',
                                 'categorie_id' => 7,
+                                'supprimable' => 1,
                             ),
                             343 => 
                             array (
@@ -2770,6 +3113,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les animaux sont-ils parfois sous-alimentés ?',
                                 'reponse' => 'Sous-alimentation de certains animaux à certaines périodes',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             344 => 
                             array (
@@ -2778,6 +3122,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les rations sont-elles parfois inadaptées aux besoins des animaux ?',
                                 'reponse' => 'Rations parfois inadaptées aux besoins des animaux',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             345 => 
                             array (
@@ -2786,6 +3131,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les aliments distribués sont-ils sains et bien conservés ?',
                                 'reponse' => 'Aliments parfois mal conservés',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             346 => 
                             array (
@@ -2794,6 +3140,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les accès à l\'aliment sont-ils suffisants pour tous les animaux en même temps ?',
                                 'reponse' => 'Problèmes d’accès aux aliments pour tous les animaux en même temps',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             347 => 
                             array (
@@ -2802,6 +3149,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les chèvres sont–elles parasitées ?',
                                 'reponse' => 'Parasitisme récurrent',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             348 => 
                             array (
@@ -2810,6 +3158,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les conditions de logements sont-elles problématiques ?',
                                 'reponse' => 'Trop forte densité de logement',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             349 => 
                             array (
@@ -2818,6 +3167,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les quantités de paille litière sont-elles insuffisantes ?',
                                 'reponse' => 'Paillage insuffisant',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             350 => 
                             array (
@@ -2826,6 +3176,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les surfaces de vie sont-elles trop faibles ?',
                                 'reponse' => 'Surface du logement insuffisantes',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             351 => 
                             array (
@@ -2834,6 +3185,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration est-elle déséquilibrée ?',
                                 'reponse' => 'Ration déséquilibrée',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             352 => 
                             array (
@@ -2842,6 +3194,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration manque-t-elle de fibres ?',
                                 'reponse' => 'Manque de fibres dans la ration',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             353 => 
                             array (
@@ -2850,6 +3203,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Les animaux sont-ils parasités ? (cf parasitisme)',
                                 'reponse' => 'Parasitisme récurrent',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             354 => 
                             array (
@@ -2858,6 +3212,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Les réformes sont-elles subies (sanitaire) plutôt que choisies (sélection) ?',
                                 'reponse' => 'Trop de réformes pour causes sanitaires',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             355 => 
                             array (
@@ -2866,6 +3221,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les réformes sont-elles trop tardives ?',
                                 'reponse' => 'Réformes tardives',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             356 => 
                             array (
@@ -2874,6 +3230,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le troupeau a-t-il des soucis de fertilité ?',
                                 'reponse' => 'Problèmes d’infertilité',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             357 => 
                             array (
@@ -2882,6 +3239,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les réformes sont-elles d\'une autre origine ?',
                                 'reponse' => 'Réformes pour d’autres causes',
                                 'categorie_id' => 7,
+                                'supprimable' => 1,
                             ),
                             358 => 
                             array (
@@ -2890,6 +3248,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le troupeau est-il suffisamment renouvelé ?',
                                 'reponse' => 'Le renouvellement du troupeau est insuffisant',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             359 => 
                             array (
@@ -2898,6 +3257,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les chèvres présentent-elles des pathologies infectieuses chroniques ?',
                                 'reponse' => 'Cas d’infections chroniques',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             360 => 
                             array (
@@ -2906,6 +3266,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les chèvres présentent-elles des pathologies métaboliques ?',
                                 'reponse' => 'Cas de maladies métaboliques',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             361 => 
                             array (
@@ -2914,6 +3275,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'état corporel du troupeau est-il satisfaisant toute l\'année ?',
                                 'reponse' => 'L’état corporel n’est pas satisfaisant toute l’année',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             362 => 
                             array (
@@ -2922,6 +3284,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le troupeau présente-t-il des problèmes de mise-bas ?',
                                 'reponse' => 'Problèmes à la mise-bas',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             363 => 
                             array (
@@ -2930,6 +3293,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La fréquence de surveillance est-elle suffisante ?',
                                 'reponse' => 'Surveillance insuffisante',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             364 => 
                             array (
@@ -2938,6 +3302,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les chèvres présentent-elles des pathologies infectieuses chroniques ?',
                                 'reponse' => 'Cas d’infections chroniques',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             365 => 
                             array (
@@ -2946,6 +3311,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Y-a-t-il eu introduction d\'animaux avec achat dernièrement ?',
                                 'reponse' => 'Introduction récente d’animaux achetés',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             366 => 
                             array (
@@ -2954,6 +3320,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Les conditions de logement (hygiène, ventilation, température) sont-elles satisfaisantes ?',
                                 'reponse' => 'Conditions de logement insuffisantes',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             367 => 
                             array (
@@ -2962,6 +3329,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les écarts de températures sont-ils accentués dans le bâtiment ?',
                                 'reponse' => 'Ecarts de température importants dans le bâtiment',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             368 => 
                             array (
@@ -2970,6 +3338,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'état général du troupeau est-il évalué régulièrement ? Si oui, est-il satisfaisant ?',
                                 'reponse' => 'L’état du troupeau est rarement évalué et paraît insatisfaisant',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             369 => 
                             array (
@@ -2978,6 +3347,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration est-elle déséquilibrée ?',
                                 'reponse' => 'Ration déséquilibrée',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             370 => 
                             array (
@@ -2986,6 +3356,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Y-a-t-il des transitions alimentaires de moins de 3 semaines ?',
                                 'reponse' => 'Transitions alimentaires parfois trop courtes',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             371 => 
                             array (
@@ -2994,6 +3365,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Y-a-t-il des problèmes dans la rotation des pâtures ?',
                                 'reponse' => 'Problèmes dans la rotation des pâtures',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             372 => 
                             array (
@@ -3002,6 +3374,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les pâtures présentent-elles des excès d\'azote ?',
                                 'reponse' => 'Excès d’azote dans les pâtures',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             373 => 
                             array (
@@ -3010,6 +3383,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’infestation parasitaire n’est-elle pas mal gérée',
                                 'reponse' => 'Infestation parasitaire mal gérée',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             374 => 
                             array (
@@ -3018,6 +3392,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les rations des jeunes sont-elles déséquilibrées ?',
                                 'reponse' => 'Rations des jeunes déséquilibrées',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             375 => 
                             array (
@@ -3026,6 +3401,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le sevrage des jeunes présente-t-il des difficultés ?',
                                 'reponse' => 'Problèmes au sevrage',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             376 => 
                             array (
@@ -3034,6 +3410,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Les jeunes sont-ils surveillés sur le plan du parasitisme ? (cf parasitisme)',
                                 'reponse' => 'Parasitisme chez les jeunes',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             377 => 
                             array (
@@ -3042,6 +3419,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Les jeunes sont-ils atteints ou ont-ils été atteints de maladies ? (cf santé des jeunes)',
                                 'reponse' => 'Maladies diverses chez les jeunes',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             378 => 
                             array (
@@ -3050,6 +3428,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les rations ne sont-elles pas déséquilibrées ou insuffisantes ?',
                                 'reponse' => 'Rations déséquilibrées ou insuffisantes',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             379 => 
                             array (
@@ -3058,6 +3437,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les aliments du commerce ont-ils des formulations adaptées aux caprins ?',
                                 'reponse' => 'Aliments non formulés pour des caprins',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             380 => 
                             array (
@@ -3066,6 +3446,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Vous n’avez pas informé votre vétérinaire de la présence de troubles nerveux',
                                 'reponse' => 'Vous n’avez pas informé votre vétérinaire de la présence de troubles nerveux',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             381 => 
                             array (
@@ -3074,6 +3455,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Existe-t-il des problèmes dans l’aménagement des surfaces qui favoriserait les affrontements ?',
                                 'reponse' => 'Problèmes d’expression violente de la hiérarchie',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             382 => 
                             array (
@@ -3082,6 +3464,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les maladies de type Listériose, Tétanos, Botulisme, sont-elles surveillées ?',
                                 'reponse' => 'Pas de surveillance de la listériose, du tétanos, du botulisme',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             383 => 
                             array (
@@ -3090,6 +3473,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Le troupeau est-il régulièrement parasité (interne, externe) ?',
                                 'reponse' => 'Troupeau régulièrement parasité',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             384 => 
                             array (
@@ -3098,6 +3482,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le troupeau est-il carencé en minéraux, oligo-éléments et vitamines ?',
                                 'reponse' => 'Carences en oligo-éléments et vitamines',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             385 => 
                             array (
@@ -3106,6 +3491,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le vétérinaire a-t-il diagnostiqué la Nécrose du cortex ?',
                                 'reponse' => 'Présence de nécrose du cortex',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             386 => 
                             array (
@@ -3114,6 +3500,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Existe-t-il des risques d\'intoxication par le sel, plomb, azote non protéique, intoxication végétales sur l\'exploitation ?',
                                 'reponse' => 'Risques d’intoxication',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             387 => 
                             array (
@@ -3122,6 +3509,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La couverture des besoins alimentaires lors de la première année n’est-elle pas insuffisante ?',
                                 'reponse' => 'Couverture des besoins alimentaires insuffisante la 1ère année',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             388 => 
                             array (
@@ -3130,6 +3518,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'L\'état corporel des chevrettes est-il satisfaisant (pas trop grasse ou trop maigre) au moment de la mise à la reproduction ?',
                                 'reponse' => 'État corporel des chevrettes inadéquat à la reproduction',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             389 => 
                             array (
@@ -3138,6 +3527,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les chevrettes ont-elles subies des maladies respiratoires durant leur croissance ?',
                                 'reponse' => 'Présence de maladies respiratoires la première année',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             390 => 
                             array (
@@ -3146,6 +3536,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Les chevrettes ont-elles été confrontées à des problèmes de parasitisme, en particulier la coccidiose ? (Se référer à l\'onglet sur le parasitisme)',
                                 'reponse' => 'Présence de coccidiose pendant la première année',
                                 'categorie_id' => 8,
+                                'supprimable' => 1,
                             ),
                             391 => 
                             array (
@@ -3154,6 +3545,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'N’y-a-t-il pas des excès d’azote soluble dans la ration ?',
                                 'reponse' => 'Excès d’azote soluble dans la ration',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             392 => 
                             array (
@@ -3162,6 +3554,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration distribuée est-elle de qualité insuffisante ?',
                                 'reponse' => 'Ration de qualité insuffisante',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             393 => 
                             array (
@@ -3170,6 +3563,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les animaux ne sont-ils pas trop serrés ?',
                                 'reponse' => 'Densité trop importante',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             394 => 
                             array (
@@ -3178,6 +3572,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Les chèvres et chevrettes sont-elles mélangées ? (cf. comportement des mâles)',
                                 'reponse' => 'Mélange de chèvres et chevrettes pendant la reproduction',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             395 => 
                             array (
@@ -3186,6 +3581,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Le bâtiment pose-t-il des problèmes d’isolation et de ventilation (hors plage 0 et 25C°)',
                                 'reponse' => 'Problèmes de ventilation ou d’isolation du bâtiment',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             396 => 
                             array (
@@ -3194,6 +3590,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le nombre de boucs fertiles est-il en adéquation avec le nombre de femelles à saillir ?',
                                 'reponse' => 'Nombre de boucs insuffisants',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             397 => 
                             array (
@@ -3202,6 +3599,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Y-a-t-il un manque de rigueur dans l’éloignement des boucs',
                                 'reponse' => 'Manque de rigueur dans l’éloignement des boucs',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             398 => 
                             array (
@@ -3210,6 +3608,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le troupeau est-il touché par le phénomène de pseudo-gestation ?',
                                 'reponse' => 'Trop de pseudo-gestations',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             399 => 
                             array (
@@ -3218,6 +3617,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Présence de 2 troupeaux ovins-caprins mélangés ? (risque de saillie non viable)',
                                 'reponse' => 'Présence de deux troupeaux ovins caprins mélangés',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             400 => 
                             array (
@@ -3226,6 +3626,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les retours en chaleur font-ils suite à une canicule ou à une forte pluviométrie ?',
                                 'reponse' => 'Perturbations météorologiques',
                                 'categorie_id' => 7,
+                                'supprimable' => 1,
                             ),
                             401 => 
                             array (
@@ -3234,6 +3635,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Existe-t-il des antécédents de maladies abortives dans l\'élevage ?',
                                 'reponse' => 'Antécédents de maladies abortives dans l’élevage',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             402 => 
                             array (
@@ -3242,6 +3644,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'A-t-on observé des cas d\'épididymites chez les mâles ? (attention aux troupeaux menés en commun ovins-caprins)',
                                 'reponse' => 'Présence d’épididymite chez les mâles',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             403 => 
                             array (
@@ -3250,6 +3653,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'La couverture des besoins en énergie en fin de gestation est-elle correcte ? (absence de Syndrome de la chèvre grasse à la mise bas)',
                                 'reponse' => 'Syndrome de la chèvre grasse en fin de gestation',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             404 => 
                             array (
@@ -3258,6 +3662,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration est équilibrée en vitamines, minéraux et oligoéléments ?',
                                 'reponse' => 'Déséquilibres de la ration en oligo-éléments',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             405 => 
                             array (
@@ -3266,6 +3671,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'L\'éleveur intervient-il lors des mises-bas ? (manipulation / aide à la mise bas)',
                                 'reponse' => 'Trop d’interventions pendant les mises-bas',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             406 => 
                             array (
@@ -3274,6 +3680,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Existe-t-il une fréquence importante d\'infection de la matrice ?',
                                 'reponse' => 'Fréquence importante de métrites',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             407 => 
                             array (
@@ -3282,6 +3689,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Y-a-t-il des antécédents de maladies abortives dans l\'élevage ? (Chlamydia, toxoplasmose, fièvre Q)',
                                 'reponse' => 'Antécédents de maladies abortives dans l’élevage',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             408 => 
                             array (
@@ -3290,6 +3698,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La couverture des besoins en azote en fin de gestation est-elle correcte ?',
                                 'reponse' => 'Ration insuffisante en azote en fin de gestation',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             409 => 
                             array (
@@ -3298,6 +3707,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'La ration est-elle équilibrée ? (sans excès de concentrés énergétiques et stockage de graisse corporelle en fin de gestation)',
                                 'reponse' => 'Ration déséquilibrée',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             410 => 
                             array (
@@ -3306,6 +3716,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Avez-vous observé des NEC inférieurs à 1,5 ou supérieurs à 4 ?',
                                 'reponse' => 'NEC trop bas ou trop élevés',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             411 => 
                             array (
@@ -3314,6 +3725,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Avez-vous évité les stress autour de la mise bas ?',
                                 'reponse' => 'Stress pendant les mis-bas',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             412 => 
                             array (
@@ -3322,6 +3734,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le choix du bouc est-il en adéquation au gabarit des chèvres ?',
                                 'reponse' => 'Le gabarit du bouc n\'est pas adapté à celui des chèvres',
                                 'categorie_id' => 6,
+                                'supprimable' => 1,
                             ),
                             413 => 
                             array (
@@ -3330,6 +3743,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Existe-t-il des antécédents de maladies abortives dans l\'élevage ? (chlamydiose, toxoplasmose, fièvre Q)',
                                 'reponse' => 'Antécédents de maladies abortives dans l\'élevage',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             414 => 
                             array (
@@ -3338,6 +3752,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'L\'éleveur intervient-il lors des mises-bas ? (manipulation / aide à la mise bas)',
                                 'reponse' => 'Intervention lors des mises-bas',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             415 => 
                             array (
@@ -3346,6 +3761,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Les protocoles de traitements (moment de réalisation) sont-ils respectés ? (médication incluant les vaccinations)',
                                 'reponse' => 'Manque de respect des protocoles de soin',
                                 'categorie_id' => 5,
+                                'supprimable' => 1,
                             ),
                             416 => 
                             array (
@@ -3354,6 +3770,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Observez-vous des facteurs de stress au cours du dernier mois de gestation ? (bagarres, prédateurs, stress divers)',
                                 'reponse' => 'Facteurs de stress lors du dernier mois de gestation',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             417 => 
                             array (
@@ -3362,6 +3779,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mettez-vous en contact des primipares une chèvre ayant avortée ?',
                                 'reponse' => 'Primipares au contact d\'une chèvre ayant avorté',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             418 => 
                             array (
@@ -3370,6 +3788,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous une mise en quarantaine des animaux achetés à l’extérieur et vérifiez-vous leur immunité ?',
                                 'reponse' => 'pas de mise en quarantaine des animaux achetés à l\'extérieur',
                                 'categorie_id' => 4,
+                                'supprimable' => 1,
                             ),
                             419 => 
                             array (
@@ -3378,6 +3797,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Favorisez-vous une bonne immunité des primipares avec une minéralisation suffisante ?',
                                 'reponse' => 'minéralisation insuffisante pour l\'immunité des primipares',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             420 => 
                             array (
@@ -3386,6 +3806,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Y a-t’il eut une mauvaise transition alimentaire ?',
                                 'reponse' => 'mauvaise transition alimentaire',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             421 => 
                             array (
@@ -3394,6 +3815,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La mise à l\'herbe a-t-elle été faite progressivement ?',
                                 'reponse' => 'mise à l\'herbe trop brutale',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             422 => 
                             array (
@@ -3402,6 +3824,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'L\'alimentation est-elle riche en éléments rapidement fermentescible ? (concentrés, céréales, …)',
                                 'reponse' => 'alimentation trop riche en éléments rapidement fermentescibles',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             423 => 
                             array (
@@ -3410,6 +3833,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'La ration consommée est-elle pauvre en fibres efficaces ? (brins longs rigides et piquants)',
                                 'reponse' => 'manque de fibres dans la ration',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             424 => 
                             array (
@@ -3418,6 +3842,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La litière est-elle sèche et renouvelée régulièrement ?',
                                 'reponse' => 'litière sèche et régulièrement renouvelée',
                                 'categorie_id' => 2,
+                                'supprimable' => 1,
                             ),
                             425 => 
                             array (
@@ -3426,6 +3851,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Y-a-t-il eu des changements météorologiques brusques précédents les problèmes ?',
                                 'reponse' => 'changements météorologiques brusques avant les problèmes',
                                 'categorie_id' => 7,
+                                'supprimable' => 1,
                             ),
                             426 => 
                             array (
@@ -3434,6 +3860,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration n\'est-elle pas trop riche en azote en fin de gestation ?',
                                 'reponse' => 'ration trop riche en azote en fin de gestation',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             427 => 
                             array (
@@ -3442,6 +3869,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration n\'est-elle pas déséquilibrée et acidogène ?',
                                 'reponse' => 'ration déséquilibrée et acidogène',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             428 => 
                             array (
@@ -3450,6 +3878,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Y a-t’il eut une mauvaise transition alimentaire entre la période sèche et la période de lactation ?',
                                 'reponse' => 'mauvaise transition alimentaire entre période sèche et période de lactation',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             429 => 
                             array (
@@ -3458,6 +3887,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration est composée de fourrages pauvres en éléments fermentescibles ?',
                                 'reponse' => 'Fourrages pauvres en éléments fermentescibles',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             430 => 
                             array (
@@ -3466,6 +3896,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'Les fourrages utilisés sont-ils de mauvaise qualité ? (appétence, récolte dans de mauvaises conditions, mauvaise conservation)',
                                 'reponse' => 'fourrages de mauvaise qualité',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             431 => 
                             array (
@@ -3474,6 +3905,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration présente-elle des carences marquées en minéraux ?',
                                 'reponse' => 'carences en minéraux de la ration',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             432 => 
                             array (
@@ -3482,6 +3914,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'animal a-t-il consommé en excès un ou des aliments riches en amidon ou en sucres ?',
                                 'reponse' => 'consommation en excès d\'aliments riches en amidon ou sucres',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             433 => 
                             array (
@@ -3490,6 +3923,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'La ration consommée est-elle pauvre en fibres efficaces ? (brins longs rigides et piquants)',
                                 'reponse' => 'ration pauvre en fibres efficaces',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             434 => 
                             array (
@@ -3498,6 +3932,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'L\'ordre de distribution des aliments est-il respecté ? (aliments fibreux puis concentrés)',
                                 'reponse' => 'concentrés donnés avant les fibres',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             435 => 
                             array (
@@ -3506,6 +3941,7 @@ class OriginesTableSeeder extends Seeder
                             'question' => 'La ration est-elle équilibrée en différentes formes d\'azote ? (protéique et non protéique)',
                                 'reponse' => 'ration non équilibrée entre les différentes formes d\'azote',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             436 => 
                             array (
@@ -3514,6 +3950,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La mise à l\'herbe a-t-elle été faite progressivement ?',
                                 'reponse' => 'mise à l\'herbe brutale',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             437 => 
                             array (
@@ -3522,6 +3959,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le passage d\'une parcelle épuisée à une parcelle plus riche a-t-il été progressif ?',
                                 'reponse' => 'passage d\'une parcelle épuisée à riche trop brutalement',
                                 'categorie_id' => 1,
+                                'supprimable' => 1,
                             ),
                             438 => 
                             array (
@@ -3530,6 +3968,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration présente-elle un excès d\'azote non protéique ? (fourrages verts, ensilage d\'herbe mal conservé, foin très feuillu, tourteaux,',
                                     'reponse' => 'excès d\'azote non protéique dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 439 => 
                                 array (
@@ -3538,6 +3977,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle équilibrée entre l\'énergie et l\'azote ?',
                                     'reponse' => 'ration déséquilibrée entre énergie et azote',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 440 => 
                                 array (
@@ -3546,6 +3986,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration présente-elle un excès de phosphore ? (alimentation riche en céréales)',
                                     'reponse' => 'excès de phosphore dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 441 => 
                                 array (
@@ -3554,6 +3995,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'abreuvement disponible est-il suffisant ?',
                                     'reponse' => 'abreuvement disponible insuffisant',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 442 => 
                                 array (
@@ -3562,6 +4004,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'apport de sel est-il suffisant ?',
                                     'reponse' => 'apport de sel insuffisant',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 443 => 
                                 array (
@@ -3570,6 +4013,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous une stratégie de réformes des chèvres infectées de manière chronique, incurables ?',
                                     'reponse' => 'pas réforme des chèvres infectées chroniquement',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 444 => 
                                 array (
@@ -3578,6 +4022,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous une stratégie de repérage précoce des mammites cliniques ?',
                                     'reponse' => 'repérage trop tardif des mammites cliniques',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 445 => 
                                 array (
@@ -3586,6 +4031,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Présence d\'une politique de soins ou de réformes vis-à-vis des mammites cliniques?',
                                     'reponse' => 'pas de soins spécifiques, pas de réforme vis-à-vis des mammites cliniques',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 446 => 
                                 array (
@@ -3594,6 +4040,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous une stratégie de traitement raisonné, ciblé en cas de mammites subcliniques?',
                                     'reponse' => 'pas de traitement raisonné et ciblé en cas de mammites subcliniques',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 447 => 
                                 array (
@@ -3602,6 +4049,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous une stratégie de traitement adaptée aux problèmes rencontrés dans votre élevage? (nature des infections subcliniques)',
                                     'reponse' => 'traitements pas spécifiquement adaptés aux problèmes rencontrés',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 448 => 
                                 array (
@@ -3610,6 +4058,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Appliquer vous de façon rigoureuse le traitement au tarissement? (hygiène et posologie)',
                                     'reponse' => 'manque de rigueur au tarissement',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 449 => 
                                 array (
@@ -3618,6 +4067,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Appliquer vous une hygiène rigoureuse en cas de traitement par voie intra mammaire?',
                                     'reponse' => 'manque de rigueur lors de traitement intra-mammaire',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 450 => 
                                 array (
@@ -3626,6 +4076,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous une stratégie globale de choix des chèvres à traiter?',
                                     'reponse' => 'manque de stratégie pour choisir les chèvres à traiter',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 451 => 
                                 array (
@@ -3634,6 +4085,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Détenez- vous beaucoup de chèvres infectées, en lactation longue ou prolongée?',
                                     'reponse' => 'nombre important de chèvres infectées gardées sur la ferme',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 452 => 
                                 array (
@@ -3642,6 +4094,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration en fin de la lactation est-elle équilibrée? (En particulier les apports azotés)',
                                     'reponse' => 'ration déséquilibrée en fin de lactation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 453 => 
                                 array (
@@ -3650,6 +4103,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous des transitions alimentaires en fin de période sèche? / fourrages, concentrés, oligo-éléments',
                                     'reponse' => 'mauvaise transition alimentaire en fin de période sèche',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 454 => 
                                 array (
@@ -3658,6 +4112,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La durée de période sèche est-elle correcte? (attention au période trop courte)',
                                     'reponse' => 'durée de période sèche trop courte',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 455 => 
                                 array (
@@ -3666,6 +4121,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Détenez-vous des animaux incurables, infectés chroniques?',
                                     'reponse' => 'présence d\'animaux incurables, infectés chroniquement sur la ferme',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 456 => 
                                 array (
@@ -3674,6 +4130,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Détenez-vous des animaux infectés par des mycoplasmes?',
                                     'reponse' => 'présence d\'animaux infectés par des mycoplasmes',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 457 => 
                                 array (
@@ -3682,6 +4139,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous une machine à traire bien réglée? (réglage de l\'installation et/ou réglage de la dépose automatique)',
                                     'reponse' => 'machine à traire mal réglée',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 458 => 
                                 array (
@@ -3690,6 +4148,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous une installation de traite bien conçue? (pente du lactoduc incorrecte ou diamètre de lactoduc avec engorgements possibles)',
                                 'reponse' => 'installation de traite mal conçue (lactoduc notamment)',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 459 => 
                                 array (
@@ -3698,6 +4157,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un entretien régulier de la machine à traire ?',
                                     'reponse' => 'manque de régularité dans l\'entretien de la machine à traire',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 460 => 
                                 array (
@@ -3706,6 +4166,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Appliquer vous un protocole de nettoyage et de soins particuliers en cas de blessures des mains du trayeur avant la traite ?',
                                     'reponse' => 'si blessure des mains du trayeur avant la traite, manque d\'un protocole de nettoyage/protection',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 461 => 
                                 array (
@@ -3714,6 +4175,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Présence de mamelles sales ou mamelles avec des staphylococcies sur la peau ou autres maladies du trayon?',
                                     'reponse' => 'mamelles sales, mamelles avec staphylococcies, maladies du trayon',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 462 => 
                                 array (
@@ -3722,6 +4184,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous une hygiène avant la traite ? Et si oui, est-elle réalisée systématiquement?',
                                     'reponse' => 'manque d\'hygiène systématique avant la traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 463 => 
                                 array (
@@ -3730,6 +4193,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous une désinfection des trayons après la traite? Si oui, est-elle réalisée de manière correcte?',
                                 'reponse' => 'pas (ou mauvaise) désinfection des trayons après la traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 464 => 
                                 array (
@@ -3738,6 +4202,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Au cours de la fin de traite, réalisez-vous de l\'égouttage, des massages, de la repasse - surtraite?',
                                     'reponse' => 'en fin de traite, égouttage, massage ou repasse- surtraite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 465 => 
                                 array (
@@ -3746,6 +4211,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Si vous avez des griffes avec coupure de vide. Réalisez-vous une coupure du vide au moment de la dépose?',
                                     'reponse' => 'pas de coupure du vide au moment de la dépose',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 466 => 
                                 array (
@@ -3754,6 +4220,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous des branchements de deux chèvres simultanément à partir d\'un même faisceau?',
                                     'reponse' => 'branchement de deux chèvres simultanément à partir d\'un même faisceau',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 467 => 
                                 array (
@@ -3762,6 +4229,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Présence d\'entrées d\'air au moment de la pose et/ou dépose des faisceaux trayeurs ?',
                                     'reponse' => 'entrée d\'air lors de la pose/dépose des faisceaux trayeurs',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 468 => 
                                 array (
@@ -3770,6 +4238,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous un protocole de nettoyage du matériel de traite ?',
                                     'reponse' => 'pas de protocole de nettoyage du matériel de traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 469 => 
                                 array (
@@ -3778,6 +4247,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous mis en place un ordre de traite tenant compte du statut infectieux des chèvres?',
                                     'reponse' => 'ordre de traite ne tenant pas compte du statut infectieux des chèvres',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 470 => 
                                 array (
@@ -3786,6 +4256,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous une machine à traire bien réglée? (réglage de l\'installation et/ou réglage de la dépose automatique)',
                                     'reponse' => 'machine à traire mal réglée',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 471 => 
                                 array (
@@ -3794,6 +4265,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Au cours de la fin de traite, réalisez-vous de l\'égouttage, des massages, de la repasse - surtraite?',
                                     'reponse' => 'en fin de traite, égouttage, massage ou repasse- surtraite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 472 => 
                                 array (
@@ -3802,6 +4274,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Si vous avez des griffes avec coupure de vide. Réalisez-vous une coupure du vide au moment de la dépose?',
                                     'reponse' => 'pas de coupure du vide au moment de la dépose',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 473 => 
                                 array (
@@ -3810,6 +4283,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les manchons que vous utilisez sont-ils adaptés à la forme des trayons? (notamment diamètre à l\'embouchure)',
                                     'reponse' => 'manchons non adaptés à la forme des trayons',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 474 => 
                                 array (
@@ -3818,6 +4292,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Conserver-vous des chèvres incurables?',
                                     'reponse' => 'chèvres incurables gardées sur la ferme',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 475 => 
                                 array (
@@ -3826,6 +4301,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Détenez- vous beaucoup de chèvres infectées, en lactation longue ou prolongée?',
                                     'reponse' => 'beaucoup de chèvres infectées sur la ferme',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 476 => 
                                 array (
@@ -3834,6 +4310,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous plusieurs lots de mises bas ? appartenance aux lots de mises bas d\'été',
                                     'reponse' => 'plusieurs lots de mise-bas',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 477 => 
                                 array (
@@ -3842,6 +4319,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous mis en place un ordre de traite tenant compte du statut infectieux des chèvres?',
                                     'reponse' => 'ordre de traite ne tenant pas compte du statut infectieux des chèvres',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 478 => 
                                 array (
@@ -3850,6 +4328,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'ambiance en salle de traite est-il calme?',
                                     'reponse' => 'ambiance stressante ou agitée en salle de traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 479 => 
                                 array (
@@ -3858,6 +4337,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous une stratégie de réformes des chèvres infectées de manière chronique, incurables ?',
                                     'reponse' => 'pas réforme des chèvres infectées chroniquement',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 480 => 
                                 array (
@@ -3866,6 +4346,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous une stratégie de repérage précoce des mammites cliniques ?',
                                     'reponse' => 'repérage trop tardif des mammites cliniques',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 481 => 
                                 array (
@@ -3874,6 +4355,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Présence d\'une politique de soins ou de réformes vis-à-vis des mammites cliniques?',
                                     'reponse' => 'pas de soins spécifiques, pas de réforme vis-à-vis des mammites cliniques',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 482 => 
                                 array (
@@ -3882,6 +4364,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous une stratégie de traitement raisonné, ciblé en cas de mammites subcliniques?',
                                     'reponse' => 'absence de traitement raisonné/ciblé en cas de mammites subcliniques',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 483 => 
                                 array (
@@ -3890,6 +4373,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Mettez-vous en place des mesures de prévention vis-à-vis du CAEV?',
                                     'reponse' => 'pas de mesure de prévention vis-à-vis du CAEV',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 484 => 
                                 array (
@@ -3898,6 +4382,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le positionnement des faisceaux trayeurs est-il correct? (traction d\'un côté, faisceaux lourds, traction liée au poids des tuyaux longs à lait)',
                                     'reponse' => 'mauvais positionnement des faisceaux trayeurs',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 485 => 
                                 array (
@@ -3906,6 +4391,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous une stratégie de repérage précoce des mammites cliniques ?',
                                     'reponse' => 'repérage tardif des mammites cliniques',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 486 => 
                                 array (
@@ -3914,6 +4400,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous une stratégie de réformes des chèvres infectées de manière chronique, incurables ?',
                                     'reponse' => 'pas de réforme des chèvres infectées chroniquement',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 487 => 
                                 array (
@@ -3922,6 +4409,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous les traitements avec une hygiène rigoureuse ?',
                                     'reponse' => 'manque d\'hygiène lors des traitements',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 488 => 
                                 array (
@@ -3930,6 +4418,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous une traite à part ou avec un faisceau dédié pour des chèvres à mammites cliniques?',
                                     'reponse' => 'risques pris lors de la traite de chèvres à mammites cliniques',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 489 => 
                                 array (
@@ -3938,6 +4427,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un nettoyage avant et une désinfection après la traite? Si oui, ces pratiques sont-elles correctement réalisées?',
                                     'reponse' => 'manque de nettoyage rigoureux avant et après traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 490 => 
                                 array (
@@ -3946,6 +4436,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration de fin de gestation est-elle équilibrée et suffisante? (En particulier les apports azotés)',
                                     'reponse' => 'ration de fin de gestation déséquilibrée ou insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 491 => 
                                 array (
@@ -3954,6 +4445,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de mammites particulières, avez-vous une politique de gestion de ces mammites différente?',
                                     'reponse' => 'mammites toutes traitées de la même manière',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 492 => 
                                 array (
@@ -3962,6 +4454,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Veillez-vous à développer une flore non pathogène sur les mamelles ? (type flore lactique)',
                                     'reponse' => 'pas de soins particuliers pour développer une flore non pathogène sur les mamelles',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 493 => 
                                 array (
@@ -3970,6 +4463,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière est-elle ensemencée avec une flore lactique non pathogène ?',
                                     'reponse' => 'pas d\'ensemencement de la litière',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 494 => 
                                 array (
@@ -3978,6 +4472,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous une stratégie de réformes des chèvres infectées de manière chronique, incurables ?',
                                     'reponse' => 'pas réforme des chèvres infectées chroniquement',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 495 => 
                                 array (
@@ -3986,6 +4481,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous une stratégie de repérage précoce des mammites cliniques ?',
                                     'reponse' => 'repérage trop tardif des mammites cliniques',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 496 => 
                                 array (
@@ -3994,6 +4490,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Présence d\'une politique de soins ou de réformes vis-à-vis des mammites cliniques?',
                                     'reponse' => 'pas de soins spécifiques, pas de réforme vis-à-vis des mammites cliniques',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 497 => 
                                 array (
@@ -4002,6 +4499,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous une stratégie de traitement raisonné, ciblé en cas de mammites subcliniques?',
                                     'reponse' => 'absence de traitement raisonné/ciblé en cas de mammites subcliniques',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 498 => 
                                 array (
@@ -4010,6 +4508,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Voir facteurs favorisant les abcès caséeux / microcoques de Morel ',
                                     'reponse' => 'facteurs favorisant les abcès caséeux / microcoques de Morel',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 499 => 
                                 array (
@@ -4018,6 +4517,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Mettez-vous en place une surveillance de l\'hypothermie dans les 24 premières heures de vie des chevreaux?',
                                     'reponse' => 'absence de surveillance de l\'hypothermie dans les 24 premières heures du chevreau',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 500 => 
                                 array (
@@ -4026,6 +4526,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Observer vous une fréquence anormale de naissance de chevreaux malformés?',
                                     'reponse' => 'fréquence anormale de naissance de chevreaux malformés',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 501 => 
                                 array (
@@ -4034,6 +4535,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les mises bas sont-elles difficiles et longues ?',
                                     'reponse' => 'mises bas longues et difficiles',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 502 => 
                                 array (
@@ -4042,6 +4544,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La surface de bâtiment est-elle adaptée au nombre d\'animaux présents? Observez-vous un nombre anormal d\'écrasement de chevreaux?',
                                     'reponse' => 'surface du bâtiment pas adaptée au nombre d\'animaux. nombre anormal d\'écrasement de chevreaux',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 503 => 
                                 array (
@@ -4050,6 +4553,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous dans votre élevage beaucoup de naissance gémellaire ou multiple?',
                                     'reponse' => 'beaucoup de naissance gémellaire ou multiple',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 504 => 
                                 array (
@@ -4058,6 +4562,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Observer vous une fréquence anormale de non adoption?',
                                     'reponse' => 'fréquence anormale de non-adoption',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 505 => 
                                 array (
@@ -4066,6 +4571,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous une observation régulière de vos animaux en particulier autour de la période mise bas?',
                                     'reponse' => 'observation pas assez régulière en période de mises bas',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 506 => 
                                 array (
@@ -4074,6 +4580,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Dès qu\'un chevreau est malade, intervenez-vous?',
                                     'reponse' => 'manque de réactivité lorsqu\'un chevreau est malade',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 507 => 
                                 array (
@@ -4082,6 +4589,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La consommation du colostrum par les chevreaux est-elle immédiate après la mise bas?',
                                     'reponse' => 'colostrum ingéré par les chevreaux trop tardivement',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 508 => 
                                 array (
@@ -4090,6 +4598,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La qualité du colostrum est-elle contrôlée de façon régulière?',
                                     'reponse' => 'qualité du colostrum pas ou peu contrôlée',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 509 => 
                                 array (
@@ -4098,6 +4607,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’hygiène générale du bâtiment est-il correct? (densité, paillage, nature du paillage)',
                                     'reponse' => 'hygiène du bâtiment non satisfaisante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 510 => 
                                 array (
@@ -4106,6 +4616,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous une désinfection du bâtiment si besoin?',
                                     'reponse' => 'aucune désinfection du bâtiment',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 511 => 
                                 array (
@@ -4114,6 +4625,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière est-elle ensemencée avec une flore lactique, non pathogène ?',
                                     'reponse' => 'pas d\'ensemencement de la litière',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 512 => 
                                 array (
@@ -4122,6 +4634,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Réalisez-vous un tri des aliments potentiellement contaminés ou des parties altérées (ensilage)?',
                                     'reponse' => 'manque de tri des aliments potentiellement contaminés ou des parties altérées si ensilage',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 513 => 
                                 array (
@@ -4130,6 +4643,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ventilation générale du bâtiment est-il correct?',
                                     'reponse' => 'mauvaise ventilation du bâtiment',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 514 => 
                                 array (
@@ -4138,6 +4652,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Faites-vous réalisez régulièrement un contrôle bactériologique de l\'eau? (boisson/lavage/…)',
                                     'reponse' => 'absence d\'un contrôle bactériologique de l\'eau',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 515 => 
                                 array (
@@ -4146,6 +4661,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous un protocole de soin adapté? Si oui ce protocole est-il suivi?',
                                     'reponse' => 'pas de protocole de soin adapté aux chevreaux',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 516 => 
                                 array (
@@ -4154,6 +4670,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Mettez-vous en place une surveillance de la buvée du colostrum pour le chevreau?',
                                     'reponse' => 'pas de surveillance de la prise colostrale',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 517 => 
                                 array (
@@ -4162,6 +4679,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un ou des contrôles de qualité du colostrum par période mise bas?',
                                     'reponse' => 'pas de contrôle systématique du colostrum par période de mise bas',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 518 => 
                                 array (
@@ -4170,6 +4688,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas d\'utilisation de poudre ou lait de remplacement, la température/Quantité/Concentration/technique de buvée est-elle correcte?',
                                     'reponse' => 'lors d\'utilisation de lait de remplacement ou poudre, manque de rigueur sur les température/ quantité/ concentration et technique de buvée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 519 => 
                                 array (
@@ -4178,6 +4697,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Faites-vous réalisez régulièrement un contrôle bactériologique de l\'eau? (boisson/lavage/…)',
                                     'reponse' => 'pas ou peu de contrôle bactériologique de l\'eau',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 520 => 
                                 array (
@@ -4186,6 +4706,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment correspond-il aux recommandations de confort, de ventilation, de surface et d\'hygiène ?',
                                     'reponse' => 'confort, ventilation, surface et hygiène du bâtiment pas adaptés aux recommandations',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 521 => 
                                 array (
@@ -4194,6 +4715,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'apport nutritionnel correspond-il aux besoins ?',
                                     'reponse' => 'besoins nutritionnels non couverts',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 522 => 
                                 array (
@@ -4202,6 +4724,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La surveillance de la prise colostrale est-elle suffisante ?',
                                     'reponse' => 'pas de surveillance de la prise colostrale',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 523 => 
                                 array (
@@ -4210,6 +4733,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La quantité et la qualité du colostrum sont-elles suffisantes ? A vérifier notamment en cas de de distribution collective au seau ou à la gouttière.',
                                     'reponse' => 'quantité et qualité du colostrum insuffisantes',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 524 => 
                                 array (
@@ -4218,6 +4742,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de colostrum thermisé : quel volume a été thermisé ?',
                                     'reponse' => 'important volume de colostrum thermisé',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 525 => 
                                 array (
@@ -4226,6 +4751,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'à quelle vitesse ont eu lieu les montées et redescentes en température du colostrum ?',
                                     'reponse' => 'montée et redescente en température du colostrum pas assez rapides',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 526 => 
                                 array (
@@ -4234,6 +4760,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'A quelle température a-t-il été distribué ?',
                                     'reponse' => 'colostrum distribué trop chaud ou trop froid',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 527 => 
                                 array (
@@ -4242,6 +4769,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas d’utilisation de colostrum congelé, la décongélation a-t-elle été faite au bain-marie ?',
                                     'reponse' => 'décongélation du colostrum sans bain-marie',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 528 => 
                                 array (
@@ -4250,6 +4778,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La transition entre l’allaitement et l’utilisation du lactoremplaceur a-t-elle été brutale ?',
                                     'reponse' => 'transition entre allaitement et lactoremplaceur brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 529 => 
                                 array (
@@ -4258,6 +4787,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le lactoremplaceur est-il de bonne qualité ?',
                                     'reponse' => 'lactoremplaceur de qualité insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 530 => 
                                 array (
@@ -4266,6 +4796,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La concentration est-elle adaptée (attention aux sous- et sur-concentrations) ?',
                                     'reponse' => 'sur ou sous-concentration du lactoremplaceur',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 531 => 
                                 array (
@@ -4274,6 +4805,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La distribution est-elle appropriée (nombre et positionnement des tétines disponibles pour les louves, température du lait,…) ?',
                                     'reponse' => 'distribution du lait pas adaptée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 532 => 
                                 array (
@@ -4282,6 +4814,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le matériel utilisé est-il propre ? Est-il nettoyé régulièrement (tous les jours pour le bol mélangeur, toutes les semaines pour les tuyaux) ?',
                                     'reponse' => 'manque de nettoyage régulier du matériel',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 533 => 
                                 array (
@@ -4290,6 +4823,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de colostrum thermisé : quel volume a été thermisé ? ',
                                     'reponse' => 'important volume de colostrum thermisé',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 534 => 
                                 array (
@@ -4298,6 +4832,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’eau de boisson est-elle potable ?',
                                     'reponse' => 'eau de boisson non potable',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 535 => 
                                 array (
@@ -4306,6 +4841,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Faites-vous réalisez régulièrement un contrôle bactériologique de l\'eau? (boisson/lavage/…)',
                                     'reponse' => 'pas ou peu de contrôle bactériologique de l\'eau',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 536 => 
                                 array (
@@ -4314,6 +4850,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’eau de boisson est-elle souillée par des matières fécales ?',
                                     'reponse' => 'eau de boisson souillée par des matières fécales',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 537 => 
                                 array (
@@ -4322,6 +4859,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment correspond-il aux recommandations de confort, de ventilation, de surface / densité et d\'hygiène ?',
                                     'reponse' => 'confort, ventilation, surface et hygiène du bâtiment pas adaptés aux recommandations',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 538 => 
                                 array (
@@ -4330,6 +4868,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’hygiène du logement est-elle suffisante ?',
                                     'reponse' => 'hygiène insuffisante du logement',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 539 => 
                                 array (
@@ -4338,6 +4877,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La paille de la litière est-elle de bonne qualité, bien conservée ? La litière est-elle propre ?',
                                     'reponse' => 'mauvaise conservation de la litière, mauvaise qualité, pas toujours propre',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 540 => 
                                 array (
@@ -4346,6 +4886,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les lots de chevreaux regroupent-ils des chevreaux d’âges différents ?',
                                     'reponse' => 'chevreaux d\'âges différents au sein d\'un lot',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 541 => 
                                 array (
@@ -4354,6 +4895,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Peut-on isoler les chevreaux malades ?',
                                     'reponse' => 'impossibilité d\'isoler les chevreaux malades',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 542 => 
                                 array (
@@ -4362,6 +4904,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le matériel d’élevage est-il correctement nettoyé et désinfecté ? (notamment s’il y a des animaux malades)',
                                     'reponse' => 'manque de nettoyage régulier du matériel',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 543 => 
                                 array (
@@ -4370,6 +4913,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Donnez-vous des ferments lactiques dès la naissance ?',
                                     'reponse' => 'pas de ferments lactiques donnés',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 544 => 
                                 array (
@@ -4378,6 +4922,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La transition entre l’allaitement et l’utilisation du lactoremplaceur a-t-elle été brutale ?',
                                     'reponse' => 'transition entre allaitement et lactoremplaceur brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 545 => 
                                 array (
@@ -4386,6 +4931,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le lactoremplaceur est-il de bonne qualité ?',
                                     'reponse' => 'lactoremplaceur de qualité insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 546 => 
                                 array (
@@ -4394,6 +4940,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La concentration est-elle adaptée (attention aux sous- et sur-concentrations) ?',
                                     'reponse' => 'sur ou sous-concentration du lactoremplaceur',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 547 => 
                                 array (
@@ -4402,6 +4949,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La distribution est-elle appropriée (nombre et positionnement des tétines disponibles pour les louves, température du lait,…) ?',
                                     'reponse' => 'distribution du lait pas adaptée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 548 => 
                                 array (
@@ -4410,6 +4958,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le matériel utilisé est-il propre ?',
                                     'reponse' => 'matériel pas toujours propre',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 549 => 
                                 array (
@@ -4418,6 +4967,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Est-il nettoyé régulièrement (tous les jours pour le bol mélangeur, toutes les semaines pour les tuyaux) ?',
                                     'reponse' => 'manque de nettoyage régulier du matériel',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 550 => 
                                 array (
@@ -4426,6 +4976,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’eau de boisson est-elle potable ?',
                                     'reponse' => 'eau de boisson non potable',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 551 => 
                                 array (
@@ -4434,6 +4985,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Faites-vous réalisez régulièrement un contrôle bactériologique de l\'eau? (boisson/lavage/…)',
                                     'reponse' => 'pas ou peu de contrôle bactériologique de l\'eau',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 552 => 
                                 array (
@@ -4442,6 +4994,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’eau de boisson est-elle souillée par des matières fécales ?',
                                     'reponse' => 'eau souillée par des matières fécales',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 553 => 
                                 array (
@@ -4450,6 +5003,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment correspond-il aux recommandations de confort, de ventilation, de surface / densité et d\'hygiène ? ',
                                     'reponse' => 'confort, ventilation, surface et hygiène du bâtiment pas adaptés aux recommandations',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 554 => 
                                 array (
@@ -4458,6 +5012,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’hygiène du logement est-elle suffisante ?',
                                     'reponse' => 'hygiène du logement insuffisante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 555 => 
                                 array (
@@ -4466,6 +5021,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La paille de la litière est-elle de bonne qualité, bien conservée ?',
                                     'reponse' => 'mauvaise conservation de la litière, mauvaise qualité',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 556 => 
                                 array (
@@ -4474,6 +5030,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière est-elle propre ?',
                                     'reponse' => 'litière pas toujours propre',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 557 => 
                                 array (
@@ -4482,6 +5039,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les lots de chevreaux regroupent-ils des chevreaux d’âges différents ?',
                                     'reponse' => 'chevreaux d\'âges différents au sein d\'un lot',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 558 => 
                                 array (
@@ -4490,6 +5048,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Peut-on isoler les chevreaux malades ? ',
                                     'reponse' => 'impossibilité d\'isoler les chevreaux malades',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 559 => 
                                 array (
@@ -4498,6 +5057,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le matériel d’élevage est-il correctement nettoyé et désinfecté ? (notamment s’il y a des animaux malades)',
                                     'reponse' => 'manque de nettoyage régulier du matériel d\'élevage',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 560 => 
                                 array (
@@ -4506,6 +5066,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Se référer également aux chapitres traitant du parasitisme (dont cryptosporidiose et coccidiose)',
                                     'reponse' => '0',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 561 => 
                                 array (
@@ -4514,6 +5075,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les cordons sont-ils désinfectés ?',
                                     'reponse' => 'pas de désinfection du cordon',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 562 => 
                                 array (
@@ -4522,6 +5084,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La solution de désinfection est-elle régulièrement renouvelée ?',
                                     'reponse' => 'pas de renouvellement de la solution de désinfection',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 563 => 
                                 array (
@@ -4530,6 +5093,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les chevreaux ont-il bien tété le colostrum dans les 6 heures ?',
                                     'reponse' => 'tétée tardive du colostrum',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 564 => 
                                 array (
@@ -4538,6 +5102,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les colostrums sont-ils de bonne qualité ?',
                                     'reponse' => 'colostrum de qualité insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 565 => 
                                 array (
@@ -4546,6 +5111,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Donnez-vous des ferments lactiques dès la naissance ?',
                                     'reponse' => 'pas de ferments lactiques donnés à la naissance',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 566 => 
                                 array (
@@ -4554,6 +5120,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les chevreaux du même lot sont-ils homogènes ? (âge et poids)',
                                     'reponse' => 'les chevreaux d\'un même lot hétérogènes',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 567 => 
                                 array (
@@ -4562,6 +5129,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La densité (nombre d\'animaux/m²) n\'est-elle pas trop importante ?',
                                     'reponse' => 'importante densité d\'animaux/m²',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 568 => 
                                 array (
@@ -4570,6 +5138,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les quantités de paille litière sont-elles suffisantes ?',
                                     'reponse' => 'quantité insuffisante de paille de litière',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 569 => 
                                 array (
@@ -4578,6 +5147,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La chèvrerie est-elle suffisamment isolée et ventilée ?',
                                     'reponse' => 'chèvrerie pas assez ventilée, pas isolée',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 570 => 
                                 array (
@@ -4586,6 +5156,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière est-elle ensemencée avec une flore lactique, non pathogène ?',
                                     'reponse' => 'pas d\'ensemencement de la litière',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 571 => 
                                 array (
@@ -4594,6 +5165,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les chevreaux ont-ils eu des infections du nombril ?',
                                     'reponse' => 'infections du nombril fréquentes chez les chevreaux',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 572 => 
                                 array (
@@ -4602,6 +5174,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les chevreaux ont-ils eu des infections suite au bouclage?',
                                     'reponse' => 'infections fréquentes suite au bouclage chez les chevreaux',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 573 => 
                                 array (
@@ -4610,6 +5183,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de blessures, les plaies sont-elles systématiquement désinfectées ?',
                                     'reponse' => 'pas de désinfection systématique des plaies',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 574 => 
                                 array (
@@ -4618,6 +5192,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations sont-elles suffisamment pourvues en vitamine E et sélénium ?',
                                     'reponse' => 'carences en vitamine E et sélénium dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 575 => 
                                 array (
@@ -4626,6 +5201,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y a-t-il des antécédents de mycoplasmose dans le troupeau ?',
                                     'reponse' => 'antécédents de mycoplasmes dans le troupeau',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 576 => 
                                 array (
@@ -4634,6 +5210,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La surveillance de la prise colostrale est-elle suffisante ?',
                                     'reponse' => 'pas de surveillance de la prise colostrale',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 577 => 
                                 array (
@@ -4642,6 +5219,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La quantité et la qualité du colostrum sont-elles suffisantes ?',
                                     'reponse' => 'quantité et qualité du colostrum insuffisantes',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 578 => 
                                 array (
@@ -4650,6 +5228,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’ambiance des bâtiments est-elle propice aux variations de températures (exposition / orientation, matériaux,…)?',
                                     'reponse' => 'forte variation de température dans les bâtiments',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 579 => 
                                 array (
@@ -4658,6 +5237,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La densité animale est-elle trop élevée ?',
                                     'reponse' => 'très forte densité animale',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 580 => 
                                 array (
@@ -4666,6 +5246,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La condensation est-elle fréquente dans le bâtiment ?',
                                     'reponse' => 'condensation fréquente dans le bâtiment',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 581 => 
                                 array (
@@ -4674,6 +5255,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il présence de courants d\'air ?',
                                     'reponse' => 'courants d\'air dans le bâtiment',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 582 => 
                                 array (
@@ -4682,6 +5264,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations des jeunes sont-elles suffisamment équilibrées ?',
                                     'reponse' => 'ration des jeunes déséquilibrée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 583 => 
                                 array (
@@ -4690,6 +5273,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le sevrage des jeunes se passe-t-il correctement ?',
                                     'reponse' => 'sevrage des jeunes difficile',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 584 => 
                                 array (
@@ -4698,6 +5282,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les transitions alimentaires sont-elles respectées ?',
                                     'reponse' => 'pas ou peu de transition alimentaire',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 585 => 
                                 array (
@@ -4706,6 +5291,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le foin est-il appétent ? est-il renouvelé tous les jours ?',
                                     'reponse' => 'foin pas toujours appétent et pas assez souvent renouvelé',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 586 => 
                                 array (
@@ -4714,6 +5300,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le foin est-il facilement accessible (accès, hauteur du râtelier) ?',
                                     'reponse' => 'mauvais accès au foin',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 587 => 
                                 array (
@@ -4722,6 +5309,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Des concentrés sont-ils apportés ?',
                                     'reponse' => 'pas de concentrés apportés aux jeunes',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 588 => 
                                 array (
@@ -4730,6 +5318,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’abreuvement est-il correct ?',
                                     'reponse' => 'abreuvement incorrecte',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 589 => 
                                 array (
@@ -4738,6 +5327,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les jeunes sont-ils surveillés sur le plan parasitaire ?',
                                     'reponse' => 'pas de surveillance spécifique des jeunes sur le plan parasitaire',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 590 => 
                                 array (
@@ -4746,6 +5336,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les jeunes sont-ils atteints ou ont-ils été atteints de maladies ?',
                                     'reponse' => 'jeunes atteints de maladies',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 591 => 
                                 array (
@@ -4754,6 +5345,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations des jeunes sont-elles suffisamment équilibrées ?',
                                     'reponse' => 'déséquilibre dans la ration des jeunes',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 592 => 
                                 array (
@@ -4762,6 +5354,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le sevrage des jeunes se passe-t-il correctement ?',
                                     'reponse' => 'sevrage des jeunes difficile',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 593 => 
                                 array (
@@ -4770,6 +5363,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les jeunes sont-ils surveillés sur le plan parasitaire ?',
                                     'reponse' => 'pas de surveillance spécifique des jeunes sur le plan parasitaire',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 594 => 
                                 array (
@@ -4778,6 +5372,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les jeunes sont-ils atteints ou ont-ils été atteints de maladies ?',
                                     'reponse' => 'jeunes atteints de maladie',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 595 => 
                                 array (
@@ -4786,6 +5381,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La paille de la litière est-elle de bonne qualité, bien conservée ?',
                                     'reponse' => 'mauvaise conservation de la litière, mauvaise qualité',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 596 => 
                                 array (
@@ -4794,6 +5390,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière est-elle propre et sèche ?',
                                     'reponse' => 'litière pas toujours propre',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 597 => 
                                 array (
@@ -4802,6 +5399,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le paillage est-il régulier ?',
                                     'reponse' => 'paillage peu fréquent',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 598 => 
                                 array (
@@ -4810,6 +5408,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les litières sont-elles régulièrement enlevées, renouvelées ?',
                                     'reponse' => 'litières enlevées et renouvelées peu fréquemment',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 599 => 
                                 array (
@@ -4818,6 +5417,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le bâtiment des chevrettes (si existant) est-il correctement nettoyé, désinfecté ?',
                                     'reponse' => 'nettoyage insuffisant du bâtiment des chevrettes',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 600 => 
                                 array (
@@ -4826,6 +5426,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La désinfection recourt-elle à des désinfectants ayant un effet sur les ookystes ?',
                                     'reponse' => 'pas d\'utilisation de désinfectant',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 601 => 
                                 array (
@@ -4834,6 +5435,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Un vide sanitaire peut-il être réalisé ?',
                                     'reponse' => 'aucun vide sanitaire',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 602 => 
                                 array (
@@ -4842,6 +5444,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le matériel d’élevage est-il correctement nettoyé et désinfecté (quotidiennement)? (vêtements, bottes, gants, ustensiles..)',
                                 'reponse' => 'manque de rigueur dans le nettoyage du matériel d\'élevage (vêtements, bottes, ustensiles)',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 603 => 
                                 array (
@@ -4850,6 +5453,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les lots sont-ils composés de chevreaux d’âges différents ?',
                                     'reponse' => 'lots composés de chevreaux d\'âge différents',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 604 => 
                                 array (
@@ -4858,6 +5462,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La prise colostrale puis, par la suite, l’alimentation sont-elles maîtrisées ?',
                                     'reponse' => 'prise colostrale et alimentation pas bien maîtrisées',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 605 => 
                                 array (
@@ -4866,6 +5471,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux malades sont-ils séparés des animaux sains ?',
                                     'reponse' => 'pas de séparation des animaux malades',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 606 => 
                                 array (
@@ -4874,6 +5480,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Y a-t-il d’autres ateliers (veaux / agneaux) dans lesquels de la cryptosporidiose a été observée ?',
                                     'reponse' => 'cryptosporidiose observée sur d\'autres ateliers de la ferme',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 607 => 
                                 array (
@@ -4882,6 +5489,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les autres maladies sont-elles maîtrisées ?',
                                     'reponse' => 'autres maladies pas toujours bien maîtrisées',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 608 => 
                                 array (
@@ -4890,6 +5498,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La paille de la litière est-elle de bonne qualité, bien conservée ?',
                                     'reponse' => 'mauvaise conservation de la litière, mauvaise qualité',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 609 => 
                                 array (
@@ -4898,6 +5507,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière est-elle propre et sèche ?',
                                     'reponse' => 'litière pas toujours propre',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 610 => 
                                 array (
@@ -4906,6 +5516,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le paillage est-il régulier ?',
                                     'reponse' => 'paillage peu fréquent',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 611 => 
                                 array (
@@ -4914,6 +5525,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les litières sont-elles régulièrement enlevées, renouvelées ?',
                                     'reponse' => 'litières enlevées et renouvelées peu fréquemment',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 612 => 
                                 array (
@@ -4922,6 +5534,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les parcs des nouveau-nés pendant les 3 premières semaines sont-ils maintenus très propres (réduction de l’exposition) ?',
                                     'reponse' => 'manque de nettoyage des parcs des nouveaux-nés pendant les 3 premières semaines',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 613 => 
                                 array (
@@ -4930,6 +5543,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les recommandations en termes de surface/volume/densité sont-elles appliquées ?',
                                     'reponse' => 'recommandations de surface, volume et densité pas respectées',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 614 => 
                                 array (
@@ -4938,6 +5552,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les conditions d’ambiance sont-elles bonnes (humidité, ventilation, température, …) ?',
                                 'reponse' => 'mauvaises conditions d\'ambiance (humidité, ventilation, température)',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 615 => 
                                 array (
@@ -4946,6 +5561,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le bâtiment des chevrettes (si existant) est-il correctement nettoyé, désinfecté ?',
                                     'reponse' => 'nettoyage insuffisant du bâtiment des chevrettes',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 616 => 
                                 array (
@@ -4954,6 +5570,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Un vide sanitaire peut-il être réalisé ?',
                                     'reponse' => 'pas de vide sanitaire possible',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 617 => 
                                 array (
@@ -4962,6 +5579,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le foin, les concentrés ou l’eau de boisson sont-ils souillés par des matières fécales ?',
                                     'reponse' => 'foin, concentrés, eau de boisson souillés par matières fécales',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 618 => 
                                 array (
@@ -4970,6 +5588,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'De l’argile est-elle en libre-service ?',
                                     'reponse' => 'pas d\'argile en libre-service',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 619 => 
                                 array (
@@ -4978,6 +5597,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les chevreaux ont-ils eu des problèmes sanitaires ?',
                                     'reponse' => 'problèmes sanitaires sur les chevreaux',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 620 => 
                                 array (
@@ -4986,6 +5606,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Y a-t-il des éléments dans la conduite d’élevage qui peuvent avoir occasionné des stress (transports, allotements, sevrage, mise à l’herbe, chgts alim …) ?',
                                 'reponse' => 'stress occasionné (transport, allotement, sevrage, changements alim)',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 621 => 
                                 array (
@@ -4994,6 +5615,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Existe-t-il un calendrier de pâturage ?',
                                     'reponse' => 'pas de calendrier de pâturage',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 622 => 
                                 array (
@@ -5002,6 +5624,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Votre gestion de pâturage prévoit d\'éviter les croisements d\'animaux d\'âge différent ?',
                                     'reponse' => 'croisement d\'animaux d\'âge différent au pâturage',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 623 => 
                                 array (
@@ -5010,6 +5633,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils retirés des pâtures à une hauteur d\'herbe > 6 cm ?',
                                     'reponse' => 'sortie des pâtures à une hauteur d\'herbe < 6cm',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 624 => 
                                 array (
@@ -5018,6 +5642,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La durée entre 2 pâturages sur la même parcelle est-elle supérieur à 36 jours ?',
                                     'reponse' => 'moins de 36 jours entre deux pâturages sur une même parcelle',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 625 => 
                                 array (
@@ -5026,6 +5651,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les prairies contiennent-elles des espèces fourragères riches en tannin ?',
                                     'reponse' => 'pas de plantes riches en tannin dans les prairies',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 626 => 
                                 array (
@@ -5034,6 +5660,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Existe-t-il des haies et parcours avec présence de plantes médicinales ou à tannins (naturelles ou implantées) ?',
                                     'reponse' => 'pas de haies ou parcours avec plantes médicinales/à tannins',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 627 => 
                                 array (
@@ -5042,6 +5669,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La surface de pâturage est adaptée au nombre d\'animaux présent ? (chargement UGB)',
                                     'reponse' => 'chargement trop important vis-à-vis du pâturage',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 628 => 
                                 array (
@@ -5050,6 +5678,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous l\'éducation parasitaires ? (sorties avant 1ère mises bas, choix des parcelles,..)',
                                     'reponse' => 'pas d\'éducation parasitaire',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 629 => 
                                 array (
@@ -5058,6 +5687,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Renouvelez-vous régulièrement vos prairies ?',
                                     'reponse' => 'pas de renouvellement des prairies',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 630 => 
                                 array (
@@ -5066,6 +5696,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous l\'alternance fauche/pâture ?',
                                     'reponse' => 'pas d\'alternance fauche/pâture sur les prairies',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 631 => 
                                 array (
@@ -5074,6 +5705,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration propose-t-elle une alimentation équilibrée, diversifiée et de qualité pour couvrir les besoins énergétiques, azotés, minérales et vitaminiques ?',
                                     'reponse' => 'ration déséquilibrée et incomplète',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 632 => 
                                 array (
@@ -5082,6 +5714,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous de la surveillance coproscopique et/ou clinique ? (Famacha, NEC…)',
                                 'reponse' => 'pas de coproscopie ou surveillance clinique (type Famacha, NEC)',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 633 => 
                                 array (
@@ -5090,6 +5723,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Apportez-vous un soutien alimentaire adapté aux stades physiologiques ? (mise bas)',
                                     'reponse' => 'manque de soutien alimentaire adapté aux stades physiologiques',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 634 => 
                                 array (
@@ -5098,6 +5732,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous une gestion différenciée par lot des populations à risques ?',
                                     'reponse' => 'pas de gestion différenciée par lot des populations à risque',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 635 => 
                                 array (
@@ -5106,6 +5741,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous un renforcement immunitaire préventif ? (phytothérapie et autres pratiques de renforcement des défenses antiparasitaires naturelles)',
                                     'reponse' => 'pas de renforcement immunitaire préventif',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 636 => 
                                 array (
@@ -5114,6 +5750,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Optimisez-vous l\'efficacité du traitement en faisant correspondre date de traitement et cycle du parasite ?',
                                     'reponse' => 'vigilance pour faire correspondre date du traitement et cycle du parasite',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 637 => 
                                 array (
@@ -5122,6 +5759,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous le traitement antiparasitaire non systématiques ?',
                                     'reponse' => 'traitement antiparasitaire systématique',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 638 => 
                                 array (
@@ -5130,6 +5768,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Gardez-vous des vieilles chèvres avec accumulation de contaminations successives et augmentation du niveau parasitaire ?',
                                     'reponse' => 'des vieilles chèvres parasitées sont gardées',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 639 => 
                                 array (
@@ -5138,6 +5777,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Observez-vous la présence de parasites externes sur les animaux? (pou, gale, myase…)',
                                     'reponse' => 'présence de parasites externes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 640 => 
                                 array (
@@ -5146,6 +5786,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'pratiquez-vous la désinfection et ou le vide sanitaire ?',
                                     'reponse' => 'pas de désinfection, pas de vide sanitaire pratiqués',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 641 => 
                                 array (
@@ -5154,6 +5795,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'En cas d\'achat, observez-vous la présence de parasites externes sur les animaux? (pou, gale, myase…)',
                                     'reponse' => 'lors d\'un achat, pas d\'observation spécifique de la présence de parasites externes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 642 => 
                                 array (
@@ -5162,6 +5804,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Vos animaux peuvent-ils être en contact avec des animaux d\'autres espèces ou d\'autres troupeaux?',
                                     'reponse' => 'animaux en contact avec d\'autres troupeaux ou d\'autres espèces',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 643 => 
                                 array (
@@ -5170,6 +5813,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous une lutte contre les mouches dans vos bâtiments et vos animaux?',
                                     'reponse' => 'pas de lutte contre les mouches dans les bâtiments et sur les animaux',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 644 => 
                                 array (
@@ -5178,6 +5822,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les conditions d\'hygiène et de propreté sont-elles correctes?',
                                     'reponse' => 'hygiène et propreté insuffisantes',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 645 => 
                                 array (
@@ -5186,6 +5831,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Observez-vous la présence de parasites externes sur les animaux? (pou, gale, myase…)',
                                     'reponse' => 'présence de parasites externes',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 646 => 
                                 array (
@@ -5194,6 +5840,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'pratiquez-vous la désinfection et ou le vide sanitaire ?',
                                     'reponse' => 'pas de désinfection, pas de vide sanitaire pratiqués',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 647 => 
                                 array (
@@ -5202,6 +5849,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'En cas d\'achat, observez-vous la présence de parasites externes sur les animaux? (pou, gale, myase…)',
                                     'reponse' => 'lors d\'un achat, pas d\'observation spécifique de la présence de parasites externes',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 648 => 
                                 array (
@@ -5210,6 +5858,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Vos animaux peuvent-ils être en contact avec des animaux d\'autres espèces ou d\'autres troupeaux?',
                                     'reponse' => 'animaux en contact avec d\'autres troupeaux ou d\'autres espèces',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 649 => 
                                 array (
@@ -5218,6 +5867,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous une lutte contre les mouches dans vos bâtiments et vos animaux?',
                                     'reponse' => 'pas de lutte contre les mouches dans les bâtiments et sur les animaux',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 650 => 
                                 array (
@@ -5226,6 +5876,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les conditions d\'hygiène et de propreté sont-elles correctes?',
                                     'reponse' => 'hygiène et propreté insuffisantes',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 651 => 
                                 array (
@@ -5234,6 +5885,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La fréquence du parage est-elle suffisante ?',
                                     'reponse' => 'fréquence de parage insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 652 => 
                                 array (
@@ -5242,6 +5894,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Utilisez-vous du lait maternel thermisé pour les chevreaux ?',
                                     'reponse' => 'pas d\'utilisation de lait maternel thermisé pour les chevreaux',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 653 => 
                                 array (
@@ -5250,6 +5903,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Appliquez-vous des précautions particulières d\'hygiène au moment du tatouage ?',
                                     'reponse' => 'manque de précautions d\'hygiène au moment du tatouage',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 654 => 
                                 array (
@@ -5258,6 +5912,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment correspond-il aux recommandations de confort, de ventilation, de surface et d\'hygiène ?',
                                     'reponse' => 'confort, ventilation, surface et hygiène du bâtiment pas adaptés aux recommandations',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 655 => 
                                 array (
@@ -5266,6 +5921,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous une stratégie de réformes des chèvres infectées de manière chronique, incurables ?',
                                     'reponse' => 'pas de réforme des chèvres infectées chroniquement',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 656 => 
                                 array (
@@ -5274,6 +5930,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous une stratégie de repérage précoce des mammites cliniques ?',
                                     'reponse' => 'repérage tardif des mammites cliniques',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 657 => 
                                 array (
@@ -5282,6 +5939,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Présence d\'une politique de soins ou de réformes vis-à-vis des mammites cliniques?',
                                     'reponse' => 'pas politique de soins ou réformes vis-à-vis des mammites cliniques',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 658 => 
                                 array (
@@ -5290,6 +5948,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous une stratégie de traitement raisonné, ciblé en cas de mammites subcliniques?',
                                     'reponse' => 'pas de traitement spécifique en cas de mammites subcliniques',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 659 => 
                                 array (
@@ -5298,6 +5957,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous une stratégie de traitement adaptée aux problèmes rencontrés dans votre élevage? (nature des infections subcliniques)',
                                     'reponse' => 'traitements pas spécifiquement adaptés aux problèmes rencontrés',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 660 => 
                                 array (
@@ -5306,6 +5966,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Appliquer vous de façon rigoureuse le traitement au tarissement? (hygiène et posologie)',
                                     'reponse' => 'manque de rigueur au tarissement',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 661 => 
                                 array (
@@ -5314,6 +5975,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Appliquer vous une hygiène rigoureuse en cas de traitement par voie intra mammaire?',
                                     'reponse' => 'manque de rigueur lors de traitement intra-mammaire',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 662 => 
                                 array (
@@ -5322,6 +5984,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous une stratégie globale de choix des chèvres à traiter?',
                                     'reponse' => 'manque de stratégie pour choisir les chèvres à traiter',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 663 => 
                                 array (
@@ -5330,6 +5993,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Détenez- vous beaucoup de chèvres infectées, en lactation longue ou prolongée?',
                                     'reponse' => 'plusieurs chèvres infectées gardées sur la ferme',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 664 => 
                                 array (
@@ -5338,6 +6002,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration en fin de la lactation est-elle équilibrée? (En particulier les apports azotés)',
                                     'reponse' => 'ration déséquilibrée en fin de lactation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 665 => 
                                 array (
@@ -5346,6 +6011,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous des transitions alimentaires en fin de période sèche? / fourrages, concentrés, oligo-éléments',
                                     'reponse' => 'pas de transition alimentaire en fin de période sèche',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 666 => 
                                 array (
@@ -5354,6 +6020,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La durée de période sèche est-elle correcte? (attention au période trop courte)',
                                     'reponse' => 'période sèche trop courte',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 667 => 
                                 array (
@@ -5362,6 +6029,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Détenez-vous des animaux incurables, infectés chroniques?',
                                     'reponse' => 'animaux infectés chroniques gardés sur la ferme',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 668 => 
                                 array (
@@ -5370,6 +6038,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Détenez-vous des animaux infectés par des mycoplasmes?',
                                     'reponse' => 'présence d\'animaux infectés par des mycoplasmes',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 669 => 
                                 array (
@@ -5378,6 +6047,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous une machine à traire bien réglée? (réglage de l\'installation et/ou réglage de la dépose automatique)',
                                     'reponse' => 'machine à traire mal réglée',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 670 => 
                                 array (
@@ -5386,6 +6056,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous une installation de traite bien conçue? (pente du lactoduc incorrecte ou diamètre de lactoduc avec engorgements possibles)',
                                 'reponse' => 'installation de traite mal conçue (lactoduc notamment)',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 671 => 
                                 array (
@@ -5394,6 +6065,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un entretien régulier de la machine à traire ?',
                                     'reponse' => 'manque de régularité dans l\'entretien de la machine à traire',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 672 => 
                                 array (
@@ -5402,6 +6074,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Appliquer vous un protocole de nettoyage et de soins particuliers en cas de blessures des mains du trayeur avant la traite ?',
                                     'reponse' => 'si blessure des mains du trayeur avant la traite, manque d\'un protocole de nettoyage/protection',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 673 => 
                                 array (
@@ -5410,6 +6083,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Présence de mamelles sales ou mamelles avec des staphylococcies sur la peau ou autres maladies du trayon?',
                                     'reponse' => 'mamelles sales, mamelles avec staphylococcies, maladies du trayon',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 674 => 
                                 array (
@@ -5418,6 +6092,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous une hygiène avant la traite ? Et su oui, est-elle réalisée systématiquement?',
                                     'reponse' => 'manque d\'hygiène systématique avant la traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 675 => 
                                 array (
@@ -5426,6 +6101,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous une désinfection des trayons après la traite? Si oui, est-elle réalisée de manière correcte?',
                                 'reponse' => 'pas (ou mauvaise) désinfection des trayons après la traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 676 => 
                                 array (
@@ -5434,6 +6110,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Au cours de la fin de traite, réalisez-vous de l\'égouttage, des massages, de la repasse - surtraite?',
                                     'reponse' => 'en fin de traite, égouttage, massage ou repasse- surtraite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 677 => 
                                 array (
@@ -5442,6 +6119,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Si vous avez des griffes avec coupure de vide. Réalisez-vous une coupure du vide au moment de la dépose?',
                                     'reponse' => 'pas de coupure du vide au moment de la dépose',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 678 => 
                                 array (
@@ -5450,6 +6128,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous des branchements de deux chèvres simultanément à partir d\'un même faisceau?',
                                     'reponse' => 'branchement de deux chèvres simultanément à partir d\'un même faisceau',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 679 => 
                                 array (
@@ -5458,6 +6137,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Présence d\'entrées d\'air au moment de la pose et/ou dépose des faisceaux trayeurs ? ',
                                     'reponse' => 'entrée d\'air lors de la pose/dépose des faisceaux trayeurs',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 680 => 
                                 array (
@@ -5466,6 +6146,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous un protocole de nettoyage du matériel de traite ?',
                                     'reponse' => 'pas de protocole de nettoyage du matériel de traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 681 => 
                                 array (
@@ -5474,6 +6155,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous mis en place un ordre de traite tenant compte du statut infectieux des chèvres?',
                                     'reponse' => 'ordre de traite ne tenant pas compte du statut infectieux des chèvres',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 682 => 
                                 array (
@@ -5482,6 +6164,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous une machine à traire bien réglée? (réglage de l\'installation et/ou réglage de la dépose automatique)',
                                     'reponse' => 'machine à traire mal réglée',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 683 => 
                                 array (
@@ -5490,6 +6173,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Au cours de la fin de traite, réalisez-vous de l\'égouttage, des massages, de la repasse - surtraite?',
                                     'reponse' => 'en fin de traite, égouttage, massage ou repasse- surtraite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 684 => 
                                 array (
@@ -5498,6 +6182,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Si vous avez des griffes avec coupure de vide. Réalisez-vous une coupure du vide au moment de la dépose?',
                                     'reponse' => 'pas de coupure du vide au moment de la dépose',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 685 => 
                                 array (
@@ -5506,6 +6191,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les manchons que vous utilisez sont-ils adaptés à la forme des trayons? (notamment diamètre à l\'embouchure)',
                                     'reponse' => 'manchons non adaptés à la forme des trayons',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 686 => 
                                 array (
@@ -5514,6 +6200,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Conserver-vous des chèvres incurables?',
                                     'reponse' => 'chèvres incurables gardées sur la ferme',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 687 => 
                                 array (
@@ -5522,6 +6209,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Détenez- vous beaucoup de chèvres infectées, en lactation longue ou prolongée?',
                                     'reponse' => 'beaucoup de chèvres infectées gardées sur la ferme',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 688 => 
                                 array (
@@ -5530,6 +6218,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous plusieurs lots de mises bas ? appartenance aux lots de mises bas d\'été',
                                     'reponse' => 'plusieurs lots de mise-bas',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 689 => 
                                 array (
@@ -5538,6 +6227,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous mis en place un ordre de traite tenant compte du statut infectieux des chèvres?',
                                     'reponse' => 'ordre de traite ne tenant pas compte du statut infectieux des chèvres',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 690 => 
                                 array (
@@ -5546,6 +6236,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'ambiance en salle de traite est-il calme?',
                                     'reponse' => 'ambiance stressante ou agitée en salle de traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 691 => 
                                 array (
@@ -5554,6 +6245,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de doute faites-vous réalisez une bactériologie individuelle pour rechercher des chèvres excrétrices?',
                                     'reponse' => 'pas de bactériologie individuelle, même si doutes',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 692 => 
                                 array (
@@ -5562,6 +6254,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un nettoyage avant et une désinfection après la traite? Si oui, ces pratiques sont-elles correctement réalisées?',
                                     'reponse' => 'pas ou insuffisant nettoyage avant et après traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 693 => 
                                 array (
@@ -5570,6 +6263,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous une installation de traite bien conçue? (pente du lactoduc incorrecte ou diamètre de lactoduc avec engorgements possibles)',
                                 'reponse' => 'installation de traite mal conçue (lactoduc notamment)',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 694 => 
                                 array (
@@ -5578,6 +6272,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous un protocole adapté pour pallier un défaut d\'entretien, de nettoyage du matériel de traite et de l\'installation?',
                                     'reponse' => 'pas de protocole adapté pour pallier un défaut',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 695 => 
                                 array (
@@ -5586,6 +6281,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’hygiène générale du bâtiment est-il correct? (densité, paillage, nature du paillage), Réalisez-vous une désinfection du bâtiment si besoin?',
                                     'reponse' => 'hygiène du bâtiment insuffisante, pas de désinfection',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 696 => 
                                 array (
@@ -5594,6 +6290,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Réalisez-vous un tri des aliments potentiellement contaminés ou des parties altérées (ensilage)?',
                                     'reponse' => 'pas de tri des aliments altérés',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 697 => 
                                 array (
@@ -5602,6 +6299,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un nettoyage régulier des abreuvoirs et des auges?',
                                     'reponse' => 'abreuvoirs et auges rarement nettoyés',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 698 => 
                                 array (
@@ -5610,6 +6308,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’hygiène générale du bâtiment est-il correct? (densité, paillage, nature du paillage), Réalisez-vous une désinfection du bâtiment si besoin?',
                                     'reponse' => 'hygiène du bâtiment insuffisante, pas de désinfection',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 699 => 
                                 array (
@@ -5618,6 +6317,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de doute faites-vous réalisez une bactériologie individuelle pour rechercher des chèvres excrétrices?',
                                     'reponse' => 'pas de bactériologie individuelle, même si doutes',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 700 => 
                                 array (
@@ -5626,6 +6326,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un nettoyage avant et une désinfection après la traite? Si oui, ces pratiques sont-elles correctement réalisées?',
                                     'reponse' => 'pas ou insuffisant nettoyage avant et après traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 701 => 
                                 array (
@@ -5634,6 +6335,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous une installation de traite bien conçue? (pente du lactoduc incorrecte ou diamètre de lactoduc avec engorgements possibles)',
                                 'reponse' => 'installation de traite mal conçue (lactoduc notamment)',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 702 => 
                                 array (
@@ -5642,6 +6344,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous un protocole adapté pour pallier un défaut d\'entretien, de nettoyage du matériel de traite et de l\'installation?',
                                     'reponse' => 'pas de protocole adapté pour pallier un défaut',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 703 => 
                                 array (
@@ -5650,6 +6353,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous un protocole adapté pour pallier un défaut d\'entretien, de nettoyage du matériel de traite et de l\'installation?',
                                     'reponse' => 'pas de protocole adapté pour pallier un défaut',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 704 => 
                                 array (
@@ -5658,6 +6362,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’hygiène générale du bâtiment est-il correct? (densité, paillage, nature du paillage), Réalisez-vous une désinfection du bâtiment si besoin?',
                                     'reponse' => 'hygiène du bâtiment insuffisante, pas de désinfection',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 705 => 
                                 array (
@@ -5666,6 +6371,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un nettoyage avant et une désinfection après la traite? Si oui, ces pratiques sont-elles correctement réalisées?',
                                     'reponse' => 'pas ou insuffisant nettoyage avant et après traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 706 => 
                                 array (
@@ -5674,6 +6380,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de doute faites-vous réalisez une bactériologie individuelle pour rechercher des chèvres excrétrices? - mammites cliniques ou subcliniques',
                                     'reponse' => 'pas de bactériologie individuelle, même si doutes',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 707 => 
                                 array (
@@ -5682,6 +6389,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Faites-vous réalisez régulièrement un contrôle bactériologique de l\'eau? (boisson/lavage/…)',
                                     'reponse' => 'pas ou rare contrôle bactériologique de l\'eau',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 708 => 
                                 array (
@@ -5690,6 +6398,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils suffisamment alimentés sur toutes les périodes de l\'année ? ',
                                     'reponse' => 'Sous-alimentation à certaines périodes',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 709 => 
                                 array (
@@ -5698,6 +6407,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations sont-elles équilibrées en fonction de leur besoin ? ',
                                     'reponse' => 'Rations pas toujours équilibrées en fonction des besoins',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 710 => 
                                 array (
@@ -5706,6 +6416,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les aliments distribués sont-ils sains et bien conservés ? ',
                                     'reponse' => 'Problème de qualité et de conservation des aliments ',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 711 => 
                                 array (
@@ -5714,6 +6425,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les accès à l\'aliment sont-ils suffisants pour tous les animaux en même temps ? ',
                                     'reponse' => 'Compétition entre les animaux pour l’accès aux aliments',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 712 => 
                                 array (
@@ -5722,6 +6434,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis sont-elles parasitées ?',
                                     'reponse' => 'Parasitisme impactant les animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 713 => 
                                 array (
@@ -5730,6 +6443,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les conditions de logements sont-elles satisfaisantes ? Densité ?',
                                     'reponse' => 'Problème de logement des animaux, trop forte densité',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 714 => 
                                 array (
@@ -5738,6 +6452,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les quantités de paille litière sont-elles suffisantes ? ',
                                     'reponse' => 'Paillage de la litière insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 715 => 
                                 array (
@@ -5746,6 +6461,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les surfaces de vie sont-elles suffisantes ? ',
                                     'reponse' => 'Surfaces de vie insuffisantes',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 716 => 
                                 array (
@@ -5754,6 +6470,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle équilibrée ? ',
                                     'reponse' => 'Ration déséquilibrée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 717 => 
                                 array (
@@ -5762,6 +6479,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle suffisamment fibreuse',
                                     'reponse' => 'Manque de fibres dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 718 => 
                                 array (
@@ -5770,6 +6488,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les animaux sont-ils parasités ? (cf parasitisme)',
                                     'reponse' => 'Parasitisme impactant les animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 719 => 
                                 array (
@@ -5778,6 +6497,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les réformes sont-elles subies (sanitaire) ou choisies (sélection) ? ',
                                     'reponse' => 'Trop de réformes pour causes sanitaires, pas assez de choix',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 720 => 
                                 array (
@@ -5786,6 +6506,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Quel est l\'âge moyen des réformes ? ',
                                     'reponse' => 'Age moyen des réformes trop élevé',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 721 => 
                                 array (
@@ -5794,6 +6515,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le troupeau a-t-il des soucis de fertilité ? ',
                                     'reponse' => 'Problèmes de fertilité sur le troupeau',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 722 => 
                                 array (
@@ -5802,6 +6524,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le troupeau est-il suffisamment renouvelé ? ',
                                     'reponse' => 'Manque de renouvellement du troupeau',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 723 => 
                                 array (
@@ -5810,6 +6533,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les brebis présentent-elles des pathologies infectieuses chroniques ? (respiratoire, mamelle, etc)',
                                 'reponse' => 'Présence de maladies infectieuses chroniques (mammites, pneumonies, …)',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 724 => 
                                 array (
@@ -5818,6 +6542,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les brebis présentent-elles des pathologies métaboliques ? (toxémie de gestation, hypomagnésémie, hypocalcémie, cétose, acidose, …)',
                                 'reponse' => 'Pathologies métaboliques (toxémie, hypomagnésémie, hypocalcémie, acidose, …)',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 725 => 
                                 array (
@@ -5826,6 +6551,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'état corporel du troupeau est-il satisfaisant toute l\'année ? ',
                                     'reponse' => 'État corporel problématique à certaines périodes',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 726 => 
                                 array (
@@ -5834,6 +6560,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La fréquence de surveillance est-elle suffisante ? (Les brebis sur le dos au quotidien)',
                                     'reponse' => 'Surveillance pas assez fréquente',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 727 => 
                                 array (
@@ -5842,6 +6569,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les brebis sont-elles atteintes de maladies chroniques ? (respiratoires, infectieuses, …)',
                                 'reponse' => 'Présence de maladies infectieuses chroniques (mammites, pneumonies, …)',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 728 => 
                                 array (
@@ -5850,6 +6578,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu introduction d\'animaux avec achat dernièrement ? ',
                                     'reponse' => 'Achats d’animaux récents',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 729 => 
                                 array (
@@ -5858,6 +6587,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les conditions de logement (hygiène, ventilation, température) sont-elles satisfaisantes ? ',
                                 'reponse' => 'Conditions de logements insatisfaisantes (hygiène, ventilation, température, …)',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 730 => 
                                 array (
@@ -5866,6 +6596,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les écarts de températures sont-ils accentués dans la bergerie ? ',
                                     'reponse' => 'Ecarts de température trop importants en bergerie',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 731 => 
                                 array (
@@ -5874,6 +6605,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'état général du troupeau est-il évalué régulièrement ? Si oui, est-il satisfaisant ? ',
                                     'reponse' => 'Pas d’évaluation régulière de l’état corporel',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 732 => 
                                 array (
@@ -5882,6 +6614,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations sont-elles équilibrées ? ',
                                     'reponse' => 'Ration déséquilibrée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 733 => 
                                 array (
@@ -5890,6 +6623,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les durées de transition alimentaire de 3 semaines sont-elles respectées ? ',
                                     'reponse' => 'Mauvaise transition alimentaire',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 734 => 
                                 array (
@@ -5898,6 +6632,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La rotation des pâtures est-elle respectée ? ',
                                     'reponse' => 'Pas de rotation des pâturages',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 735 => 
                                 array (
@@ -5906,6 +6641,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les pâtures présentent-elles des excès d\'azote ?',
                                     'reponse' => 'Excès d’azote dans les pâtures',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 736 => 
                                 array (
@@ -5914,6 +6650,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’infestation parasitaire du troupeau est-elle surveillée et fait elle l’objet d’une gestion raisonnée à l’échelle du troupeau ?',
                                     'reponse' => 'Pas de surveillance et de gestion raisonnée du parasitisme',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 737 => 
                                 array (
@@ -5922,6 +6659,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations des jeunes sont-elles suffisamment équilibrées ? ',
                                     'reponse' => 'Rations des jeunes déséquilibrées',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 738 => 
                                 array (
@@ -5930,6 +6668,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le sevrage des jeunes se passe-t-il sans difficulté ? ',
                                     'reponse' => 'Problèmes lors du sevrage des jeunes',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 739 => 
                                 array (
@@ -5938,6 +6677,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les jeunes sont-ils surveillés sur le plan du parasitisme ? (cf parasitisme)',
                                     'reponse' => 'Pas de surveillance du parasitisme des jeunes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 740 => 
                                 array (
@@ -5946,6 +6686,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les jeunes sont-ils atteints ou ont-ils été atteints de maladies ? (cf santé des jeunes)',
                                     'reponse' => 'Maladies chez les jeunes',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 741 => 
                                 array (
@@ -5954,6 +6695,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations sont-elles équilibrées et suffisantes ? ',
                                     'reponse' => 'Rations déséquilibrées et/ou insuffisantes',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 742 => 
                                 array (
@@ -5962,6 +6704,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les aliments du commerce ont-ils des formulations adaptées aux ovins ?',
                                     'reponse' => 'Aliments du commerce non adapté aux ovins',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 743 => 
                                 array (
@@ -5970,6 +6713,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Votre vétérinaire est-il informé de la présence de troubles nerveux sur votre cheptel ? (C’est obligatoire)',
                                     'reponse' => 'Pas de déclaration des troubles nerveux au vétérinaire',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 744 => 
                                 array (
@@ -5978,6 +6722,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les maladies de type Tremblante, Listériose, Tétanos, Botulisme, sont-elles surveillées ? ',
                                     'reponse' => 'Pas de surveillance des maladies type tremblante, listériose, tétanos, botulisme',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 745 => 
                                 array (
@@ -5986,6 +6731,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le troupeau est-il régulièrement déparasité contre les parasites internes et externes? (Estrose avancée, Cénurose cérébro-spinale) ',
                                     'reponse' => 'Présence de cœnures ou d’œstres',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 746 => 
                                 array (
@@ -5994,6 +6740,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le troupeau est-il carencé en minéraux, oligo-éléments et vitamines ? ',
                                     'reponse' => 'Carences en oligo-éléments et vitamines',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 747 => 
                                 array (
@@ -6002,6 +6749,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le vétérinaire a-t-il diagnostiqué la nécrose du cortex ? ',
                                     'reponse' => 'Diagnostic de nécrose du cortex',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 748 => 
                                 array (
@@ -6010,6 +6758,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Existe-t-il des risques d\'intoxication par le sel, plomb, azote non protéique, intoxication végétales sur l\'exploitation ? ',
                                     'reponse' => 'Intoxications possibles : plomb, azote non protéique, plantes toxiques',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 749 => 
                                 array (
@@ -6018,6 +6767,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La reprise d\'état corporel des agnelles est-il suffisant à la mise en lutte ? ',
                                     'reponse' => 'Reprise d’état corporel des agnelle à la lutte insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 750 => 
                                 array (
@@ -6026,6 +6776,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La mise en lutte n\'est-elle pas trop précoce par rapport à l\'âge et au poids des agnelles ?',
                                     'reponse' => 'Mise en lutte trop précoce par rapport à l’âge ou au poids',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 751 => 
                                 array (
@@ -6034,6 +6785,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La saison de mise à la reproduction est-elle adaptée à la race ? À la conduite ? ',
                                     'reponse' => 'Saison de reproduction inadaptée à la race ou à la conduite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 752 => 
                                 array (
@@ -6042,6 +6794,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le taux de renouvellement du troupeau est-il suffisant ?',
                                     'reponse' => 'Taux de renouvellement du troupeau insuffisant',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 753 => 
                                 array (
@@ -6050,6 +6803,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le critère "fertilité des mères" est-il un axe de choix des agnelles de renouvellement ? ',
                                     'reponse' => 'Pas de choix des agnelles en fonction de la fertilité des mères',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 754 => 
                                 array (
@@ -6058,6 +6812,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’infestation parasitaire des agnelles est-elle surveillée pendant leur croissance?',
                                     'reponse' => 'Pas de surveillance de l’infestation parasitaire des agnelles',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 755 => 
                                 array (
@@ -6066,6 +6821,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les antenaises sont-elles atteintes de maladies abortives ? ',
                                     'reponse' => 'Maladies abortives chez les antenaises',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 756 => 
                                 array (
@@ -6074,6 +6830,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La fertilité du bélier a-t-elle été vérifiée? ',
                                     'reponse' => 'Pas de vérification de la fertilité du bélier',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 757 => 
                                 array (
@@ -6082,6 +6839,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le nombre de bélier est-il est adéquation avec le nombre de Brebis ? ',
                                     'reponse' => 'Béliers en nombre insuffisant',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 758 => 
                                 array (
@@ -6090,6 +6848,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les béliers sont-ils suffisamment en état à la mise en lutte ? ',
                                     'reponse' => 'État des béliers insuffisant à la mise à la lutte',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 759 => 
                                 array (
@@ -6098,6 +6857,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'alimentation des agnelles leur permet-elle de bonne croissance ?',
                                     'reponse' => 'Alimentation des agnelles ne permettant pas une croissance suffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 760 => 
                                 array (
@@ -6106,6 +6866,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle suffisamment pourvue en minéraux et vitamines ? ',
                                     'reponse' => 'Manque de vitamines et de minéraux dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 761 => 
                                 array (
@@ -6114,6 +6875,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'état corporel des brebis est-il suffisant à la mise en lutte ? ',
                                     'reponse' => 'État corporel des brebis insuffisant à la mise à la lutte',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 762 => 
                                 array (
@@ -6122,6 +6884,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle suffisamment riche pour permettre la reprise d\'état ? ',
                                     'reponse' => 'Ration trop pauvre pour permettre une reprise d’état',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 763 => 
                                 array (
@@ -6130,6 +6893,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle suffisamment pourvue en minéraux et vitamines ? ',
                                     'reponse' => 'Manque de vitamines et de minéraux dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 764 => 
                                 array (
@@ -6138,6 +6902,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis ne sont-elles pas trop âgées ?',
                                     'reponse' => 'Brebis trop âgées',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 765 => 
                                 array (
@@ -6146,6 +6911,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La saison de mise à la reproduction est-elle adaptée à la race ? À la conduite ? ',
                                     'reponse' => 'Saison de reproduction inadaptée à la race ou à la conduite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 766 => 
                                 array (
@@ -6154,6 +6920,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La fertilité du bélier a-t-elle été vérifiée? ',
                                     'reponse' => 'Pas de vérification de la fertilité du bélier',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 767 => 
                                 array (
@@ -6162,6 +6929,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le nombre de béliers est-il est adéquation avec le nombre de brebis ? ',
                                     'reponse' => 'Béliers en nombre insuffisant',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 768 => 
                                 array (
@@ -6170,6 +6938,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les béliers sont-ils suffisamment en état à la mise en lutte ? ',
                                     'reponse' => 'État des béliers insuffisant à la mise à la lutte',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 769 => 
                                 array (
@@ -6178,6 +6947,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’infestation parasitaire est-elle pénalisante pour les brebis ?',
                                     'reponse' => 'Parasitisme impactant les animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 770 => 
                                 array (
@@ -6186,6 +6956,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'état corporel des brebis est-il suffisant à la mise en lutte ? ',
                                     'reponse' => 'État corporel des brebis insuffisant à la mise à la lutte',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 771 => 
                                 array (
@@ -6194,6 +6965,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle suffisamment riche pour permettre la reprise d\'état ? ',
                                     'reponse' => 'Ration trop pauvre pour permettre une reprise d’état',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 772 => 
                                 array (
@@ -6202,6 +6974,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle suffisamment pourvue en minéraux et vitamines ? ',
                                     'reponse' => 'Manque de vitamines et de minéraux dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 773 => 
                                 array (
@@ -6210,6 +6983,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis ne sont-elles pas trop âgées ?',
                                     'reponse' => 'Brebis trop âgées',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 774 => 
                                 array (
@@ -6218,6 +6992,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La saison de mise à la reproduction est-elle adaptée à la race ? À la conduite ? ',
                                     'reponse' => 'Saison de reproduction inadaptée à la race ou à la conduite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 775 => 
                                 array (
@@ -6226,6 +7001,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La fertilité du bélier a-t-elle été vérifiée? ',
                                     'reponse' => 'Pas de vérification de la fertilité du bélier',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 776 => 
                                 array (
@@ -6234,6 +7010,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le nombre de béliers est-il est adéquation avec le nombre de brebis ? ',
                                     'reponse' => 'Béliers en nombre insuffisant',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 777 => 
                                 array (
@@ -6242,6 +7019,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les béliers sont-ils suffisamment en état à la mise en lutte ? ',
                                     'reponse' => 'État des béliers insuffisant à la mise à la lutte',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 778 => 
                                 array (
@@ -6250,6 +7028,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’infestation parasitaire est-elle pénalisante pour les brebis ?',
                                     'reponse' => 'Parasitisme impactant les animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 779 => 
                                 array (
@@ -6258,6 +7037,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous vérifié avec votre vétérinaire que les brebis n’avaient pas de maladies abortives ?',
                                     'reponse' => 'Pas de vérification de la présence de maladies abortives',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 780 => 
                                 array (
@@ -6266,6 +7046,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous vérifié avec votre vétérinaire que les brebis n’avaient pas de maladies abortives ?',
                                     'reponse' => 'Pas de vérification de la présence de maladies abortives',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 781 => 
                                 array (
@@ -6274,6 +7055,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le troupeau a-t-il subit un stress important ? (accident, météo, intrus, )',
                                     'reponse' => 'Stress important sur le troupeau',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 782 => 
                                 array (
@@ -6282,6 +7064,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les femelles gestantes sont-elles suivies sur les aspects parasitismes ? ',
                                     'reponse' => 'Pas de suivi du parasitisme sur les gestantes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 783 => 
                                 array (
@@ -6290,6 +7073,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les fourrages distribués sont-ils en bon état sanitaire ? (présence de moisissures, champignons)',
                                     'reponse' => 'Fourrage parfois moisi',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 784 => 
                                 array (
@@ -6298,6 +7082,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu une transition alimentaire brutale ? ',
                                     'reponse' => 'Transition alimentaire brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 785 => 
                                 array (
@@ -6306,6 +7091,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu une surconsommation accidentelles d\'aliments concentrés ou potentiellement toxiques ? ',
                                     'reponse' => 'Surconsommation de concentrés ou d’aliments toxiques',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 786 => 
                                 array (
@@ -6314,6 +7100,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous vérifié avec votre vétérinaire que les brebis n’avaient pas de maladies abortives ?',
                                     'reponse' => 'Pas de vérification de la présence de maladies abortives',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 787 => 
                                 array (
@@ -6322,6 +7109,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le troupeau a-t-il subit un stress important ? (accident, météo, intrus, )',
                                     'reponse' => 'Stress important sur le troupeau',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 788 => 
                                 array (
@@ -6330,6 +7118,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les femelles gestantes sont-elles suivies sur les aspects parasitismes ? ',
                                     'reponse' => 'Pas de suivi du parasitisme sur les gestantes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 789 => 
                                 array (
@@ -6338,6 +7127,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les fourrages distribués sont-ils en bon état sanitaire ? (présence de moisissures, champignons)',
                                     'reponse' => 'Fourrage parfois moisi',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 790 => 
                                 array (
@@ -6346,6 +7136,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu une transition alimentaire brutale ? ',
                                     'reponse' => 'Transition alimentaire brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 791 => 
                                 array (
@@ -6354,6 +7145,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu une surconsommation accidentelles d\'aliments concentrés ou potentiellement toxiques ? ',
                                     'reponse' => 'Surconsommation de concentrés ou d’aliments toxiques',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 792 => 
                                 array (
@@ -6362,6 +7154,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis sont-elles trop maigres à l\'agnelage ? ',
                                     'reponse' => 'Brebis trop maigres à l’agnelage',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 793 => 
                                 array (
@@ -6370,6 +7163,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis sont-elles trop grasses à l\'agnelage ?',
                                     'reponse' => 'Brebis trop grasses à l’agnelage',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 794 => 
                                 array (
@@ -6378,6 +7172,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle équilibrée par rapport aux besoins ? ',
                                     'reponse' => 'Ration déséquilibrée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 795 => 
                                 array (
@@ -6386,6 +7181,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration distribuée correspond-elle à la ration calculée ? ',
                                     'reponse' => 'La ration distribuée diffère de la ration calculée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 796 => 
                                 array (
@@ -6394,6 +7190,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle équilibrée par rapport aux besoins ? ',
                                     'reponse' => 'La ration n’est pas adaptée aux besoins',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 797 => 
                                 array (
@@ -6402,6 +7199,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle adaptée à la prolificité du troupeau ? ',
                                     'reponse' => 'la ration n’est pas adaptée à la prolificité du troupeau',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 798 => 
                                 array (
@@ -6410,6 +7208,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les femelles gestantes sont-elles suivies sur les aspects parasitismes ? ',
                                     'reponse' => 'Pas de suivi du parasitisme sur les gestantes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 799 => 
                                 array (
@@ -6418,6 +7217,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis peu productives, fatiguées sur le cycle précédent ont-elles été réformées ?',
                                     'reponse' => 'Pas de réforme des brebis peu productives ou fatiguées',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 800 => 
                                 array (
@@ -6426,6 +7226,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le troupeau a-t-il subit un stress intense ? (accident, météo, intrus, )',
                                     'reponse' => 'Stress important sur le troupeau',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 801 => 
                                 array (
@@ -6434,6 +7235,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle trop encombrante ? ',
                                     'reponse' => 'Ration trop encombrante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 802 => 
                                 array (
@@ -6442,6 +7244,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration offre-t-elle un bon équilibre minéral (Mg/Zn/P) en fin de gestation ? ',
                                     'reponse' => 'Déséquilibre minéral de la ration en fin de gestation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 803 => 
                                 array (
@@ -6450,6 +7253,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les râteliers sont-ils trop haut pour les gestantes ? ',
                                     'reponse' => 'Râteliers trop hauts pour les gestantes',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 804 => 
                                 array (
@@ -6458,6 +7262,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La marche d\'accès à l\'auge est-elle trop haute ? ',
                                     'reponse' => 'Marche d’accès à l’auge trop haute',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 805 => 
                                 array (
@@ -6466,6 +7271,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis récidivantes de la campagne passée ont-elles été réformées ?',
                                     'reponse' => 'Les brebis récidivantes de la campagne passée n’ont pas été réformées',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 806 => 
                                 array (
@@ -6474,6 +7280,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le taux de prolificité est-il trop élevé ? ',
                                     'reponse' => 'Taux de prolificité trop élevé',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 807 => 
                                 array (
@@ -6482,6 +7289,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Observez-vous un manque de largeur du bassin sur les brebis ?',
                                     'reponse' => 'Manque de largeur du bassin',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 808 => 
                                 array (
@@ -6490,6 +7298,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La politique de sélection des agnelles de renouvellement prend-t-elle en compte la largeur de bassin ? ',
                                     'reponse' => 'Pas de prise en compte de la largeur du bassin dans le choix des agnelles',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 809 => 
                                 array (
@@ -6498,6 +7307,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Est-ce que la facilité de naissance fait partie des critères de choix des béliers ? ',
                                     'reponse' => 'Béliers non choisis en fonction du critère « facilité à la naissance »',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 810 => 
                                 array (
@@ -6506,6 +7316,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le choix des réformes est-il basé sur la difficulté de mise-bas ? ',
                                     'reponse' => 'Pas de choix des réformes en fonction des difficultés de mise-bas',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 811 => 
                                 array (
@@ -6514,6 +7325,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration de fin de gestation est-elle adaptée au stade ? ',
                                     'reponse' => 'La ration de fin de gestation n’est pas adaptée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 812 => 
                                 array (
@@ -6522,6 +7334,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration offre-t-elle un bon équilibre minéral (Mg/Zn/P) en fin de gestation ? ',
                                     'reponse' => 'Déséquilibre minéral de la ration en fin de gestation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 813 => 
                                 array (
@@ -6530,6 +7343,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis sont-elles suffisamment en état ? Trop en état ?',
                                     'reponse' => 'Brebis trop maigres ou trop grasses à l’agnelage',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 814 => 
                                 array (
@@ -6538,6 +7352,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le troupeau présente-t-il un défaut d\'état général ? et reprise d’état à la lutte ?',
                                     'reponse' => 'Manque d’état du troupeau, par de reprise avant la lutte',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 815 => 
                                 array (
@@ -6546,6 +7361,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le troupeau présente-t-il des carences en minéraux ou vitamines ? ',
                                     'reponse' => 'Carences en oligo-éléments et vitamines',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 816 => 
                                 array (
@@ -6554,6 +7370,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les femelles sont-elles suivies sur les aspects parasitismes ? ',
                                     'reponse' => 'Pas de suivi du parasitisme sur les animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 817 => 
                                 array (
@@ -6562,6 +7379,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La politique de réforme/renouvellement est-elle adaptée aux objectifs de prolificité ? ',
                                     'reponse' => 'Politique de réforme non adaptée aux objectifs de prolificité',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 818 => 
                                 array (
@@ -6570,6 +7388,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le troupeau a-t-il des antécédents sanitaires importants ? ',
                                     'reponse' => 'Antécédents sanitaires importants',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 819 => 
                                 array (
@@ -6578,6 +7397,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La saison de mise à la reproduction est-elle adaptée à la race ? À la conduite ? ',
                                     'reponse' => 'Race non adaptée à la saison de monte',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 820 => 
                                 array (
@@ -6586,6 +7406,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le nombre de béliers est-il en adéquation avec le nombre de brebis ? ',
                                     'reponse' => 'Béliers en nombre insuffisant',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 821 => 
                                 array (
@@ -6594,6 +7415,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La non stérilité du bélier a-t-elle été vérifiée? ',
                                     'reponse' => 'Pas de vérification de la fertilité du bélier',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 822 => 
                                 array (
@@ -6602,6 +7424,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les béliers sont-ils suffisamment en état à la mise en lutte ? ',
                                     'reponse' => 'État de béliers insuffisant à la mise en lutte',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 823 => 
                                 array (
@@ -6610,6 +7433,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agnelles de renouvellement sont-elles sélectionnées sur la qualité morphologique de leur mamelle ? ',
                                     'reponse' => 'Pas de sélection des agnelles sur la conformation de la mamelle',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 824 => 
                                 array (
@@ -6618,6 +7442,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Un contrôle des mamelles au tarissement et réforme est-il effectué ? (si pis de bois ou autre problème important) ?',
                                     'reponse' => 'Pas de contrôle des mamelles au moment du tarissement',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 825 => 
                                 array (
@@ -6626,6 +7451,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les mamelles présentent-elles des boutons ou croûtes d’ecthyma ?',
                                     'reponse' => 'Présence de boutons ou de croûtes sur les mamelles',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 826 => 
                                 array (
@@ -6634,6 +7460,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les agneaux sont-ils suffisamment vigoureux à la naissance ? (cf jeunes)',
                                     'reponse' => 'Agneaux peu vigoureux à la naissance',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 827 => 
                                 array (
@@ -6642,6 +7469,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis à problème d\'allaitement sont-elles réformées ? ',
                                     'reponse' => 'Pas de réforme des brebis avec problème d’allaitement',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 828 => 
                                 array (
@@ -6650,6 +7478,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La pression d\'infection est-elle élevée ? ',
                                     'reponse' => 'pression d’infection élevée',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 829 => 
                                 array (
@@ -6658,6 +7487,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le paillage est-il suffisant en bergerie pour faire face à l’excès d’humidité ? ',
                                     'reponse' => 'Paillage de la litière insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 830 => 
                                 array (
@@ -6666,6 +7496,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'alimentation présente-t-elle des carences minérales et vitaminiques ?',
                                     'reponse' => 'Carences en oligo-éléments et vitamines',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 831 => 
                                 array (
@@ -6674,6 +7505,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration des brebis en fin de gestation est-elle équilibrée et suffisante par rapport aux besoins ? ',
                                     'reponse' => 'Ration déséquilibrée et/ou insuffisante par rapport aux besoins',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 832 => 
                                 array (
@@ -6682,6 +7514,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle suffisamment pourvue en minéraux et vitamines ? ',
                                     'reponse' => 'Manque de minéraux et de vitamines',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 833 => 
                                 array (
@@ -6690,6 +7523,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis ont-elles suffisamment d\'état à la mise-bas ? ',
                                     'reponse' => 'Manque d’état des brebis à la mise-bas',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 834 => 
                                 array (
@@ -6698,6 +7532,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'état corporel des brebis à la mise-bas est-il suffisant ? ',
                                     'reponse' => 'Etat corporel des brebis à la mise-bas insuffisant',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 835 => 
                                 array (
@@ -6706,6 +7541,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration des brebis en fin de gestation est-elle adaptée ? ',
                                     'reponse' => 'Ration non adaptée à la fin de gestation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 836 => 
                                 array (
@@ -6714,6 +7550,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mes agneaux boivent-ils bien un bon colostrum, et en quantité suffisante (attention à chacun dans une portée multiple !) ?',
                                     'reponse' => 'Buvée de colostrum insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 837 => 
                                 array (
@@ -6722,6 +7559,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mes brebis adoptent-elles bien leur(s) agneau(x) ?',
                                     'reponse' => 'Adoption difficile des brebis par les agneaux',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 838 => 
                                 array (
@@ -6730,6 +7568,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le temps consacré aux soins et à la surveillance des nouveaux nés est-il suffisant ? ',
                                     'reponse' => 'Surveillance des nouveaux-nés insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 839 => 
                                 array (
@@ -6738,6 +7577,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les cases d\'agnelage sont-elles dans un bon état de propreté et d\'hygiène ? avancement des cases dans la bergerie ?',
                                     'reponse' => 'Manque de propreté des cases d’agnelage',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 840 => 
                                 array (
@@ -6746,6 +7586,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les nombrils sont-ils désinfectés ? ',
                                     'reponse' => 'Pas de désinfection des nombrils',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 841 => 
                                 array (
@@ -6754,6 +7595,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’ambiance du bâtiment (température, humidité, condensation, murs froids) est-elle confortable pour des agneaux ?',
                                     'reponse' => 'Ambiance du bâtiment inconfortable pour les agneaux',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 842 => 
                                 array (
@@ -6762,6 +7604,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le choix des reproducteurs est-il adapté ? ',
                                     'reponse' => 'Choix des reproducteurs inadapté',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 843 => 
                                 array (
@@ -6770,6 +7613,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'âge moyen des brebis n\'est-il pas trop élevé ? ',
                                     'reponse' => 'Age moyen des brebis trop élevé',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 844 => 
                                 array (
@@ -6778,6 +7622,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'hygiène et la désinfection est-elle respectée lors des différentes interventions : bouclage, équeutage ? ',
                                     'reponse' => 'Manque d’hygiène dans la pose des boucle, l’équeutage, …',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 845 => 
                                 array (
@@ -6786,6 +7631,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration des brebis est-elle bien équilibrée pour produire un lait équilibré et digeste ?',
                                     'reponse' => 'Ration non adaptée à la production d’un lait équilibré et digeste',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 846 => 
                                 array (
@@ -6794,6 +7640,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les transitions alimentaires sont-elles suffisamment longues ? ',
                                     'reponse' => 'Transitions alimentaires trop courte',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 847 => 
                                 array (
@@ -6802,6 +7649,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'aliment distribué est-il adapté aux besoins des animaux ? (excès d\'azote soluble, amidon fermentescible, manque de cellulose)',
                                 'reponse' => 'Aliments distribués non adaptés aux besoins des animaux (excès d’azote soluble, d’amidon fermentescible, …)',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 848 => 
                                 array (
@@ -6810,6 +7658,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration des mères est-elle suffisante et équilibrée pour obtenir une bonne production laitière ? ',
                                     'reponse' => 'Ration des mères pas suffisante ou équilibrée ne permettant pas une bonne production laitière',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 849 => 
                                 array (
@@ -6818,6 +7667,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Existe-t-il une possibilité d\'intoxication alimentaire ? (Cuivre, plantes, médicaments, métaux lourds …)',
                                     'reponse' => 'Possibilités d’intoxication alimentaire',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 850 => 
                                 array (
@@ -6826,6 +7676,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agneaux sont-ils victimes d\'une attaque parasitaire ? ',
                                     'reponse' => '',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 851 => 
                                 array (
@@ -6834,6 +7685,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les agneaux sont-ils victimes de séquelles de maladies antérieures ? (infection respiratoires, …)',
                                     'reponse' => 'Séquelles de maladies antérieures',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 852 => 
                                 array (
@@ -6842,6 +7694,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les transitions alimentaires sont-elles respectées ? ',
                                     'reponse' => 'Transition alimentaire brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 853 => 
                                 array (
@@ -6850,6 +7703,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agnelles ont-elles subies un épisode d\'entérotoxémie ? ',
                                     'reponse' => 'Épisode d’entérotoxémie sur les agnelles',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 854 => 
                                 array (
@@ -6858,6 +7712,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agnelles ont-elles un état corporel suffisant sur toute cette période délicate ? ',
                                     'reponse' => 'L’état corporel des agnelles est insuffisant',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 855 => 
                                 array (
@@ -6866,6 +7721,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous déjà été touché par des morts subites ?',
                                     'reponse' => 'Existence préalable de morts subites',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 856 => 
                                 array (
@@ -6874,6 +7730,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agnelles ont-elles suivies en parasitismes ?',
                                     'reponse' => 'Pas de suivi du parasitisme des agnelles',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 857 => 
                                 array (
@@ -6882,6 +7739,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le temps consacré aux soins et à la surveillance des nouveaux nés est-il suffisant ? ',
                                     'reponse' => 'Temps consacré aux nouveaux-nés insuffisant',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 858 => 
                                 array (
@@ -6890,6 +7748,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les agneaux sont-ils suffisamment vigoureux à la naissance ? (choix des béliers et alimentation des brebis)',
                                     'reponse' => 'Manque de vigueur de agneaux à la naissance',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 859 => 
                                 array (
@@ -6898,6 +7757,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les adoptions sont-elles faciles ? ',
                                     'reponse' => 'Adoptions difficiles',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 860 => 
                                 array (
@@ -6906,6 +7766,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La race du troupeau est-il en adéquation avec le mode de production choisi ? ',
                                     'reponse' => 'Race non adaptée au mode de production choisi',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 861 => 
                                 array (
@@ -6914,6 +7775,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La race du troupeau est-il en adéquation avec le temps disponible ? ',
                                     'reponse' => 'Race non adaptée au temps disponible',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 862 => 
                                 array (
@@ -6922,6 +7784,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les mères sont-elles suffisamment maternelles ? (choix de la race)',
                                 'reponse' => 'Mère peu maternelles (choix de la race)',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 863 => 
                                 array (
@@ -6930,6 +7793,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les mamelles des brebis sont-elles facilement accessible pour les agneaux ? (œdème et congestion des mamelles, gros trayons)',
                                 'reponse' => 'Mamelles difficilement accessible pour les agneaux (oedème, congestion, gros trayons)',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 864 => 
                                 array (
@@ -6938,6 +7802,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le lieu de mise bas est-il suffisamment confortable pour les nouveaux nés ? Température, humidité, propreté',
                                     'reponse' => 'Les lieux de mise-bas manquent de confort pour les nouveaux-nés ',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 865 => 
                                 array (
@@ -6946,6 +7811,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous suffisamment de cases d\'agnelage permettant l\'isolement du couple brebis/agneau ? ',
                                     'reponse' => 'Nombre de cases d’agnelage insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 866 => 
                                 array (
@@ -6954,6 +7820,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le temps consacré aux soins et à la surveillance des nouveaux nés est-il suffisant ? ',
                                     'reponse' => 'Temps consacré aux nouveaux-nés insuffisant',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 867 => 
                                 array (
@@ -6962,6 +7829,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La race du troupeau est-il en adéquation avec le mode de production choisi ? ',
                                     'reponse' => 'Race non adaptée au mode de production choisi',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 868 => 
                                 array (
@@ -6970,6 +7838,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La race du troupeau est-il en adéquation avec le temps disponible ? ',
                                     'reponse' => 'Race non adaptée au temps disponible',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 869 => 
                                 array (
@@ -6978,6 +7847,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les mères sont-elles suffisamment maternelles ? (choix de la race)',
                                 'reponse' => 'Mère peu maternelles (choix de la race)',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 870 => 
                                 array (
@@ -6986,6 +7856,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les agneaux sont-ils suffisamment vigoureux à la naissance ? (choix des béliers et alimentation des brebis)',
                                     'reponse' => 'Manque de vigueur de agneaux à la naissance',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 871 => 
                                 array (
@@ -6994,6 +7865,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agnelages ont-ils été difficiles ?',
                                     'reponse' => 'Agnelages difficiles',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 872 => 
                                 array (
@@ -7002,6 +7874,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous suffisamment de cases d\'agnelage permettant l\'isolement du couple brebis/agneau ? ',
                                     'reponse' => 'Nombre de cases d’agnelage insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 873 => 
                                 array (
@@ -7010,6 +7883,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La densité (nombre d\'animaux/m²) n\'est-elle pas trop importante ? ',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 874 => 
                                 array (
@@ -7018,6 +7892,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Des précautions d\'hygiène sont-elles prises entre chaque désinfection de cordon ?',
                                     'reponse' => 'Pas de précaution d’hygiène entre deux désinfection de cordon',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 875 => 
                                 array (
@@ -7026,6 +7901,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les quantités de paille litière sont-elles suffisantes ? ',
                                     'reponse' => 'Paille de la litière en quantité insuffisante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 876 => 
                                 array (
@@ -7034,6 +7910,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La bergerie est-elle suffisamment isolée et ventilée ? ',
                                     'reponse' => 'Bergerie mal isolée et mal ventilée',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 877 => 
                                 array (
@@ -7042,6 +7919,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'hygiène du bâtiment et du matériel est-il suffisant ? (lavage, désinfection, dératisation, désinsectisation, vide sanitaire, )',
                                     'reponse' => 'Manque d’hygiène dans le bâtiment',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 878 => 
                                 array (
@@ -7050,6 +7928,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le matériel de bouclage est-il bien désinfecté après utilisation ? ',
                                     'reponse' => 'Matériel de bouclage mal désinfecté',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 879 => 
                                 array (
@@ -7058,6 +7937,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agneaux ont-ils bien tété le colostrum dans les 6 heures ? ',
                                     'reponse' => 'Prise de colostrum dans les 6 premières heures insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 880 => 
                                 array (
@@ -7066,6 +7946,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agneaux ont-ils bien bu ?',
                                     'reponse' => 'Problèmes pour faire téter les agneaux',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 881 => 
                                 array (
@@ -7074,6 +7955,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les colostrums sont-ils de bonne qualité ? ',
                                     'reponse' => 'Colostrums de qualité insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 882 => 
                                 array (
@@ -7082,6 +7964,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les cordons sont-ils désinfectés ? ',
                                     'reponse' => 'Cordons non désinfectés',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 883 => 
                                 array (
@@ -7090,6 +7973,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La solution de désinfection est-elle régulièrement renouvelée ? ',
                                     'reponse' => 'Solution de désinfection peu renouvelée',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 884 => 
                                 array (
@@ -7098,6 +7982,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les agneaux du même lot sont-ils homogènes ? (âge et poids)',
                                     'reponse' => 'Manque d’homogénéité dans les lots d’agneaux',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 885 => 
                                 array (
@@ -7106,6 +7991,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agneaux ont-il bien tété le colostrum dans les 6 heures ? ',
                                     'reponse' => 'Prise de colostrum dans les 6 premières heures insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 886 => 
                                 array (
@@ -7114,6 +8000,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les colostrums sont-ils de bonne qualité ? ',
                                     'reponse' => 'Colostrums de qualité insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 887 => 
                                 array (
@@ -7122,6 +8009,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le nombre de cases d\'agnelage est-il suffisant pour respecter un temps de présence de 24h ? ',
                                     'reponse' => 'Nombre de cases d’agnelage insuffisant',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 888 => 
                                 array (
@@ -7130,6 +8018,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La densité (nombre d\'animaux/m²) n\'est-elle pas trop importante ? ',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 889 => 
                                 array (
@@ -7138,6 +8027,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les quantités de paille litière sont-elles suffisantes ? ',
                                     'reponse' => 'Paillage de la litière insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 890 => 
                                 array (
@@ -7146,6 +8036,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La bergerie est-elle suffisamment isolée et ventilée ? ',
                                     'reponse' => 'Bergerie mal isolée et mal ventilée',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 891 => 
                                 array (
@@ -7154,6 +8045,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu introduction d\'animaux pouvant déclencher l\'ecthyma sur les animaux présents ? ',
                                     'reponse' => 'Introduction d’animaux porteurs d’ecthyma',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 892 => 
                                 array (
@@ -7162,6 +8054,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Connaissez-vous le statut Border Disease de votre troupeau ? ',
                                     'reponse' => 'Statut Border Disease inconnu',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 893 => 
                                 array (
@@ -7170,6 +8063,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Observez-vous une résurgence cyclique de l\'ecthyma sur les jeunes brebis ? ',
                                     'reponse' => 'Résurgence cyclique de l’ecthyma que les jeunes brebis',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 894 => 
                                 array (
@@ -7178,6 +8072,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations alimentaires présentent-elles des carences en minéraux et oligo-éléments ?',
                                     'reponse' => 'Carences en minéraux et oligo-éléments',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 895 => 
                                 array (
@@ -7186,6 +8081,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'hygiène du logement est-elle suffisante ? ',
                                     'reponse' => 'Manque d’hygiène du logement',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 896 => 
                                 array (
@@ -7194,6 +8090,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'y-a-t-il présence de case d\'infirmerie, isolement des animaux malades ? ',
                                     'reponse' => 'Absence d’infirmerie',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 897 => 
                                 array (
@@ -7202,6 +8099,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'le logement est-il confortable ? Désinfecté ? ',
                                     'reponse' => 'Manque de confort dans le logement',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 898 => 
                                 array (
@@ -7210,6 +8108,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière est-elle propre et saine ? ',
                                     'reponse' => 'Litière sale',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 899 => 
                                 array (
@@ -7218,6 +8117,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La paille de litière est-elle de bonne qualité, bien conservée ? ',
                                     'reponse' => 'Paille de la litière de mauvaise qualité',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 900 => 
                                 array (
@@ -7226,6 +8126,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La surveillance de la prise colostrale est-elle suffisante ? ',
                                     'reponse' => 'Surveillance de la prise colostrale insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 901 => 
                                 array (
@@ -7234,6 +8135,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les colostrums et le lait sont-ils de bonne qualité ? ',
                                     'reponse' => 'Colostrums de qualité insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 902 => 
                                 array (
@@ -7242,6 +8144,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'alimentation des mères est-elle équilibrée et suffisante ? ',
                                     'reponse' => 'Alimentation des mères insuffisante ou déséquilibrée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 903 => 
                                 array (
@@ -7250,6 +8153,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'eau de boisson est-elle potable ? ',
                                     'reponse' => 'Eau de boisson non potable',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 904 => 
                                 array (
@@ -7258,6 +8162,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux disposent-ils de sel alimentaire ? ',
                                     'reponse' => 'Pas de sel disponible pour les agneaux',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 905 => 
                                 array (
@@ -7266,6 +8171,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'alimentation des agneaux n\'est-elle pas trop acidogène ? ',
                                     'reponse' => 'Alimentation des agneaux acidogène',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 906 => 
                                 array (
@@ -7274,6 +8180,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La transition alimentaire est-elle respectée ? ',
                                     'reponse' => 'Transition alimentaire brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 907 => 
                                 array (
@@ -7282,6 +8189,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'herbe pâturée n\'est-elle pas trop jeune ? (riche et humide)',
                                     'reponse' => 'Herbe pâturée trop jeune',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 908 => 
                                 array (
@@ -7290,6 +8198,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La transition alimentaire vers le pâturage est-elle respectée ? ',
                                     'reponse' => 'Transition alimentaire brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 909 => 
                                 array (
@@ -7298,6 +8207,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La transition alimentaire est-elle respectée ? ',
                                     'reponse' => 'Transition alimentaire brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 910 => 
                                 array (
@@ -7306,6 +8216,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle riche en céréales et acidogène ? ',
                                     'reponse' => 'Ration trop riche en céréales et acidogène',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 911 => 
                                 array (
@@ -7314,6 +8225,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'voir parasitisme ',
                                 'reponse' => '(approfondir la question de la coccidiose)',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 912 => 
                                 array (
@@ -7322,6 +8234,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La transition alimentaire est-elle respectée ? ',
                                     'reponse' => 'Transition alimentaire brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 913 => 
                                 array (
@@ -7330,6 +8243,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'voir parasitisme (surtout coccidiose, +/- strongyloides)',
                                 'reponse' => '(approfondir la question du parasitisme)',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 914 => 
                                 array (
@@ -7338,6 +8252,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le bâtiment connaît-il des variations de températures excessives (métal, béton, climat rude, mauvaise orientation, …) ? ',
                                     'reponse' => 'Variation de températures excessives',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 915 => 
                                 array (
@@ -7346,6 +8261,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La densité animale en bergerie n’est-elle pas trop élevée ?',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 916 => 
                                 array (
@@ -7354,6 +8270,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les matériaux constituant la bergerie sont-ils propices aux variations de températures ? ',
                                     'reponse' => 'Matériaux favorisant des variation de température excessives',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 917 => 
                                 array (
@@ -7362,6 +8279,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La condensation est-elle fréquente dans le bâtiment ? ',
                                     'reponse' => 'Condensation fréquente dans le bâtiment',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 918 => 
                                 array (
@@ -7370,6 +8288,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il présence de courants d\'air ? ',
                                     'reponse' => 'Présence de courants d’air',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 919 => 
                                 array (
@@ -7378,6 +8297,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le paillage est-il effectué à la pailleuse ? ',
                                     'reponse' => 'Paillage effectué à la pailleuse',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 920 => 
                                 array (
@@ -7386,6 +8306,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les accès aux nourrisseurs, aux auges et à l\'eau sont-ils difficiles ?',
                                     'reponse' => 'Accès aux auges et à l’eau difficiles',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 921 => 
                                 array (
@@ -7394,6 +8315,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les agneaux ont-ils accès à des plantes provoquant de l\'œdème pulmonaire ? (laurier cerise/galéga officinal)',
                                 'reponse' => 'Accès à des plantes provoquant des œdèmes pulmonaires (galega, laurier cerise)',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 922 => 
                                 array (
@@ -7402,6 +8324,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le bâtiment connaît-il des variations de températures excessives (métal, béton, climat rude, mauvaise orientation, …) ? ',
                                     'reponse' => 'Variation de températures excessives',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 923 => 
                                 array (
@@ -7410,6 +8333,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La densité animale en bergerie n’est-elle pas trop élevée ?',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 924 => 
                                 array (
@@ -7418,6 +8342,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les matériaux constituant la bergerie sont-ils propices aux variations de températures ? ',
                                     'reponse' => 'Matériaux favorisant des variation de température excessives',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 925 => 
                                 array (
@@ -7426,6 +8351,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La condensation est-elle fréquente dans le bâtiment ? ',
                                     'reponse' => 'Condensation fréquente dans le bâtiment',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 926 => 
                                 array (
@@ -7434,6 +8360,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il présence de courants d\'air ? ',
                                     'reponse' => 'Présence de courants d’air',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 927 => 
                                 array (
@@ -7442,6 +8369,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le paillage est-il effectué à la pailleuse ? ',
                                     'reponse' => 'Paillage effectué à la pailleuse',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 928 => 
                                 array (
@@ -7450,6 +8378,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les accès aux nourrisseurs, aux auges et à l\'eau sont-ils difficiles ?',
                                     'reponse' => 'Accès aux auges et à l’eau difficiles',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 929 => 
                                 array (
@@ -7458,6 +8387,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les agneaux ont-ils accès à des plantes provoquant de l\'œdème pulmonaire ? (laurier cerise/galéga officinal)',
                                 'reponse' => 'Accès à des plantes provoquant des œdèmes pulmonaires (galega, laurier cerise)',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 930 => 
                                 array (
@@ -7466,6 +8396,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les agneaux ont-ils eu des troubles du cordon ? (Cf ci-dessus)',
                                     'reponse' => 'Infections du cordon',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 931 => 
                                 array (
@@ -7474,6 +8405,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agneaux ont-ils eu des infections suite au bouclage ou à l\'équeutage ? ',
                                     'reponse' => 'Infections suite au bouclage ou à l’équeutage',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 932 => 
                                 array (
@@ -7482,6 +8414,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les plaies sont-elles systématiquement désinfectées ? ',
                                     'reponse' => 'Plaies non systématiquement désinfectées',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 933 => 
                                 array (
@@ -7490,6 +8423,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations sont-elles suffisamment pourvues en vitamine E et sélénium ? ',
                                     'reponse' => 'Manque de vitamine E et de sélénium',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 934 => 
                                 array (
@@ -7498,6 +8432,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations présentent-elles des risques d\'acidose ? ',
                                     'reponse' => 'Rations acidogènes',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 935 => 
                                 array (
@@ -7506,6 +8441,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis sont-elles suffisamment laitières et bien nourries pour couvrir les besoins des agneaux ayant le plus de potentiel ?',
                                     'reponse' => 'Quantité de lait insuffisante pour les gros agneaux',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 936 => 
                                 array (
@@ -7514,6 +8450,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les prairies pâturées sont-elles trop jeunes et/ou trop riches en azote ? ',
                                     'reponse' => 'Prairies pâturées trop jeunes',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 937 => 
                                 array (
@@ -7522,6 +8459,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La transition alimentaire est-elle suffisante ? ',
                                     'reponse' => 'Transition alimentaire brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 938 => 
                                 array (
@@ -7530,6 +8468,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'aliment de démarrage est-il adapté ? ',
                                     'reponse' => 'Aliment de démarrage inadapté',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 939 => 
                                 array (
@@ -7538,6 +8477,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les accès aux nourrisseurs, aux auges et à l\'eau sont-ils difficiles ?',
                                     'reponse' => 'Accès aux auges et à l’eau difficiles',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 940 => 
                                 array (
@@ -7546,6 +8486,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le contrôle du parasitisme est-il réalisé (coccidiose, ténia et strongles ) ?',
                                     'reponse' => 'Pas de contrôle du parasitisme',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 941 => 
                                 array (
@@ -7554,6 +8495,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’infestation parasitaire (coccidiose, cryptosporidiose, ascaridiose,ténia…) est –elle surveillée ?',
                                     'reponse' => 'Par de surveillance de l’infection parasitaire',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 942 => 
                                 array (
@@ -7562,6 +8504,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les fourrages distribués présentent-ils des bonnes qualités de conservation ? ',
                                     'reponse' => 'Fourrages mal conservés',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 943 => 
                                 array (
@@ -7570,6 +8513,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations présentent-elles des risques d\'acidose ? ',
                                     'reponse' => 'Rations acidogènes',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 944 => 
                                 array (
@@ -7578,6 +8522,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les apports minéraux sont-ils suffisants pour couvrir les besoins ? ',
                                     'reponse' => 'Apport minéraux insuffisants par rapport aux besoins',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 945 => 
                                 array (
@@ -7586,6 +8531,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'eau de boisson est-elle potable ? ',
                                     'reponse' => 'Eau de boisson non potable',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 946 => 
                                 array (
@@ -7594,6 +8540,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'De l\'argile est-elle mise à disposition des agneaux ? ',
                                     'reponse' => 'Pas d’argile à disposition des agneaux',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 947 => 
                                 array (
@@ -7602,6 +8549,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’infestation en coccidiose –t-elle été surveillée ?',
                                     'reponse' => 'Pas de surveillance de la coccidiose',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 948 => 
                                 array (
@@ -7610,6 +8558,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agneaux subissent-ils des stress réguliers ? ',
                                     'reponse' => 'Stress important sur les agneaux',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 949 => 
                                 array (
@@ -7618,6 +8567,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'le logement est-il confortable ?',
                                     'reponse' => 'Manque de confort dans le logement',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 950 => 
                                 array (
@@ -7626,6 +8576,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière est-elle propre et saine ? ',
                                     'reponse' => 'Litière sale',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 951 => 
                                 array (
@@ -7634,6 +8585,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La paille de litière est-elle de bonne qualité, bien conservée ? ',
                                     'reponse' => 'Paille de la litière de mauvaise qualité',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 952 => 
                                 array (
@@ -7642,6 +8594,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les apports en cuivre et en soufre sont-ils raisonnés ? ',
                                     'reponse' => 'Apports en cuivre et en souffre non raisonnés',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 953 => 
                                 array (
@@ -7650,6 +8603,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations sont-elles équilibrées ? avec une bonne sécurité contre l’acidose ? ',
                                 'reponse' => 'Rations déséquilibrées (risque d’acidose)',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 954 => 
                                 array (
@@ -7658,6 +8612,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les aliments sont sains ? (absence de moisi ou altération)',
                                     'reponse' => 'Aliments moisis ou abîmés',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 955 => 
                                 array (
@@ -7666,6 +8621,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les apports en éléments minéraux et oligo-éléments sont-ils suffisants ? ',
                                     'reponse' => 'Carences en minéraux et oligo-éléments',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 956 => 
                                 array (
@@ -7674,6 +8630,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Avez-vous fait des dépistages listéria, méningite, tétanos, botulisme ou autres maladies graves ? (a voir avec votre vétérinaire)',
                                 'reponse' => 'Pas de dépistage des maladies graves (listéria, tétanos, botulisme, etc.)',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 957 => 
                                 array (
@@ -7682,6 +8639,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agnelles sont-elles atteintes de tiques ? Si oui, voir parasitisme',
                                     'reponse' => 'Problème d’infestation par des tiques',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 958 => 
                                 array (
@@ -7690,6 +8648,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agnelles sont-elles suivies en parasitismes ? ',
                                     'reponse' => 'Pas de suivi du parasitisme des agnelles',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 959 => 
                                 array (
@@ -7698,6 +8657,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le diagnostic de gale a-t-il été posé par un vétérinaire ?',
                                     'reponse' => 'Diagnostic de gale',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 960 => 
                                 array (
@@ -7706,6 +8666,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les démangeaisons sont-elles surveillées et traitées si nécessaire ? (Gale)',
                                     'reponse' => 'Démangeaisons ni surveillées ni traitées',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 961 => 
                                 array (
@@ -7714,6 +8675,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux introduits sont-ils mis en quarantaine et suivis sanitairement avant d\'être mélangés au troupeau ? ',
                                     'reponse' => 'Pas quarantaine avant introduction et de surveillance des animaux introduits',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 962 => 
                                 array (
@@ -7722,6 +8684,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Du matériel de transport d\'ovins est-il utilisé à plusieurs éleveurs ? ',
                                     'reponse' => 'Matériel de transport partagé entre plusieurs éleveurs',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 963 => 
                                 array (
@@ -7730,6 +8693,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les traitements sont-ils mis en place rapidement après l\'apparition des premiers signes ? ',
                                     'reponse' => 'Traitements trop tardifs après l’apparition des premiers signes',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 964 => 
                                 array (
@@ -7738,6 +8702,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les troupeaux voisins sont-ils porteurs du parasite ? ',
                                     'reponse' => 'Troupeaux voisins porteurs de gale',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 965 => 
                                 array (
@@ -7746,6 +8711,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Du matériel de transport d\'ovins est-il utilisé à plusieurs éleveurs ? ',
                                     'reponse' => 'Matériel de transport partagé entre plusieurs éleveurs',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 966 => 
                                 array (
@@ -7754,6 +8720,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les troupeaux voisins sont-ils porteurs du parasite ? ',
                                     'reponse' => 'Troupeaux voisins porteurs de teigne ou poux',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 967 => 
                                 array (
@@ -7762,6 +8729,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les traitements sont-ils mis en place rapidement après l\'apparition des premiers signes ? ',
                                     'reponse' => 'Traitements trop tardifs après l’apparition des premiers signes',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 968 => 
                                 array (
@@ -7770,6 +8738,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La surface et le volume de bâtiment par animal sont-ils suffisants ? ',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 969 => 
                                 array (
@@ -7778,6 +8747,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis sont-elles victimes de mycotoxine ou d\'intoxication chimique ?',
                                     'reponse' => 'Intoxications chimiques ou par mycotoxines',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 970 => 
                                 array (
@@ -7786,6 +8756,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'alimentation couvre-t-elle les besoins en Iode, Cuivre, Zinc ?',
                                     'reponse' => 'Carences en oligo-éléments',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 971 => 
                                 array (
@@ -7794,6 +8765,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La gestion du pâturage permet-elle d\'éviter le retour des animaux sur des parcelles infestées ?',
                                     'reponse' => 'Retour du troupeau sur des parcelles infestées',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 972 => 
                                 array (
@@ -7802,6 +8774,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le pâturage ras < à 5 cm est-il évité ? ',
                                 'reponse' => 'Pâturage trop ras (< 5cm)',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 973 => 
                                 array (
@@ -7810,6 +8783,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il alternance de différentes espèces au pâturage ?',
                                     'reponse' => 'Par d’alternance possible de différentes espèces sur les mêmes pâtures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 974 => 
                                 array (
@@ -7818,6 +8792,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Tenez-vous à jour un planning de pâturage ? ',
                                     'reponse' => 'Pas de planning de pâturage à jour',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 975 => 
                                 array (
@@ -7826,6 +8801,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La pâture est-elle intégrée dans une alternance fauche-pâture ? ',
                                     'reponse' => 'Pas d’association pâturage / fauche',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 976 => 
                                 array (
@@ -7834,6 +8810,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les prairies entrent-elles dans la rotation des cultures ?',
                                     'reponse' => 'Les prairies n’entrent pas dans les rotations de cultures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 977 => 
                                 array (
@@ -7842,6 +8819,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'infestation fait-elle suite à un hiver doux ? ',
                                     'reponse' => 'Hiver précédent très doux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 978 => 
                                 array (
@@ -7850,6 +8828,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le choix de traiter collectivement est-il décidé suite à des analyses coproscopiques et/ou sérologique, et répond-il à une stratégie globale de gestion parasitaire à l’échelle du troupeau ?',
                                     'reponse' => 'Pas de stratégie globale dans les choix de traitement des animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 979 => 
                                 array (
@@ -7858,6 +8837,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La fréquence des traitements anthelminthiques ne favorise-t-elle pas les résistances ? ',
                                     'reponse' => 'Fréquence de traitements favorisant les résistances',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 980 => 
                                 array (
@@ -7866,6 +8846,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La race du troupeau est-elle adaptée au milieu infesté ? ',
                                     'reponse' => 'Race non adaptée à de fortes infestations parasitaires',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 981 => 
                                 array (
@@ -7874,6 +8855,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La gestion du pâturage permet-elle d\'éviter le retour des animaux sur des parcelles infestées ?',
                                     'reponse' => 'Retour du troupeau sur des parcelles infestées',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 982 => 
                                 array (
@@ -7882,6 +8864,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le pâturage ras < à 5 cm est-il évité ? ',
                                 'reponse' => 'Pâturage trop ras (< 5cm)',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 983 => 
                                 array (
@@ -7890,6 +8873,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il alternance de différentes espèces au pâturage ?',
                                     'reponse' => 'Par d’alternance possible de différentes espèces sur les mêmes pâtures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 984 => 
                                 array (
@@ -7898,6 +8882,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Tenez-vous à jour un planning de pâturage ? ',
                                     'reponse' => 'Pas de planning de pâturage à jour',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 985 => 
                                 array (
@@ -7906,6 +8891,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La pâture est-elle intégrée dans une alternance fauche-pâture ? ',
                                     'reponse' => 'Pas d’association pâturage / fauche',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 986 => 
                                 array (
@@ -7914,6 +8900,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les prairies entrent-elles dans la rotation des cultures ?',
                                     'reponse' => 'Les prairies n’entrent pas dans les rotations de cultures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 987 => 
                                 array (
@@ -7922,6 +8909,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'infestation fait-elle suite à un hiver doux ? ',
                                     'reponse' => 'Hiver précédent très doux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 988 => 
                                 array (
@@ -7930,6 +8918,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le choix de traiter collectivement est-il décider suite à des analyses coproscopiques et/ou sérologique, et répond-il à une stratégie globale de gestion parasitaire à l’échelle du troupeau ?',
                                     'reponse' => 'Pas de stratégie globale dans les choix de traitement des animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 989 => 
                                 array (
@@ -7938,6 +8927,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La fréquence des traitements anthelminthiques ne favorise-t-elle pas les résistances ? ',
                                     'reponse' => 'Fréquence de traitements favorisant les résistances',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 990 => 
                                 array (
@@ -7946,6 +8936,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La race du troupeau est-elle adaptée au milieu infesté ? ',
                                     'reponse' => 'Race non adaptée à de fortes infestations parasitaires',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 991 => 
                                 array (
@@ -7954,6 +8945,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux ont-ils pâturé des zones humides, notamment par nécessité en période de sécheresse ?',
                                 'reponse' => 'Pâturage sur des zones humides (à cause de la sécheresse)',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 992 => 
                                 array (
@@ -7962,6 +8954,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Des accès aménagés à des points d’eau propre et potable sont-ils aménagés en quantité suffisante par rapport au nombre d’animaux ? Le débit est-il suffisant tout au long de l’année ?',
                                     'reponse' => 'Problème d’accès à de l’eau propre et potable',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 993 => 
                                 array (
@@ -7970,6 +8963,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux pâturent-ils sur des zones sèches avec présence des petits escargots xérophiles?',
                                     'reponse' => 'Présence d’escargots xérophiles',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 994 => 
                                 array (
@@ -7978,6 +8972,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les animaux consomment-ils des compléments alimentaires posés au sol ? (pierre à sel, etc…)',
                                     'reponse' => 'Consommation au sol des aliments, du sel, des minéraux',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 995 => 
                                 array (
@@ -7986,6 +8981,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il un épandage de fumier issus d\'animaux malades sur les pâtures ? ',
                                     'reponse' => 'Épandage de fumier issu d’animaux infestés',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 996 => 
                                 array (
@@ -7994,6 +8990,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il alternance de différentes espèces au pâturage ?',
                                     'reponse' => 'Par d’alternance possible de différentes espèces sur les mêmes pâtures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 997 => 
                                 array (
@@ -8002,6 +8999,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le pâturage ras < à 5 cm est-il évité ? ',
                                 'reponse' => 'Pâturage trop ras (< 5cm)',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 998 => 
                                 array (
@@ -8010,6 +9008,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les animaux sont-ils maintenus sur des parcelles présentant un manque d\'herbe (sécheresse) ?',
                                     'reponse' => 'Animaux maintenus sur des parcelles présentant un manque d’herbe',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 999 => 
                                 array (
@@ -8018,6 +9017,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Historiquement, l\'infestation petite douve a déjà été présente ? ',
                                     'reponse' => 'Présence historique de petite douve',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1000 => 
                                 array (
@@ -8026,6 +9026,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'infestation fait-elle suite à un hiver doux ? ',
                                     'reponse' => 'Infestation suite à un hiver doux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1001 => 
                                 array (
@@ -8034,6 +9035,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'année a-t-elle été particulièrement humide et douce ? ',
                                     'reponse' => 'Année particulièrement humide et douce',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1002 => 
                                 array (
@@ -8042,6 +9044,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu des infestations les années précédentes ? ',
                                     'reponse' => 'Infestations les années précédentes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1003 => 
                                 array (
@@ -8050,6 +9053,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux jeunes sont-ils protégés des parcelles infestées ? ',
                                     'reponse' => 'Les jeunes pâturent sur des parcelles très infestées',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1004 => 
                                 array (
@@ -8058,6 +9062,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le pâturage ras < à 5 cm est-il évité ? ',
                                 'reponse' => 'Pâturage trop ras (< 5cm)',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1005 => 
                                 array (
@@ -8066,6 +9071,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La pâture est-elle intégrée dans une alternance fauche-pâture ? Les prairies entrent-elles dans la rotation des cultures ? ',
                                     'reponse' => 'Les prairies n’entrent pas dans les rotations de cultures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1006 => 
                                 array (
@@ -8074,6 +9080,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'environnement est-il contaminé par les coccidioses ? ',
                                     'reponse' => 'Environnement infesté par des coccidies',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1007 => 
                                 array (
@@ -8082,6 +9089,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Si oui un lavage eau chaude (>90°C) a-t-il été effectué ? ',
                                     'reponse' => 'Pas de lavage à l’eau chaude malgré un environnement infesté',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1008 => 
                                 array (
@@ -8090,6 +9098,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Avez-vous mis en place des mesures préventives ? (ex argile à disposition des agneaux )',
                                     'reponse' => 'Pas de mesures préventives',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1009 => 
                                 array (
@@ -8098,6 +9107,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La surface et le volume de bâtiment par animal sont-ils suffisants ? ',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1010 => 
                                 array (
@@ -8106,6 +9116,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière des animaux reste-t-elle sèche ? ',
                                     'reponse' => 'Litière trop humide',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1011 => 
                                 array (
@@ -8114,6 +9125,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les animaux ont-ils subis des stress importants (changement alimentaire, mise à l\'herbe, sevrage, mise en lots, etc..)',
                                     'reponse' => 'Stress important sur le troupeau',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1012 => 
                                 array (
@@ -8122,6 +9134,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La zone est-elle infestée par la mouche responsables de myases (Wohlfahrtia, lucilie) ? ',
                                     'reponse' => 'Zone infestée par des mouches responsables de myases',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1013 => 
                                 array (
@@ -8130,6 +9143,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le temps consacré à la surveillance des blessures et des myases est-il suffisant ? ',
                                     'reponse' => 'Temps consacré à la surveillance des blessures insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1014 => 
                                 array (
@@ -8138,6 +9152,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les arrières trains sont-ils propres ? ',
                                     'reponse' => 'Arrière-trains sales',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1015 => 
                                 array (
@@ -8146,6 +9161,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les traitements se font-ils au coup par coup sans stratégie à l\'échelle du troupeau ? ',
                                     'reponse' => 'Traitements aux coup par coup sans stratégie à l’échelle du troupeau',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1016 => 
                                 array (
@@ -8154,6 +9170,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les introductions d\'animaux sont-elles gérées avec mise en quarantaine et surveillance sanitaire ? ',
                                     'reponse' => 'Pas quarantaine avant introduction et de surveillance des animaux introduits',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1017 => 
                                 array (
@@ -8162,6 +9179,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le parage est-il régulier ? ',
                                     'reponse' => 'Parage irrégulier',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1018 => 
                                 array (
@@ -8170,6 +9188,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le parage est-il pratiqué sans saignements et en respectant les bonnes longueurs d\'onglons ? ',
                                     'reponse' => 'Parage avec saignements, onglons coupés trop courts',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1019 => 
                                 array (
@@ -8178,6 +9197,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agnelles sont-elles orientées vers des parcelles non infectées ? ',
                                     'reponse' => 'Pâturage des agnelles sur des parcelles infectées',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1020 => 
                                 array (
@@ -8186,6 +9206,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'alimentation est-elle suffisamment pourvue en minéraux et oligo-éléments ? ',
                                     'reponse' => 'Carences en minéraux et oligo-éléments',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1021 => 
                                 array (
@@ -8194,6 +9215,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'alimentation est-elle suffisamment pourvue de fibres de structure ? ',
                                     'reponse' => 'Alimentation trop pauvre en fibres de structure',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1022 => 
                                 array (
@@ -8202,6 +9224,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La gestion note d\'état/stade physiologique est-elle existante? ',
                                     'reponse' => 'Pas de suivi de l’état corporel',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1023 => 
                                 array (
@@ -8210,6 +9233,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les chemins d\'accès aux pâtures sont-ils caillouteux ? ',
                                     'reponse' => 'Chemins d’accès au pâturage caillouteux',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1024 => 
                                 array (
@@ -8218,6 +9242,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le milieu de vie des brebis est-il suffisant sec et sain ? ',
                                     'reponse' => 'Le milieu de vie des brebis est trop humide',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1025 => 
                                 array (
@@ -8226,6 +9251,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les litières des bergeries sont-elles régulièrement curées ? ',
                                     'reponse' => 'La litière n’est pas curée assez souvent',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1026 => 
                                 array (
@@ -8234,6 +9260,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La race choisie est-elle particulièrement sensible des pieds ? ',
                                     'reponse' => 'Race particulièrement sensible des pieds',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1027 => 
                                 array (
@@ -8242,6 +9269,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous une politique de réforme concernant les brebis récidivistes ? ',
                                     'reponse' => 'Par de politique de réforme des brebis récidivistes',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1028 => 
                                 array (
@@ -8250,6 +9278,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les traitements se font-ils au coup par coup sans stratégie à l\'échelle du troupeau ? ',
                                     'reponse' => 'Traitements aux coup par coup sans stratégie à l’échelle du troupeau',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1029 => 
                                 array (
@@ -8258,6 +9287,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les introductions d\'animaux sont-elles gérées avec mise en quarantaine et surveillance sanitaire ? ',
                                     'reponse' => 'Pas quarantaine avant introduction et de surveillance des animaux introduits',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1030 => 
                                 array (
@@ -8266,6 +9296,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le parage est-il régulier ? ',
                                     'reponse' => 'Parage irrégulier',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1031 => 
                                 array (
@@ -8274,6 +9305,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le parage est-il pratiqué sans saignements et en respectant les bonnes longueurs d\'onglons ? ',
                                     'reponse' => 'Parage avec saignements, onglons coupés trop courts',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1032 => 
                                 array (
@@ -8282,6 +9314,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'alimentation est-elle suffisamment pourvue en minéraux et oligo-éléments ? ',
                                     'reponse' => 'Carences en minéraux et oligo-éléments',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1033 => 
                                 array (
@@ -8290,6 +9323,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'alimentation est-elle suffisamment pourvue de fibres de structure ? ',
                                     'reponse' => 'Alimentation trop pauvre en fibres de structure',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1034 => 
                                 array (
@@ -8298,6 +9332,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La gestion note d\'état/stade physiologique est-elle existante? ',
                                     'reponse' => 'Pas de suivi de l’état corporel',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1035 => 
                                 array (
@@ -8306,6 +9341,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les chemins d\'accès aux pâtures sont-ils caillouteux ? ',
                                     'reponse' => 'Chemins d’accès au pâturage caillouteux',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1036 => 
                                 array (
@@ -8314,6 +9350,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le milieu de vie des brebis est-il suffisant sec et sain ? ',
                                     'reponse' => 'Le milieu de vie des brebis est trop humide',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1037 => 
                                 array (
@@ -8322,6 +9359,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La surveillance permet-elle d\'intervenir dans des délais courts après apparition des premiers signes de boiteries ? ',
                                     'reponse' => 'Interventions trop tardives sur les brebis boiteuses',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1038 => 
                                 array (
@@ -8330,6 +9368,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La fréquence des pédiluves est-elle suffisante ? ',
                                     'reponse' => 'Pédiluves trop peu fréquents',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1039 => 
                                 array (
@@ -8338,6 +9377,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les doses des produits sont-elles respectées ? ',
                                     'reponse' => 'Mauvais respect des doses de produits',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1040 => 
                                 array (
@@ -8346,6 +9386,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La durée du bain est-elle suffisante ?',
                                     'reponse' => 'Durée du bain trop courte',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1041 => 
                                 array (
@@ -8354,6 +9395,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils suffisamment alimentés sur toutes les périodes de l\'année ?',
                                     'reponse' => 'Sous-alimentation à certaines périodes',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1042 => 
                                 array (
@@ -8362,6 +9404,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations sont-elles équilibrées en fonction de leur besoin ? ',
                                     'reponse' => 'Rations pas toujours équilibrées en fonction des besoins',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1043 => 
                                 array (
@@ -8370,6 +9413,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les aliments distribués sont-ils sains et bien conservés ? ',
                                     'reponse' => 'Problème de qualité et de conservation des aliments ',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1044 => 
                                 array (
@@ -8378,6 +9422,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les accès à l\'aliment sont-ils suffisants pour tous les animaux en même temps ? ',
                                     'reponse' => 'Compétition entre les animaux pour l’accès aux aliments',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1045 => 
                                 array (
@@ -8386,6 +9431,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis sont-elles parasitées ?',
                                     'reponse' => 'Parasitisme impactant les animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1046 => 
                                 array (
@@ -8394,6 +9440,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les conditions de logements sont-elles satisfaisantes ? Densité ?',
                                     'reponse' => 'Problème de logement des animaux, trop forte densité',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1047 => 
                                 array (
@@ -8402,6 +9449,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les quantités de paille litière sont-elles suffisantes ? ',
                                     'reponse' => 'Paillage de la litière insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1048 => 
                                 array (
@@ -8410,6 +9458,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les surfaces de vie sont-elles suffisantes ? ',
                                     'reponse' => 'Surfaces de vie insuffisantes',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1049 => 
                                 array (
@@ -8418,6 +9467,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle équilibrée ? ',
                                     'reponse' => 'Ration déséquilibrée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1050 => 
                                 array (
@@ -8426,6 +9476,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle suffisamment fibreuse',
                                     'reponse' => 'Manque de fibres dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1051 => 
                                 array (
@@ -8434,6 +9485,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les animaux sont-ils parasités ? (cf parasitisme)',
                                     'reponse' => 'Parasitisme impactant les animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1052 => 
                                 array (
@@ -8442,6 +9494,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les réformes sont-elles subies (sanitaire) ou choisies (sélection) ? ',
                                     'reponse' => 'Trop de réformes pour causes sanitaires, pas assez de choix',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1053 => 
                                 array (
@@ -8450,6 +9503,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Quel est l\'âge moyen des réformes ? ',
                                     'reponse' => 'Age moyen des réformes trop élevé',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1054 => 
                                 array (
@@ -8458,6 +9512,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le troupeau a-t-il des soucis de fertilité ? ',
                                     'reponse' => 'Problèmes de fertilité sur le troupeau',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1055 => 
                                 array (
@@ -8466,6 +9521,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le troupeau est-il suffisamment renouvelé ? ',
                                     'reponse' => 'Manque de renouvellement du troupeau',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1056 => 
                                 array (
@@ -8474,6 +9530,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les brebis présentent-elles des pathologies infectieuses chroniques ? (respiratoire, mamelle, etc)',
                                 'reponse' => 'Présence de maladies infectieuses chroniques (mammites, pneumonies, …)',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1057 => 
                                 array (
@@ -8482,6 +9539,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les brebis présentent-elles des pathologies métaboliques ? (toxémie de gestation, hypomagnésémie, hypocalcémie, cétose, acidose, …)',
                                 'reponse' => 'Pathologies métaboliques (toxémie, hypomagnésémie, hypocalcémie, acidose, …)',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1058 => 
                                 array (
@@ -8490,6 +9548,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'état corporel du troupeau est-il satisfaisant toute l\'année ? ',
                                     'reponse' => 'État corporel problématique à certaines périodes',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1059 => 
                                 array (
@@ -8498,6 +9557,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La fréquence de surveillance est-elle suffisante ? (Les brebis sur le dos au quotidien)',
                                     'reponse' => 'Surveillance pas assez fréquente',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1060 => 
                                 array (
@@ -8506,6 +9566,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les brebis sont-elles atteintes de maladies chroniques ? (respiratoires, infectieuses, …)',
                                 'reponse' => 'Présence de maladies infectieuses chroniques (mammites, pneumonies, …)',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1061 => 
                                 array (
@@ -8514,6 +9575,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu introduction d\'animaux avec achat dernièrement ? ',
                                     'reponse' => 'Achats d’animaux récents',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1062 => 
                                 array (
@@ -8522,6 +9584,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les conditions de logement (hygiène, ventilation, température) sont-elles satisfaisantes ? ',
                                 'reponse' => 'Conditions de logements insatisfaisantes (hygiène, ventilation, température, …)',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1063 => 
                                 array (
@@ -8530,6 +9593,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les écarts de températures sont-ils accentués dans la bergerie ? ',
                                     'reponse' => 'Ecarts de température trop importants en bergerie',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1064 => 
                                 array (
@@ -8538,6 +9602,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'état général du troupeau est-il évalué régulièrement ? Si oui, est-il satisfaisant ? ',
                                     'reponse' => 'Pas d’évaluation régulière de l’état corporel',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1065 => 
                                 array (
@@ -8546,6 +9611,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations sont-elles équilibrées ? ',
                                     'reponse' => 'Ration déséquilibrée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1066 => 
                                 array (
@@ -8554,6 +9620,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les durées de transitions alimentaires de 3 semaines sont-elles respectées ? ',
                                     'reponse' => 'Mauvaise transition alimentaire',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1067 => 
                                 array (
@@ -8562,6 +9629,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La rotation des pâtures est-elle respectée ? ',
                                     'reponse' => 'Pas de rotation des pâturages',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1068 => 
                                 array (
@@ -8570,6 +9638,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les pâtures présentent-elles des excès d\'azote ?',
                                     'reponse' => 'Excès d’azote dans les pâtures',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1069 => 
                                 array (
@@ -8578,6 +9647,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’infestation parasitaire du troupeau est-elle surveillée et fait elle l’objet d’une gestion raisonnée à l’échelle du troupeau ?',
                                     'reponse' => 'Pas de surveillance et de gestion raisonnée du parasitisme',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1070 => 
                                 array (
@@ -8586,6 +9656,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations des jeunes sont-elles suffisamment équilibrées ? ',
                                     'reponse' => 'Rations des jeunes déséquilibrées',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1071 => 
                                 array (
@@ -8594,6 +9665,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le sevrage des jeunes se passe-t-il sans difficulté ? ',
                                     'reponse' => 'Problèmes lors du sevrage des jeunes',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1072 => 
                                 array (
@@ -8602,6 +9674,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les jeunes sont-ils surveillés sur le plan du parasitisme ? (cf parasitisme)',
                                     'reponse' => 'Pas de surveillance du parasitisme des jeunes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1073 => 
                                 array (
@@ -8610,6 +9683,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les jeunes sont-ils atteints ou ont-ils été atteints de maladies ? (cf santé des jeunes)',
                                     'reponse' => 'Maladies chez les jeunes',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1074 => 
                                 array (
@@ -8618,6 +9692,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations sont-elles équilibrées et suffisantes ? ',
                                     'reponse' => 'Rations déséquilibrées et/ou insuffisantes',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1075 => 
                                 array (
@@ -8626,6 +9701,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les aliments du commerce ont-ils des formulations adaptées aux ovins ?',
                                     'reponse' => 'Aliments du commerce non adapté aux ovins',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1076 => 
                                 array (
@@ -8634,6 +9710,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Votre vétérinaire est-il informé de la présence de troubles nerveux sur votre cheptel ? (C’est obligatoire)',
                                     'reponse' => 'Pas de déclaration des troubles nerveux au vétérinaire',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1077 => 
                                 array (
@@ -8642,6 +9719,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les maladies de type Tremblante, Listériose, Tétanos, Botulisme, sont-elles surveillées ? ',
                                     'reponse' => 'Pas de surveillance des maladies type tremblante, listériose, tétanos, botulisme',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1078 => 
                                 array (
@@ -8650,6 +9728,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le troupeau est-il régulièrement déparasité contre les parasites internes et externes? (Oestrose avancée, Cénurose cérébro-spinale) ',
                                     'reponse' => 'Présence de cœnures ou d’œstres',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1079 => 
                                 array (
@@ -8658,6 +9737,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le troupeau est-il carencé en minéraux, oligo-éléments et vitamines ? ',
                                     'reponse' => 'Carences en oligo-éléments et vitamines',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1080 => 
                                 array (
@@ -8666,6 +9746,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le vétérinaire a-t-il diagnostiqué la nécrose du cortex ? ',
                                     'reponse' => 'Diagnostic de nécrose du cortex',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1081 => 
                                 array (
@@ -8674,6 +9755,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Existe-t-il des risques d\'intoxication par le sel, plomb, azote non protéique, intoxication végétales sur l\'exploitation ? ',
                                     'reponse' => 'Intoxications possibles : plomb, azote non protéique, plantes toxiques',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1082 => 
                                 array (
@@ -8682,6 +9764,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La reprise d\'état corporel des agnelles est-il suffisant à la mise en lutte ? ',
                                     'reponse' => 'Reprise d’état corporel des agnelle à la lutte insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1083 => 
                                 array (
@@ -8690,6 +9773,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La mise en lutte n\'est-elle pas trop précoce par rapport à l\'âge et au poids des agnelles ?',
                                     'reponse' => 'Mise en lutte trop précoce par rapport à l’âge ou au poids',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1084 => 
                                 array (
@@ -8698,6 +9782,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La saison de mise à la reproduction est-elle adaptée à la race ? À la conduite ? ',
                                     'reponse' => 'Saison de reproduction inadaptée à la race ou à la conduite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1085 => 
                                 array (
@@ -8706,6 +9791,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le taux de renouvellement du troupeau est-il suffisant ?',
                                     'reponse' => 'Taux de renouvellement du troupeau insuffisant',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1086 => 
                                 array (
@@ -8714,6 +9800,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le critère "fertilité des mères" est-il un axe de choix des agnelles de renouvellement ? ',
                                     'reponse' => 'Pas de choix des agnelles en fonction de la fertilité des mères',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1087 => 
                                 array (
@@ -8722,6 +9809,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’infestation parasitaire des agnelles est-elle surveillée pendant leur croissance?',
                                     'reponse' => 'Pas de surveillance de l’infestation parasitaire des agnelles',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1088 => 
                                 array (
@@ -8730,6 +9818,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les antenaises sont-elles atteintes de maladies abortives ? ',
                                     'reponse' => 'Maladies abortives chez les antenaises',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1089 => 
                                 array (
@@ -8738,6 +9827,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La fertilité du bélier a-t-elle été vérifiée? ',
                                     'reponse' => 'Pas de vérification de la fertilité du bélier',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1090 => 
                                 array (
@@ -8746,6 +9836,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le nombre de béliers est-il en adéquation avec le nombre de brebis ?  ',
                                     'reponse' => 'Béliers en nombre insuffisant',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1091 => 
                                 array (
@@ -8754,6 +9845,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les béliers sont-ils suffisamment en état à la mise en lutte ? ',
                                     'reponse' => 'État des béliers insuffisant à la mise à la lutte',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1092 => 
                                 array (
@@ -8762,6 +9854,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'alimentation des agnelles leur permet-elle de bonne croissance ?',
                                     'reponse' => 'Alimentation des agnelles ne permettant pas une croissance suffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1093 => 
                                 array (
@@ -8770,6 +9863,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle suffisamment pourvue en minéraux et vitamines ? ',
                                     'reponse' => 'Manque de vitamines et de minéraux dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1094 => 
                                 array (
@@ -8778,6 +9872,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'état corporel des brebis est-il suffisant à la mise en lutte ? ',
                                     'reponse' => 'État corporel des brebis insuffisant à la mise à la lutte',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1095 => 
                                 array (
@@ -8786,6 +9881,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle suffisamment riche pour permettre la reprise d\'état ? ',
                                     'reponse' => 'Ration trop pauvre pour permettre une reprise d’état',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1096 => 
                                 array (
@@ -8794,6 +9890,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle suffisamment pourvue en minéraux et vitamines ? ',
                                     'reponse' => 'Manque de vitamines et de minéraux dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1097 => 
                                 array (
@@ -8802,6 +9899,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis ne sont-elles pas trop âgées ?',
                                     'reponse' => 'Brebis trop âgées',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1098 => 
                                 array (
@@ -8810,6 +9908,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La saison de mise à la reproduction est-elle adaptée à la race ? À la conduite ? ',
                                     'reponse' => 'Saison de reproduction inadaptée à la race ou à la conduite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1099 => 
                                 array (
@@ -8818,6 +9917,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La fertilité du bélier a-t-elle été vérifiée? ',
                                     'reponse' => 'Pas de vérification de la fertilité du bélier',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1100 => 
                                 array (
@@ -8826,6 +9926,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les béliers sont-ils suffisamment en état à la mise en lutte ? ',
                                     'reponse' => 'État des béliers insuffisant à la mise à la lutte',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1101 => 
                                 array (
@@ -8834,6 +9935,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le nombre de béliers est-il en adéquation avec le nombre de brebis ? ',
                                     'reponse' => 'Béliers en nombre insuffisant',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1102 => 
                                 array (
@@ -8842,6 +9944,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’infestation parasitaire est-elle pénalisante pour les brebis ?',
                                     'reponse' => 'Parasitisme impactant les animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1103 => 
                                 array (
@@ -8850,6 +9953,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous vérifié avec votre vétérinaire que les brebis n’avaient pas de maladies abortives ?',
                                     'reponse' => 'Pas de vérification de la présence de maladies abortives',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1104 => 
                                 array (
@@ -8858,6 +9962,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous vérifié avec votre vétérinaire que les brebis n’avaient pas de maladies abortives ?',
                                     'reponse' => 'Pas de vérification de la présence de maladies abortives',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1105 => 
                                 array (
@@ -8866,6 +9971,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le troupeau a-t-il subit un stress important ? (accident, météo, intrus, )',
                                     'reponse' => 'Stress important sur le troupeau',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1106 => 
                                 array (
@@ -8874,6 +9980,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les femelles gestantes sont-elles suivies sur les aspects parasitismes ? ',
                                     'reponse' => 'Pas de suivi du parasitisme sur les gestantes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1107 => 
                                 array (
@@ -8882,6 +9989,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les fourrages distribués sont-ils en bon état sanitaire ? (présence de moisissures, champignons)',
                                     'reponse' => 'Fourrage parfois moisi',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1108 => 
                                 array (
@@ -8890,6 +9998,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu une transition alimentaire brutale ? ',
                                     'reponse' => 'Transition alimentaire brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1109 => 
                                 array (
@@ -8898,6 +10007,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu une surconsommation accidentelles d\'aliments concentrés ou potentiellement toxiques ? ',
                                     'reponse' => 'Surconsommation de concentrés ou d’aliments toxiques',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1110 => 
                                 array (
@@ -8906,6 +10016,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous vérifié avec votre vétérinaire que les brebis n’avaient pas de maladies abortives ?',
                                     'reponse' => 'Pas de vérification de la présence de maladies abortives',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1111 => 
                                 array (
@@ -8914,6 +10025,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le troupeau a-t-il subit un stress important ? (accident, météo, intrus, )',
                                     'reponse' => 'Stress important sur le troupeau',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1112 => 
                                 array (
@@ -8922,6 +10034,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les femelles gestantes sont-elles suivies sur les aspects parasitismes ? ',
                                     'reponse' => 'Pas de suivi du parasitisme sur les gestantes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1113 => 
                                 array (
@@ -8930,6 +10043,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les fourrages distribués sont-ils en bon état sanitaire ? (présence de moisissures, champignons)',
                                     'reponse' => 'Fourrage parfois moisi',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1114 => 
                                 array (
@@ -8938,6 +10052,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu une transition alimentaire brutale ? ',
                                     'reponse' => 'Transition alimentaire brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1115 => 
                                 array (
@@ -8946,6 +10061,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu une surconsommation accidentelles d\'aliments concentrés ou potentiellement toxiques ? ',
                                     'reponse' => 'Surconsommation de concentrés ou d’aliments toxiques',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1116 => 
                                 array (
@@ -8954,6 +10070,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis sont-elles trop maigres à l\'agnelage ? ',
                                     'reponse' => 'Brebis trop maigres à l’agnelage',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1117 => 
                                 array (
@@ -8962,6 +10079,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis sont-elles trop grasses à l\'agnelage ?',
                                     'reponse' => 'Brebis trop grasses à l’agnelage',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1118 => 
                                 array (
@@ -8970,6 +10088,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle équilibrée par rapport aux besoins ? ',
                                     'reponse' => 'La ration n’est pas adaptée aux besoins',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1119 => 
                                 array (
@@ -8978,6 +10097,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration distribuée correspond-elle à la ration calculée ? ',
                                     'reponse' => 'La ration distribuée diffère de la ration calculée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1120 => 
                                 array (
@@ -8986,6 +10106,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle équilibrée par rapport aux besoins ? ',
                                     'reponse' => 'La ration n’est pas adaptée aux besoins',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1121 => 
                                 array (
@@ -8994,6 +10115,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle adaptée à la prolificité du troupeau ? ',
                                     'reponse' => 'la ration n’est pas adaptée à la prolificité du troupeau',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1122 => 
                                 array (
@@ -9002,6 +10124,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les femelles gestantes sont-elles suivies sur les aspects parasitismes ? ',
                                     'reponse' => 'Pas de suivi du parasitisme sur les gestantes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1123 => 
                                 array (
@@ -9010,6 +10133,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis peu productives, fatiguées sur le cycle précédent ont-elles été réformées ?',
                                     'reponse' => 'Pas de réforme des brebis peu productives ou fatiguées',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1124 => 
                                 array (
@@ -9018,6 +10142,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le troupeau a-t-il subit un stress intense ? (accident, météo, intrus, )',
                                     'reponse' => 'Stress important sur le troupeau',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1125 => 
                                 array (
@@ -9026,6 +10151,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle trop encombrante ? ',
                                     'reponse' => 'Ration trop encombrante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1126 => 
                                 array (
@@ -9034,6 +10160,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration offre-t-elle un bon équilibre minéral (Mg/Zn/P) en fin de gestation ? ',
                                     'reponse' => 'Déséquilibre minéral de la ration en fin de gestation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1127 => 
                                 array (
@@ -9042,6 +10169,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les râteliers sont-ils trop haut pour les gestantes ? ',
                                     'reponse' => 'Râteliers trop hauts pour les gestantes',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1128 => 
                                 array (
@@ -9050,6 +10178,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La marche d\'accès à l\'auge est-elle trop haute ? ',
                                     'reponse' => 'Marche d’accès à l’auge trop haute',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1129 => 
                                 array (
@@ -9058,6 +10187,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis récidivantes de la campagne passée ont-elles été réformées ?',
                                     'reponse' => 'Les brebis récidivantes de la campagne passée n’ont pas été réformées',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1130 => 
                                 array (
@@ -9066,6 +10196,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le taux de prolificité est-il trop élevé ? ',
                                     'reponse' => 'Taux de prolificité trop élevé',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1131 => 
                                 array (
@@ -9074,6 +10205,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Est-ce que la facilité de naissance fait partie des critères de choix des béliers ? ',
                                     'reponse' => 'Béliers non choisis en fonction du critère « facilité à la naissance »',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1132 => 
                                 array (
@@ -9082,6 +10214,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le choix des réformes est-il basé sur la difficulté de mise-bas ? ',
                                     'reponse' => 'Pas de choix des réformes en fonction des difficultés de mise-bas',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1133 => 
                                 array (
@@ -9090,6 +10223,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration de fin de gestation est-elle adaptée au stade ? ',
                                     'reponse' => 'La ration de fin de gestation n’est pas adaptée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1134 => 
                                 array (
@@ -9098,6 +10232,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration offre-t-elle un bon équilibre minéral (Mg/Zn/P) en fin de gestation ? ',
                                     'reponse' => 'Déséquilibre minéral de la ration en fin de gestation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1135 => 
                                 array (
@@ -9106,6 +10241,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis sont-elles suffisamment en état ? Trop en état ?',
                                     'reponse' => 'Brebis trop maigres ou trop grasses à l’agnelage',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1136 => 
                                 array (
@@ -9114,6 +10250,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le troupeau présente-t-il un défaut d\'état général ? et reprise d’état à la lutte ?',
                                     'reponse' => 'Manque d’état du troupeau, par de reprise avant la lutte',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1137 => 
                                 array (
@@ -9122,6 +10259,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le troupeau présente-t-il des carences en minéraux ou vitamines ? ',
                                     'reponse' => 'Carences en oligo-éléments et vitamines',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1138 => 
                                 array (
@@ -9130,6 +10268,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les femelles sont-elles suivies sur les aspects parasitismes ? ',
                                     'reponse' => 'Pas de suivi du parasitisme sur les animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1139 => 
                                 array (
@@ -9138,6 +10277,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La politique de réforme/renouvellement est-elle adaptée aux objectifs de prolificité ? ',
                                     'reponse' => 'Politique de réforme non adaptée aux objectifs de prolificité',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1140 => 
                                 array (
@@ -9146,6 +10286,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le troupeau a-t-il des antécédents sanitaires importants ? ',
                                     'reponse' => 'Antécédents sanitaires importants',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1141 => 
                                 array (
@@ -9154,6 +10295,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La saison de mise à la reproduction est-elle adaptée à la race ? À la conduite ? ',
                                     'reponse' => 'Saison de reproduction inadaptée à la race ou à la conduite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1142 => 
                                 array (
@@ -9162,6 +10304,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le nombre de béliers est-il en adéquation avec le nombre de brebis ? ',
                                     'reponse' => 'Béliers en nombre insuffisant',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1143 => 
                                 array (
@@ -9170,6 +10313,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La non stérilité du bélier a-t-elle été vérifiée? ',
                                     'reponse' => 'Pas de vérification de la fertilité du bélier',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1144 => 
                                 array (
@@ -9178,6 +10322,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les béliers sont-ils suffisamment en état à la mise en lutte ? ',
                                     'reponse' => 'État des béliers insuffisant à la mise à la lutte',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1145 => 
                                 array (
@@ -9186,6 +10331,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La machine à traire est-elle contrôlée et réglée une fois par an ?',
                                     'reponse' => 'La machine à traire n’a pas été contrôlée ni réglée depuis plus d’1 an',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1146 => 
                                 array (
@@ -9194,6 +10340,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Faites-vous vérifier le décrochage de votre machine à traire ?',
                                     'reponse' => 'Décrochage non vérifié',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1147 => 
                                 array (
@@ -9202,6 +10349,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La machine à traire est-elle nettoyée quotidiennement avec des produits appropriés ?',
                                     'reponse' => 'machine à traire non lavée quotidiennement avec des produits appropriés',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1148 => 
                                 array (
@@ -9210,6 +10358,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La concentration des produits actifs de nettoyage est-elle suffisante ?',
                                     'reponse' => 'Concentration insuffisante des produits de nettoyage',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1149 => 
                                 array (
@@ -9218,6 +10367,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le temps de lavage (contact des agents actifs) est-il respecté ?',
                                     'reponse' => 'Temps de lavage trop court',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1150 => 
                                 array (
@@ -9226,6 +10376,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La température de lavage est-elle vérifiée et suffisante ?',
                                     'reponse' => 'Température de lavage non vérifiée ou insuffisante',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1151 => 
                                 array (
@@ -9234,6 +10385,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Tous les postes de traite sont-ils lavés équitablement ?',
                                     'reponse' => 'Certes postes de traite sont moins bien lavés',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1152 => 
                                 array (
@@ -9242,6 +10394,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les entrées d\'air durant la traite sont-elles limitées ?',
                                     'reponse' => 'Entrées d’air fréquentes',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1153 => 
                                 array (
@@ -9250,6 +10403,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Êtes-vous vigilant sur la sous-traite et la sur-traite ?',
                                     'reponse' => 'Tendance à la sous-traite ou à la sur-traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1154 => 
                                 array (
@@ -9258,6 +10412,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Observez-vous des chutes de faisceaux durant la traite ?',
                                     'reponse' => 'Chutes de faisceaux pendant la traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1155 => 
                                 array (
@@ -9266,6 +10421,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Observez-vous de l\'humidité sur les trayons en fin de traite ?',
                                     'reponse' => 'Trayons humides en fin de traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1156 => 
                                 array (
@@ -9274,6 +10430,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous un tri des brebis pour la traite ?',
                                     'reponse' => 'Pas de tri des brebis pour l’ordre de traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1157 => 
                                 array (
@@ -9282,6 +10439,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous de la pulvérisation post-traite ? (produit, dose, qualité de la pulvérisation…)',
                                     'reponse' => 'Pas de pulvérisation en post-traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1158 => 
                                 array (
@@ -9290,6 +10448,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous le premier jet pour la détection des mammites ? La palpation ?',
                                     'reponse' => 'Pas d’observation des premiers jets',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1159 => 
                                 array (
@@ -9298,6 +10457,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Êtes-vous équipés du test CMT ?',
                                     'reponse' => 'Pas de matériel pour les CMT',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1160 => 
                                 array (
@@ -9306,6 +10466,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Faites-vous faire des analyses pour CCI ?',
                                     'reponse' => 'Pas de comptages cellulaires individuels',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1161 => 
                                 array (
@@ -9314,6 +10475,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il présence d’abcès, de boutons, d’ecthyma',
                                     'reponse' => 'Présence de boutons, abcès, ecthyma sur les mamelles',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1162 => 
                                 array (
@@ -9322,6 +10484,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis sont-elles contrôlées sur la présence d\'abcès, de boutons, d\'ecthyma ?',
                                     'reponse' => 'Pas de contrôle des mamelles sur les abcès, boutons, ecthyma',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1163 => 
                                 array (
@@ -9330,6 +10493,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les trayons sont-ils surveillés et entretenus ?',
                                     'reponse' => 'Trayons ni surveillés ni entretenus ',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1164 => 
                                 array (
@@ -9338,6 +10502,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis à mammites sont-elles réformées ?',
                                     'reponse' => 'Les brebis à mammite ne sont pas réformées',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1165 => 
                                 array (
@@ -9346,6 +10511,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle équilibrée en azote et en énergie ?',
                                     'reponse' => 'Ration déséquilibrée en azote et/ou en énergie',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1166 => 
                                 array (
@@ -9354,6 +10520,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'augmentation de la ration est-elle progressive en début de lactation?',
                                     'reponse' => 'Augmentation trop brutale de la ration en début de lactation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1167 => 
                                 array (
@@ -9362,6 +10529,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle suffisamment fibreuse et non acidogène ?',
                                     'reponse' => 'Ration acidogène',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1168 => 
                                 array (
@@ -9370,6 +10538,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle équilibrée en minéraux, oligo-éléments et vitamines ?',
                                     'reponse' => 'Ration carencée en minéraux, oligo-éléments et vitamines',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1169 => 
                                 array (
@@ -9378,6 +10547,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les fourrages sont-ils de qualité et sains ?',
                                     'reponse' => 'Fourrages de mauvaise qualité',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1170 => 
                                 array (
@@ -9386,6 +10556,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ventilation du bâtiment est-elle suffisante ?',
                                     'reponse' => 'Mauvaise ventilation du bâtiment',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1171 => 
                                 array (
@@ -9394,6 +10565,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La densité animale respecte-t-elle les volumes d\'air disponible ?',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1172 => 
                                 array (
@@ -9402,6 +10574,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le renouvellement de l\'air est-il suffisant lors des périodes à risques ?',
                                     'reponse' => 'Renouvellement d’air insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1173 => 
                                 array (
@@ -9410,6 +10583,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière est-elle saine ?',
                                     'reponse' => 'Litière sale',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1174 => 
                                 array (
@@ -9418,6 +10592,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le paillage est-il suffisant ?',
                                     'reponse' => 'Paillage de la litière insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1175 => 
                                 array (
@@ -9426,6 +10601,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La machine à traire est-elle contrôlée et réglée une fois par an ?',
                                     'reponse' => 'La machine à traire n’a pas été contrôlée ni réglée depuis plus d’1 an',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1176 => 
                                 array (
@@ -9434,6 +10610,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Faites-vous vérifier le décrochage de votre MAT ?',
                                     'reponse' => 'Décrochage non vérifié',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1177 => 
                                 array (
@@ -9442,6 +10619,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La MAT est-elle nettoyée quotidiennement avec des produits appropriés ?',
                                     'reponse' => 'MAT non lavée quotidiennement avec des produits appropriés',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1178 => 
                                 array (
@@ -9450,6 +10628,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La concentration des produits actifs de nettoyage est-elle suffisante ?',
                                     'reponse' => 'Concentration insuffisante des produits de nettoyage',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1179 => 
                                 array (
@@ -9458,6 +10637,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le temps de lavage (contact des agents actifs) est-il respecté ?',
                                     'reponse' => 'Temps de lavage trop court',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1180 => 
                                 array (
@@ -9466,6 +10646,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La température de lavage est-elle vérifiée et suffisante ?',
                                     'reponse' => 'Température de lavage non vérifiée ou insuffisante',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1181 => 
                                 array (
@@ -9474,6 +10655,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Tous les postes de traite sont-ils lavés équitablement ?',
                                     'reponse' => 'Certes postes de traite sont moins bien lavés',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1182 => 
                                 array (
@@ -9482,6 +10664,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les entrées d\'air durant la traite sont-elles limitées ?',
                                     'reponse' => 'Entrées d’air fréquentes',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1183 => 
                                 array (
@@ -9490,6 +10673,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Êtes-vous vigilant sur la sous-traite et la sur-traite ?',
                                     'reponse' => 'Tendance à la sous-traite ou à la sur-traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1184 => 
                                 array (
@@ -9498,6 +10682,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Observez-vous des chutes de faisceaux durant la traite ?',
                                     'reponse' => 'Chutes de faisceaux pendant la traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1185 => 
                                 array (
@@ -9506,6 +10691,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Observez-vous de l\'humidité sur les trayons en fin de traite ?',
                                     'reponse' => 'Trayons humides en fin de traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1186 => 
                                 array (
@@ -9514,6 +10700,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous un tri des brebis pour la traite ?',
                                     'reponse' => 'Pas de tri des brebis pour l’ordre de traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1187 => 
                                 array (
@@ -9522,6 +10709,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous de la pulvérisation post-traite ? (produit, dose, qualité de la pulvérisation…)',
                                     'reponse' => 'Pas de pulvérisation en post-traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1188 => 
                                 array (
@@ -9530,6 +10718,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous le premier jet pour la détection des mammites ? La palpation ?',
                                     'reponse' => 'Pas d’observation des premiers jets',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1189 => 
                                 array (
@@ -9538,6 +10727,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Êtes-vous équipés du test CMT ?',
                                     'reponse' => 'Pas de matériel pour les CMT',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1190 => 
                                 array (
@@ -9546,6 +10736,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Faites-vous faire des analyses pour CCI ?',
                                     'reponse' => 'Pas de comptages cellulaires individuels',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1191 => 
                                 array (
@@ -9554,6 +10745,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il présence d’abcès, de boutons, d’ecthyma',
                                     'reponse' => 'Présence de boutons, abcès, ecthyma sur les mamelles',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1192 => 
                                 array (
@@ -9562,6 +10754,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis sont-elles contrôlées sur la présence d\'abcès, de boutons, d\'ecthyma ?',
                                     'reponse' => 'Pas de contrôle des mamelles sur les abcès, boutons, ecthyma',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1193 => 
                                 array (
@@ -9570,6 +10763,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les trayons sont-ils surveillés et entretenus ?',
                                     'reponse' => 'Trayons ni surveillés ni entretenus ',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1194 => 
                                 array (
@@ -9578,6 +10772,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis à mammites sont-elles réformées ?',
                                     'reponse' => 'Les brebis à mammite ne sont pas réformées',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1195 => 
                                 array (
@@ -9586,6 +10781,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle équilibrée en azote et en énergie ?',
                                     'reponse' => 'Ration déséquilibrée en azote et/ou en énergie',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1196 => 
                                 array (
@@ -9594,6 +10790,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'augmentation de la ration est-elle progressive en début de lactation?',
                                     'reponse' => 'Augmentation trop brutale de la ration en début de lactation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1197 => 
                                 array (
@@ -9602,6 +10799,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle suffisamment fibreuse et non acidogène ?',
                                     'reponse' => 'Ration acidogène',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1198 => 
                                 array (
@@ -9610,6 +10808,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle équilibrée en minéraux, oligo-éléments et vitamines ?',
                                     'reponse' => 'Ration carencée en minéraux, oligo-éléments et vitamines',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1199 => 
                                 array (
@@ -9618,6 +10817,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les fourrages sont-ils de qualité et sains ?',
                                     'reponse' => 'Fourrages de mauvaise qualité',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1200 => 
                                 array (
@@ -9626,6 +10826,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ventilation du bâtiment est-elle suffisante ?',
                                     'reponse' => 'Mauvaise ventilation du bâtiment',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1201 => 
                                 array (
@@ -9634,6 +10835,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La densité animale respecte-t-elle les volumes d\'air disponible ?',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1202 => 
                                 array (
@@ -9642,6 +10844,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le renouvellement de l\'air est-il suffisant lors des périodes à risques ?',
                                     'reponse' => 'Renouvellement d’air insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1203 => 
                                 array (
@@ -9650,6 +10853,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière est-elle saine ?',
                                     'reponse' => 'Litière sale',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1204 => 
                                 array (
@@ -9658,6 +10862,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le paillage est-il suffisant ?',
                                     'reponse' => 'Paillage de la litière insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1205 => 
                                 array (
@@ -9666,6 +10871,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous l\'autocontrôle ou résultats laiterie ? ',
                                     'reponse' => 'Pas d’autocontrôle ni d’analyse de laiterie',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1206 => 
                                 array (
@@ -9674,6 +10880,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ventilation du bâtiment est-elle suffisante ?',
                                     'reponse' => 'Mauvaise ventilation du bâtiment',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1207 => 
                                 array (
@@ -9682,6 +10889,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La densité animale respecte-t-elle les volumes d\'air disponible ?',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1208 => 
                                 array (
@@ -9690,6 +10898,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le renouvellement de l\'air est-il suffisant lors des périodes à risques ?',
                                     'reponse' => 'Renouvellement d’air insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1209 => 
                                 array (
@@ -9698,6 +10907,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière est-elle saine ?',
                                     'reponse' => 'Litière sale',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1210 => 
                                 array (
@@ -9706,6 +10916,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le paillage est-il suffisant ?',
                                     'reponse' => 'Paillage de la litière insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1211 => 
                                 array (
@@ -9714,6 +10925,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous mis en place une stratégie de décontamination ?',
                                     'reponse' => 'Pas de stratégie de décontamination',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1212 => 
                                 array (
@@ -9722,6 +10934,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'eau de lavage est-elle potable ?',
                                     'reponse' => 'L’eau de lavage n’est pas potable',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1213 => 
                                 array (
@@ -9730,6 +10943,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Identifiez-vous une ou plusieurs brebis porteuses ? Vous les triez ?',
                                     'reponse' => 'Pas d’identification ni de tri des brebis porteuses',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1214 => 
                                 array (
@@ -9738,6 +10952,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Constituez-vous des lots de traite ?',
                                     'reponse' => 'Pas de lots de traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1215 => 
                                 array (
@@ -9746,6 +10961,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Jetez-vous les refus d\'auge dans les litières ?',
                                     'reponse' => 'Refus d’auge jetés dans la litière',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1216 => 
                                 array (
@@ -9754,6 +10970,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les aliments sont-ils sains et bien stockés/conservés ?',
                                     'reponse' => 'Présence d’aliments moisis',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1217 => 
                                 array (
@@ -9762,6 +10979,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous un plan de lutte contre les rats ? Arrière-voussure la présence d’oiseaux dans les bâtiments ?',
                                     'reponse' => 'Présence de rats et d’oiseaux dans les bâtiments',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1218 => 
                                 array (
@@ -9770,6 +10988,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Etes-vous attentif à la propreté des brebis ? (grille de propreté)',
                                     'reponse' => 'Brebis sales',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1219 => 
                                 array (
@@ -9778,6 +10997,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Etes-vous attentif à la présence de terre dans les fourrages ?',
                                     'reponse' => 'Présence de terre dans les fourrages',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1220 => 
                                 array (
@@ -9786,6 +11006,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les aliments sont-ils sains et bien stockés/conservés ?',
                                     'reponse' => 'Présence d’aliments moisis',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1221 => 
                                 array (
@@ -9794,6 +11015,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Jetez-vous les refus d\'auge dans les litières ?',
                                     'reponse' => 'Refus d’auge jetés dans la litière',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1222 => 
                                 array (
@@ -9802,6 +11024,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Respectez-vous les hauteurs de fauche minimum de 7 cm ?',
                                 'reponse' => 'Fauche trop basse (< 7cm)',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1223 => 
                                 array (
@@ -9810,6 +11033,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Etes-vous attentif à la remontée de terre à la récolte (hauteur de coupe, taupinière, résidus de fumier si épandage) ?',
                                     'reponse' => 'Pas de surveillance de la remontée de terre à la récolte',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1224 => 
                                 array (
@@ -9818,6 +11042,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'eau de lavage est-elle potable ?',
                                     'reponse' => 'L’eau de lavage n’est pas potable',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1225 => 
                                 array (
@@ -9826,6 +11051,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il de l\'eau résiduelle dans la MAT ?',
                                     'reponse' => 'Présence d’eau résiduelle dans la machine à traire',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1226 => 
                                 array (
@@ -9834,6 +11060,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Etes-vous attentif à la propreté des brebis ? (grille de propreté)',
                                     'reponse' => 'Brebis sales',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1227 => 
                                 array (
@@ -9842,6 +11069,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ventilation du bâtiment est-elle suffisante ?',
                                     'reponse' => 'Mauvaise ventilation du bâtiment',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1228 => 
                                 array (
@@ -9850,6 +11078,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La densité animale respecte-t-elle les volumes d\'air disponible ?',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1229 => 
                                 array (
@@ -9858,6 +11087,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le renouvellement de l\'air est-il suffisant lors des périodes à risques ?',
                                     'reponse' => 'Renouvellement d’air insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1230 => 
                                 array (
@@ -9866,6 +11096,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière est-elle saine ?',
                                     'reponse' => 'Litière sale',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1231 => 
                                 array (
@@ -9874,6 +11105,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le paillage est-il suffisant ?',
                                     'reponse' => 'Paillage de la litière insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1232 => 
                                 array (
@@ -9882,6 +11114,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Ensemencez-vous la litière avec des ferments non pathogènes et porteurs de vie?',
                                     'reponse' => 'Pas d’ensemencement des litières avec des bactéries lactiques',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1233 => 
                                 array (
@@ -9890,6 +11123,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration des brebis en fin de gestation est-elle équilibrée et suffisante par rapport aux besoins ? ',
                                     'reponse' => 'Ration de fin de gestation déséquilibrée ou insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1234 => 
                                 array (
@@ -9898,6 +11132,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle suffisamment pourvue en minéraux et vitamines ? ',
                                     'reponse' => 'Carences en minéraux, oligo-éléments et vitamines',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1235 => 
                                 array (
@@ -9906,6 +11141,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis ont-elles suffisamment d\'état à la mise-bas ? ',
                                     'reponse' => 'Brebis trop maigres à l’agnelage',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1236 => 
                                 array (
@@ -9914,6 +11150,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'état corporel des brebis à la mise-bas est-il suffisant ? ',
                                     'reponse' => 'Brebis trop maigres à l’agnelage',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1237 => 
                                 array (
@@ -9922,6 +11159,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration des brebis en fin de gestation est-elle adaptée ? ',
                                     'reponse' => 'Ration de fin de gestation déséquilibrée ou insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1238 => 
                                 array (
@@ -9930,6 +11168,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mes agneaux boivent-ils bien un bon colostrum, et en quantité suffisante (attention à chacun dans une portée multiple !) ?',
                                     'reponse' => 'Colostrums de qualité insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1239 => 
                                 array (
@@ -9938,6 +11177,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mes brebis adoptent-elles bien leur(s) agneau(x) ?',
                                     'reponse' => 'Adoption difficile des brebis par les agneaux',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1240 => 
                                 array (
@@ -9946,6 +11186,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le temps consacré aux soins et à la surveillance des nouveaux nés est-il suffisant ? ',
                                     'reponse' => 'Surveillance des nouveaux-nés insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1241 => 
                                 array (
@@ -9954,6 +11195,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les cases d\'agnelage sont-elles dans un bon état de propreté et d\'hygiène ? avancement des cases dans la bergerie ?',
                                     'reponse' => 'Manque de propreté des cases d’agnelage',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1242 => 
                                 array (
@@ -9962,6 +11204,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les nombrils sont-ils désinfectés ? ',
                                     'reponse' => 'Pas de désinfection des nombrils',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1243 => 
                                 array (
@@ -9970,6 +11213,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’ambiance du bâtiment (température, humidité, condensation, murs froids) est-elle confortable pour des agneaux ?',
                                     'reponse' => 'Ambiance du bâtiment inconfortable pour les agneaux',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1244 => 
                                 array (
@@ -9978,6 +11222,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le choix des reproducteurs est-il adapté ? ',
                                     'reponse' => 'Choix des reproducteurs inadapté',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1245 => 
                                 array (
@@ -9986,6 +11231,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'âge moyen des brebis n\'est-il pas trop élevé ? ',
                                     'reponse' => 'Age moyen des brebis trop élevé',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1246 => 
                                 array (
@@ -9994,6 +11240,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'état corporel des brebis à la mise-bas est-il suffisant ? ',
                                     'reponse' => 'État corporel des brebis insuffisante à la mise-bas',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1247 => 
                                 array (
@@ -10002,6 +11249,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration des brebis en fin de gestation est-elle adaptée ? ',
                                     'reponse' => 'Ration non adaptée à la fin de gestation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1248 => 
                                 array (
@@ -10010,6 +11258,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mes agneaux boivent-ils bien un bon colostrum, et en quantité suffisante (attention à chacun dans une portée multiple !) ?',
                                     'reponse' => 'Buvée de colostrum insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1249 => 
                                 array (
@@ -10018,6 +11267,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mes brebis adoptent-elles bien leur(s) agneau(x) ?',
                                     'reponse' => 'Adoption difficile des brebis par les agneaux',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1250 => 
                                 array (
@@ -10026,6 +11276,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le temps consacré aux soins et à la surveillance des nouveaux nés est-il suffisant ? ',
                                     'reponse' => 'Surveillance des nouveaux-nés insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1251 => 
                                 array (
@@ -10034,6 +11285,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les cases d\'agnelage sont-elles dans un bon état de propreté et d\'hygiène ? avancement des cases dans la bergerie ?',
                                     'reponse' => 'Manque de propreté des cases d’agnelage',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1252 => 
                                 array (
@@ -10042,6 +11294,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les nombrils sont-ils désinfectés ? ',
                                     'reponse' => 'Pas de désinfection des nombrils',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1253 => 
                                 array (
@@ -10050,6 +11303,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’ambiance du bâtiment (température, humidité, condensation, murs froids) est-elle confortable pour des agneaux ?',
                                     'reponse' => 'Ambiance du bâtiment inconfortable pour les agneaux',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1254 => 
                                 array (
@@ -10058,6 +11312,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le choix des reproducteurs est-il adapté ? ',
                                     'reponse' => 'Choix des reproducteurs inadapté',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1255 => 
                                 array (
@@ -10066,6 +11321,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'âge moyen des brebis n\'est-il pas trop élevé ? ',
                                     'reponse' => 'Age moyen des brebis trop élevé',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1256 => 
                                 array (
@@ -10074,6 +11330,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'hygiène et la désinfection est-elle respectée lors des différentes interventions : bouclage, équeutage ? ',
                                     'reponse' => 'Manque d’hygiène dans la pose des boucle, l’équeutage, …',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1257 => 
                                 array (
@@ -10082,6 +11339,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration des brebis est-elle bien équilibrée pour produire un lait équilibré et digeste ?',
                                     'reponse' => 'Ration non adaptée à la production d’un lait équilibré et digeste',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1258 => 
                                 array (
@@ -10090,6 +11348,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Ces mortalités semblent-elles être plutôt d’origine digestive, respiratoire ou autre ?',
                                     'reponse' => 'Excès d’azote soluble ou d’amidon fermentescible dans l’aliment',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1259 => 
                                 array (
@@ -10098,6 +11357,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les transitions alimentaires sont-elles suffisamment longues ? ',
                                     'reponse' => 'Transitions alimentaires trop courte',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1260 => 
                                 array (
@@ -10106,6 +11366,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'aliment distribué est-il adapté aux besoins des animaux ? (excès d\'azote soluble, amidon fermentescible, manque de cellulose)',
                                 'reponse' => 'Aliments distribués non adaptés aux besoins des animaux (excès d’azote soluble, d’amidon fermentescible, …)',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1261 => 
                                 array (
@@ -10114,6 +11375,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration des mères est-elle suffisante et équilibrée pour obtenir une bonne production laitière ? ',
                                     'reponse' => 'Ration des mères ne permettant pas une bonne production laitière',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1262 => 
                                 array (
@@ -10122,6 +11384,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Existe-t-il une possibilité d\'intoxication alimentaire ? (Cuivre, plantes, médicaments, métaux lourds …)',
                                     'reponse' => 'Possibilités d’intoxication alimentaire',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1263 => 
                                 array (
@@ -10130,6 +11393,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agneaux sont-ils victimes d\'une attaque parasitaire ? ',
                                     'reponse' => 'Transition alimentaire brutale',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1264 => 
                                 array (
@@ -10138,6 +11402,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les agneaux sont-ils victimes de séquelles de maladies antérieures ? (pica, infection, problèmes respiratoires, …)',
                                     'reponse' => 'Épisode antérieur d’entérotoxémie sur les agnelles',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1265 => 
                                 array (
@@ -10146,6 +11411,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les transitions alimentaires sont-elles respectées ? ',
                                     'reponse' => 'Transition alimentaire brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1266 => 
                                 array (
@@ -10154,6 +11420,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agnelles ont-elles subies un épisode d\'entérotoxémie ? ',
                                     'reponse' => 'Épisode d’entérotoxémie sur les agnelles',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1267 => 
                                 array (
@@ -10162,6 +11429,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agnelles ont-elles un état corporel suffisant sur toute cette période délicate ? ',
                                     'reponse' => 'L’état corporel des agnelles est insuffisant',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1268 => 
                                 array (
@@ -10170,6 +11438,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous déjà été touché par des morts subites ?',
                                     'reponse' => 'Existence préalable de morts subites',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1269 => 
                                 array (
@@ -10178,6 +11447,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Sont-elles suivies en parasitismes ?',
                                     'reponse' => 'Choix de bélier et alimentation des mères entraînant des agneaux chétifs à la naissance',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1270 => 
                                 array (
@@ -10186,6 +11456,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le temps consacré aux soins et à la surveillance des nouveaux nés est-il suffisant ? ',
                                     'reponse' => 'Surveillance des nouveaux-nés insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1271 => 
                                 array (
@@ -10194,6 +11465,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les agneaux sont-ils suffisamment vigoureux à la naissance ? (choix des béliers et alimentation des brebis)',
                                     'reponse' => 'Manque de vigueur de agneaux à la naissance',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1272 => 
                                 array (
@@ -10202,6 +11474,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les adoptions sont-elles faciles ? ',
                                     'reponse' => 'Adoptions difficiles',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1273 => 
                                 array (
@@ -10210,6 +11483,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La race du troupeau est-il en adéquation avec le mode de production choisi ? ',
                                     'reponse' => 'Race non adaptée au mode de production choisi',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1274 => 
                                 array (
@@ -10218,6 +11492,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La race du troupeau est-il en adéquation avec le temps disponible ? ',
                                     'reponse' => 'Race non adaptée au temps disponible',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1275 => 
                                 array (
@@ -10226,6 +11501,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les mères sont-elles suffisamment maternelles ? (choix de la race)',
                                 'reponse' => 'Mère peu maternelles (choix de la race)',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1276 => 
                                 array (
@@ -10234,6 +11510,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les mamelles des brebis sont-elles facilement accessible pour les agneaux ? (œdème et congestion des mamelles, gros trayons)',
                                 'reponse' => 'Mamelles difficilement accessible pour les agneaux (oedème, congestion, gros trayons)',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1277 => 
                                 array (
@@ -10242,6 +11519,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le lieu de mise bas est-il suffisamment confortable pour les nouveaux nés ? Température, humidité, propreté',
                                     'reponse' => 'Les lieux de mise-bas manquent de confort pour les nouveaux-nés ',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1278 => 
                                 array (
@@ -10250,6 +11528,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous suffisamment de cases d\'agnelage permettant l\'isolement du couple brebis/agneau ? ',
                                     'reponse' => 'Nombre de cases d’agnelage insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1279 => 
                                 array (
@@ -10258,6 +11537,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le temps consacré aux soins et à la surveillance des nouveaux nés est-il suffisant ? ',
                                     'reponse' => 'Surveillance des nouveaux-nés insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1280 => 
                                 array (
@@ -10266,6 +11546,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La race du troupeau est-il en adéquation avec le mode de production choisi ? ',
                                     'reponse' => 'Race non adaptée au mode de production choisi',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1281 => 
                                 array (
@@ -10274,6 +11555,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La race du troupeau est-il en adéquation avec le temps disponible ? ',
                                     'reponse' => 'Race non adaptée au temps disponible',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1282 => 
                                 array (
@@ -10282,6 +11564,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les mères sont-elles suffisamment maternelles ? (choix de la race)',
                                 'reponse' => 'Mère peu maternelles (choix de la race)',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1283 => 
                                 array (
@@ -10290,6 +11573,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les agneaux sont-ils suffisamment vigoureux à la naissance ? (choix des béliers et alimentation des brebis)',
                                     'reponse' => 'Manque de vigueur de agneaux à la naissance',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1284 => 
                                 array (
@@ -10298,6 +11582,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agnelages ont-ils été difficiles ?',
                                     'reponse' => 'Agnelages difficiles',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1285 => 
                                 array (
@@ -10306,6 +11591,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous suffisamment de cases d\'agnelage permettant l\'isolement du couple brebis/agneau ? ',
                                     'reponse' => 'Nombre de cases d’agnelage insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1286 => 
                                 array (
@@ -10314,6 +11600,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La densité (nombre d\'animaux/m²) n\'est-elle pas trop importante ? ',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1287 => 
                                 array (
@@ -10322,6 +11609,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Des précautions d\'hygiène sont-elles prises entre chaque désinfection de cordon ?',
                                     'reponse' => 'Pas de précaution d’hygiène entre deux désinfection de cordon',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1288 => 
                                 array (
@@ -10330,6 +11618,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les quantités de paille litière sont-elles suffisantes ? ',
                                     'reponse' => 'Paillage de la litière insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1289 => 
                                 array (
@@ -10338,6 +11627,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La bergerie est-elle suffisamment isolée et ventilée ? ',
                                     'reponse' => 'Bergerie mal isolée et mal ventilée',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1290 => 
                                 array (
@@ -10346,6 +11636,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'hygiène du bâtiment et du matériel est-il suffisant ? (lavage, désinfection, dératisation, vide sanitaire, )',
                                     'reponse' => 'Manque d’hygiène dans le bâtiment',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1291 => 
                                 array (
@@ -10354,6 +11645,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le matériel de bouclage est-il bien désinfecté après utilisation ? ',
                                     'reponse' => 'Matériel de bouclage mal désinfecté',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1292 => 
                                 array (
@@ -10362,6 +11654,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Un ensemencement des litières avec des bactéries lactiques est-il effectué en prévention ?',
                                     'reponse' => 'Pas de contrôle des mamelles au moment du tarissement',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1293 => 
                                 array (
@@ -10370,6 +11663,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agneaux ont-ils bien tété le colostrum dans les 6 heures ? ',
                                     'reponse' => 'Prise de colostrum dans les 6 premières heures insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1294 => 
                                 array (
@@ -10378,6 +11672,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agneaux ont-ils bien bu ? sinon pourquoi ?',
                                     'reponse' => 'Problèmes pour faire téter les agneaux',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1295 => 
                                 array (
@@ -10386,6 +11681,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les colostrums sont-ils de bonne qualité ? ',
                                     'reponse' => 'Colostrums de qualité insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1296 => 
                                 array (
@@ -10394,6 +11690,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les cordons sont-ils désinfectés ? ',
                                     'reponse' => 'Cordons non désinfectés',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1297 => 
                                 array (
@@ -10402,6 +11699,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La solution de désinfection est-elle régulièrement renouvelée ? ',
                                     'reponse' => 'Solution de désinfection peu renouvelée',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1298 => 
                                 array (
@@ -10410,6 +11708,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les agneaux du même lot sont-ils homogènes ? (âge et poids)',
                                     'reponse' => 'Manque d’homogénéité dans les lots d’agneaux',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1299 => 
                                 array (
@@ -10418,6 +11717,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agneaux ont-il bien tété le colostrum dans les 6 heures ? ',
                                     'reponse' => 'Prise de colostrum dans les 6 premières heures insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1300 => 
                                 array (
@@ -10426,6 +11726,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les colostrums sont-ils de bonne qualité ? ',
                                     'reponse' => 'Colostrums de qualité insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1301 => 
                                 array (
@@ -10434,6 +11735,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le nombre de cases d\'agnelage est-il suffisant pour respecter un temps de présence de 24h ? ',
                                     'reponse' => 'Nombre de cases d’agnelage insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1302 => 
                                 array (
@@ -10442,6 +11744,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La densité (nombre d\'animaux/m²) n\'est-elle pas trop importante ? ',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1303 => 
                                 array (
@@ -10450,6 +11753,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les quantités de paille litière sont-elles suffisantes ? ',
                                     'reponse' => 'Paillage de la litière insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1304 => 
                                 array (
@@ -10458,6 +11762,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La bergerie est-elle suffisamment isolée et ventilée ? ',
                                     'reponse' => 'Bergerie mal isolée et mal ventilée',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1305 => 
                                 array (
@@ -10466,6 +11771,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu introduction d\'animaux pouvant déclencher l\'ecthyma sur les animaux présents ? ',
                                     'reponse' => 'Introduction d’animaux porteurs d’ecthyma',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1306 => 
                                 array (
@@ -10474,6 +11780,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Connaissez-vous le statut Border Disease de votre troupeau ? ',
                                     'reponse' => 'Statut Border Disease inconnu',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1307 => 
                                 array (
@@ -10482,6 +11789,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Observez-vous une résurgence cyclique de l\'ecthyma sur les jeunes brebis ? ',
                                     'reponse' => 'Résurgence cyclique de l’ecthyma sur les jeunes brebis',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1308 => 
                                 array (
@@ -10490,6 +11798,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations alimentaires présentent-elles des carences en minéraux et oligo-éléments ?',
                                     'reponse' => 'Carences en minéraux et oligo-éléments',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1309 => 
                                 array (
@@ -10498,6 +11807,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'hygiène du logement est-elle suffisante ? ',
                                     'reponse' => 'Manque d’hygiène du logement',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1310 => 
                                 array (
@@ -10506,6 +11816,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'y-a-t-il présence de case d\'infirmerie, isolement des animaux malades ? ',
                                     'reponse' => 'Absence d’infirmerie',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1311 => 
                                 array (
@@ -10514,6 +11825,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'le logement est-il confortable ? Désinfectée ? ',
                                     'reponse' => 'Manque de confort dans le logement',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1312 => 
                                 array (
@@ -10522,6 +11834,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière est-elle propre et saine ? ',
                                     'reponse' => 'Litière sale',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1313 => 
                                 array (
@@ -10530,6 +11843,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La paille de litière est-elle de bonne qualité, bien conservée ? ',
                                     'reponse' => 'Paille de la litière de mauvaise qualité',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1314 => 
                                 array (
@@ -10538,6 +11852,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Un ensemencement des litières avec des bactéries lactiques est-il effectué en prévention ?',
                                     'reponse' => 'Pas d’ensemencement des litières avec des bactéries lactiques',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1315 => 
                                 array (
@@ -10546,6 +11861,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La surveillance de la prise colostrale est-elle suffisante ? ',
                                     'reponse' => 'Surveillance de la prise colostrale insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1316 => 
                                 array (
@@ -10554,6 +11870,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les colostrums et le lait sont-ils de bonne qualité ? ',
                                     'reponse' => 'Colostrums de qualité insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1317 => 
                                 array (
@@ -10562,6 +11879,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'alimentation des mères est-elle équilibrée ? Comment est l’état des mères ? La couverture des besoins en fin de gestation est-elle assurée ?',
                                     'reponse' => 'Alimentation des agnelles ne permettant pas une croissance suffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1318 => 
                                 array (
@@ -10570,6 +11888,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'eau de boisson est-elle potable ? ',
                                     'reponse' => 'Eau de boisson non potable',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1319 => 
                                 array (
@@ -10578,6 +11897,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux disposent-ils de sel alimentaire ? ',
                                     'reponse' => 'Pas de sel disponible pour les agneaux',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1320 => 
                                 array (
@@ -10586,6 +11906,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'environnement est-il contaminé par les coccidioses ? ',
                                     'reponse' => 'Environnement infesté par des coccidies',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1321 => 
                                 array (
@@ -10594,6 +11915,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Si oui un lavage vapeur eau (>90°C) a-t-il été effectué ? ',
                                     'reponse' => 'Pas de lavage à l’eau chaude malgré un environnement infesté',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1322 => 
                                 array (
@@ -10602,6 +11924,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Si oui de la prévention est-elle mise en œuvre (argile, vinaigre, etc.)',
                                     'reponse' => 'Pas de mesures préventives de coccidiose sur les agneaux',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1323 => 
                                 array (
@@ -10610,6 +11933,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La surface et le volume de bâtiment par animal sont-ils suffisants ? ',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1324 => 
                                 array (
@@ -10618,6 +11942,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière des animaux reste-t-elle sèche ? ',
                                     'reponse' => 'Litière trop humide',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1325 => 
                                 array (
@@ -10626,6 +11951,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les animaux ont-ils subis des stress importants (changement alimentaire, mise à l\'herbe, sevrage, mise en lots, etc..)',
                                     'reponse' => 'Stress important sur le troupeau',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1326 => 
                                 array (
@@ -10634,6 +11960,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'alimentation des agneaux n\'est-elle pas trop acidogène ? ',
                                     'reponse' => 'Alimentation des agneaux acidogène',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1327 => 
                                 array (
@@ -10642,6 +11969,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La transition alimentaire est-elle respectée ? ',
                                     'reponse' => 'Transition alimentaire brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1328 => 
                                 array (
@@ -10650,6 +11978,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La transition alimentaire est-elle respectée ? ',
                                     'reponse' => 'Transition alimentaire brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1329 => 
                                 array (
@@ -10658,6 +11987,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle riche en céréales et acidogène ? ',
                                     'reponse' => 'Ration trop riche en céréales et acidogène',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1330 => 
                                 array (
@@ -10666,6 +11996,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'environnement est-il contaminé par les coccidioses ? ',
                                     'reponse' => 'Environnement infesté par des coccidies',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1331 => 
                                 array (
@@ -10674,6 +12005,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Si oui un lavage vapeur eau (>90°C) a-t-il été effectué ? ',
                                     'reponse' => 'Pas de lavage à l’eau chaude malgré un environnement infesté',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1332 => 
                                 array (
@@ -10682,6 +12014,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Si oui de la prévention est-elle mise en œuvre (argile, vinaigre, etc.)',
                                     'reponse' => 'Pas de mesures préventives de coccidiose sur les agneaux',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1333 => 
                                 array (
@@ -10690,6 +12023,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La surface et le volume de bâtiment par animal sont-ils suffisants ? ',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1334 => 
                                 array (
@@ -10698,6 +12032,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière des animaux reste-t-elle sèche ? ',
                                     'reponse' => 'Litière trop humide',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1335 => 
                                 array (
@@ -10706,6 +12041,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les animaux ont-ils subis des stress importants (changement alimentaire, mise à l\'herbe, sevrage, mise en lots, etc..)',
                                     'reponse' => 'Stress important sur le troupeau',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1336 => 
                                 array (
@@ -10714,6 +12050,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'herbe pâturée n\'est-elle pas trop jeune ? (riche et humide)',
                                     'reponse' => 'Herbe pâturée trop jeune',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1337 => 
                                 array (
@@ -10722,6 +12059,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La transition alimentaire vers le pâturage est-elle respectée ? ',
                                     'reponse' => 'Transition alimentaire brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1338 => 
                                 array (
@@ -10730,6 +12068,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’ambiance des bâtiments est-elle propice aux variations de températures (métal, béton, climat rude, mauvaise orientation, …) ? ',
                                     'reponse' => 'Variations de température importante dans le bâtiment',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1339 => 
                                 array (
@@ -10738,6 +12077,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La densité animale en bergerie n’est-elle pas trop élevée ?',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1340 => 
                                 array (
@@ -10746,6 +12086,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les matériaux constituant la bergerie sont-ils propices aux variations de températures ? ',
                                     'reponse' => 'Matériaux favorisant des variation de température excessives',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1341 => 
                                 array (
@@ -10754,6 +12095,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La condensation est-elle fréquente dans le bâtiment ? ',
                                     'reponse' => 'Condensation fréquente dans le bâtiment',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1342 => 
                                 array (
@@ -10762,6 +12104,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il présence de courants d\'air ? ',
                                     'reponse' => 'Présence de courants d’air',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1343 => 
                                 array (
@@ -10770,6 +12113,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le paillage est-il effectué à la pailleuse ? ',
                                     'reponse' => 'Paillage effectué à la pailleuse',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1344 => 
                                 array (
@@ -10778,6 +12122,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les accès aux nourrisseurs, aux auges et à l\'eau sont-ils difficiles ?',
                                     'reponse' => 'Accès aux auges et à l’eau difficiles',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1345 => 
                                 array (
@@ -10786,6 +12131,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les agneaux ont-ils accès à des plantes provoquant de l\'œdème pulmonaire ? (laurier cerise/galéga officinal)',
                                 'reponse' => 'Accès à des plantes provoquant des œdèmes pulmonaires (galega, laurier cerise)',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1346 => 
                                 array (
@@ -10794,6 +12140,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’ambiance des bâtiments est-elle propice aux variations de températures (métal, béton, climat rude, mauvaise orientation, …) ? ',
                                     'reponse' => 'Infestation suite à un hiver doux',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1347 => 
                                 array (
@@ -10802,6 +12149,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La densité animale en bergerie n’est-elle pas trop élevée ?',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1348 => 
                                 array (
@@ -10810,6 +12158,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les matériaux constituant la bergerie sont-ils propices aux variations de températures ? ',
                                     'reponse' => 'Matériaux favorisant des variation de température excessives',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1349 => 
                                 array (
@@ -10818,6 +12167,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La condensation est-elle fréquente dans le bâtiment ? ',
                                     'reponse' => 'Condensation fréquente dans le bâtiment',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1350 => 
                                 array (
@@ -10826,6 +12176,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il présence de courants d\'air ? ',
                                     'reponse' => 'Présence de courants d’air',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1351 => 
                                 array (
@@ -10834,6 +12185,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le paillage est-il effectué à la pailleuse ? ',
                                     'reponse' => 'Paillage effectué à la pailleuse',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1352 => 
                                 array (
@@ -10842,6 +12194,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les accès aux nourrisseurs, aux auges et à l\'eau sont-ils difficiles ?',
                                     'reponse' => 'Accès aux auges et à l’eau difficiles',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1353 => 
                                 array (
@@ -10850,6 +12203,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les agneaux ont-ils accès à des plantes provoquant de l\'œdème pulmonaire ? (laurier cerise/galéga officinal)',
                                 'reponse' => 'Accès à des plantes provoquant des œdèmes pulmonaires (galega, laurier cerise)',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1354 => 
                                 array (
@@ -10858,6 +12212,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les agneaux ont-ils eu des troubles du cordon ? (Cf ci-dessus)',
                                     'reponse' => 'Infections du cordon',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1355 => 
                                 array (
@@ -10866,6 +12221,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agneaux ont-ils eu des infections suite au bouclage ou à l\'équeutage ? ',
                                     'reponse' => 'Infections suite au bouclage ou à l’équeutage',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1356 => 
                                 array (
@@ -10874,6 +12230,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de Blessures, les plaies sont-elles systématiquement désinfectées ? ',
                                     'reponse' => 'Matériel de transport partagé entre plusieurs éleveurs',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1357 => 
                                 array (
@@ -10882,6 +12239,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations sont-elles suffisamment pourvues en vitamine E et sélénium ? ',
                                     'reponse' => 'Manque de vitamine E et de sélénium',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1358 => 
                                 array (
@@ -10890,6 +12248,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations présentent-elles des risques d\'acidose ? ',
                                     'reponse' => 'Rations acidogènes',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1359 => 
                                 array (
@@ -10898,6 +12257,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La densité animale n\'est-elle pas trop élevée et favoriser les risques d\'accident ? ',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1360 => 
                                 array (
@@ -10906,6 +12266,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La transition alimentaire est-elle suffisante ? ',
                                     'reponse' => 'Transition alimentaire brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1361 => 
                                 array (
@@ -10914,6 +12275,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'aliment de démarrage est-il adapté ? ',
                                     'reponse' => 'Aliment de démarrage inadapté',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1362 => 
                                 array (
@@ -10922,6 +12284,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les accès aux nourrisseurs, aux auges et à l\'eau sont-ils difficiles ?',
                                     'reponse' => 'Accès aux auges et à l’eau difficiles',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1363 => 
                                 array (
@@ -10930,6 +12293,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’infestation parasitaire (coccidiose, cryptosporidiose, tænia…) est-elle surveillée ?',
                                     'reponse' => 'Par de surveillance de l’infection parasitaire',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1364 => 
                                 array (
@@ -10938,6 +12302,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les fourrages distribués présentent-ils des bonnes qualités de conservation ? ',
                                     'reponse' => 'Fourrages mal conservés',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1365 => 
                                 array (
@@ -10946,6 +12311,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations présentent-elles des risques d\'acidose ? ',
                                     'reponse' => 'Rations acidogènes',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1366 => 
                                 array (
@@ -10954,6 +12320,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les apports minéraux sont-ils suffisants pour couvrir les besoins ? ',
                                     'reponse' => 'Apport minéraux insuffisants par rapport aux besoins',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1367 => 
                                 array (
@@ -10962,6 +12329,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'eau de boisson est-elle potable ? ',
                                     'reponse' => 'Eau de boisson non potable',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1368 => 
                                 array (
@@ -10970,6 +12338,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'De l\'argile est-elle mise à disposition des agneaux ? ',
                                     'reponse' => 'Pas d’argile à disposition des agneaux',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1369 => 
                                 array (
@@ -10978,6 +12347,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’infestation en coccidiose –t-elle été surveillée ?',
                                     'reponse' => 'Pas de surveillance de la coccidiose',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1370 => 
                                 array (
@@ -10986,6 +12356,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agneaux subissent-ils des stress réguliers ? ',
                                     'reponse' => 'Stress important sur les agneaux',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1371 => 
                                 array (
@@ -10994,6 +12365,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Observez-vous une résurgence cyclique de l\'ecthyma sur les jeunes brebis ? ',
                                     'reponse' => 'Résurgence cyclique de l’ecthyma sur les jeunes brebis',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1372 => 
                                 array (
@@ -11002,6 +12374,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les apports en cuivre et en soufre sont-ils raisonnés ? ',
                                     'reponse' => 'Apports en cuivre et en souffre non raisonnés',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1373 => 
                                 array (
@@ -11010,6 +12383,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les rations sont-elles équilibrées ? avec une bonne sécurité contre l’acidose ? ',
                                 'reponse' => 'Rations déséquilibrées (risque d’acidose)',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1374 => 
                                 array (
@@ -11018,6 +12392,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les aliments sont sains ? (absence de moisi ou altération)',
                                     'reponse' => 'Présence d’aliments moisis',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1375 => 
                                 array (
@@ -11026,6 +12401,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les apports en éléments minéraux et oligo-éléments sont-ils suffisants ? ',
                                     'reponse' => 'Carences en minéraux et oligo-éléments',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1376 => 
                                 array (
@@ -11034,6 +12410,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous fait des dépistages Listéria, Méningite, tétanos, botulisme ou autres maladies graves ?',
                                 'reponse' => 'Pas de dépistage des maladies graves (listéria, tétanos, botulisme, etc.)',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1377 => 
                                 array (
@@ -11042,6 +12419,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Assurez-vous une bonne hygiène du cordon et du matériel d’identification ? ',
                                     'reponse' => 'Désinfection du cordon et du matériel d’identification insuffisante',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1378 => 
                                 array (
@@ -11050,6 +12428,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agnelles sont-ils atteints de ténia? Si oui, voir parasitisme',
                                     'reponse' => 'Pas de suivi du parasitisme des agnelles',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1379 => 
                                 array (
@@ -11058,6 +12437,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le diagnostic de gale a-t-il été posé par un vétérinaire ?',
                                     'reponse' => 'Diagnostic de gale',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1380 => 
                                 array (
@@ -11066,6 +12446,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les démangeaisons sont-elles surveillées et traitées si nécessaire ? (Gale)',
                                     'reponse' => 'Démangeaisons ni surveillées ni traitées',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1381 => 
                                 array (
@@ -11074,6 +12455,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux introduits sont-ils mis en quarantaine et suivis sanitairement avant d\'être mélangés au troupeau ? ',
                                     'reponse' => 'Pas quarantaine avant introduction et de surveillance des animaux introduits',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1382 => 
                                 array (
@@ -11082,6 +12464,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Du matériel de transport d\'ovins est-il utilisé à plusieurs éleveurs ? ',
                                     'reponse' => 'Matériel de transport partagé entre plusieurs éleveurs',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1383 => 
                                 array (
@@ -11090,6 +12473,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les traitements sont-ils mis en place rapidement après l\'apparition des premiers signes ? ',
                                     'reponse' => 'Traitements trop tardifs après l’apparition des premiers signes',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1384 => 
                                 array (
@@ -11098,6 +12482,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les troupeaux voisins sont-ils porteurs du parasite ? ',
                                     'reponse' => 'Troupeaux voisins porteurs de gale',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1385 => 
                                 array (
@@ -11106,6 +12491,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Du matériel de transport d\'ovins est-il utilisé à plusieurs éleveurs ? ',
                                     'reponse' => 'Matériel de transport partagé entre plusieurs éleveurs',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1386 => 
                                 array (
@@ -11114,6 +12500,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les troupeaux voisins sont-ils porteurs du parasite ? ',
                                     'reponse' => 'Troupeaux voisins porteurs de gale',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1387 => 
                                 array (
@@ -11122,6 +12509,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les traitements sont-ils mis en place rapidement après l\'apparition des premiers signes ? ',
                                     'reponse' => 'Traitements trop tardifs après l’apparition des premiers signes',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1388 => 
                                 array (
@@ -11130,6 +12518,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La surface et le volume de bâtiment par animal sont-ils suffisants ? ',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1389 => 
                                 array (
@@ -11138,6 +12527,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les brebis sont-elles victimes de mycotoxine ou d\'intoxication chimique ?',
                                     'reponse' => 'Intoxications chimiques ou par mycotoxines',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1390 => 
                                 array (
@@ -11146,6 +12536,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'alimentation couvre-t-elle les besoins en Iode, Cuivre, Zinc ?',
                                     'reponse' => 'Carences en oligo-éléments',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1391 => 
                                 array (
@@ -11154,6 +12545,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La gestion du pâturage permet-elle d\'éviter le retour des animaux sur des parcelles contaminées ? (surtout pour le ténia ! > 1 an)',
                                     'reponse' => 'Fréquence de traitements favorisant les résistances',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1392 => 
                                 array (
@@ -11162,6 +12554,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le pâturage ras < à 5 cm est-il évité ? ',
                                 'reponse' => 'Pâturage trop ras (< 5cm)',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1393 => 
                                 array (
@@ -11170,6 +12563,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il alternance de différentes espèces au pâturage ?',
                                     'reponse' => 'Par d’alternance possible de différentes espèces sur les mêmes pâtures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1394 => 
                                 array (
@@ -11178,6 +12572,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Tenez-vous à jour un planning de pâturage ? ',
                                     'reponse' => 'Pas de planning de pâturage à jour',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1395 => 
                                 array (
@@ -11186,6 +12581,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La pâture est-elle intégrée dans une alternance fauche-pâture ? ',
                                     'reponse' => 'Pas d’association pâturage / fauche',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1396 => 
                                 array (
@@ -11194,6 +12590,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les prairies entrent-elles dans la rotation des cultures ?',
                                     'reponse' => 'Les prairies n’entrent pas dans les rotations de cultures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1397 => 
                                 array (
@@ -11202,6 +12599,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'infestation fait-elle suite à un hiver doux ? ',
                                     'reponse' => 'Hiver précédent très doux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1398 => 
                                 array (
@@ -11210,6 +12608,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le choix de traiter collectivement est-il décider suite à des analyses coproscopiques et/ou sérologique, et répond-il à une stratégie globale de gestion parasitaire à l’échelle du troupeau ?',
                                     'reponse' => 'Pas de stratégie globale dans les choix de traitement des animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1399 => 
                                 array (
@@ -11218,6 +12617,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La fréquence des traitements anthelminthiques ne favorise-t-elle pas les résistances ? ',
                                     'reponse' => 'Fréquence de traitements favorisant les résistances',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1400 => 
                                 array (
@@ -11226,6 +12626,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La race du troupeau est-elle adaptée au milieu infesté ? ',
                                     'reponse' => 'Race non adaptée à de fortes infestations parasitaires',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1401 => 
                                 array (
@@ -11234,6 +12635,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La gestion du pâturage permet-elle d\'éviter le retour des animaux sur des parcelles contaminées ? (surtout pour le ténia ! > 1 an)',
                                     'reponse' => 'Fréquence de traitements favorisant les résistances',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1402 => 
                                 array (
@@ -11242,6 +12644,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le pâturage ras < à 5 cm est-il évité ? ',
                                 'reponse' => 'Pâturage trop ras (< 5cm)',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1403 => 
                                 array (
@@ -11250,6 +12653,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il alternance de différentes espèces au pâturage ?',
                                     'reponse' => 'Par d’alternance possible de différentes espèces sur les mêmes pâtures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1404 => 
                                 array (
@@ -11258,6 +12662,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Tenez-vous à jour un planning de pâturage ? ',
                                     'reponse' => 'Pas de planning de pâturage à jour',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1405 => 
                                 array (
@@ -11266,6 +12671,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La pâture est-elle intégrée dans une alternance fauche-pâture ? ',
                                     'reponse' => 'Pas d’association pâturage / fauche',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1406 => 
                                 array (
@@ -11274,6 +12680,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les prairies entrent-elles dans la rotation des cultures ?',
                                     'reponse' => 'Les prairies n’entrent pas dans les rotations de cultures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1407 => 
                                 array (
@@ -11282,6 +12689,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'infestation fait-elle suite à un hiver doux ? ',
                                     'reponse' => 'Hiver précédent très doux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1408 => 
                                 array (
@@ -11290,6 +12698,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le choix de traiter collectivement est-il décider suite à des analyses coproscopiques et/ou sérologique, et répond-il à une stratégie globale de gestion parasitaire à l’échelle du troupeau ?',
                                     'reponse' => 'Pas de stratégie globale dans les choix de traitement des animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1409 => 
                                 array (
@@ -11298,6 +12707,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La fréquence des traitements anthelminthiques ne favorise-t-elle pas les résistances ? ',
                                     'reponse' => 'Fréquence de traitements favorisant les résistances',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1410 => 
                                 array (
@@ -11306,6 +12716,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La race du troupeau est-elle adaptée au milieu infesté ? ',
                                     'reponse' => 'Race non adaptée à de fortes infestations parasitaires',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1411 => 
                                 array (
@@ -11314,6 +12725,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux ont-ils pâturé des zones humides, notamment par nécessité en période de sécheresse ?',
                                 'reponse' => 'Pâturage sur des zones humides (à cause de la sécheresse)',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1412 => 
                                 array (
@@ -11322,6 +12734,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Des accès aménagés à des points d’eau propre et potable sont-ils aménagés en quantité suffisante par rapport au nombre d’animaux ? Le débit est-il suffisant tout au long de l’année ?',
                                     'reponse' => 'Problème d’accès à de l’eau propre et potable',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1413 => 
                                 array (
@@ -11330,6 +12743,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il alternance de différentes espèces au pâturage ?',
                                     'reponse' => 'Par d’alternance possible de différentes espèces sur les mêmes pâtures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1414 => 
                                 array (
@@ -11338,6 +12752,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les animaux sont-ils maintenus sur des parcelles présentant un manque d\'herbe (sécheresse) ?',
                                     'reponse' => 'Animaux maintenus sur des parcelles présentant un manque d’herbe',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1415 => 
                                 array (
@@ -11346,6 +12761,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Historiquement, l\'infestation petite douve a déjà été présente ? ',
                                     'reponse' => 'Présence historique de petite douve',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1416 => 
                                 array (
@@ -11354,6 +12770,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'infestation fait-elle suite à un hiver doux ? ',
                                     'reponse' => 'Hiver précédent très doux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1417 => 
                                 array (
@@ -11362,6 +12779,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'année a-t-elle été particulièrement humide et douce ? ',
                                     'reponse' => 'Année particulièrement humide et douce',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1418 => 
                                 array (
@@ -11370,6 +12788,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu des infestations les années précédentes ? ',
                                     'reponse' => 'Infestations les années précédentes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1419 => 
                                 array (
@@ -11378,6 +12797,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux jeunes sont-ils protégés des parcelles contaminées ? ',
                                     'reponse' => 'Les jeunes ont accès à des parcelles très contaminées',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1420 => 
                                 array (
@@ -11386,6 +12806,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le pâturage ras < à 5 cm est-il évité ? ',
                                 'reponse' => 'Pâturage trop ras (< 5cm)',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1421 => 
                                 array (
@@ -11394,6 +12815,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La pâture est-elle intégrée dans une alternance fauche-pâture ? Les prairies entrent-elles dans la rotation des cultures ? ',
                                     'reponse' => 'Les prairies n’entrent pas dans les rotations de cultures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1422 => 
                                 array (
@@ -11402,6 +12824,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'environnement est-il contaminé par les coccidioses ? ',
                                     'reponse' => 'Environnement infesté par des coccidies',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1423 => 
                                 array (
@@ -11410,6 +12833,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Si oui un lavage vapeur eau (>90°C) a-t-il été effectué ? ',
                                     'reponse' => 'Pas de lavage à l’eau chaude malgré un environnement infesté',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1424 => 
                                 array (
@@ -11418,6 +12842,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Si oui de la prévention est-elle mise en œuvre (argile, vinaigre, etc.)',
                                     'reponse' => 'Pas de mesures préventives de coccidiose sur les agneaux',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1425 => 
                                 array (
@@ -11426,6 +12851,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La surface et le volume de bâtiment par animal sont-ils suffisants ? ',
                                     'reponse' => 'Densité animale trop importante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1426 => 
                                 array (
@@ -11434,6 +12860,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière des animaux reste-t-elle sèche ? ',
                                     'reponse' => 'Litière trop humide',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1427 => 
                                 array (
@@ -11442,6 +12869,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les animaux ont-ils subis des stress importants (changement alimentaire, mise à l\'herbe, sevrage, mise en lots, etc..)',
                                     'reponse' => 'Stress important sur le troupeau',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1428 => 
                                 array (
@@ -11450,6 +12878,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La zone est-elle infestée par la mouche responsables de myases (Wohlfahrtia, lucilie) ? ',
                                     'reponse' => 'Zone infestée par des mouches responsables de myases',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1429 => 
                                 array (
@@ -11458,6 +12887,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le temps consacré à la surveillance des blessures et des myases est-il suffisant ? ',
                                     'reponse' => 'Temps consacré à la surveillance des blessures insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1430 => 
                                 array (
@@ -11466,6 +12896,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les arrières trains sont-ils propres ? ',
                                     'reponse' => 'Arrière-trains sales',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1431 => 
                                 array (
@@ -11474,6 +12905,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les traitements se font-ils au coup par coup sans stratégie à l\'échelle du troupeau ? ',
                                     'reponse' => 'Traitements aux coup par coup sans stratégie à l’échelle du troupeau',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1432 => 
                                 array (
@@ -11482,6 +12914,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les introductions d\'animaux sont-elles gérées avec mise en quarantaine et surveillance sanitaire ? ',
                                     'reponse' => 'Pas quarantaine avant introduction et de surveillance des animaux introduits',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1433 => 
                                 array (
@@ -11490,6 +12923,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le parage est-il régulier ? ',
                                     'reponse' => 'Parage irrégulier',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1434 => 
                                 array (
@@ -11498,6 +12932,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le parage est-il pratiqué sans saignements et en respectant les bonnes longueurs d\'onglons ? ',
                                     'reponse' => 'Parage avec saignements, onglons coupés trop courts',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1435 => 
                                 array (
@@ -11506,6 +12941,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les agnelles sont-elles orientées vers des parcelles non infectées ? ',
                                     'reponse' => 'Pâturage des agnelles sur des parcelles infectées',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1436 => 
                                 array (
@@ -11514,6 +12950,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'alimentation est-elle suffisamment pourvue en minéraux et oligo-éléments ? ',
                                     'reponse' => 'Carences en minéraux et oligo-éléments',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1437 => 
                                 array (
@@ -11522,6 +12959,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'alimentation est-elle suffisamment pourvue de fibres de structure ? ',
                                     'reponse' => 'Alimentation trop pauvre en fibres de structure',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1438 => 
                                 array (
@@ -11530,6 +12968,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La gestion note d\'état/stade physiologique est-elle existante? ',
                                     'reponse' => 'Pas de suivi de l’état corporel',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1439 => 
                                 array (
@@ -11538,6 +12977,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les chemins d\'accès aux pâtures sont-ils caillouteux ? ',
                                     'reponse' => 'Chemins d’accès au pâturage caillouteux',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1440 => 
                                 array (
@@ -11546,6 +12986,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le milieu de vie des brebis est-il suffisant sec et sain ? ',
                                     'reponse' => 'Le milieu de vie des brebis est trop humide',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1441 => 
                                 array (
@@ -11554,6 +12995,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les litières des bergeries sont-elles régulièrement curées ? ',
                                     'reponse' => 'La litière n’est pas curée assez souvent',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1442 => 
                                 array (
@@ -11562,6 +13004,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La race choisie est-elle particulièrement sensible des pieds ? ',
                                     'reponse' => 'Race particulièrement sensible des pieds',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1443 => 
                                 array (
@@ -11570,6 +13013,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous une politique de réforme concernant les brebis récidivistes ? ',
                                     'reponse' => 'Par de politique de réforme des brebis récidivistes',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1444 => 
                                 array (
@@ -11578,6 +13022,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les traitements se font-ils au coup par coup sans stratégie à l\'échelle du troupeau ? ',
                                     'reponse' => 'Traitements aux coup par coup sans stratégie à l’échelle du troupeau',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1445 => 
                                 array (
@@ -11586,6 +13031,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les introductions d\'animaux sont-elles gérées avec mise en quarantaine et surveillance sanitaire ? ',
                                     'reponse' => 'Pas quarantaine avant introduction et de surveillance des animaux introduits',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1446 => 
                                 array (
@@ -11594,6 +13040,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le parage est-il régulier ? ',
                                     'reponse' => 'Parage irrégulier',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1447 => 
                                 array (
@@ -11602,6 +13049,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le parage est-il pratiqué sans saignements et en respectant les bonnes longueurs d\'onglons ? ',
                                     'reponse' => 'Parage avec saignements, onglons coupés trop courts',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1448 => 
                                 array (
@@ -11610,6 +13058,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'alimentation est-elle suffisamment pourvue en minéraux et oligo-éléments ? ',
                                     'reponse' => 'Carences en minéraux et oligo-éléments',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1449 => 
                                 array (
@@ -11618,6 +13067,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'alimentation est-elle suffisamment pourvue de fibres de structure ? ',
                                     'reponse' => 'Alimentation trop pauvre en fibres de structure',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1450 => 
                                 array (
@@ -11626,6 +13076,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La gestion note d\'état/stade physiologique est-elle existante? ',
                                     'reponse' => 'Pas de suivi de l’état corporel',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1451 => 
                                 array (
@@ -11634,6 +13085,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les chemins d\'accès aux pâtures sont-ils caillouteux ? ',
                                     'reponse' => 'Chemins d’accès au pâturage caillouteux',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1452 => 
                                 array (
@@ -11642,6 +13094,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le milieu de vie des brebis est-il suffisant sec et sain ? ',
                                     'reponse' => 'Le milieu de vie des brebis est trop humide',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1453 => 
                                 array (
@@ -11650,6 +13103,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les litières des bergeries sont-elles régulièrement curées ? ',
                                     'reponse' => 'La litière n’est pas curée assez souvent',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1454 => 
                                 array (
@@ -11658,6 +13112,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La surveillance permet-elle d\'intervenir dans des délais courts après apparition des premiers signes de boiteries ?',
                                     'reponse' => 'Interventions trop tardives sur les brebis boiteuses',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1455 => 
                                 array (
@@ -11666,6 +13121,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La fréquence des pédiluves est-elle suffisante ? ',
                                     'reponse' => 'Pédiluves trop peu fréquents',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1456 => 
                                 array (
@@ -11674,6 +13130,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les doses des produits sont-elles respectées ? ',
                                     'reponse' => 'Mauvais respect des doses de produits',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1457 => 
                                 array (
@@ -11682,6 +13139,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La durée du bain est-elle suffisante ?',
                                     'reponse' => 'Durée du bain trop courte',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1458 => 
                                 array (
@@ -11690,6 +13148,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle bien équilibrée en énergie/azote ?',
                                     'reponse' => 'ration déséquilibrée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1459 => 
                                 array (
@@ -11698,6 +13157,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Toutes les animaux ont-ils accès à l’auge en même temps ?',
                                     'reponse' => 'accès à l\'auge inégal',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1460 => 
                                 array (
@@ -11706,6 +13166,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La distribution de la ration est-elle bien répartie sur toute la longueur de l’auge?',
                                     'reponse' => 'ration non distribuée sur toute la longueur de l\'auge',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1461 => 
                                 array (
@@ -11714,6 +13175,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les primipares sont-elles complémentées différemment des multipares ?',
                                     'reponse' => 'primipares complémentées comme les multipares',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1462 => 
                                 array (
@@ -11722,6 +13184,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'accès à l\'eau est-il compétitif entre les animaux ?',
                                     'reponse' => 'accès compétitif à l\'eau',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1463 => 
                                 array (
@@ -11730,6 +13193,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment est-il équipé de cornadis ?',
                                     'reponse' => 'pas de cornadis',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1464 => 
                                 array (
@@ -11738,6 +13202,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le nombre de cornadis est-il suffisant ? +10%/Nb d\'animaux présents ?',
                                     'reponse' => 'nombre de cornadis insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1465 => 
                                 array (
@@ -11746,6 +13211,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il un mélange d\'animaux sans corne et d\'animaux cornus ?',
                                     'reponse' => 'mélange d\'animaux cornus et sans cornes',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1466 => 
                                 array (
@@ -11754,6 +13220,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu des recherches parasitaires récemment ?',
                                     'reponse' => 'pas de recherche de parasites récentes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1467 => 
                                 array (
@@ -11762,6 +13229,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle bien équilibrée en énergie/azote ?',
                                     'reponse' => 'ration déséquilibrée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1468 => 
                                 array (
@@ -11770,6 +13238,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Toutes les animaux ont-ils accès à l’auge en même temps ?',
                                     'reponse' => 'accès à l\'auge inégal',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1469 => 
                                 array (
@@ -11778,6 +13247,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La distribution de la ration est-elle bien répartie sur toute la longueur de l’auge?',
                                     'reponse' => 'ration non distribuée sur toute la longueur de l\'auge',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1470 => 
                                 array (
@@ -11786,6 +13256,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les primipares sont-elles complémentées différemment des multipares ?',
                                     'reponse' => 'primipares complémentées comme les multipares',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1471 => 
                                 array (
@@ -11794,6 +13265,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Existe-t-il une ration spécifique de début de lactation ?',
                                     'reponse' => 'pas de ration spécifique au début de lactation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1472 => 
                                 array (
@@ -11802,6 +13274,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les vêlages sont-ils étalés ?',
                                     'reponse' => 'vêlages groupés',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1473 => 
                                 array (
@@ -11810,6 +13283,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu des recherches parasitaires récemment ?',
                                     'reponse' => 'pas de recherche de parasites récentes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1474 => 
                                 array (
@@ -11818,6 +13292,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle bien équilibrée en énergie/azote ?',
                                     'reponse' => 'ration déséquilibrée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1475 => 
                                 array (
@@ -11826,6 +13301,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Toutes les animaux ont-ils accès à l’auge en même temps ?',
                                     'reponse' => 'accès à l\'auge inégal',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1476 => 
                                 array (
@@ -11834,6 +13310,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La distribution de la ration est-elle bien répartie sur toute la longueur de l’auge?',
                                     'reponse' => 'ration non distribuée sur toute la longueur de l\'auge',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1477 => 
                                 array (
@@ -11842,6 +13319,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle consommée 50% le jour et 50% la nuit ?',
                                     'reponse' => 'ration non consommée 50% le jour et 50% la nuit',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1478 => 
                                 array (
@@ -11850,6 +13328,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration du matin est-elle identique à la ration du soir ?',
                                     'reponse' => 'ration du matin et du soir identiques',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1479 => 
                                 array (
@@ -11858,6 +13337,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les primipares sont-elles complémentées différemment des multipares ?',
                                     'reponse' => 'primipares complémentées comme les multipares',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1480 => 
                                 array (
@@ -11866,6 +13346,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'accès à l\'eau est-il compétitif entre les animaux ?',
                                     'reponse' => 'accès compétitif à l\'eau',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1481 => 
                                 array (
@@ -11874,6 +13355,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment est-il équipé de cornadis ?',
                                     'reponse' => 'pas de cornadis',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1482 => 
                                 array (
@@ -11882,6 +13364,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le nombre de cornadis est-il suffisant ? +10%/Nb d\'animaux présents ?',
                                     'reponse' => 'nombre de cornadis insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1483 => 
                                 array (
@@ -11890,6 +13373,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les vêlages sont-ils étalés ?',
                                     'reponse' => 'vêlages groupés',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1484 => 
                                 array (
@@ -11898,6 +13382,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il un mélange d\'animaux sans corne et d\'animaux cornus ?',
                                     'reponse' => 'mélange d\'animaux cornus et sans cornes',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1485 => 
                                 array (
@@ -11906,6 +13391,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu des recherches parasitaires récemment ?',
                                     'reponse' => 'pas de recherche de parasites récentes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1486 => 
                                 array (
@@ -11914,6 +13400,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle bien équilibrée en énergie/azote ?',
                                     'reponse' => 'ration déséquilibrée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1487 => 
                                 array (
@@ -11922,6 +13409,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle consommée 50% le jour et 50% la nuit ?',
                                     'reponse' => 'ration non consommée 50% le jour et 50% la nuit',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1488 => 
                                 array (
@@ -11930,6 +13418,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration du matin est-elle identique à la ration du soir ?',
                                     'reponse' => 'ration du matin et du soir identiques',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1489 => 
                                 array (
@@ -11938,6 +13427,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les primipares sont-elles complémentées différemment des multipares ?',
                                     'reponse' => 'primipares complémentées comme les multipares',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1490 => 
                                 array (
@@ -11946,6 +13436,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Existe-t-il une ration spécifique de début de lactation ?',
                                     'reponse' => 'pas de ration spécifique au début de lactation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1491 => 
                                 array (
@@ -11954,6 +13445,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'accès à l\'eau est-il compétitif entre les animaux ?',
                                     'reponse' => 'accès compétitif à l\'eau',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1492 => 
                                 array (
@@ -11962,6 +13454,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les bouses sont-elles hétérogènes (instabilité du pH du rumen) ? ',
                                     'reponse' => 'bouses hétérogènes',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1493 => 
                                 array (
@@ -11970,6 +13463,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les vêlages sont-ils étalés ?',
                                     'reponse' => 'vêlages groupés',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1494 => 
                                 array (
@@ -11978,6 +13472,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu des recherches parasitaires récemment ?',
                                     'reponse' => 'pas de recherche de parasites récentes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1495 => 
                                 array (
@@ -11986,6 +13481,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment est-il trop chargé ?',
                                     'reponse' => 'bâtiment trop chargé',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1496 => 
                                 array (
@@ -11994,6 +13490,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La quantité de paille est-elle suffisante ?',
                                     'reponse' => 'quantité de paille insuffisante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1497 => 
                                 array (
@@ -12002,6 +13499,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les logettes sont-elles bien réglées et permettent des mouvements lever/coucher aisés pour les vaches ?',
                                     'reponse' => 'logettes mal réglées, mouvements lever/coucher difficiles',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1498 => 
                                 array (
@@ -12010,6 +13508,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La fréquence de curage est-elle suffisante ?',
                                     'reponse' => 'fréquence de curage insuffisante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1499 => 
                                 array (
@@ -12018,6 +13517,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment montre-t-il des signes d\'une mauvaise ventilation ?',
                                     'reponse' => 'mauvaise ventilation',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1500 => 
                                 array (
@@ -12026,6 +13526,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le bâtiment présente-t-il des excès d\'humidité importants (sol non stabilisé et non drainé, fuite d\'eau, ...) ?',
                                     'reponse' => 'excès d\'humidité',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1501 => 
                                 array (
@@ -12034,6 +13535,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'orientation du bâtiment est-elle correcte ?',
                                     'reponse' => 'mauvaise orientation du bâtiment',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1502 => 
                                 array (
@@ -12042,6 +13544,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bardage du bâtiment est-il suffisant ?',
                                     'reponse' => 'bardage du bâtiment insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1503 => 
                                 array (
@@ -12050,6 +13553,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle trop riche en amidon ?',
                                     'reponse' => 'ration trop riche en amidon',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1504 => 
                                 array (
@@ -12058,6 +13562,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration trop riche en azote soluble (ex : fourrages verts)?',
                                     'reponse' => 'ration trop riche en azote soluble',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1505 => 
                                 array (
@@ -12066,6 +13571,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux présentent-ils les symptômes de la grippe ? Diarrhées avec fièvre ?',
                                     'reponse' => 'symptômes de grippe',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1506 => 
                                 array (
@@ -12074,6 +13580,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils susceptibles d\'être parasités ?',
                                     'reponse' => 'animaux susceptibles d\'être parasités',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1507 => 
                                 array (
@@ -12082,6 +13589,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La surface mise à disposition des animaux est-elle suffisante ? (surtout pour des animaux cornus)',
                                     'reponse' => 'surface mise à disposition insuffisante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1508 => 
                                 array (
@@ -12090,6 +13598,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Est-ce que la nourriture est accessible à tous les animaux en même temps de manière équitable ?',
                                     'reponse' => 'accès à la nourriture inéquitable',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1509 => 
                                 array (
@@ -12098,6 +13607,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le nombre de cornadis est-il suffisant ? +10%/Nb d\'animaux présents ?',
                                     'reponse' => 'nombre de cornadis insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1510 => 
                                 array (
@@ -12106,6 +13616,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'absence de cornadis entre-rail des conflits à l\'auge ?',
                                     'reponse' => 'conflits à l\'auge dus à l\'absence de cornadis',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1511 => 
                                 array (
@@ -12114,6 +13625,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le bâtiment est-il protégé des perturbations électromagnétiques ? (ligne haute tension, poste de clôture, mauvaise terre électrique, faille terrestre, rivière souterraine, …)',
                                     'reponse' => 'bâtiment non protégé des perturbations électromagnétiques',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1512 => 
                                 array (
@@ -12122,6 +13634,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La circulation des animaux est-elle fluide ou le bâtiment présente-t-il des zones d’étranglement ? (positionnement des abreuvoirs, couloirs de circulation, ...)',
                                     'reponse' => 'circulation non fluide des animaux, zones d\'étranglement',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1513 => 
                                 array (
@@ -12130,6 +13643,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le lieu de vie des animaux présente-t-il des objets coupants, contondants ?',
                                     'reponse' => 'objets coupants dans le lieu de vie des animaux',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1514 => 
                                 array (
@@ -12138,6 +13652,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle déséquilibrée ou présente-t-elle un excès d\'énergie ?',
                                     'reponse' => 'ration déséquilibrée ou en excès d\'énergie',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1515 => 
                                 array (
@@ -12146,6 +13661,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Certains animaux du troupeau sont-ils de souche d\'animaux nerveux, agressifs ?',
                                     'reponse' => 'animaux de souche d\'animaux nerveux/agressifs',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1516 => 
                                 array (
@@ -12154,6 +13670,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le troupeau présente-t-il une coexistence de vaches avec ou sans corne ?',
                                     'reponse' => 'coexistence de vaches avec et sans corne',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1517 => 
                                 array (
@@ -12162,6 +13679,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les techniques d\'élevage permettent-elles la mise en place d\'une bonne relation homme/animal ?',
                                     'reponse' => 'techniques d\'élevage qui ne favorisent pas une bonne relation homme/animal',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1518 => 
                                 array (
@@ -12170,6 +13688,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils confrontés à des éléments perturbateurs : chiens, tiers, géobiologie?',
                                 'reponse' => 'éléments perturbateurs ( chiens, tiers, géobiologie)',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1519 => 
                                 array (
@@ -12178,6 +13697,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La surface mise à disposition des animaux est-elle suffisante ? (surtout pour des animaux cornus)',
                                     'reponse' => 'surface mise à disposition insuffisante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1520 => 
                                 array (
@@ -12186,6 +13706,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Est-ce que la nourriture est accessible à tous les animaux en même temps de manière équitable ?',
                                     'reponse' => 'accès à la nourriture inéquitable',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1521 => 
                                 array (
@@ -12194,6 +13715,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le nombre de cornadis est-il suffisant ? +10%/Nb d\'animaux présents ?',
                                     'reponse' => 'nombre de cornadis insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1522 => 
                                 array (
@@ -12202,6 +13724,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'absence de cornadis entre-rail des conflits à l\'auge ?',
                                     'reponse' => 'conflits à l\'auge dus à l\'absence de cornadis',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1523 => 
                                 array (
@@ -12210,6 +13733,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le bâtiment est-il protégé des perturbations électromagnétiques ? (ligne haute tension, poste de clôture, mauvaise terre électrique, faille terrestre, rivière souterraine, …)',
                                     'reponse' => 'bâtiment non protégé des perturbations électromagnétiques',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1524 => 
                                 array (
@@ -12218,6 +13742,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La circulation des animaux est-elle fluide ou le bâtiment présente-t-il des zones d’étranglement ? (positionnement des abreuvoirs, couloirs de circulation, …)',
                                     'reponse' => 'circulation non fluide des animaux, zones d\'étranglement',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1525 => 
                                 array (
@@ -12226,6 +13751,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le lieu de vie des animaux présente-t-il des objets coupants, contondants ?',
                                     'reponse' => 'objets coupants dans le lieu de vie des animaux',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1526 => 
                                 array (
@@ -12234,6 +13760,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle déséquilibrée ou présente-t-elle un excès d\'énergie ?',
                                     'reponse' => 'ration déséquilibrée ou en excès d\'énergie',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1527 => 
                                 array (
@@ -12242,6 +13769,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Certains animaux du troupeau sont-ils de souche d\'animaux nerveux, agressifs ?',
                                     'reponse' => 'animaux de souche d\'animaux nerveux/agressifs',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1528 => 
                                 array (
@@ -12250,6 +13778,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le troupeau présente-t-il une coexistence de vaches avec ou sans corne ?',
                                     'reponse' => 'coexistence de vaches avec et sans corne',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1529 => 
                                 array (
@@ -12258,6 +13787,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les techniques d\'élevage permettent-elles la mise en place d\'une bonne relation homme/animal ?',
                                     'reponse' => 'techniques d\'élevage qui ne favorisent pas une bonne relation homme/animal',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1530 => 
                                 array (
@@ -12266,6 +13796,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils confrontés à des éléments perturbateurs : chiens, tiers, géobiologie?',
                                 'reponse' => 'éléments perturbateurs ( chiens, tiers, géobiologie)',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1531 => 
                                 array (
@@ -12274,6 +13805,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration est-elle équilibrée et saine ? (sans risque d’entérotoxémie ou intoxication)',
                                     'reponse' => 'ration déséquilibrée et/ou non saine',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1532 => 
                                 array (
@@ -12282,6 +13814,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les transitions alimentaires sont-elles bien respectées ?',
                                     'reponse' => 'pas ou peu de transition alimentaire',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1533 => 
                                 array (
@@ -12290,6 +13823,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration contient-elle des plantes toxiques dans les fourrages récoltés ou pâturés ? (ex : Datura)',
                                     'reponse' => 'plantes toxiques dans les fourrages récoltés ou pâturés',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1534 => 
                                 array (
@@ -12298,6 +13832,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La coccidiose est-elle maîtrisée ?',
                                     'reponse' => 'coccidiose non maîtrisée',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1535 => 
                                 array (
@@ -12306,6 +13841,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'abreuvement est-il suffisant et accessible à tous les animaux ?',
                                     'reponse' => 'abreuvement insuffisant, accès à tous les animaux insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1536 => 
                                 array (
@@ -12314,6 +13850,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les circuits électriques sont-ils en bon état ou source d\'électrocution ?',
                                     'reponse' => 'circuits électriques non sécurisés, risque d\'électrocution',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1537 => 
                                 array (
@@ -12322,6 +13859,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment est-il doté d\'un parafoudre et d\'une prise de terre électrique performante ?',
                                     'reponse' => 'pas de parafoudre ou prise de terre',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1538 => 
                                 array (
@@ -12330,6 +13868,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment présente-t-il des courants d\'air, source de maladies ?',
                                     'reponse' => 'courants d\'air',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1539 => 
                                 array (
@@ -12338,6 +13877,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux présentent-ils les symptômes de la grippe ? Diarrhées avec température ? Des problèmes respiratoires ? Toux ? Jetages ?',
                                     'reponse' => 'symptômes de grippe',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1540 => 
                                 array (
@@ -12346,6 +13886,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Avez-vous fait autopsier des morts à votre vétérinaire pour rechercher la cause ? (corps étranger, caillette, pathologie, …)',
                                     'reponse' => 'pas d\'autopsie des morts',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1541 => 
                                 array (
@@ -12354,6 +13895,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration est-elle équilibrée et saine ? (sans risque d’entérotoxémie ou intoxication)',
                                     'reponse' => 'ration déséquilibrée et/ou non saine',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1542 => 
                                 array (
@@ -12362,6 +13904,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les transitions alimentaires sont-elles bien respectées ?',
                                     'reponse' => 'pas ou peu de transition alimentaire',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1543 => 
                                 array (
@@ -12370,6 +13913,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration contient-elle des plantes toxiques dans les fourrages récoltés ou pâturés ? (ex : Datura)',
                                     'reponse' => 'plantes toxiques dans les fourrages récoltés ou pâturés',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1544 => 
                                 array (
@@ -12378,6 +13922,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration présente-t-elle suffisamment de fibres ?',
                                     'reponse' => 'Manque de fibres dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1545 => 
                                 array (
@@ -12386,6 +13931,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est équilibrée en minéral et particulièrement autour de la mise bas ? ',
                                 'reponse' => 'Déséquilibre minéral (surtout autour de la mise-bas)',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1546 => 
                                 array (
@@ -12394,6 +13940,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'abreuvement est-il suffisant et accessible à tous les animaux ?',
                                     'reponse' => 'abreuvement insuffisant, accès à tous les animaux insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1547 => 
                                 array (
@@ -12402,6 +13949,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les circuits électriques sont-ils en bon état ou source d\'électrocution ?',
                                     'reponse' => 'circuits électriques non sécurisés, risque d\'électrocution',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1548 => 
                                 array (
@@ -12410,6 +13958,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment est-il doté d\'un parafoudre et d\'une prise de terre électrique performante ?',
                                     'reponse' => 'pas de parafoudre ou prise de terre',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1549 => 
                                 array (
@@ -12418,6 +13967,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment présente-t-il des courants d\'air, source de maladies ?',
                                     'reponse' => 'Présence de courants d\'air',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1550 => 
                                 array (
@@ -12426,6 +13976,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La mortalité fait-elle suite à des maladies mal soignées',
                                     'reponse' => 'Mortalité suite à des maladies mal soignées',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1551 => 
                                 array (
@@ -12434,6 +13985,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La mortalité fait-elle suite à du parasitisme',
                                     'reponse' => 'Mortalité suite de parasitisme',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1552 => 
                                 array (
@@ -12442,6 +13994,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Avez-vous fait autopsier des morts à votre vétérinaire pour rechercher la cause ? (corps étranger, caillette, pathologie, …)',
                                     'reponse' => 'pas d\'autopsie des morts',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1553 => 
                                 array (
@@ -12450,6 +14003,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le renouvellement du troupeau est-il adapté pour permettre une bonne sélection des réformes ?',
                                     'reponse' => 'renouvellement du troupeau ne permettant pas une bonne sélection des réformes',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1554 => 
                                 array (
@@ -12458,6 +14012,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous mis en place des pratiques préventives permettant de conserver un bon équilibre de santé ?',
                                     'reponse' => 'pas de prévention pour conserver un bon équilibre de santé',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1555 => 
                                 array (
@@ -12466,6 +14021,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’état corporel des génisses est-il adapté au vêlage ? (trop grasses ou trop maigres)',
                                     'reponse' => 'état corporel des génisses pas adapté au vêlage',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1556 => 
                                 array (
@@ -12474,6 +14030,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Utilisez-vous un taureau produisant des petits veaux?',
                                     'reponse' => 'taureau produisant des veaux à gros gabarit',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1557 => 
                                 array (
@@ -12482,6 +14039,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En IA, les accouplements sont-ils orientés sur la facilité de naissance ?',
                                     'reponse' => 'en IA, accouplements non raisonnés sur la facilité de naissance',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1558 => 
                                 array (
@@ -12490,6 +14048,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le critère facilité de vêlage des mères et largeur de bassin sont-ils des critères de sélection des génisses de renouvellement ?',
                                     'reponse' => 'facilité de vêlage des mères et largeur de bassin non pris en compte lors du renouvellement',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1559 => 
                                 array (
@@ -12498,6 +14057,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’état corporel des vaches est-il adapté au vêlage ? (trop grasses ou trop maigres)',
                                     'reponse' => 'état corporel des génisses pas adapté au vêlage',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1560 => 
                                 array (
@@ -12506,6 +14066,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La supplémentation en minéraux, vitamines et oligo-éléments est-elle correcte?',
                                     'reponse' => 'supplémentation en minéraux, vitamines et oligo-éléments insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1561 => 
                                 array (
@@ -12514,6 +14075,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Utilisez-vous un taureau qui fait des petits veaux ?',
                                     'reponse' => 'taureau produisant des veaux à gros gabarit',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1562 => 
                                 array (
@@ -12522,6 +14084,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les génisses ont-elles subies des lésions vaginales ou interventions (épisiotomie) lors du vêlage ?',
                                     'reponse' => 'lésions vaginales ou interventions sur génisses lors du vêlage',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1563 => 
                                 array (
@@ -12530,6 +14093,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'apport alimentaire au cours de la 1ére année de vie est-il suffisant?',
                                     'reponse' => 'apport alimentaire insuffisant au cours de la 1ère année de vie',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1564 => 
                                 array (
@@ -12538,6 +14102,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les pâtures destinées aux génisses sont-elles pâturées uniquement par des animaux jeunes ?',
                                     'reponse' => 'pâtures pas exclusivement réservées aux génisses',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1565 => 
                                 array (
@@ -12546,6 +14111,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le parasitisme des génisses est-il maîtrisé tout au long de leur période de croissance ?',
                                     'reponse' => 'parasitisme mal maîtrisé au cours de la croissance des génisses',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1566 => 
                                 array (
@@ -12554,6 +14120,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Observez-vous une fréquence élevée de troubles respiratoires au cours de la 1ére année de vie?',
                                     'reponse' => 'troubles respiratoires élevés la première année de vie',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1567 => 
                                 array (
@@ -12562,6 +14129,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Assurez-vous des conditions d\'hygiène au vêlage ?',
                                     'reponse' => 'Conditions d’hygiène au vêlage insuffisantes',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1568 => 
                                 array (
@@ -12570,6 +14138,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Intervenez-vous fréquemment lors des vêlages ? Si oui, utilisez-vous des gants de fouille ?',
                                     'reponse' => 'Interventions fréquente au vêlage et problème d’hygiène',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1569 => 
                                 array (
@@ -12578,6 +14147,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Utilisez-vous un taureau qui fait des petits veaux?',
                                     'reponse' => 'taureau produisant des veaux à gros gabarit',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1570 => 
                                 array (
@@ -12586,6 +14156,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La supplémentation en minéraux, vitamines et oligo-éléments est-elle correcte?',
                                     'reponse' => 'manque d\'apports en minéraux, vitamines, oligoéléments en fin de gestation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1571 => 
                                 array (
@@ -12594,6 +14165,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L\'état corporel est-il correct au moment de la mise à la reproduction? (pas trop grasse ou trop maigre)',
                                     'reponse' => 'état corporel inadapté à la mise à la reproduction',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1572 => 
                                 array (
@@ -12602,6 +14174,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’évolution de la Note d’état corporel est-elle positive au moment de l’IA ?',
                                     'reponse' => 'évolution de la NEC négative au moment de l\'IA',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1573 => 
                                 array (
@@ -12610,6 +14183,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’équilibre de ration (y compris azote soluble) est-il adéquat ?',
                                     'reponse' => 'équilibre de la ration non adéquat',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1574 => 
                                 array (
@@ -12618,6 +14192,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La dimension du logement, la densité des animaux (m²/animal) permettent-elles une bonne expression des chaleurs?',
                                     'reponse' => 'expression des chaleurs freinée par la densité des animaux et la dimension du logement',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1575 => 
                                 array (
@@ -12626,6 +14201,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La qualité des sols permet-elle une bonne expression des chaleurs?',
                                     'reponse' => 'expression des chaleurs limitée par la qualité des sols',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1576 => 
                                 array (
@@ -12634,6 +14210,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Observez-vous une fréquence élevée de maladies juste après vêlage? (dystocie/métrites/…)',
                                     'reponse' => 'fréquence élevée de maladies juste après vêlage',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1577 => 
                                 array (
@@ -12642,6 +14219,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Assurez-vous un contrôle des maladies qui pourraient gêner l\'expression des chaleurs (ex : boiteries)?',
                                     'reponse' => 'pas de contrôle des maladies pouvant gêner l\'expression des chaleurs',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1578 => 
                                 array (
@@ -12650,6 +14228,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous un protocole de détection des chaleurs commun entre les différents intervenants de l\'élevage?',
                                     'reponse' => 'absence de protocole de détection des chaleurs commun à tous les intervenants de l\'élevage',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1579 => 
                                 array (
@@ -12658,6 +14237,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous un protocole de détection des chaleurs efficaces y compris quand elles sont au pâturage?',
                                     'reponse' => 'absence de protocole de détection des chaleurs lors du pâturage',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1580 => 
                                 array (
@@ -12666,6 +14246,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le délai de remise à la reproduction ou la saison de vêlage correspondent-ils aux objectifs de l\'éleveur?',
                                     'reponse' => 'délai de remise à la reproduction ou saison de vêlage pas adaptés aux objectifs de l\'éleveur',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1581 => 
                                 array (
@@ -12674,6 +14255,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un contrôle de l\'état corporel avant le tarissement et en ajustant la ration des vaches taries si besoin pour éviter qu\'elles ne soient trop grasses au vêlage ?',
                                     'reponse' => 'pas de contrôle de l\'état corporel avant tarissement',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1582 => 
                                 array (
@@ -12682,6 +14264,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Limitez-vous la teneur en calcium de la ration avant vêlage pour stimuler son absorption intestinale et la réabsorption osseuse après vêlage?',
                                     'reponse' => 'pas de limitation de la teneur en calcium dans la ration avant vêlage',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1583 => 
                                 array (
@@ -12690,6 +14273,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Limitez-vous la teneur en phosphore de la ration des vaches taries ?',
                                     'reponse' => 'pas de limitation de la teneur en phosphore des vaches taries',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1584 => 
                                 array (
@@ -12698,6 +14282,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Assurez-vous un apport en Magnésium suffisant avant le vêlage afin de favorise la mobilisation du calcium des os? (Ou faites-vous attention à la BACA de la ration des taries)',
                                     'reponse' => 'apport en magnésium insuffisant avant vêlage',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1585 => 
                                 array (
@@ -12706,6 +14291,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Prévenez-vous la carence en calcium, avec un apport dans la ration juste après vêlage pour pallier son exportation importante?',
                                     'reponse' => 'pas d\'apport en calcium dans la ration après vêlage pour prévenir sa carence',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1586 => 
                                 array (
@@ -12714,6 +14300,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Assurez-vous un apport correct en chlorure et soufre dans les 15 jours précédant le vêlage?',
                                     'reponse' => 'apport insuffisant en chlorure et soufre 15jours avant le vêlage',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1587 => 
                                 array (
@@ -12722,6 +14309,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le nombre de cornadis est-il suffisant ? +10%/Nb d\'animaux présents ?',
                                     'reponse' => 'nombre de cornadis insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1588 => 
                                 array (
@@ -12730,6 +14318,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les vaches taries ont-elles toutes leurs aptitudes fonctionnelles pour un accès à la table d\'alimentation (boiteries, acidose…)?',
                                     'reponse' => 'inaptitudes fonctionnelles des taries, limitant l\'accès à l\'auge',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1589 => 
                                 array (
@@ -12738,6 +14327,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'apport et l\'ingestion de fibres efficaces sont-ils suffisants ?',
                                     'reponse' => 'apport et ingestion de fibres efficaces insuffisants',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1590 => 
                                 array (
@@ -12746,6 +14336,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'apport de concentrés par repas n\'est-il pas trop important?',
                                     'reponse' => 'apport de concentré trop important',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1591 => 
                                 array (
@@ -12754,6 +14345,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le stock de calcium a-t-il pu se reconstituer avant le tarissement, (voir fièvre de lait).',
                                 'reponse' => 'stock de calcium avant tarissement insuffisant (non reconstitué)',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1592 => 
                                 array (
@@ -12762,6 +14354,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les vaches peuvent-elles marcher tranquillement, sans stress, à l\'extérieur et à l\'intérieur?',
                                     'reponse' => 'stress à l\'intérieur ou l’extérieur lorsque les vaches marchent',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1593 => 
                                 array (
@@ -12770,6 +14363,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les filles des vaches ayant eu un déplacement de caillette sont-elles gardées pour le renouvellement ?',
                                     'reponse' => 'filles de vaches ayant eu un déplacement de caillette gardées pour le renouvellement',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1594 => 
                                 array (
@@ -12778,6 +14372,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Observez-vous des animaux dont l\'état corporel est trop élevé au moment du vêlage?',
                                     'reponse' => 'certains animaux dont l\'état corporel est trop élevé au moment du vêlage',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1595 => 
                                 array (
@@ -12786,6 +14381,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Observez-vous des phénomènes de stress ou des problèmes de santé qui peuvent limiter l\'accès à l\'alimentation (boiteries, acidose…)?',
                                     'reponse' => 'stress ou problèmes de santé limitant l\'accès à l\'alimentation',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1596 => 
                                 array (
@@ -12794,6 +14390,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de changement de fourrage dans la ration de base assurez-vous une transition alimentaire ?',
                                     'reponse' => 'absence de transition alimentaire si changement de fourrage dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1597 => 
                                 array (
@@ -12802,6 +14399,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'apport de concentré dans la ration est-il réalisé de façon progressive en début de lactation ?',
                                     'reponse' => 'apport de concentré non progressif en début de lactation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1598 => 
                                 array (
@@ -12810,6 +14408,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La couverture énergétique est-elle suffisante (fourrages et concentrés) jusqu\'au pic de lactation?',
                                     'reponse' => 'couverture énergétique insuffisante jusqu\'au pic de lactation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1599 => 
                                 array (
@@ -12818,6 +14417,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les fourrages utilisés sont-ils de mauvaise qualité ? (appétence, récolte dans de mauvaises conditions, mauvaise conservation)',
                                     'reponse' => 'mauvaise qualité des fourrages',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1600 => 
                                 array (
@@ -12826,6 +14426,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Observez-vous des refus à l’auge ou la quantité de nourriture distribuée est-il trop limité ?',
                                     'reponse' => 'quantité distribuée insuffisante ou en excès',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1601 => 
                                 array (
@@ -12834,6 +14435,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration présente-elle des carences marquées en minéraux ?',
                                     'reponse' => 'carences en minéraux',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1602 => 
                                 array (
@@ -12842,6 +14444,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le nombre de cornadis est-il suffisant ? +10%/Nb d\'animaux présents ?',
                                     'reponse' => 'nombre de cornadis insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1603 => 
                                 array (
@@ -12850,6 +14453,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Observez-vous des animaux dont l\'état corporel est trop élevé au moment du vêlage?',
                                     'reponse' => 'certains animaux dont l\'état corporel est trop élevé au moment du vêlage',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1604 => 
                                 array (
@@ -12858,6 +14462,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Observez-vous des phénomènes de stress ou des problèmes de santé qui peuvent limiter l\'accès à l\'alimentation (boiteries, acidose…)?',
                                     'reponse' => 'stress ou problèmes de santé limitant l\'accès à l\'alimentation',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1605 => 
                                 array (
@@ -12866,6 +14471,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de changement de fourrage dans la ration de base assurez-vous une transition alimentaire ?',
                                     'reponse' => 'absence de transition alimentaire si changement de fourrage dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1606 => 
                                 array (
@@ -12874,6 +14480,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'apport de concentré dans la ration est-il réalisé de façon progressive en début de lactation ?',
                                     'reponse' => 'apport de concentré non progressif en début de lactation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1607 => 
                                 array (
@@ -12882,6 +14489,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La couverture énergétique est-elle suffisante (fourrages et concentrés) jusqu\'au pic de lactation?',
                                     'reponse' => 'couverture énergétique insuffisante jusqu\'au pic de lactation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1608 => 
                                 array (
@@ -12890,6 +14498,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les fourrages utilisés sont-ils de mauvaise qualité ? (appétence, récolte dans de mauvaises conditions, mauvaise conservation)',
                                     'reponse' => 'mauvaise qualité des fourrages',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1609 => 
                                 array (
@@ -12898,6 +14507,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Observez-vous des refus à l’auge ou la quantité de nourriture distribuée est-il trop limité ?',
                                     'reponse' => 'quantité distribuée insuffisante ou en excès',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1610 => 
                                 array (
@@ -12906,6 +14516,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration présente-elle des carences marquées en minéraux ?',
                                     'reponse' => 'carences en minéraux',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1611 => 
                                 array (
@@ -12914,6 +14525,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le nombre de cornadis est-il suffisant ? +10%/Nb d\'animaux présents ?',
                                     'reponse' => 'nombre de cornadis insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1612 => 
                                 array (
@@ -12922,6 +14534,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Apportez-vous préventivement du magnésium avant et après les premiers jours de sortie au pâturage ?',
                                     'reponse' => 'pas d\'apport de magnésium à la sortie au pâturage',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1613 => 
                                 array (
@@ -12930,6 +14543,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y a-t-il eu une mauvaise transition alimentaire entre la ration hivernale et printanière ?',
                                     'reponse' => 'mauvaise transition alimentaire entre rations hivernales et printanières',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1614 => 
                                 array (
@@ -12938,6 +14552,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Evitez-vous l\'utilisation des parcelles chargées en herbe jeune comme aliment unique (en particulier les jeunes prairies temporaires de graminées)?',
                                     'reponse' => 'parcelles d\'herbe jeune comme aliment unique',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1615 => 
                                 array (
@@ -12946,6 +14561,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Evitez-vous le pâturage si conditions climatiques sont défavorables? (les jours froids et pluvieux ou utilisation de parcelles abritées)',
                                     'reponse' => 'pâturage même si conditions climatiques défavorables',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1616 => 
                                 array (
@@ -12954,6 +14570,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y a-t’il eu une mauvaise transition alimentaire entre la période sèche et la période de lactation ?',
                                     'reponse' => 'mauvaise transition alimentaire entre période sèche et période de lactation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1617 => 
                                 array (
@@ -12962,6 +14579,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Distribuez-vous un foin fibreux en tête de repas pour sécuriser la digestion ruminale ?',
                                     'reponse' => 'pas de foin fibreux en tête',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1618 => 
                                 array (
@@ -12970,6 +14588,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les concentrés sont-ils composés d’amidon à dégradation lente ?',
                                     'reponse' => 'concentrés composés d\'amidon à dégradation rapide',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1619 => 
                                 array (
@@ -12978,6 +14597,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle consommée 50% le jour et 50% la nuit ?',
                                     'reponse' => 'ration non consommée 50% le jour et 50% la nuit',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1620 => 
                                 array (
@@ -12986,6 +14606,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration du matin est-elle identique à la ration du soir en quantité et en qualité ?',
                                     'reponse' => 'ration du matin et du soir identiques',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1621 => 
                                 array (
@@ -12994,6 +14615,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'apport de concentré dans la ration est-il réalisé de façon progressive ?',
                                     'reponse' => 'apport de concentré non progressif',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1622 => 
                                 array (
@@ -13002,6 +14624,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration consommée est-elle riche en glucides facilement fermentescibles ?',
                                     'reponse' => 'ration riche en glucides facilement fermentescibles',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1623 => 
                                 array (
@@ -13010,6 +14633,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration consommée est-elle pauvre en fibres efficaces pour stimuler la rumination et donc la salivation? ? (manque de brins longs rigides et piquants)',
                                     'reponse' => 'ration pauvre en fibres efficaces',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1624 => 
                                 array (
@@ -13018,6 +14642,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La distribution des concentrés est-elle fractionnée et s\'accompagne-t-elle de fourrages grossiers?',
                                     'reponse' => 'distribution de concentrés non fractionnée et sans fourrage grossier',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1625 => 
                                 array (
@@ -13026,6 +14651,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de changement de fourrage dans la ration de base assurez-vous une transition alimentaire de 3 semaines ?',
                                     'reponse' => 'pas ou peu de transition alimentaire si changement de fourrage dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1626 => 
                                 array (
@@ -13034,6 +14660,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Mettez-vous à disposition des vaches des pierres de sel favorisant la salivation?',
                                     'reponse' => 'pas de pierres de sel à disposition',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1627 => 
                                 array (
@@ -13042,6 +14669,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y a-t’il eu une mauvaise transition alimentaire entre la période sèche et la période de lactation ?',
                                     'reponse' => 'mauvaise transition alimentaire entre période sèche et période de lactation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1628 => 
                                 array (
@@ -13050,6 +14678,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Distribuez-vous un foin fibreux en tête de repas pour sécuriser la digestion ruminale ?',
                                     'reponse' => 'pas de foin fibreux en tête',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1629 => 
                                 array (
@@ -13058,6 +14687,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les concentrés sont-ils composés d’amidon à dégradation lente ?',
                                     'reponse' => 'concentrés composés d\'amidon à dégradation rapide',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1630 => 
                                 array (
@@ -13066,6 +14696,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle consommée 50% le jour et 50% la nuit ?',
                                     'reponse' => 'ration non consommée 50% le jour et 50% la nuit',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1631 => 
                                 array (
@@ -13074,6 +14705,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration du matin est-elle identique à la ration du soir en quantité et en qualité ?',
                                     'reponse' => 'ration du matin et du soir identiques',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1632 => 
                                 array (
@@ -13082,6 +14714,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'apport de concentré dans la ration est-il réalisé de façon progressive ?',
                                     'reponse' => 'apport de concentré non progressif',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1633 => 
                                 array (
@@ -13090,6 +14723,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration consommée est-elle riche en glucides facilement fermentescibles ?',
                                     'reponse' => 'ration riche en glucides facilement fermentescibles',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1634 => 
                                 array (
@@ -13098,6 +14732,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La ration consommée est-elle pauvre en fibres efficaces pour stimuler la rumination et donc la salivation? ? (manque de brins longs rigides et piquants)',
                                     'reponse' => 'ration pauvre en fibres efficaces',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1635 => 
                                 array (
@@ -13106,6 +14741,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La distribution des concentrés est-elle fractionnée et s\'accompagne-t-elle de fourrages grossiers?',
                                     'reponse' => 'distribution de concentrés non fractionnée et sans fourrage grossier',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1636 => 
                                 array (
@@ -13114,6 +14750,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de changement de fourrage dans la ration de base assurez-vous une transition alimentaire de 3 semaines ?',
                                     'reponse' => 'pas ou peu de transition alimentaire si changement de fourrage dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1637 => 
                                 array (
@@ -13122,6 +14759,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Mettez-vous à disposition des vaches des pierres de sel favorisant la salivation?',
                                     'reponse' => 'pas de pierres de sel à disposition',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1638 => 
                                 array (
@@ -13130,6 +14768,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration présente-t-elle un excès d’azote ?',
                                     'reponse' => 'excès d\'azote dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1639 => 
                                 array (
@@ -13138,6 +14777,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration présent-t-elle un déficit en énergie ?',
                                     'reponse' => 'déficit en énergie dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1640 => 
                                 array (
@@ -13146,6 +14786,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Respectez-vous le protocole d’entretien régulier de la machine à traire ? (contrôle, suivi des recommandations, manchons, valves,…)',
                                     'reponse' => 'manque d\'entretien régulier de la machine à traire',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1641 => 
                                 array (
@@ -13154,6 +14795,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Changez-vous les manchons autant que nécessaire ?',
                                     'reponse' => 'manchons changés trop peu souvent',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1642 => 
                                 array (
@@ -13162,6 +14804,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'ambiance de traite est-elle calme et sereine ?',
                                     'reponse' => 'ambiance de traite bruyante ou stressante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1643 => 
                                 array (
@@ -13170,6 +14813,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Appliquez-vous un protocole de nettoyage et de soins particuliers en cas de blessures des mains du trayeur avant la traite ? (couverture des plaies/port de gants/…)',
                                     'reponse' => 'pas de protocole de nettoyage ou de soin si blessure des mains du trayeur avant la traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1644 => 
                                 array (
@@ -13178,6 +14822,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Assurez-vous un bon protocole de préparation des trayons avant la traite? (lavage + désinfection avec un produit utilisable en AB + essuyage)',
                                     'reponse' => 'protocole de préparation des trayons insuffisant avant la traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1645 => 
                                 array (
@@ -13186,6 +14831,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Avez-vous un protocole de nettoyage des mamelles à sec (ex laine de bois) permettant le respect de la flore lactique naturelle protectrice ?',
                                     'reponse' => 'pas de protocole de nettoyage à sec des mamelles',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1646 => 
                                 array (
@@ -13194,6 +14840,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Etes-vous vigilants sur la rupture du vide d’air au moment de la pose de griffe ?',
                                     'reponse' => 'au moment de la pose de la griffe, moindre vigilance accordée à la rupture du vide d\'air',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1647 => 
                                 array (
@@ -13202,6 +14849,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En fin de traite, réalisez-vous de l\'égouttage, des massages, de la sur-traite?',
                                     'reponse' => 'égouttage ou massage ou sur-traite en fin de traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1648 => 
                                 array (
@@ -13210,6 +14858,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous une désinfection des manchons après la traite des vaches mammiteuses ou cellulaires',
                                     'reponse' => 'pas de désinfection des manchons après la traite de vaches mammiteuses ou cellulaires',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1649 => 
                                 array (
@@ -13218,6 +14867,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous une machine à traire bien réglée? (réglage de l\'installation et/ou réglage de la dépose automatique)',
                                     'reponse' => 'machine à traire mal réglée',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1650 => 
                                 array (
@@ -13226,6 +14876,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous une désinfection des trayons après la traite? Si oui, est-elle réalisée de manière correcte?',
                                     'reponse' => 'pas de bonne désinfection des trayons après la traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1651 => 
                                 array (
@@ -13234,6 +14885,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous un protocole évitant la destruction de la flore lactique naturelle protectrice ?',
                                     'reponse' => 'pas d\'attention accordée à la flore lactique protectrice lors du protocole de désinfection',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1652 => 
                                 array (
@@ -13242,6 +14894,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Appliquer vous un protocole de désinfection des griffes après la traite de chaque vache?',
                                     'reponse' => 'pas de protocole de désinfection des griffes après la traite de chaque vache',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1653 => 
                                 array (
@@ -13250,6 +14903,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Appliquer vous un protocole de nettoyage de l\'équipement de traite en fin de traite?',
                                     'reponse' => 'pas de protocole de nettoyage de l\'équipement de traite en fin de traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1654 => 
                                 array (
@@ -13258,6 +14912,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Détenez-vous plus de 50 % de vaches à risque ? (lésions à l\'extrémité des trayons, index CEL négatif, mammites à répétition)',
                                     'reponse' => 'plus de 50% de vaches à risque',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1655 => 
                                 array (
@@ -13266,6 +14921,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous une stratégie de réformes des vaches infectées de manière chronique, incurables ?',
                                     'reponse' => 'pas de stratégie de réforme des vaches infectées de manière chronique',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1656 => 
                                 array (
@@ -13274,6 +14930,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Respectez-vous le protocole d’entretien régulier de la machine à traire ? (contrôle, suivi des recommandations, manchons, valves,…)',
                                     'reponse' => 'mauvais respect du protocole d\'entretien régulier de la machine à traire',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1657 => 
                                 array (
@@ -13282,6 +14939,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Changez-vous les manchons autant que nécessaire ?',
                                     'reponse' => 'manchons changés trop peu souvent',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1658 => 
                                 array (
@@ -13290,6 +14948,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'ambiance de traite est-elle calme et sereine ?',
                                     'reponse' => 'ambiance bruyante ou stressante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1659 => 
                                 array (
@@ -13298,6 +14957,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Appliquez-vous un protocole de nettoyage et de soins particuliers en cas de blessures des mains du trayeur avant la traite ? (couverture des plaies/port de gants/…)',
                                     'reponse' => 'pas de protocole de nettoyage ou de soin si blessure des mains du trayeur avant la traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1660 => 
                                 array (
@@ -13306,6 +14966,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Assurez-vous un bon protocole de préparation des trayons avant la traite ? (lavage + essuyage des trayons avant traite)',
                                     'reponse' => 'protocole de préparation des trayons insuffisant avant la traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1661 => 
                                 array (
@@ -13314,6 +14975,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En fin de traite, réalisez-vous de l\'égouttage, des massages, de la sur-traite ?',
                                     'reponse' => 'égouttage ou massage ou sur-traite en fin de traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1662 => 
                                 array (
@@ -13322,6 +14984,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous une machine à traire bien réglée? (réglage de l\'installation et/ou réglage de la dépose automatique)',
                                     'reponse' => 'machine à traire mal réglée',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1663 => 
                                 array (
@@ -13330,6 +14993,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous une désinfection des manchons après les vaches mammiteuses ou cellulaires ?',
                                     'reponse' => 'pas de désinfection des manchons après la traite de vaches mammiteuses ou cellulaires',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1664 => 
                                 array (
@@ -13338,6 +15002,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous une désinfection des trayons après la traite? Si oui, est-elle réalisée de manière correcte?',
                                     'reponse' => 'pas de bonne désinfection des trayons après la traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1665 => 
                                 array (
@@ -13346,6 +15011,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous un protocole évitant la destruction de la flore lactique naturelle protectrice ?',
                                     'reponse' => 'pas d\'attention accordée à la flore lactique protectrice lors du protocole de désinfection',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1666 => 
                                 array (
@@ -13354,6 +15020,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Appliquer-vous un protocole de désinfection des griffes après la traite de chaque vache?',
                                     'reponse' => 'pas de protocole de désinfection des griffes après la traite de chaque vache',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1667 => 
                                 array (
@@ -13362,6 +15029,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Appliquer-vous un protocole de nettoyage de l\'équipement de traite en fin de traite?',
                                     'reponse' => 'pas de protocole de nettoyage de l\'équipement de traite en fin de traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1668 => 
                                 array (
@@ -13370,6 +15038,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La dimension du logement et la densité des animaux (m²/animal) permettent-elles à toutes les vaches de se coucher sur l\'aire de couchage?',
                                     'reponse' => 'dimension et densité des animaux insuffisantes sur l\'aire de couchage',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1669 => 
                                 array (
@@ -13378,6 +15047,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’hygiène générale du bâtiment est-il correct? (densité, paillage, nature du paillage), Réalisez-vous une désinfection du bâtiment si besoin?',
                                     'reponse' => 'hygiène du bâtiment non satisfaisante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1670 => 
                                 array (
@@ -13386,6 +15056,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ventilation du bâtiment est-elle correcte?',
                                     'reponse' => 'ventilation du bâtiment insuffisante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1671 => 
                                 array (
@@ -13394,6 +15065,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Observez-vous des zones de surdensité d\'animaux couchés au même endroit (autour du point d\'eau ou sous les arbres...) ?',
                                     'reponse' => 'zones de surdensité d\'animaux couchés au même endroit',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1672 => 
                                 array (
@@ -13402,6 +15074,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Entretenez-vous correctement les box de vêlage et d\'isolement?',
                                     'reponse' => 'box de vêlage et d\'isolement peu entretenus',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1673 => 
                                 array (
@@ -13410,6 +15083,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous un protocole afin d\'éviter que les vaches ne se couchent durant la demi-heure suivant la traite pour permettre la fermeture des sphincters de trayon ?',
                                     'reponse' => 'pas de protocole évitant aux vaches de se coucher dans la demi-heure suivant la traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1674 => 
                                 array (
@@ -13418,6 +15092,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La qualité des sols des aires de circulation est-il correct (non glissant, non blessant)?',
                                     'reponse' => 'sols des aires de circulation glissants ou blessants',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1675 => 
                                 array (
@@ -13426,6 +15101,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous une séparation les vaches taries du troupeau dès la dernière traite pour les gérer correctement ?',
                                     'reponse' => 'pas de séparation des vaches dès la dernière traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1676 => 
                                 array (
@@ -13434,6 +15110,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réduisez-vous graduellement l\'apport d\'aliments riches en énergie à la fin de la lactation?',
                                     'reponse' => 'pas de réduction graduelle des aliments riches en énergie à la fin de la lactation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1677 => 
                                 array (
@@ -13442,6 +15119,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Utilisez-vous des obturateurs de sphincters pour éviter de nouvelles contaminations lors du tarissement ?',
                                     'reponse' => 'pas d\'utilisation d\'obturateurs de sphincters',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1678 => 
                                 array (
@@ -13450,6 +15128,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’espace dédié aux taries est-il aussi important que celui dédié aux VL ?',
                                     'reponse' => 'espace dédié aux taries insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1679 => 
                                 array (
@@ -13458,6 +15137,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’hygiène générale du bâtiment des taries est-il aussi bon que celui des VL ? (densité, paillage, nature du paillage), Réalisez-vous une désinfection du bâtiment si besoin?',
                                     'reponse' => 'hygiène du bâtiment des taries insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1680 => 
                                 array (
@@ -13466,6 +15146,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ventilation du bâtiment est-elle correcte?',
                                     'reponse' => 'ventilation insuffisante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1681 => 
                                 array (
@@ -13474,6 +15155,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Observez-vous des zones de surdensité d\'animaux couchés au même endroit (autour du point d\'eau ou sous les arbres...) ?',
                                     'reponse' => 'zones de surdensité d\'animaux couchés au même endroit',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1682 => 
                                 array (
@@ -13482,6 +15164,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les box de vêlage et d\'isolement sont-ils proches de l\'aire paillée?',
                                     'reponse' => 'box de vêlage et d\'isolement loin de l\'aire paillée',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1683 => 
                                 array (
@@ -13490,6 +15173,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Respectez-vous une propreté élevée dans le box de vêlage et d\'isolement?',
                                     'reponse' => 'propreté non suffisante dans le box de vêlage et d\'isolement',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1684 => 
                                 array (
@@ -13498,6 +15182,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Assurez-vous une supplémentation adéquate en minéraux et vitamines pendant la période sèche?',
                                     'reponse' => 'supplémentation insuffisante en minéraux et vitamines pendant la période sèche',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1685 => 
                                 array (
@@ -13506,6 +15191,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Repérez-vous les animaux en fin de gestation ayant des pertes de lait ?',
                                     'reponse' => 'manque de vigilance sur les animaux ayant des pertes de lait en fin de gestation',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1686 => 
                                 array (
@@ -13514,6 +15200,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Attachez-vous de l’importance à la sélection des animaux sur le critère qualité des sphincters ?',
                                     'reponse' => 'pas de sélection des animaux sur le critère qualité des sphincters',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1687 => 
                                 array (
@@ -13522,6 +15209,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Êtes-vous vigilants sur la complémentation en oligoéléments sur la fin de gestation ?',
                                     'reponse' => 'manque de vigilance sur la complémentation en oligoéléments sur la fin de gestation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1688 => 
                                 array (
@@ -13530,6 +15218,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Détenez-vous plus de 50 % de vaches à risque (lésions à l\'extrémité des trayons, index CEL négatif, faisant des mammites souvent)',
                                     'reponse' => 'plus de 50% de vaches à risque',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1689 => 
                                 array (
@@ -13538,6 +15227,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Etes-vous vigilant au sujet de l’âge moyen du troupeau ?',
                                     'reponse' => 'manque de vigilance sur l\'âge moyen du troupeau',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1690 => 
                                 array (
@@ -13546,6 +15236,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous un protocole pour éviter que les génisses se tètent entre elles?',
                                     'reponse' => 'absence de protocole pour éviter que les génisses se tètent entre elles',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1691 => 
                                 array (
@@ -13554,6 +15245,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’espace dédié aux génisses pleines est-il aussi important que celui dédié aux laitières ?',
                                     'reponse' => 'espace pour génisses pleines insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1692 => 
                                 array (
@@ -13562,6 +15254,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’hygiène générale du bâtiment est-il aussi bon que celui des laitières ? (densité, paillage, nature du paillage), Réalisez-vous une désinfection du bâtiment si besoin?',
                                     'reponse' => 'hygiène insuffisante du bâtiment des génisses pleines',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1693 => 
                                 array (
@@ -13570,6 +15263,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ventilation du bâtiment est-elle correcte?',
                                     'reponse' => 'ventilation du bâtiment insuffisante',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1694 => 
                                 array (
@@ -13578,6 +15272,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Observez-vous des zones de surdensité d\'animaux couchés au même endroit (autour du point d\'eau ou sous les arbres...) ?',
                                     'reponse' => 'zones de surdensité d\'animaux couchés au même endroit',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1695 => 
                                 array (
@@ -13586,6 +15281,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les box de vêlage et d\'isolement sont-ils proche de l\'aire paillée?',
                                     'reponse' => 'box de vêlage et d\'isolement loin de l\'aire paillée',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1696 => 
                                 array (
@@ -13594,6 +15290,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Assurez-vous une supplémentation adéquate en minéraux et vitamines des génisses en fin de gestation ?',
                                     'reponse' => 'supplémentation insuffisante en minéraux et vitamines en fin de gestation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1697 => 
                                 array (
@@ -13602,6 +15299,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Assurez-vous une transition et progression alimentaire adaptées sur la fin de gestation/début de lactation des primipares ?',
                                     'reponse' => 'pas ou peu de transition alimentaire sur la fin de gestation/début de lactation des primipares',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1698 => 
                                 array (
@@ -13610,6 +15308,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les primipares se couchent-elles correctement dans les logettes?',
                                     'reponse' => 'les primipares ne se couchent pas correctement dans les logettes',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1699 => 
                                 array (
@@ -13618,6 +15317,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les primipares sont-elles battues par les vaches pour les accès à l’auge et à l’eau ?',
                                     'reponse' => 'primipares battues par les vaches pour les accès à l\'eau et à l\'auge',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1700 => 
                                 array (
@@ -13626,6 +15326,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Voir tous les volets décrits dans CCS tank élevés et prévalence élevée',
                                 'reponse' => '(voir taux cellulaire élevé et/ou prévalence mammites)',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1701 => 
                                 array (
@@ -13634,6 +15335,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de doute faites-vous réalisez une bactériologie individuelle pour rechercher des vaches excrétrices?',
                                     'reponse' => 'pas de bactériologie individuelle en cas de doute',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1702 => 
                                 array (
@@ -13642,6 +15344,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un nettoyage avant et une désinfection après la traite? Si oui, ces pratiques sont-elles correctement réalisées?',
                                     'reponse' => 'absence de nettoyage correcte avant ou de désinfection correcte après la traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1703 => 
                                 array (
@@ -13650,6 +15353,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous une installation de traite bien conçue? (pente du lactoduc incorrecte ou diamètre de lactoduc avec engorgements possibles)',
                                     'reponse' => 'installation de traite mal conçue',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1704 => 
                                 array (
@@ -13658,6 +15362,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous un protocole adapté pour pallier un défaut d\'entretien, de nettoyage du matériel de traite et de l\'installation?',
                                     'reponse' => 'absence de protocole pour pallier un défaut d\'entretien ou de nettoyage de matériel de traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1705 => 
                                 array (
@@ -13666,6 +15371,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’hygiène générale du bâtiment est-il correct? (densité, paillage, nature du paillage), Réalisez-vous une désinfection du bâtiment si besoin?',
                                     'reponse' => 'hygiène général du bâtiment insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1706 => 
                                 array (
@@ -13674,6 +15380,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Réalisez-vous un tri des aliments potentiellement contaminés ou des parties altérées (ensilage)?',
                                     'reponse' => 'pas de tri des aliments potentiellement contaminés',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1707 => 
                                 array (
@@ -13682,6 +15389,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un nettoyage régulier des abreuvoirs et des auges?',
                                     'reponse' => 'manque de nettoyage régulier des abreuvoirs et auges',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1708 => 
                                 array (
@@ -13690,6 +15398,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’hygiène générale du bâtiment est-il correct? (densité, paillage, nature du paillage), Réalisez-vous une désinfection du bâtiment si besoin?',
                                     'reponse' => 'hygiène général du bâtiment insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1709 => 
                                 array (
@@ -13698,6 +15407,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de doute faites-vous réalisez une bactériologie individuelle pour rechercher des vaches excrétrices?',
                                     'reponse' => 'pas de bactériologie individuelle en cas de doute',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1710 => 
                                 array (
@@ -13706,6 +15416,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un nettoyage avant et une désinfection après la traite? Si oui, ces pratiques sont-elles correctement réalisées?',
                                     'reponse' => 'absence de nettoyage correcte avant ou de désinfection correcte après la traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1711 => 
                                 array (
@@ -13714,6 +15425,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous une installation de traite bien conçue? (pente du lactoduc incorrecte ou diamètre de lactoduc avec engorgements possibles)',
                                     'reponse' => 'installation de traite mal conçue',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1712 => 
                                 array (
@@ -13722,6 +15434,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous un protocole adapté pour pallier un défaut d\'entretien, de nettoyage du matériel de traite et de l\'installation?',
                                     'reponse' => 'absence de protocole pour pallier un défaut d\'entretien ou de nettoyage de matériel de traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1713 => 
                                 array (
@@ -13730,6 +15443,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous un protocole adapté pour pallier un défaut d\'entretien, de nettoyage du matériel de traite et de l\'installation?',
                                     'reponse' => 'absence de protocole pour pallier un défaut d\'entretien ou de nettoyage de matériel de traite',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1714 => 
                                 array (
@@ -13738,6 +15452,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’hygiène générale du bâtiment est-il correct? (densité, paillage, nature du paillage), Réalisez-vous une désinfection du bâtiment si besoin?',
                                     'reponse' => 'hygiène général du bâtiment insuffisant',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1715 => 
                                 array (
@@ -13746,6 +15461,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un nettoyage avant et une désinfection après la traite? Si oui, ces pratiques sont-elles correctement réalisées?',
                                     'reponse' => 'absence de nettoyage correcte avant ou de désinfection correcte après la traite',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1716 => 
                                 array (
@@ -13754,6 +15470,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de doute faites-vous réalisez une bactériologie individuelle pour rechercher des vaches excrétrices? - mammites cliniques ou subcliniques',
                                     'reponse' => 'pas de bactériologie individuelle en cas de doute',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1717 => 
                                 array (
@@ -13762,6 +15479,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Faites-vous réalisez régulièrement un contrôle bactériologique de l\'eau? (boisson/lavage/…)',
                                     'reponse' => 'absence de contrôle bactériologique de l\'eau',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1718 => 
                                 array (
@@ -13770,6 +15488,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'cf. Reproduction / vêlage difficile',
                                 'reponse' => '(voir vêlages difficiles)',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1719 => 
                                 array (
@@ -13778,6 +15497,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Assurez-vous une bonne surveillance des vêlages et êtes-vous correctement équipé ?',
                                     'reponse' => 'surveillance insuffisante des vêlages, manque d\'équipement',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1720 => 
                                 array (
@@ -13786,6 +15506,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Êtes-vous équipé d\'un box de vêlage ?',
                                     'reponse' => 'absence de box de vêlage',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1721 => 
                                 array (
@@ -13794,6 +15515,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Maîtrisez-vous les techniques de réanimation à la naissance ?',
                                     'reponse' => 'techniques de réanimation à la naissance non maîtrisées',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1722 => 
                                 array (
@@ -13802,6 +15524,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Assurez-vous une surveillance biquotidienne de tous les veaux, si possible par la même personne ?',
                                     'reponse' => 'pas de surveillance biquotidienne de tous les veaux',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1723 => 
                                 array (
@@ -13810,6 +15533,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Des apports minéraux, vitamines, oligoéléments (sélénium, magnésium, …) sont-ils réalisés sur les vaches en fin de gestation ?',
                                     'reponse' => 'manque d\'apports en minéraux, vitamines, oligoéléments en fin de gestation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1724 => 
                                 array (
@@ -13818,6 +15542,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La quantité de colostrum bue est-elle sécurisée ?',
                                     'reponse' => 'quantité de colostrum bue non sécurisée',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1725 => 
                                 array (
@@ -13826,6 +15551,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Vérifiez-vous la qualité du colostrum avant de le donner au veau ? (avec un pèse colostrum ou un réfractomètre par exemple)',
                                     'reponse' => 'pas de vérification de la qualité du colostrum avant de le donner au veau',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1726 => 
                                 array (
@@ -13834,6 +15560,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous une banque de colostrum de qualité congelé ?',
                                     'reponse' => 'pas de banque de colostrum de qualité',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1727 => 
                                 array (
@@ -13842,6 +15569,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le lait distribué est-il à bonne température au moment de la buvée ou tétée ?',
                                     'reponse' => 'température du lait inadaptée lors de la buvée ou tétée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1728 => 
                                 array (
@@ -13850,6 +15578,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le lait distribué est-il issue de vaches traitées aux antibiotiques ?',
                                     'reponse' => 'lait distribué issu de vaches traitées aux antibiotiques',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1729 => 
                                 array (
@@ -13858,6 +15587,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Respectez-vous l\'équilibre de la ration complémentaire des veaux ?',
                                     'reponse' => 'ration complémentaire des veaux non équilibrée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1730 => 
                                 array (
@@ -13866,6 +15596,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'De l’eau de boisson est-elle à disposition ?',
                                     'reponse' => 'manque d\'eau à disposition pour les veaux',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1731 => 
                                 array (
@@ -13874,6 +15605,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La qualité bactériologique de l\'eau d\'abreuvement est-elle bonne et analysée régulièrement ? (si issue d’un prélèvement privé)',
                                     'reponse' => 'pas d\'analyse régulière de la qualité de l\'eau',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1732 => 
                                 array (
@@ -13882,6 +15614,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas d\'utilisation de la sonde à colostrum et/ou de la tétine du biberon, réalisez-vous une désinfection ?',
                                     'reponse' => 'pas de désinfection de la sonde à colostrum ou de la tétine du biberon',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1733 => 
                                 array (
@@ -13890,6 +15623,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un lavage des seaux après chaque repas, en évitant de les empiler avant qu\'ils ne soient secs?',
                                     'reponse' => 'pas de lavage des seaux après chaque repas ou mauvais séchage',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1734 => 
                                 array (
@@ -13898,6 +15632,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un nettoyage quotidien des tétines du DAL et leurs alentours?',
                                     'reponse' => 'pas de nettoyage des tétines du DAL et alentours',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1735 => 
                                 array (
@@ -13906,6 +15641,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas d\'achat de veaux, réalisez-vous une quarantaine, sans contact avec le reste du troupeau, tant que le statut sanitaire de ces derniers n\'est pas connu?',
                                     'reponse' => 'absence de quarantaine si achat de veaux',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1736 => 
                                 array (
@@ -13914,6 +15650,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de veau malade, veillez-vous à son confort thermique et à son alimentation & hydratation?',
                                     'reponse' => 'en cas de veau malade, confort thermique, alimentation et/ou hydratation insuffisants',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1737 => 
                                 array (
@@ -13922,6 +15659,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Réalisez-vous un traitement de façon précoce et adaptée (selon l\'origine de la diarrhée)?',
                                     'reponse' => 'absence de traitement précoce et adapté',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1738 => 
                                 array (
@@ -13930,6 +15668,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Disposez-vous d\'un local de vêlage curé, lavé et désinfecté entre chaque vêlage?',
                                     'reponse' => 'pas de local de vêlage, ou pas de désinfection du local entre chaque vêlage',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1739 => 
                                 array (
@@ -13938,6 +15677,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de maladies contagieuses disposez-vous de cases individuelles la première semaine puis de cases collectives avec une surface adaptée?',
                                     'reponse' => 'si maladies contagieuses, pas de cases individuelles la première semaine et/ou pas de cases collectives avec surface adaptée',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1740 => 
                                 array (
@@ -13946,6 +15686,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Limitez-vous l\'écart d\'âge dans un même lot à 3 semaines-1 mois maximum ?',
                                     'reponse' => 'écart d\'âge dans un même lot > à 1 mois',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1741 => 
                                 array (
@@ -13954,6 +15695,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un curage et un nettoyage après chaque veau et/ou entre chaque lot de veaux ?',
                                     'reponse' => 'pas de curage/nettoyage entre chaque lot de veaux',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1742 => 
                                 array (
@@ -13962,6 +15704,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Effectuez-vous un vide sanitaire au moins 1 fois/an : avec curage, lavage et désinfection?',
                                     'reponse' => 'absence de vide sanitaire annuel',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1743 => 
                                 array (
@@ -13970,6 +15713,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous plutôt des matériaux "chauds" pour les parois en contact avec les veaux (planche de bois, paille, murs de brique)?',
                                     'reponse' => 'matériaux froids pour les parois en contact avec les veaux',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1744 => 
                                 array (
@@ -13978,6 +15722,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Assurez-vous une bonne hygiène des box à veaux ?',
                                     'reponse' => 'hygiène insuffisante des box à veaux',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1745 => 
                                 array (
@@ -13986,6 +15731,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Respecter vous les protocoles de soins prescrits par votre vétérinaire lors d’un traitement ?',
                                     'reponse' => 'non respect des protocoles de soins prescrits par le vétérinaire',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1746 => 
                                 array (
@@ -13994,6 +15740,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment est-il bien ventilé et sain ?',
                                     'reponse' => 'bâtiment mal ventilé, ambiance pas saine',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1747 => 
                                 array (
@@ -14002,6 +15749,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Assurez-vous une surveillance biquotidienne de tous les veaux, si possible par la même personne ?',
                                     'reponse' => 'pas de surveillance biquotidienne de tous les veaux',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1748 => 
                                 array (
@@ -14010,6 +15758,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Des apports minéraux, vitamines, oligoéléments (sélénium, magnésium, …) sont-ils réalisés sur les vaches en fin de gestation ?',
                                     'reponse' => 'manque d\'apports en minéraux, vitamines, oligoéléments en fin de gestation',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1749 => 
                                 array (
@@ -14018,6 +15767,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La quantité de colostrum bue est-elle sécurisée ?',
                                     'reponse' => 'quantité de colostrum bue non sécurisée',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1750 => 
                                 array (
@@ -14026,6 +15776,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Vérifiez-vous la qualité du colostrum avant de le donner au veau ? (avec un pèse colostrum ou un réfractomètre par exemple)',
                                     'reponse' => 'pas de vérification de la qualité du colostrum avant de le donner au veau',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1751 => 
                                 array (
@@ -14034,6 +15785,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Possédez-vous une banque de colostrum de qualité congelé ?',
                                     'reponse' => 'pas de banque de colostrum de qualité',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1752 => 
                                 array (
@@ -14042,6 +15794,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le lait distribué est-il à bonne température au moment de la buvée ou tétée ?',
                                     'reponse' => 'température du lait inadaptée lors de la buvée ou tétée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1753 => 
                                 array (
@@ -14050,6 +15803,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le lait distribué est-il issue de vaches traitées aux antibiotiques ?',
                                     'reponse' => 'lait distribué issu de vaches traitées aux antibiotiques',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1754 => 
                                 array (
@@ -14058,6 +15812,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Respectez-vous l\'équilibre de la ration complémentaire des veaux ?',
                                     'reponse' => 'ration complémentaire des veaux non équilibrée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1755 => 
                                 array (
@@ -14066,6 +15821,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'De l’eau de boisson est-elle à disposition ?',
                                     'reponse' => 'manque d\'eau à disposition pour les veaux',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1756 => 
                                 array (
@@ -14074,6 +15830,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La qualité bactériologique de l\'eau d\'abreuvement est-elle bonne et analysée régulièrement ? (si issue d’un prélèvement privé)',
                                     'reponse' => 'pas d\'analyse régulière de la qualité de l\'eau',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1757 => 
                                 array (
@@ -14082,6 +15839,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas d\'utilisation de la sonde à colostrum et/ou de la tétine du biberon, réalisez-vous une désinfection ?',
                                     'reponse' => 'pas de désinfection de la sonde à colostrum ou de la tétine du biberon',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1758 => 
                                 array (
@@ -14090,6 +15848,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un lavage des seaux après chaque repas, en évitant de les empiler avant qu\'ils ne soient secs?',
                                     'reponse' => 'pas de lavage des seaux après chaque repas ou mauvais séchage',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1759 => 
                                 array (
@@ -14098,6 +15857,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un nettoyage quotidien des tétines du DAL et leurs alentours?',
                                     'reponse' => 'pas de nettoyage des tétines du DAL et alentours',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1760 => 
                                 array (
@@ -14106,6 +15866,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas d\'achat de veaux, réalisez-vous une quarantaine, sans contact avec le reste du troupeau, tant que le statut sanitaire de ces derniers n\'est pas connu?',
                                     'reponse' => 'absence de quarantaine si achat de veaux',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1761 => 
                                 array (
@@ -14114,6 +15875,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de veau malade, veillez-vous à son confort thermique et à son alimentation & hydratation?',
                                     'reponse' => 'en cas de veau malade, confort thermique, alimentation et/ou hydratation insuffisants',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1762 => 
                                 array (
@@ -14122,6 +15884,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Réalisez-vous un traitement de façon précoce et adaptée (selon l\'origine de la diarrhée)?',
                                     'reponse' => 'absence de traitement précoce et adapté',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1763 => 
                                 array (
@@ -14130,6 +15893,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Disposez-vous d\'un local de vêlage curé, lavé et désinfecté entre chaque vêlage?',
                                     'reponse' => 'pas de local de vêlage, ou pas de désinfection du local entre chaque vêlage',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1764 => 
                                 array (
@@ -14138,6 +15902,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de maladies contagieuses disposez-vous de cases individuelles la première semaine puis de cases collectives avec une surface adaptée?',
                                     'reponse' => 'si maladies contagieuses, pas de cases individuelles la première semaine et/ou pas de cases collectives avec surface adaptée',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1765 => 
                                 array (
@@ -14146,6 +15911,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Limitez-vous l\'écart d\'âge dans un même lot à 3 semaines-1 mois maximum ?',
                                     'reponse' => 'écart d\'âge dans un même lot > à 1 mois',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1766 => 
                                 array (
@@ -14154,6 +15920,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un curage et un nettoyage après chaque veau et/ou entre chaque lot de veaux ?',
                                     'reponse' => 'pas de curage/nettoyage entre chaque lot de veaux',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1767 => 
                                 array (
@@ -14162,6 +15929,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Effectuez-vous un vide sanitaire au moins 1 fois/an : avec curage, lavage et désinfection?',
                                     'reponse' => 'absence de vide sanitaire annuel',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1768 => 
                                 array (
@@ -14170,6 +15938,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous plutôt des matériaux "chauds" pour les parois en contact avec les veaux (planche de bois, paille, murs de brique)?',
                                     'reponse' => 'matériaux froids pour les parois en contact avec les veaux',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1769 => 
                                 array (
@@ -14178,6 +15947,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Assurez-vous une bonne hygiène des box à veaux ?',
                                     'reponse' => 'hygiène insuffisante des box à veaux',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1770 => 
                                 array (
@@ -14186,6 +15956,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Respecter vous les protocoles de soins prescrits par votre vétérinaire lors d’un traitement ?',
                                     'reponse' => 'non respect des protocoles de soins prescrits par le vétérinaire',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1771 => 
                                 array (
@@ -14194,6 +15965,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment est-il bien ventilé et sain ?',
                                     'reponse' => 'bâtiment mal ventilé, ambiance pas saine',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1772 => 
                                 array (
@@ -14202,6 +15974,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous une désinfection du nombril avec une solution iodée le plus tôt possible après la naissance et avec des gants ?',
                                     'reponse' => 'pas de désinfection correcte du nombril',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1773 => 
                                 array (
@@ -14210,6 +15983,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les apports en oligoéléments à la mère sont-ils suffisants ?',
                                     'reponse' => 'apports en oligoéléments insuffisants pour la mère',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1774 => 
                                 array (
@@ -14218,6 +15992,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Disposez-vous d\'un local de vêlage curé, lavé et désinfecté entre chaque vêlage?',
                                     'reponse' => 'pas de local de vêlage désinfecté entre chaque vêlage',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1775 => 
                                 array (
@@ -14226,6 +16001,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Assurez-vous une surveillance biquotidienne de tous les veaux, si possible par la même personne ?',
                                     'reponse' => 'pas de surveillance biquotidienne de tous les veaux',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1776 => 
                                 array (
@@ -14234,6 +16010,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Assurez-vous une bonne prise colostrale en toutes circonstances (vêlage la nuit) dans les 6h suivant le vêlage?',
                                     'reponse' => 'prise colostrale pas toujours dans les 6h suivants le vêlage',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1777 => 
                                 array (
@@ -14242,6 +16019,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous un curage et un nettoyage du box de vêlage et de la case à veaux après chaque veau et/ou entre chaque lot de veaux',
                                     'reponse' => 'pas de curage/nettoyage systématique du box de vêlage ou de la case à veaux après chaque passage',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1778 => 
                                 array (
@@ -14250,6 +16028,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Effectuez-vous un vide sanitaire au moins 1 fois/an du box de vêlage et de la nurserie : avec curage, lavage et désinfection?',
                                     'reponse' => 'absence de vide sanitaire annuel des box de vêlage et nurserie',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1779 => 
                                 array (
@@ -14258,6 +16037,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le lait distribué est-il à bonne température ?',
                                     'reponse' => 'température du lait distribué pas adaptée',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1780 => 
                                 array (
@@ -14266,6 +16046,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le lait distribué est-il digeste ? (présence de résidus d’antibiotique, lait trop concentré, …)',
                                     'reponse' => 'lait distribué pas suffisamment digeste',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1781 => 
                                 array (
@@ -14274,6 +16055,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Distribuez-vous le lait en au moins 2 repas/jour les 30 premiers jours de vie minimum ?',
                                 'reponse' => 'repas unique (lait) les 30 premiers jours de vie',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1782 => 
                                 array (
@@ -14282,6 +16064,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'De l’eau de boisson est-elle à disposition ?',
                                     'reponse' => 'pas d\'eau de boisson à disposition',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1783 => 
                                 array (
@@ -14290,6 +16073,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'La qualité bactériologique de l\'eau d\'abreuvement est-elle bonne et analysée régulièrement ? (si issue d’un prélèvement privé)',
                                     'reponse' => 'manque d\'analyse régulière de la qualité bactériologique de l\'eau',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1784 => 
                                 array (
@@ -14298,6 +16082,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La complémentation des veaux durant la phase lactée est-elle adaptée ? La transition alimentaire est-elle respectée avec des aliments fibreux ?',
                                     'reponse' => 'complémentation des veaux non adaptée pendant la phase lactée et/ou transition alimentaire absente',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1785 => 
                                 array (
@@ -14306,6 +16091,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Rencontrez-vous des problèmes de coccidiose ? (selles avec traces de sang)',
                                     'reponse' => 'problèmes de coccidiose',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1786 => 
                                 array (
@@ -14314,6 +16100,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les veaux sont-ils dans de bonne condition de confort de logement ? (épaisseur de la litière, propreté du logement, température stable et hygrométrie)',
                                     'reponse' => 'mauvaises conditions de confort de logement pour les veaux',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1787 => 
                                 array (
@@ -14322,6 +16109,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous neutralisé les bétons neufs de la nurserie avec de l’acide ?',
                                     'reponse' => 'absence de neutralisation des bétons neufs avec de l\'acide',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1788 => 
                                 array (
@@ -14330,6 +16118,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment est-il bien ventilé, sans courant d’air, ni froid ?',
                                     'reponse' => 'bâtiment mal ventilé, ou courant d\'air, froid',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1789 => 
                                 array (
@@ -14338,6 +16127,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En bâtiment fermé, assurez-vous un bon renouvellement de l\'air pour évacuer l\'humidité dégagée par les animaux et la litière?',
                                     'reponse' => 'mauvais renouvellement de l\'air pour évacuer l\'humidité dégagée',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1790 => 
                                 array (
@@ -14346,6 +16136,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La densité d\'animaux correspond-elle au volume d\'air disponible ?',
                                     'reponse' => 'densité d\'animaux trop importante vis-à-vis du volume d\'air disponible',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1791 => 
                                 array (
@@ -14354,6 +16145,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il des mélanges d\'animaux provenant de différents lots/lieux et de différents âges ?',
                                     'reponse' => 'mélange d\'animaux provenant de différents lots/lieux/âges',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1792 => 
                                 array (
@@ -14362,6 +16154,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Effectuez-vous un vide sanitaire au moins 1 fois/an : avec curage, lavage et désinfection?',
                                     'reponse' => 'absence de vide sanitaire annuel',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1793 => 
                                 array (
@@ -14370,6 +16163,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les cases à veaux permettent-elles un maintien d’une bonne température ?',
                                     'reponse' => 'les cases à veaux n\'assurent pas le maintien d\'une bonne température',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1794 => 
                                 array (
@@ -14378,6 +16172,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Possédez-vous plutôt des matériaux "chauds" pour les parois en contact avec les veaux (planche de bois, paille, murs de brique)?',
                                     'reponse' => 'matériaux froids pour les parois en contact avec les veaux',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1795 => 
                                 array (
@@ -14386,6 +16181,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas d\'achat de veaux, réalisez-vous une quarantaine, sans contact avec le reste du troupeau, tant que le statut sanitaire de ces derniers n\'est pas connu?',
                                     'reponse' => 'pas de quarantaine si achat de veaux',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1796 => 
                                 array (
@@ -14394,6 +16190,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'En cas de veau malade, veillez-vous à son confort thermique et à son alimentation & hydratation?',
                                     'reponse' => 'si veau malade, manque de vigilance sur son confort thermique, son alimentation et hydratation',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1797 => 
                                 array (
@@ -14402,6 +16199,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Effectuez-vous des apports complémentaires d’accompagnement avant ou lors de l\'allotement ?',
                                     'reponse' => 'pas d\'apport complémentaire avant ou lors de l\'allotement',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1798 => 
                                 array (
@@ -14410,6 +16208,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Assurez-vous une bonne prise colostrale en toutes circonstances (vêlage la nuit) dans les 6h suivant le vêlage?',
                                     'reponse' => 'prise colostrale pas toujours dans les 6h suivants le vêlage',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1799 => 
                                 array (
@@ -14418,6 +16217,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Remplissez-vous un calendrier de pâturage pour bien gérer les rotations de lots d’animaux dans chaque parcelle ?',
                                     'reponse' => 'pas de calendrier de pâturage',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1800 => 
                                 array (
@@ -14426,6 +16226,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Votre gestion de pâturage prévoit d\'éviter les croisements d\'animaux d\'âge différent ?',
                                     'reponse' => 'croisements d\'animaux d\'âge différent sur les pâtures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1801 => 
                                 array (
@@ -14434,6 +16235,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils bien retirés des pâtures à une hauteur d\'herbe > 6 cm ? ',
                                     'reponse' => 'hauteur laissés dans les pâtures à une hauteur d\'herbe<6cm',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1802 => 
                                 array (
@@ -14442,6 +16244,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous l\'alternance fauche/pâture ?',
                                     'reponse' => 'pas d\'alternance fauche / pâture',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1803 => 
                                 array (
@@ -14450,6 +16253,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les zones humides et mares sont-elles accessibles aux animaux ?',
                                     'reponse' => 'mares et zones humides accessibles aux animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1804 => 
                                 array (
@@ -14458,6 +16262,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle équilibrée et suffisante ?',
                                     'reponse' => 'ration déséquilibrée ou insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1805 => 
                                 array (
@@ -14466,6 +16271,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Apportez-vous un soutien des fonctions immunitaires avec des plantes ?',
                                     'reponse' => 'pas de soutien des fonctions immunitaires avec des plantes',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1806 => 
                                 array (
@@ -14474,6 +16280,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’eau de boisson est-elle facilement accessible et potable ?',
                                     'reponse' => 'eau de boisson difficilement accessible ou non potable',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1807 => 
                                 array (
@@ -14482,6 +16289,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Optimisez-vous l\'efficacité du traitement en faisant correspondre date de traitement et cycle du parasite ?',
                                     'reponse' => 'lors de traitement, pas de correspondance entre date de traitement et cycle de parasite',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1808 => 
                                 array (
@@ -14490,6 +16298,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous de la surveillance coproscopique et/ou clinique ?',
                                     'reponse' => 'pas de surveillance coproscopique ou clinique',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1809 => 
                                 array (
@@ -14498,6 +16307,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous le traitement antiparasitaire non systématique ?',
                                     'reponse' => 'traitement antiparasitaire non systématique',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1810 => 
                                 array (
@@ -14506,6 +16316,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Remplissez-vous un calendrier de pâturage pour bien gérer les rotations de lots d’animaux dans chaque parcelle ?',
                                     'reponse' => 'pas de calendrier de pâturage',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1811 => 
                                 array (
@@ -14514,6 +16325,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Votre gestion de pâturage prévoit d\'éviter les croisements d\'animaux d\'âge différent ?',
                                     'reponse' => 'croisements d\'animaux d\'âge différent sur les pâtures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1812 => 
                                 array (
@@ -14522,6 +16334,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils bien retirés des pâtures à une hauteur d\'herbe > 6 cm ? ',
                                     'reponse' => 'hauteur laissés dans les pâtures à une hauteur d\'herbe<6cm',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1813 => 
                                 array (
@@ -14530,6 +16343,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous l\'alternance fauche/pâture ?',
                                     'reponse' => 'pas d\'alternance fauche / pâture',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1814 => 
                                 array (
@@ -14538,6 +16352,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les zones humides et mares sont-elles accessibles aux animaux ?',
                                     'reponse' => 'mares et zones humides accessibles aux animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1815 => 
                                 array (
@@ -14546,6 +16361,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle équilibrée et suffisante ?',
                                     'reponse' => 'ration déséquilibrée ou insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1816 => 
                                 array (
@@ -14554,6 +16370,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Apportez-vous un soutien des fonctions immunitaires avec des plantes ?',
                                     'reponse' => 'pas de soutien des fonctions immunitaires avec des plantes',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1817 => 
                                 array (
@@ -14562,6 +16379,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’eau de boisson est-elle facilement accessible et potable ?',
                                     'reponse' => 'eau de boisson difficilement accessible ou non potable',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1818 => 
                                 array (
@@ -14570,6 +16388,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Optimisez-vous l\'efficacité du traitement en faisant correspondre date de traitement et cycle du parasite ?',
                                     'reponse' => 'lors de traitement, pas de correspondance entre date de traitement et cycle de parasite',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1819 => 
                                 array (
@@ -14578,6 +16397,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous de la surveillance coproscopique et/ou clinique ?',
                                     'reponse' => 'pas de surveillance coproscopique ou clinique',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1820 => 
                                 array (
@@ -14586,6 +16406,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous le traitement antiparasitaire non systématique ?',
                                     'reponse' => 'traitement antiparasitaire non systématique',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1821 => 
                                 array (
@@ -14594,6 +16415,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Remplissez-vous un calendrier de pâturage pour bien gérer les rotations de lots d’animaux dans chaque parcelle ?',
                                     'reponse' => 'pas de calendrier de pâturage',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1822 => 
                                 array (
@@ -14602,6 +16424,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Votre gestion de pâturage prévoit d\'éviter les croisements d\'animaux d\'âge différent ?',
                                     'reponse' => 'croisements d\'animaux d\'âge différent sur les pâtures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1823 => 
                                 array (
@@ -14610,6 +16433,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils bien retirés des pâtures à une hauteur d\'herbe > 6 cm ? ',
                                     'reponse' => 'hauteur laissés dans les pâtures à une hauteur d\'herbe<6cm',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1824 => 
                                 array (
@@ -14618,6 +16442,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous l\'alternance fauche/pâture ?',
                                     'reponse' => 'pas d\'alternance fauche / pâture',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1825 => 
                                 array (
@@ -14626,6 +16451,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les zones humides et mares sont-elles accessibles aux animaux ?',
                                     'reponse' => 'mares et zones humides accessibles aux animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1826 => 
                                 array (
@@ -14634,6 +16460,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle équilibrée et suffisante ?',
                                     'reponse' => 'ration déséquilibrée ou insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1827 => 
                                 array (
@@ -14642,6 +16469,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Apportez-vous un soutien des fonctions immunitaires avec des plantes ?',
                                     'reponse' => 'pas de soutien des fonctions immunitaires avec des plantes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1828 => 
                                 array (
@@ -14650,6 +16478,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’eau de boisson est-elle facilement accessible et potable ?',
                                     'reponse' => 'eau de boisson difficilement accessible ou non potable',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1829 => 
                                 array (
@@ -14658,6 +16487,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Optimisez-vous l\'efficacité du traitement en faisant correspondre date de traitement et cycle du parasite ?',
                                     'reponse' => 'lors de traitement, pas de correspondance entre date de traitement et cycle de parasite',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1830 => 
                                 array (
@@ -14666,6 +16496,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous de la surveillance coproscopique et/ou clinique ?',
                                     'reponse' => 'pas de surveillance coproscopique ou clinique',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1831 => 
                                 array (
@@ -14674,6 +16505,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous le traitement antiparasitaire non systématique ?',
                                     'reponse' => 'traitement antiparasitaire non systématique',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1832 => 
                                 array (
@@ -14682,6 +16514,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Remplissez-vous un calendrier de pâturage pour bien gérer les rotations de lots d’animaux dans chaque parcelle ?',
                                     'reponse' => 'pas de calendrier de pâturage',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1833 => 
                                 array (
@@ -14690,6 +16523,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Votre gestion de pâturage prévoit d\'éviter les croisements d\'animaux d\'âge différent ?',
                                     'reponse' => 'croisements d\'animaux d\'âge différent sur les pâtures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1834 => 
                                 array (
@@ -14698,6 +16532,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils bien retirés des pâtures à une hauteur d\'herbe > 6 cm ? ',
                                     'reponse' => 'hauteur laissés dans les pâtures à une hauteur d\'herbe<6cm',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1835 => 
                                 array (
@@ -14706,6 +16541,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous l\'alternance fauche/pâture ?',
                                     'reponse' => 'pas d\'alternance fauche / pâture',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1836 => 
                                 array (
@@ -14714,6 +16550,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les zones humides et mares sont-elles accessibles aux animaux ?',
                                     'reponse' => 'mares et zones humides accessibles aux animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1837 => 
                                 array (
@@ -14722,6 +16559,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle équilibrée et suffisante ?',
                                     'reponse' => 'ration déséquilibrée ou insuffisante',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1838 => 
                                 array (
@@ -14730,6 +16568,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Apportez-vous un soutien des fonctions immunitaires avec des plantes ?',
                                     'reponse' => 'pas de soutien des fonctions immunitaires avec des plantes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1839 => 
                                 array (
@@ -14738,6 +16577,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’eau de boisson est-elle facilement accessible et potable ?',
                                     'reponse' => 'eau de boisson difficilement accessible ou non potable',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1840 => 
                                 array (
@@ -14746,6 +16586,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Optimisez-vous l\'efficacité du traitement en faisant correspondre date de traitement et cycle du parasite ?',
                                     'reponse' => 'lors de traitement, pas de correspondance entre date de traitement et cycle de parasite',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1841 => 
                                 array (
@@ -14754,6 +16595,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous de la surveillance coproscopique et/ou clinique ?',
                                     'reponse' => 'pas de surveillance coproscopique ou clinique',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1842 => 
                                 array (
@@ -14762,6 +16604,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous le traitement antiparasitaire non systématique ?',
                                     'reponse' => 'traitement antiparasitaire non systématique',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1843 => 
                                 array (
@@ -14770,6 +16613,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Prenez-vous des précautions particulières sur le pâturage des jeunes en première année de pâture ?',
                                     'reponse' => 'pas de précaution particulière sur le pâturage des jeunes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1844 => 
                                 array (
@@ -14778,6 +16622,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Mélangez-vous des animaux d’âge différents ?',
                                     'reponse' => 'mélange d\'animaux d\'âge différents',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1845 => 
                                 array (
@@ -14786,6 +16631,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous l\'éducation parasitaire ? (sorties avant 1ère vêlage, choix des parcelles,..)',
                                     'reponse' => 'éducation parasitaire non pratiquée',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1846 => 
                                 array (
@@ -14794,6 +16640,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous un îlot spécifique réservé pour le pâturage des jeunes ?',
                                     'reponse' => 'pas d\'îlot spécifique réservé au pâturage des jeunes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1847 => 
                                 array (
@@ -14802,6 +16649,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous mis en place une stratégie avec votre vétérinaire pour favoriser le développement de l’immunité de vos animaux ?',
                                     'reponse' => 'pas de stratégie favorisant le développement de l\'immunité',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1848 => 
                                 array (
@@ -14810,6 +16658,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils bien retirés des pâtures à une hauteur d\'herbe > 6 cm ?',
                                     'reponse' => 'hauteur laissés dans les pâtures à une hauteur d\'herbe < 6cm',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1849 => 
                                 array (
@@ -14818,6 +16667,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous un vide sanitaire et une désinfection des bâtiments d’élevage ?',
                                     'reponse' => 'absence de vide sanitaire ou désinfection des bâtiments',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1850 => 
                                 array (
@@ -14826,6 +16676,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous de la surveillance coproscopique et/ou clinique de manière régulière ?',
                                     'reponse' => 'pas de surveillance coproscopique ou clinique',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1851 => 
                                 array (
@@ -14834,6 +16685,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Prenez-vous des précautions particulières sur le pâturage des jeunes en première année de pâture ?',
                                     'reponse' => 'pas de précaution particulière sur le pâturage des jeunes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1852 => 
                                 array (
@@ -14842,6 +16694,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Mélangez-vous des animaux d’âge différents ?',
                                     'reponse' => 'mélange d\'animaux d\'âge différents',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1853 => 
                                 array (
@@ -14850,6 +16703,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Pratiquez-vous l\'éducation parasitaire ? (sorties avant 1ère vêlage, choix des parcelles,..)',
                                     'reponse' => 'éducation parasitaire non pratiquée',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1854 => 
                                 array (
@@ -14858,6 +16712,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous un îlot spécifique réservé pour le pâturage des jeunes ?',
                                     'reponse' => 'pas d\'îlot spécifique réservé au pâturage des jeunes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1855 => 
                                 array (
@@ -14866,6 +16721,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous mis en place une stratégie avec votre vétérinaire pour favoriser le développement de l’immunité de vos animaux ?',
                                     'reponse' => 'pas de stratégie favorisant le développement de l\'immunité',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1856 => 
                                 array (
@@ -14874,6 +16730,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils bien retirés des pâtures à une hauteur d\'herbe > 6 cm ?',
                                     'reponse' => 'hauteur laissés dans les pâtures à une hauteur d\'herbe < 6cm',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1857 => 
                                 array (
@@ -14882,6 +16739,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous un vide sanitaire et une désinfection des bâtiments d’élevage ?',
                                     'reponse' => 'absence de vide sanitaire ou désinfection des bâtiments',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1858 => 
                                 array (
@@ -14890,6 +16748,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous de la surveillance coproscopique et/ou clinique de manière régulière ?',
                                     'reponse' => 'pas de surveillance coproscopique ou clinique',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1859 => 
                                 array (
@@ -14898,6 +16757,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Mettez-vous en place une surveillance quotidienne des animaux malades?',
                                     'reponse' => 'pas de surveillance quotidienne des animaux malades',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1860 => 
                                 array (
@@ -14906,6 +16766,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu des changements météorologiques brusques précédents les problèmes ?',
                                     'reponse' => 'changements météorologiques brusques précédents les problèmes',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1861 => 
                                 array (
@@ -14914,6 +16775,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils empêchés d’accéder à des zones très humides, mares, marécages dans les pâtures ?',
                                     'reponse' => 'accès aux zones humides',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1862 => 
                                 array (
@@ -14922,6 +16784,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Mettez-vous en place une surveillance quotidienne des animaux malades?',
                                     'reponse' => 'pas de surveillance quotidienne des animaux malades',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1863 => 
                                 array (
@@ -14930,6 +16793,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu des changements météorologiques brusques précédents les problèmes ?',
                                     'reponse' => 'changements météorologiques brusques précédents les problèmes',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1864 => 
                                 array (
@@ -14938,6 +16802,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils empêchés d’accéder à des zones très humides, mares, marécages dans les pâtures ?',
                                     'reponse' => 'accès aux zones humides',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1865 => 
                                 array (
@@ -14946,6 +16811,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Temps de pâturage insuffisant de génisses pour l’acquisition d’une immunité contre les strongles',
                                     'reponse' => 'Temps de pâturage insuffisant de génisses pour l’acquisition d’une immunité contre les strongles',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1866 => 
                                 array (
@@ -14954,6 +16820,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux ont-ils accès à de l\'eau propre : réseau, puits, fontaine, pompe de prairies ?',
                                     'reponse' => 'pas d\'accès à de l\'eau propre',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1867 => 
                                 array (
@@ -14962,6 +16829,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils bien retirés des pâtures à une hauteur d\'herbe > 6 cm ?',
                                     'reponse' => 'hauteur laissés dans les pâtures à une hauteur d\'herbe < 6cm',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1868 => 
                                 array (
@@ -14970,6 +16838,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Assurez-vous une surveillance du troupeau régulière et suffisante ?',
                                     'reponse' => 'surveillance du troupeau irrégulière ou insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1869 => 
                                 array (
@@ -14978,6 +16847,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Recherchez-vous les parasites par analyse sanguine ?',
                                     'reponse' => 'pas de recherche de parasite par analyse sanguine',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1870 => 
                                 array (
@@ -14986,6 +16856,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux ont-ils accès à de l\'eau propre : réseau, puits, fontaine, pompe de prairies ?',
                                     'reponse' => 'pas d\'accès à de l\'eau propre',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1871 => 
                                 array (
@@ -14994,6 +16865,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils bien retirés des pâtures à une hauteur d\'herbe > 6 cm ?',
                                     'reponse' => 'hauteur laissés dans les pâtures à une hauteur d\'herbe < 6cm',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1872 => 
                                 array (
@@ -15002,6 +16874,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Assurez-vous une surveillance du troupeau régulière et suffisante ?',
                                     'reponse' => 'surveillance du troupeau irrégulière ou insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1873 => 
                                 array (
@@ -15010,6 +16883,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Recherchez-vous les parasites par analyse sanguine ?',
                                     'reponse' => 'pas de recherche de parasite par analyse sanguine',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1874 => 
                                 array (
@@ -15018,6 +16892,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux ont-ils accès à de l\'eau propre : réseau, puits, fontaine, pompe de prairies ?',
                                     'reponse' => 'pas d\'accès à de l\'eau propre',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1875 => 
                                 array (
@@ -15026,6 +16901,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils bien retirés des pâtures à une hauteur d\'herbe > 6 cm ?',
                                     'reponse' => 'hauteur laissés dans les pâtures à une hauteur d\'herbe < 6cm',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1876 => 
                                 array (
@@ -15034,6 +16910,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Assurez-vous une surveillance du troupeau régulière et suffisante ?',
                                     'reponse' => 'surveillance du troupeau irrégulière ou insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1877 => 
                                 array (
@@ -15042,6 +16919,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Recherchez-vous les parasites par analyse sanguine ?',
                                     'reponse' => 'pas de recherche de parasite par analyse sanguine',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1878 => 
                                 array (
@@ -15050,6 +16928,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux ont-ils accès à de l\'eau propre : réseau, puits, fontaine, pompe de prairies ?',
                                     'reponse' => 'pas d\'accès à de l\'eau propre',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1879 => 
                                 array (
@@ -15058,6 +16937,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les animaux sont-ils bien retirés des pâtures à une hauteur d\'herbe > 6 cm ?',
                                     'reponse' => 'hauteur laissés dans les pâtures à une hauteur d\'herbe < 6cm',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1880 => 
                                 array (
@@ -15066,6 +16946,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Assurez-vous une surveillance du troupeau régulière et suffisante ?',
                                     'reponse' => 'surveillance du troupeau irrégulière ou insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1881 => 
                                 array (
@@ -15074,6 +16955,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Recherchez-vous les parasites par analyse sanguine ?',
                                     'reponse' => 'pas de recherche de parasite par analyse sanguine',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1882 => 
                                 array (
@@ -15082,6 +16964,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Pratiquez-vous la désinfection et ou le vide sanitaire des bâtiments d’élevage ?',
                                     'reponse' => 'absence de vide sanitaire ou désinfection des bâtiments',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1883 => 
                                 array (
@@ -15090,6 +16973,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Réalisez-vous une lutte contre les mouches dans vos bâtiments et sur vos animaux?',
                                     'reponse' => 'pas de lutte contre les mouches',
                                     'categorie_id' => 3,
+                                    'supprimable' => 1,
                                 ),
                                 1884 => 
                                 array (
@@ -15098,6 +16982,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'En cas d\'achat, vérifiez-vous l’absence de parasites externes sur les animaux? (poux, gale,…)',
                                     'reponse' => 'si achat, pas de vérification de l\'absence de parasites externes',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1885 => 
                                 array (
@@ -15106,6 +16991,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Vos animaux peuvent-ils être en contact avec des animaux d\'autres espèces ou d\'autres troupeaux?',
                                     'reponse' => 'contact avec des animaux d\'autres espèces',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1886 => 
                                 array (
@@ -15114,6 +17000,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration présente-t-elle un excès d\'amidon ou sucres dans la ration ?',
                                     'reponse' => 'excès d\'amidon ou sucres dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1887 => 
                                 array (
@@ -15122,6 +17009,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration présente-t-elle un manque de fibrosité ?',
                                     'reponse' => 'manque de fibrosité dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1888 => 
                                 array (
@@ -15130,6 +17018,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration présente-t-elle un déficit énergétique ?',
                                     'reponse' => 'déficit énergétique dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1889 => 
                                 array (
@@ -15138,6 +17027,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les bétons neufs ont-ils été neutralisés ?',
                                     'reponse' => 'bétons neufs non neutralisés',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1890 => 
                                 array (
@@ -15146,6 +17036,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment présente-t-il une humidité permanente sur les sols ? raclées ?',
                                     'reponse' => 'humidité permanente sur les sols',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1891 => 
                                 array (
@@ -15154,6 +17045,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le raclage des aires de vie est-il suffisamment fréquent ?',
                                     'reponse' => 'raclage des aires de vie pas assez fréquent',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1892 => 
                                 array (
@@ -15162,6 +17054,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La sélection du troupeau est-elle axée sur les aptitudes fonctionnelles ?',
                                     'reponse' => 'sélection pas axée sur les aptitudes fonctionnelles',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1893 => 
                                 array (
@@ -15170,6 +17063,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il des cailloux, silex sur les chemins d\'accès ?',
                                     'reponse' => 'cailloux et silex sur les chemins d\'accès',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1894 => 
                                 array (
@@ -15178,6 +17072,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Faites-vous intervenir le pareur 2 fois par an ?',
                                     'reponse' => 'intervention du pareur pas assez fréquente',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1895 => 
                                 array (
@@ -15186,6 +17081,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Êtes-vous équipé d’un pédiluve ? L’utilisez-vous régulièrement ?',
                                     'reponse' => 'pas de ou pas utilisé régulièrement',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1896 => 
                                 array (
@@ -15194,6 +17090,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Utilisez-vous une cage de parage facilement ?',
                                     'reponse' => 'cage de parage difficilement utilisée',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1897 => 
                                 array (
@@ -15202,6 +17099,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous suivi une formation de parage bovin ?',
                                     'reponse' => 'manque de formation sur le parage bovin',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1898 => 
                                 array (
@@ -15210,6 +17108,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration présente-t-elle un excès d\'amidon ou sucres dans la ration ?',
                                     'reponse' => 'excès d\'amidon ou sucres dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1899 => 
                                 array (
@@ -15218,6 +17117,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration présente-t-elle un manque de fibrosité ?',
                                     'reponse' => 'manque de fibrosité dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1900 => 
                                 array (
@@ -15226,6 +17126,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration présente-t-elle un déficit énergétique ?',
                                     'reponse' => 'déficit énergétique dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1901 => 
                                 array (
@@ -15234,6 +17135,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les bétons neufs ont-ils été neutralisés ?',
                                     'reponse' => 'bétons neufs non neutralisés',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1902 => 
                                 array (
@@ -15242,6 +17144,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment présente-t-il une humidité permanente sur les sols ? raclées ?',
                                     'reponse' => 'humidité permanente sur les sols',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1903 => 
                                 array (
@@ -15250,6 +17153,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le raclage des aires de vie est-il suffisamment fréquent ?',
                                     'reponse' => 'raclage des aires de vie pas assez fréquent',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1904 => 
                                 array (
@@ -15258,6 +17162,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La sélection du troupeau est-elle axée sur les aptitudes fonctionnelles ?',
                                     'reponse' => 'sélection pas axée sur les aptitudes fonctionnelles',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1905 => 
                                 array (
@@ -15266,6 +17171,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il des cailloux, silex sur les chemins d\'accès ?',
                                     'reponse' => 'cailloux et silex sur les chemins d\'accès',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1906 => 
                                 array (
@@ -15274,6 +17180,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Faites-vous intervenir le pareur 2 fois par an ?',
                                     'reponse' => 'intervention du pareur pas assez fréquente',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1907 => 
                                 array (
@@ -15282,6 +17189,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Êtes-vous équipé d’un pédiluve ? L’utilisez-vous régulièrement ?',
                                     'reponse' => 'pas de ou pas utilisé régulièrement',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1908 => 
                                 array (
@@ -15290,6 +17198,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Utilisez-vous une cage de parage facilement ?',
                                     'reponse' => 'cage de parage difficilement utilisée',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1909 => 
                                 array (
@@ -15298,6 +17207,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous suivi une formation de parage bovin ?',
                                     'reponse' => 'manque de formation sur le parage bovin',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1910 => 
                                 array (
@@ -15306,6 +17216,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration présente-t-elle un excès d\'amidon ou sucres dans la ration ?',
                                     'reponse' => 'excès d\'amidon ou sucres dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1911 => 
                                 array (
@@ -15314,6 +17225,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration présente-t-elle un manque de fibrosité ?',
                                     'reponse' => 'manque de fibrosité dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1912 => 
                                 array (
@@ -15322,6 +17234,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration présente-t-elle un déficit énergétique ?',
                                     'reponse' => 'déficit énergétique dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1913 => 
                                 array (
@@ -15330,6 +17243,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les bétons neufs ont-ils été neutralisés ?',
                                     'reponse' => 'bétons neufs non neutralisés',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1914 => 
                                 array (
@@ -15338,6 +17252,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment présente-t-il une humidité permanente sur les sols ? raclées ?',
                                     'reponse' => 'humidité permanente sur les sols',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1915 => 
                                 array (
@@ -15346,6 +17261,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le raclage des aires de vie est-il suffisamment fréquent ?',
                                     'reponse' => 'raclage des aires de vie pas assez fréquent',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1916 => 
                                 array (
@@ -15354,6 +17270,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La sélection du troupeau est-elle axée sur les aptitudes fonctionnelles ?',
                                     'reponse' => 'sélection pas axée sur les aptitudes fonctionnelles',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1917 => 
                                 array (
@@ -15362,6 +17279,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il des cailloux, silex sur les chemins d\'accès ?',
                                     'reponse' => 'cailloux et silex sur les chemins d\'accès',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1918 => 
                                 array (
@@ -15370,6 +17288,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Faites-vous intervenir le pareur 2 fois par an ?',
                                     'reponse' => 'intervention du pareur pas assez fréquente',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1919 => 
                                 array (
@@ -15378,6 +17297,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Êtes-vous équipé d’un pédiluve ? L’utilisez-vous régulièrement ?',
                                     'reponse' => 'pas de ou pas utilisé régulièrement',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1920 => 
                                 array (
@@ -15386,6 +17306,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Utilisez-vous une cage de parage facilement ?',
                                     'reponse' => 'cage de parage difficilement utilisée',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1921 => 
                                 array (
@@ -15394,6 +17315,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous suivi une formation de parage bovin ?',
                                     'reponse' => 'manque de formation sur le parage bovin',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1922 => 
                                 array (
@@ -15402,6 +17324,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration présente-t-elle un excès d\'amidon ou sucres dans la ration ?',
                                     'reponse' => 'excès d\'amidon ou sucres dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1923 => 
                                 array (
@@ -15410,6 +17333,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration présente-t-elle un manque de fibrosité ?',
                                     'reponse' => 'manque de fibrosité dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1924 => 
                                 array (
@@ -15418,6 +17342,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration présente-t-elle un déficit énergétique ?',
                                     'reponse' => 'déficit énergétique dans la ration',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1925 => 
                                 array (
@@ -15426,6 +17351,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les bétons neufs ont-ils été neutralisés ?',
                                     'reponse' => 'bétons neufs non neutralisés',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1926 => 
                                 array (
@@ -15434,6 +17360,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le bâtiment présente-t-il une humidité permanente sur les sols ? raclées ?',
                                     'reponse' => 'humidité permanente sur les sols',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1927 => 
                                 array (
@@ -15442,6 +17369,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le raclage des aires de vie est-il suffisamment fréquent ?',
                                     'reponse' => 'raclage des aires de vie pas assez fréquent',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1928 => 
                                 array (
@@ -15450,6 +17378,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La sélection du troupeau est-elle axée sur les aptitudes fonctionnelles ?',
                                     'reponse' => 'sélection pas axée sur les aptitudes fonctionnelles',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1929 => 
                                 array (
@@ -15458,6 +17387,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il des cailloux, silex sur les chemins d\'accès ?',
                                     'reponse' => 'cailloux et silex sur les chemins d\'accès',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1930 => 
                                 array (
@@ -15466,6 +17396,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Faites-vous intervenir le pareur 2 fois par an ?',
                                     'reponse' => 'intervention du pareur pas assez fréquente',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1931 => 
                                 array (
@@ -15474,6 +17405,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Êtes-vous équipé d’un pédiluve ? L’utilisez-vous régulièrement ?',
                                     'reponse' => 'pas de ou pas utilisé régulièrement',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1932 => 
                                 array (
@@ -15482,6 +17414,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Utilisez-vous une cage de parage facilement ?',
                                     'reponse' => 'cage de parage difficilement utilisée',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1933 => 
                                 array (
@@ -15490,6 +17423,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous suivi une formation de parage bovin ?',
                                     'reponse' => 'manque de formation sur le parage bovin',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1934 => 
                                 array (
@@ -15498,6 +17432,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le parasitisme est-il géré ?',
                                     'reponse' => 'Parasitisme insuffisamment géré',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1935 => 
                                 array (
@@ -15506,6 +17441,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu une surconsommation accidentelles d\'aliments concentrés ou potentiellement toxiques ? ',
                                     'reponse' => 'Surconsommation de concentrés ou d’aliments toxiques',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1936 => 
                                 array (
@@ -15514,6 +17450,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Avez-vous vérifié avec votre vétérinaire que les brebis n’avaient pas de maladies abortives ?',
                                     'reponse' => 'Pas de vérification de la présence de maladies abortives',
                                     'categorie_id' => 5,
+                                    'supprimable' => 1,
                                 ),
                                 1937 => 
                                 array (
@@ -15522,6 +17459,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Le troupeau a-t-il subit un stress important ? (accident, météo, intrus, )',
                                     'reponse' => 'Stress important sur le troupeau',
                                     'categorie_id' => 7,
+                                    'supprimable' => 1,
                                 ),
                                 1938 => 
                                 array (
@@ -15530,6 +17468,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les femelles gestantes sont-elles suivies sur les aspects parasitismes ? ',
                                     'reponse' => 'Pas de suivi du parasitisme sur les gestantes',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1939 => 
                                 array (
@@ -15538,6 +17477,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Les fourrages distribués sont-ils en bon état sanitaire ? (présence de moisissures, champignons)',
                                     'reponse' => 'Fourrage parfois moisi',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1940 => 
                                 array (
@@ -15546,6 +17486,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il eu une transition alimentaire brutale ? ',
                                     'reponse' => 'Transition alimentaire brutale',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1941 => 
                                 array (
@@ -15554,6 +17495,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L’âge moyen des brebis n\'est-il pas trop élevé ?',
                                     'reponse' => 'Age moyen des brebis trop élevé',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1942 => 
                                 array (
@@ -15562,6 +17504,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La litière de la bergerie est-elle régulièrement curée ?',
                                     'reponse' => 'Curage de la bergerie pas assez fréquent',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1943 => 
                                 array (
@@ -15570,6 +17513,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La gestion du pâturage permet-elle d\'éviter le retour des animaux sur des parcelles infestées ?',
                                     'reponse' => 'Retour du troupeau sur des parcelles infestées',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1944 => 
                                 array (
@@ -15578,6 +17522,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le pâturage ras < à 5 cm est-il évité ? ',
                                 'reponse' => 'Pâturage trop ras (< 5cm)',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1945 => 
                                 array (
@@ -15586,6 +17531,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Y-a-t-il alternance de différentes espèces au pâturage ?',
                                     'reponse' => 'Par d’alternance possible de différentes espèces sur les mêmes pâtures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1946 => 
                                 array (
@@ -15594,6 +17540,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Tenez-vous à jour un planning de pâturage ? ',
                                     'reponse' => 'Pas de planning de pâturage à jour',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1947 => 
                                 array (
@@ -15602,6 +17549,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La pâture est-elle intégrée dans une alternance fauche-pâture ? ',
                                     'reponse' => 'Pas d’association pâturage / fauche',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1948 => 
                                 array (
@@ -15610,6 +17558,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Les prairies entrent-elles dans la rotation des cultures ?',
                                     'reponse' => 'Les prairies n’entrent pas dans les rotations de cultures',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1949 => 
                                 array (
@@ -15618,6 +17567,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'L\'infestation fait-elle suite à un hiver doux ? ',
                                     'reponse' => 'Hiver précédent très doux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1950 => 
                                 array (
@@ -15626,6 +17576,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le choix de traiter collectivement est-il décider suite à des analyses coproscopiques et/ou sérologique, et répond-il à une stratégie globale de gestion parasitaire à l’échelle du troupeau ?',
                                     'reponse' => 'Pas de stratégie globale dans les choix de traitement des animaux',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1951 => 
                                 array (
@@ -15634,6 +17585,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La fréquence des traitements anthelminthiques ne favorise-t-elle pas les résistances ? ',
                                     'reponse' => 'Fréquence de traitements favorisant les résistances',
                                     'categorie_id' => 8,
+                                    'supprimable' => 1,
                                 ),
                                 1952 => 
                                 array (
@@ -15642,6 +17594,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La race du troupeau est-elle adaptée au milieu infesté ? ',
                                     'reponse' => 'Race non adaptée à de fortes infestations parasitaires',
                                     'categorie_id' => 6,
+                                    'supprimable' => 1,
                                 ),
                                 1953 => 
                                 array (
@@ -15650,6 +17603,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle riche en céréales et acidogène ? ',
                                     'reponse' => 'Ration trop riche en céréales et acidogène',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1954 => 
                                 array (
@@ -15658,6 +17612,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'L’ambiance du bâtiment (température, humidité, condensation, murs froids) est-elle confortable pour des agneaux ?',
                                     'reponse' => 'Ambiance du bâtiment inconfortable pour les agneaux',
                                     'categorie_id' => 2,
+                                    'supprimable' => 1,
                                 ),
                                 1955 => 
                                 array (
@@ -15666,6 +17621,7 @@ class OriginesTableSeeder extends Seeder
                                 'question' => 'Mes agneaux boivent-ils bien un bon colostrum, et en quantité suffisante (attention à chacun dans une portée multiple !) ?',
                                     'reponse' => 'Buvée de colostrum insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1956 => 
                                 array (
@@ -15674,6 +17630,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'Le temps consacré aux soins et à la surveillance des nouveaux nés est-il suffisant ? ',
                                     'reponse' => 'Surveillance des nouveaux-nés insuffisante',
                                     'categorie_id' => 4,
+                                    'supprimable' => 1,
                                 ),
                                 1957 => 
                                 array (
@@ -15682,6 +17639,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle suffisamment pourvue en minéraux et vitamines ? ',
                                 'reponse' => 'Apports en vitamines et/ou minéraux (sélénium) insuffisants',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                                 1958 => 
                                 array (
@@ -15690,6 +17648,7 @@ class OriginesTableSeeder extends Seeder
                                     'question' => 'La ration est-elle suffisamment pourvue en minéraux et vitamines ? ',
                                 'reponse' => 'Apports en vitamines et/ou minéraux (sélénium) insuffisants',
                                     'categorie_id' => 1,
+                                    'supprimable' => 1,
                                 ),
                             ));
         
