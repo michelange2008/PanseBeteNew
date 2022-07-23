@@ -14,7 +14,7 @@
 
       @foreach ($especes as $espece)
 
-        <img src="{{ 'storage/img/especes/'.$espece->icone}}"
+        <img src="{{ url('storage/img/especes/'.$espece->icone)}}"
           id="nouvelle_{{$espece->id}}" name="{{auth()->user()->name}}" class="nouvelle-saisie-item toto shadow curseur"
           route= "{{url('/')}}"
           alt="{{$espece->nom}}" title="{{$espece->nom}}">
