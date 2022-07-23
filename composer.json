@@ -6,8 +6,9 @@
     "type": "project",
     "require": {
         "php": "^8.0.2",
-        "barryvdh/laravel-dompdf": "^1",
+        "barryvdh/laravel-dompdf": "2",
         "flynsarmy/csv-seeder": "1.*",
+        "guzzlehttp/guzzle": "^7.4",
         "laravel/framework": "^9.2",
         "laravel/ui": "^3.4",
         "laravelcollective/html": "^6.3",
