@@ -184,7 +184,7 @@ $(function() {
         content : 'Etes-vous sûr de vouloir supprimer '+nom,
         buttons : {
           supprimer : function() {
-            supprimer(ligne_id, 'utilisateur/', id);
+            supprimer(ligne_id, 'utilisateur/destroy/', id);
           },
           annuler : function() {
           }
