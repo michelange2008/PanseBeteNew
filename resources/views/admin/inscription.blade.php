@@ -85,8 +85,9 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <h6 class="text-right">Si vous rencontrez des difficultés pour remplir ce formulaire, envoyez-nous un mail
-                    <a href="mailto:contact@panse-betes.fr"><i class="far fa-envelope"></i></a>
+                  <h6 class="text-right">Si vous rencontrez des difficultés pour remplir ce formulaire, envoyez-nous un
+                    {{-- <a href="mailto:contact@panse-betes.fr"><i class="far fa-envelope"></i></a> --}}
+                    {{ HTML::mailto(config('mail.contact.address'), 'mail', ) }}
                   </h6>
                 </div>
                 <div class="d-flex justify-content-end">

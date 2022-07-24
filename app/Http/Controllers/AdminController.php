@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use Mail;
+use App\Mail\Accepte;
 
 use App\Models\Espece;
 use App\Models\User;
