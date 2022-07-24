@@ -61,12 +61,12 @@ return [
     ],
 
     'contact' => [
-        'address' => 'contact@panse-betes.fr',
-        'name' => 'Catherine Experton',
+        'address' => 'pansebetes@acsa-santeanimale.fr',
+        'name' => 'Lucie BERNARD',
    ],
 
    'admin' => [
-        'address' => 'admin@panse-betes.fr',
+        'address' => 'pansebetes@acsa-santeanimale.fr',
         'name' => 'Michel BOUY',
    ],
 
