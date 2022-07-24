@@ -93,7 +93,7 @@
                 <div class="d-flex justify-content-end">
                   <button class="btn btn-otorange rounded-0" type="submit" name="button"><i class="fas fa-share-square"></i> envoi</button>
                   <a href="{{route('login')}}">
-                    <button class="btn btn-otobleu rounded-0 ml-2" type="submit" name="button"><i class="fas fa-undo-alt"></i> retour</button>
+                    <a href="{{ route('login') }}" class="btn btn-otobleu rounded-0 ml-2"><i class="fas fa-undo-alt"></i> retour</a>
                   </a>
                 </div>
                 {{Form::close()}}
