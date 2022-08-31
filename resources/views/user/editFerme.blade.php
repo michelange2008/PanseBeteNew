@@ -32,6 +32,14 @@
 
               @include('user.inputSelectFerme')
 
+            @elseif ($paraferme->type == "texte")
+
+              @inputTextarea([
+                'label'=> $paraferme->nom,
+                'name' => $paraferme->id,
+                'isName' => $paraferme->value
+              ])
+
             @else
               {{-- cf. fragments.inputNum --}}
               @inputNum([

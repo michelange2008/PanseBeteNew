@@ -83,7 +83,6 @@ class FermeController extends Controller
 
         }
       }
-      // dd($parafermes);
 
         return view('user.editFerme', [
           'user' => $user,
