@@ -2,7 +2,6 @@
   "prefixe" : "paraferme",
 
   "colonnes" : {
-
     "nom" : {
       "col" : "nom",
       "type" : "edit",
@@ -26,6 +25,12 @@
       "type" : "item",
       "aligne" : "left",
       "sortable" : false
+    },
+    "ordre" : {
+      "col" : "ordre",
+      "type" : "item",
+      "aligne" : "right",
+      "sortable" : true
     }
   },
 
