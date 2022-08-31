@@ -11,6 +11,10 @@
     "id" : "liste",
     "nom" : "Liste d'éléments"
   }
-
+  ,
+  "texte" : {
+    "id" : "texte",
+    "nom" : "Texte libre"
+  }
 
 }
