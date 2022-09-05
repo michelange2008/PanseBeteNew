@@ -16,7 +16,13 @@
 
   @if ($indexTab->titre->bouton)
 
-    @annule()
+    <a class="btn btn-otorange" href="{{ route($indexTab->titre->bouton->route) }}">
+
+      <i class="{{ $indexTab->titre->bouton->fa }}"></i>
+       {{ $indexTab->titre->bouton->libelle ?? "bouton"}}
+
+    </a>
+
 
   @endif
 

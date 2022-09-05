@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
     {
       Blade::include('fragments.btnValider','valider');
       Blade::include('fragments.btnVers','vers');
-      Blade::include('fragments.boutonEnregistre', 'enregistre');
+      Blade::include('fragments.boutonEnregistrer', 'enregistre');
       Blade::include('fragments.boutonSupprimer', 'supprimer');
       Blade::include('fragments.blocEnregistreAnnule', 'enregistreAnnule');
       Blade::include('fragments.btnSynthese', 'synthese');
