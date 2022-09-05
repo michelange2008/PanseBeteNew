@@ -1,8 +1,13 @@
 {
   "prefixe" : "paraferme",
 
-  "colonnes" : {
+  "bouton" : {
+    "libelle" : "Ranger",
+    "fa" : "fa-solid fa-arrow-down-short-wide",
+    "route" : "paraferme.ranger"
+  },
 
+  "colonnes" : {
     "nom" : {
       "col" : "nom",
       "type" : "edit",
@@ -26,6 +31,12 @@
       "type" : "item",
       "aligne" : "left",
       "sortable" : false
+    },
+    "ordre" : {
+      "col" : "ordre",
+      "type" : "item",
+      "aligne" : "right",
+      "sortable" : true
     }
   },
 

@@ -50,7 +50,7 @@
 
                   <img class="img-40" src="{{url('storage/img/'. $menu->$niv_2->icone)}}" alt="">
 
-                  {{ ucfirst($menu->$niv_2->icone) }}
+                  {{ ucfirst($menu->$niv_2->nom) }}
 
                 </a>
 
