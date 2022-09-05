@@ -85,6 +85,10 @@ Route::group(['middleware' => ['auth', 'isValid', 'isAdmin', 'menu']], function(
 
   });
 
+  Route::get('/paraferme/ranger', 'ParafermeController@ranger')->name('paraferme.ranger');
+
+  Route::post('/paraferme/storeRanger', 'ParafermeController@storeRanger')->name('paraferme.storeRanger');
+
   Route::resource('/paraferme', 'ParafermeController');
 
 

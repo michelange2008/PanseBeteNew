@@ -1,6 +1,12 @@
 {
   "prefixe" : "paraferme",
 
+  "bouton" : {
+    "libelle" : "Ranger",
+    "fa" : "fa-solid fa-arrow-down-short-wide",
+    "route" : "paraferme.ranger"
+  },
+
   "colonnes" : {
     "nom" : {
       "col" : "nom",
