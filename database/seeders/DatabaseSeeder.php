@@ -36,5 +36,6 @@ class DatabaseSeeder extends Seeder {
     $this->call(EspeceNoteTableSeeder::class);
     $this->call(EspeceParticipantTableSeeder::class);
     $this->call(ParafermeUserTableSeeder::class);
+    $this->call(ChiffreEspeceTableSeeder::class);
     }
 }
