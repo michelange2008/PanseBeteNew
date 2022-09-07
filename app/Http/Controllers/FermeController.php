@@ -65,7 +65,7 @@ class FermeController extends Controller
     {
         $titre = new Titre(icone: "default.svg", titre: "ferme_edit");
 
-        $parafermes = Paraferme::all();
+        $parafermes = Paraferme::orderBy('ordre')->get();
         // Boucle pour modifier $paraferme
         foreach ($parafermes as $paraferme) {
           // Si le type est "liste"
