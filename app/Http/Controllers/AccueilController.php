@@ -56,6 +56,7 @@ class AccueilController extends Controller
       session()->forget(['espece_id', 'theme', 'saisie']);
 
       return view('accueil', [
+        'user' => auth()->user(),
         "saisies" => $saisies,
         'especes' => $especes,
       ]);
