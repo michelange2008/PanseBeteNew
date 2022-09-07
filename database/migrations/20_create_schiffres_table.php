@@ -15,7 +15,10 @@ return new class extends Migration
     {
         Schema::create('schiffres', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('saisie_id')->constrained();
+            $table->foreignId('saisie_id')
+                  ->constrained()
+                  ->onUpdate('cascade')
+                  ->onDelete('cascade');
             $table->string('libelle', 191);
             $table->double('valeur', 8, 1);
         });
