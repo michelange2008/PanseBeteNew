@@ -14,6 +14,8 @@
     <!-- Choix de l'espèce qui ne s'affiche que avec un smartphone -->
     @include('accueil.choix_smartphone')
 
+    @include('accueil.maferme')
+
     @if ($saisies->count() > 0)
 
       <!-- S'il y a des saisies, affichage de la liste des saisies avec des informations et des boutons -->

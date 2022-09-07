@@ -11,4 +11,8 @@ return [
   'amis' => "Ami.e.s",
   'amis_suivis' => "qui vous ont donné accès à leurs saisies",
   'amis_suiveurs' => "qui ont accès à vos saisies",
+  'parafermes' => "Paramètres descriptifs de l'exploitation",
+  'parafermes_saisie' => "N'oubliez pas de saisir les informations concernant votre exploitation en cliquant sur le bouton ci-dessous",
+  'parafermes_edit' => "En cliquant sur le bouton ci-dessous, vous pouvez saisir ou modifier les caractéristiques de votre exploitation",
+  'ma_ferme' => "Mon exploitation",
 ];
