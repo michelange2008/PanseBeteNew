@@ -69,7 +69,7 @@ class FermeController extends Controller
         // Boucle pour modifier $paraferme
         foreach ($parafermes as $paraferme) {
           // Si le type est "liste"
-          if ($paraferme->type == 'liste') {
+          if ($paraferme->type == 'liste' || $paraferme->type == "liste multiple") {
             // On reprend les parties qu'on transforme en tableau pour faire une liste déroulante
             $parties = explode(',', $paraferme->parties);
             // Et on met le tableau dans $paraferme
@@ -77,13 +77,14 @@ class FermeController extends Controller
           }
           // Ensuite il faut peupler les valeurs déjà existantes
           $paraferme->value = null;
+
           if($user->parafermes->contains($paraferme)) {
 
             $paraferme->value = $user->parafermes->where('id', $paraferme->id)->first()->param->value;
 
         }
       }
-
+// dd($parafermes);
         return view('user.editFerme', [
           'user' => $user,
           'titre' => $titre,
@@ -109,11 +110,21 @@ class FermeController extends Controller
       // [id => ['value' => value]] pour une sync de la table pivot paraferme_user
       $values = [];
       foreach ($datas as $key => $value) {
-        if($value !== null) {
-          $values[$key] = ['value' => $value];
+        // En cas de choix multiple la value est un array qu'il faut transformer
+        // en string avec une virgule comme séparateur
+        if(is_array($value)) {
+          $value = implode(", ", $value);
+          if($value !== "") {
+            $values[$key] = ['value' => $value];
+          }
         }
+        else
+          if($value !== null) {
+            $values[$key] = ['value' => $value];
+          }
       }
-      // Et on synchronise ce qui enlève les valeurs absentes et mais les
+
+      // Et on synchronise ce qui enlève les valeurs absentes et met les
       // valeurs présentes
       $user->parafermes()->sync($values);
 

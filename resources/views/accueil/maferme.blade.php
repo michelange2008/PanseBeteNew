@@ -2,47 +2,51 @@
 
   <div class="col-sm-11 col-md-10 col-lg-9 px-3">
 
-    @if ($user->parafermes()->count() == 0)
+    <div class="card mb-3">
 
-      <div class="card bg-danger text-white">
+      <div class="row no-gutters">
 
-        <div class="card-header">
+        <div class="col-md-4 col-lg-3 col-xl-2">
 
-          <h5 class="card-title">@lang('commun.parafermes')</h5>
+          @if ($user->parafermes()->count() == 0)
+
+            <img src="{{ url('storage/img/divers/ferme_rouge.svg') }}" class="card-img d-none d-md-block" alt="...">
+
+          @else
+
+            <img src="{{ url('storage/img/divers/ferme.svg') }}" class="card-img d-none d-md-block" alt="...">
+
+          @endif
 
         </div>
 
-        <div class="card-body">
+        <div class="col-md-8 col-lg-9 col-xl-10">
 
-          <p class="card-text">@lang('commun.parafermes_saisie')</p>
+          <div class="card-body">
 
-          <a class="btn btn-light btn-sm rounded-0" href="{{ route('ferme.edit', $user) }}"><i class="fa-solid fa-user-pen"></i> @lang('commun.ma_ferme')</a>
+            <h5 class="card-title">@lang('commun.parafermes')</h5>
+
+            @if ($user->parafermes()->count() == 0)
+
+              <p class="card-text">@lang('commun.parafermes_saisie')</p>
+
+              <a class="btn btn-sm btn-danger rounded-0" href="{{ route('ferme.edit', $user) }}"><i class="fa-solid fa-user-pen"></i> @lang('commun.ma_ferme')</a>
+
+            @else
+
+              <p class="card-text">@lang('commun.parafermes_edit')</p>
+
+              <a class="btn btn-sm btn-secondary rounded-0" href="{{ route('ferme.edit', $user) }}"><i class="fa-solid fa-user-pen"></i> @lang('commun.ma_ferme')</a>
+
+          @endif
+
+          </div>
 
         </div>
 
       </div>
 
-    @else
-
-      <div class="card bg-light">
-
-        <div class="card-header">
-
-          <h5 class="card-title">@lang('commun.parafermes')</h5>
-
-        </div>
-
-        <div class="card-body">
-
-          <p class="card-text">@lang('commun.parafermes_edit')</p>
-
-          <a class="btn btn-sm btn-secondary rounded-0" href="{{ route('ferme.edit', $user) }}"><i class="fa-solid fa-user-pen"></i> @lang('commun.ma_ferme')</a>
-
-        </div>
-
-      </div>
-
-    @endif
+    </div>
 
   </div>
 
