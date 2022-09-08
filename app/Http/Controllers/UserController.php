@@ -120,6 +120,7 @@ class UserController extends Controller
      */
     public function edit($user)
     {
+      // Trait FormTemplate
       $elements = $this->editForm($user, 'formUser.json');
 
       return view('admin.editCreateForm', [

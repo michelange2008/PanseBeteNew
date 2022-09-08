@@ -65,9 +65,9 @@ class ParafermeController extends Controller
         'nom' => 'required|max:191',
         'unite' => 'nullable|max:10',
         'type' => 'required',
-        'parties' => Rule::requiredIf(fn() => $request->type == 'liste'),
+        'parties' => Rule::requiredIf(fn() => $request->type == 'liste' || $request->type == 'liste multiple'),
       ])->validate();
-
+// dd($request->all());
       // Et on stocke les infos
       $paraferme = new Paraferme();
       $paraferme->nom = $request->nom;
@@ -75,7 +75,7 @@ class ParafermeController extends Controller
       $paraferme->type = $request->type;
       $paraferme->ordre = $request->ordre;
       // on utilise la méthode cleanString du trait StringTools pour nettoyer
-      $paraferme->parties = ($request->type == 'liste')
+      $paraferme->parties = ($request->type == 'liste' || $request->type == 'liste multiple')
                             ? $this->cleanString($request->parties)
                             : null;
       $paraferme->save();
@@ -129,7 +129,7 @@ class ParafermeController extends Controller
         'nom' => 'required|max:191',
         'unite' => 'nullable|max:10',
         'type' => 'required',
-        'parties' => Rule::requiredIf(fn() => $request->type == 'liste'),
+        'parties' => Rule::requiredIf(fn() => $request->type == 'liste' || $request->type == 'liste multiple'),
       ])->validate();
       // Utilisation du trait Ordre pour éviter les doublons
       $this->ordonne($request);
@@ -140,7 +140,7 @@ class ParafermeController extends Controller
           'nom' => $request->nom,
           'unite' => $request->unite,
           'type' => $request->type,
-          'parties' => ($request->type == 'liste')
+          'parties' => ($request->type == 'liste' || $request->type == 'liste multiple')
           // on utilise la méthode cleanString du trait tringTools pour nettoyer
                       ? $this->cleanString($request->parties)
                       : null,

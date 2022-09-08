@@ -32,6 +32,10 @@
 
               @include('user.inputSelectFerme')
 
+            @elseif ($paraferme->type == "liste multiple")
+
+              @include('user.inputSelectFermeMultiple')
+
             @elseif ($paraferme->type == "texte")
 
               @inputTextarea([
