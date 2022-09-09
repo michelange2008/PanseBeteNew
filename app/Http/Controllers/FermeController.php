@@ -63,7 +63,7 @@ class FermeController extends Controller
      */
     public function edit(User $user)
     {
-        $titre = new Titre(icone: "default.svg", titre: "ferme_edit");
+        $titre = new Titre(icone: "divers/ferme_blanche.svg", titre: "ferme_edit");
 
         $parafermes = Paraferme::orderBy('ordre')->get();
         // Boucle pour modifier $paraferme
