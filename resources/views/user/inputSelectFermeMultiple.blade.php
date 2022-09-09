@@ -1,11 +1,12 @@
 {{-- issu de  user.editFerme--}}
-<div class="input-group mb-3">
+<div class="form-group mb-3">
 
-  <label class="input-group-text" for="{{ $paraferme->nom }}">{{ $paraferme->nom }}</label>
+  <label class="form-label" for="{{ $paraferme->nom }}">
+    {{ $paraferme->nom }}
+     <span class="fst-italic text-secondary">(@lang('forms.select_multiple'))</span>
+  </label>
 
-  <select multiple class="form-select" name="{{ $paraferme->id }}[]">
-
-    <option value=""></option>
+  <select size= "{{ count($paraferme->parties) + 2 }}" multiple class="form-control" name="{{ $paraferme->id }}[]">
 
     @foreach ($paraferme->parties as $key => $partie)
 
@@ -24,6 +25,12 @@
     </option>
 
   @endforeach
+
+  <option value="" disabled>
+    &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;
+  </option>
+
+  <option value="">@lang('forms.no_option')</option>
 
 </select>
 
