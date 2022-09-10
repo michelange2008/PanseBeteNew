@@ -55,7 +55,7 @@ class AccueilController extends Controller
       // On supprime les élevages qui n'ont plus de saisie
       $this->effaceElevages();
 
-      $especes = Especes::all();
+      $especes = Espece::all();
       session()->forget(['espece_id', 'theme', 'saisie']);
 
       return view('accueil', [
