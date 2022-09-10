@@ -26,6 +26,7 @@ Route::get('/presentation', ['uses' => 'VisiteurController@presentation', 'as' =
 Route::group(['middleware' => ['auth', 'isValid', 'isAdmin', 'menu']], function() {
 
   Route::get('/dev', 'DevController@dev')->name('dev');
+  Route::post('/store', 'DevController@store')->name('dev.store');
 
   Route::prefix('/chiffres')->controller(ChiffreController::class)->group(function() {
 
