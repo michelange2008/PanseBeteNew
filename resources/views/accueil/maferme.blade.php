@@ -10,11 +10,13 @@
 
           @if ($user->parafermes()->count() == 0)
 
-            <img src="{{ url('storage/img/divers/ferme_rouge.svg') }}" class="card-img d-none d-md-block" alt="...">
+            <img src="{{ url('storage/img/divers/ferme_rouge.svg') }}"
+                  class="card-img d-none d-md-block" alt="...">
 
           @else
 
-            <img src="{{ url('storage/img/divers/ferme.svg') }}" class="card-img d-none d-md-block" alt="...">
+            <img src="{{ url('storage/img/divers/ferme.svg') }}"
+                  class="card-img d-none d-md-block" alt="...">
 
           @endif
 
@@ -30,15 +32,23 @@
 
               <p class="card-text">@lang('commun.parafermes_saisie')</p>
 
-              <a class="btn btn-sm btn-danger rounded-0" href="{{ route('ferme.edit', $user) }}"><i class="fa-solid fa-user-pen"></i> @lang('commun.ma_ferme')</a>
+              <a class="btn btn-sm btn-danger rounded-0" href="{{ route('ferme.edit', $user) }}">
+                <i class="fa-solid fa-user-pen"></i> @lang('commun.ma_ferme')
+              </a>
 
             @else
 
               <p class="card-text">@lang('commun.parafermes_edit')</p>
 
-              <a class="btn btn-sm btn-secondary rounded-0" href="{{ route('ferme.edit', $user) }}"><i class="fa-solid fa-user-pen"></i> @lang('commun.ma_ferme')</a>
+              <a class="btn btn-sm btn-secondary rounded-0"
+                  href="{{ route('ferme.edit', $user) }}">
+                    <i class="fa-solid fa-user-pen"></i> @lang('commun.ma_ferme')
+              </a>
 
-              <a class="btn btn-sm btn-danger rounded-0" href="{{ route('pdf.modeleExploitation') }}"><i class="fa-solid fa-file-pdf"></i> @lang('commun.ma_ferme_pdf')</a>
+              <a class="btn btn-sm btn-danger rounded-0"
+                 href="{{ route('pdf.modeleExploitation') }}" target="_blank">
+                  <i class="fa-solid fa-file-pdf"></i> @lang('commun.ma_ferme_pdf')
+              </a>
 
           @endif
 
