@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Paraferme;
 use App\Models\Saisie;
 use App\Models\Theme;
 use App\Models\Categorie;
@@ -62,6 +63,27 @@ class PdfController extends Controller
       ]);
 
       $nomFichier = "Parametres ( ".$espece->nom." ).pdf";
+
+      return $pdf->stream($nomFichier);
+    }
+
+    /**
+     * undocumented function summary
+     *
+     * Undocumented function long description
+     *
+     * @param type var Description
+     * @return return type
+     */
+    public function modeleExploitation()
+    {
+      $parafermes = Paraferme::all();
+
+      $pdf = PDF::loadView('pdf.modeleExploitation', [
+        'parafermes' => $parafermes,
+      ]);
+
+      $nomFichier = "Donnees_exploitation ( ".auth()->user()->name." ).pdf";
 
       return $pdf->stream($nomFichier);
     }
