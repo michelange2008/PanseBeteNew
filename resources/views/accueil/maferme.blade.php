@@ -45,7 +45,7 @@
                     <i class="fa-solid fa-user-pen"></i> @lang('commun.ma_ferme')
               </a>
 
-              <a class="btn btn-sm btn-danger rounded-0"
+              <a class="btn btn-sm btn-warning rounded-0"
                  href="{{ route('pdf.modeleExploitation') }}" target="_blank">
                   <i class="fa-solid fa-file-pdf"></i> @lang('commun.ma_ferme_pdf')
               </a>
