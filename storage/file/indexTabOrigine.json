@@ -5,7 +5,7 @@
 
   "icone" : "origine.svg",
 
-  "bouton" : true,
+  "bouton" : false,
 
   "colonnes" : {
 
