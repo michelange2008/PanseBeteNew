@@ -14,16 +14,19 @@
 
   </div>
 
-  @if ($indexTab->titre->bouton)
+  <div>
 
-    <a class="btn btn-otorange" href="{{ route($indexTab->titre->bouton->route) }}">
+    @if ($indexTab->titre->bouton)
 
-      <i class="{{ $indexTab->titre->bouton->fa }}"></i>
-       {{ $indexTab->titre->bouton->libelle ?? "bouton"}}
+      <a class="btn btn-otorange" href="{{ route($indexTab->titre->bouton->route) }}">
 
-    </a>
+        <i class="{{ $indexTab->titre->bouton->fa }}"></i>
+        {{ $indexTab->titre->bouton->libelle ?? "bouton"}}
 
+      </a>
 
-  @endif
+    @endif
+
+  </div>
 
 </div>
