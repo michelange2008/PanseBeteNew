@@ -14,7 +14,7 @@
     <!-- Choix de l'espèce qui ne s'affiche que avec un smartphone -->
     @include('accueil.choix_smartphone')
 
-    @include('accueil.maferme')
+    @include('accueil.actions_generales')
 
     @if ($saisies->count() > 0)
 

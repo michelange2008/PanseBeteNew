@@ -17,4 +17,7 @@ return [
    ou télécharger un fichier pdf vierge (bouton jaune)",
   'ma_ferme' => "Mon exploitation",
   'ma_ferme_pdf' => "fiche vierge",
+  'compare_titre' => "Comparer les différentes saisies",
+  'compare_texte' => "En cliquant sur le bouton ci-dessous, vous pourrez choisir les différentes saisies que vous souhaitez comparer.",
+
 ];
