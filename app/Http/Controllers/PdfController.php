@@ -16,10 +16,11 @@ use PDF;
 use App\Traits\CategoriesTools;
 use App\Traits\ThemesTools;
 use App\Traits\FormatSalertes;
+use App\Traits\LitJson;
 
 class PdfController extends Controller
 {
-  use CategoriesTools, ThemesTools, FormatSalertes;
+  use CategoriesTools, ThemesTools, FormatSalertes, LitJson;
     /**
      * Fournit un pdf avec une grille vide pour saisir les données chiffrées
      *
@@ -27,14 +28,20 @@ class PdfController extends Controller
      */
   public function modeleNum(Espece $espece)
     {
-      $chiffres = $espece->chiffres()
-        ->orderBy('groupe_id')
-        ->orderBy('id')
-        ->get()
-        ->groupBy('groupe_id');
+      // $chiffres = $espece->chiffres()
+      //   ->orderBy('groupe_id')
+      //   ->orderBy('id')
+      //   ->get()
+      //   ->groupBy('groupe_id');
+      // On récupère les libellé du formulaire dans un json dépendant de
+      // l'espèce du type chiffresVL.json
+      $chiffresBruts = $this->LitJson('parametres'.$espece->abbr.'.json');
+      // On en fait une collection et l'on structure par groupe (effectif, mortalité, etc)
+      $chiffres = Collect($chiffresBruts);
+      $chiffresGroupes = $chiffres->groupBy('groupe');
 
         $pdf = PDF::loadView('pdf.modeleNum', [
-          'chiffres' => $chiffres,
+          'chiffresGroupes' => $chiffresGroupes,
           'espece' => $espece,
         ]);
 

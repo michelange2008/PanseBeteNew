@@ -85,20 +85,13 @@ class SchiffreController extends Controller
     $chiffresSaisisBruts = Schiffre::select('libelle', 'valeur')
     ->where("saisie_id", $saisie->id)
     ->get();
-    // $chiffresSaisis = Collect();
-    //
-    // foreach ($chiffresSaisisBruts as $key => $value) {
-    //
-    //   $chiffresSaisis->put($value->libelle, $value->valeur);
-    //
-    // }
+
     // On récupère les libellé du formulaire dans un json dépendant de
     // l'espèce du type chiffresVL.json
     $chiffresBruts = $this->LitJson('parametres'.$saisie->espece->abbr.'.json');
     // On en fait une collection et l'on structure par groupe (effectif, mortalité, etc)
     $chiffres = Collect($chiffresBruts);
     $chiffresGroupes = $chiffres->groupBy('groupe');
-    // dd($chiffresGroupes);
 
     return view('saisie.schiffres.edit', [
     'saisie' => $saisie,
@@ -132,7 +125,7 @@ class SchiffreController extends Controller
     // La classe Indicateurs va stocker les ondicateurs calculés dans la table sindicateurs
     // si la saisie n'est pas valide on retourne au formulaire
     $indicateurs->calculIndicateurs();
-    
+
     if($indicateurs->getErreurs()->count() > 0) {
 
       return redirect()->back()->with(['message' => $indicateurs->getErreurs(), 'couleur' => 'alert-danger']);
