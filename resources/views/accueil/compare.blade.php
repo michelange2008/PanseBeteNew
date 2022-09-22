@@ -25,7 +25,7 @@
 
   <div class="card-footer">
 
-    <a class="btn btn-sm btn-otobleu rounded-0" href="{{ route('ferme.edit', $user) }}">
+    <a class="btn btn-sm btn-otobleu rounded-0" href="{{ route('compare.index') }}">
       <i class="fa-solid fa-user-pen"></i> @lang('boutons.go')
     </a>
 
