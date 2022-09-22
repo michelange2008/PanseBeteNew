@@ -35,5 +35,6 @@ return array(
   'pdf_saisie' => "Synthèse",
   'ferme_edit' => "Modifier les paramètres de la ferme",
   'amis_edit' => "Ajout de nouveaux amis",
-  "sort_paraferme" => "Ordonner les parametres"
+  "sort_paraferme" => "Ordonner les parametres",
+  'compare_index' => "Choix des saisies à comparer",
 );
