@@ -19,5 +19,5 @@ return [
   'ma_ferme_pdf' => "fiche vierge",
   'compare_titre' => "Comparer les différentes saisies",
   'compare_texte' => "En cliquant sur le bouton ci-dessous, vous pourrez choisir les différentes saisies que vous souhaitez comparer.",
-
+  'compare_texte_futur' => "Lorsque vous aurez réalisé plusieurs saisies, vous pourrez les comparer en cliquant sur le bouton ci-dessous",
 ];
