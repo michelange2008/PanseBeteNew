@@ -15,7 +15,15 @@
 
         <h5 class="card-title">@lang('commun.compare_titre')</h5>
 
-        <p class="card-text">@lang('commun.compare_texte')</p>
+        @if ($saisies->count() < 2)
+
+          <p class="card-text">@lang('commun.compare_texte_futur')</p>
+
+        @else
+
+          <p class="card-text">@lang('commun.compare_texte')</p>
+
+        @endif
 
       </div>
 
@@ -25,9 +33,21 @@
 
   <div class="card-footer">
 
-    <a class="btn btn-sm btn-otobleu rounded-0" href="{{ route('compare.index') }}">
+    @if ($saisies->count() < 2)
+
+      <a class="btn btn-sm disabled rounded-0"
+      href="{{ route('compare.index') }}">
       <i class="fa-solid fa-user-pen"></i> @lang('boutons.go')
     </a>
+
+    @else
+
+      <a class="btn btn-sm btn-otobleu rounded-0"
+      href="{{ route('compare.index') }}">
+      <i class="fa-solid fa-user-pen"></i> @lang('boutons.go')
+    </a>
+
+    @endif
 
   </div>
 
