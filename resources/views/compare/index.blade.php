@@ -10,6 +10,12 @@
 
       <div class="col-sm-11 col-md-10 col-lg-9">
 
+        @include('fragments.flash')
+
+      </div>
+
+      <div class="col-sm-11 col-md-10 col-lg-9">
+
         @titre()
 
       </div>
@@ -37,18 +43,25 @@
                 @foreach ($saisies as $saisie)
 
                   <tr>
-                    <td></td>
+                    <td>
+                      <input class="form-check-input case" type="checkbox"
+                        name="{{ $saisie->id }}" value="{{ $saisie->id }}">
+                    </td>
                     <td>{{ $saisie->elevage->nom }}</td>
-                    <td>{{ $saisie->created_at }}</td>
-                    <td>{{ $saisie->salertes->count() }}</td>
+                    <td>
+                      {{ $saisie->created_at->day }}
+                      {{ $saisie->created_at->monthName }}
+                      {{ $saisie->created_at->year }}
+                    </td>
+                    <td>{{ $saisie->salertes->where('danger', 1)->count() }}</td>
                   </tr>
 
                 @endforeach
               </tbody>
 
             </table>
-
-            @enregistreAnnule()
+            <div>Nombre de case cochées: <span id="nb"></span> </div>
+            @enregistreAnnule(['id' => 'btn_compare'])
 
           </form>
 

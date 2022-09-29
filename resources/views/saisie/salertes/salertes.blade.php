@@ -10,8 +10,6 @@
   @else
     {{-- Bandeau orange avec le nom du thème et le nombre de salertes --}}
     @include('saisie.themes.themesAvecAlertesSynthese')
-    {{-- liste des salertes correspondant au thème avec possibilité d'afficher les origines --}}
-    @include('saisie.salertes.listeAlertes')
 
   @endif
 
