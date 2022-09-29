@@ -16,4 +16,5 @@ return [
   'paraferme_store' => "Le nouveau paramètre a été créé",
   'paraferme_update' => "Le paramètre a été modifié",
   'paraferme_del' => "Le paramètre a été supprimé",
+  'deux_saisies' => "Il faut au moins cocher deux saisies pour pouvoir les comparer",
 ];

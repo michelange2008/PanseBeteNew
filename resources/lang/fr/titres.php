@@ -37,4 +37,5 @@ return array(
   'amis_edit' => "Ajout de nouveaux amis",
   "sort_paraferme" => "Ordonner les parametres",
   'compare_index' => "Choix des saisies à comparer",
+  'compare_result' => "Comparaison du nombre d'alertes entre plusieurs saisies",
 );

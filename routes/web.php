@@ -247,7 +247,8 @@ Route::group(['middleware' => ['auth', 'isValid', 'menu']], function () {
 
   // Gestion des comparaisons
   Route::get('/comparaison', 'CompareController@index')->name('compare.index');
-  ROute::post('/comparaison/choix', 'CompareController@choix')->name('compare.choix');
+  Route::post('/comparaison/choix', 'CompareController@choix')->name('compare.choix');
+  Route::get('/comparaison/theme/{theme}/{saisies}', 'CompareController@theme')->name('compare.theme');
 
   // Gestion des notes
 
