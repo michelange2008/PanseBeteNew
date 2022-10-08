@@ -8,7 +8,10 @@ use App\Models\User;
 use App\Models\Saisie;
 use App\Models\Theme;
 use App\Models\Alerte;
+use App\Models\Salerte;
 use App\Comp\Titre;
+
+use App\Traits\FormatSalertes;
 /**
 * Gère la comparaison entre différentes saisies d'une même user
 *
@@ -18,6 +21,8 @@ use App\Comp\Titre;
 */
 class CompareController extends Controller
 {
+
+  use FormatSalertes;
   /**
   * Affiche une liste de saisie d'un user
   * pour que l'on puisse choisir les saisies à comparer
@@ -39,41 +44,47 @@ class CompareController extends Controller
   }
 
   /**
-  * undocumented function summary
+  * Permet d'afficher la comparaison entre les saisies choisies en présentant
+  * chaque thème avec le nombre d'alertes à problème
   *
-  * Undocumented function long description
-  *
-  * @param type var Description
-  * @return return type
+  * @param Request $request : parce qu'on arrive à cette page par une route post
+  * @return view compare.themes
   */
-  public function choix(Request $request)
+  public function themes(Request $request)
   {
+    // On enlève le token
     $saisies_choisies = $request->except('_token');
+    // Il reste la liste des saisies_id qu'on utilise pour récupérer le liste des saisies
     $saisies = Saisie::where('user_id', auth()->user()->id)
     ->whereIn('id', $saisies_choisies)
     ->orderBy('created_at', 'desc')
     ->get();
 
+    // S'il n'y a pas au moins deux saisies (ce qui en théorie est impossible car
+    // le js grise le bouton valider de compare.index) on retourne à la page
+    // précédente avec un message d'erreur.
     if($saisies->count() < 2) {
 
       return redirect()->back()->with([
       'message' => 'deux_saisies',
       'couleur' => 'alert-danger',
       ]);
-
+      // Sinon on va chercher les infos
     } else {
-
+      // La liste des thèmes
       $themes = Theme::all();
-
+      // On crée une collection destinée à permettre l'affichage du tableau dans
+      // la vue par des boucles successives
       $compare = collect();
+      // On crée la ligne d'en-têtes
       $compare->entete = collect();
-      $compare->entete->push('Nom des thèmes');
-
+      $compare->entete->push('tableaux.nom_themes');
+      // On y met aussi les saisies car il faut le nom et la date
       foreach ($saisies as $saisie) {
         $compare->entete->push($saisie);
       }
+      // On crée le groupe de lignes
       $compare->lignes = collect();
-
       // on passe en revue chaque thème
       foreach ($themes as $theme) {
         // On recherche les id des alertes de ce thème
@@ -105,7 +116,8 @@ class CompareController extends Controller
       }
 
       $titre = new Titre(icone:'divers/compare_blanc.svg', titre:'compare_result');
-      return view('compare.compare', [
+
+      return view('compare.themes', [
         'saisies_choisies' => implode('_', $saisies_choisies),
         'compare' => $compare,
         'titre' => $titre,
@@ -121,10 +133,32 @@ class CompareController extends Controller
    * @param String n° de saisies séparé par un underscore
    * @return return view
    */
-  public function theme(Theme $theme, $saisies_choisies)
+  public function salertes(Theme $theme, $saisies_choisies)
   {
+    // On récupère la liste des saisies (route get)
     $saisies_tab = explode('_', $saisies_choisies);
+
     $saisies = Saisie::whereIn('id', $saisies_tab)->orderByDesc('created_at')->get();
+    // On récupère la liste des salertes correspondantes
+    $liste_salertes = Salerte::whereIn('saisie_id', $saisies_tab)
+                    ->orderBy('alerte_id')
+                    ->orderByDesc('saisie_id')
+                    ->get();
+    // On retire de cette liste, celles qui ne correspondents pas au thème choisi
+    // (On aurait pu faire ça avec une requête DB mais on perdait la syntaxe Eloquent
+    // qui permet de suivre les lien de type belongsTo, ou hasMany, etc.)
+    foreach ($liste_salertes as $key => $salerte) {
+
+      if ($salerte->alerte->theme_id != $theme->id) {
+
+        $liste_salertes->pull($key);
+      }
+      $salerte->nom = $salerte->alerte->nom;
+    }
+    // On rajoute la norme par le trait FormatSalertes et on groupe par nom d'alerte
+    $liste_salertes = $this->formatSalertes($liste_salertes)->groupBy('nom');
+    // On recherche les salertes correspondant aux saisies et au thème et on y
+    // joint les alertes correspondantes
     $salertes = DB::table('salertes')
                     ->join('alertes', 'alertes.id', 'salertes.alerte_id')
                     ->join('saisies', 'saisies.id', 'saisie_id')
@@ -134,11 +168,34 @@ class CompareController extends Controller
                     ->orderByDesc('saisies.created_at')
                     ->get();
 
-    $titre = new Titre(icone:'saisie/'.$theme->icone, titre: $theme->nom, translate:false);
+    // On groupe par nom d'alerte
+    $salertes = $salertes->groupBy('nom');
+    // Puis on passe en revue les salertes et les liste_salertes pour créer la
+    // 2ème colonne du tableau avec la liste des normes
+    foreach ($salertes as $nom => $salerte) {
+      foreach ($liste_salertes as $nom_alerte => $liste_salerte) {
+        if ($nom == $nom_alerte) {
+          $infos = collect();
+          $infos->id = 0;
+          $infos->nom = $nom_alerte;
+          $infos->valeur = $liste_salerte->first()->norme;
+          $infos->danger = ''; // Pour éviter d'avoir une couleur de cellule
+          $infos->unite = null;
+          $salerte->prepend($infos);
+        }
+      }
+    }
+    // On crée le libellé de cette 2ème colonne
+    $lib_infos = collect();
+    $lib_infos->id = 0;
+    $lib_infos->created_at = '';
+    $saisies->prepend($lib_infos);
+
+    $titre = new Titre(icone:'saisie/'.$theme->icone, titre:'compare_result', translate:true);
 
     return view('compare.salertes', [
       'saisies' => $saisies,
-      'salertes' => $salertes->groupBy('nom'),
+      'salertes' => $salertes,
       'theme' => $theme,
       'titre' => $titre,
     ]);

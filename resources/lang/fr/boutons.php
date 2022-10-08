@@ -16,4 +16,5 @@ return [
   'accueil' => "Retour à l'accueil",
   'pdf_modele' => "Formulaire à impr.",
   'go' => "On y va",
+  'retour_choix_compare' => "Retour au choix des saisies"
 ];
