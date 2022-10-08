@@ -29,11 +29,19 @@
 
             <thead class="thead-light fw-bold">
               <tr>
-                <td>Nom de l'alerte</td>
+                <td>@lang('saisie.nom_alerte')</td>
 
                 @foreach ($saisies as $saisie)
 
-                  <td class="text-center">{{ $saisie->created_at->format('d/m/y') }}</td>
+                  @if ($loop->first)
+
+                    <td class="text-center">Seuils d'alertes</td>
+
+                  @else
+
+                    <td class="text-center">{{ $saisie->created_at->format('d/m/y') }}</td>
+
+                  @endif
 
                 @endforeach
               </tr>
@@ -48,9 +56,9 @@
 
                 @foreach ($saisies as $saisie)
 
-                  @if ($saisie->danger)
+                  @if ($saisie->danger == 1)
 
-                    <td class="bg-otorange text-center m-3">
+                    <td class="bg-otorange text-center m-3 fw-bold">
                       @if ($saisie->unite == null)
 
                       @else
@@ -59,9 +67,26 @@
                       @endif
                     </td>
 
+                  @elseif ($saisie->danger == 0)
+
+                    <td class="bg-success text-center">
+
+                      @if ($saisie->unite == null)
+
+                      @else
+
+                        {{ $saisie->valeur }} {{ $saisie->unite }}
+                      @endif
+
+                    </td>
+
                   @else
 
-                    <td class="bg-success"></td>
+                    <td class="bg-light">
+
+                      {{ $saisie->valeur }}
+
+                    </td>
 
                   @endif
 
@@ -87,7 +112,7 @@
           le bouton de retour à cette page doit aussi être le résultat d'un
           formulaire. D'où le code ci-dessous qui mime un formulaire caché et
           transforme le bouton submit en bouton page précédénte --}}
-          <form action="{{ route('compare.choix') }}" method="post">
+          <form action="{{ route('compare.themes') }}" method="post">
             @csrf
             @foreach ($saisies as $saisie)
 

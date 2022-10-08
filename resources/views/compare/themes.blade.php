@@ -67,9 +67,10 @@
                   @if ($loop->first)
 
                       <td class="bg-otobleu">
-                        <a href="{{ route('compare.theme', [$item, $saisies_choisies]) }}">
+                        <a href="{{ route('compare.salertes', [$item, $saisies_choisies]) }}">
                           <img class="img-40" src="{{ url('storage/img/saisie/'.$item->icone) }}" alt="">
                           <span class="text-white">{{ ucfirst($item->nom) }}</span>
+                          <i class="text-secondary fa-solid fa-square-arrow-up-right" title="Cliquez pour voir le détail"></i>
                       </a>
                       </td>
 
@@ -100,6 +101,18 @@
             </tbody>
 
           </table>
+
+          <div class="my-3 fst-italic">
+            <i class="fa-solid fa-computer-mouse text-secondary"></i>
+            Cliquez sur le nom d'un thème pour afficher le détail des alertes pour ce thème
+          </div>
+
+          <div>
+            @annule([
+              'route' => route('compare.index'),
+              'nomAnnule' => __('boutons.retour_choix_compare'),
+            ])
+          </div>
 
         </div>
 

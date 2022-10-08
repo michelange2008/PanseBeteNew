@@ -1,3 +1,7 @@
+{{-- Issu de CompareController@index
+Le bouton enregistre porte un id (btn_compare) sur laquelle agit choix_compare.js
+ce javascript grise le bouton s'il n'y a pas au moins 2 saisies cochées 
+--}}
 @extends('layouts.app')
 
 @extends('menus.menuprincipal')
@@ -24,7 +28,7 @@
 
         <div class="col-sm-11 col-md-10 col-lg-9">
 
-          <form class="" action="{{ route('compare.choix') }}" method="post">
+          <form class="" action="{{ route('compare.themes') }}" method="post">
 
             @csrf
 
@@ -61,7 +65,13 @@
 
             </table>
             <div>Nombre de case cochées: <span id="nb"></span> </div>
-            @enregistreAnnule(['id' => 'btn_compare'])
+            @enregistreAnnule([
+              'id' => 'btn_compare',
+              'nomBouton' => 'boutons.valider',
+              'fa' => "fa-solid fa-check",
+              'nomAnnule' => 'accueil',
+              'route' => route('accueil'),
+            ])
 
           </form>
 

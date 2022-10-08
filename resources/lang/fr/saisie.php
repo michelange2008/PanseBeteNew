@@ -24,4 +24,5 @@ return [
   'edit' => 'modifier',
   'causes' => 'causes identifiées',
   'no_alerte' => "pas d'alerte",
+  'nom_alerte' => "Nom de l'alerte",
 ];
