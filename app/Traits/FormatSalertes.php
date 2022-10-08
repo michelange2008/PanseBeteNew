@@ -21,7 +21,7 @@ trait FormatSalertes
   function formatSalertes($salertes)
   {
     foreach ($salertes as $salerte) {
-      // Si c'est une alerte de type liste, on modifier l'intitulé de la valeur
+      // Si c'est une alerte de type liste, on modifie l'intitulé de la valeur
       // Utilise de la méthode isListe() du Trait TypesTools
       if ( $this->isListe($salerte->alerte->type_id) ) {
         // Remplace l'id de la critalerte par la dénomination

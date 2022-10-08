@@ -245,8 +245,14 @@ Route::group(['middleware' => ['auth', 'isValid', 'menu']], function () {
 
   });
 
-  // Gestion des notes
+  // Gestion des comparaisons
+  Route::get('/comparaison', 'CompareController@index')->name('compare.index');
+  // Comparaison de deux saisies par thème
+  Route::post('/comparaison/themes', 'CompareController@themes')->name('compare.themes');
+  // Comparaison de plusieurs saisies par salerte
+  Route::get('/comparaison/theme/{theme}/{saisies}', 'CompareController@salertes')->name('compare.salertes');
 
+  // Gestion des notes
     Route::resource('/notes', 'NoteController');
 });
 

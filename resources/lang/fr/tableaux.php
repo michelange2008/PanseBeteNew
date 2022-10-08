@@ -31,4 +31,5 @@ return [
   'ordre' => 'ordre',
   'paraferme_titre_liste' => "Liste de paramètres descriptifs de l'exploitation",
   'paraferme_create' => "Ajouter un paramètre",
+  'nom_themes' => 'Nom des thèmes',
 ];
