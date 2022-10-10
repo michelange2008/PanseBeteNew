@@ -13,7 +13,7 @@
 
   <div>
     <h3 class="pdf-sous-titre">Liste des observations à réaliser</h3>
-    <p>Entourer l'option ou marque le nombre d'animaux</p>
+    <p>Entourer l'option ou écrire le nombre d'animaux concernés</p>
   </div>
 
   <table class="table table-bordered">
