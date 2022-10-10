@@ -10,6 +10,7 @@
 
   <h5 class="card-title">{{ __('saisie.saisie_chiffres') }}</h5>
   <p class="card-text">{{ __('saisie.saisie_chiffres_intro_1') }}</p>
+  <p class="card-text fw-bold lead">{{ __('saisie.saisie_chiffres_intro_3') }}</p>
   <p class="card-text">{{ __('saisie.saisie_chiffres_intro_2') }}</p>
 
 </div>
