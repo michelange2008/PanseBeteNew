@@ -8,7 +8,7 @@ return [
   'saisie_chiffres_intro_1' => "Dans un premier temps, on saisit d'abord toutes les informations chiffrées sur le troupeau:
     effectifs, mortalités, nombre de maladies, cellules, boiteries, etc.",
     'saisie_chiffres_intro_2' => "Cela permettra au programme de calculer des indicateurs (taux de mortalité, de morbidité, etc.)",
-  'saisie_chiffres_intro_3' => "Il s'agit des données chiffrées couvrant les 12 derniers mois.",
+  'saisie_chiffres_intro_3' => "Il s'agit des données chiffrées couvrant une période d'UN AN (par exemple: les 12 derniers mois).",
   'saisie_chiffres_faite_1' => "Bravo, vous avez fait la saisie des données chiffrées",
   'saisie_chiffres_faite_2' => "Mais il reste à saisir les observations",
   'saisie_observations' => "Saisie des observations",
