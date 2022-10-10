@@ -13,6 +13,7 @@
 
   <div>
     <h3 class="pdf-sous-titre">Liste des observations à réaliser</h3>
+    <p class="">Entourer le réponse ou marquer le nombre d'animaux</p>
   </div>
 
   <table class="table table-bordered">
@@ -20,7 +21,7 @@
     <th>
       <tr class="table-entete">
         <td class="table-chiffres-bordure col-350 tb-b-r">Observations</td>
-        <td class="table-chiffres-bordure col-left">Options</td>
+        <td class="table-chiffres-bordure col-left">Résultat</td>
       </tr>
     </th>
     <tbody>

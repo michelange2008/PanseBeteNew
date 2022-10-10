@@ -46,7 +46,7 @@ class NumalerteController extends Controller
 
       $elements->titre->titre = $alerte->nom." ( ".$alerte->type->nom." )";
       $elements->titre->translate = false;
-      $elements->titre->soustitre = 'create_alerte_num';
+      $elements->titre->soustitre = 'alerte_num_create';
       $elements->liste->alerte_id->isName = $alerte->id;
 
       return view('admin.editCreateForm', [
