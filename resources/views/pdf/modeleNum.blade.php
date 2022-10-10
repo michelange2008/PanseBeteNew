@@ -4,7 +4,7 @@
 
   <br />
   <div class="entete">
-    <img src="img/pansebetes.svg" alt="otoveil" class="logo">
+    <img src="img/pansebetes.jpeg" alt="otoveil" class="logo">
     <h1 class="pdf-titre">{{ ucfirst($espece->nom) }}</h1>
     </div>
   </div>
