@@ -23,7 +23,7 @@ Route::get('/visiteur/patience', ['uses' => 'VisiteurController@afficheNonValide
 Route::get('/presentation', ['uses' => 'VisiteurController@presentation', 'as' => 'visiteur.presentation']);
 
 
-Route::group(['middleware' => ['auth', 'isValid', 'isAdmin', 'menu']], function() {
+Route::group(['middleware' => ['auth', 'isValid', 'isAdmin', 'menu', 'verified']], function() {
 
   Route::get('/dev', 'DevController@dev')->name('dev');
   Route::post('/store', 'DevController@store')->name('dev.store');
@@ -95,7 +95,7 @@ Route::group(['middleware' => ['auth', 'isValid', 'isAdmin', 'menu']], function(
 
 });
 
-Route::group(['middleware' => ['auth', 'isValid', 'menu']], function () {
+Route::group(['middleware' => ['auth', 'isValid', 'menu', 'verified']], function () {
 
   // Gestion des utilisateurs
   Route::prefix('/utilisateur')->controller(UserController::class)->group(function() {
@@ -256,4 +256,4 @@ Route::group(['middleware' => ['auth', 'isValid', 'menu']], function () {
     Route::resource('/notes', 'NoteController');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
