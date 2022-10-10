@@ -11,6 +11,7 @@
   <h5 class="card-title">{{ __('saisie.saisie_observations') }}</h5>
   <p class="card-text">{{ __('saisie.saisie_obs_intro_1') }}</p>
   <p class="card-text">{{ __('saisie.saisie_obs_intro_2') }}</p>
+  <p class="card-text fw-bold lead">{{ __('saisie.saisie_obs_intro_3') }}</p>
 
 </div>
 
