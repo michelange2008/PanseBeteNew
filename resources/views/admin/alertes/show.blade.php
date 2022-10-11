@@ -118,7 +118,18 @@
 
                 <p>@lang('tableaux.mode_calcul')</p>
 
-                <p class="fw-bold">{{ $alerte->numalerte->num->nom }} / {{ $alerte->numalerte->denom->nom }}</p>
+                @if(isset($alerte->numalerte->denom->nom) && isset($alerte->numalerte->num->nom))
+
+                  <p class="fw-bold">{{ $alerte->numalerte->num->nom }} / {{ $alerte->numalerte->denom->nom }}</p>
+
+                @else
+
+                  <p class="fw-bold text-danger">
+                    @lang('tableaux.warning')
+                    @lang('tableaux.revoir_parametres')
+                  </p>
+
+                @endif
 
               </li>
 
@@ -128,7 +139,18 @@
 
                 <p>@lang('tableaux.mode_calcul')</p>
 
-                <p class="fw-bold">({{ $alerte->numalerte->num->nom }} / {{ $alerte->numalerte->denom->nom }}) x 100</p>
+                @if(isset($alerte->numalerte->denom->nom) && isset($alerte->numalerte->num->nom))
+
+                  <p class="fw-bold">({{ $alerte->numalerte->num->nom }} / {{ $alerte->numalerte->denom->nom }}) x 100</p>
+
+                @else
+
+                  <p class="fw-bold text-danger">
+                    @lang('tableaux.warning')
+                    @lang('tableaux.revoir_parametres')
+                  </p>
+
+                @endif
 
               </li>
 
