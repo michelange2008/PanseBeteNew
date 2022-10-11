@@ -32,4 +32,12 @@ return [
   'paraferme_titre_liste' => "Liste de paramètres descriptifs de l'exploitation",
   'paraferme_create' => "Ajouter un paramètre",
   'nom_themes' => 'Nom des thèmes',
+  'theme' => "thème",
+  'list_items' => "éléments de la liste",
+  'recommandations' => "recommandations",
+  'min' => "minimum",
+  'max' => "maximum",
+  'mode_calcul' => "mode de calcul",
+  'activee' => "activée",
+  'desactivee' => "désactivée",
 ];

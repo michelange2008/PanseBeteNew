@@ -53,7 +53,7 @@
 
                 <div class="mx-3">
 
-                  <p>Thème</p>
+                  <p>@lang('tableaux.theme')</p>
 
                   <h5 class="fw-bold">{{ ucfirst($alerte->theme->nom) }}</h5>
 
@@ -66,7 +66,7 @@
 
             <li class="list-group-item">
 
-              <p>Type</p>
+              <p>@lang('tableaux.type')</p>
 
               <p class=fw-bold>{{ ucfirst($alerte->type->nom) }} </p>
 
@@ -76,7 +76,7 @@
 
             @if ($alerte->type->nom == "liste")
 
-              <p>Eléments de la liste:</p>
+              <p>@lang('tableaux.list_items')</p>
 
               <p class="fw-bold">
 
@@ -94,17 +94,17 @@
 
             @else
 
-              <p>Recommandations</p>
+              <p>@lang('tableaux.recommandations')</p>
 
               @if ($alerte->numalerte != null && $alerte->numalerte->borne_inf != null)
 
-                <p class="fw-bold">minimum {{ $alerte->numalerte->borne_inf }} {{ $alerte->unite }}</p>
+                <p class="fw-bold">@lang('tableaux.min') {{ $alerte->numalerte->borne_inf }} {{ $alerte->unite }}</p>
 
               @endif
 
               @if ($alerte->numalerte != null && $alerte->numalerte->borne_sup != null)
 
-                <p class="fw-bold">maximum {{ $alerte->numalerte->borne_sup }} {{ $alerte->unite }}</p>
+                <p class="fw-bold">@lang('tableaux.max') {{ $alerte->numalerte->borne_sup }} {{ $alerte->unite }}</p>
 
               @endif
 
@@ -116,7 +116,7 @@
 
               <li class="list-group-item">
 
-                <p>Mode de calcul</p>
+                <p>@lang('tableaux.mode_calcul')</p>
 
                 <p class="fw-bold">{{ $alerte->numalerte->num->nom }} / {{ $alerte->numalerte->denom->nom }}</p>
 
@@ -126,7 +126,7 @@
 
               <li class="list-group-item">
 
-                <p>Mode de calcul</p>
+                <p>@lang('tableaux.mode_calcul')</p>
 
                 <p class="fw-bold">({{ $alerte->numalerte->num->nom }} / {{ $alerte->numalerte->denom->nom }}) x 100</p>
 
@@ -138,11 +138,11 @@
 
               @if ($alerte->actif)
 
-                  <h4><span class="badge bg-success">Activée</span></h4>
+                  <h4><span class="badge bg-success">@lang('tableaux.activee')</span></h4>
 
               @else
 
-                  <h4><span class="badge bg-danger">Désactivée</span></h4>
+                  <h4><span class="badge bg-danger">@lang('tableaux.desactivee')</span></h4>
 
               @endif
 
