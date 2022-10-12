@@ -52,6 +52,20 @@
                   @inputNum([
                     'name' => $champ->name,
                     'label' => $champ->label,
+                    'step' => $champ->step ?? '',
+                    'isName' => $champ->isName ?? '',
+                  ])
+
+                </div>
+
+              @elseif ($champ->type == "decimal")
+
+                <div class="col-md-3 col-lg-2">
+
+                  @inputDecimal([
+                    'name' => $champ->name,
+                    'label' => $champ->label,
+                    'step' => $champ->step ?? '',
                     'isName' => $champ->isName ?? '',
                   ])
 

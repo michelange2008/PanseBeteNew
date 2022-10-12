@@ -110,7 +110,7 @@
     "libelle" : "Age au premier vélage (en mois)",
     "groupe" : "reproduction",
     "step" : 1,
-    "type" : "valeur"
+    "type" : "entier"
   },
   "velIA1" : {
     "id" : "velIA1",
@@ -118,15 +118,15 @@
     "groupe" : "reproduction",
     "step" : 1,
     "round" : 1,
-    "type" : "valeur"
+    "type" : "entier"
   },
   "IA_fec_x10" : {
     "id" : "IA_fec_x10",
     "libelle" : "Nombre moyen d'IA Féc / IA",
     "groupe" : "reproduction",
     "step" : 0.1,
-    "round" : 1,
-    "type" : "valeur"
+    "round" : 0.1,
+    "type" : "decimal"
   },
   "plus3IA" : {
     "id" : "plus3IA",
@@ -134,7 +134,7 @@
     "groupe" : "reproduction",
     "step" : 1,
     "round" : 1,
-    "type" : "valeur"
+    "type" : "entier"
   },
   "IVV" : {
     "id" : "IVV",
@@ -142,7 +142,7 @@
     "groupe" : "reproduction",
     "step" : 1,
     "round" : 1,
-    "type" : "valeur"
+    "type" : "entier"
   },
   "vel_genisses_diff" : {
     "id" : "vel_genisses_diff",
@@ -258,7 +258,7 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "valeur"
+    "type" : "entier"
   },
   "uree" : {
     "id" : "uree",
@@ -266,7 +266,7 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "valeur"
+    "type" : "entier"
   },
   "staphs" : {
     "id" : "staphs",
@@ -274,7 +274,7 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "valeur"
+    "type" : "entier"
   },
   "salmo" : {
     "id" : "salmo",
@@ -282,7 +282,7 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "valeur"
+    "type" : "entier"
   },
   "listeria" : {
     "id" : "listeria",
@@ -290,7 +290,7 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "valeur"
+    "type" : "entier"
   },
   "coli" : {
     "id" : "coli",
@@ -298,7 +298,7 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "valeur"
+    "type" : "entier"
   },
   "mort_24" : {
     "id" : "mort_24",
@@ -369,7 +369,7 @@
     "groupe" : "parasitisme",
     "step" : 1,
     "round" : 0,
-    "type" : "valeur"
+    "type" : "entier"
   },
   "boiterie_vache" : {
     "id" : "boiterie_vache",
@@ -386,7 +386,7 @@
     "groupe" : "santé des pieds",
     "step" : 1,
     "round" : 0,
-    "type" : "valeur"
+    "type" : "entier"
   },
   "boiterie_trait" : {
     "id" : "boiterie_trait",

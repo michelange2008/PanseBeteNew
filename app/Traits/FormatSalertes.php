@@ -54,12 +54,13 @@ trait FormatSalertes
   {
 
       $numalerte = Numalerte::where('alerte_id', $salerte->alerte->id)->first();
+
       $borne_inf = ($numalerte !== null) ? $numalerte->borne_inf : null;
       $borne_sup = ($numalerte !== null) ? $numalerte->borne_sup : null;
       $unite = $salerte->alerte->unite;
 
       // Si aucune borne n'est nulle, c'est
-      if ($borne_inf !== null && $borne_sup !== null) {
+      if (($borne_inf !== null && $borne_inf !== 0) && $borne_sup !== null) {
         // soit une valeur précise si les deux bornes sont identiques
         if($borne_inf == $borne_sup) {
 
@@ -71,7 +72,7 @@ trait FormatSalertes
 
         }
       // Si la borne_inf est nulle c'est qu'il ne faut pas dépasser la borne_sup
-      } elseif ($borne_inf === null && $borne_sup !== null) {
+    } elseif (($borne_inf === null || $borne_inf === 0) && $borne_sup !== null) {
 
         $norme = "< ".$borne_sup." ".$unite;
       // Si la borne_sup est nulle, c'est qu'il faut être au desus de la borne_inf

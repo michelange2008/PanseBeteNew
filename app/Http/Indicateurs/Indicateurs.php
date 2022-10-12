@@ -81,7 +81,7 @@ class Indicateurs
 
         // Pour les indicateurs sans calcul (taux urée, nb cellules, etc.) on stocke
         // directement la valeur dans la bdd
-      } elseif ($this->isValeur($parametre->type)) {
+      } elseif ($this->isEntier($parametre->type) || $this->isDecimal($parametre->type)) {
 
         $this->indicateurs->put($parametre->id, $this->chiffres[$parametre->id]);
 

@@ -31,9 +31,10 @@ class NumalerteController extends Controller
     {
       $alerte = Alerte::find($alerte_id);
 
-      // Si c'est une alerte de type VALEUR on prend les infos pour le formulaire
-      // dans un json différent que si c'est un pourcentage ou un ration
-      if ($this->isValeur($alerte->type_id)) {
+      // Si c'est une alerte de type ENTIER ou DECIMAL on prend les infos pour
+      // le formulaire dans un json différent que si c'est un pourcentage ou un ratio
+      // pour lesquels il faut un dénominateur et numérateur
+      if ($this->isEntier($alerte->type_id) || $this->isDecimal($alerte->type_id)) {
 
         $json = 'formAlerteNumValeur.json';
 
@@ -46,8 +47,9 @@ class NumalerteController extends Controller
 
       $elements->titre->titre = $alerte->nom." ( ".$alerte->type->nom." )";
       $elements->titre->translate = false;
-      $elements->titre->soustitre = 'create_alerte_num';
+      $elements->titre->soustitre = 'alerte_num_create';
       $elements->liste->alerte_id->isName = $alerte->id;
+      $elements->liste->alerte_nom->isName = $alerte->nom;
 
       return view('admin.editCreateForm', [
 
@@ -64,14 +66,32 @@ class NumalerteController extends Controller
      */
     public function store(Request $request)
     {
+    // Dans la majorité des cas, la numalerte correspondant à l'alerte existe déjà
+      if(Numalerte::where('alerte_id', $request->alerte_id)->count() > 0) {
 
-      Numalerte::create([
-        'alerte_id' => $request->alerte_id,
-        'borne_inf' => $request->borne_inf,
-        "borne_sup" => $request->borne_sup,
-        "num_id" => $request->num_id,
-        "denom_id" => $request->denom_id,
-      ]);
+        Numalerte::where('alerte_id', $request->alerte_id)
+        ->updateOrCreate([
+          'borne_inf' => ($request->borne_inf == null) ? 0 : $request->borne_inf == null,
+          "borne_sup" => $request->borne_sup,
+          "num_id" => $request->num_id,
+          "denom_id" => $request->denom_id,
+        ]);
+      // Mais pour la cas où elle n'existe pas (notamment s'il y a une observation
+      // avec une valeur entière ou décimale), on la crée en utilisant le nom de
+      // l'alerte correspondante comme nom de numalerte
+      } else {
+
+        $nom = substr(strtolower(str_replace([' ', '\''], '_', $request->alerte_nom)), 0, 49);
+
+        Numalerte::create([
+          'alerte_id' => $request->alerte_id,
+          'nom' => $nom,
+          'borne_inf' => ($request->borne_inf == null) ? 0 : $request->borne_inf == null,
+          "borne_sup" => $request->borne_sup,
+          "num_id" => $request->num_id,
+          "denom_id" => $request->denom_id,
+        ]);
+      }
 
       return redirect()->route('alerte.show', $request->alerte_id)
       ->with(['message' => 'alerte_edit']);
@@ -101,11 +121,15 @@ class NumalerteController extends Controller
         return redirect()->route('num.create', $id);
 
       }
-      // Si c'est une alerte de type VALEUR on prend les infos pour le formulaire
+      // Si c'est une alerte de type ENTIER ou DECIMAL on prend les infos pour le formulaire
       // dans un json différent que si c'est un pourcentage ou un ration
-      if ($this->isValeur($alerte->type_id)) {
+      if ($this->isEntier($alerte->type_id)) {
 
-        $json = 'formAlerteNumValeur.json';
+        $json = 'formAlerteNumEntier.json';
+
+      } elseif ($this->isDecimal($alerte->type_id)) {
+
+        $json = 'formAlerteNumDecimal.json';
 
       } else {
 
@@ -131,6 +155,8 @@ class NumalerteController extends Controller
      */
     public function update(Request $request, $id)
     {
+      $alerte = Alerte::find($request->alerte_id);
+
       Numalerte::where('id', $id)
                 ->update([
                   'alerte_id' => $request->alerte_id,

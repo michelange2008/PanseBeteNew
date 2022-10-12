@@ -17,7 +17,6 @@
     <div class="col-sm-11 col-md-10 col-lg-9">
 
         @titre()
-
       </div>
 
     </div>
@@ -68,7 +67,10 @@
 
               <p>@lang('tableaux.type')</p>
 
-              <p class=fw-bold>{{ ucfirst($alerte->type->nom) }} </p>
+              <p>
+                <span class=fw-bold>{{ ucfirst($alerte->type->nom) }}</span>
+                ({{ $alerte->type->detail }})
+              </p>
 
             </li>
 
@@ -94,17 +96,19 @@
 
             @else
 
-              <p>@lang('tableaux.recommandations')</p>
+              <p>@lang('alertes.recommandations')</p>
 
-              @if ($alerte->numalerte != null && $alerte->numalerte->borne_inf != null)
+              @if ($alerte->numalerte != null && ($alerte->numalerte->borne_inf != null && $alerte->numalerte->borne_inf != 0))
 
-                <p class="fw-bold">@lang('tableaux.min') {{ $alerte->numalerte->borne_inf }} {{ $alerte->unite }}</p>
+                <p class="fw-bold">@lang('alertes.min')
+
+                   {{ $alerte->numalerte->borne_inf }} {{ $alerte->unite }}</p>
 
               @endif
 
               @if ($alerte->numalerte != null && $alerte->numalerte->borne_sup != null)
 
-                <p class="fw-bold">@lang('tableaux.max') {{ $alerte->numalerte->borne_sup }} {{ $alerte->unite }}</p>
+                <p class="fw-bold">@lang('alertes.max') {{ $alerte->numalerte->borne_sup }} {{ $alerte->unite }}</p>
 
               @endif
 
@@ -116,7 +120,7 @@
 
               <li class="list-group-item">
 
-                <p>@lang('tableaux.mode_calcul')</p>
+                <p>@lang('alertes.mode_calcul')</p>
 
                 @if(isset($alerte->numalerte->denom->nom) && isset($alerte->numalerte->num->nom))
 
@@ -125,8 +129,8 @@
                 @else
 
                   <p class="fw-bold text-danger">
-                    @lang('tableaux.warning')
-                    @lang('tableaux.revoir_parametres')
+                    @lang('alertes.warning')
+                    @lang('alertes.revoir_parametres')
                   </p>
 
                 @endif
@@ -137,17 +141,17 @@
 
               <li class="list-group-item">
 
-                <p>@lang('tableaux.mode_calcul')</p>
-
+                <p>@lang('alertes.mode_calcul')</p>
+                {{-- Cas où le numérateur et le dénominateur sont présents --}}
                 @if(isset($alerte->numalerte->denom->nom) && isset($alerte->numalerte->num->nom))
 
                   <p class="fw-bold">({{ $alerte->numalerte->num->nom }} / {{ $alerte->numalerte->denom->nom }}) x 100</p>
-
+                {{-- Cas où il manque un élément de calcul du pourcentage --}}
                 @else
 
                   <p class="fw-bold text-danger">
-                    @lang('tableaux.warning')
-                    @lang('tableaux.revoir_parametres')
+                    @lang('alertes.warning')
+                    @lang('alertes.revoir_parametres')
                   </p>
 
                 @endif
@@ -160,11 +164,11 @@
 
               @if ($alerte->actif)
 
-                  <h4><span class="badge bg-success">@lang('tableaux.activee')</span></h4>
+                  <h4><span class="badge bg-success">@lang('alertes.activee')</span></h4>
 
               @else
 
-                  <h4><span class="badge bg-danger">@lang('tableaux.desactivee')</span></h4>
+                  <h4><span class="badge bg-danger">@lang('alertes.desactivee')</span></h4>
 
               @endif
 
@@ -182,7 +186,10 @@
 
         @edit(['route' => route('alerte.edit', $alerte->id)])
 
-        @annule(['route' => route('alerte.indexParEspece', $alerte->espece->nom)])
+        @annule([
+          'route' => route('alerte.indexParEspece', $alerte->espece->nom),
+          'nomAnnule' => __('boutons.retour'),
+        ])
 
       </div>
 

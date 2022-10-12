@@ -36,6 +36,7 @@ class AppServiceProvider extends ServiceProvider
 
       Blade::include('fragments.inputText','inputText');
       Blade::include('fragments.inputNum','inputNum');
+      Blade::include('fragments.inputDecimal','inputDecimal');
       Blade::include('fragments.inputOuiNon','inputOuiNon');
       Blade::include('fragments.inputSelect','inputSelect');
       Blade::include('fragments.inputSelectMultiple','inputSelectMultiple');

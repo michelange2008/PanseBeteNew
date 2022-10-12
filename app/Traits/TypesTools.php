@@ -97,13 +97,24 @@ trait TypesTools
     }
 
   /**
-   * Renvoie TRUE si l'alerte est de type valeur
+   * Renvoie TRUE si l'alerte est de type entier
    *
    */
-  public function isValeur($var)
+  public function isEntier($var)
   {
 
-    return $this->test($var, 'valeur', 4);
+    return $this->test($var, 'entier', 4);
+
+  }
+
+  /**
+   * Renvoie TRUE si l'alerte est de type decimal
+   *
+   */
+  public function isDecimal($var)
+  {
+
+    return $this->test($var, 'decimal', 5);
 
   }
 }

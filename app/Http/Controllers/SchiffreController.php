@@ -109,9 +109,8 @@ class SchiffreController extends Controller
   */
   public function store(Request $request)
   {
-    $chiffres = $request->all();
+    $chiffres = $request->except('_token');
 
-    array_shift($chiffres); // on enlève le Token
     // On enlève la ligne saisie_id et on
     // la récupère dans une variable
     $saisie_id = array_shift($chiffres);
