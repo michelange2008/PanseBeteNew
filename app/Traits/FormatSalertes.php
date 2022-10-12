@@ -60,7 +60,7 @@ trait FormatSalertes
       $unite = $salerte->alerte->unite;
 
       // Si aucune borne n'est nulle, c'est
-      if (($borne_inf !== null && $borne_inf !== 0) && $borne_sup !== null) {
+      if (($borne_inf != null && $borne_inf != 0) && $borne_sup != null) {
         // soit une valeur précise si les deux bornes sont identiques
         if($borne_inf == $borne_sup) {
 
@@ -72,11 +72,11 @@ trait FormatSalertes
 
         }
       // Si la borne_inf est nulle c'est qu'il ne faut pas dépasser la borne_sup
-    } elseif (($borne_inf === null || $borne_inf === 0) && $borne_sup !== null) {
+    } elseif (($borne_inf == null || $borne_inf == 0) && $borne_sup != null) {
 
         $norme = "< ".$borne_sup." ".$unite;
       // Si la borne_sup est nulle, c'est qu'il faut être au desus de la borne_inf
-      } elseif ($borne_inf !== null && $borne_sup === null) {
+      } elseif ($borne_inf != null && $borne_sup == null) {
 
         $norme = "> ".$borne_inf." ".$unite;
       // Si les deux bornes sont nulles on ne met rien (cas de salerte de liste)
