@@ -4,9 +4,6 @@
 
     <div class="card-group">
 
-      @include('accueil.maferme')
-
-
       @include('accueil.compare')
 
     </div>
