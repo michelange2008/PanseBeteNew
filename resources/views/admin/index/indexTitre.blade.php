@@ -1,6 +1,4 @@
-<div class="d-flex alert bg-otobleu justify-content-between align-items-center">
-
-  <div class="d-flex align-items-center">
+<div class="d-flex alert bg-otobleu justify-content-left align-items-center">
 
     <img class="img-50" src="{{ url('storage/img/'.$indexTab->titre->icone) }}" alt="{{ $indexTab->titre->icone }}">
 
@@ -11,8 +9,6 @@
       <h5 class="px-3">{{ $indexTab->titre->soustitre ?? '' }}</h5>
 
     </div>
-
-  </div>
 
   <div>
 
