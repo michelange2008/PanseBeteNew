@@ -1,4 +1,4 @@
-<div class="card mb-3">
+<div class="card mb-3 alert alert-secondary">
 
   <div class="card-body">
 
@@ -13,7 +13,7 @@
 
       <div class="col-md-8 col-lg-9 col-xl-10">
 
-        <h5 class="card-title">@lang('commun.compare_titre')</h5>
+        <h4 class="card-title">@lang('commun.compare_titre')</h4>
 
         @if ($saisies->count() < 2)
 
@@ -25,29 +25,25 @@
 
         @endif
 
+        @if ($saisies->count() < 2)
+
+          <a class="btn btn-sm disabled rounded-0"
+            href="{{ route('compare.index') }}">
+              <i class="fa-solid fa-user-pen"></i> @lang('boutons.go')
+          </a>
+
+        @else
+
+          <a class="btn btn-sm btn-otobleu rounded-0"
+            href="{{ route('compare.index') }}">
+              <i class="fa-solid fa-user-pen"></i> @lang('boutons.go')
+          </a>
+
+        @endif
+
       </div>
 
     </div>
-
-  </div>
-
-  <div class="card-footer">
-
-    @if ($saisies->count() < 2)
-
-      <a class="btn btn-sm disabled rounded-0"
-      href="{{ route('compare.index') }}">
-      <i class="fa-solid fa-user-pen"></i> @lang('boutons.go')
-    </a>
-
-    @else
-
-      <a class="btn btn-sm btn-otobleu rounded-0"
-      href="{{ route('compare.index') }}">
-      <i class="fa-solid fa-user-pen"></i> @lang('boutons.go')
-    </a>
-
-    @endif
 
   </div>
 
