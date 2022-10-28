@@ -37,4 +37,21 @@ class User extends Model
     {
         return $this->hasMany(Notes::class);
     }
+
+    public function parafermes()
+    {
+      return $this->belongsToMany(Paraferme::class)
+                  ->as('param')
+                  ->withPivot('value');
+    }
+    public function saisies()
+    {
+      return $this->hasMany(Saisie::class);
+    }
+
+    public function amis()
+    {
+      return $this->hasMany(Ami::class);
+    }
+
 }

@@ -64,6 +64,8 @@ class Kernel extends HttpKernel
         'nullToZero' => \App\Http\Middleware\SanitizeMiddleware::class,
         'isAdmin' => \App\Http\Middleware\IsAdmin::class,
         'isValid' => \App\Http\Middleware\IsValid::class,
+        'menu' => \App\Http\Middleware\Menu::class,
+        'especes' => \App\Http\Middleware\EspecesAll::class,
         ];
 
     /**

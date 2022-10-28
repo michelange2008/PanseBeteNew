@@ -5,6 +5,7 @@
     "groupe" : "effectifs",
     "step" : 1,
     "min" : 1,
+    "required" : true,
     "type" : "base"
   },
   "nb_genisses_NV" : {
@@ -13,6 +14,7 @@
     "groupe" : "effectifs",
     "step" : 1,
     "min" : 1,
+    "required" : true,
     "type" : "base"
   },
   "nb_velages" : {
@@ -20,7 +22,8 @@
     "libelle" : "Nombre total de vélages",
     "groupe" : "effectifs",
     "step" : 1,
-    "min" : 1,
+    "min" : 0,
+    "required" : true,
     "type" : "base"
   },
   "nb_velages_vaches" : {
@@ -28,7 +31,8 @@
     "libelle" : "Nombre de vélages de vaches",
     "groupe" : "effectifs",
     "step" : 1,
-    "min" : 1,
+    "min" : 0,
+    "required" : true,
     "type" : "base"
   },
   "nb_velages_genisses" : {
@@ -36,13 +40,15 @@
     "libelle" : "Nombre de vélages de génisses (1er vélages)",
     "groupe" : "effectifs",
     "step" : 1,
-    "min" : 1,
+    "min" : 0,
+    "required" : true,
     "type" : "base"
   },
   "nb_veaux_nes" : {
     "id" : "nb_veaux_nes",
     "libelle" : "Nombre de veaux nés",
     "groupe" : "effectifs",
+    "required" : true,
     "step" : 1,
     "type" : "base"
   },
@@ -96,7 +102,7 @@
     "groupe" : "divers",
     "step" : 1,
     "round" : 0,
-    "type" : "calcule",
+    "type" : "ratio",
     "denom" : "nb_vaches"
   },
   "premier_velage" : {
@@ -104,7 +110,7 @@
     "libelle" : "Age au premier vélage (en mois)",
     "groupe" : "reproduction",
     "step" : 1,
-    "type" : "numerique"
+    "type" : "valeur"
   },
   "velIA1" : {
     "id" : "velIA1",
@@ -112,7 +118,7 @@
     "groupe" : "reproduction",
     "step" : 1,
     "round" : 1,
-    "type" : "numerique"
+    "type" : "valeur"
   },
   "IA_fec_x10" : {
     "id" : "IA_fec_x10",
@@ -120,7 +126,7 @@
     "groupe" : "reproduction",
     "step" : 0.1,
     "round" : 1,
-    "type" : "numerique"
+    "type" : "valeur"
   },
   "plus3IA" : {
     "id" : "plus3IA",
@@ -128,7 +134,7 @@
     "groupe" : "reproduction",
     "step" : 1,
     "round" : 1,
-    "type" : "numerique"
+    "type" : "valeur"
   },
   "IVV" : {
     "id" : "IVV",
@@ -136,7 +142,7 @@
     "groupe" : "reproduction",
     "step" : 1,
     "round" : 1,
-    "type" : "numerique"
+    "type" : "valeur"
   },
   "vel_genisses_diff" : {
     "id" : "vel_genisses_diff",
@@ -252,7 +258,7 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "numerique"
+    "type" : "valeur"
   },
   "uree" : {
     "id" : "uree",
@@ -260,7 +266,7 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "numerique"
+    "type" : "valeur"
   },
   "staphs" : {
     "id" : "staphs",
@@ -268,7 +274,7 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "numerique"
+    "type" : "valeur"
   },
   "salmo" : {
     "id" : "salmo",
@@ -276,7 +282,7 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "numerique"
+    "type" : "valeur"
   },
   "listeria" : {
     "id" : "listeria",
@@ -284,7 +290,7 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "numerique"
+    "type" : "valeur"
   },
   "coli" : {
     "id" : "coli",
@@ -292,7 +298,7 @@
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
-    "type" : "numerique"
+    "type" : "valeur"
   },
   "mort_24" : {
     "id" : "mort_24",
@@ -363,7 +369,7 @@
     "groupe" : "parasitisme",
     "step" : 1,
     "round" : 0,
-    "type" : "numerique"
+    "type" : "valeur"
   },
   "boiterie_vache" : {
     "id" : "boiterie_vache",
@@ -380,7 +386,7 @@
     "groupe" : "santé des pieds",
     "step" : 1,
     "round" : 0,
-    "type" : "numerique"
+    "type" : "valeur"
   },
   "boiterie_trait" : {
     "id" : "boiterie_trait",

@@ -1,6 +1,8 @@
 <?php
 
 return [
+  'saisie_new' => "Nouvelle saisie",
+  'choix_elevage' => "(choisir le type d'élevage)",
   'saisie_titre' => "Démarrage et synthèse",
   'saisie_chiffres' => "Saisie des données chiffrées",
   'saisie_chiffres_intro_1' => "Dans un premier temps, on saisit d'abord toutes les informations chiffrées sur le troupeau:
@@ -21,4 +23,5 @@ return [
   'voir' => 'voir',
   'edit' => 'modifier',
   'causes' => 'causes identifiées',
+  'no_alerte' => "pas d'alerte",
 ];

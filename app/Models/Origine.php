@@ -9,7 +9,7 @@ class Origine extends Model
 
     protected $table = 'origines';
     public $timestamps = false;
-    protected $fillable = array('alerte_id', 'question', 'reponse');
+    protected $guarded = [];
 
     public function alerte()
     {
@@ -19,6 +19,11 @@ class Origine extends Model
     public function sorigines()
     {
         return $this->hasMany(Sorigine::class);
+    }
+
+    public function categorie()
+    {
+      return $this->belongsTo(Categorie::class);
     }
 
 }

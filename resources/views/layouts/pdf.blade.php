@@ -7,9 +7,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Panses-Bêtes') }}</title>
-    <link rel="icon" href="{{asset(config('chemins.images'))}}/favicon.ico" />
+    <link rel="icon" href="{{url('favicon.ico ')}}" />
      <!-- Styles -->
-     <link href="{{ asset(config('chemins.css'))}}/pdf.css" rel="stylesheet">
+     <link rel="stylesheet" href="{{ url('css/pdf.css') }}" />
 </head>
 <body>
 

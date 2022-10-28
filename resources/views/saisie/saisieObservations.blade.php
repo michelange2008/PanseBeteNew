@@ -32,7 +32,7 @@
 
     <div class="ccol-sm-11 col-md-10 col-lg-9">
 
-      <h3>@lang('titres.edit_observations')</h3>
+      <h3>@lang('titres.observations_edit')</h3>
 
         <form action="{{ route('saisie.enregistreObservations') }}" method="post">
 
@@ -53,12 +53,12 @@
 
               <div class="row mb-3">
 
-
                   <div class="form-group">
 
                     <label class="m-2" for="A{{ $alerte->id }}">{{ $alerte->nom }}</label>
 
-                    @if ($alerte->type == "liste")
+                    @if ($alerte->type_id == Config('constantes.MODALITES.OBS'))
+
                       <div class="col-sm-5 col-xl-3">
 
                       <select class="form-control" name="A{{ $alerte->id }}">
@@ -83,6 +83,7 @@
                       </select>
 
                     </div>
+
                     @else
 
                       <div class="col-sm-5 col-xl-3 d-flex flex-row align-items-end">
@@ -120,7 +121,7 @@
 
         @enregistreAnnule([
           'couleur' => 'btn-otorange',
-          'route' => route('saisie.accueil', $saisie->id),
+          'route' => route('saisie.show', $saisie->id),
         ])
 
       </div>

@@ -6,7 +6,6 @@ trait LitJson
 {
   public static function litJson($json)
   {
-
       $jsonAvecChemin = storage_path('file')."/".$json;
 
       $json_source = file_get_contents($jsonAvecChemin);

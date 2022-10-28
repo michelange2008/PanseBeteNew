@@ -1,6 +1,6 @@
-@include('fragments.btnVers', [
+@vers([
   'couleur' => 'secondary',
-  "route" => route('saisie.accueil', $saisie->id),
+  "route" => route('saisie.show', $saisie->id),
   'fa' => 'fa-rotate-left',
   'libelle' => "Retour à la synthèse",
 ])

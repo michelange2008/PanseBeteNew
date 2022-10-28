@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
 
 use App\Models\Schiffre;
 use App\Models\Saisie;
@@ -42,7 +43,7 @@ class SchiffreController extends Controller
     $saisie = Saisie::find($saisie_id);
     // On récupère toutes les alertes NUM et actives
 
-    $alertes = Alerte::where('modalite', 'NUM')->where('actif', 1)->get();
+    $alertes = Alerte::where('modalite_id', config::get('constantes.MODALITES.NUM'))->where('actif', 1)->get();
     // On récupère tous les thèmes
     $themes = Theme::all();
     // On ne garde que ceux de l'espèce de la saisie en cours
@@ -51,11 +52,11 @@ class SchiffreController extends Controller
     $themes = $this->alertesThemes($alertes);
     // On récupère toutes les salertes de la saisie en cours
     $salertes = Salerte::where('saisie_id', $saisie_id)
-                        ->addSelect(['modalite'=> Alerte::select('modalite')
+                        ->addSelect(['modalite_id'=> Alerte::select('modalite_id')
                         ->whereColumn('alerte_id', 'alertes.id')
                       ])->get();
 
-    $salertesNum = $salertes->where('modalite', 'NUM');
+    $salertesNum = $salertes->where('modalite_id', config::get('constantes.MODALITES.NUM'));
 
     // On formate $salertes pour l'affichage
     $salertes = $this->formatSalertes($salertes);
@@ -84,23 +85,24 @@ class SchiffreController extends Controller
     $chiffresSaisisBruts = Schiffre::select('libelle', 'valeur')
     ->where("saisie_id", $saisie->id)
     ->get();
-    $chiffresSaisis = Collect();
-
-    foreach ($chiffresSaisisBruts as $key => $value) {
-
-      $chiffresSaisis->put($value->libelle, $value->valeur);
-
-    }
+    // $chiffresSaisis = Collect();
+    //
+    // foreach ($chiffresSaisisBruts as $key => $value) {
+    //
+    //   $chiffresSaisis->put($value->libelle, $value->valeur);
+    //
+    // }
     // On récupère les libellé du formulaire dans un json dépendant de
     // l'espèce du type chiffresVL.json
     $chiffresBruts = $this->LitJson('parametres'.$saisie->espece->abbr.'.json');
     // On en fait une collection et l'on structure par groupe (effectif, mortalité, etc)
     $chiffres = Collect($chiffresBruts);
     $chiffresGroupes = $chiffres->groupBy('groupe');
+    // dd($chiffresGroupes);
 
     return view('saisie.schiffres.edit', [
     'saisie' => $saisie,
-    'chiffresSaisis' => $chiffresSaisis,
+    'chiffresSaisis' => $chiffresSaisisBruts,
     'chiffresGroupes' => $chiffresGroupes,
     ]);
   }
@@ -130,6 +132,7 @@ class SchiffreController extends Controller
     // La classe Indicateurs va stocker les ondicateurs calculés dans la table sindicateurs
     // si la saisie n'est pas valide on retourne au formulaire
     $indicateurs->calculIndicateurs();
+    
     if($indicateurs->getErreurs()->count() > 0) {
 
       return redirect()->back()->with(['message' => $indicateurs->getErreurs(), 'couleur' => 'alert-danger']);
@@ -144,7 +147,7 @@ class SchiffreController extends Controller
       foreach ($chiffres as $libelle => $valeur) {
         Schiffre::updateOrCreate(
         ['saisie_id' => $saisie_id, 'libelle' => $libelle],
-        ['valeur' => $valeur]
+        ['valeur' => ($valeur == null) ? 0 : $valeur ]
         );
       }
       // Dans la table salertes, on indique à la colonne "danger"

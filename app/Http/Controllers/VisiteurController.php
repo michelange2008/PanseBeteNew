@@ -45,12 +45,13 @@ class VisiteurController extends Controller
         'profession' => $datas['profession'],
         'region' => str_replace('"', '', $datas['region']),
         'valide' => 0,
+        'role_id' => 1,
       ]);
 
       $admin = User::where('email', 'michelange@wanadoo.fr')->first();
 
       // On envoie un mail à l'administratrice de Panse-Bêtes pour l'avertir qu'un nouvel utilisateur est intéressé
-      Mail::to(config('mail.from.address'))->send(new Inscription($nouveau));
+      Mail::to(config('mail.contact.address'))->send(new Inscription($nouveau));
 
       // Et on affiche le message correspondant
       $message = "Nous avons bien enregistré votre demande, nous allons vous répondre dès que possible";

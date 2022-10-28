@@ -5,6 +5,9 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Models\Saisie;
+use App\Models\Note;
+use App\Models\Paraferme;
 
 class User extends Authenticatable
 {
@@ -27,4 +30,30 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function notes()
+    {
+      return $this->hasMany(Note::class);
+    }
+
+    public function saisies()
+    {
+      return $this->hasMany(Saisie::class);
+    }
+
+    public function parafermes()
+    {
+      return $this->belongsToMany(Paraferme::class)->withPivot('value');
+    }
+
+    public function amis()
+    {
+      return $this->hasMany(Ami::class);
+    }
+
+    public function role()
+    {
+      return $this->belongsTo(Role::class);
+    }
+
 }

@@ -8,7 +8,7 @@
 
   <div class="container-fluid">
     <div class="alert bg-otorange">
-      <h3 class="color-otobleu"> <img class="aide-icones img-40" src="{{config('chemins.aide')}}instructions.svg" alt="mode d'emploi"> Aide</h3>
+      <h3 class="color-otobleu"> <img class="aide-icones img-40" src="{{ url('storage/img/aide/instructions.svg')}}" alt="mode d'emploi"> Aide</h3>
     </div>
   </div>
   <div class="container-fluid">
@@ -16,7 +16,7 @@
       <div class="col-md-1"></div>
       <div class="col-md-5">
         <div class="card" style="height:100%">
-          <img class="img-100" src="{{asset(config('chemins.aide'))}}/aide_video.svg" alt="tutoriel">
+          <img class="img-100" src="{{ url('storage/img/aide/aide_video.svg')}}" alt="tutoriel">
           <div class="card-body">
             <h5 class="card-title">Tutoriel vidéo</h5>
             <p class="card-text">Une vidéo de quelques minutes vous permettra de comprendre la logique de fonctionnement du logiciel Panse-Bêtes.</p>
@@ -30,7 +30,7 @@
       </div>
       <div class="col-md-5">
         <div class="card">
-          <img class="img-100" src="{{asset(config('chemins.aide'))}}/aide_cont.svg" alt="aide contextuelle">
+          <img class="img-100" src="{{ url('storage/img/aide/aide_cont.svg')}}" alt="aide contextuelle">
           <div class="card-body">
             <h5 class="card-title">Aide contextuelle</h5>
             <p class="card-text">Une aide contextuelle est une aide qui vous apporte une réponse au sujet de la page que vous êtes en train de consulter.</p>

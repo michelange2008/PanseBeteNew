@@ -10,7 +10,7 @@ class Saisie extends Model
 
     public $timestamps = true;
 
-    protected $fillable = ['user_id', 'espece_id'];
+    protected $guarded = [];
 
     public function user()
     {
@@ -37,9 +37,13 @@ class Saisie extends Model
       return $this->hasMany(Sorigine::class);
     }
 
-    public function chiffres()
+    public function schiffres()
     {
       return $this->hasMany(Chiffre::class);
     }
 
+    public function sindicateurs()
+    {
+      return $this->hasMany(Sindicateur::class);
+    }
 }

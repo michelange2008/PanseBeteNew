@@ -1,3 +1,7 @@
+{{-- issu de SorigineCOntroller@show
+Page affichée par le menu modifier les origines qui affiche d'abord la liste des
+alertes par thème et propose un bouton pour choisir les origines
+ --}}
 @extends('layouts.app')
 
 @extends('menus.menuprincipal')
@@ -12,7 +16,7 @@
 
     <div class="ccol-sm-11 col-md-10 col-lg-9">
 
-      <h3>@lang('titres.edit_origines')</h3>
+      <h3>@lang('titres.origines_edit')</h3>
 
         @foreach ($themes as $theme)
 
@@ -82,7 +86,9 @@
 
       <div class="col-sm-11 col-md-10 col-lg-9">
 
-        @synthese()
+        @enregistreAnnule([
+
+        ])
 
       </div>
 

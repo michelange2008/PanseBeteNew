@@ -1,6 +1,8 @@
 <?php
 
 return [
-  'ale' => 1,
-  'pol' => 2
+  'MODALITES' => [
+    'OBS' => 1,
+    'NUM' => 2,
+  ],
 ];

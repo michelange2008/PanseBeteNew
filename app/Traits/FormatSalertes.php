@@ -3,6 +3,10 @@ namespace App\Traits;
 
 use App\Models\Alerte;
 use App\Models\Critalerte;
+use App\Models\Sorigine;
+use App\Models\Numalerte;
+
+use App\Traits\TypesTools;
 
 /**
  * Ajoute aux salertes les normes avec un formattage pour l'affichage
@@ -11,22 +15,30 @@ use App\Models\Critalerte;
  */
 trait FormatSalertes
 {
+  use TypesTools;
   // Fonction principale qui reçoit une collection de salertes et renvoie cette
   // collection modifiée
   function formatSalertes($salertes)
   {
     foreach ($salertes as $salerte) {
       // Si c'est une alerte de type liste, on modifier l'intitulé de la valeur
-      if($salerte->alerte->type === "liste") {
-
+      // Utilise de la méthode isListe() du Trait TypesTools
+      if ( $this->isListe($salerte->alerte->type_id) ) {
+        // Remplace l'id de la critalerte par la dénomination
         $salerte = $this->valeurListe($salerte);
+        // Ajoute la liste de valeurs qui sont dans la norme
+        $salerte = $this->normeListe($salerte);
+
+      } else {
+        // On ajoute une propriété norme avec une mise en forme pour l'affichage
+        $salerte = $this->normeNum($salerte);
 
       }
-
-      // Puis on ajoute une propriété norme avec une mise en forme pour l'affichage
-      $salerte = $this->format($salerte);
+      // dump($salerte->id ?? '');
+      $salerte = $this->nbOrigines($salerte);
 
     }
+
     return $salertes;
   }
 
@@ -38,11 +50,12 @@ trait FormatSalertes
    * @param type $salerte alerte initiale
    * @return return $formatSalerte alerte formatée avec les normes affichables
    */
-  public function format($salerte)
+  public function normeNum($salerte)
   {
 
-      $borne_inf = $salerte->alerte->borne_inf;
-      $borne_sup = $salerte->alerte->borne_sup;
+      $numalerte = Numalerte::where('alerte_id', $salerte->alerte->id)->first();
+      $borne_inf = ($numalerte !== null) ? $numalerte->borne_inf : null;
+      $borne_sup = ($numalerte !== null) ? $numalerte->borne_sup : null;
       $unite = $salerte->alerte->unite;
 
       // Si aucune borne n'est nulle, c'est
@@ -65,7 +78,7 @@ trait FormatSalertes
       } elseif ($borne_inf !== null && $borne_sup === null) {
 
         $norme = "> ".$borne_inf." ".$unite;
-      // SI les deux bornes sont nulles on ne met rien (cas de salerte de liste)
+      // Si les deux bornes sont nulles on ne met rien (cas de salerte de liste)
       } else {
 
         $norme = "";
@@ -76,7 +89,7 @@ trait FormatSalertes
 
       return $salerte;
 
-}
+    }
 
   /**
   * Méthode interne au trait
@@ -110,6 +123,72 @@ trait FormatSalertes
       }
 
     return $salerte;
+
+  }
+
+  /**
+   * undocumented function summary
+   *
+   * Undocumented function long description
+   *
+   * @param type var Description
+   * @return return type
+   */
+  public function normeListe($salerte)
+  {
+    try {
+      // On recherche les critalertes de l'alerte et qui sont faux pour isAlerte
+      // cad les critères normaux
+      $criteres = Critalerte::select('nom')
+                            ->where('alerte_id', $salerte->alerte_id)
+                            ->where('isAlerte', false)
+                            ->get();
+
+      // Puis on les concatènent avec un slash entre chaque pour les afficher
+      // comme du texte
+      $norme = '';
+      foreach ($criteres as $critere) {
+        if($norme == '') {
+
+          $norme = $critere->nom;
+
+        } else {
+
+          $norme = $norme.'/'.$critere->nom;
+
+        }
+      }
+      // Et on les ajouter à salerte
+      $salerte->norme = $norme;
+
+      return $salerte;
+
+    } catch (\Exception $e) {
+
+      dd($e.'| critères:'.$salerte);
+    }
+
+  }
+
+  /**
+   * Recherche le  nombre de sorigines d'une salerte et l'ajoute à l'attribut
+   * nbOrigines
+   *
+   * @param type Alerte
+   * @return return void
+   */
+  public function nbOrigines($salerte)
+  {
+    try {
+
+      $salerte->nbsorigine = Sorigine::where('salerte_id', $salerte->id)->count();
+
+    } catch (\Exception $e) {
+
+
+
+    }
+
 
   }
 

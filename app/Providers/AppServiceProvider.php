@@ -20,8 +20,10 @@ class AppServiceProvider extends ServiceProvider
       Blade::include('fragments.boutonSupprimer', 'supprimer');
       Blade::include('fragments.blocEnregistreAnnule', 'enregistreAnnule');
       Blade::include('fragments.btnSynthese', 'synthese');
+      Blade::include('fragments.boutonAnnule', 'annule');
+      Blade::include('fragments.boutonEdit', 'edit');
 
-      Blade::include('fragments.titre', 'titre');
+      Blade::include('comp.titre', 'titre');
 
       Blade::include('fragments.dateSortable','dateSortable');
 
@@ -29,10 +31,17 @@ class AppServiceProvider extends ServiceProvider
       Blade::include('fragments.voir','voir');
       Blade::include('fragments.ouinon','ouinon');
       Blade::include('fragments.supprLigne','supprLigne');
-      Blade::include('fragments.modifierLigne','modifierLigne');
+      Blade::include('fragments.ligneEdit','ligneEdit');
+      Blade::include('fragments.ligneShow','ligneShow');
 
       Blade::include('fragments.inputText','inputText');
+      Blade::include('fragments.inputNum','inputNum');
+      Blade::include('fragments.inputOuiNon','inputOuiNon');
       Blade::include('fragments.inputSelect','inputSelect');
+      Blade::include('fragments.inputCheckbox','inputCheckbox');
+      Blade::include('fragments.inputCheckboxV','inputCheckboxV');
+      Blade::include('fragments.inputHidden','inputHidden');
+      Blade::include('fragments.inputTextarea','inputTextarea');
 
     }
 

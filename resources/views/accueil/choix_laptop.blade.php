@@ -1,21 +1,21 @@
 <div class="row justify-content-center">
 
-  <div class="col-md-10">
+  <div class="col-sm-11 col-md-10 col-lg-9">
 
     <div class="nouvelle-saisie-liste alert desktop-only btn-otobleu" style="padding:0">
 
       <div class="d-flex flex-column">
 
-        <h6>Nouvelle saisie</h6>
+        <h6>@lang('saisie.saisie_new')</h6>
 
-        <p><em>(choisir le type d'élevage) <i class="fas fa-arrow-right"></i></em></p>
+        <p><em>@lang('saisie.choix_elevage') <i class="fas fa-arrow-right"></i></em></p>
 
       </div>
 
       @foreach ($especes as $espece)
 
-        <img src="{{ 'storage/img/especes/'.$espece->icone}}"
-          id="nouvelle_{{$espece->id}}" name="{{auth()->user()->name}}" class="nouvelle-saisie-item shadow curseur"
+        <img src="{{ url('storage/img/especes/'.$espece->icone)}}"
+          id="nouvelle_{{$espece->id}}" name="{{auth()->user()->name}}" class="nouvelle-saisie-item toto shadow curseur"
           route= "{{url('/')}}"
           alt="{{$espece->nom}}" title="{{$espece->nom}}">
 

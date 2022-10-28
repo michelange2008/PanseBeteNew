@@ -149,7 +149,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+         'Collective\Html\HtmlServiceProvider',
         /*
          * Application Service Providers...
          */
@@ -209,6 +209,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'Str' => Illuminate\Support\Str::class,
+        'Form' => 'Collective\Html\FormFacade',
+        'HTML' => 'Collective\Html\HtmlFacade',
     ],
 
 ];

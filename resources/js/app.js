@@ -1,18 +1,27 @@
 require('@fortawesome/fontawesome-free/js/all.js');
 require('./deplierAlertes.js')
 require('./afficherOrigines.js')
-
+require('./supprLigne')
 // require( './bootstrap-table.min.js');
 // require( './bootstrap-table-accent-neutralise.min.js');
-require( './bootstrap-table-locale-all.min.js');
+// require( './bootstrap-table-fr-FR.min.js');
 
 $(function() {
+
+  $('#table').bootstrapTable({
+    locale: 'fr-FR'
+  })
 
   $.ajaxSetup({
     headers: {
       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
   });
+
+  // $.validate({
+  //   validateHiddenInputs: true
+  // });
+
 
   // $(function () {
   //   $('[data-toggle="tooltip"]').tooltip()
@@ -47,8 +56,10 @@ $(function() {
     });
   // Nom pour une nouvelle saisie
     $('.nouvelle-saisie-item').on('click', function(e) {
+      console.log("coucou");
       var espece_id = $(this).attr('id').split('_')[1];
       var route = $(this).attr('route');
+      console.log(route);
       nouvelleSaisie(route, $(this).attr('name'), espece_id);
     });
 

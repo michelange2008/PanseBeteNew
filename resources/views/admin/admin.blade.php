@@ -69,7 +69,6 @@
           <th>Email</th>
           <th class="text-center">Saisies</th>
           <th class="text-center">Administrateur</th>
-          <th class="text-center">Modifier</th>
           <th class="text-center">Supprimer</th>
         </thead>
         <tbody id="user">
@@ -80,9 +79,7 @@
                 <td id="email_{{$user->id}}" class="modifEmail">{{$user->email}}</td>
                 <td id="saisies_{{$user->id}}" class="text-center saisies">{{count($saisies_groupees[$user->id])}}</td>
                 <td id="admin_{{$user->id}}" class="text-center">{{($user->admin) ? "OUI" : "NON"}}</td>
-                <td id="modifier_{{$user->id}}" class="modifier cell-delmod curseur">
-                  <img src="{{asset(config('chemins.admin'))}}/modifie.svg" alt="Modifier" title="Modifier cet utilisateur">
-                </td>
+
                 <td id="moins_{{$user->id}}" class="supprimer cell-delmod curseur" title="Supprimer cet utilisateur">
                   <img src="{{asset(config('chemins.admin'))}}/moins.svg" alt="Supprimer">
                 </td>

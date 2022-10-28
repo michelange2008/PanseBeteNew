@@ -6,11 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Categorie extends Model
 {
-    public $fillable = ['nom'];
+    protected $fillable = ['nom', 'icone'];
+
+    public $timestamps = false;
 
     public function alertes()
     {
-      return $this->hasMany(Alerte::class);
+      return $this->hasMany(Origine::class);
     }
 
 }

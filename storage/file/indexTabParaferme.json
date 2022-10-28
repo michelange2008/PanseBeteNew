@@ -1,0 +1,42 @@
+{
+  "prefixe" : "paraferme",
+
+  "colonnes" : {
+
+    "nom" : {
+      "col" : "nom",
+      "type" : "edit",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "type" : {
+      "col" : "type",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "unite" : {
+      "col" : "unite",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "parties" : {
+      "col" : "parties",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : false
+    }
+  },
+
+  "suppr" : true,
+
+  "tri" : {
+
+    "colonne" : "theme_nom",
+
+    "ordre" : "asc"
+  }
+
+
+}

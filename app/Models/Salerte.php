@@ -26,4 +26,9 @@ class Salerte extends Model
         return $this->hasMany(Sorigine::class);
     }
 
+    public function sindicateur()
+    {
+      return $this->hasOne(Sindicateur::class);
+    }
+
 }

@@ -28,7 +28,7 @@ class Alerte extends Model
 
     public function espece()
     {
-        return $this->belongsTo(Espece::class, 'id');
+        return $this->belongsTo(Espece::class);
     }
 
     public function salertes()
@@ -36,13 +36,18 @@ class Alerte extends Model
         return $this->hasMany(Salerte::class, 'alerte_id');
     }
 
-    public function categorie()
-    {
-      return $this->belongsTo(Categorie::class);
-    }
-
     public function numalerte()
     {
       return $this->hasOne(Numalerte::class);
+    }
+
+    public function type()
+    {
+      return $this->belongsTo(Type::class);
+    }
+
+    public function modalite()
+    {
+      return $this->belongsTo(Modalite::class);
     }
 }

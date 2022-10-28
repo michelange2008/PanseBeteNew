@@ -23,7 +23,7 @@ html {
 }
 
 .pdf-sous-titre {
-  font-weight: lighter;
+  font-weight: bold;
   font-style: italic;
 }
 
@@ -66,4 +66,36 @@ h4 {
   padding-left: 30px;
   border-left: solid 4px slategrey;
 
+}
+
+.table-groupe {
+  background-color:lightgrey;
+}
+
+.table-chiffres {
+  padding: 6px"
+}
+
+.table-chiffres-bordure {
+  border-bottom:1px solid grey;
+  padding: 5px"
+}
+
+.table-blanc {
+  color: white;
+}
+
+.col-350 {
+  max-width: 350px;
+}
+.col-left {
+  text-align: right;
+}
+
+.table-entete {
+  background: black;
+  color: white;
+}
+.tb-b-r {
+  border-right: dotted 1px black;
 }

@@ -9,18 +9,19 @@ use App\Mail\Accepte;
 use Mail;
 use App\Models\Espece;
 use App\Models\User;
+use App\Models\Ami;
 use App\Models\Saisie;
 use App\Models\Inscription;
 
+use App\Traits\FormTemplate;
+use App\Comp\Titre;
+
 class UserController extends Controller
 {
+  use FormTemplate;
 
-  public function __construct()
-  {
-    $this->middleware('isAdmin');
-  }
-    /**
-     * Display a listing of the resource.
+  /**
+     * Redirige vers le controleur AdminController
      *
      * @return \Illuminate\Http\Response
      */
@@ -34,23 +35,8 @@ class UserController extends Controller
       }
       else
       {
-        $users =User::orderBy('admin', 'desc')->get();
-        $saisies_groupees = Saisie::all()->mapToGroups(function($item, $key) {
-          return [$item['user_id'] => $item['id']];
-        });
-        $users_saisies = $saisies_groupees->keys();
 
-        foreach ($users as $user) {
-
-          if(!$users_saisies->contains($user->id))
-          {
-            $saisies_groupees->put($user->id, collect([]));
-          }
-        }
-        return view('admin/admin', [
-          'users' => $users,
-          'saisies_groupees' => $saisies_groupees,
-        ]);
+        return redirect()->route('admin.index');
       }
     }
 
@@ -61,7 +47,7 @@ class UserController extends Controller
      */
     public function create()
     {
-      return redirect()->route('utilisateur.index');
+      return redirect()->route('user.index');
     }
 
     /**
@@ -85,6 +71,7 @@ class UserController extends Controller
 
       // création de l'utilisateur
         $datas = $request->all();
+        dd($datas);
         $user = new User();
         $user->name = $datas['nom'];
         $user->email = $datas['email'];
@@ -101,33 +88,28 @@ class UserController extends Controller
     }
 
     /**
-    * Rend valide un user
-    **/
-    public function valideUser($user_id)
-    {
-      // On change la statut non valide de l'user
-      $user = User::find($user_id);
-      $user->valide = 1;
-      $user->save();
-
-      // On lui envoie un mail
-      Mail::to($user)->bcc(auth()->user())->send(new Accepte($user));
-
-      return response()->json([
-        "id" => $user->id,
-        "nom" => $user->name,
-        "email" => $user->email,
-      ]);
-    }
-    /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        return redirect()->route('utilisateur.index');
+        $titre = new Titre(icone: 'profil_clair.svg', titre: $user->name, translate: false );
+
+        $amis_suiveurs = Ami::where('user_id', $user->id)->get();
+
+        // AMIS SUIVIS
+        $liste_amis_suivis = Ami::select('user_id')->where('ami_id', $user->id)->get();
+
+        $amis_suivis = User::find($liste_amis_suivis);
+
+        return view('user.show', [
+          'titre' => $titre,
+          'user' => $user,
+          'amis_suiveurs' => $amis_suiveurs,
+          'amis_suivis' => $amis_suivis
+        ]);
     }
 
     /**
@@ -136,9 +118,13 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($user)
     {
-      return redirect()->route('utilisateur.index');
+      $elements = $this->editForm($user, 'formUser.json');
+
+      return view('admin.editCreateForm', [
+        'elements' => $elements,
+      ]);
     }
 
     /**
@@ -150,14 +136,21 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $datas = $request->all();
-      $user = User::find($id);
-      $user->name = $datas['nom'];
-      $user->email = $datas['email'];
-      $user->save();
-      return response()->json([
-        "id" => $user->id,
+      $request->validate([
+        'name' => 'required | max:191',
+        'email' => 'email',
+        'profession' => 'alpha_num | nullable | max:191'
       ]);
+
+      User::where('id', $id)
+            ->update([
+              'name' => $request->name,
+              'email' => $request->email,
+              'profession' => $request->profession,
+              'region' => $request->region
+            ]);
+
+      return redirect()->route('user.show', $id)->with('message', 'user_update');
     }
 
     /**
@@ -173,21 +166,4 @@ class UserController extends Controller
         return response()->json(['message' => $id]);
     }
 
-    public function tousSauf($id)
-    {
-      $users = User::select('id', 'name')->where('id', '!=', $id)->get();
-
-      return response()->json(json_encode($users));
-    }
-
-    public function changeSaisieUser($ancien_user_id, $nouveau_user_id)
-    {
-      $saisies = Saisie::where('user_id', $ancien_user_id)->get();
-      foreach ($saisies as $saisie) {
-        $saisie->user_id = $nouveau_user_id;
-        $saisie->save();
-      }
-
-      return response()->json(["nombre_saisies" => Saisie::where('user_id', $nouveau_user_id)->count()]);
-    }
 }

@@ -22,6 +22,7 @@ Permet de cocher les origines d'une alerte lors de la saisie
 
         <input type="hidden" name="saisie_id" value="{{ $saisie->id }}">
         <input type="hidden" name="salerte_id" value="{{ $salerte_id }}">
+        <input type="hidden" name="theme_id" value="{{ $alerte->theme->id }}">
 
         @foreach ($origines as $origine)
 
@@ -33,7 +34,7 @@ Permet de cocher les origines d'une alerte lors de la saisie
             @endif
             >
 
-            <label class="form-check-label" for="O{{ $origine->id }}">{{ $origine->question }}</label>
+            <label class="form-check-label" for="O{{ $origine->id }}">{{ ucfirst($origine->reponse)." ?" }}</label>
 
 
           </div>

@@ -1,7 +1,7 @@
 {
   "tri" : {
 
-    "colonne" : "num",
+    "colonne" : "groupe",
 
     "ordre" : "asc"
   },
@@ -26,5 +26,15 @@
       "align" : "center",
       "sortable" : false
     }
+  },
+
+  "bouton" : {
+    "route" : "chiffre.create",
+    "libelle" : "add_chiffre"
+  },
+
+  "titre" : {
+    "texte" : "chiffres_liste",
+    "icone" : "default.svg"
   }
 }

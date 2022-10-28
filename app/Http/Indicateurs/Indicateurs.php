@@ -3,14 +3,17 @@ namespace App\Http\Indicateurs;
 
 use DB;
 use App\Models\Alerte;
+use App\Models\Numalerte;
 use App\Models\Salerte;
 
+use App\Traits\TypesTools;
 /**
 * Classe  pour le calcul des indicateurs (mortalités, ...) et leur stockage
 * dans le bdd salertes.
 */
 class Indicateurs
 {
+  use TypesTools;
 
   protected Array $chiffres; // données saisies
   protected String $saisie_id; // Id de la saisie
@@ -33,7 +36,7 @@ class Indicateurs
     foreach ($this->parametres as $parametre) {
 
       // Cas des paramètres exprimés en % et résultat d'une division
-      if($parametre->type == "pourcentage") {
+      if($this->isPourcentage($parametre->type)) {
         // On lève une exception en cas de division par 0
 
         if($this->chiffres[$parametre->denom] != 0) {
@@ -42,14 +45,15 @@ class Indicateurs
 
         } else {
           // On recherche l'intitule du dénominateur nul pour l'inscrire dans $erreurs
-          $libelle_erreur = "Attention";
-          foreach ($this->parametres as $abbr => $param) {
-            if($abbr == $parametre->denom) {
-              $libelle_erreur = $param->libelle;
-            }
-          }
-          // Et on inscrit l'erreur
-          $this->setErreurs($libelle_erreur, "messages.param_nul");
+          // $libelle_erreur = "Attention";
+          // foreach ($this->parametres as $abbr => $param) {
+          //   if($abbr == $parametre->denom) {
+          //     $libelle_erreur = $param->libelle;
+          //   }
+          // }
+          // // Et on inscrit l'erreur
+          // $this->setErreurs($libelle_erreur, "messages.param_nul");
+          $indicateur = 0;
 
         }
         $this->indicateurs->put($parametre->id, $indicateur);
@@ -61,7 +65,7 @@ class Indicateurs
 
         }
 
-      } elseif ($parametre->type == 'calcule') {
+      } elseif ($this->isRatio($parametre->type)) {
 
         // On lève une exception en cas de division par 0
         try {
@@ -70,14 +74,14 @@ class Indicateurs
 
         } catch (\Exception $e) {
           // Et on inscrit l'erreur
-          $this->setErreurs($parametre->libelle, "messages.param_nul");
+          $indicateur = 0;
 
         }
         $this->indicateurs->put($parametre->id, $indicateur);
 
         // Pour les indicateurs sans calcul (taux urée, nb cellules, etc.) on stocke
         // directement la valeur dans la bdd
-      } elseif ($parametre->type == 'numerique') {
+      } elseif ($this->isValeur($parametre->type)) {
 
         $this->indicateurs->put($parametre->id, $this->chiffres[$parametre->id]);
 
@@ -105,14 +109,14 @@ class Indicateurs
   }
 
   /*
-  // Stocke les indicateurs calculés 
+  // Stocke les indicateurs calculés
   */
   public function store()
   {
     foreach ($this->indicateurs as $abbr => $valeur) {
       try {
 
-        $alerte_id = Alerte::where('abbr', $abbr)->first()->id;
+        $alerte_id = Numalerte::where('nom', $abbr)->first()->alerte_id;
 
       } catch (\Exception $e) {
 
@@ -121,7 +125,7 @@ class Indicateurs
 
       Salerte::updateOrCreate(
       ['saisie_id' => $this->saisie_id, 'alerte_id' => $alerte_id],
-      ['valeur' => $valeur]
+      ['valeur' => ($valeur == null) ? 0 : $valeur]
       );
     }
   }

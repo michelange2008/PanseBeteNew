@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Saisie;
 use App\Models\Theme;
 use App\Models\Alerte;
+use App\Models\Modalite;
 use App\Models\Critalerte;
 use App\Models\Salerte;
 use App\Models\Sorigine;
@@ -22,10 +23,11 @@ use App\Traits\CreeSaisie;
 use App\Traits\LitJson;
 use App\Traits\ThemesTools;
 use App\Traits\FormatSalertes;
+use App\Traits\TypesTools;
 
 class SaisieController extends Controller
 {
-  use CreeAlerte, CreeSaisie, LitJson, SalerteIsDanger, ThemesTools, FormatSalertes;
+  use CreeAlerte, CreeSaisie, LitJson, SalerteIsDanger, ThemesTools, FormatSalertes, TypesTools;
 
   /*
   // Méthode qui conduit vers une nouvelle saisie
@@ -41,14 +43,14 @@ class SaisieController extends Controller
 
     $saisie_id = $this->nouvelleSaisie($elevage->id);
 
-    return redirect()->route('saisie.accueil', ['saisie_id' => $saisie_id]);
+    return redirect()->route('saisie.show', ['saisie_id' => $saisie_id]);
   }
 
   /*
   // Affiche la page d'accueil d'une série
   // quand on fait une nouvelle saisie ou que l'on modifie une ancienne
   */
-    public function accueil($saisie_id)
+    public function show($saisie_id)
     {
       $saisie = Saisie::find($saisie_id);
 
@@ -103,11 +105,11 @@ class SaisieController extends Controller
     public function saisieObservations($saisie_id)
     {
       $saisie = Saisie::find($saisie_id);
-      // Boucle pour le cas où des espèces ne sont pas différenciées entre num et observation
-      $modalite = ($saisie->espece->fini) ? ['OBS'] : ['OBS', 'NUM', 'CAL'];
+
+      $modalite = Modalite::find(config('constantes.MODALITES.OBS'));
 
       $alertes = Alerte::where('espece_id', $saisie->espece->id)
-      ->where('modalite', $modalite)
+      ->where('modalite_id', $modalite->id)
       ->where('actif', true)
       ->get();
 
@@ -145,30 +147,63 @@ class SaisieController extends Controller
     public function enregistreObservations(Request $request)
     {
       $datas = $request->all();
-
+      // On enlève le token
       array_shift($datas);
-
+      // On enlève la saisie_id en la stockant dans la variable $saisie_id
       $saisie_id = array_shift($datas);
-
+      // Puis on parcours les reste des données qui commencent toutes par A
       foreach ($datas as $Aalerte_id => $valeur) {
-        // On enlève le préfixe A
+        // On enlève le préfixe A pour récupérer l'id de l'alerte
         $alerte_id = substr($Aalerte_id, 1);
+        $alerte = Alerte::find($alerte_id);
         // Utilisation du trait CréeAlerte pour savoir si la valeur est en déhors des clous
+        $danger = $this->creeAlerte($alerte, $valeur);
+        // S'il existe déjà une salerte avec cette alerte mais d'une valeur différente
+        // il faut supprimer toutes les origines s'il y en a
+        $salerte =Salerte::where('saisie_id', $saisie_id)
+                  ->where('alerte_id', $alerte_id)
+                  ->where('valeur', '<>', $valeur)
+                  ->first();
+        if ($salerte !== null) {
+          $sorigines = Sorigine::where('salerte_id', $salerte->id)->get();
+          Sorigine::destroy($sorigines);
+        }
+        // Ensuite on met à jour ou on crée la salerte correspondante
         Salerte::updateOrCreate(
         ['alerte_id' => $alerte_id, 'saisie_id' => $saisie_id],
-        ['valeur' => $valeur, 'danger' => $this->creeAlerte($alerte_id, $valeur)],
+        ['valeur' => $valeur, 'danger' => $danger],
         );
       }
       // On passe la variable hasObs à true
       Saisie::where('id', $saisie_id)->update(['hasobs' => 1]);
 
       $liste_origines = [];
-      $ori = sOrigine::select('origine_id')->where('saisie_id', session()->get('saisie_id'))->get();
+      $ori = sOrigine::select('origine_id')->where('saisie_id', $saisie_id)->get();
       foreach ($ori as $value) {
         $liste_origines[] = $value->origine_id;
       }
 
-      return redirect()->route('saisie.accueil', $saisie_id);
+      return redirect()->route('saisie.show', $saisie_id);
+    }
+
+    public function destroy($saisie_id)
+    {
+      session()->put('saisie_id', $saisie_id);
+
+      $elevage = Saisie::where('id', $saisie_id)->first()->elevage_id;
+
+      $effacerElevage = false;
+
+      if(Saisie::where('elevage_id', $elevage)->count() === 1)
+      {
+        $effacerElevage = true;
+      }
+
+      Saisie::destroy($saisie_id);
+
+      if($effacerElevage) Elevage::destroy($elevage);
+
+      return redirect()->back();
     }
 
 

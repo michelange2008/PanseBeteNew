@@ -4,26 +4,56 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Alerte;
+use App\Models\Numalerte;
+use App\Fournisseurs\TabLab;
+
+use App\Traits\FormTemplate;
+use App\Traits\TypesTools;
+
 class NumalerteController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
+  use FormTemplate, TypesTools;
+
+  /**
+   * Non implémenté car numalerte liée à alerte
+   *
+   */
+    public function index() {}
 
     /**
      * Show the form for creating a new resource.
      *
+     * @param $alerte_id id de l'alerte qui vient d'être crée dans AlerteController
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($alerte_id)
     {
-        //
+      $alerte = Alerte::find($alerte_id);
+
+      // Si c'est une alerte de type VALEUR on prend les infos pour le formulaire
+      // dans un json différent que si c'est un pourcentage ou un ration
+      if ($this->isValeur($alerte->type_id)) {
+
+        $json = 'formAlerteNumValeur.json';
+
+      } else {
+
+        $json = 'formAlerteNum.json';
+      }
+
+      $elements = $this->createForm($json);
+
+      $elements->titre->titre = $alerte->nom." ( ".$alerte->type->nom." )";
+      $elements->titre->translate = false;
+      $elements->titre->soustitre = 'create_alerte_num';
+      $elements->liste->alerte_id->isName = $alerte->id;
+
+      return view('admin.editCreateForm', [
+
+        'elements' => $elements,
+
+      ]);
     }
 
     /**
@@ -34,51 +64,90 @@ class NumalerteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+      Numalerte::create([
+        'alerte_id' => $request->alerte_id,
+        'borne_inf' => $request->borne_inf,
+        "borne_sup" => $request->borne_sup,
+        "num_id" => $request->num_id,
+        "denom_id" => $request->denom_id,
+      ]);
+
+      return redirect()->route('alerte.show', $request->alerte_id)
+      ->with(['message' => 'alerte_edit']);
+
     }
 
     /**
-     * Display the specified resource.
+     * Non implémenté car numalerte liée à alerte
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    public function show($id) {}
 
     /**
-     * Show the form for editing the specified resource.
+     * fonction destinée à modifier les parametres des alertes qui ne sont pas
+     * de type liste mais de type valeur, ratio, pourcentage
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id : alerte_id que l'on veut modifier
      */
     public function edit($id)
     {
-        //
+      $alerte = Alerte::find($id);
+
+      $alerteNum = Numalerte::where('alerte_id', $id)->first();
+      // S'il n'y a aucune numalerte aossicée à cette alerte, on renvoie à create
+      if ($alerteNum == null) {
+
+        return redirect()->route('num.create', $id);
+
+      }
+      // Si c'est une alerte de type VALEUR on prend les infos pour le formulaire
+      // dans un json différent que si c'est un pourcentage ou un ration
+      if ($this->isValeur($alerte->type_id)) {
+
+        $json = 'formAlerteNumValeur.json';
+
+      } else {
+
+        $json = 'formAlerteNum.json';
+      }
+      $elements = $this->editForm($alerteNum, $json);
+
+      $elements->titre->titre = $alerteNum->alerte->nom." ( ".$alerteNum->alerte->unite." )";
+      $elements->titre->translate = false;
+      $elements->titre->soustitre = 'alerte_num_edit';
+
+      return view('admin.editCreateForm', [
+
+        'elements' => $elements,
+
+      ]);
+
     }
 
     /**
-     * Update the specified resource in storage.
+     * Mise à jour des paramètres numériques d'une alerte
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //
+      Numalerte::where('id', $id)
+                ->update([
+                  'alerte_id' => $request->alerte_id,
+                  'borne_inf' => $request->borne_inf,
+                  "borne_sup" => $request->borne_sup,
+                  "num_id" => $request->num_id,
+                  "denom_id" => $request->denom_id,
+                ]);
+
+      return redirect()->route('alerte.show', $request->alerte_id)
+                            ->with(['message' => 'alerte_edit']);
+
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+    * Non implémenté car numalerte liée à alerte
      */
-    public function destroy($id)
-    {
-        //
-    }
+
+    public function destroy($id) {}
 }

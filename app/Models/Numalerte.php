@@ -10,6 +10,7 @@ class Numalerte extends Model
     use HasFactory;
 
     public $timestamps = false;
+    protected $guarded = array();
 
     public function alerte()
     {

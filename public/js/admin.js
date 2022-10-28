@@ -153,7 +153,7 @@ $(function() {
           supprimer : {
             btnClass : 'btn-red',
             action: function() {
-              supprimer(ligne_id, 'utilisateur/', id);
+              supprimer(ligne_id, 'utilisateur/destroy/', id);
             },
 
           },
@@ -184,7 +184,7 @@ $(function() {
         content : 'Etes-vous sûr de vouloir supprimer '+nom,
         buttons : {
           supprimer : function() {
-            supprimer(ligne_id, 'utilisateur/', id);
+            supprimer(ligne_id, 'utilisateur/destroy/', id);
           },
           annuler : function() {
           }
@@ -347,7 +347,7 @@ $(function() {
       content : function() {
         var self = this;
         return $.ajax({
-          url: 'utilisateur/tousSauf/'+id,
+          url: 'api/tousSauf/'+id,
           dataType: 'json',
           method: 'get'
         }).done(function(response){
@@ -368,7 +368,7 @@ $(function() {
               var ancien_user = $(this).attr('user');
               var nouveau_user = $(this).attr('id');
               $.ajax({
-                url: 'utilisateur/changeSaisieUser/'+ancien_user+'/'+nouveau_user,
+                url: 'api/changeSaisieUser/'+ancien_user+'/'+nouveau_user,
                 dataType: 'json',
                 method: 'get'
               }).done(function(response){
@@ -399,7 +399,7 @@ $(function() {
     var nonvalide_id = $(this).attr('id').split('_')[1];
     var nom = $('#nomNonValide_'+nonvalide_id).html();
     var ligne_id = '#ligneNonValide_'+nonvalide_id;
-    var url = 'utilisateur/';
+    var url = 'utilisateur/destroy/';
     $.confirm({
       columnClass : 'large',
       type : 'red',

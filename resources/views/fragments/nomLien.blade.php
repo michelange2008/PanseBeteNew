@@ -4,7 +4,7 @@ VARIABLES: id, route, nom -->
 <a href="{{ route($route, $id)}}"
   data-toggle="tooltip" data-placement="right"
   title="{{ __($tooltip ?? 'tooltips.affiche_infos') }}"
-  class="">
+  class="text-{{ $aligne ?? 'left'}}">
   {{ $before ?? ''}}
   {!! $nom !!}
   @if ($nom != '')
