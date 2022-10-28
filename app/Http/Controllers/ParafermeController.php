@@ -15,11 +15,12 @@ use App\Traits\LitJson;
 use App\Traits\TypesTools;
 use App\Traits\FormTemplate;
 use App\Traits\StringTools;
+use App\Traits\Ordre;
 
 class ParafermeController extends Controller
 {
 
-  use LitJson, TypesTools, FormTemplate, StringTools;
+  use LitJson, TypesTools, FormTemplate, StringTools, Ordre;
     /**
      * Display a listing of the resource.
      *
@@ -64,19 +65,22 @@ class ParafermeController extends Controller
         'nom' => 'required|max:191',
         'unite' => 'nullable|max:10',
         'type' => 'required',
-        'parties' => Rule::requiredIf(fn() => $request->type == 'liste'),
+        'parties' => Rule::requiredIf(fn() => $request->type == 'liste' || $request->type == 'liste multiple'),
       ])->validate();
-
+// dd($request->all());
       // Et on stocke les infos
       $paraferme = new Paraferme();
       $paraferme->nom = $request->nom;
       $paraferme->unite = $request->unite;
       $paraferme->type = $request->type;
-      // on utilise la méthode cleanString du trait tringTools pour nettoyer
-      $paraferme->parties = ($request->type == 'liste')
+      $paraferme->ordre = $request->ordre;
+      // on utilise la méthode cleanString du trait StringTools pour nettoyer
+      $paraferme->parties = ($request->type == 'liste' || $request->type == 'liste multiple')
                             ? $this->cleanString($request->parties)
                             : null;
       $paraferme->save();
+
+      $this->renum();
 
       return redirect()->route('paraferme.index')->with(['message' => 'paraferme_store']);
     }
@@ -125,8 +129,10 @@ class ParafermeController extends Controller
         'nom' => 'required|max:191',
         'unite' => 'nullable|max:10',
         'type' => 'required',
-        'parties' => Rule::requiredIf(fn() => $request->type == 'liste'),
+        'parties' => Rule::requiredIf(fn() => $request->type == 'liste' || $request->type == 'liste multiple'),
       ])->validate();
+      // Utilisation du trait Ordre pour éviter les doublons
+      $this->ordonne($request);
 
       Paraferme::updateOrCreate(
         ['id' => $paraferme->id],
@@ -134,14 +140,15 @@ class ParafermeController extends Controller
           'nom' => $request->nom,
           'unite' => $request->unite,
           'type' => $request->type,
-          'parties' => ($request->type == 'liste')
+          'parties' => ($request->type == 'liste' || $request->type == 'liste multiple')
           // on utilise la méthode cleanString du trait tringTools pour nettoyer
                       ? $this->cleanString($request->parties)
                       : null,
         ]
 
       );
-      // dd($request->nom);
+      // Traits Ordre: réincrémente
+      $this->renum();
 
       return redirect()->route('paraferme.index')
               ->with(['message' => 'paraferme_update']);
@@ -159,4 +166,39 @@ class ParafermeController extends Controller
 
         return redirect()->back()->with(['message' => 'paraferme_del']);
     }
+
+    /**
+     * Affiche la page pour définir l'ordre des parametres d'exploitation
+     * @return view paraferme/ranger.blade.php
+     */
+    public function ranger()
+    {
+
+      $titre = new Titre("sort.svg", "sort_paraferme");
+
+      return view('admin.paraferme.ranger', [
+        'parafermes' => Paraferme::orderBy('ordre')->get(),
+        'titre' => $titre,
+      ]);
+    }
+
+    /**
+     * Permet de stocker l'ordre des paramètres
+     *
+     * issus du formulaire dans admin/paraferme/ranger.blade.php
+     *
+     * @param request données du formulaire post
+     * @return return view liste des parametres (paraferme.index)
+     */
+    public function storeRanger(Request $request)
+    {
+      foreach ($request->all() as $key => $value) {
+        Paraferme::where('id', $key)->update(['ordre' => $value]);
+      }
+      // Réincrémente l'ensemble des parafermes de 1 à n
+      $this->renum();
+
+      return redirect()->route('paraferme.index');
+    }
+
 }

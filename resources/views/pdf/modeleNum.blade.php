@@ -4,7 +4,7 @@
 
   <br />
   <div class="entete">
-    <img src="img/pansebetes.svg" alt="otoveil" class="logo">
+    <img src="img/pansebetes.jpeg" alt="otoveil" class="logo">
     <h1 class="pdf-titre">{{ ucfirst($espece->nom) }}</h1>
     </div>
   </div>
@@ -24,21 +24,20 @@
       </tr>
     </th>
 
-    @foreach ($chiffres as $groupe)
+    @foreach ($chiffresGroupes as $groupe => $elements)
 
       <tr>
         <td colspan="2" class="table-groupe">
-          <h4>{{ ucfirst($groupe[0]->groupe->nom) }}</h4>
+          <h4>{{ ucfirst($groupe) }}</h4>
         </td>
       </tr>
-
-      @foreach ($groupe as $chiffre)
+      @foreach ($elements as $element)
 
         <tr>
           @if ($loop->last)
 
             <td class="table-chiffres">
-              {{ $chiffre->nom }}
+              {{ $element->libelle }}
             </td>
             <td class="table-chiffres table-blanc">
               ...............................
@@ -46,7 +45,7 @@
 
           @else
             <td class="table-chiffres-bordure">
-              {{ $chiffre->nom }}
+              {{ $element->libelle }}
             </td>
             <td class="table-chiffres-bordure table-blanc">
               ...............................
@@ -55,6 +54,11 @@
         </tr>
 
       @endforeach
+      {{-- Interligne entre les groupes --}}
+      <tr>
+          <td style="color:white">-</td>
+          <td style="color:white">-</td>
+      </tr>
 
 
     @endforeach

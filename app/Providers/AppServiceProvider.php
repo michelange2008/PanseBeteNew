@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
     {
       Blade::include('fragments.btnValider','valider');
       Blade::include('fragments.btnVers','vers');
-      Blade::include('fragments.boutonEnregistre', 'enregistre');
+      Blade::include('fragments.boutonEnregistrer', 'enregistre');
       Blade::include('fragments.boutonSupprimer', 'supprimer');
       Blade::include('fragments.blocEnregistreAnnule', 'enregistreAnnule');
       Blade::include('fragments.btnSynthese', 'synthese');
@@ -36,8 +36,10 @@ class AppServiceProvider extends ServiceProvider
 
       Blade::include('fragments.inputText','inputText');
       Blade::include('fragments.inputNum','inputNum');
+      Blade::include('fragments.inputDecimal','inputDecimal');
       Blade::include('fragments.inputOuiNon','inputOuiNon');
       Blade::include('fragments.inputSelect','inputSelect');
+      Blade::include('fragments.inputSelectMultiple','inputSelectMultiple');
       Blade::include('fragments.inputCheckbox','inputCheckbox');
       Blade::include('fragments.inputCheckboxV','inputCheckboxV');
       Blade::include('fragments.inputHidden','inputHidden');

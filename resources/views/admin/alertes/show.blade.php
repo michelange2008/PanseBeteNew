@@ -17,7 +17,6 @@
     <div class="col-sm-11 col-md-10 col-lg-9">
 
         @titre()
-
       </div>
 
     </div>
@@ -53,7 +52,7 @@
 
                 <div class="mx-3">
 
-                  <p>Thème</p>
+                  <p>@lang('tableaux.theme')</p>
 
                   <h5 class="fw-bold">{{ ucfirst($alerte->theme->nom) }}</h5>
 
@@ -66,9 +65,12 @@
 
             <li class="list-group-item">
 
-              <p>Type</p>
+              <p>@lang('tableaux.type')</p>
 
-              <p class=fw-bold>{{ ucfirst($alerte->type->nom) }} </p>
+              <p>
+                <span class=fw-bold>{{ ucfirst($alerte->type->nom) }}</span>
+                ({{ $alerte->type->detail }})
+              </p>
 
             </li>
 
@@ -76,7 +78,7 @@
 
             @if ($alerte->type->nom == "liste")
 
-              <p>Eléments de la liste:</p>
+              <p>@lang('tableaux.list_items')</p>
 
               <p class="fw-bold">
 
@@ -94,17 +96,19 @@
 
             @else
 
-              <p>Recommandations</p>
+              <p>@lang('alertes.recommandations')</p>
 
-              @if ($alerte->numalerte != null && $alerte->numalerte->borne_inf != null)
+              @if ($alerte->numalerte != null && ($alerte->numalerte->borne_inf != null && $alerte->numalerte->borne_inf != 0))
 
-                <p class="fw-bold">minimum {{ $alerte->numalerte->borne_inf }} {{ $alerte->unite }}</p>
+                <p class="fw-bold">@lang('alertes.min')
+
+                   {{ $alerte->numalerte->borne_inf }} {{ $alerte->unite }}</p>
 
               @endif
 
               @if ($alerte->numalerte != null && $alerte->numalerte->borne_sup != null)
 
-                <p class="fw-bold">maximum {{ $alerte->numalerte->borne_sup }} {{ $alerte->unite }}</p>
+                <p class="fw-bold">@lang('alertes.max') {{ $alerte->numalerte->borne_sup }} {{ $alerte->unite }}</p>
 
               @endif
 
@@ -116,9 +120,20 @@
 
               <li class="list-group-item">
 
-                <p>Mode de calcul</p>
+                <p>@lang('alertes.mode_calcul')</p>
 
-                <p class="fw-bold">{{ $alerte->numalerte->num->nom }} / {{ $alerte->numalerte->denom->nom }}</p>
+                @if(isset($alerte->numalerte->denom->nom) && isset($alerte->numalerte->num->nom))
+
+                  <p class="fw-bold">{{ $alerte->numalerte->num->nom }} / {{ $alerte->numalerte->denom->nom }}</p>
+
+                @else
+
+                  <p class="fw-bold text-danger">
+                    @lang('alertes.warning')
+                    @lang('alertes.revoir_parametres')
+                  </p>
+
+                @endif
 
               </li>
 
@@ -126,9 +141,20 @@
 
               <li class="list-group-item">
 
-                <p>Mode de calcul</p>
+                <p>@lang('alertes.mode_calcul')</p>
+                {{-- Cas où le numérateur et le dénominateur sont présents --}}
+                @if(isset($alerte->numalerte->denom->nom) && isset($alerte->numalerte->num->nom))
 
-                <p class="fw-bold">({{ $alerte->numalerte->num->nom }} / {{ $alerte->numalerte->denom->nom }}) x 100</p>
+                  <p class="fw-bold">({{ $alerte->numalerte->num->nom }} / {{ $alerte->numalerte->denom->nom }}) x 100</p>
+                {{-- Cas où il manque un élément de calcul du pourcentage --}}
+                @else
+
+                  <p class="fw-bold text-danger">
+                    @lang('alertes.warning')
+                    @lang('alertes.revoir_parametres')
+                  </p>
+
+                @endif
 
               </li>
 
@@ -138,11 +164,11 @@
 
               @if ($alerte->actif)
 
-                  <h4><span class="badge bg-success">Activée</span></h4>
+                  <h4><span class="badge bg-success">@lang('alertes.activee')</span></h4>
 
               @else
 
-                  <h4><span class="badge bg-danger">Désactivée</span></h4>
+                  <h4><span class="badge bg-danger">@lang('alertes.desactivee')</span></h4>
 
               @endif
 
@@ -160,7 +186,10 @@
 
         @edit(['route' => route('alerte.edit', $alerte->id)])
 
-        @annule(['route' => route('alerte.indexParEspece', $alerte->espece->nom)])
+        @annule([
+          'route' => route('alerte.indexParEspece', $alerte->espece->nom),
+          'nomAnnule' => __('boutons.retour'),
+        ])
 
       </div>
 

@@ -6,7 +6,7 @@
       <div class="col-sm-10 col-md-9 col-lg-8 col-xl-7">
         <div class="card" style="margin-top:10px">
           <div>
-            <img src="{{asset(config('chemins.images'))}}/itab_otoveil_long.jpeg" class="" alt="otoveil" style="width:100%"/>
+            <img src="{{url('storage/img/acsa_itab_otoveil_long.jpeg')}}" class="" alt="otoveil" style="width:100%"/>
 
           </div>
           <div class="card-header">

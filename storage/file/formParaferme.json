@@ -6,6 +6,16 @@
   },
 
   "liste" : {
+    "id" : {
+      "label" : "id",
+      "name" : "id",
+      "type" : "hidden"
+    },
+    "ordre" : {
+      "label" : "Ordre",
+      "name" : "ordre",
+      "type" : "number"
+    },
     "nom" : {
       "label" : "nom",
       "name" : "nom",

@@ -38,7 +38,7 @@
       <a class="navbar-brand" href="{{ url('/') }}">
         {{ config('app.name', 'Panse-bêtes') }}
       </a>
-      <img src="{{asset(config('chemins.images'))}}/itab_otoveil.jpeg" alt="otoveil" class="otoveil"/>
+      <img src="{{url('storage/img/acsa_itab_otoveil.jpeg')}}" alt="otoveil" class="otoveil"/>
     </div>
   </nav>
 </div>

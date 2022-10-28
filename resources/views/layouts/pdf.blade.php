@@ -9,6 +9,7 @@
     <title>{{ config('app.name', 'Panses-Bêtes') }}</title>
     <link rel="icon" href="{{url('favicon.ico ')}}" />
      <!-- Styles -->
+     <link rel="stylesheet" href="{{ url('css/app.css') }}" />
      <link rel="stylesheet" href="{{ url('css/pdf.css') }}" />
 </head>
 <body>

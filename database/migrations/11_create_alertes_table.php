@@ -18,11 +18,12 @@ return new class extends Migration
             $table->boolean('actif')->default(1);
             $table->boolean('supprimable')->default(1);
             $table->string('nom', 191)->index('alertes_nom_index');
-            $table->bigInteger('type_id')->unsigned();
+            // $table->bigInteger('type_id')->unsigned();
             $table->string('unite', 191)->nullable();
             $table->foreignId('modalite_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('theme_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('espece_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('type_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

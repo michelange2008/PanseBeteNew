@@ -1,5 +1,6 @@
-html {
 
+html {
+  margin: 4em 1em 4em 2em;
   font-size: 80%;
 }
 .page-break {
@@ -86,7 +87,7 @@ h4 {
 }
 
 .col-350 {
-  max-width: 350px;
+  /* max-width: 500px; */
 }
 .col-left {
   text-align: right;

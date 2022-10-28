@@ -115,12 +115,12 @@ class ChiffreController extends Controller
     {
       $validated = $request->validate([
         'nom' => 'required|max:100',
-        'groupe' => 'required',
+        'groupe_id' => 'required',
       ]);
 
       Chiffre::where('id', $id)->update([
         'nom' => $request->nom,
-        'groupe' => $request->groupe,
+        'groupe_id' => $request->groupe_id,
       ]);
 
       return redirect()->route('chiffre.index')

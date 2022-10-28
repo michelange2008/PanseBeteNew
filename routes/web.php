@@ -26,6 +26,7 @@ Route::get('/presentation', ['uses' => 'VisiteurController@presentation', 'as' =
 Route::group(['middleware' => ['auth', 'isValid', 'isAdmin', 'menu']], function() {
 
   Route::get('/dev', 'DevController@dev')->name('dev');
+  Route::post('/store', 'DevController@store')->name('dev.store');
 
   Route::prefix('/chiffres')->controller(ChiffreController::class)->group(function() {
 
@@ -84,6 +85,10 @@ Route::group(['middleware' => ['auth', 'isValid', 'isAdmin', 'menu']], function(
     Route::delete('/delete/{origine_id}', 'destroy')->name('origine.destroy');
 
   });
+
+  Route::get('/paraferme/ranger', 'ParafermeController@ranger')->name('paraferme.ranger');
+
+  Route::post('/paraferme/storeRanger', 'ParafermeController@storeRanger')->name('paraferme.storeRanger');
 
   Route::resource('/paraferme', 'ParafermeController');
 
@@ -203,6 +208,8 @@ Route::group(['middleware' => ['auth', 'isValid', 'menu']], function () {
       Route::get('/modeleNum/{espece}', 'PdfController@modeleNum')->name('pdf.modeleNum');
       // Tableau vide pour la saisie des observations
       Route::get('/modeleObs/{espece}', 'PdfController@modeleObs')->name('pdf.modeleObs');
+      // Tableau vide pour la saisie des données de l'exploitation
+      Route::get('/modeleExploitation', 'PdfController@modeleExploitation')->name('pdf.modeleExploitation');
       // Exportation de la saisie
       Route::get('/saisie/{saisie}', 'PdfController@saisie')->name('pdf.saisie');
 
@@ -238,8 +245,14 @@ Route::group(['middleware' => ['auth', 'isValid', 'menu']], function () {
 
   });
 
-  // Gestion des notes
+  // Gestion des comparaisons
+  Route::get('/comparaison', 'CompareController@index')->name('compare.index');
+  // Comparaison de deux saisies par thème
+  Route::post('/comparaison/themes', 'CompareController@themes')->name('compare.themes');
+  // Comparaison de plusieurs saisies par salerte
+  Route::get('/comparaison/theme/{theme}/{saisies}', 'CompareController@salertes')->name('compare.salertes');
 
+  // Gestion des notes
     Route::resource('/notes', 'NoteController');
 });
 

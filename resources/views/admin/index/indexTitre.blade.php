@@ -1,6 +1,4 @@
-<div class="d-flex alert bg-otobleu justify-content-between align-items-center">
-
-  <div class="d-flex align-items-center">
+<div class="d-flex alert bg-otobleu justify-content-left align-items-center">
 
     <img class="img-50" src="{{ url('storage/img/'.$indexTab->titre->icone) }}" alt="{{ $indexTab->titre->icone }}">
 
@@ -12,12 +10,19 @@
 
     </div>
 
+  <div>
+
+    @if ($indexTab->titre->bouton)
+
+      <a class="btn btn-otorange" href="{{ route($indexTab->titre->bouton->route) }}">
+
+        <i class="{{ $indexTab->titre->bouton->fa }}"></i>
+        {{ $indexTab->titre->bouton->libelle ?? "bouton"}}
+
+      </a>
+
+    @endif
+
   </div>
-
-  @if ($indexTab->titre->bouton)
-
-    @annule()
-
-  @endif
 
 </div>

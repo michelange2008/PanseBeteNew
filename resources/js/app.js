@@ -2,6 +2,7 @@ require('@fortawesome/fontawesome-free/js/all.js');
 require('./deplierAlertes.js')
 require('./afficherOrigines.js')
 require('./supprLigne')
+require('./choix_compare.js')
 // require( './bootstrap-table.min.js');
 // require( './bootstrap-table-accent-neutralise.min.js');
 // require( './bootstrap-table-fr-FR.min.js');

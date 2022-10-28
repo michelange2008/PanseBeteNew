@@ -3,11 +3,30 @@
 
 @section('contenu')
 
-<div class="jumbotron">
-  <h1 class="display-4">Désolé !</h1>
-  <p class="lead">Il semble que vous vous soyez égarés dans les dédales de l'application</p>
-  <hr class="my-4">
-  <p>Mais n'ayez crainte, il vous suffira de cliquer sur le bouton ci-dessous pour trouver une issue.</p>
-  <a class="btn btn-otobleu btn-lg" href="{{route('accueil')}}" role="button">Sortir</a>
-</div>
+  <div class="container-fluid">
+
+    <div class="row justify-content-center my-3">
+
+      <div class="col-md-10 col-lg-9 col-xl-8 bg-otobleu my-3">
+
+        <div class="jumbotron m-4 py-4">
+
+          <img class="img-100" src="{{ url('storage/img/divers/inflammation.gif') }}" alt="inflammation">
+
+          <h1 class="display-4">Désolé !</h1>
+
+          <p class="lead">Il semble que le serveur ait un problème</p>
+
+          <hr class="my-4">
+
+          <p class="lead">J'en suis averti et vais tout faire pour réparer cela très vite</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 @endsection

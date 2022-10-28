@@ -1,9 +1,9 @@
 {{-- issu de  user.editFerme--}}
-<div class="input-group mb-3">
+<div class="form-group mb-3">
 
-  <label class="input-group-text" for="{{ $paraferme->nom }}">{{ $paraferme->nom }}</label>
+  <label class="form-label" for="{{ $paraferme->nom }}">{{ $paraferme->nom }}</label>
 
-  <select class="form-select" name="{{ $paraferme->id }}">
+  <select class="form-control" name="{{ $paraferme->id }}">
 
     <option value=""></option>
 

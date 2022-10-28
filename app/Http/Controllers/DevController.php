@@ -15,14 +15,15 @@ class DevController extends Controller
 {
     public function dev()
     {
-      echo "page pour faire des choses dans la bdd";
+      // echo "page pour faire des choses dans la bdd";
 
-      $chiffres = Chiffre::all();
-      $espece = Espece::find(2);
+      return view('admin.dev.index');
 
-      foreach ($chiffres as $chiffre) {
-        $espece->chiffres()->attach($chiffre->id);
-      }
+    }
+
+    public function store(Request $request)
+    {
+      dd($request->all());
 
     }
 }

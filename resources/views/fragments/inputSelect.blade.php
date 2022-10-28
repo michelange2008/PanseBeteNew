@@ -41,6 +41,11 @@
         >
 
         {{ ucfirst( $option->nom ) }}
+        {{-- dans certains cas on peut avoir un peu plus d'information sur le
+        sens des éléments de la liste déroulante  --}}
+        @isset($option->detail)
+          ({{ $option->detail }})
+        @endisset
 
       </option>
 

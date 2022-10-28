@@ -21,6 +21,12 @@
 
     @endisset
 
+    @isset($titre->bouton)
+
+      <a class="btn btn-otorange" href="{{ $titre->bouton->route }}">{{ $titre->bouton->libelle ?? "bouton"}}</a>
+
+    @endisset
+
   </div>
 
 

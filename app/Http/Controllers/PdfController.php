@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Paraferme;
 use App\Models\Saisie;
 use App\Models\Theme;
 use App\Models\Categorie;
@@ -15,10 +16,11 @@ use PDF;
 use App\Traits\CategoriesTools;
 use App\Traits\ThemesTools;
 use App\Traits\FormatSalertes;
+use App\Traits\LitJson;
 
 class PdfController extends Controller
 {
-  use CategoriesTools, ThemesTools, FormatSalertes;
+  use CategoriesTools, ThemesTools, FormatSalertes, LitJson;
     /**
      * Fournit un pdf avec une grille vide pour saisir les données chiffrées
      *
@@ -26,14 +28,20 @@ class PdfController extends Controller
      */
   public function modeleNum(Espece $espece)
     {
-      $chiffres = $espece->chiffres()
-        ->orderBy('groupe_id')
-        ->orderBy('id')
-        ->get()
-        ->groupBy('groupe_id');
+      // $chiffres = $espece->chiffres()
+      //   ->orderBy('groupe_id')
+      //   ->orderBy('id')
+      //   ->get()
+      //   ->groupBy('groupe_id');
+      // On récupère les libellé du formulaire dans un json dépendant de
+      // l'espèce du type chiffresVL.json
+      $chiffresBruts = $this->LitJson('parametres'.$espece->abbr.'.json');
+      // On en fait une collection et l'on structure par groupe (effectif, mortalité, etc)
+      $chiffres = Collect($chiffresBruts);
+      $chiffresGroupes = $chiffres->groupBy('groupe');
 
         $pdf = PDF::loadView('pdf.modeleNum', [
-          'chiffres' => $chiffres,
+          'chiffresGroupes' => $chiffresGroupes,
           'espece' => $espece,
         ]);
 
@@ -62,6 +70,27 @@ class PdfController extends Controller
       ]);
 
       $nomFichier = "Parametres ( ".$espece->nom." ).pdf";
+
+      return $pdf->stream($nomFichier);
+    }
+
+    /**
+     * undocumented function summary
+     *
+     * Undocumented function long description
+     *
+     * @param type var Description
+     * @return return type
+     */
+    public function modeleExploitation()
+    {
+      $parafermes = Paraferme::all();
+
+      $pdf = PDF::loadView('pdf.modeleExploitation', [
+        'parafermes' => $parafermes,
+      ]);
+
+      $nomFichier = "Donnees_exploitation ( ".auth()->user()->name." ).pdf";
 
       return $pdf->stream($nomFichier);
     }

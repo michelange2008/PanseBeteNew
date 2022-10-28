@@ -10,7 +10,14 @@
   "liste" : {
     "id" : "liste",
     "nom" : "Liste d'éléments"
+  },
+  "liste_multiple" : {
+    "id" : "liste multiple",
+    "nom" : "Liste d'éléments à choix multiples"
+  },
+  "texte" : {
+    "id" : "texte",
+    "nom" : "Texte libre"
   }
-
 
 }

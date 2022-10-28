@@ -32,15 +32,41 @@
 
               @include('user.inputSelectFerme')
 
+            @elseif ($paraferme->type == "liste multiple")
+
+              @include('user.inputSelectFermeMultiple')
+
+            @elseif ($paraferme->type == "texte")
+
+              @inputTextarea([
+                'label'=> $paraferme->nom,
+                'name' => $paraferme->id,
+                'isName' => $paraferme->value
+              ])
+
             @else
               {{-- cf. fragments.inputNum --}}
-              @inputNum([
-                'label' => $paraferme->nom.' ('.$paraferme->unite.')',
-                'name' => $paraferme->id,
-                'min' => 0,
-                'step' => ($paraferme->type == 'int') ? 1 : 0.1,
-                'isName' => $paraferme->value,
-              ])
+              @if ($paraferme->unite == null)
+                @inputNum([
+                  'label' => $paraferme->nom,
+                  'name' => $paraferme->id,
+                  'min' => 0,
+                  'step' => ($paraferme->type == 'int') ? 1 : 0.1,
+                  'isName' => $paraferme->value,
+                ])
+
+              @else
+
+                @inputNum([
+                  'label' => $paraferme->nom.' ('.$paraferme->unite.')',
+                  'name' => $paraferme->id,
+                  'min' => 0,
+                  'step' => ($paraferme->type == 'int') ? 1 : 0.1,
+                  'isName' => $paraferme->value,
+                ])
+
+              @endif
+              
             @endif
 
           @endforeach
