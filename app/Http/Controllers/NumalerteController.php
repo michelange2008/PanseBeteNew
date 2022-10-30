@@ -34,9 +34,16 @@ class NumalerteController extends Controller
       // Si c'est une alerte de type ENTIER ou DECIMAL on prend les infos pour
       // le formulaire dans un json différent que si c'est un pourcentage ou un ratio
       // pour lesquels il faut un dénominateur et numérateur
-      if ($this->isEntier($alerte->type_id) || $this->isDecimal($alerte->type_id)) {
+      if ($this->isEntier($alerte->type_id) ) {
 
-        $json = 'formAlerteNumValeur.json';
+        $json = 'formAlerteNumEntier.json';
+
+      }
+      
+      elseif ($this->isDecimal($alerte->type_id)) {
+
+        $json = 'formAlerteNumDecimal.json';
+
 
       } else {
 
