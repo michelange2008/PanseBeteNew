@@ -11,6 +11,7 @@
           type="number"
           name="{{ $name }}"
           min="{{ $min ?? '' }}"
+          max="{{ $max ?? '' }}"
           step="{{ $step ?? '' }}"
           {{-- si c'est une modification on affiche la valeur d'origine --}}
           value="{{ ucfirst($isName) ?? old(ucfirst($name)) }}"

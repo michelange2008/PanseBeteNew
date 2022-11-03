@@ -47,11 +47,13 @@
 
               @elseif ($champ->type == "number")
 
-                <div class="col-md-3 col-lg-2">
+                <div class="col-md-6">
 
                   @inputNum([
                     'name' => $champ->name,
                     'label' => $champ->label,
+                    'min' => $champ->min ?? '',
+                    'max' => $champ->max ?? '',
                     'step' => $champ->step ?? '',
                     'isName' => $champ->isName ?? '',
                   ])
@@ -65,6 +67,8 @@
                   @inputDecimal([
                     'name' => $champ->name,
                     'label' => $champ->label,
+                    'min' => $champ->min ?? '',
+                    'max' => $champ->max ?? '',
                     'step' => $champ->step ?? '',
                     'isName' => $champ->isName ?? '',
                   ])
@@ -73,7 +77,7 @@
 
               @elseif ($champ->type == "ouinon")
 
-                <div class="col-md-11 col-lg-8">
+                <div >
 
                   @inputOuiNon([
                     'name' => $champ->name,
