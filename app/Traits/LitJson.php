@@ -15,4 +15,12 @@ trait LitJson
       return $infos;
 
   }
+
+  public function jsonExist($json)
+  {
+    $jsonAvecChemin = storage_path('file')."/".$json;
+
+    return file_exists($jsonAvecChemin);
+
+  }
 }
