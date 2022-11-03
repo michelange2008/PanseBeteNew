@@ -1,7 +1,7 @@
 {
   "nb_vaches" : {
     "id" : "nb_vaches",
-    "libelle" : "Nombre de vaches",
+    "libelle" : "Nombre de vaches présentes",
     "groupe" : "effectifs",
     "step" : 1,
     "min" : 1,
@@ -10,7 +10,7 @@
   },
   "nb_genisses_NV" : {
     "id" : "nb_genisses_NV",
-    "libelle" : "Nombre de génisses (de la naissance au vélage)",
+    "libelle" : "Nombre de génisses de la naissance au vélage",
     "groupe" : "effectifs",
     "step" : 1,
     "min" : 1,
@@ -19,7 +19,7 @@
   },
   "nb_velages" : {
     "id" : "nb_velages",
-    "libelle" : "Nombre total de vélages",
+    "libelle" : "Nombre de vélages",
     "groupe" : "effectifs",
     "step" : 1,
     "min" : 0,
@@ -28,7 +28,7 @@
   },
   "nb_velages_vaches" : {
     "id" : "nb_velages_vaches",
-    "libelle" : "Nombre de vélages de vaches",
+    "libelle" : "nombre de vélages de vaches",
     "groupe" : "effectifs",
     "step" : 1,
     "min" : 0,
@@ -37,7 +37,7 @@
   },
   "nb_velages_genisses" : {
     "id" : "nb_velages_genisses",
-    "libelle" : "Nombre de vélages de génisses (1er vélages)",
+    "libelle" : "nombre de vélages de génisses",
     "groupe" : "effectifs",
     "step" : 1,
     "min" : 0,
@@ -46,7 +46,7 @@
   },
   "nb_veaux_nes" : {
     "id" : "nb_veaux_nes",
-    "libelle" : "Nombre de veaux nés",
+    "libelle" : "nombre de veaux nés",
     "groupe" : "effectifs",
     "required" : true,
     "step" : 1,
@@ -114,7 +114,7 @@
   },
   "velIA1" : {
     "id" : "velIA1",
-    "libelle" : "Intervalle vélage 1ère insémination",
+    "libelle" : "Intervalle vélage 1ère IA",
     "groupe" : "reproduction",
     "step" : 1,
     "round" : 1,
@@ -122,7 +122,7 @@
   },
   "IA_fec_x10" : {
     "id" : "IA_fec_x10",
-    "libelle" : "Nombre moyen d'IA Féc / IA",
+    "libelle" : "nombre d’IA par IA fécondante",
     "groupe" : "reproduction",
     "step" : 0.1,
     "round" : 0.1,
@@ -155,7 +155,7 @@
   },
   "non_del" : {
     "id" : "non_del",
-    "libelle" : "Non-délivrances",
+    "libelle" : "nombre de non délivrances",
     "groupe" : "post-partum et métabolique",
     "step" : 1,
     "round" : 0,
@@ -164,7 +164,7 @@
   },
   "metrites" : {
     "id" : "metrites",
-    "libelle" : "Métrites",
+    "libelle" : "nombre de métrites",
     "groupe" : "post-partum et métabolique",
     "step" : 1,
     "round" : 0,
@@ -182,7 +182,7 @@
   },
   "fdl" : {
     "id" : "fdl",
-    "libelle" : "Fièvres de lait",
+    "libelle" : "nombre de fièvres de lait",
     "groupe" : "post-partum et métabolique",
     "step" : 1,
     "round" : 0,
@@ -191,7 +191,7 @@
   },
   "caillettes" : {
     "id" : "caillettes",
-    "libelle" : "Caillettes",
+    "libelle" : "nombre de caillettes",
     "groupe" : "post-partum et métabolique",
     "step" : 1,
     "round" : 0,
@@ -200,7 +200,7 @@
   },
   "cetoses" : {
     "id" : "cetoses",
-    "libelle" : "Cétoses",
+    "libelle" : "nombre de cétoses",
     "groupe" : "post-partum et métabolique",
     "step" : 1,
     "round" : 0,
@@ -209,7 +209,7 @@
   },
   "tetanies" : {
     "id" : "tetanies",
-    "libelle" : "Tétanies",
+    "libelle" : "nombre de tétanies d’herbage",
     "groupe" : "post-partum et métabolique",
     "step" : 1,
     "round" : 0,
@@ -218,7 +218,7 @@
   },
   "tb_anormaux" : {
     "id" : "tb_anormaux",
-    "libelle" : "TB < 30 ou > 45",
+    "libelle" : "Nombre de TB < 30 ou > 45",
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
@@ -227,7 +227,7 @@
   },
   "mammites" : {
     "id" : "mammites",
-    "libelle" : "Mammites cliniques",
+    "libelle" : "nombre de mammites cliniques",
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
@@ -236,7 +236,7 @@
   },
   "nouv_mamm_tar" : {
     "id" : "nouv_mamm_tar",
-    "libelle" : "Nouvelles infections en période sèche",
+    "libelle" : "nombre de nouvelles mammites au tarissement",
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
@@ -245,7 +245,7 @@
   },
   "primi_nouv_mamm_debut" : {
     "id" : "primi_nouv_mamm_debut",
-    "libelle" : "Infections mammaires en début de lactation sur les primipares",
+    "libelle" : "nombre de nouvelles mammites des primipares en début de lactation",
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
@@ -254,7 +254,7 @@
   },
   "cellules" : {
     "id" : "cellules",
-    "libelle" : "Concentration en Cellules Somatiques du lait de Tank (CCSt) hors lait trié",
+    "libelle" : "Nombre de cellules du lait de Tank",
     "groupe" : "Lait et mamelle",
     "step" : 1,
     "round" : 0,
@@ -302,7 +302,7 @@
   },
   "mort_24" : {
     "id" : "mort_24",
-    "libelle" : "Nombre de veaux morts dans les 1ères 24 heures",
+    "libelle" : "Nombre de veaux morts dans les premières 24h",
     "groupe" : "jeunes",
     "step" : 1,
     "round" : 0,
@@ -320,7 +320,7 @@
   },
   "morb_veaux" : {
     "id" : "morb_veaux",
-    "libelle" : "Nombre total de veaux malades et soignés",
+    "libelle" : "Nombre de veaux malades et soignés",
     "groupe" : "jeunes",
     "step" : 1,
     "round" : 0,
@@ -329,7 +329,7 @@
   },
   "omph" : {
     "id" : "omph",
-    "libelle" : "Nombre de veaux avec des gros  nombrils",
+    "libelle" : "Nombre de gros  nombrils",
     "groupe" : "jeunes",
     "step" : 1,
     "round" : 0,
@@ -338,7 +338,7 @@
   },
   "diarrhees_veaux" : {
     "id" : "diarrhees_veaux",
-    "libelle" : "Nombre de veaux avec problèmes digestifs (diarrhée, coccidiose)",
+    "libelle" : "Nombre de diarrhées chez les veaux",
     "groupe" : "jeunes",
     "step" : 1,
     "round" : 0,
@@ -382,7 +382,7 @@
   },
   "reforme_boiterie" : {
     "id" : "reforme_boiterie",
-    "libelle" : "Nombre de vaches réformées problèmes de pattes",
+    "libelle" : "Nombre de vaches réformées pour boiteries",
     "groupe" : "santé des pieds",
     "step" : 1,
     "round" : 0,
@@ -390,7 +390,7 @@
   },
   "boiterie_trait" : {
     "id" : "boiterie_trait",
-    "libelle" : "Nombre d'animaux traités pour boiterie'",
+    "libelle" : "Nombre de vaches traitées pour boiterie",
     "groupe" : "santé des pieds",
     "step" : 1,
     "round" : 0,
