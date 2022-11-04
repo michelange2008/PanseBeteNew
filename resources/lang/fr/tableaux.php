@@ -34,4 +34,7 @@ return [
   'nom_themes' => 'Nom des thèmes',
   'theme' => "thème",
   'list_items' => "éléments de la liste",
+  'type_valeur' => "type de valeur",
+  'min' => 'minimum',
+  'requis' => "obligatoire",
 ];

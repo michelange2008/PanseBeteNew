@@ -6,6 +6,11 @@
   },
 
   "liste" : {
+    "id" : {
+      "name" : "id",
+      "type" : "hidden",
+      "isName" : true
+    },
     "nom" : {
       "label" : "nom",
       "name" : "nom",
@@ -19,6 +24,37 @@
       "type" : "select",
       "required" : true,
       "options" : {}
+    },
+    "typenum_id" : {
+      "label" : "Type de valeur numérique",
+      "name" : "typenum_id",
+      "table" : "typenums",
+      "type" : "select",
+      "required" : true,
+      "options" : {}
+    },
+    "min" : {
+      "label" : "minimum",
+      "name" : "min",
+      "type" : "number",
+      "min"  : 0,
+      "step" : 1,
+      "required" : true,
+      "isName" : 0
+    },
+    "actif" : {
+      "label" : "actif",
+      "name" : "actif",
+      "type" : "ouinon",
+      "required" : true,
+      "isName" : true
+    },
+    "requis" : {
+      "label" : "obligatoire",
+      "name" : "requis",
+      "type" : "ouinon",
+      "required" : true,
+      "isName" : true
     }
   }
 }

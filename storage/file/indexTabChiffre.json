@@ -14,6 +14,30 @@
       "type" : "item",
       "aligne" : "left",
       "sortable" : true
+    },
+    "typenum" : {
+      "col" : "type_valeur",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "min" : {
+      "col" : "min",
+      "type" : "item",
+      "aligne" : "center",
+      "sortable" : true
+    },
+    "requis" : {
+      "col" : "requis",
+      "type" : "ouinon",
+      "aligne" : "center",
+      "sortable" : true
+    },
+    "actif" : {
+      "col" : "actif",
+      "type" : "ouinon",
+      "aligne" : "center",
+      "sortable" : true
     }
   },
 

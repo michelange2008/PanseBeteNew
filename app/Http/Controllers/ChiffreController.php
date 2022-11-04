@@ -24,13 +24,16 @@ class ChiffreController extends Controller
     {
       $chiffres = DB::table('chiffres')
                     ->join('groupes', 'groupes.id', 'chiffres.groupe_id')
+                    ->join('typenums', 'typenums.id', 'chiffres.typenum_id')
                     ->select('chiffres.id as id', 'chiffres.nom as chiffre_nom',
-                    'groupes.nom as groupe_nom', 'chiffres.supprimable')
+                    'groupes.nom as groupe_nom', 'typenums.nom as typenum',
+                    'chiffres.min as min', 'chiffres.actif as actif',
+                    'chiffres.requis as requis', 'chiffres.supprimable')
                     ->orderBy('groupes.id')
                     ->get();
 
       $tablab = new TabLab($chiffres, 'indexTabChiffre.json', 'saisie/chiffres_clair.svg');
-
+// TODO: Doublons sur nombre veaux morts dans les 1ères 24h -> cf parametreVL.json
       $indexTab = $tablab->get();
 
       return view('admin.index.indexCadre', [
@@ -67,6 +70,10 @@ class ChiffreController extends Controller
       Chiffre::create([
         'nom' => $request->nom,
         'groupe_id' => $request->groupe_id,
+        'typenum_id' => $request->typenum_id,
+        'min' => $request->min,
+        'actif' => ($request->actif != null) ? $request->actif : 0,
+        'requis' => ($request->requis != null) ? $request->requis : 0,
       ]);
 
       return redirect()->route('chiffre.index')
@@ -121,6 +128,10 @@ class ChiffreController extends Controller
       Chiffre::where('id', $id)->update([
         'nom' => $request->nom,
         'groupe_id' => $request->groupe_id,
+        'typenum_id' => $request->typenum_id,
+        'min' => $request->min,
+        'actif' => ($request->actif != null) ? $request->actif : 0,
+        'requis' => ($request->requis != null) ? $request->requis : 0,
       ]);
 
       return redirect()->route('chiffre.index')
