@@ -16,11 +16,12 @@
   @isset($checked)
 
     @if ($checked)
+      class="fw-bold"
       checked = "checked"
     @endif
 
   @endisset
 
   >
-  
+
 </div>
