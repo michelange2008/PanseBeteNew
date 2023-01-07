@@ -23,4 +23,9 @@ class Chiffre extends Model
       return $this->belongsTo(Groupe::class);
     }
 
+    public function espece()
+    {
+      return $this->belongsTo(Espece::class);
+    }
+
 }

@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('chiffres', function (Blueprint $table) {
             $table->id();
             $table->string('nom', 100);
+            $table->foreignId('espece_id')->constrained()
+                  ->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('typenum_id')->constrained()
                   ->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('groupe_id')->constrained()
