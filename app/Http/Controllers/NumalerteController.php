@@ -39,7 +39,7 @@ class NumalerteController extends Controller
         $json = 'formAlerteNumEntier.json';
 
       }
-      
+
       elseif ($this->isDecimal($alerte->type_id)) {
 
         $json = 'formAlerteNumDecimal.json';
@@ -99,6 +99,9 @@ class NumalerteController extends Controller
           "denom_id" => $request->denom_id,
         ]);
       }
+      // Utilise le trait ChiffresDependances pour mettre à jour l'état requis
+      // ou nom des Chiffres qui servent éventuelllement au calcul de la numalerte
+      $this->majChiffreNumalerte(Numalerte::where('alerte_id', $request->alerte_id)->first());
 
       return redirect()->route('alerte.show', $request->alerte_id)
       ->with(['message' => 'alerte_edit']);

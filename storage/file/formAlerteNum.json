@@ -10,6 +10,10 @@
       "name" : "alerte_id",
       "type" : "hidden"
     },
+    "alerte_nom": {
+      "name" : "alerte_nom",
+      "type" : "hidden"
+    },
     "borne_inf" : {
       "label" : "Valeur minimum",
       "name" : "borne_inf",

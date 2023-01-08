@@ -32,12 +32,6 @@
       "type" : "ouinon",
       "aligne" : "center",
       "sortable" : true
-    },
-    "actif" : {
-      "col" : "actif",
-      "type" : "ouinon",
-      "aligne" : "center",
-      "sortable" : true
     }
   },
 

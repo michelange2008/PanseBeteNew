@@ -16,14 +16,14 @@ use App\Fournisseurs\TabLab;
 use App\Traits\LitJson;
 use App\Traits\TypesTools;
 use App\Traits\FormTemplate;
-
+use App\Traits\ChiffresDependances;
 /*
 // Gestions des alertes
  */
 class AlerteController extends Controller
 {
 
-    use LitJson, TypesTools, FormTemplate;
+    use LitJson, TypesTools, FormTemplate, ChiffresDependances;
     /**
      * Display a listing of the resource.
      *
@@ -194,6 +194,14 @@ class AlerteController extends Controller
           }
 
         }
+        // Réactive éventuellement un chiffre si modification d'un numalerte qui
+        // nécessite un paramètre chiffré
+        if(Numalerte::where('alerte_id',$id)->count() > 0) {
+
+          $this->majChiffreNumalerte(Numalerte::where('alerte_id', $id)->first());
+
+        }
+
 
         return redirect()->route('alerte.show', $id)->with(['message' => 'alerte_edit']);
     }

@@ -23,8 +23,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 1,
                 'nom' => 'Nombre de vaches',
+                'espece_id' => 2,
                 'groupe_id' => 1,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -34,8 +34,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 2,
                 'nom' => 'Nombre de génisses de la naissance au vélage',
+                'espece_id' => 2,
                 'groupe_id' => 1,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -45,8 +45,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 3,
                 'nom' => 'Nombre de vélages',
+                'espece_id' => 2,
                 'groupe_id' => 1,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -56,8 +56,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 4,
                 'nom' => 'nombre de vélages de vaches',
+                'espece_id' => 2,
                 'groupe_id' => 1,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -67,8 +67,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 5,
                 'nom' => 'Nombre de vélages de génisses',
+                'espece_id' => 2,
                 'groupe_id' => 1,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -78,8 +78,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 6,
                 'nom' => 'nombre de veaux nés',
+                'espece_id' => 2,
                 'groupe_id' => 1,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -89,8 +89,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 7,
                 'nom' => 'nombre de vaches réformées',
+                'espece_id' => 2,
                 'groupe_id' => 1,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -100,8 +100,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 8,
                 'nom' => 'nombre d’animaux au pâturage',
+                'espece_id' => 2,
                 'groupe_id' => 1,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -111,8 +111,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 9,
                 'nom' => 'nombre de vaches mortes',
+                'espece_id' => 2,
                 'groupe_id' => 2,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -122,8 +122,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 10,
                 'nom' => 'Nombre d’animaux morts de la naissance au vélage',
+                'espece_id' => 2,
                 'groupe_id' => 2,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -133,8 +133,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 11,
                 'nom' => 'nombre de veaux morts dans les 24 premières heures',
+                'espece_id' => 2,
                 'groupe_id' => 2,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -143,9 +143,9 @@ class ChiffresTableSeeder extends Seeder
             11 =>
             array (
                 'id' => 12,
-            'nom' => 'Frais vétérinaires (hors conseil)',
+                'nom' => 'Frais vétérinaires (hors conseil)',
+                'espece_id' => 2,
                 'groupe_id' => 8,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -155,8 +155,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 13,
                 'nom' => 'âge au premier vélage',
+                'espece_id' => 2,
                 'groupe_id' => 3,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -166,8 +166,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 14,
                 'nom' => 'nombre d’IA par IA fécondante',
+                'espece_id' => 2,
                 'groupe_id' => 3,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -177,8 +177,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 15,
                 'nom' => 'nombre de vélages de génisses difficiles',
+                'espece_id' => 2,
                 'groupe_id' => 3,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -188,8 +188,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 16,
                 'nom' => 'nombre d’avortements',
+                'espece_id' => 2,
                 'groupe_id' => 3,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -199,8 +199,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 17,
                 'nom' => 'nombre de non délivrances',
+                'espece_id' => 2,
                 'groupe_id' => 3,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -210,8 +210,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 18,
                 'nom' => 'nombre de métrites',
+                'espece_id' => 2,
                 'groupe_id' => 3,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -221,8 +221,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 19,
                 'nom' => 'nombre de fièvres de lait',
+                'espece_id' => 2,
                 'groupe_id' => 3,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -232,8 +232,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 20,
                 'nom' => 'nombre de caillettes',
+                'espece_id' => 2,
                 'groupe_id' => 3,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -243,8 +243,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 21,
                 'nom' => 'nombre de cétoses',
+                'espece_id' => 2,
                 'groupe_id' => 3,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -254,8 +254,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 22,
                 'nom' => 'nombre de tétanies d’herbage',
+                'espece_id' => 2,
                 'groupe_id' => 3,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -265,8 +265,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 23,
                 'nom' => 'nombre de mammites',
+                'espece_id' => 2,
                 'groupe_id' => 4,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -276,8 +276,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 24,
                 'nom' => 'nombre de nouvelles mammites au tarissement',
+                'espece_id' => 2,
                 'groupe_id' => 4,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -287,8 +287,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 25,
                 'nom' => 'nombre de nouvelles mammites des primipares en début de lactation',
+                'espece_id' => 2,
                 'groupe_id' => 4,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -298,8 +298,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 26,
                 'nom' => 'taux cellulaire moyen',
+                'espece_id' => 2,
                 'groupe_id' => 4,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -309,8 +309,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 27,
                 'nom' => 'taux d’urée moyen',
+                'espece_id' => 2,
                 'groupe_id' => 4,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -320,8 +320,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 28,
                 'nom' => 'nombre de cas de présence de staphylocoques',
+                'espece_id' => 2,
                 'groupe_id' => 4,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -331,8 +331,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 29,
                 'nom' => 'nombre de cas de présence de salmonelles',
+                'espece_id' => 2,
                 'groupe_id' => 4,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -342,8 +342,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 30,
                 'nom' => 'nombre de cas de présence de listeria',
+                'espece_id' => 2,
                 'groupe_id' => 4,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -353,8 +353,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 31,
                 'nom' => 'nombre de cas de présence de E coli',
+                'espece_id' => 2,
                 'groupe_id' => 4,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -364,8 +364,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 32,
                 'nom' => 'nombre de TB anormaux',
+                'espece_id' => 2,
                 'groupe_id' => 4,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -375,8 +375,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 33,
                 'nom' => 'intervalle vélage 1ère IA',
+                'espece_id' => 2,
                 'groupe_id' => 3,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -386,8 +386,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 34,
                 'nom' => 'nombre de vaches à 3 IA ou plus',
+                'espece_id' => 2,
                 'groupe_id' => 3,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -397,8 +397,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 35,
                 'nom' => 'intervalle vélage vélage',
+                'espece_id' => 2,
                 'groupe_id' => 3,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -408,8 +408,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 36,
                 'nom' => 'nombre de veaux morts de 1 jour au sevrage',
+                'espece_id' => 2,
                 'groupe_id' => 2,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -419,8 +419,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 37,
                 'nom' => 'nombre de veaux malades',
+                'espece_id' => 2,
                 'groupe_id' => 5,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -430,8 +430,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 38,
                 'nom' => 'nombre de gros nombrils',
+                'espece_id' => 2,
                 'groupe_id' => 5,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -441,8 +441,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 39,
                 'nom' => 'nombre de diarrhées chez les veaux',
+                'espece_id' => 2,
                 'groupe_id' => 5,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -452,8 +452,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 40,
                 'nom' => 'nombre de cas de maladie respiratoire',
+                'espece_id' => 2,
                 'groupe_id' => 5,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -463,8 +463,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 41,
                 'nom' => 'nombre de diarrhées chez les jeunes et les adultes',
+                'espece_id' => 2,
                 'groupe_id' => 7,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -474,8 +474,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 42,
                 'nom' => 'nombre de foies saisis',
+                'espece_id' => 2,
                 'groupe_id' => 7,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -485,8 +485,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 43,
                 'nom' => 'nombre de vaches qui boitent',
+                'espece_id' => 2,
                 'groupe_id' => 6,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -496,8 +496,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 44,
                 'nom' => 'nombre de réforme pour boiterie',
+                'espece_id' => 2,
                 'groupe_id' => 6,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -507,8 +507,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 45,
                 'nom' => 'nombre de vaches traitées pour boiterie',
+                'espece_id' => 2,
                 'groupe_id' => 6,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -518,8 +518,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 46,
                 'nom' => 'nombre de vaches avec des sabots longs',
+                'espece_id' => 2,
                 'groupe_id' => 6,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -529,8 +529,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 47,
                 'nom' => 'Poids des génisses à la 1ère insémination',
+                'espece_id' => 2,
                 'groupe_id' => 3,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -540,8 +540,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 48,
                 'nom' => 'nombre de vaches réinséminées 60 jours après une IA',
+                'espece_id' => 2,
                 'groupe_id' => 3,
-                'actif' => 1,
                 'supprimable' => 0,
                 'typenum_id' => 1,
                 'requis' => 1,
@@ -551,8 +551,8 @@ class ChiffresTableSeeder extends Seeder
             array (
                 'id' => 59,
                 'nom' => 'mortalité estivale',
+                'espece_id' => 2,
                 'groupe_id' => 2,
-                'actif' => 1,
                 'supprimable' => 1,
                 'typenum_id' => 1,
                 'requis' => 1,

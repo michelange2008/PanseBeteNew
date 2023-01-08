@@ -11,10 +11,11 @@ use App\Fournisseurs\TabLab;
 
 use App\Traits\LitJson;
 use App\Traits\FormTemplate;
+use App\Traits\ChiffresDependances;
 
 class ChiffreController extends Controller
 {
-  use LitJson, FormTemplate;
+  use LitJson, FormTemplate, ChiffresDependances;
     /**
      * Display a listing of the resource.
      *
@@ -27,13 +28,13 @@ class ChiffreController extends Controller
                     ->join('typenums', 'typenums.id', 'chiffres.typenum_id')
                     ->select('chiffres.id as id', 'chiffres.nom as chiffre_nom',
                     'groupes.nom as groupe_nom', 'typenums.nom as typenum',
-                    'chiffres.min as min', 'chiffres.actif as actif',
-                    'chiffres.requis as requis', 'chiffres.supprimable')
+                    'chiffres.min as min',
+                    'chiffres.requis', 'chiffres.supprimable')
                     ->orderBy('groupes.id')
                     ->get();
 
       $tablab = new TabLab($chiffres, 'indexTabChiffre.json', 'saisie/chiffres_clair.svg');
-// TODO: Doublons sur nombre veaux morts dans les 1ères 24h -> cf parametreVL.json
+
       $indexTab = $tablab->get();
 
       return view('admin.index.indexCadre', [
@@ -72,7 +73,6 @@ class ChiffreController extends Controller
         'groupe_id' => $request->groupe_id,
         'typenum_id' => $request->typenum_id,
         'min' => $request->min,
-        'actif' => ($request->actif != null) ? $request->actif : 0,
         'requis' => ($request->requis != null) ? $request->requis : 0,
       ]);
 
@@ -125,12 +125,15 @@ class ChiffreController extends Controller
         'groupe_id' => 'required',
       ]);
 
+      if($this->verifieIfRequis(Chiffre::find($id))) {
+        $request->requis = 1;
+      }
+
       Chiffre::where('id', $id)->update([
         'nom' => $request->nom,
         'groupe_id' => $request->groupe_id,
         'typenum_id' => $request->typenum_id,
         'min' => $request->min,
-        'actif' => ($request->actif != null) ? $request->actif : 0,
         'requis' => ($request->requis != null) ? $request->requis : 0,
       ]);
 

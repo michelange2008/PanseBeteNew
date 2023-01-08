@@ -42,13 +42,6 @@
       "required" : true,
       "isName" : 0
     },
-    "actif" : {
-      "label" : "actif (apparait dans les formulaires de saisie et pdf)",
-      "name" : "actif",
-      "type" : "ouinon",
-      "required" : true,
-      "isName" : true
-    },
     "requis" : {
       "label" : "obligatoire (est indispensable pour calculer des ratio et pourcentages)",
       "name" : "requis",
