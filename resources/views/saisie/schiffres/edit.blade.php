@@ -36,40 +36,44 @@
           'route' => route('saisie.show', $saisie->id),
           ])
 
-          @foreach ($chiffresGroupes as $groupe => $elements)
+          @foreach ($groupes as $groupe)
             <div class="bg-otobleu px-3 py-1">
               <h4 class="p-0">
-                {{ ucfirst($groupe) }}
+                {{ ucfirst($groupe->nom) }}
               </h4>
             </div>
 
             <input type="hidden" name="saisie_id" value="{{ $saisie->id }}">
-            @foreach ($elements as $element)
-              <div class="form-group row my-2">
 
-                <label class="col-sm-8 col-form-label"
-                    for="{{ $element->id }}">
+            @foreach ($chiffres as $element)
+              @if ($element->groupe_id == $groupe->id)
 
-                      {{$element->libelle}}
+                <div class="form-group row my-2">
+
+                  <label class="col-sm-8 col-form-label"
+                  for="{{ $element->id }}">
+
+                  {{$element->nom}}
 
                 </label>
                 <div class="col-sm-4">
 
                   <input class="form-control chiffre text-center "
-                    type="number"
-                    min= "{{ $element->min ?? 0}}"
-                    step="{{ $element->step }}"
-                    name="{{ $element->id }}"
-                    @isset($element->required)
-                      @if ($element->required)
-                        required
-                      @endif
-                    @endisset
-                    value="{{ $chiffresSaisis->where('libelle', $element->id)->first()->valeur  ?? old($element->id) }}"
-                    >
+                  type="number"
+                  min= "{{ $element->min ?? 0}}"
+                  step="{{ $element->step }}"
+                  name="C{{ $element->id }}"
+                  @isset($element->requis)
+                    @if ($element->requis)
+                      required
+                    @endif
+                  @endisset
+                  value="{{ $chiffresSaisis->where('id', $element->id)->first()->valeur  ?? old($element->id) }}"
+                  >
                 </div>
 
               </div>
+              @endif
             @endforeach
 
           @endforeach

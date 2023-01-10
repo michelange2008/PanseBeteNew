@@ -24,6 +24,7 @@ return new class extends Migration
             $table->integer('borne_sup')->nullable();
             $table->foreignId('num_id')->nullable()->constrained('chiffres')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('denom_id')->nullable()->constrained('chiffres')->onUpdate('cascade')->onDelete('cascade');
+            $table->integer('round')->unsigned()->default(0);
 
         });
     }
