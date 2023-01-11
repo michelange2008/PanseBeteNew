@@ -16,7 +16,6 @@ use App\Models\Salerte;
 use App\Http\Indicateurs\CalculeIndicateurs;
 
 
-use App\Traits\SalerteIsDanger;
 use App\Traits\LitJson;
 use App\Traits\ThemesTools;
 use App\Traits\FormatSalertes;
@@ -32,7 +31,7 @@ use App\Traits\FormatSalertes;
  */
 class SchiffreController extends Controller
 {
-  use LitJson, SalerteIsDanger, ThemesTools, FormatSalertes;
+  use LitJson, ThemesTools, FormatSalertes;
 
   /**
   * Affiche la synthèse des données chiffrées
@@ -86,21 +85,22 @@ class SchiffreController extends Controller
 
     $chiffresSaisis = Schiffre::where("saisie_id", $saisie->id)->get();
 
-    // On récupère les libellé du formulaire dans un json dépendant de
-    // l'espèce du type chiffresVL.json
-    // $chiffresBruts = $this->LitJson('parametres'.$saisie->espece->abbr.'.json');
-    $chiffres = Chiffre::where('espece_id', $saisie->espece->id)->get();
+    // $chiffres = Chiffre::where('espece_id', $saisie->espece->id)
+    //                     ->where('requis', 1)->get();
+    $chiffres = DB::table('chiffres')->where('espece_id', $saisie->espece->id)
+                  ->where('requis', 1)
+                  ->join('groupes', 'groupes.id', 'chiffres.groupe_id')
+                  ->select('groupes.nom as groupe_nom', 'chiffres.*')
+                  ->get();
 
-    // On en fait une collection et l'on structure par groupe (effectif, mortalité, etc)
-    // $chiffres = Collect($chiffresBruts);
-    // $chiffresGroupes = $chiffres->groupBy('groupe');
-    $groupes = Groupe::all();
-// dd($chiffresBruts);
+    // $groupes = Groupe::all();
+    $chiffresGroupes = $chiffres->groupBy('groupe_nom');
+
     return view('saisie.schiffres.edit', [
     'saisie' => $saisie,
     'chiffresSaisis' => $chiffresSaisis,
-    'chiffres' => $chiffres,
-    'groupes' => $groupes,
+    'chiffresGroupes' => $chiffresGroupes,
+    // 'groupes' => $groupes,
     ]);
   }
 
@@ -135,7 +135,7 @@ class SchiffreController extends Controller
     else {
       // On stocke les indicateurs calculés dans la table salertes avec la
       // méthode store();
-      $indicateurs->store();
+      $indicateurs->storeIndicateurs();
       // 0n enregistre les nouvelles données avec une ligne par élément chiffré
       foreach ($chiffres as $name => $valeur) {
         $chiffre_id = str_replace('C', '', $name); //
@@ -144,9 +144,6 @@ class SchiffreController extends Controller
         ['valeur' => ($valeur == null) ? 0 : $valeur ]
         );
       }
-      // Dans la table salertes, on indique à la colonne "danger"
-      // si la valeur est en dehors des normes (borne_sup, borne_inf), grace au trait SalerteIsDanger
-      $this->salerteIsDanger($saisie_id);
       // On passe la variable hasnum de la table saisies à true
       Saisie::where('id', $saisie_id)->update(['hasnum' => 1]);
 

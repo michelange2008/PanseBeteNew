@@ -36,44 +36,43 @@
           'route' => route('saisie.show', $saisie->id),
           ])
 
-          @foreach ($groupes as $groupe)
+          @foreach ($chiffresGroupes as $groupe => $chiffres)
             <div class="bg-otobleu px-3 py-1">
               <h4 class="p-0">
-                {{ ucfirst($groupe->nom) }}
+                {{ ucfirst($groupe) }}
               </h4>
             </div>
 
             <input type="hidden" name="saisie_id" value="{{ $saisie->id }}">
 
-            @foreach ($chiffres as $element)
-              @if ($element->groupe_id == $groupe->id)
+            @foreach ($chiffres as $chiffre)
 
                 <div class="form-group row my-2">
 
                   <label class="col-sm-8 col-form-label"
-                  for="{{ $element->id }}">
+                  for="C{{ $chiffre->id }}">
 
-                  {{$element->nom}}
+                  {{$chiffre->nom}}
 
                 </label>
                 <div class="col-sm-4">
 
                   <input class="form-control chiffre text-center "
                   type="number"
-                  min= "{{ $element->min ?? 0}}"
-                  step="{{ $element->step }}"
-                  name="C{{ $element->id }}"
-                  @isset($element->requis)
-                    @if ($element->requis)
+                  min= "{{ $chiffre->min ?? 0}}"
+                  step="{{ $chiffre->step }}"
+                  name="C{{ $chiffre->id }}"
+                  @isset($chiffre->requis)
+                    @if ($chiffre->requis)
                       required
                     @endif
                   @endisset
-                  value="{{ $chiffresSaisis->where('id', $element->id)->first()->valeur  ?? old($element->id) }}"
+                  value="{{ $chiffresSaisis->where('chiffre_id', $chiffre->id)->first()->valeur  ?? old($chiffre->id) }}"
                   >
                 </div>
 
               </div>
-              @endif
+              
             @endforeach
 
           @endforeach
