@@ -51,8 +51,15 @@
 
                   <label class="col-sm-8 col-form-label"
                   for="C{{ $chiffre->id }}">
+                  @if ($chiffre->nonullable)
 
-                  {{$chiffre->nom}}
+                    <span class="text-danger fw-bold">{{ ucfirst($chiffre->nom) }}</span>
+
+                  @else
+
+                    <span>{{ ucfirst($chiffre->nom) }}</span>
+
+                  @endif
 
                 </label>
                 <div class="col-sm-4">
@@ -62,8 +69,8 @@
                   min= "{{ $chiffre->min ?? 0}}"
                   step="{{ $chiffre->step }}"
                   name="C{{ $chiffre->id }}"
-                  @isset($chiffre->requis)
-                    @if ($chiffre->requis)
+                  @isset($chiffre->nonullable)
+                    @if ($chiffre->nonullable)
                       required
                     @endif
                   @endisset
@@ -72,7 +79,7 @@
                 </div>
 
               </div>
-              
+
             @endforeach
 
           @endforeach
