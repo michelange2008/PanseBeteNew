@@ -89,6 +89,14 @@ class CalculeIndicateurs
 
             }
 
+          // On peut accepter que le dénominateur soit nul si le numérateur est
+          // nul lui aussi -> dans ce cas là la valeur de l'indicateur est 0
+          } elseif (
+            $this->chiffres['C'.$numalerte->denom_id] == 0
+            && $this->chiffres['C'.$numalerte->num_id] == 0) {
+
+              $valeur = 0;
+
           } else { // Cas où un chiffre destiné à être dénominateur est nul ->message d'erreur
 
             // Et on inscrit l'erreur
@@ -114,6 +122,14 @@ class CalculeIndicateurs
             //   ['alerte_id' => $numalerte->alerte_id, 'saisie_id' => $this->saisie->id],
             //   ['valeur' => $valeur , 'danger' => $danger]
             // );
+
+          // On peut accepter que le dénominateur soit nul si le numérateur est
+          // nul lui aussi -> dans ce cas là la valeur de l'indicateur est 0
+          } elseif (
+            $this->chiffres['C'.$numalerte->denom_id] == 0
+            && $this->chiffres['C'.$numalerte->num_id] == 0) {
+
+              $valeur = 0;
 
           } else { // Cas où un chiffre destiné à être dénominateur est nul ->message d'erreur
 
