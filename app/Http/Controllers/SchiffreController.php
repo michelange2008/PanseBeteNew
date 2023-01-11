@@ -85,15 +85,12 @@ class SchiffreController extends Controller
 
     $chiffresSaisis = Schiffre::where("saisie_id", $saisie->id)->get();
 
-    // $chiffres = Chiffre::where('espece_id', $saisie->espece->id)
-    //                     ->where('requis', 1)->get();
     $chiffres = DB::table('chiffres')->where('espece_id', $saisie->espece->id)
                   ->where('requis', 1)
                   ->join('groupes', 'groupes.id', 'chiffres.groupe_id')
                   ->select('groupes.nom as groupe_nom', 'chiffres.*')
                   ->get();
 
-    // $groupes = Groupe::all();
     $chiffresGroupes = $chiffres->groupBy('groupe_nom');
 
     return view('saisie.schiffres.edit', [
