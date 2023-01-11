@@ -30,7 +30,6 @@ class DatabaseSeeder extends Seeder {
     // $this->call(SaisiesTableSeeder::class);
     // $this->call(SalertesTableSeeder::class);
     // $this->call(SchiffresTableSeeder::class);
-    // $this->call(SindicateursTableSeeder::class);
     // $this->call(SoriginesTableSeeder::class);
     // $this->call(AmisTableSeeder::class);
     // $this->call(EspeceNoteTableSeeder::class);
