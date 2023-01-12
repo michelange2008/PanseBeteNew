@@ -9,22 +9,16 @@
       "aligne" : "left",
       "sortable" : true
     },
+    "chiffre_detail" : {
+      "col" : "chiffre_detail",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : false
+    },
     "groupe_nom" : {
       "col" : "groupe_nom",
       "type" : "item",
       "aligne" : "left",
-      "sortable" : true
-    },
-    "typenum" : {
-      "col" : "type_valeur",
-      "type" : "item",
-      "aligne" : "left",
-      "sortable" : true
-    },
-    "min" : {
-      "col" : "min",
-      "type" : "item",
-      "aligne" : "center",
       "sortable" : true
     },
     "requis" : {

@@ -27,6 +27,13 @@
 
         <h3>@lang('titres.chiffres_edit')</h3>
 
+        <p class="lead">@lang('commun.info_saisie_chiffres')</p>
+
+        <p class="lead">
+          @lang('commun.info_picto_saisie_chiffres')
+          <span class="badge rounded-pill text-bg-info">?</span>
+        </p>
+
         <form class="" action="{{route('schiffre.store')}}" method="post">
 
           @csrf
@@ -52,15 +59,16 @@
                   <label class="col-sm-8 col-form-label"
                   for="C{{ $chiffre->id }}">
                   @if ($chiffre->nonullable)
-
-                    <span class="text-danger fw-bold">{{ ucfirst($chiffre->nom) }}</span>
-
+                    <span class="text-danger fw-bold">
                   @else
-
-                    <span>{{ ucfirst($chiffre->nom) }}</span>
-
+                    <span>
                   @endif
 
+                  {{ ucfirst($chiffre->nom) }}</span>
+                  @if ($chiffre->detail != null)
+
+                    <span class="badge rounded-pill text-bg-info" title="{{ $chiffre->detail }}">?</span>
+                  @endif
                 </label>
                 <div class="col-sm-4">
 
@@ -69,6 +77,7 @@
                   min= "{{ $chiffre->min ?? 0}}"
                   step="{{ $chiffre->step }}"
                   name="C{{ $chiffre->id }}"
+
                   @isset($chiffre->nonullable)
                     @if ($chiffre->nonullable)
                       required

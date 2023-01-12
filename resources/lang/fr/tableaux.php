@@ -6,6 +6,7 @@ return [
   'groupe' => "groupe",
   'del' => 'suppr.',
   'chiffre_nom' => "nom du paramètre",
+  'chiffre_detail' => "détails",
   'chiffre_create' => "Ajout d'un paramètre",
   'chiffre_titre_liste' => "Liste de paramètres quantitatifs",
   'groupe_nom' => "groupe",
