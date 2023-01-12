@@ -27,6 +27,13 @@
 
         <h3>@lang('titres.chiffres_edit')</h3>
 
+        <p class="lead">@lang('commun.info_saisie_chiffres')</p>
+
+        <p class="lead">
+          @lang('commun.info_picto_saisie_chiffres')
+          <span class="badge rounded-pill text-bg-info">?</span>
+        </p>
+
         <form class="" action="{{route('schiffre.store')}}" method="post">
 
           @csrf
@@ -36,7 +43,7 @@
           'route' => route('saisie.show', $saisie->id),
           ])
 
-          @foreach ($chiffresGroupes as $groupe => $elements)
+          @foreach ($chiffresGroupes as $groupe => $chiffres)
             <div class="bg-otobleu px-3 py-1">
               <h4 class="p-0">
                 {{ ucfirst($groupe) }}
@@ -44,32 +51,44 @@
             </div>
 
             <input type="hidden" name="saisie_id" value="{{ $saisie->id }}">
-            @foreach ($elements as $element)
-              <div class="form-group row my-2">
 
-                <label class="col-sm-8 col-form-label"
-                    for="{{ $element->id }}">
+            @foreach ($chiffres as $chiffre)
 
-                      {{$element->libelle}}
+                <div class="form-group row my-2">
 
+                  <label class="col-sm-8 col-form-label"
+                  for="C{{ $chiffre->id }}">
+                  @if ($chiffre->nonullable)
+                    <span class="text-danger fw-bold">
+                  @else
+                    <span>
+                  @endif
+
+                  {{ ucfirst($chiffre->nom) }}</span>
+                  @if ($chiffre->detail != null)
+
+                    <span class="badge rounded-pill text-bg-info" title="{{ $chiffre->detail }}">?</span>
+                  @endif
                 </label>
                 <div class="col-sm-4">
 
                   <input class="form-control chiffre text-center "
-                    type="number"
-                    min= "{{ $element->min ?? 0}}"
-                    step="{{ $element->step }}"
-                    name="{{ $element->id }}"
-                    @isset($element->required)
-                      @if ($element->required)
-                        required
-                      @endif
-                    @endisset
-                    value="{{ $chiffresSaisis->where('libelle', $element->id)->first()->valeur  ?? old($element->id) }}"
-                    >
+                  type="number"
+                  min= "{{ $chiffre->min ?? 0}}"
+                  step="{{ $chiffre->step }}"
+                  name="C{{ $chiffre->id }}"
+
+                  @isset($chiffre->nonullable)
+                    @if ($chiffre->nonullable)
+                      required
+                    @endif
+                  @endisset
+                  value="{{ $chiffresSaisis->where('chiffre_id', $chiffre->id)->first()->valeur  ?? old($chiffre->id) }}"
+                  >
                 </div>
 
               </div>
+
             @endforeach
 
           @endforeach

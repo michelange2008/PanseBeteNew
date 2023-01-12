@@ -4,17 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
-
+use DB;
 use App\Models\Schiffre;
+use App\Models\Chiffre;
+use App\Models\Groupe;
 use App\Models\Saisie;
 use App\Models\Alerte;
 use App\Models\Theme;
 use App\Models\Salerte;
 
-use App\Http\Indicateurs\Indicateurs;
+use App\Http\Indicateurs\CalculeIndicateurs;
 
 
-use App\Traits\SalerteIsDanger;
 use App\Traits\LitJson;
 use App\Traits\ThemesTools;
 use App\Traits\FormatSalertes;
@@ -25,12 +26,12 @@ use App\Traits\FormatSalertes;
 // de données saisies (comme Salerte, Sorigine)
 // Attention! c'est un contrôleur un peu particulier car s'il y a un modèle Schiffre
 // la manipulation des données chiffrées se fait aussi avec le modèle Salerte.
-// De ce fait les méthodes show, edit, store ne sont pas construites
+// De ce fait les méthodes show, create, store ne sont pas construites
 // de la manière habituelle.
  */
 class SchiffreController extends Controller
 {
-  use LitJson, SalerteIsDanger, ThemesTools, FormatSalertes;
+  use LitJson, ThemesTools, FormatSalertes;
 
   /**
   * Affiche la synthèse des données chiffrées
@@ -82,21 +83,21 @@ class SchiffreController extends Controller
   {
     $saisie = Saisie::find($saisie_id);
 
-    $chiffresSaisisBruts = Schiffre::select('libelle', 'valeur')
-    ->where("saisie_id", $saisie->id)
-    ->get();
+    $chiffresSaisis = Schiffre::where("saisie_id", $saisie->id)->get();
 
-    // On récupère les libellé du formulaire dans un json dépendant de
-    // l'espèce du type chiffresVL.json
-    $chiffresBruts = $this->LitJson('parametres'.$saisie->espece->abbr.'.json');
-    // On en fait une collection et l'on structure par groupe (effectif, mortalité, etc)
-    $chiffres = Collect($chiffresBruts);
-    $chiffresGroupes = $chiffres->groupBy('groupe');
+    $chiffres = DB::table('chiffres')->where('espece_id', $saisie->espece->id)
+                  ->where('requis', 1)
+                  ->join('groupes', 'groupes.id', 'chiffres.groupe_id')
+                  ->select('groupes.nom as groupe_nom', 'chiffres.*')
+                  ->get();
+
+    $chiffresGroupes = $chiffres->groupBy('groupe_nom');
 
     return view('saisie.schiffres.edit', [
     'saisie' => $saisie,
-    'chiffresSaisis' => $chiffresSaisisBruts,
+    'chiffresSaisis' => $chiffresSaisis,
     'chiffresGroupes' => $chiffresGroupes,
+    // 'groupes' => $groupes,
     ]);
   }
 
@@ -114,16 +115,13 @@ class SchiffreController extends Controller
     // On enlève la ligne saisie_id et on
     // la récupère dans une variable
     $saisie_id = array_shift($chiffres);
-    $espece_abbr = Saisie::find($saisie_id)->espece->abbr;
-    // On récupère les libellé du formulaire dans un json dépendant de
-    // l'espèce du type chiffresVL.json
-    $parametres = $this->LitJson('parametres'.$espece_abbr.'.json');
-    // Création d'un objet indicateurs pour le calcul et le stockage
-    $indicateurs = new Indicateurs($saisie_id, $chiffres, $parametres);
-    // Avec Indicateurs on vérifier que la saisie n'est pas incohérente
-    // La classe Indicateurs va stocker les ondicateurs calculés dans la table sindicateurs
+    $saisie = Saisie::find($saisie_id);
+    // Création d'un objet CalculeIndicateurs pour le calcul et le stockage
+    $indicateurs = new CalculeIndicateurs($saisie, $chiffres);
+    // Avec CalculeIndicateurs on vérifier calculer les pourcentages et les ratios
+    // tout en vérifiant que la saisie n'est pas incohérente (dénominateur à 0)
     // si la saisie n'est pas valide on retourne au formulaire
-    $indicateurs->calculIndicateurs();
+    $indicateurs->calcule();
 
     if($indicateurs->getErreurs()->count() > 0) {
 
@@ -134,17 +132,15 @@ class SchiffreController extends Controller
     else {
       // On stocke les indicateurs calculés dans la table salertes avec la
       // méthode store();
-      $indicateurs->store();
+      $indicateurs->storeIndicateurs();
       // 0n enregistre les nouvelles données avec une ligne par élément chiffré
-      foreach ($chiffres as $libelle => $valeur) {
+      foreach ($chiffres as $name => $valeur) {
+        $chiffre_id = str_replace('C', '', $name); //
         Schiffre::updateOrCreate(
-        ['saisie_id' => $saisie_id, 'libelle' => $libelle],
+        ['saisie_id' => $saisie_id, 'chiffre_id' => $chiffre_id],
         ['valeur' => ($valeur == null) ? 0 : $valeur ]
         );
       }
-      // Dans la table salertes, on indique à la colonne "danger"
-      // si la valeur est en dehors de normes (borne_sup, borne_inf), grace au trait SalerteIsDanger
-      $this->salerteIsDanger($saisie_id);
       // On passe la variable hasnum de la table saisies à true
       Saisie::where('id', $saisie_id)->update(['hasnum' => 1]);
 

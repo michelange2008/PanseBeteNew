@@ -24,33 +24,24 @@
       </tr>
     </th>
 
-    @foreach ($chiffresGroupes as $groupe => $elements)
+    @foreach ($chiffresGroupes as $groupe => $chiffres)
 
       <tr>
         <td colspan="2" class="table-groupe">
           <h4>{{ ucfirst($groupe) }}</h4>
         </td>
       </tr>
-      @foreach ($elements as $element)
+      @foreach ($chiffres as $chiffre)
 
         <tr>
-          @if ($loop->last)
 
-            <td class="table-chiffres">
-              {{ $element->libelle }}
-            </td>
-            <td class="table-chiffres table-blanc">
-              ...............................
-            </td>
-
-          @else
             <td class="table-chiffres-bordure">
-              {{ $element->libelle }}
+              {{ $chiffre->nom }}
             </td>
             <td class="table-chiffres-bordure table-blanc">
               ...............................
             </td>
-          @endif
+
         </tr>
 
       @endforeach

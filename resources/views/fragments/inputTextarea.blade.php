@@ -1,6 +1,6 @@
 <div class="form-group my-3">
 
-  <label class="form-label" for="{{ $name }}">{{ $label }}</label>
+  <label class="form-label" for="{{ $name }}">{{ ucfirst($label) }}</label>
 
   <textarea id="{{ $name }}" class="form-control"
             name="{{ $name }}" rows="3"

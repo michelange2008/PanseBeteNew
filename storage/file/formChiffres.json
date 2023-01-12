@@ -17,7 +17,13 @@
       "type" : "text",
       "required" : true
     },
-    "groupe_id" : {
+    "detail" : {
+      "label" : "détail",
+      "name" : "detail",
+      "type" : "textarea",
+      "required" : false
+    },
+  "groupe_id" : {
       "label" : "groupe",
       "name" : "groupe_id",
       "table" : "groupes",

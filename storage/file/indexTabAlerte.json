@@ -25,7 +25,7 @@
       "col" : "actif",
       "type" : "ouinon",
       "aligne" : "center",
-      "sortable" : false
+      "sortable" : true
     },
     "origines" : {
       "col" : "origines",

@@ -18,7 +18,6 @@ use Illuminate\Support\Facades\Redirect;
 
 use App\Http\Indicateurs\Indicateurs;
 
-use App\Traits\SalerteIsDanger;
 use App\Traits\CreeSaisie;
 use App\Traits\LitJson;
 use App\Traits\ThemesTools;
@@ -27,7 +26,7 @@ use App\Traits\TypesTools;
 
 class SaisieController extends Controller
 {
-  use CreeAlerte, CreeSaisie, LitJson, SalerteIsDanger, ThemesTools, FormatSalertes, TypesTools;
+  use CreeAlerte, CreeSaisie, LitJson, ThemesTools, FormatSalertes, TypesTools;
 
   /*
   // Méthode qui conduit vers une nouvelle saisie

@@ -27,6 +27,7 @@ class ChiffreController extends Controller
                     ->join('groupes', 'groupes.id', 'chiffres.groupe_id')
                     ->join('typenums', 'typenums.id', 'chiffres.typenum_id')
                     ->select('chiffres.id as id', 'chiffres.nom as chiffre_nom',
+                    'chiffres.detail as chiffre_detail',
                     'groupes.nom as groupe_nom', 'typenums.nom as typenum',
                     'chiffres.min as min',
                     'chiffres.requis', 'chiffres.supprimable')
@@ -70,6 +71,7 @@ class ChiffreController extends Controller
 
       Chiffre::create([
         'nom' => $request->nom,
+        'detail' => $request->detail,
         'groupe_id' => $request->groupe_id,
         'typenum_id' => $request->typenum_id,
         'min' => $request->min,
@@ -131,6 +133,7 @@ class ChiffreController extends Controller
 
       Chiffre::where('id', $id)->update([
         'nom' => $request->nom,
+        'detail' => $request->detail,
         'groupe_id' => $request->groupe_id,
         'typenum_id' => $request->typenum_id,
         'min' => $request->min,

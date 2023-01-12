@@ -12,6 +12,7 @@ use App\Models\Chiffre;
 use App\Models\Salerte;
 use App\Models\Alerte;
 use PDF;
+use DB;
 
 use App\Traits\CategoriesTools;
 use App\Traits\ThemesTools;
@@ -28,17 +29,17 @@ class PdfController extends Controller
      */
   public function modeleNum(Espece $espece)
     {
-      // $chiffres = $espece->chiffres()
-      //   ->orderBy('groupe_id')
-      //   ->orderBy('id')
-      //   ->get()
-      //   ->groupBy('groupe_id');
-      // On récupère les libellé du formulaire dans un json dépendant de
-      // l'espèce du type chiffresVL.json
-      $chiffresBruts = $this->LitJson('parametres'.$espece->abbr.'.json');
+      // $chiffresBruts = $this->LitJson('parametres'.$espece->abbr.'.json');
       // On en fait une collection et l'on structure par groupe (effectif, mortalité, etc)
-      $chiffres = Collect($chiffresBruts);
-      $chiffresGroupes = $chiffres->groupBy('groupe');
+      // $chiffres = Collect($chiffresBruts);
+      // $chiffresGroupes = $chiffres->groupBy('groupe');
+      $chiffres = DB::table('chiffres')->where('espece_id', $espece->id)
+                    ->where('requis', 1)
+                    ->join('groupes', 'groupes.id', 'chiffres.groupe_id')
+                    ->select('groupes.nom as groupe_nom', 'chiffres.*')
+                    ->get();
+
+      $chiffresGroupes = $chiffres->groupBy('groupe_nom');
 
         $pdf = PDF::loadView('pdf.modeleNum', [
           'chiffresGroupes' => $chiffresGroupes,

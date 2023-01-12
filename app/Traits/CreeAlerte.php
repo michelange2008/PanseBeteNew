@@ -8,7 +8,7 @@ use App\Models\Critalerte;
 
 use App\Traits\TypesTools;
 /**
- *
+ *  Permet de définir si une alerte dépasse un seuil de danger
  */
 trait CreeAlerte
 {
