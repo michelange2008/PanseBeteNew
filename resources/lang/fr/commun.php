@@ -20,4 +20,8 @@ return [
   'compare_titre' => "Comparer les différentes saisies",
   'compare_texte' => "En cliquant sur le bouton ci-dessous, vous pourrez choisir les différentes saisies que vous souhaitez comparer.",
   'compare_texte_futur' => "Lorsque vous aurez réalisé plusieurs saisies, vous pourrez les comparer en cliquant sur le bouton ci-dessous",
+  'info_saisie_chiffres' => 'Les chiffres en <span class="text-danger fw-bold">rouge</span>
+    sont obligatoires et ne peuvent généralement pas être nuls.
+    Pour les autres chiffres, une absence de valeur est égale à 0.',
+  'info_picto_saisie_chiffres' => "Plus d'infos en survolant le petit picto",
 ];
