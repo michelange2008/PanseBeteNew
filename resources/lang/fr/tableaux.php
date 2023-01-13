@@ -38,4 +38,7 @@ return [
   'type_valeur' => "type de valeur",
   'min' => 'minimum',
   'requis' => "obligatoire",
+  'round' => "Valeur arrondie à ",
+  "round_un_chiffre" => "chiffre après la virgule",
+  "round_plusieurs_chiffres" => "chiffres après la virgule",
 ];

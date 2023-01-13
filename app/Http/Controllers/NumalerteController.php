@@ -10,10 +10,11 @@ use App\Fournisseurs\TabLab;
 
 use App\Traits\FormTemplate;
 use App\Traits\TypesTools;
+use App\Traits\ChiffresDependances;
 
 class NumalerteController extends Controller
 {
-  use FormTemplate, TypesTools;
+  use FormTemplate, TypesTools, ChiffresDependances;
 
   /**
    * Non implémenté car numalerte liée à alerte
@@ -82,6 +83,7 @@ class NumalerteController extends Controller
           "borne_sup" => $request->borne_sup,
           "num_id" => $request->num_id,
           "denom_id" => $request->denom_id,
+          "round" => $request->round,
         ]);
       // Mais pour la cas où elle n'existe pas (notamment s'il y a une observation
       // avec une valeur entière ou décimale), on la crée en utilisant le nom de
@@ -97,6 +99,7 @@ class NumalerteController extends Controller
           "borne_sup" => $request->borne_sup,
           "num_id" => $request->num_id,
           "denom_id" => $request->denom_id,
+          "round" => $request->round,
         ]);
       }
       // Utilise le trait ChiffresDependances pour mettre à jour l'état requis
@@ -174,6 +177,7 @@ class NumalerteController extends Controller
                   "borne_sup" => $request->borne_sup,
                   "num_id" => $request->num_id,
                   "denom_id" => $request->denom_id,
+                  "round" => $request->round,
                 ]);
 
       return redirect()->route('alerte.show', $request->alerte_id)

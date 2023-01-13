@@ -72,6 +72,16 @@
                 ({{ $alerte->type->detail }})
               </p>
 
+              @if ($alerte->numalerte->round == 1)
+
+                <p>@lang('tableaux.round') {{ $alerte->numalerte->round }} @lang('tableaux.round_un_chiffre').</p>
+
+              @elseif ($alerte->numalerte->round > 1)
+
+                <p>@lang('tableaux.round') {{ $alerte->numalerte->round }} @lang('tableaux.round_plusieurs_chiffres').</p>
+
+              @endif
+
             </li>
 
             <li class="list-group-item">
