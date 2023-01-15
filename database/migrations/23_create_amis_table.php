@@ -18,7 +18,8 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()
                   ->onUpdate('cascade')
                   ->onDelete('cascade');
-            $table->foreignId('user_id')->constrained()
+            $table->unsignedBigInteger('ami_id');
+            $table->foreign('ami_id')->references('id')->on('users')
                   ->onUpdate('cascade')
                   ->onDelete('cascade');
         });

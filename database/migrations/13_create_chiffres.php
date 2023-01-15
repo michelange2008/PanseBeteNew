@@ -26,7 +26,7 @@ return new class extends Migration
             $table->decimal('step', $precision = 8, $scale = 1)->default(1);
             $table->boolean('supprimable')->default(1);
             $table->boolean('requis')->default(1);
-            $table->integer('min', 10)->default(0);
+            $table->integer('min')->default(0);
         });
     }
 
