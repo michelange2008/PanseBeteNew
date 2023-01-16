@@ -13,15 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('schiffres', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('saisie_id')
-                  ->constrained()
-                  ->onUpdate('cascade')
-                  ->onDelete('cascade');
-            $table->string('libelle', 191);
-            $table->double('valeur', 8, 1);
-        });
+      Schema::create('schiffres', function (Blueprint $table) {
+          $table->id();
+          $table->foreignId('saisie_id')
+                ->constrained()
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+          $table->foreignId('chiffre_id')
+                ->constrained()
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+          $table->double('valeur', 8, 1);
+      });
     }
 
     /**
