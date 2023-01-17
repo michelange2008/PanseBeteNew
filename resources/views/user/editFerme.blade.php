@@ -26,6 +26,8 @@
 
         <div class="col-sm-11 col-md-10 col-lg-9">
 
+          <p class="fst-italic text-danger">@lang('commun.analyse_stat')</p>
+
           @foreach ($parafermes as $paraferme)
 
             @if ($paraferme->type == "liste")
@@ -66,7 +68,7 @@
                 ])
 
               @endif
-              
+
             @endif
 
           @endforeach
