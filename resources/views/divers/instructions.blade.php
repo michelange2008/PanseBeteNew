@@ -10,17 +10,13 @@
   <div class="row justify-content-center">
     <div class="col-md-10">
       <div class="ziehharmonika">
-        <h3>Pour un troupeau en équilibre</h3>
+        <h3>@lang('pb.titre')</h3>
         <div>
-          <p>Cet outil est conçu pour vous éleveur, technicien ou vétérinaire.
-            <p>
-              Vous souhaitez favoriser l’équilibre de santé de votre troupeau, résoudre des problèmes de déséquilibre aboutissant à des pathologies ou bien identifier les sources potentielles du déséquilibre.
-            </p>
-            <p>
-              Il pourra également être utilisé lors d’échanges dans les binômes éleveurs/conseiller ou éleveurs/vétérinaire.</p>
-            </p>
-            <p>Sa forme vous permettra de l’utiliser en direct dans le bâtiment d’élevage ou bien au bureau au moment du bilan annuel.</p>
-          </div>
+          <p>@lang('pb.qui')</p>
+          <p>@lang('pb.obj')</p>
+          <p>@lang('pb.quand')</p>
+          <p>@lang('pb.ou')</p>
+        </div>
 
           <h3>Sept pôles d'observation</h3>
           <div>
