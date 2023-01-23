@@ -29,7 +29,6 @@ class PdfController extends Controller
      */
   public function modeleNum(Espece $espece)
     {
-
       $chiffres = DB::table('chiffres')->where('espece_id', $espece->id)
                     ->where('requis', 1)
                     ->join('groupes', 'groupes.id', 'chiffres.groupe_id')
