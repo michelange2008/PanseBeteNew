@@ -383,6 +383,7 @@
         },
         {
             "name": "dompdf/dompdf",
+
             "version": "v2.0.3",
             "source": {
                 "type": "git",
@@ -393,6 +394,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/dompdf/dompdf/zipball/e8d2d5e37e8b0b30f0732a011295ab80680d7e85",
                 "reference": "e8d2d5e37e8b0b30f0732a011295ab80680d7e85",
+
                 "shasum": ""
             },
             "require": {
@@ -439,9 +441,11 @@
             "homepage": "https://github.com/dompdf/dompdf",
             "support": {
                 "issues": "https://github.com/dompdf/dompdf/issues",
+
                 "source": "https://github.com/dompdf/dompdf/tree/v2.0.3"
             },
             "time": "2023-02-07T12:51:48+00:00"
+
         },
         {
             "name": "dragonmantank/cron-expression",
